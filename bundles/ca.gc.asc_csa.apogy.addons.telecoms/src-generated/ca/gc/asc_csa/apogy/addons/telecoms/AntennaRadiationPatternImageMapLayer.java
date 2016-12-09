@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.addons.telecoms;
 
 import javax.vecmath.Color3f;
 
-import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Antenna Radiation Pattern Image Map Layer</b></em>'.
@@ -35,7 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
  * @model
  * @generated
  */
-public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMapLayer {
+public interface AntennaRadiationPatternImageMapLayer extends ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Antenna Radiation Pattern</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

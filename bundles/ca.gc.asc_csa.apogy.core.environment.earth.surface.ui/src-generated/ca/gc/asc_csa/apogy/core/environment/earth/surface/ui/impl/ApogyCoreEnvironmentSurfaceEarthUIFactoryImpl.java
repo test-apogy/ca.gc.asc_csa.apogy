@@ -80,6 +80,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.MOON_PRESENTATION: return createMoonPresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL: return createSunVector3DTool();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL_NODE: return createSunVector3DToolNode();
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: return createSunVector3DToolNodePresentation();
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES: return createEarthSurfaceUIUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -168,6 +169,16 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 	public SunVector3DToolNode createSunVector3DToolNode() {
 		SunVector3DToolNodeImpl sunVector3DToolNode = new SunVector3DToolNodeImpl();
 		return sunVector3DToolNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SunVector3DToolNodePresentation createSunVector3DToolNodePresentation() {
+		SunVector3DToolNodePresentationImpl sunVector3DToolNodePresentation = new SunVector3DToolNodePresentationImpl();
+		return sunVector3DToolNodePresentation;
 	}
 
 	/**

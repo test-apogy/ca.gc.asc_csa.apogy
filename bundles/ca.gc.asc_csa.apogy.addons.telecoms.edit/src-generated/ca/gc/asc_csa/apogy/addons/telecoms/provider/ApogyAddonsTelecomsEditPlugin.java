@@ -26,6 +26,7 @@ import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditP
 import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.surface.provider.ApogySurfaceEnvironmentEditPlugin;
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 
@@ -64,11 +65,12 @@ public final class ApogyAddonsTelecomsEditPlugin extends EMFPlugin {
 		     ApogyAddonsEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
-		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogySurfaceEnvironmentEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyAddonsGeometryPathsEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
 		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,

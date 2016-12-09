@@ -65,7 +65,6 @@ public class ApogyAddonsUIFactoryImpl extends EFactoryImpl implements ApogyAddon
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyAddonsUIPackage.RULER3D_TOOL_NODE_PRESENTATION: return createRuler3dToolNodePresentation();
-			case ApogyAddonsUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: return createSunVector3DToolNodePresentation();
 			case ApogyAddonsUIPackage.TRAJECTORY3_DTOOL_NODE_PRESENTATION: return createTrajectory3DToolNodePresentation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -80,16 +79,6 @@ public class ApogyAddonsUIFactoryImpl extends EFactoryImpl implements ApogyAddon
 	public Ruler3dToolNodePresentation createRuler3dToolNodePresentation() {
 		Ruler3dToolNodePresentationImpl ruler3dToolNodePresentation = new Ruler3dToolNodePresentationImpl();
 		return ruler3dToolNodePresentation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SunVector3DToolNodePresentation createSunVector3DToolNodePresentation() {
-		SunVector3DToolNodePresentationImpl sunVector3DToolNodePresentation = new SunVector3DToolNodePresentationImpl();
-		return sunVector3DToolNodePresentation;
 	}
 
 	/**

@@ -1,6 +1,5 @@
-package ca.gc.asc_csa.apogy.addons.ui;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+/**
+ * Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,6 +11,7 @@ package ca.gc.asc_csa.apogy.addons.ui;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui;
 
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 
@@ -21,7 +21,7 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage#getSunVector3DToolNodePresentation()
+ * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage#getSunVector3DToolNodePresentation()
  * @model
  * @generated
  */

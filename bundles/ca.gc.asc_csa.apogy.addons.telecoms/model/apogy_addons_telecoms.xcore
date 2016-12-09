@@ -39,7 +39,7 @@ package ca.gc.asc_csa.apogy.addons.telecoms
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.addons.SimpleTool
 import ca.gc.asc_csa.apogy.common.topology.Node
-import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer
+import ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer
 
 type Color3f wraps javax.vecmath.Color3f
 

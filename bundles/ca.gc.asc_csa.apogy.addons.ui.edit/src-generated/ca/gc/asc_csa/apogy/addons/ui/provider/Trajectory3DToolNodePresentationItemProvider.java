@@ -21,6 +21,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.swt.graphics.RGB;
+
 import ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 

@@ -14,8 +14,8 @@ package ca.gc.asc_csa.apogy.addons.ui.adapters;
  */
 
 import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
-import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
 import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
+import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;

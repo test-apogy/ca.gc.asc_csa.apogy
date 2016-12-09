@@ -20,15 +20,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.edit.command.CommandParameter;
-
 import org.eclipse.emf.edit.domain.EditingDomain;
-
 import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ChildCreationExtenderManager;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -45,12 +40,10 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
 import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
-
 import ca.gc.asc_csa.apogy.addons.ui.util.ApogyAddonsUIAdapterFactory;
-
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
-import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationRegistry;
 import ca.gc.asc_csa.apogy.common.topology.ui.util.ApogyCommonTopologyUISwitch;
@@ -133,29 +126,6 @@ public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapte
 		}
 
 		return ruler3dToolNodePresentationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SunVector3DToolNodePresentationItemProvider sunVector3DToolNodePresentationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSunVector3DToolNodePresentationAdapter() {
-		if (sunVector3DToolNodePresentationItemProvider == null) {
-			sunVector3DToolNodePresentationItemProvider = new SunVector3DToolNodePresentationItemProvider(this);
-		}
-
-		return sunVector3DToolNodePresentationItemProvider;
 	}
 
 	/**
@@ -308,7 +278,6 @@ public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapte
 	 */
 	public void dispose() {
 		if (ruler3dToolNodePresentationItemProvider != null) ruler3dToolNodePresentationItemProvider.dispose();
-		if (sunVector3DToolNodePresentationItemProvider != null) sunVector3DToolNodePresentationItemProvider.dispose();
 		if (trajectory3DToolNodePresentationItemProvider != null) trajectory3DToolNodePresentationItemProvider.dispose();
 	}
 
@@ -363,11 +332,6 @@ public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapte
 					(createChildParameter
 						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
 						 ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -464,11 +428,6 @@ public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapte
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyAddonsUIFactory.eINSTANCE.createTrajectory3DToolNodePresentation()));
 
 				return null;
@@ -485,11 +444,6 @@ public class ApogyAddonsUIItemProviderAdapterFactory extends ApogyAddonsUIAdapte
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyAddonsUIFactory.eINSTANCE.createRuler3dToolNodePresentation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter

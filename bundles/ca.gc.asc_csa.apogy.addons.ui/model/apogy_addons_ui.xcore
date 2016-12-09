@@ -42,11 +42,6 @@ class Ruler3dToolNodePresentation extends NodePresentation
 	
 }
 
-class SunVector3DToolNodePresentation extends NodePresentation
-{
-	
-}
-
 class Trajectory3DToolNodePresentation extends NodePresentation
 {
 	

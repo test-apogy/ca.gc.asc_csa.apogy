@@ -1,6 +1,5 @@
-package ca.gc.asc_csa.apogy.addons.ui.provider;
-/*
- * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+/**
+ * Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -12,26 +11,30 @@ package ca.gc.asc_csa.apogy.addons.ui.provider;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.provider;
 
+
+import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
 import org.eclipse.swt.graphics.RGB;
-import ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation;
-import ca.gc.asc_csa.apogy.common.topology.ui.provider.NodePresentationItemProvider;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SunVector3DToolNodePresentationItemProvider
-	extends NodePresentationItemProvider {
+public class SunVector3DToolNodePresentationItemProvider extends NodePresentationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

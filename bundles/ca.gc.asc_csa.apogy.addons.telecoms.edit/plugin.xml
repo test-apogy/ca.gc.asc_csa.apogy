@@ -39,8 +39,8 @@
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.core.environment"
-            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.surface"
+            class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogySurfaceEnvironmentChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.apogy.core"
             class="ca.gc.asc_csa.apogy.addons.telecoms.provider.ApogyAddonsTelecomsItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>

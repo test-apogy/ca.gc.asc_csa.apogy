@@ -44,5 +44,6 @@ Export-Package: ca.gc.asc_csa.apogy.core.environment.earth.surface.ui,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences,
  ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.scene_objects,
- ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.util
+ ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.util,
+ ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.views
 Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Activator

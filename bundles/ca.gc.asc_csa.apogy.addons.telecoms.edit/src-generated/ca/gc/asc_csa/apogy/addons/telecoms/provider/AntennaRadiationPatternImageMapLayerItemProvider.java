@@ -27,8 +27,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.provider.LineOfSightImageMapLayerItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer} object.
@@ -36,7 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.provider.LineOfSightImageMapLayerIte
  * <!-- end-user-doc -->
  * @generated
  */
-public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSightImageMapLayerItemProvider {
+public class AntennaRadiationPatternImageMapLayerItemProvider extends ca.gc.asc_csa.apogy.core.environment.surface.provider.LineOfSightImageMapLayerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -270,8 +269,8 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == ApogySurfaceEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == ApogySurfaceEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

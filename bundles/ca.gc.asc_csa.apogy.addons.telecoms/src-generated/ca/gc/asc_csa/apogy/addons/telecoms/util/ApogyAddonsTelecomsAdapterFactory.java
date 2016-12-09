@@ -19,6 +19,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.addons.AbstractTool;
 import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.*;
 import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
@@ -34,12 +35,6 @@ import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -162,27 +157,27 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter caseAbstractMapLayer(AbstractMapLayer object) {
+			public Adapter caseAbstractMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer object) {
 				return createAbstractMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseRectangularRegionProvider(RectangularRegionProvider object) {
+			public Adapter caseRectangularRegionProvider(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider object) {
 				return createRectangularRegionProviderAdapter();
 			}
 			@Override
-			public Adapter caseRectangularRegionImage(RectangularRegionImage object) {
+			public Adapter caseRectangularRegionImage(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage object) {
 				return createRectangularRegionImageAdapter();
 			}
 			@Override
-			public Adapter caseImageMapLayer(ImageMapLayer object) {
+			public Adapter caseImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer object) {
 				return createImageMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseCartesianTriangularMeshDerivedImageMapLayer(CartesianTriangularMeshDerivedImageMapLayer object) {
+			public Adapter caseCartesianTriangularMeshDerivedImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer object) {
 				return createCartesianTriangularMeshDerivedImageMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseLineOfSightImageMapLayer(LineOfSightImageMapLayer object) {
+			public Adapter caseLineOfSightImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer object) {
 				return createLineOfSightImageMapLayerAdapter();
 			}
 			@Override
@@ -430,13 +425,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer <em>Abstract Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer <em>Abstract Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer
 	 * @generated
 	 */
 	public Adapter createAbstractMapLayerAdapter() {
@@ -444,13 +439,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider <em>Rectangular Region Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider
 	 * @generated
 	 */
 	public Adapter createRectangularRegionProviderAdapter() {
@@ -458,13 +453,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage <em>Rectangular Region Image</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage <em>Rectangular Region Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage
 	 * @generated
 	 */
 	public Adapter createRectangularRegionImageAdapter() {
@@ -472,13 +467,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ImageMapLayer <em>Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer <em>Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer
 	 * @generated
 	 */
 	public Adapter createImageMapLayerAdapter() {
@@ -486,13 +481,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer <em>Cartesian Triangular Mesh Derived Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer
 	 * @generated
 	 */
 	public Adapter createCartesianTriangularMeshDerivedImageMapLayerAdapter() {
@@ -500,13 +495,13 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer <em>Line Of Sight Image Map Layer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer
 	 * @generated
 	 */
 	public Adapter createLineOfSightImageMapLayerAdapter() {

@@ -35,6 +35,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtili
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
 
 /**
@@ -78,6 +79,13 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * @generated
 	 */
 	private EClass sunVector3DToolNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sunVector3DToolNodePresentationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -287,6 +295,15 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSunVector3DToolNodePresentation() {
+		return sunVector3DToolNodePresentationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEarthSurfaceUIUtilities() {
 		return earthSurfaceUIUtilitiesEClass;
 	}
@@ -382,6 +399,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 		sunVector3DToolNodeEClass = createEClass(SUN_VECTOR3_DTOOL_NODE);
 		createEReference(sunVector3DToolNodeEClass, SUN_VECTOR3_DTOOL_NODE__SUN_VECTOR3_DTOOL);
 
+		sunVector3DToolNodePresentationEClass = createEClass(SUN_VECTOR3_DTOOL_NODE_PRESENTATION);
+
 		earthSurfaceUIUtilitiesEClass = createEClass(EARTH_SURFACE_UI_UTILITIES);
 		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
 		createEOperation(earthSurfaceUIUtilitiesEClass, EARTH_SURFACE_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
@@ -432,6 +451,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 		moonPresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 		sunVector3DToolEClass.getESuperTypes().add(theApogyAddonsPackage.getAbstractTwoPoints3DTool());
 		sunVector3DToolNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
+		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(earthSurfaceWorksitePresentationEClass, EarthSurfaceWorksitePresentation.class, "EarthSurfaceWorksitePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -451,6 +471,8 @@ public class ApogyCoreEnvironmentSurfaceEarthUIPackageImpl extends EPackageImpl 
 
 		initEClass(sunVector3DToolNodeEClass, SunVector3DToolNode.class, "SunVector3DToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSunVector3DToolNode_SunVector3DTool(), this.getSunVector3DTool(), this.getSunVector3DTool_SunVector3DToolNode(), "sunVector3DTool", null, 0, 1, SunVector3DToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sunVector3DToolNodePresentationEClass, SunVector3DToolNodePresentation.class, "SunVector3DToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(earthSurfaceUIUtilitiesEClass, EarthSurfaceUIUtilities.class, "EarthSurfaceUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

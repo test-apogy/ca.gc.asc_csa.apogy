@@ -112,6 +112,10 @@ public class ApogyCoreEnvironmentSurfaceEarthUIAdapterFactory extends AdapterFac
 				return createSunVector3DToolNodeAdapter();
 			}
 			@Override
+			public Adapter caseSunVector3DToolNodePresentation(SunVector3DToolNodePresentation object) {
+				return createSunVector3DToolNodePresentationAdapter();
+			}
+			@Override
 			public Adapter caseEarthSurfaceUIUtilities(EarthSurfaceUIUtilities object) {
 				return createEarthSurfaceUIUtilitiesAdapter();
 			}
@@ -242,6 +246,20 @@ public class ApogyCoreEnvironmentSurfaceEarthUIAdapterFactory extends AdapterFac
 	 * @generated
 	 */
 	public Adapter createSunVector3DToolNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation
+	 * @generated
+	 */
+	public Adapter createSunVector3DToolNodePresentationAdapter() {
 		return null;
 	}
 

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1050,7 +1050,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1059,7 +1059,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' container reference.
@@ -1068,7 +1068,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Map Layer Node</b></em>' reference.
@@ -1077,7 +1077,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1086,7 +1086,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1095,7 +1095,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Opaque</b></em>' attribute.
@@ -1104,7 +1104,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' containment reference.
@@ -1113,7 +1113,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
@@ -1122,7 +1122,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
 
 	/**
 	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
@@ -1131,7 +1131,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Required Resolution</b></em>' attribute.
@@ -1140,7 +1140,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Cartesian Triangular Mesh Map Layer</b></em>' reference.
@@ -1149,7 +1149,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Available Color</b></em>' attribute.
@@ -1158,7 +1158,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Not Available Color</b></em>' attribute.
@@ -1167,7 +1167,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Observer Pose</b></em>' containment reference.
@@ -1176,7 +1176,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
 
 	/**
 	 * The feature id for the '<em><b>Target Height Above Ground</b></em>' attribute.
@@ -1185,7 +1185,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Use Height Perpendicular To Ground</b></em>' attribute.
@@ -1194,7 +1194,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Antenna Radiation Pattern</b></em>' containment reference.
@@ -1203,7 +1203,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signal Strength Cutoff</b></em>' attribute.
@@ -1212,7 +1212,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bellow Cutoff Color</b></em>' attribute.
@@ -1221,7 +1221,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1230,7 +1230,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Region</em>' operation.
@@ -1239,7 +1239,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
 
 	/**
 	 * The operation id for the '<em>Get Region Image</em>' operation.
@@ -1248,7 +1248,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
 
 	/**
 	 * The operation id for the '<em>Get Resolution</em>' operation.
@@ -1257,7 +1257,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
 
 	/**
 	 * The operation id for the '<em>Update Image</em>' operation.
@@ -1266,7 +1266,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
 
 	/**
 	 * The operation id for the '<em>Get Image Map Layer Region</em>' operation.
@@ -1275,7 +1275,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
 
 	/**
 	 * The number of operations of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1284,7 +1284,7 @@ public interface ApogyAddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = ApogyCoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = ApogySurfaceEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.

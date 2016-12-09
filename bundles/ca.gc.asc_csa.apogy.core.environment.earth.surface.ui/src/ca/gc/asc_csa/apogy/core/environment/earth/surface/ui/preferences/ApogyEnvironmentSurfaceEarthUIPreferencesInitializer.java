@@ -14,14 +14,20 @@ package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences;
  */
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 
 public class ApogyEnvironmentSurfaceEarthUIPreferencesInitializer extends AbstractPreferenceInitializer {
 
 	@Override
 	public void initializeDefaultPreferences() 
 	{			
-		// IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		
-		// No intialization required yet.
+		// Initialize default Sun Vector Color.
+		PreferenceConverter.setDefault(store, ApogyEnvironmentSurfaceEarthUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, ApogyEnvironmentSurfaceEarthUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR);
+
 	}
 }

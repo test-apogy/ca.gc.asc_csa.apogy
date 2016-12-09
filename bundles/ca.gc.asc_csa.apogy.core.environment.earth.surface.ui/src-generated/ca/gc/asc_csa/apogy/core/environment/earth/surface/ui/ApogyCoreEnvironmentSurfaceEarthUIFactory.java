@@ -78,6 +78,15 @@ public interface ApogyCoreEnvironmentSurfaceEarthUIFactory extends EFactory {
 	SunVector3DToolNode createSunVector3DToolNode();
 
 	/**
+	 * Returns a new object of class '<em>Sun Vector3 DTool Node Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sun Vector3 DTool Node Presentation</em>'.
+	 * @generated
+	 */
+	SunVector3DToolNodePresentation createSunVector3DToolNodePresentation();
+
+	/**
 	 * Returns a new object of class '<em>Earth Surface UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

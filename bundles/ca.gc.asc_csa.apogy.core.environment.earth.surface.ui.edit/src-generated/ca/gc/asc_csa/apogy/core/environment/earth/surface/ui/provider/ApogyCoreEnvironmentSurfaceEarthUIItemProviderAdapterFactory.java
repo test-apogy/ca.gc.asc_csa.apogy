@@ -240,6 +240,29 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SunVector3DToolNodePresentationItemProvider sunVector3DToolNodePresentationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSunVector3DToolNodePresentationAdapter() {
+		if (sunVector3DToolNodePresentationItemProvider == null) {
+			sunVector3DToolNodePresentationItemProvider = new SunVector3DToolNodePresentationItemProvider(this);
+		}
+
+		return sunVector3DToolNodePresentationItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,6 +416,7 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
 		if (sunVector3DToolItemProvider != null) sunVector3DToolItemProvider.dispose();
 		if (sunVector3DToolNodeItemProvider != null) sunVector3DToolNodeItemProvider.dispose();
+		if (sunVector3DToolNodePresentationItemProvider != null) sunVector3DToolNodePresentationItemProvider.dispose();
 		if (earthSurfaceUIUtilitiesItemProvider != null) earthSurfaceUIUtilitiesItemProvider.dispose();
 	}
 
@@ -457,6 +481,11 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 					(createChildParameter
 						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
 						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createMoonPresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				return null;
 			}
@@ -655,6 +684,11 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createEarthSurfaceUIUtilities()));
 
 				return null;
@@ -691,6 +725,11 @@ public class ApogyCoreEnvironmentSurfaceEarthUIItemProviderAdapterFactory extend
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNodePresentation()));
 
 				newChildDescriptors.add
 					(createChildParameter

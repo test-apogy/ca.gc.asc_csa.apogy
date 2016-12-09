@@ -41,7 +41,7 @@ import ca.gc.asc_csa.apogy.addons.telecoms.TelecomStatusMonitorToolList;
 import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -189,7 +189,7 @@ public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements Apog
 
 		// Initialize simple dependencies
 		ApogyAddonsPackage.eINSTANCE.eClass();
-		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogySurfaceEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theApogyAddonsTelecomsPackage.createPackageContents();
@@ -698,7 +698,7 @@ public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements Apog
 		ApogyAddonsPackage theApogyAddonsPackage = (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
 		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
-		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogySurfaceEnvironmentPackage theApogySurfaceEnvironmentPackage = (ApogySurfaceEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogySurfaceEnvironmentPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -714,7 +714,7 @@ public class ApogyAddonsTelecomsPackageImpl extends EPackageImpl implements Apog
 		simpleConicalRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		simpleRectangularFrustumRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		uRlBasedAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
-		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getLineOfSightImageMapLayer());
+		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theApogySurfaceEnvironmentPackage.getLineOfSightImageMapLayer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(telecomNodeEClass, TelecomNode.class, "TelecomNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

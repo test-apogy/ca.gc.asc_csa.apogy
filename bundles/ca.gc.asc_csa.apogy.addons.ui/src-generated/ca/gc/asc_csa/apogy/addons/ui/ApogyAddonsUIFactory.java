@@ -42,15 +42,6 @@ public interface ApogyAddonsUIFactory extends EFactory {
 	Ruler3dToolNodePresentation createRuler3dToolNodePresentation();
 
 	/**
-	 * Returns a new object of class '<em>Sun Vector3 DTool Node Presentation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sun Vector3 DTool Node Presentation</em>'.
-	 * @generated
-	 */
-	SunVector3DToolNodePresentation createSunVector3DToolNodePresentation();
-
-	/**
 	 * Returns a new object of class '<em>Trajectory3 DTool Node Presentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

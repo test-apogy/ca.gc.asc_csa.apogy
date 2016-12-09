@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.addons.AbstractTool;
 import ca.gc.asc_csa.apogy.addons.SimpleTool;
+import ca.gc.asc_csa.apogy.addons.telecoms.*;
 import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
@@ -33,12 +34,6 @@ import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.environment.AbstractMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.LineOfSightImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegionImage;
-import ca.gc.asc_csa.apogy.core.environment.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -450,7 +445,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbstractMapLayer(AbstractMapLayer object) {
+	public T caseAbstractMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer object) {
 		return null;
 	}
 
@@ -465,7 +460,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRectangularRegionProvider(RectangularRegionProvider object) {
+	public T caseRectangularRegionProvider(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider object) {
 		return null;
 	}
 
@@ -480,7 +475,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRectangularRegionImage(RectangularRegionImage object) {
+	public T caseRectangularRegionImage(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage object) {
 		return null;
 	}
 
@@ -495,7 +490,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseImageMapLayer(ImageMapLayer object) {
+	public T caseImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer object) {
 		return null;
 	}
 
@@ -510,7 +505,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCartesianTriangularMeshDerivedImageMapLayer(CartesianTriangularMeshDerivedImageMapLayer object) {
+	public T caseCartesianTriangularMeshDerivedImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer object) {
 		return null;
 	}
 
@@ -525,7 +520,7 @@ public class ApogyAddonsTelecomsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLineOfSightImageMapLayer(LineOfSightImageMapLayer object) {
+	public T caseLineOfSightImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer object) {
 		return null;
 	}
 

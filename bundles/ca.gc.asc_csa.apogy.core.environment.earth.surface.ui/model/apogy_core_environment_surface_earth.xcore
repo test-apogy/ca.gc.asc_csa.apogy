@@ -113,6 +113,11 @@ class SunVector3DToolNode extends Node
 	refers transient SunVector3DTool sunVector3DTool opposite sunVector3DToolNode	
 }
 
+class SunVector3DToolNodePresentation extends NodePresentation
+{
+	
+}
+
 // Utilities
 
 class EarthSurfaceUIUtilities

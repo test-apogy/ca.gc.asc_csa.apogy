@@ -81,10 +81,6 @@ public class ApogyAddonsUIAdapterFactory extends AdapterFactoryImpl {
 				return createRuler3dToolNodePresentationAdapter();
 			}
 			@Override
-			public Adapter caseSunVector3DToolNodePresentation(SunVector3DToolNodePresentation object) {
-				return createSunVector3DToolNodePresentationAdapter();
-			}
-			@Override
 			public Adapter caseTrajectory3DToolNodePresentation(Trajectory3DToolNodePresentation object) {
 				return createTrajectory3DToolNodePresentationAdapter();
 			}
@@ -123,20 +119,6 @@ public class ApogyAddonsUIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRuler3dToolNodePresentationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation
-	 * @generated
-	 */
-	public Adapter createSunVector3DToolNodePresentationAdapter() {
 		return null;
 	}
 

@@ -133,6 +133,13 @@ public class ApogyCoreEnvironmentSurfaceEarthUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCoreEnvironmentSurfaceEarthUIPackage.SUN_VECTOR3_DTOOL_NODE_PRESENTATION: {
+				SunVector3DToolNodePresentation sunVector3DToolNodePresentation = (SunVector3DToolNodePresentation)theEObject;
+				T result = caseSunVector3DToolNodePresentation(sunVector3DToolNodePresentation);
+				if (result == null) result = caseNodePresentation(sunVector3DToolNodePresentation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_UI_UTILITIES: {
 				EarthSurfaceUIUtilities earthSurfaceUIUtilities = (EarthSurfaceUIUtilities)theEObject;
 				T result = caseEarthSurfaceUIUtilities(earthSurfaceUIUtilities);
@@ -215,6 +222,21 @@ public class ApogyCoreEnvironmentSurfaceEarthUISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSunVector3DToolNode(SunVector3DToolNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sun Vector3 DTool Node Presentation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sun Vector3 DTool Node Presentation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSunVector3DToolNodePresentation(SunVector3DToolNodePresentation object) {
 		return null;
 	}
 

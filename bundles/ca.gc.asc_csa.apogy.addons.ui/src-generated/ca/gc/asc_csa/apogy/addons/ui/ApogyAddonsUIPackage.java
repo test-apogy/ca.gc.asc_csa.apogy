@@ -227,152 +227,6 @@ public interface ApogyAddonsUIPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl
-	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getSunVector3DToolNodePresentation()
-	 * @generated
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Topology Presentation Set</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
-
-	/**
-	 * The feature id for the '<em><b>Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__NODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__NODE;
-
-	/**
-	 * The feature id for the '<em><b>Color</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__COLOR = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
-
-	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__VISIBLE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SHADOW_MODE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
-
-	/**
-	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
-
-	/**
-	 * The feature id for the '<em><b>Centroid</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__CENTROID = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
-
-	/**
-	 * The feature id for the '<em><b>Min</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MIN = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MIN;
-
-	/**
-	 * The feature id for the '<em><b>Max</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__MAX = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__MAX;
-
-	/**
-	 * The feature id for the '<em><b>XRange</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__XRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
-
-	/**
-	 * The feature id for the '<em><b>YRange</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__YRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
-
-	/**
-	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__ZRANGE = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
-
-	/**
-	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION__SCENE_OBJECT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
-
-	/**
-	 * The number of structural features of the '<em>Sun Vector3 DTool Node Presentation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_FEATURE_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Sun Vector3 DTool Node Presentation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUN_VECTOR3_DTOOL_NODE_PRESENTATION_OPERATION_COUNT = ApogyCommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
-
-
-	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,7 +234,7 @@ public interface ApogyAddonsUIPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getTrajectory3DToolNodePresentation()
 	 * @generated
 	 */
-	int TRAJECTORY3_DTOOL_NODE_PRESENTATION = 2;
+	int TRAJECTORY3_DTOOL_NODE_PRESENTATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Topology Presentation Set</b></em>' reference list.
@@ -529,16 +383,6 @@ public interface ApogyAddonsUIPackage extends EPackage {
 	EClass getRuler3dToolNodePresentation();
 
 	/**
-	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation <em>Sun Vector3 DTool Node Presentation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sun Vector3 DTool Node Presentation</em>'.
-	 * @see ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation
-	 * @generated
-	 */
-	EClass getSunVector3DToolNodePresentation();
-
-	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation <em>Trajectory3 DTool Node Presentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,15 +424,6 @@ public interface ApogyAddonsUIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RULER3D_TOOL_NODE_PRESENTATION = eINSTANCE.getRuler3dToolNodePresentation();
-		/**
-		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl <em>Sun Vector3 DTool Node Presentation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.SunVector3DToolNodePresentationImpl
-		 * @see ca.gc.asc_csa.apogy.addons.ui.impl.ApogyAddonsUIPackageImpl#getSunVector3DToolNodePresentation()
-		 * @generated
-		 */
-		EClass SUN_VECTOR3_DTOOL_NODE_PRESENTATION = eINSTANCE.getSunVector3DToolNodePresentation();
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.addons.ui.impl.Trajectory3DToolNodePresentationImpl <em>Trajectory3 DTool Node Presentation</em>}' class.
 		 * <!-- begin-user-doc -->

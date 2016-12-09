@@ -54,9 +54,8 @@ import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
-import ca.gc.asc_csa.apogy.core.environment.Map;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.util.ApogySurfaceEnvironmentSwitch;
 import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
@@ -802,19 +801,19 @@ public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTe
 	}
 
 	/**
-	 * A child creation extender for the {@link ApogyCoreEnvironmentPackage}.
+	 * A child creation extender for the {@link ApogySurfaceEnvironmentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class ApogyCoreEnvironmentChildCreationExtender implements IChildCreationExtender {
+	public static class ApogySurfaceEnvironmentChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends ApogyCoreEnvironmentSwitch<Object> {
+		protected static class CreationSwitch extends ApogySurfaceEnvironmentSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -847,10 +846,10 @@ public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTe
 			 * @generated
 			 */
 			@Override
-			public Object caseMap(Map object) {
+			public Object caseMap(ca.gc.asc_csa.apogy.core.environment.surface.Map object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.MAP__LAYERS,
+						(ApogySurfaceEnvironmentPackage.Literals.MAP__LAYERS,
 						 ApogyAddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
 
 				return null;

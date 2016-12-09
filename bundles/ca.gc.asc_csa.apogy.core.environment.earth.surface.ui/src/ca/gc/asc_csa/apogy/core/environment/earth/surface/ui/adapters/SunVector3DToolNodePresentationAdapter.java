@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.addons.ui.adapters;
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.adapters;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -13,12 +13,12 @@ package ca.gc.asc_csa.apogy.addons.ui.adapters;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.addons.SunVector3DToolNode;
-import ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation;
-import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentationAdapter;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation;
 
 public class SunVector3DToolNodePresentationAdapter implements NodePresentationAdapter
 {
@@ -49,7 +49,7 @@ public class SunVector3DToolNodePresentationAdapter implements NodePresentationA
 
 		SunVector3DToolNode ruler3dToolNode = (SunVector3DToolNode) obj;
 		
-		SunVector3DToolNodePresentation presentationNode = ApogyAddonsUIFactory.eINSTANCE.createSunVector3DToolNodePresentation();
+		SunVector3DToolNodePresentation presentationNode = ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNodePresentation();
 		presentationNode.setNode(ruler3dToolNode);			
 						
 		return presentationNode;

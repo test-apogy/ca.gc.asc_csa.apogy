@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.addons.ui.preferences;
+package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -13,22 +13,27 @@ package ca.gc.asc_csa.apogy.addons.ui.preferences;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import org.eclipse.jface.preference.ColorFieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-import ca.gc.asc_csa.apogy.addons.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 
-public class ApogyToolsUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
-{		
+public class ApogyEnvironmentSurfaceEarthUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+{	
+	private ColorFieldEditor sunVectorColorFieldEditor;
+	
 	/**
 	 * Create the preference page.
 	 */
-	public ApogyToolsUIPreferencesPage() {
+	public ApogyEnvironmentSurfaceEarthUIPreferencesPage() {
 	}
 
 	/**
@@ -41,7 +46,16 @@ public class ApogyToolsUIPreferencesPage extends PreferencePage implements IWork
 		Composite container = new Composite(parent, SWT.NULL);
 		container.setLayout(new GridLayout(1, true));
 		
+		// Circular Sector FOV
+		Group grpSunvectorTool = new Group(container, SWT.NONE);
+		grpSunvectorTool.setLayout(new GridLayout(2, true));
+		grpSunvectorTool.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
+		grpSunvectorTool.setText("Sun Vector Tool");	
 		
+			
+		// FOV Color
+		sunVectorColorFieldEditor = createColorFieldEditor(grpSunvectorTool, ApogyEnvironmentSurfaceEarthUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, "Default Vector Color:");		
+
 			
 		return container;
 	}
@@ -70,13 +84,27 @@ public class ApogyToolsUIPreferencesPage extends PreferencePage implements IWork
 	@Override
 	protected void performDefaults() 
 	{			
+		sunVectorColorFieldEditor.loadDefault();
+			
 		super.performDefaults();
 	}
 	
-		
+	
+	
+	private ColorFieldEditor createColorFieldEditor(final Composite container, final String preferenceID, final String preferenceLabel)
+	{
+		ColorFieldEditor colorEditor = new ColorFieldEditor(preferenceID, preferenceLabel, container);				
+
+		//Set the editor up to use this page	
+		colorEditor.setPreferenceStore(getPreferenceStore());
+		colorEditor.load();
+
+		return colorEditor;
+	}
+
 	private void storePreferences()
 	{		
-		// TODO
+		sunVectorColorFieldEditor.store();
 	}
 
 }

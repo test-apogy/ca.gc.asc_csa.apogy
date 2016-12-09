@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.addons.ui.Ruler3dToolNodePresentation;
-import ca.gc.asc_csa.apogy.addons.ui.SunVector3DToolNodePresentation;
 import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIFactory;
 import ca.gc.asc_csa.apogy.addons.ui.ApogyAddonsUIPackage;
 import ca.gc.asc_csa.apogy.addons.ui.Trajectory3DToolNodePresentation;
@@ -36,13 +35,6 @@ public class ApogyAddonsUIPackageImpl extends EPackageImpl implements ApogyAddon
 	 * @generated
 	 */
 	private EClass ruler3dToolNodePresentationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sunVector3DToolNodePresentationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,15 +121,6 @@ public class ApogyAddonsUIPackageImpl extends EPackageImpl implements ApogyAddon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSunVector3DToolNodePresentation() {
-		return sunVector3DToolNodePresentationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTrajectory3DToolNodePresentation() {
 		return trajectory3DToolNodePresentationEClass;
 	}
@@ -171,8 +154,6 @@ public class ApogyAddonsUIPackageImpl extends EPackageImpl implements ApogyAddon
 
 		// Create classes and their features
 		ruler3dToolNodePresentationEClass = createEClass(RULER3D_TOOL_NODE_PRESENTATION);
-
-		sunVector3DToolNodePresentationEClass = createEClass(SUN_VECTOR3_DTOOL_NODE_PRESENTATION);
 
 		trajectory3DToolNodePresentationEClass = createEClass(TRAJECTORY3_DTOOL_NODE_PRESENTATION);
 	}
@@ -209,13 +190,10 @@ public class ApogyAddonsUIPackageImpl extends EPackageImpl implements ApogyAddon
 
 		// Add supertypes to classes
 		ruler3dToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
-		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 		trajectory3DToolNodePresentationEClass.getESuperTypes().add(theApogyCommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(ruler3dToolNodePresentationEClass, Ruler3dToolNodePresentation.class, "Ruler3dToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sunVector3DToolNodePresentationEClass, SunVector3DToolNodePresentation.class, "SunVector3DToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(trajectory3DToolNodePresentationEClass, Trajectory3DToolNodePresentation.class, "Trajectory3DToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
