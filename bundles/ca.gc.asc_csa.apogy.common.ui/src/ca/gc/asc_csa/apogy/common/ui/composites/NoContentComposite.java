@@ -15,8 +15,6 @@ package ca.gc.asc_csa.apogy.common.ui.composites;
  */
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -30,11 +28,6 @@ public class NoContentComposite extends Composite {
 	 */
 	public NoContentComposite(Composite parent, int style) {
 		super(parent, style);
-		addDisposeListener(new DisposeListener() {
-			public void widgetDisposed(DisposeEvent e) {
-				dispose();
-			}
-		});
 		setLayout(new GridLayout(1, false));
 		
 		Label lblNoActiveSession = new Label(this, SWT.NONE);
