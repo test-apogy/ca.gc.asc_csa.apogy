@@ -51,4 +51,38 @@ public interface ApogyEarthFacade extends EObject
 	 */
 	Tuple3d getMoonVector(Node node, Environment environment);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Create a GeographicCoordinates.
+	 * @param longitude The longitude, in radians.
+	 * @param latitude The latitude, in radians.
+	 * @param altitude The altitude, in meters.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" longitudeUnique="false" latitudeUnique="false" altitudeUnique="false"
+	 * @generated
+	 */
+	GeographicCoordinates createGeographicCoordinates(double longitude, double latitude, double altitude);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates an EarthSurfaceLocation from parameters.
+	 * @param name The name of the location.
+	 * @param description The description of the location.
+	 * @param longitude The longitude of the location, in radians.
+	 * @param latitude The latitude of the location, in radians.
+	 * @param elevation The elevation of the location, in meters.
+	 * @return The EarthSurfaceLocation.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" nameUnique="false" descriptionUnique="false" longitudeUnique="false"
+	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" latitudeUnique="false"
+	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" elevationUnique="false"
+	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
+	 * @generated
+	 */
+	EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation);
 } // ApogyEarthFacade

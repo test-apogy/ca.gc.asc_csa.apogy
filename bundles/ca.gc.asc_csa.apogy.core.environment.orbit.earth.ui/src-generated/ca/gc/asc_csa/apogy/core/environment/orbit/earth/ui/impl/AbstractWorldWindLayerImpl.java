@@ -13,8 +13,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import gov.nasa.worldwind.layers.RenderableLayer;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,9 +20,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.viewers.ISelection;
+
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.impl.UpdatableImpl;
+import gov.nasa.worldwind.layers.RenderableLayer;
 
 /**
  * <!-- begin-user-doc -->

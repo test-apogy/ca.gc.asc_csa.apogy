@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,9 +11,9 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment.earth.provider;
 
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,18 +23,18 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.provider.GeographicCoordinatesItemProvider;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 
 /**
- * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation} object.
+ * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EarthSurfaceLocationItemProvider extends GeographicCoordinatesItemProvider 
-{
+public class EarthSurfaceLocationItemProvider extends GeographicCoordinatesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -153,8 +152,8 @@ public class EarthSurfaceLocationItemProvider extends GeographicCoordinatesItemP
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceLocation.class)) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+			case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

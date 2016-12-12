@@ -13,17 +13,23 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit;
 
-import org.eclipse.emf.ecore.EObject;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Abstract Orbit Model</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class representing an orbit model.
+ * <!-- end-model-doc -->
+ *
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage#getAbstractOrbitModel()
  * @model abstract="true"
  * @generated
  */
-public interface AbstractOrbitModel extends EObject {
+public interface AbstractOrbitModel extends Named, Described {
 } // AbstractOrbitModel

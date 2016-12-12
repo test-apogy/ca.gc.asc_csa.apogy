@@ -41,10 +41,10 @@ import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3
-import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
 import ca.gc.asc_csa.apogy.core.Updatable
 import ca.gc.asc_csa.apogy.core.environment.Earth
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.Moon
 import ca.gc.asc_csa.apogy.core.environment.Sky
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame
@@ -143,8 +143,11 @@ class NadirPointingAttitudeProvider extends OreKitBackedAttitudeProvider
  * Defines a worksite in orbit. The reference frame used is inertial (J2000), with its origin at the current orbital position.
  */
 class EarthOrbitWorksite extends OrbitWorksite
-{		
-	contains EarthOrbitSky[0..1] sky opposite earthOrbitWorksite
+{			
+	/*
+	 * The EarthOrbitSky associated with the worksite,
+	 */
+	refers derived transient volatile EarthOrbitSky[1] earthOrbitSky
 }
 
 /*
@@ -155,7 +158,7 @@ class EarthOrbitSky extends Sky
 	/*
 	 * The worksite to which the sky is associated.
 	 */
-	refers EarthOrbitWorksite earthOrbitWorksite opposite sky	
+	refers transient EarthOrbitWorksite earthOrbitWorksite
 	
 	/*
 	 * The Moon in the sky.
@@ -506,12 +509,6 @@ class TLE extends AbstractTLE
 }
 
 /*
- * Defines a location on the surface of the Earth.
- */
-class EarthSurfaceLocation extends GeographicCoordinates, AbstractSurfaceLocation{
-}
-
-/*
  * List that refers {@link GroundStation}.
  */
 class GroundStationReferencesList{
@@ -779,18 +776,7 @@ class ApogyCoreEnvironmentOrbitEarthFacade
 	 * Creates an Date from a AbsoluteDate.
 	 */
 	op EDate createDate(AbsoluteDate absoluteDate)	
-	
-	/*
-	 * Creates an EarthSurfaceLocation from parameters.
-	 * @param name The name of the location. 
-	 * @param description The description of the location.
-	 * @param longitude The longitude of the location, in radians.
-	 * @param latitude The latitude of the location, in radians.
-	 * @param elevation The elevation of the location, in meters.
-	 * @return The EarthSurfaceLocation.
-	 */
-	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(apogy_units = "rad") double longitude, @GenModel(apogy_units = "rad") double latitude, @GenModel(apogy_units = "m") double elevation)
-		
+			
 	/*
 	 * Returns the geographic sub-point for a given spacecraft state.
 	 */

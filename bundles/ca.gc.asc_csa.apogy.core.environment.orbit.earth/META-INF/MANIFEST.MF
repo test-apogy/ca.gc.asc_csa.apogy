@@ -24,7 +24,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.orekit;bundle-version="0.7.0";visibility:=reexport,
  ca.gc.asc_csa.apogy.addons.sensors.fov;bundle-version="0.3.0";visibility:=reexport,
  org.apache.commons.math3;bundle-version="3.2.0",
- ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0"
+ ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
+ ca.gc.asc_csa.apogy.core.environment.earth;bundle-version="0.1.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

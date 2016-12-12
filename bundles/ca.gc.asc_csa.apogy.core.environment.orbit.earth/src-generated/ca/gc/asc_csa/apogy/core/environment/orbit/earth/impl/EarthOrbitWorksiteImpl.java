@@ -13,11 +13,8 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
@@ -31,22 +28,12 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getSky <em>Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl.EarthOrbitWorksiteImpl#getEarthOrbitSky <em>Earth Orbit Sky</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOrbitWorksite {
-	/**
-	 * The cached value of the '{@link #getSky() <em>Sky</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSky()
-	 * @generated
-	 * @ordered
-	 */
-	protected EarthOrbitSky sky;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,8 +58,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthOrbitSky getSky() {
-		return sky;
+	public EarthOrbitSky getEarthOrbitSky() {
+		EarthOrbitSky earthOrbitSky = basicGetEarthOrbitSky();
+		return earthOrbitSky != null && earthOrbitSky.eIsProxy() ? (EarthOrbitSky)eResolveProxy((InternalEObject)earthOrbitSky) : earthOrbitSky;
 	}
 
 	/**
@@ -80,14 +68,11 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSky(EarthOrbitSky newSky, NotificationChain msgs) {
-		EarthOrbitSky oldSky = sky;
-		sky = newSky;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, oldSky, newSky);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public EarthOrbitSky basicGetEarthOrbitSky() {
+		// TODO: implement this method to return the 'Earth Orbit Sky' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -95,48 +80,10 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSky(EarthOrbitSky newSky) {
-		if (newSky != sky) {
-			NotificationChain msgs = null;
-			if (sky != null)
-				msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
-			if (newSky != null)
-				msgs = ((InternalEObject)newSky).eInverseAdd(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, EarthOrbitSky.class, msgs);
-			msgs = basicSetSky(newSky, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, newSky, newSky));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				if (sky != null)
-					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, null, msgs);
-				return basicSetSky((EarthOrbitSky)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				return basicSetSky(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setEarthOrbitSky(EarthOrbitSky newEarthOrbitSky) {
+		// TODO: implement this method to set the 'Earth Orbit Sky' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -147,8 +94,9 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				return getSky();
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_ORBIT_SKY:
+				if (resolve) return getEarthOrbitSky();
+				return basicGetEarthOrbitSky();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,8 +109,8 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				setSky((EarthOrbitSky)newValue);
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_ORBIT_SKY:
+				setEarthOrbitSky((EarthOrbitSky)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,8 +124,8 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				setSky((EarthOrbitSky)null);
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_ORBIT_SKY:
+				setEarthOrbitSky((EarthOrbitSky)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,8 +139,8 @@ public class EarthOrbitWorksiteImpl extends OrbitWorksiteImpl implements EarthOr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
-				return sky != null;
+			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_ORBIT_SKY:
+				return basicGetEarthOrbitSky() != null;
 		}
 		return super.eIsSet(featureID);
 	}

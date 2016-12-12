@@ -16,12 +16,10 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.core.environment.Earth;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
 import ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl;
@@ -45,6 +43,16 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
  * @generated
  */
 public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
+	/**
+	 * The cached value of the '{@link #getEarthOrbitWorksite() <em>Earth Orbit Worksite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEarthOrbitWorksite()
+	 * @generated
+	 * @ordered
+	 */
+	protected EarthOrbitWorksite earthOrbitWorksite;
+
 	/**
 	 * The cached value of the '{@link #getMoon() <em>Moon</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -90,8 +98,15 @@ public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
 	 * @generated
 	 */
 	public EarthOrbitWorksite getEarthOrbitWorksite() {
-		if (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE) return null;
-		return (EarthOrbitWorksite)eContainer();
+		if (earthOrbitWorksite != null && earthOrbitWorksite.eIsProxy()) {
+			InternalEObject oldEarthOrbitWorksite = (InternalEObject)earthOrbitWorksite;
+			earthOrbitWorksite = (EarthOrbitWorksite)eResolveProxy(oldEarthOrbitWorksite);
+			if (earthOrbitWorksite != oldEarthOrbitWorksite) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, oldEarthOrbitWorksite, earthOrbitWorksite));
+			}
+		}
+		return earthOrbitWorksite;
 	}
 
 	/**
@@ -100,18 +115,7 @@ public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
 	 * @generated
 	 */
 	public EarthOrbitWorksite basicGetEarthOrbitWorksite() {
-		if (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE) return null;
-		return (EarthOrbitWorksite)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEarthOrbitWorksite(EarthOrbitWorksite newEarthOrbitWorksite, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newEarthOrbitWorksite, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, msgs);
-		return msgs;
+		return earthOrbitWorksite;
 	}
 
 	/**
@@ -120,19 +124,10 @@ public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
 	 * @generated
 	 */
 	public void setEarthOrbitWorksite(EarthOrbitWorksite newEarthOrbitWorksite) {
-		if (newEarthOrbitWorksite != eInternalContainer() || (eContainerFeatureID() != ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE && newEarthOrbitWorksite != null)) {
-			if (EcoreUtil.isAncestor(this, newEarthOrbitWorksite))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newEarthOrbitWorksite != null)
-				msgs = ((InternalEObject)newEarthOrbitWorksite).eInverseAdd(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, EarthOrbitWorksite.class, msgs);
-			msgs = basicSetEarthOrbitWorksite(newEarthOrbitWorksite, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, newEarthOrbitWorksite, newEarthOrbitWorksite));
+		EarthOrbitWorksite oldEarthOrbitWorksite = earthOrbitWorksite;
+		earthOrbitWorksite = newEarthOrbitWorksite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE, oldEarthOrbitWorksite, earthOrbitWorksite));
 	}
 
 	/**
@@ -215,50 +210,6 @@ public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetEarthOrbitWorksite((EarthOrbitWorksite)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE:
-				return basicSetEarthOrbitWorksite(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE:
-				return eInternalContainer().eInverseRemove(this, ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY, EarthOrbitWorksite.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE:
@@ -313,7 +264,7 @@ public class EarthOrbitSkyImpl extends SkyImpl implements EarthOrbitSky {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE:
-				return basicGetEarthOrbitWorksite() != null;
+				return earthOrbitWorksite != null;
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__MOON:
 				return moon != null;
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_SKY__EARTH:

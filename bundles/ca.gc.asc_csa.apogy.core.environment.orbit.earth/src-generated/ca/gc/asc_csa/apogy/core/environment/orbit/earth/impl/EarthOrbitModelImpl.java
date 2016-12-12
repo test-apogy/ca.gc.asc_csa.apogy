@@ -13,27 +13,24 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
-
-import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.orekit.propagation.Propagator;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ElevationMask;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
+import ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitModelImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,7 +118,7 @@ public abstract class EarthOrbitModelImpl extends OrbitModelImpl implements Eart
 				return getOreKitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_MODEL___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
 				try {
-					return getTargetPasses((EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
+					return getTargetPasses((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);

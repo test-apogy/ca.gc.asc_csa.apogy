@@ -36,10 +36,10 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.core.environment.earth
 
-import ca.gc.asc_csa.apogy.core.ApogySystem
 import ca.gc.asc_csa.apogy.common.math.Tuple3d
-
 import ca.gc.asc_csa.apogy.common.topology.Node
+import ca.gc.asc_csa.apogy.core.ApogySystem
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation
 
 /*
  * A location on Earth.
@@ -67,6 +67,13 @@ class GeographicCoordinates
 	double elevation
 }
 
+
+/*
+ * Defines a location on the surface of the Earth.
+ */
+class EarthSurfaceLocation extends GeographicCoordinates, AbstractSurfaceLocation
+{
+}
 
 /*
  * The horizontal coordinate system is a celestial coordinate system that uses the
@@ -122,5 +129,24 @@ class ApogyEarthFacade
 {
 	op Tuple3d getMoonVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
 	op Tuple3d getMoonVector(Node node, ca.gc.asc_csa.apogy.core.invocator.Environment environment)	
+	
+	/**
+	 * Create a GeographicCoordinates.
+	 * @param longitude The longitude, in radians.
+	 * @param latitude The latitude, in radians.
+	 * @param altitude The altitude, in meters.
+	 */
+	op GeographicCoordinates createGeographicCoordinates(double longitude, double latitude, double altitude)
+	
+	/*
+	 * Creates an EarthSurfaceLocation from parameters.
+	 * @param name The name of the location. 
+	 * @param description The description of the location.
+	 * @param longitude The longitude of the location, in radians.
+	 * @param latitude The latitude of the location, in radians.
+	 * @param elevation The elevation of the location, in meters.
+	 * @return The EarthSurfaceLocation.
+	 */
+	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(apogy_units = "rad") double longitude, @GenModel(apogy_units = "rad") double latitude, @GenModel(apogy_units = "m") double elevation)
 }
 

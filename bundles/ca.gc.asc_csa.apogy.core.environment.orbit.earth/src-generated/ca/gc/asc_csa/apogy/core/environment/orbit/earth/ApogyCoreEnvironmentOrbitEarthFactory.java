@@ -150,15 +150,6 @@ public interface ApogyCoreEnvironmentOrbitEarthFactory extends EFactory {
 	TLE createTLE();
 
 	/**
-	 * Returns a new object of class '<em>Earth Surface Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Surface Location</em>'.
-	 * @generated
-	 */
-	EarthSurfaceLocation createEarthSurfaceLocation();
-
-	/**
 	 * Returns a new object of class '<em>Ground Station References List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

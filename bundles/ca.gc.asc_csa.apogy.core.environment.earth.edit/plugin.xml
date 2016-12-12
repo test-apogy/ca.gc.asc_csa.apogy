@@ -33,6 +33,9 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated apogy_core_environment_earth -->
       <extender
+            uri="ca.gc.asc_csa.apogy.core.environment"
+            class="ca.gc.asc_csa.apogy.core.environment.earth.provider.ApogyEarthEnvironmentItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
+      <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.core.environment.earth.provider.ApogyEarthEnvironmentItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
    </extension>

@@ -36,9 +36,6 @@
             uri="ca.gc.asc_csa.apogy.core.environment.orbit"
             class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory$ApogyCoreEnvironmentOrbitChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.core"
-            class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory$ApogyCoreChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.apogy.core.environment"
             class="ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider.ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
       <extender

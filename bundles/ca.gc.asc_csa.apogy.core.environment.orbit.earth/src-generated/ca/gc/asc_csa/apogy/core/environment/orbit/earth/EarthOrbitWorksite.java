@@ -28,7 +28,7 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getSky <em>Sky</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getEarthOrbitSky <em>Earth Orbit Sky</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite()
@@ -38,30 +38,27 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitWorksite;
 public interface EarthOrbitWorksite extends OrbitWorksite {
 
 	/**
-	 * Returns the value of the '<em><b>Sky</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite <em>Earth Orbit Worksite</em>}'.
+	 * Returns the value of the '<em><b>Earth Orbit Sky</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sky</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sky</em>' containment reference.
-	 * @see #setSky(EarthOrbitSky)
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_Sky()
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite
-	 * @model opposite="earthOrbitWorksite" containment="true"
+	 * <!-- begin-model-doc -->
+	 * The EarthOrbitSky associated with the worksite,
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Earth Orbit Sky</em>' reference.
+	 * @see #setEarthOrbitSky(EarthOrbitSky)
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_EarthOrbitSky()
+	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EarthOrbitSky getSky();
+	EarthOrbitSky getEarthOrbitSky();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getSky <em>Sky</em>}' containment reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getEarthOrbitSky <em>Earth Orbit Sky</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sky</em>' containment reference.
-	 * @see #getSky()
+	 * @param value the new value of the '<em>Earth Orbit Sky</em>' reference.
+	 * @see #getEarthOrbitSky()
 	 * @generated
 	 */
-	void setSky(EarthOrbitSky value);
+	void setEarthOrbitSky(EarthOrbitSky value);
 } // EarthOrbitWorksite

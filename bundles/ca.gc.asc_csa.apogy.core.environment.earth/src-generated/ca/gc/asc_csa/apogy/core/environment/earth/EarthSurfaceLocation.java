@@ -1,5 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
-/*
+/**
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -12,9 +11,9 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
+package ca.gc.asc_csa.apogy.core.environment.earth;
 
-import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +25,9 @@ import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
  * <!-- end-model-doc -->
  *
  *
- * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthSurfaceLocation()
+ * @see ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage#getEarthSurfaceLocation()
  * @model
  * @generated
  */
 public interface EarthSurfaceLocation extends GeographicCoordinates, AbstractSurfaceLocation {
-
 } // EarthSurfaceLocation

@@ -55,11 +55,12 @@ public final class ApogyCoreEnvironmentEditPlugin extends EMFPlugin {
 	public ApogyCoreEnvironmentEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
-		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		   });
 	}

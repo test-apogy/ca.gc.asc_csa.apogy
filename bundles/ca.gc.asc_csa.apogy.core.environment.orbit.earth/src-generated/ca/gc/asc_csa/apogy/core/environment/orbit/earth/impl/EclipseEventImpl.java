@@ -15,9 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
-import ca.gc.asc_csa.apogy.core.environment.impl.GeographicCoordinatesImpl;
-
+import ca.gc.asc_csa.apogy.core.environment.earth.impl.GeographicCoordinatesImpl;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;

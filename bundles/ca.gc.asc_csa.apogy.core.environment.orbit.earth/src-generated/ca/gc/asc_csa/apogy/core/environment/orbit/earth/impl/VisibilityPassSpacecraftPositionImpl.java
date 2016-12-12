@@ -13,7 +13,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;

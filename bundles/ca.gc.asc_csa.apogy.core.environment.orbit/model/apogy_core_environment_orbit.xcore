@@ -53,12 +53,17 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite
 type List < T > wraps java.util.List
 type Exception wraps java.lang.Exception
 
-
-abstract class AbstractOrbitModel
+/**
+ * Class representing an orbit model.
+ */
+abstract class AbstractOrbitModel extends Named, Described
 {
 	
 }
 
+/**
+ * A worksite located in orbit.
+ */
 abstract class OrbitWorksite extends Worksite
 {	
 	/*
@@ -72,6 +77,9 @@ abstract class AbstractFrame extends Named, Described
 		
 }
 
+/**
+ * Class representing the position, velocity and acceleration of a body.
+ */
 class PVACoordinates
 {
 	/*

@@ -13,6 +13,21 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.awt.Color;
+import java.awt.Font;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 import gov.nasa.worldwind.avlist.AVKey;
 import gov.nasa.worldwind.geom.Angle;
 import gov.nasa.worldwind.geom.Position;
@@ -22,21 +37,6 @@ import gov.nasa.worldwind.render.BasicShapeAttributes;
 import gov.nasa.worldwind.render.GlobeAnnotation;
 import gov.nasa.worldwind.render.Material;
 import gov.nasa.worldwind.render.SurfaceCircle;
-
-import java.awt.Color;
-import java.awt.Font;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * @generated
 	 * @ordered
 	 */
-	protected EarthSurfaceLocation earthSurfaceLocation;
+	protected ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation earthSurfaceLocation;
 
 	/**
 	 * The default value of the '{@link #getTargetRadius() <em>Target Radius</em>}' attribute.
@@ -109,10 +109,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthSurfaceLocation getEarthSurfaceLocation() {
+	public ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation getEarthSurfaceLocation() {
 		if (earthSurfaceLocation != null && earthSurfaceLocation.eIsProxy()) {
 			InternalEObject oldEarthSurfaceLocation = (InternalEObject)earthSurfaceLocation;
-			earthSurfaceLocation = (EarthSurfaceLocation)eResolveProxy(oldEarthSurfaceLocation);
+			earthSurfaceLocation = (ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)eResolveProxy(oldEarthSurfaceLocation);
 			if (earthSurfaceLocation != oldEarthSurfaceLocation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
@@ -126,7 +126,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthSurfaceLocation basicGetEarthSurfaceLocation() {
+	public ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation basicGetEarthSurfaceLocation() {
 		return earthSurfaceLocation;
 	}
 
@@ -219,7 +219,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
-				setEarthSurfaceLocation((EarthSurfaceLocation)newValue);
+				setEarthSurfaceLocation((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)newValue);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius((Double)newValue);
@@ -237,7 +237,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
-				setEarthSurfaceLocation((EarthSurfaceLocation)null);
+				setEarthSurfaceLocation((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)null);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius(TARGET_RADIUS_EDEFAULT);
@@ -373,12 +373,12 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 						int featureId = msg.getFeatureID(EarthSurfaceLocation.class);
 						switch (featureId) 
 						{
-							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
+							case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
 								if(isAutoUpdateEnabled()) updateRenderableLayer();
 							break;
-							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__ELEVATION:
-							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LATITUDE:
-							case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__LONGITUDE:								
+							case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__ELEVATION:
+							case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__LATITUDE:
+							case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION__LONGITUDE:								
 								if(isAutoUpdateEnabled()) updateRenderableLayer();								
 							break;
 

@@ -4,9 +4,9 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.validation;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
-
 import org.eclipse.emf.common.util.EList;
+
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList}.

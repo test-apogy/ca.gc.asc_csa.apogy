@@ -21,6 +21,11 @@ import ca.gc.asc_csa.apogy.common.math.Tuple3d;
  * A representation of the model object '<em><b>PVA Coordinates</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class representing the position, velocity and acceleration of a body.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

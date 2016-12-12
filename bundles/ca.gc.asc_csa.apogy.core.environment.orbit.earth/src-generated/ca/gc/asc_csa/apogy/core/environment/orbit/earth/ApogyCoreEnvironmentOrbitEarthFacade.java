@@ -21,7 +21,8 @@ import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
 import ca.gc.asc_csa.apogy.core.environment.orbit.TimedStampedAngularCoordinates;
@@ -84,27 +85,6 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * @generated
 	 */
 	Date createDate(AbsoluteDate absoluteDate);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Creates an EarthSurfaceLocation from parameters.
-	 * @param name The name of the location.
-	 * @param description The description of the location.
-	 * @param longitude The longitude of the location, in radians.
-	 * @param latitude The latitude of the location, in radians.
-	 * @param elevation The elevation of the location, in meters.
-	 * @return The EarthSurfaceLocation.
-	 * <!-- end-model-doc -->
-	 * @model unique="false" nameUnique="false" descriptionUnique="false" longitudeUnique="false"
-	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" latitudeUnique="false"
-	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='rad'" elevationUnique="false"
-	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel apogy_units='m'"
-	 * @generated
-	 */
-	EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation);
-
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -333,7 +313,7 @@ public interface ApogyCoreEnvironmentOrbitEarthFacade extends EObject
 	 * @param monitor A progress monitor, can be null.
 	 * @return The list of VisibilityPass. Never null, but can be empty.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitModelUnique="false" earthSurfaceLocationsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation>" earthSurfaceLocationsUnique="false" earthSurfaceLocationsMany="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false" monitorDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.IProgressMonitor" monitorUnique="false"
+	 * @model dataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass>" unique="false" many="false" exceptions="ca.gc.asc_csa.apogy.core.environment.orbit.earth.Exception" earthOrbitModelUnique="false" earthSurfaceLocationsDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.List<ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation>" earthSurfaceLocationsUnique="false" earthSurfaceLocationsMany="false" startDateUnique="false" endDateUnique="false" elevationMaskUnique="false" monitorDataType="ca.gc.asc_csa.apogy.core.environment.orbit.earth.IProgressMonitor" monitorUnique="false"
 	 * @generated
 	 */
 	List<VisibilityPass> getTargetPasses(EarthOrbitModel earthOrbitModel, List<EarthSurfaceLocation> earthSurfaceLocations, Date startDate, Date endDate, ElevationMask elevationMask, IProgressMonitor monitor) throws Exception;

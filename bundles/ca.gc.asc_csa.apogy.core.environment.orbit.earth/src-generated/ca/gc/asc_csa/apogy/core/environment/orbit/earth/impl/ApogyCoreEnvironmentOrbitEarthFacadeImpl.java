@@ -75,8 +75,9 @@ import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
@@ -91,7 +92,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitPropagator;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Eclipse;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEventType;
@@ -194,28 +194,6 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 		}
 	}
 
-		
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation) 
-	{
-		EarthSurfaceLocation loc = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation();
-		loc.setName(name);
-		loc.setDescription(description);
-		
-		loc.setLatitude(latitude);
-		loc.setLongitude(longitude);
-		loc.setElevation(elevation);	
-		
-		return loc;
-		
-	}
-
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,10 +227,7 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
         GeodeticPoint centerPoint = earth.getIntersectionPoint(centerLine, p, earth.getBodyFrame(), date);
 
         // Creates the GeographicCoordinates.
-        GeographicCoordinates geographicCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-        geographicCoordinates.setLongitude(centerPoint.getLongitude());
-        geographicCoordinates.setLatitude(centerPoint.getLatitude());
-        geographicCoordinates.setElevation(0);
+        GeographicCoordinates geographicCoordinates = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(centerPoint.getLongitude(), centerPoint.getLatitude(), 0);        
         return geographicCoordinates;
 	}
 
@@ -594,11 +569,8 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
         //Vector3D      v       = t.transformVector(pvInert.getVelocity());
         GeodeticPoint center  = earth.transform(p, earth.getBodyFrame(), date);
         
-        geographicCoordinates = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-        geographicCoordinates.setLongitude(center.getLongitude());
-        geographicCoordinates.setLatitude(center.getLatitude());
-        geographicCoordinates.setElevation(center.getAltitude());                                   
-				
+        geographicCoordinates = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(center.getLongitude(), center.getLatitude(), center.getAltitude());
+        		
 		return geographicCoordinates;
 	}
 
@@ -1342,8 +1314,6 @@ public class ApogyCoreEnvironmentOrbitEarthFacadeImpl extends MinimalEObjectImpl
 				return createAbsoluteDate((Date)arguments.get(0));
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE:
 				return createDate((AbsoluteDate)arguments.get(0));
-			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE:
-				return createEarthSurfaceLocation((String)arguments.get(0), (String)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3), (Double)arguments.get(4));
 			case ApogyCoreEnvironmentOrbitEarthPackage.APOGY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE:
 				try {
 					return getSpacecraftEarthSubPoint((OreKitBackedSpacecraftState)arguments.get(0));

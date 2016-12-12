@@ -14,7 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  */
 
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 
 
 /**

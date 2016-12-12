@@ -41,27 +41,25 @@ import ca.gc.asc_csa.apogy.core.environment.Sky;
  */
 public interface EarthOrbitSky extends Sky {
 	/**
-	 * Returns the value of the '<em><b>Earth Orbit Worksite</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getSky <em>Sky</em>}'.
+	 * Returns the value of the '<em><b>Earth Orbit Worksite</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The worksite to which the sky is associated.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Earth Orbit Worksite</em>' container reference.
+	 * @return the value of the '<em>Earth Orbit Worksite</em>' reference.
 	 * @see #setEarthOrbitWorksite(EarthOrbitWorksite)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage#getEarthOrbitSky_EarthOrbitWorksite()
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitWorksite#getSky
-	 * @model opposite="sky" transient="false"
+	 * @model transient="true"
 	 * @generated
 	 */
 	EarthOrbitWorksite getEarthOrbitWorksite();
 
 	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite <em>Earth Orbit Worksite</em>}' container reference.
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite <em>Earth Orbit Worksite</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Earth Orbit Worksite</em>' container reference.
+	 * @param value the new value of the '<em>Earth Orbit Worksite</em>' reference.
 	 * @see #getEarthOrbitWorksite()
 	 * @generated
 	 */

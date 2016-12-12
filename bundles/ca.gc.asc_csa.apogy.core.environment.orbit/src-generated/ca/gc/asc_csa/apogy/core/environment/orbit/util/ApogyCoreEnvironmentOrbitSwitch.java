@@ -83,6 +83,8 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 			case ApogyCoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_MODEL: {
 				AbstractOrbitModel abstractOrbitModel = (AbstractOrbitModel)theEObject;
 				T result = caseAbstractOrbitModel(abstractOrbitModel);
+				if (result == null) result = caseNamed(abstractOrbitModel);
+				if (result == null) result = caseDescribed(abstractOrbitModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -179,6 +181,8 @@ public class ApogyCoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				T result = caseOrbitModel(orbitModel);
 				if (result == null) result = caseAbstractOrbitModel(orbitModel);
 				if (result == null) result = caseValidityRangeProvider(orbitModel);
+				if (result == null) result = caseNamed(orbitModel);
+				if (result == null) result = caseDescribed(orbitModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

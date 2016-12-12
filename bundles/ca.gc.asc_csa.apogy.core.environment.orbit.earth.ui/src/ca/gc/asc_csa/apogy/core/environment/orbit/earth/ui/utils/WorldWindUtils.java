@@ -13,22 +13,21 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import gov.nasa.worldwind.geom.Angle;
 import gov.nasa.worldwind.geom.Position;
 import gov.nasa.worldwind.render.ExtrudedPolygon;
 import gov.nasa.worldwind.render.Polygon;
 import gov.nasa.worldwind.render.Polyline;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftState;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Corridor;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 
 public class WorldWindUtils 
 {

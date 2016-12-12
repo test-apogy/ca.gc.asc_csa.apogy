@@ -704,8 +704,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
@@ -715,6 +715,8 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		abstractOrbitModelEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		abstractOrbitModelEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitWorksiteEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getWorksite());
 		abstractFrameEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractFrameEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
@@ -849,10 +851,28 @@ public class ApogyCoreEnvironmentOrbitPackageImpl extends EPackageImpl implement
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment"
 		   });	
 		addAnnotation
+		  (abstractOrbitModelEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass representing an orbit model."
+		   });	
+		addAnnotation
+		  (orbitWorksiteEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA worksite located in orbit."
+		   });	
+		addAnnotation
 		  (getOrbitWorksite_OrbitModel(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The active OrbitModel to use to update the orbit worksite."
+		   });	
+		addAnnotation
+		  (pvaCoordinatesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass representing the position, velocity and acceleration of a body."
 		   });	
 		addAnnotation
 		  (getPVACoordinates_Position(), 

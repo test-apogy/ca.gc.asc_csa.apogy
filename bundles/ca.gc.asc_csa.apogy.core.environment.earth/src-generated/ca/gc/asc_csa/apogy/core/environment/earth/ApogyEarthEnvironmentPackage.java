@@ -137,6 +137,79 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	int GEOGRAPHIC_COORDINATES_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.impl.EarthSurfaceLocationImpl <em>Earth Surface Location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.EarthSurfaceLocationImpl
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.ApogyEarthEnvironmentPackageImpl#getEarthSurfaceLocation()
+	 * @generated
+	 */
+	int EARTH_SURFACE_LOCATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__LONGITUDE = GEOGRAPHIC_COORDINATES__LONGITUDE;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__LATITUDE = GEOGRAPHIC_COORDINATES__LATITUDE;
+
+	/**
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__ELEVATION = GEOGRAPHIC_COORDINATES__ELEVATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__NAME = GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION__DESCRIPTION = GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Earth Surface Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION_FEATURE_COUNT = GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Earth Surface Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SURFACE_LOCATION_OPERATION_COUNT = GEOGRAPHIC_COORDINATES_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.impl.HorizontalCoordinatesImpl <em>Horizontal Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,7 +217,7 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.ApogyEarthEnvironmentPackageImpl#getHorizontalCoordinates()
 	 * @generated
 	 */
-	int HORIZONTAL_COORDINATES = 1;
+	int HORIZONTAL_COORDINATES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Altitude</b></em>' attribute.
@@ -199,7 +272,7 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.ApogyEarthEnvironmentPackageImpl#getEclipticCoordinates()
 	 * @generated
 	 */
-	int ECLIPTIC_COORDINATES = 2;
+	int ECLIPTIC_COORDINATES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
@@ -255,7 +328,7 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.ApogyEarthEnvironmentPackageImpl#getApogyEarthFacade()
 	 * @generated
 	 */
-	int APOGY_EARTH_FACADE = 3;
+	int APOGY_EARTH_FACADE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Apogy Earth Facade</em>' class.
@@ -285,13 +358,31 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = 1;
 
 	/**
+	 * The operation id for the '<em>Create Geographic Coordinates</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_FACADE___CREATE_GEOGRAPHIC_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
+
+	/**
+	 * The operation id for the '<em>Create Earth Surface Location</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = 3;
+
+	/**
 	 * The number of operations of the '<em>Apogy Earth Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_FACADE_OPERATION_COUNT = 2;
+	int APOGY_EARTH_FACADE_OPERATION_COUNT = 4;
 
 
 	/**
@@ -336,6 +427,16 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGeographicCoordinates_Elevation();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Earth Surface Location</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
+	 * @generated
+	 */
+	EClass getEarthSurfaceLocation();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates <em>Horizontal Coordinates</em>}'.
@@ -454,6 +555,26 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 	EOperation getApogyEarthFacade__GetMoonVector__Node_Environment();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade#createGeographicCoordinates(double, double, double) <em>Create Geographic Coordinates</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Geographic Coordinates</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade#createGeographicCoordinates(double, double, double)
+	 * @generated
+	 */
+	EOperation getApogyEarthFacade__CreateGeographicCoordinates__double_double_double();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double) <em>Create Earth Surface Location</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Earth Surface Location</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double)
+	 * @generated
+	 */
+	EOperation getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -509,6 +630,16 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GEOGRAPHIC_COORDINATES__ELEVATION = eINSTANCE.getGeographicCoordinates_Elevation();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.impl.EarthSurfaceLocationImpl <em>Earth Surface Location</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.EarthSurfaceLocationImpl
+		 * @see ca.gc.asc_csa.apogy.core.environment.earth.impl.ApogyEarthEnvironmentPackageImpl#getEarthSurfaceLocation()
+		 * @generated
+		 */
+		EClass EARTH_SURFACE_LOCATION = eINSTANCE.getEarthSurfaceLocation();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.impl.HorizontalCoordinatesImpl <em>Horizontal Coordinates</em>}' class.
@@ -603,6 +734,22 @@ public interface ApogyEarthEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_EARTH_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getApogyEarthFacade__GetMoonVector__Node_Environment();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Geographic Coordinates</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_FACADE___CREATE_GEOGRAPHIC_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyEarthFacade__CreateGeographicCoordinates__double_double_double();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Earth Surface Location</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
 
 	}
 

@@ -211,6 +211,11 @@ public class EarthSurfaceWorksiteItemProvider extends SurfaceWorksiteItemProvide
 			(createChildParameter
 				(ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
 				 ApogyEarthEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+				 ApogyEarthEnvironmentFactory.eINSTANCE.createEarthSurfaceLocation()));
 	}
 
 }

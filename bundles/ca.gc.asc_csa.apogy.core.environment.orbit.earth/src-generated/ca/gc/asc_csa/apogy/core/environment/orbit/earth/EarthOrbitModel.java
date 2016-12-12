@@ -13,6 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
 
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 import java.util.Date;

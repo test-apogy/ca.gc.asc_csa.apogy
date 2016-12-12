@@ -40,14 +40,10 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.OrbitModelsList;
-import ca.gc.asc_csa.apogy.core.SurfaceLocationsList;
-import ca.gc.asc_csa.apogy.core.WorksitesList;
-import ca.gc.asc_csa.apogy.core.environment.SurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.SurfaceLocationsList;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.SpacecraftAttitude;
@@ -57,7 +53,6 @@ import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbi
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthAdapterFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.util.ApogyCoreEnvironmentOrbitSwitch;
 import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
-import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -412,29 +407,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		}
 
 		return tleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EarthSurfaceLocationItemProvider earthSurfaceLocationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEarthSurfaceLocationAdapter() {
-		if (earthSurfaceLocationItemProvider == null) {
-			earthSurfaceLocationItemProvider = new EarthSurfaceLocationItemProvider(this);
-		}
-
-		return earthSurfaceLocationItemProvider;
 	}
 
 	/**
@@ -875,7 +847,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 		if (tleEarthOrbitModelItemProvider != null) tleEarthOrbitModelItemProvider.dispose();
 		if (urlBasedTLEEarthOrbitPropagatorItemProvider != null) urlBasedTLEEarthOrbitPropagatorItemProvider.dispose();
 		if (tleItemProvider != null) tleItemProvider.dispose();
-		if (earthSurfaceLocationItemProvider != null) earthSurfaceLocationItemProvider.dispose();
 		if (groundStationReferencesListItemProvider != null) groundStationReferencesListItemProvider.dispose();
 		if (groundStationItemProvider != null) groundStationItemProvider.dispose();
 		if (groundStationListItemProvider != null) groundStationListItemProvider.dispose();
@@ -1127,11 +1098,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
 
 				newChildDescriptors.add
@@ -1272,11 +1238,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
 
 				newChildDescriptors.add
@@ -1375,136 +1336,6 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 	}
 
 	/**
-	 * A child creation extender for the {@link ApogyCorePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ApogyCoreChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ApogyCoreSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseWorksitesList(WorksitesList object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.WORKSITES_LIST__WORKSITES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitWorksite()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseSurfaceLocationsList(SurfaceLocationsList object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseOrbitModelsList(OrbitModelsList object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createInitialOrbitBasedEarthOrbitModel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLEEarthOrbitModel()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createURLBasedTLEEarthOrbitPropagator()));
-
-				return null;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return ApogyCoreEnvironmentOrbitEarthEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
 	 * A child creation extender for the {@link ApogyCoreEnvironmentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1550,36 +1381,25 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 			 * @generated
 			 */
 			@Override
-			public Object caseSurfaceWorksite(SurfaceWorksite object) {
+			public Object caseWorksite(Worksite object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
+						(ApogyCoreEnvironmentPackage.Literals.WORKSITE__SKY,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitSky()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
 			 */
 			@Override
-			public Object caseEarthSurfaceWorksite(EarthSurfaceWorksite object) {
+			public Object caseWorksitesList(WorksitesList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
+						(ApogyCoreEnvironmentPackage.Literals.WORKSITES_LIST__WORKSITES,
+						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitWorksite()));
 
 				return null;
 			}
@@ -1589,21 +1409,11 @@ public class ApogyCoreEnvironmentOrbitEarthItemProviderAdapterFactory extends Ap
 			 * @generated
 			 */
 			@Override
-			public Object caseGeographicCoordinatesPolygonShapeImageMapLayer(GeographicCoordinatesPolygonShapeImageMapLayer object) {
+			public Object caseSurfaceLocationsList(SurfaceLocationsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+						(ApogyCoreEnvironmentPackage.Literals.SURFACE_LOCATIONS_LIST__SURFACE_LOCATIONS,
 						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEclipseEvent()));
 
 				return null;
 			}

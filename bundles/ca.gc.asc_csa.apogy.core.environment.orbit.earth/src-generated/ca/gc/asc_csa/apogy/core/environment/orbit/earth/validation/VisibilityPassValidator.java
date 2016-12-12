@@ -4,11 +4,11 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.validation;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
-
 import java.util.Date;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel;
+import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass}.

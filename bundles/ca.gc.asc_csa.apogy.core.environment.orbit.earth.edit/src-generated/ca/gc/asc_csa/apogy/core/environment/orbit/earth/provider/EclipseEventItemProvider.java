@@ -16,11 +16,9 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.provider;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 
+import ca.gc.asc_csa.apogy.core.environment.earth.provider.GeographicCoordinatesItemProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EclipseEvent;
-
-import ca.gc.asc_csa.apogy.core.environment.provider.GeographicCoordinatesItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 

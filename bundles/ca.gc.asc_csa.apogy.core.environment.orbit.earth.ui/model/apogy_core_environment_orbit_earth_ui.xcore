@@ -40,9 +40,9 @@ import ca.gc.asc_csa.apogy.common.emf.Described
 import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
 import ca.gc.asc_csa.apogy.core.Updatable
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftSwathCorridor
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.SpacecraftsVisibilitySet

@@ -14,8 +14,10 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  */
 
 import org.eclipse.emf.common.util.EList;
+
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->

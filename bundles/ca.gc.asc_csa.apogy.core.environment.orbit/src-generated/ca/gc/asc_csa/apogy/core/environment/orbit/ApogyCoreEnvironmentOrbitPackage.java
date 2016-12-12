@@ -96,13 +96,31 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	int ABSTRACT_ORBIT_MODEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ORBIT_MODEL__NAME = ApogyCommonEMFPackage.NAMED__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_ORBIT_MODEL__DESCRIPTION = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = 0;
+	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = ApogyCommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
@@ -111,7 +129,7 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = 0;
+	int ABSTRACT_ORBIT_MODEL_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.impl.OrbitWorksiteImpl <em>Orbit Worksite</em>}' class.
@@ -818,6 +836,24 @@ public interface ApogyCoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 */
 	int ORBIT_MODEL = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL__NAME = ABSTRACT_ORBIT_MODEL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBIT_MODEL__DESCRIPTION = ABSTRACT_ORBIT_MODEL__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>From Valid Date</b></em>' attribute.

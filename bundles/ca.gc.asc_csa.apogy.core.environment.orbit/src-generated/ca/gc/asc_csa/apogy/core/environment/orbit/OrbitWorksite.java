@@ -20,6 +20,11 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
  * A representation of the model object '<em><b>Orbit Worksite</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A worksite located in orbit.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

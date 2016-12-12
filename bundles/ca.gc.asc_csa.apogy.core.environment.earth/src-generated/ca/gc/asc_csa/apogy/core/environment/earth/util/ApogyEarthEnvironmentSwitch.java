@@ -13,12 +13,19 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.earth.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,6 +90,16 @@ public class ApogyEarthEnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION: {
+				EarthSurfaceLocation earthSurfaceLocation = (EarthSurfaceLocation)theEObject;
+				T result = caseEarthSurfaceLocation(earthSurfaceLocation);
+				if (result == null) result = caseGeographicCoordinates(earthSurfaceLocation);
+				if (result == null) result = caseAbstractSurfaceLocation(earthSurfaceLocation);
+				if (result == null) result = caseNamed(earthSurfaceLocation);
+				if (result == null) result = caseDescribed(earthSurfaceLocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ApogyEarthEnvironmentPackage.HORIZONTAL_COORDINATES: {
 				HorizontalCoordinates horizontalCoordinates = (HorizontalCoordinates)theEObject;
 				T result = caseHorizontalCoordinates(horizontalCoordinates);
@@ -117,6 +134,21 @@ public class ApogyEarthEnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeographicCoordinates(GeographicCoordinates object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Earth Surface Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Earth Surface Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEarthSurfaceLocation(EarthSurfaceLocation object) {
 		return null;
 	}
 
@@ -162,6 +194,51 @@ public class ApogyEarthEnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApogyEarthFacade(ApogyEarthFacade object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamed(Named object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDescribed(Described object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Surface Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
 		return null;
 	}
 

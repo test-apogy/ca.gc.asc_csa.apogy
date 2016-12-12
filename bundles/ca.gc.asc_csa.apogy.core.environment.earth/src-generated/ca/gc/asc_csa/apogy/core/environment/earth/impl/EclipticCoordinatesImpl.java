@@ -13,15 +13,13 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
 
 /**
  * <!-- begin-user-doc -->

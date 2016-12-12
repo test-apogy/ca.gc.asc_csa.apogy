@@ -13,24 +13,25 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.impl;
 
-import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
-import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
-
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,6 +46,13 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 	 * @generated
 	 */
 	private EClass geographicCoordinatesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass earthSurfaceLocationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +122,7 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		isInited = true;
 
 		// Initialize simple dependencies
-		ApogyCorePackage.eINSTANCE.eClass();
+		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theApogyEarthEnvironmentPackage.createPackageContents();
@@ -165,6 +173,15 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 	 */
 	public EAttribute getGeographicCoordinates_Elevation() {
 		return (EAttribute)geographicCoordinatesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEarthSurfaceLocation() {
+		return earthSurfaceLocationEClass;
 	}
 
 	/**
@@ -271,6 +288,24 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyEarthFacade__CreateGeographicCoordinates__double_double_double() {
+		return apogyEarthFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double() {
+		return apogyEarthFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyEarthEnvironmentFactory getApogyEarthEnvironmentFactory() {
 		return (ApogyEarthEnvironmentFactory)getEFactoryInstance();
 	}
@@ -299,6 +334,8 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		createEAttribute(geographicCoordinatesEClass, GEOGRAPHIC_COORDINATES__LATITUDE);
 		createEAttribute(geographicCoordinatesEClass, GEOGRAPHIC_COORDINATES__ELEVATION);
 
+		earthSurfaceLocationEClass = createEClass(EARTH_SURFACE_LOCATION);
+
 		horizontalCoordinatesEClass = createEClass(HORIZONTAL_COORDINATES);
 		createEAttribute(horizontalCoordinatesEClass, HORIZONTAL_COORDINATES__ALTITUDE);
 		createEAttribute(horizontalCoordinatesEClass, HORIZONTAL_COORDINATES__AZIMUTH);
@@ -312,6 +349,8 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		apogyEarthFacadeEClass = createEClass(APOGY_EARTH_FACADE);
 		createEOperation(apogyEarthFacadeEClass, APOGY_EARTH_FACADE___GET_MOON_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT);
 		createEOperation(apogyEarthFacadeEClass, APOGY_EARTH_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogyEarthFacadeEClass, APOGY_EARTH_FACADE___CREATE_GEOGRAPHIC_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(apogyEarthFacadeEClass, APOGY_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE);
 	}
 
 	/**
@@ -339,6 +378,7 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
@@ -349,12 +389,16 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		earthSurfaceLocationEClass.getESuperTypes().add(this.getGeographicCoordinates());
+		earthSurfaceLocationEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getAbstractSurfaceLocation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(geographicCoordinatesEClass, GeographicCoordinates.class, "GeographicCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGeographicCoordinates_Longitude(), theEcorePackage.getEDouble(), "longitude", null, 0, 1, GeographicCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographicCoordinates_Latitude(), theEcorePackage.getEDouble(), "latitude", null, 0, 1, GeographicCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeographicCoordinates_Elevation(), theEcorePackage.getEDouble(), "elevation", null, 0, 1, GeographicCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(earthSurfaceLocationEClass, EarthSurfaceLocation.class, "EarthSurfaceLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(horizontalCoordinatesEClass, HorizontalCoordinates.class, "HorizontalCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHorizontalCoordinates_Altitude(), theEcorePackage.getEDouble(), "altitude", null, 0, 1, HorizontalCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -376,6 +420,18 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		op = initEOperation(getApogyEarthFacade__GetMoonVector__Node_Environment(), theApogyCommonMathPackage.getTuple3d(), "getMoonVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyEarthFacade__CreateGeographicCoordinates__double_double_double(), this.getGeographicCoordinates(), "createGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "longitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "latitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "altitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), this.getEarthSurfaceLocation(), "createEarthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "longitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "latitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDouble(), "elevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -443,6 +499,12 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 			 "apogy_units", "m"
 		   });	
 		addAnnotation
+		  (earthSurfaceLocationEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "Defines a location on the surface of the Earth."
+		   });	
+		addAnnotation
 		  (horizontalCoordinatesEClass, 
 		   source, 
 		   new String[] {
@@ -453,6 +515,36 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		   source, 
 		   new String[] {
 			 "documentation", "The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic\nfor its fundamental plane. The ecliptic is the path that the sun appears to follow across\nthe sky over the course of a year. It is also the projection of the Earth\'s orbital plane\nonto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial\nlatitude (denoted \u03b2), measured positive towards the north. The longitudinal angle is called\nthe ecliptic longitude or celestial longitude (denoted \u03bb), measured eastwards from 0\u00b0 to 360\u00b0.\nLike right ascension in the equatorial coordinate system, 0\u00b0 ecliptic longitude is pointing\ntowards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes\nthe coordinates of the fixed stars subject to shifts due to the precession, so that always a\nreference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous\nequinox of the day (called the epoch of date) is possible too. This coordinate system can be\nparticularly useful for charting solar system objects. Most planets (except Mercury), and many\nsmall solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore\ntheir ecliptic latitude \u03b2 is always small. Because of the planets\' small deviation from the plane\nof the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)"
+		   });	
+		addAnnotation
+		  (getApogyEarthFacade__CreateGeographicCoordinates__double_double_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreate a GeographicCoordinates.\n@param longitude The longitude, in radians.\n@param latitude The latitude, in radians.\n@param altitude The altitude, in meters."
+		   });	
+		addAnnotation
+		  (getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Creates an EarthSurfaceLocation from parameters.\n@param name The name of the location.\n@param description The description of the location.\n@param longitude The longitude of the location, in radians.\n@param latitude The latitude of the location, in radians.\n@param elevation The elevation of the location, in meters.\n@return The EarthSurfaceLocation."
+		   });	
+		addAnnotation
+		  ((getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(2), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  ((getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(3), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  ((getApogyEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(4), 
+		   source, 
+		   new String[] {
+			 "apogy_units", "m"
 		   });
 	}
 

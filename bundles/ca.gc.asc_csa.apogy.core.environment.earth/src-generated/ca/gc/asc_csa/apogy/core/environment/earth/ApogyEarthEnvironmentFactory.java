@@ -42,6 +42,15 @@ public interface ApogyEarthEnvironmentFactory extends EFactory {
 	GeographicCoordinates createGeographicCoordinates();
 
 	/**
+	 * Returns a new object of class '<em>Earth Surface Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Earth Surface Location</em>'.
+	 * @generated
+	 */
+	EarthSurfaceLocation createEarthSurfaceLocation();
+
+	/**
 	 * Returns a new object of class '<em>Horizontal Coordinates</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

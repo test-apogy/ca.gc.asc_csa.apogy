@@ -47,8 +47,8 @@ import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.Updatable;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.Activator;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
@@ -917,22 +917,14 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 					Date date = ApogyCoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(absoluteDate);
 					
 					GeodeticPoint left = point.getLeft();				
-					GeographicCoordinates leftCoord = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-					leftCoord.setElevation(left.getAltitude());
-					leftCoord.setLatitude(left.getLatitude());
-					leftCoord.setLongitude(left.getLongitude());					
+					GeographicCoordinates leftCoord = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(left.getLongitude(), left.getLatitude(), left.getAltitude());
+					
 
 					GeodeticPoint center = point.getCenter();				
-					GeographicCoordinates centerCoord = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-					centerCoord.setElevation(center.getAltitude());
-					centerCoord.setLatitude(center.getLatitude());
-					centerCoord.setLongitude(center.getLongitude());					
+					GeographicCoordinates centerCoord = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(center.getLongitude(), center.getLatitude(), center.getAltitude());
 										
 					GeodeticPoint right = point.getRight();
-					GeographicCoordinates rightCoord = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-					rightCoord.setElevation(right.getAltitude());
-					rightCoord.setLatitude(right.getLatitude());
-					rightCoord.setLongitude(right.getLongitude());
+					GeographicCoordinates rightCoord = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(right.getLongitude(), right.getLatitude(), right.getAltitude());
 					
 					ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint newPoint = ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridorPoint();
 					newPoint.setTime(date);

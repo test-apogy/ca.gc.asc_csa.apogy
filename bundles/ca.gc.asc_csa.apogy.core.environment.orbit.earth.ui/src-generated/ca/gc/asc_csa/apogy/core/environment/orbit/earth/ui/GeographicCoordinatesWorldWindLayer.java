@@ -13,7 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
 
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -38,7 +38,7 @@ import org.eclipse.emf.common.util.EList;
 public interface GeographicCoordinatesWorldWindLayer extends AbstractWorldWindLayer {
 	/**
 	 * Returns the value of the '<em><b>Geographic Coordinates List</b></em>' reference list.
-	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates}.
+	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Geographic Coordinates List</em>' reference list isn't clear,

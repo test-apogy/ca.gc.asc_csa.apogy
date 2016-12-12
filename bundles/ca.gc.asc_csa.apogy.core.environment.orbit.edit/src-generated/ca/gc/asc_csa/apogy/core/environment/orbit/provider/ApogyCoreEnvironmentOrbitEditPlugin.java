@@ -55,8 +55,8 @@ public final class ApogyCoreEnvironmentOrbitEditPlugin extends EMFPlugin {
 	public ApogyCoreEnvironmentOrbitEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,

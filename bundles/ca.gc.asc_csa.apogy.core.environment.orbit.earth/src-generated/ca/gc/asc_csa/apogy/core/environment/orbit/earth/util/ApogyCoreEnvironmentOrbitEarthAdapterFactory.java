@@ -20,14 +20,15 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-import ca.gc.asc_csa.apogy.core.AbstractOrbitModel;
-import ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation;
-import ca.gc.asc_csa.apogy.core.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.Updatable;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractFrame;
+import ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel;
 import ca.gc.asc_csa.apogy.core.environment.orbit.AttitudeProvider;
 import ca.gc.asc_csa.apogy.core.environment.orbit.Orbit;
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
@@ -169,10 +170,6 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 				return createTLEAdapter();
 			}
 			@Override
-			public Adapter caseEarthSurfaceLocation(EarthSurfaceLocation object) {
-				return createEarthSurfaceLocationAdapter();
-			}
-			@Override
 			public Adapter caseGroundStationReferencesList(GroundStationReferencesList object) {
 				return createGroundStationReferencesListAdapter();
 			}
@@ -287,6 +284,10 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 			@Override
 			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
 				return createAbstractSurfaceLocationAdapter();
+			}
+			@Override
+			public Adapter caseEarthSurfaceLocation(EarthSurfaceLocation object) {
+				return createEarthSurfaceLocationAdapter();
 			}
 			@Override
 			public Adapter caseUpdatable(Updatable object) {
@@ -579,13 +580,13 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationAdapter() {
@@ -831,13 +832,13 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractWorksite <em>Abstract Worksite</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractWorksite <em>Abstract Worksite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractWorksite
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractWorksite
 	 * @generated
 	 */
 	public Adapter createAbstractWorksiteAdapter() {
@@ -915,13 +916,13 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel <em>Abstract Orbit Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractOrbitModel
+	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.AbstractOrbitModel
 	 * @generated
 	 */
 	public Adapter createAbstractOrbitModelAdapter() {
@@ -971,13 +972,13 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.AbstractSurfaceLocation
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation
 	 * @generated
 	 */
 	public Adapter createAbstractSurfaceLocationAdapter() {
@@ -985,13 +986,13 @@ public class ApogyCoreEnvironmentOrbitEarthAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates <em>Geographic Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 	 * @generated
 	 */
 	public Adapter createGeographicCoordinatesAdapter() {

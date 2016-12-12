@@ -46,8 +46,8 @@ import org.orekit.utils.Constants;
 import org.orekit.utils.IERSConventions;
 import org.orekit.utils.PVCoordinates;
 
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
@@ -546,11 +546,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    // Computes the position of the spacecraft.						    
 		        GeodeticPoint scCoords  = earth.transform(sc.getPosition(), earth.getBodyFrame(), extrapDate);
 		        		        
-		        GeographicCoordinates geo = ApogyCoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-		        geo.setElevation(scCoords.getAltitude());
-		        geo.setLatitude(scCoords.getLatitude());
-		        geo.setLongitude(scCoords.getLongitude());
-		        
+		        GeographicCoordinates geo = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(scCoords.getLongitude(), scCoords.getLatitude(), scCoords.getAltitude());		        
 			    position.setSpacecraftCoordinates(geo);
 			    positions.add(position);
 			    

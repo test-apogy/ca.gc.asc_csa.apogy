@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.provider;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.ApogyCoreEnvironmentOrbitPackage;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -145,8 +144,7 @@ public class OrbitModelItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Date labelValue = ((OrbitModel)object).getFromValidDate();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((OrbitModel)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OrbitModel_type") :
 			getString("_UI_OrbitModel_type") + " " + label;

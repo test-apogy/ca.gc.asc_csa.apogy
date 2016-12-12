@@ -14,14 +14,18 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.impl;
 
 import ca.gc.asc_csa.apogy.core.environment.earth.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,6 +72,7 @@ public class ApogyEarthEnvironmentFactoryImpl extends EFactoryImpl implements Ap
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES: return createGeographicCoordinates();
+			case ApogyEarthEnvironmentPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
 			case ApogyEarthEnvironmentPackage.HORIZONTAL_COORDINATES: return createHorizontalCoordinates();
 			case ApogyEarthEnvironmentPackage.ECLIPTIC_COORDINATES: return createEclipticCoordinates();
 			case ApogyEarthEnvironmentPackage.APOGY_EARTH_FACADE: return createApogyEarthFacade();
@@ -84,6 +89,16 @@ public class ApogyEarthEnvironmentFactoryImpl extends EFactoryImpl implements Ap
 	public GeographicCoordinates createGeographicCoordinates() {
 		GeographicCoordinatesImpl geographicCoordinates = new GeographicCoordinatesImpl();
 		return geographicCoordinates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EarthSurfaceLocation createEarthSurfaceLocation() {
+		EarthSurfaceLocationImpl earthSurfaceLocation = new EarthSurfaceLocationImpl();
+		return earthSurfaceLocation;
 	}
 
 	/**

@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth;
  */
 
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->

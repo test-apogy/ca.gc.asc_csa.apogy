@@ -28,8 +28,8 @@ import org.eclipse.jface.viewers.ISelection;
 
 import ca.gc.asc_csa.apogy.common.converters.ui.ApogyCommonConvertersUIFacade;
 import ca.gc.asc_csa.apogy.common.emf.Named;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.GeographicCoordinatesWorldWindLayer;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
@@ -504,9 +504,9 @@ public class GeographicCoordinatesWorldWindLayerImpl extends AbstractWorldWindLa
 						int featureId = msg.getFeatureID(GeographicCoordinates.class);
 						switch (featureId) 
 						{							
-							case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
-							case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
-							case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:								
+							case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+							case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+							case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:								
 								if(isAutoUpdateEnabled()) updateRenderableLayer();								
 							break;
 

@@ -13,14 +13,20 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.util;
 
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.earth.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,6 +89,10 @@ public class ApogyEarthEnvironmentAdapterFactory extends AdapterFactoryImpl {
 				return createGeographicCoordinatesAdapter();
 			}
 			@Override
+			public Adapter caseEarthSurfaceLocation(EarthSurfaceLocation object) {
+				return createEarthSurfaceLocationAdapter();
+			}
+			@Override
 			public Adapter caseHorizontalCoordinates(HorizontalCoordinates object) {
 				return createHorizontalCoordinatesAdapter();
 			}
@@ -93,6 +103,18 @@ public class ApogyEarthEnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseApogyEarthFacade(ApogyEarthFacade object) {
 				return createApogyEarthFacadeAdapter();
+			}
+			@Override
+			public Adapter caseNamed(Named object) {
+				return createNamedAdapter();
+			}
+			@Override
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
+			}
+			@Override
+			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {
+				return createAbstractSurfaceLocationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -125,6 +147,20 @@ public class ApogyEarthEnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeographicCoordinatesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation <em>Earth Surface Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
+	 * @generated
+	 */
+	public Adapter createEarthSurfaceLocationAdapter() {
 		return null;
 	}
 
@@ -167,6 +203,48 @@ public class ApogyEarthEnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyEarthFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Named <em>Named</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Named
+	 * @generated
+	 */
+	public Adapter createNamedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.Described <em>Described</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.Described
+	 * @generated
+	 */
+	public Adapter createDescribedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation <em>Abstract Surface Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation
+	 * @generated
+	 */
+	public Adapter createAbstractSurfaceLocationAdapter() {
 		return null;
 	}
 

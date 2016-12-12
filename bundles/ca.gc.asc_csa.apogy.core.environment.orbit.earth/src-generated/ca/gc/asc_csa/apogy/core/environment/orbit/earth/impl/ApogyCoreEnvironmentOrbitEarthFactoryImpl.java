@@ -100,7 +100,6 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_MODEL: return createTLEEarthOrbitModel();
 			case ApogyCoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR: return createURLBasedTLEEarthOrbitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
-			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
 			case ApogyCoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
@@ -377,16 +376,6 @@ public class ApogyCoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl impl
 	public TLE createTLE() {
 		TLEImpl tle = new TLEImpl();
 		return tle;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EarthSurfaceLocation createEarthSurfaceLocation() {
-		EarthSurfaceLocationImpl earthSurfaceLocation = new EarthSurfaceLocationImpl();
-		return earthSurfaceLocation;
 	}
 
 	/**

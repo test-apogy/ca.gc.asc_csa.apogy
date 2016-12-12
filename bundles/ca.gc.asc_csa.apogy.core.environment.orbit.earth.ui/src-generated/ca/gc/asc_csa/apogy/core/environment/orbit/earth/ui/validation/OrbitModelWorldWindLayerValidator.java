@@ -5,7 +5,6 @@
 package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.validation;
 
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 import ca.gc.asc_csa.apogy.core.environment.orbit.OrbitModel;
 
 /**
