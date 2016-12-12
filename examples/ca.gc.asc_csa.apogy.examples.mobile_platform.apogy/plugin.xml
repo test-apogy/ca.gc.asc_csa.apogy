@@ -30,5 +30,8 @@
             URI="model/MobilePlatformApogySystem.ss">
       </Type>
    </extension>
+   <extension
+         point="ca.gc.asc_csa.apogy.workspace.projectProvider">
+   </extension>
 
 </plugin>

@@ -24,6 +24,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
+import ca.gc.asc_csa.apogy.common.emf.CurrentTimeSource;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
@@ -35,6 +37,7 @@ import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.environment.Activator;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
@@ -51,6 +54,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMa
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.Map;
 import ca.gc.asc_csa.apogy.core.environment.surface.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
@@ -214,7 +218,20 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public InvocatorSession createApogySession() 
 	{	
-		return null;
+		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE.createInvocatorSession();
+		
+		ApogyEnvironment environment = ApogyCoreEnvironmentFactory.eINSTANCE.createApogyEnvironment();
+		session.setEnvironment(environment);
+		
+		CurrentTimeSource currentTimeSource = ApogyCommonEMFFactory.eINSTANCE.createCurrentTimeSource();
+		environment.getTimeSourcesList().getTimeSources().add(currentTimeSource);
+		environment.setActiveTimeSource(currentTimeSource);
+		
+		EarthSurfaceWorksite worksite = createAndInitializeDefaultCSAWorksite();
+		environment.getWorksitesList().getWorksites().add(worksite);
+		environment.setActiveWorksite(worksite);
+				
+		return session;
 	}
 
 	private Map getDefaultMarsTerrainMap()
