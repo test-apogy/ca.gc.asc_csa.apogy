@@ -588,13 +588,22 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 3;
 
 	/**
+	 * The operation id for the '<em>Create Apogy Session</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 4;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 4;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.AtmosphereUtilsImpl <em>Atmosphere Utils</em>}' class.
@@ -1122,6 +1131,16 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createApogySession() <em>Create Apogy Session</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Apogy Session</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createApogySession()
+	 * @generated
+	 */
+	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateApogySession();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.AtmosphereUtils <em>Atmosphere Utils</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1626,6 +1645,14 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateApogySession();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.AtmosphereUtilsImpl <em>Atmosphere Utils</em>}' class.

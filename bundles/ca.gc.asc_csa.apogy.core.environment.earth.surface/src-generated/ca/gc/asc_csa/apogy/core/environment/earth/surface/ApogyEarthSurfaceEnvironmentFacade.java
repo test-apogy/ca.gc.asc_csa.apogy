@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.ApogyEarthSurfaceEnvironmentFacadeImpl;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc -->
@@ -84,5 +85,17 @@ public interface ApogyEarthSurfaceEnvironmentFacade extends EObject
 	 * @generated
 	 */
 	TransformNode getMarsYardTransformNode();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates an invocator session containing a fully initialized EarthSurfaceWorksite.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 * @generated
+	 */
+	InvocatorSession createApogySession();
 
 } // ApogyEarthSurfaceEnvironmentFacade

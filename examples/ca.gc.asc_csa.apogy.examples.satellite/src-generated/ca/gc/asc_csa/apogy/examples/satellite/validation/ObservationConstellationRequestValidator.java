@@ -4,7 +4,7 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite.validation;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest}.

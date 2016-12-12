@@ -22,7 +22,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.examples.satellite.*;
 
 /**
@@ -756,21 +756,6 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeographicCoordinates(GeographicCoordinates object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -797,6 +782,21 @@ public class ApogyExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTimed(Timed object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeographicCoordinates(GeographicCoordinates object) {
 		return null;
 	}
 

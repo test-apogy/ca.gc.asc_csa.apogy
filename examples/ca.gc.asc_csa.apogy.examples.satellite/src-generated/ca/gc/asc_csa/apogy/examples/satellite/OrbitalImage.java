@@ -14,7 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  */
 
 import ca.gc.asc_csa.apogy.common.images.EImage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->

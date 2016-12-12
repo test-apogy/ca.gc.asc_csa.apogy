@@ -14,6 +14,7 @@
 package ca.gc.asc_csa.apogy.examples.satellite.provider;
 
 
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthFactory;
 
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
@@ -153,12 +154,12 @@ public class ObservationConstellationRequestItemProvider extends AbstractConstel
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
+				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyExamplesSatellitePackage.Literals.OBSERVATION_CONSTELLATION_REQUEST__LOCATION,
-				 ApogyCoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
+				 ApogyEarthEnvironmentFactory.eINSTANCE.createEarthSurfaceLocation()));
 	}
 
 }

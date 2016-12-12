@@ -1,7 +1,7 @@
 package ca.gc.asc_csa.apogy.examples.satellite.converters;
 
 import ca.gc.asc_csa.apogy.common.converters.IConverter;
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 import ca.gc.asc_csa.apogy.examples.satellite.ObservationConstellationRequest;
 
 public class ObservationConstellationRequestToEarthSurfaceLocationConverter implements IConverter {

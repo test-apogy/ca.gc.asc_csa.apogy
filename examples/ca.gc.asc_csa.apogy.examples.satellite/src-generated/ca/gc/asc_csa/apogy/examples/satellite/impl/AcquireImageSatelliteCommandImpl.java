@@ -16,9 +16,8 @@ package ca.gc.asc_csa.apogy.examples.satellite.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.examples.satellite.AcquireImageSatelliteCommand;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
@@ -319,9 +318,9 @@ public class AcquireImageSatelliteCommandImpl extends AbstractRequestBasedSatell
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (derivedFeatureID) {
-				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
-				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
-				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+				case ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
 				default: return -1;
 			}
 		}
@@ -337,9 +336,9 @@ public class AcquireImageSatelliteCommandImpl extends AbstractRequestBasedSatell
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (baseFeatureID) {
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE;
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE;
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION;
 				default: return -1;
 			}
 		}

@@ -27,13 +27,15 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  ca.gc.asc_csa.apogy.core;visibility:=reexport,
+ ca.gc.asc_csa.apogy.core.environment.earth;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.images;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.geometry.data;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.math;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology;visibility:=reexport,
  ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.3.0",
- ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
+ ca.gc.asc_csa.apogy.core.environment.earth.surface;bundle-version="0.5.0"
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: ca.gc.asc_csa.apogy.examples.satellite.Activator

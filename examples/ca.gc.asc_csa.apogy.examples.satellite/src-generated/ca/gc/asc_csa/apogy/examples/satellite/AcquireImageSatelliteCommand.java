@@ -13,8 +13,7 @@ package ca.gc.asc_csa.apogy.examples.satellite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
-
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 
 /**
  * <!-- begin-user-doc -->

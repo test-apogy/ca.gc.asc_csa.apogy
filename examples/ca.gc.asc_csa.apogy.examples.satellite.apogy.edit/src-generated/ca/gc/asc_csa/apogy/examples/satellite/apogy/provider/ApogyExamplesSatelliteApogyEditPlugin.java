@@ -72,10 +72,10 @@ public final class ApogyExamplesSatelliteApogyEditPlugin extends EMFPlugin {
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
+		     ca.gc.asc_csa.apogy.core.environment.earth.provider.ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentOrbitEditPlugin.INSTANCE,
 		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
-		     ca.gc.asc_csa.apogy.core.environment.earth.provider.ApogyCoreEnvironmentEditPlugin.INSTANCE,
 		   });
 	}
 

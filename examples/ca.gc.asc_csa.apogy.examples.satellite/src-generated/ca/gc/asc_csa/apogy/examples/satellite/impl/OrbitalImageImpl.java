@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.common.images.impl.EImageImpl;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 
@@ -320,9 +320,9 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (derivedFeatureID) {
-				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
-				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
-				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION: return ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
+				case ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION: return ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
 				default: return -1;
 			}
 		}
@@ -338,9 +338,9 @@ public class OrbitalImageImpl extends EImageImpl implements OrbitalImage {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == GeographicCoordinates.class) {
 			switch (baseFeatureID) {
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE;
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE;
-				case ApogyCoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LONGITUDE;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__LATITUDE;
+				case ApogyEarthEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION: return ApogyExamplesSatellitePackage.ORBITAL_IMAGE__ELEVATION;
 				default: return -1;
 			}
 		}

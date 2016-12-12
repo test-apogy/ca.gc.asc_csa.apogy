@@ -23,7 +23,7 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
 import ca.gc.asc_csa.apogy.common.images.EImage;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.examples.satellite.*;
 
 /**
@@ -709,13 +709,13 @@ public class ApogyExamplesSatelliteAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates <em>Geographic Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 	 * @generated
 	 */
 	public Adapter createGeographicCoordinatesAdapter() {

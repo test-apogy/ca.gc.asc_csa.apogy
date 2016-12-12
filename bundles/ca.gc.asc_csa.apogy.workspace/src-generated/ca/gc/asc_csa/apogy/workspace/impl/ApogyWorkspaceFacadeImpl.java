@@ -50,7 +50,7 @@ import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacad
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.resources.ApogyCommonResourcesFacade;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 import ca.gc.asc_csa.apogy.workspace.Activator;
@@ -457,7 +457,8 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 	 * 
 	 * @generated_NOT
 	 */
-	public IProject createApogyProject(String name, String description) throws Exception {
+	public IProject createApogyProject(String name, String description) throws Exception 
+	{
 		/*
 		 * Create the project structure in the workspace.
 		 */
@@ -465,7 +466,7 @@ public class ApogyWorkspaceFacadeImpl extends MinimalEObjectImpl.Container imple
 		/*
 		 * Create Apogy Session.
 		 */
-		InvocatorSession session = ApogyCoreFacade.INSTANCE.createApogySession();
+		InvocatorSession session = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.createApogySession();
 
 		/*
 		 * Create the Apogy Session File.

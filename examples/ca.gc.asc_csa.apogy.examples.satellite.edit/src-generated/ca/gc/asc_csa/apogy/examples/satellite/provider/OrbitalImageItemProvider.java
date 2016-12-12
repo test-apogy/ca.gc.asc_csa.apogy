@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import ca.gc.asc_csa.apogy.common.images.provider.EImageItemProvider;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.OrbitalImage;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
@@ -78,7 +78,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -122,7 +122,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
 				 true,
 				 false,
 				 false,

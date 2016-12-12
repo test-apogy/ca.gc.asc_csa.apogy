@@ -13,7 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.examples.satellite;
 
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation;
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
 
 /**
  * <!-- begin-user-doc -->

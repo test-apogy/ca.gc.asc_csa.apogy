@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellation;
 import ca.gc.asc_csa.apogy.examples.satellite.AbstractConstellationCommandPlan;
@@ -368,6 +368,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 
 		// Initialize simple dependencies
 		ApogyCoreEnvironmentOrbitEarthPackage.eINSTANCE.eClass();
+		ApogyCommonImagesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theApogyExamplesSatellitePackage.createPackageContents();
@@ -1465,7 +1466,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		ApogyCoreEnvironmentOrbitEarthPackage theApogyCoreEnvironmentOrbitEarthPackage = (ApogyCoreEnvironmentOrbitEarthPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentOrbitEarthPackage.eNS_URI);
 		ApogyCommonEMFPackage theApogyCommonEMFPackage = (ApogyCommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonEMFPackage.eNS_URI);
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
-		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogyEarthEnvironmentPackage theApogyEarthEnvironmentPackage = (ApogyEarthEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyEarthEnvironmentPackage.eNS_URI);
 		ApogyCommonImagesPackage theApogyCommonImagesPackage = (ApogyCommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonImagesPackage.eNS_URI);
 
 		// Create type parameters
@@ -1496,9 +1497,9 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		abstractRequestBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
 		visibilityPassBasedSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractRequestBasedSatelliteCommand());
-		acquireImageSatelliteCommandEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		acquireImageSatelliteCommandEClass.getESuperTypes().add(theApogyEarthEnvironmentPackage.getGeographicCoordinates());
 		orbitalImageEClass.getESuperTypes().add(theApogyCommonImagesPackage.getEImage());
-		orbitalImageEClass.getESuperTypes().add(theApogyCoreEnvironmentPackage.getGeographicCoordinates());
+		orbitalImageEClass.getESuperTypes().add(theApogyEarthEnvironmentPackage.getGeographicCoordinates());
 		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		constellationDownlinksListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
@@ -1620,7 +1621,7 @@ public class ApogyExamplesSatellitePackageImpl extends EPackageImpl implements A
 		initEClass(simpleRequestEClass, SimpleRequest.class, "SimpleRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(observationConstellationRequestEClass, ObservationConstellationRequest.class, "ObservationConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getObservationConstellationRequest_Location(), theApogyCoreEnvironmentOrbitEarthPackage.getEarthSurfaceLocation(), null, "location", null, 0, 1, ObservationConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObservationConstellationRequest_Location(), theApogyEarthEnvironmentPackage.getEarthSurfaceLocation(), null, "location", null, 0, 1, ObservationConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageConstellationRequestEClass, ImageConstellationRequest.class, "ImageConstellationRequest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImageConstellationRequest_Image(), this.getOrbitalImage(), null, "image", null, 0, 1, ImageConstellationRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

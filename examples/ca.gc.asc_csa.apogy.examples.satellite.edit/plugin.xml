@@ -36,9 +36,6 @@
             uri="ca.gc.asc_csa.apogy.core.environment.orbit.earth"
             class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentOrbitEarthChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.core.environment"
-            class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCoreEnvironmentChildCreationExtender"/>
-      <extender
             uri="ca.gc.asc_csa.apogy.common.images"
             class="ca.gc.asc_csa.apogy.examples.satellite.provider.ApogyExamplesSatelliteItemProviderAdapterFactory$ApogyCommonImagesChildCreationExtender"/>
       <extender

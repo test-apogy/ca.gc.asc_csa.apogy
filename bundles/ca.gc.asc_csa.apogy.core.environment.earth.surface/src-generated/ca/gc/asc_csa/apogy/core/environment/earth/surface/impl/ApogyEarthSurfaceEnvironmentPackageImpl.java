@@ -31,6 +31,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import javax.vecmath.Point3d;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -340,6 +341,15 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 */
 	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateApogySession() {
+		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -681,6 +691,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
+		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION);
 
 		atmosphereUtilsEClass = createEClass(ATMOSPHERE_UTILS);
 		createEOperation(atmosphereUtilsEClass, ATMOSPHERE_UTILS___GET_AIR_MASS__DOUBLE);
@@ -749,6 +760,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		ApogyCommonMathPackage theApogyCommonMathPackage = (ApogyCommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonMathPackage.eNS_URI);
 		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
 		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
+		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -795,6 +807,8 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		initEOperation(getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates(), theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "getMarsYardGeographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode(), theApogyCommonTopologyPackage.getTransformNode(), "getMarsYardTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateApogySession(), theApogyCoreInvocatorPackage.getInvocatorSession(), "createApogySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(atmosphereUtilsEClass, AtmosphereUtils.class, "AtmosphereUtils", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1052,6 +1066,12 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		   source, 
 		   new String[] {
 			 "documentation", "*\nReturn the GeographicCoordinates of the CSA Mars Yard."
+		   });	
+		addAnnotation
+		  (getApogyEarthSurfaceEnvironmentFacade__CreateApogySession(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates an invocator session containing a fully initialized EarthSurfaceWorksite."
 		   });	
 		addAnnotation
 		  (atmosphereUtilsEClass, 

@@ -51,6 +51,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMa
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.Map;
 import ca.gc.asc_csa.apogy.core.environment.surface.URLImageMapLayer;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc -->
@@ -206,6 +207,16 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	}
 
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public InvocatorSession createApogySession() 
+	{	
+		return null;
+	}
+
 	private Map getDefaultMarsTerrainMap()
 	{
 		Map map = ApogySurfaceEnvironmentFactory.eINSTANCE.createMap();
@@ -274,6 +285,8 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 				return getMarsYardGeographicalCoordinates();
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:
 				return getMarsYardTransformNode();
+			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION:
+				return createApogySession();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

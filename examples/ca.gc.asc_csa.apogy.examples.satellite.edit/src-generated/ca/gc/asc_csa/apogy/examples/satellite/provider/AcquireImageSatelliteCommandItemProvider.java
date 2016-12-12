@@ -14,7 +14,7 @@ package ca.gc.asc_csa.apogy.examples.satellite.provider;
  */
 
 
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -79,7 +79,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class AcquireImageSatelliteCommandItemProvider extends AbstractRequestBas
 				 getResourceLocator(),
 				 getString("_UI_GeographicCoordinates_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
-				 ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
+				 ApogyEarthEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
 				 true,
 				 false,
 				 false,

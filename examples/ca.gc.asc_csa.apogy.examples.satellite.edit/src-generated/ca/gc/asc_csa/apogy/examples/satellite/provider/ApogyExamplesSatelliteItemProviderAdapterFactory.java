@@ -21,19 +21,11 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import ca.gc.asc_csa.apogy.core.environment.ImageMapLayer;
-
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ApogyCoreEnvironmentOrbitEarthPackage;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.CorridorPoint;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.util.ApogyCoreEnvironmentOrbitEarthSwitch;
-
-import ca.gc.asc_csa.apogy.core.environment.util.ApogyCoreEnvironmentSwitch;
-
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatelliteFactory;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;
 
@@ -876,138 +868,6 @@ public class ApogyExamplesSatelliteItemProviderAdapterFactory extends ApogyExamp
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogyCoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected CommandParameter createChildParameter(Object feature, Object child) {
-				return new CommandParameter(null, feature, child);
-			}
-
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
-			ArrayList<Object> result = new ArrayList<Object>();
-			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
-			return result;
-		}
-
-		/**
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public ResourceLocator getResourceLocator() {
-			return ApogyExamplesSatelliteEditPlugin.INSTANCE;
-		}
-	}
-
-	/**
-	 * A child creation extender for the {@link ApogyCoreEnvironmentPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static class ApogyCoreEnvironmentChildCreationExtender implements IChildCreationExtender {
-		/**
-		 * The switch for creating child descriptors specific to each extended class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		protected static class CreationSwitch extends ApogyCoreEnvironmentSwitch<Object> {
-			/**
-			 * The child descriptors being populated.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected List<Object> newChildDescriptors;
-
-			/**
-			 * The domain in which to create the children.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			protected EditingDomain editingDomain;
-
-			/**
-			 * Creates the a switch for populating child descriptors in the given domain.
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
-				this.newChildDescriptors = newChildDescriptors;
-				this.editingDomain = editingDomain;
-			}
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseEarthSurfaceWorksite(EarthSurfaceWorksite object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseImageMapLayer(ImageMapLayer object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGeographicCoordinatesPolygonShapeImageMapLayer(GeographicCoordinatesPolygonShapeImageMapLayer object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-						 ApogyExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(ApogyCoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
 						 ApogyExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 
 				return null;

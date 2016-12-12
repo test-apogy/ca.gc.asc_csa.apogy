@@ -37,21 +37,19 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.core.environment.earth.surface
 
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
+
 import ca.gc.asc_csa.apogy.common.math.Tuple3d
-
 import ca.gc.asc_csa.apogy.common.topology.TransformNode
-
-import ca.gc.asc_csa.apogy.core.environment.Sky
-import ca.gc.asc_csa.apogy.core.environment.SkyNode
 import ca.gc.asc_csa.apogy.core.environment.EquatorialCoordinates
 import ca.gc.asc_csa.apogy.core.environment.Moon
-
-import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite
-import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode
-
+import ca.gc.asc_csa.apogy.core.environment.Sky
+import ca.gc.asc_csa.apogy.core.environment.SkyNode
+import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates
-import ca.gc.asc_csa.apogy.core.environment.earth.EclipticCoordinates
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode
 
 
 // Types
@@ -175,6 +173,11 @@ class ApogyEarthSurfaceEnvironmentFacade
 	op GeographicCoordinates getMarsYardGeographicalCoordinates()
 	
 	op TransformNode getMarsYardTransformNode()
+	
+	/**
+	 * Creates an invocator session containing a fully initialized EarthSurfaceWorksite. 
+	 */
+	op InvocatorSession createApogySession()
 	
 }
 

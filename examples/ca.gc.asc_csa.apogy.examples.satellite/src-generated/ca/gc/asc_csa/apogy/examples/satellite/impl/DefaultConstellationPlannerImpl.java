@@ -16,8 +16,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import ca.gc.asc_csa.apogy.core.environment.AstronomyUtils;
-import ca.gc.asc_csa.apogy.core.environment.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass;
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import ca.gc.asc_csa.apogy.examples.satellite.ApogyExamplesSatellitePackage;

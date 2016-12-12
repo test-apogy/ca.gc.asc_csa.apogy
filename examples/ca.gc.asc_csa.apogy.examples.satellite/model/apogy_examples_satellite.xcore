@@ -39,10 +39,10 @@ import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Timed
 import ca.gc.asc_csa.apogy.common.images.EImage
 import ca.gc.asc_csa.apogy.core.Exception
-import ca.gc.asc_csa.apogy.core.environment.GeographicCoordinates
+import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.ConstantElevationMask
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthOrbitModel
-import ca.gc.asc_csa.apogy.core.environment.orbit.earth.EarthSurfaceLocation
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.GroundStationReferencesList
 import ca.gc.asc_csa.apogy.core.environment.orbit.earth.VisibilityPass
 
