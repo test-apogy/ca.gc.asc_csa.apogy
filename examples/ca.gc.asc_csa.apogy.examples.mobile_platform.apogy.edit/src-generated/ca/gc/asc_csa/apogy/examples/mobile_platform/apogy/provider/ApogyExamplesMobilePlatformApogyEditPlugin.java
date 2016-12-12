@@ -17,13 +17,17 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data.provider.ApogyCommonGeometryDataEditPlugin;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.provider.ApogyCommonGeometryData3DEditPlugin;
 import ca.gc.asc_csa.apogy.common.images.provider.ApogyCommonImagesEditPlugin;
 import ca.gc.asc_csa.apogy.common.math.provider.ApogyCommonMathEditPlugin;
+import ca.gc.asc_csa.apogy.common.processors.provider.ApogyCommonProcessorsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.bindings.provider.ApogyCommonTopologyBindingsEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.provider.ApogyCommonTopologyEditPlugin;
 import ca.gc.asc_csa.apogy.common.topology.ui.provider.ApogyCommonTopologyUIEditPlugin;
 import ca.gc.asc_csa.apogy.core.environment.provider.ApogyCoreEnvironmentEditPlugin;
-import ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.surface.provider.ApogySurfaceEnvironmentEditPlugin;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogyCoreSurfaceEnvironmentUIEditPlugin;
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
 import ca.gc.asc_csa.apogy.core.provider.ApogyCoreEditPlugin;
 
@@ -61,14 +65,18 @@ public final class ApogyExamplesMobilePlatformApogyEditPlugin extends EMFPlugin 
 		  (new ResourceLocator [] {
 		     ApogyCoreEditPlugin.INSTANCE,
 		     ApogyCoreInvocatorEditPlugin.INSTANCE,
-		     ApogyCoreEnvironmentUIEditPlugin.INSTANCE,
+		     ApogyCoreSurfaceEnvironmentUIEditPlugin.INSTANCE,
 		     ApogyCommonMathEditPlugin.INSTANCE,
 		     ApogyCommonTopologyEditPlugin.INSTANCE,
 		     ApogyCommonEMFEditPlugin.INSTANCE,
 		     ApogyCommonTopologyBindingsEditPlugin.INSTANCE,
 		     ApogyCommonTopologyUIEditPlugin.INSTANCE,
-		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogySurfaceEnvironmentEditPlugin.INSTANCE,
 		     ApogyCommonImagesEditPlugin.INSTANCE,
+		     ApogyCoreEnvironmentEditPlugin.INSTANCE,
+		     ApogyCommonGeometryData3DEditPlugin.INSTANCE,
+		     ApogyCommonGeometryDataEditPlugin.INSTANCE,
+		     ApogyCommonProcessorsEditPlugin.INSTANCE,
 		   });
 	}
 

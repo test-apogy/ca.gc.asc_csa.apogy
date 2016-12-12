@@ -36,8 +36,8 @@
             uri="ca.gc.asc_csa.apogy.core.invocator"
             class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
       <extender
-            uri="ca.gc.asc_csa.apogy.core.environment.ui"
-            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCoreEnvironmentUIChildCreationExtender"/>
+            uri="ca.gc.asc_csa.apogy.core.environment.surface.ui"
+            class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogySurfaceEnvironmentUIChildCreationExtender"/>
       <extender
             uri="ca.gc.asc_csa.apogy.common.topology"
             class="ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider.ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>

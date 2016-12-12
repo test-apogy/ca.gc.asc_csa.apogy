@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformData;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemApiAdapter;
@@ -101,7 +101,7 @@ public class ApogyExamplesMobilePlatformApogyPackageImpl extends EPackageImpl im
 		isInited = true;
 
 		// Initialize simple dependencies
-		ApogyCoreEnvironmentUIPackage.eINSTANCE.eClass();
+		ApogySurfaceEnvironmentUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theApogyExamplesMobilePlatformApogyPackage.createPackageContents();
@@ -248,7 +248,7 @@ public class ApogyExamplesMobilePlatformApogyPackageImpl extends EPackageImpl im
 		// Obtain other dependent packages
 		ApogyCorePackage theApogyCorePackage = (ApogyCorePackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCorePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		ApogyCoreEnvironmentUIPackage theApogyCoreEnvironmentUIPackage = (ApogyCoreEnvironmentUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentUIPackage.eNS_URI);
+		ApogySurfaceEnvironmentUIPackage theApogySurfaceEnvironmentUIPackage = (ApogySurfaceEnvironmentUIPackage)EPackage.Registry.INSTANCE.getEPackage(ApogySurfaceEnvironmentUIPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -257,7 +257,7 @@ public class ApogyExamplesMobilePlatformApogyPackageImpl extends EPackageImpl im
 		// Add supertypes to classes
 		mobilePlatformApogySystemApiAdapterEClass.getESuperTypes().add(theApogyCorePackage.getApogySystemApiAdapter());
 		mobilePlatformDataEClass.getESuperTypes().add(theApogyCorePackage.getApogyInitializationData());
-		mobilePlatformApogySystemAnnotationEClass.getESuperTypes().add(theApogyCoreEnvironmentUIPackage.getPoseVariableAnnotation());
+		mobilePlatformApogySystemAnnotationEClass.getESuperTypes().add(theApogySurfaceEnvironmentUIPackage.getPoseVariableAnnotation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mobilePlatformApogySystemApiAdapterEClass, MobilePlatformApogySystemApiAdapter.class, "MobilePlatformApogySystemApiAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

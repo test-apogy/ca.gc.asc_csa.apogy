@@ -13,7 +13,7 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->

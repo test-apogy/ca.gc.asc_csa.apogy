@@ -18,12 +18,12 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
@@ -275,13 +275,13 @@ public class ApogyExamplesMobilePlatformApogyAdapterFactory extends AdapterFacto
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation <em>Map View Item Presentation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation
 	 * @generated
 	 */
   public Adapter createMapViewItemPresentationAdapter()
@@ -290,13 +290,13 @@ public class ApogyExamplesMobilePlatformApogyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation <em>Map Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation <em>Map Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation
 	 * @generated
 	 */
   public Adapter createMapAnnotationAdapter()
@@ -305,13 +305,13 @@ public class ApogyExamplesMobilePlatformApogyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractVariableAnnotation <em>Abstract Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractVariableAnnotation
 	 * @generated
 	 */
   public Adapter createAbstractVariableAnnotationAdapter()
@@ -320,13 +320,13 @@ public class ApogyExamplesMobilePlatformApogyAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation <em>Pose Variable Annotation</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation
+	 * @see ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation
 	 * @generated
 	 */
   public Adapter createPoseVariableAnnotationAdapter()

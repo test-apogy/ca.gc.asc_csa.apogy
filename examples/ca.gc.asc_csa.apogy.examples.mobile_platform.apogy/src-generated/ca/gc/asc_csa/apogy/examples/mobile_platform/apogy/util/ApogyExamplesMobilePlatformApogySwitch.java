@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-import ca.gc.asc_csa.apogy.core.environment.ui.AbstractVariableAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewItemPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractInitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.InitializationData;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
@@ -245,68 +245,64 @@ public class ApogyExamplesMobilePlatformApogySwitch<T> extends Switch<T>
 		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Map View Item Presentation</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Map View Item Presentation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseMapViewItemPresentation(MapViewItemPresentation object)
-  {
+	public T caseMapViewItemPresentation(MapViewItemPresentation object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Map Annotation</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Map Annotation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseMapAnnotation(MapAnnotation object)
-  {
+	public T caseMapAnnotation(MapAnnotation object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Variable Annotation</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Abstract Variable Annotation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseAbstractVariableAnnotation(AbstractVariableAnnotation object)
-  {
+	public T caseAbstractVariableAnnotation(AbstractVariableAnnotation object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Pose Variable Annotation</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Pose Variable Annotation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T casePoseVariableAnnotation(PoseVariableAnnotation object)
-  {
+	public T casePoseVariableAnnotation(PoseVariableAnnotation object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Pose Provider</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

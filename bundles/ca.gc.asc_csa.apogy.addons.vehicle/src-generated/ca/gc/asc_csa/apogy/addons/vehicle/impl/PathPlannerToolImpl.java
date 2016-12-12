@@ -29,21 +29,22 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import ca.gc.asc_csa.apogy.addons.Activator;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
 import ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl;
 import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
 import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.ApogyAddonsMobilityPathplannersGraphFactory;
+import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.DistanceAndSlopesCostFunction;
 import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.graph.SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner;
-import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
-import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
 import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool;
+import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianAxis;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPolygon;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
@@ -51,7 +52,7 @@ import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayer;
 
 /**
  * <!-- begin-user-doc -->
@@ -246,16 +247,15 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	 * @generated_NOT
 	 */
 	@SuppressWarnings("unchecked")
-	public void setMeshLayer(CartesianTriangularMeshMapLayer newMeshLayer) 
-	{
+	public void setMeshLayer(CartesianTriangularMeshMapLayer newMeshLayer) {
 		setMeshLayerGen(newMeshLayer);
 		
 		if(getPathPlanner() != null && newMeshLayer != null)
 		{			
 			getPathPlanner().setMesh(newMeshLayer.getCurrentMesh());	
-		}
+		}	
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,7 +267,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyAddonsVehiclePackage.PATH_PLANNER_TOOL__MESH_LAYER, oldMeshLayer, meshLayer));
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -21,16 +21,17 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
-import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
-import ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController;
 import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**
@@ -488,10 +489,10 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		addEParameter(op, theApogyCoreInvocatorPackage.getAbstractTypeImplementation(), "abstractTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreTopologyFacade__CreateApogyEnvironmentNode__ApogyEnvironment(), this.getApogyEnvironmentNode(), "createApogyEnvironmentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCorePackage.getApogyEnvironment(), "apogyEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentPackage.getApogyEnvironment(), "apogyEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreTopologyFacade__InitApogyTopology__ApogyEnvironment(), null, "initApogyTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCorePackage.getApogyEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCoreEnvironmentPackage.getApogyEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyCoreTopologyFacade__DisposeApogyTopology(), null, "disposeApogyTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -508,11 +509,11 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		addEParameter(op, theApogyCoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(systemsTopologyAdapterEClass, SystemsTopologyAdapter.class, "SystemsTopologyAdapter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemsTopologyAdapter_Deployment(), theApogyCorePackage.getApogyEnvironment(), null, "deployment", null, 0, 1, SystemsTopologyAdapter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemsTopologyAdapter_Deployment(), theApogyCoreEnvironmentPackage.getApogyEnvironment(), null, "deployment", null, 0, 1, SystemsTopologyAdapter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystemsTopologyAdapter_SystemsGroup(), theApogyCommonTopologyPackage.getReferencedGroupNode(), null, "systemsGroup", null, 0, 1, SystemsTopologyAdapter.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(apogyEnvironmentNodeEClass, ApogyEnvironmentNode.class, "ApogyEnvironmentNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getApogyEnvironmentNode_ApogyEnvironment(), theApogyCorePackage.getApogyEnvironment(), null, "apogyEnvironment", null, 0, 1, ApogyEnvironmentNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogyEnvironmentNode_ApogyEnvironment(), theApogyCoreEnvironmentPackage.getApogyEnvironment(), null, "apogyEnvironment", null, 0, 1, ApogyEnvironmentNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironmentNode_WorksiteNode(), theApogyCoreEnvironmentPackage.getWorksiteNode(), null, "worksiteNode", null, 1, 1, ApogyEnvironmentNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironmentNode_ResultsListNode(), theApogyCorePackage.getResultsListNode(), null, "resultsListNode", null, 1, 1, ApogyEnvironmentNode.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getApogyEnvironmentNode_ApogySystemAPIsNode(), this.getApogySystemAPIsNode(), null, "apogySystemAPIsNode", null, 1, 1, ApogyEnvironmentNode.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -520,7 +521,7 @@ public class ApogyCoreTopologyPackageImpl extends EPackageImpl implements ApogyC
 		initEOperation(getApogyEnvironmentNode__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(apogySystemAPIsNodeEClass, ApogySystemAPIsNode.class, "ApogySystemAPIsNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getApogySystemAPIsNode_ApogyEnvironment(), theApogyCorePackage.getApogyEnvironment(), null, "apogyEnvironment", null, 0, 1, ApogySystemAPIsNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogySystemAPIsNode_ApogyEnvironment(), theApogyCoreEnvironmentPackage.getApogyEnvironment(), null, "apogyEnvironment", null, 0, 1, ApogySystemAPIsNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(sortedSetEDataType, SortedSet.class, "SortedSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

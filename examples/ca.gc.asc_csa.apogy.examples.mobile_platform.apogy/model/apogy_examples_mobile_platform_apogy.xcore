@@ -37,7 +37,7 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter
 import ca.gc.asc_csa.apogy.core.ApogyInitializationData
 
-import ca.gc.asc_csa.apogy.core.environment.ui.PoseVariableAnnotation
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation
 
 /*
  * This class is the specialized Apogy API adapter, used for connecting

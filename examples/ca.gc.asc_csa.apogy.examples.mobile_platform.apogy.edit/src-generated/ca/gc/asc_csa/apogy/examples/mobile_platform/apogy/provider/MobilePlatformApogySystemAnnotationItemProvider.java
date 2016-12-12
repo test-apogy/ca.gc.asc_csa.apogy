@@ -14,13 +14,13 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.PoseVariableAnnotationItemProvider;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import ca.gc.asc_csa.apogy.core.environment.ui.provider.PoseVariableAnnotationItemProvider;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation;
 
 /**

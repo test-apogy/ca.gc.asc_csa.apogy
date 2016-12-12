@@ -18,8 +18,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
@@ -110,18 +111,17 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setDeployment(ApogyEnvironment newDeployment)
-  {
+	public void setDeployment(ApogyEnvironment newDeployment) {
 		ApogyEnvironment oldDeployment = deployment;
 		deployment = newDeployment;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT, oldDeployment, deployment));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

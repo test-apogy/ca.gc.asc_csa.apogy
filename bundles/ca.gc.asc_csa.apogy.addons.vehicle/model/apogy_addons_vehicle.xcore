@@ -34,9 +34,10 @@ Contributors:
 
 package ca.gc.asc_csa.apogy.addons.vehicle
 
+
 import ca.gc.asc_csa.apogy.core.invocator.Variable
 import ca.gc.asc_csa.apogy.core.PoseCorrector
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayer
 import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody

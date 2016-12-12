@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -335,7 +335,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VISIBLE = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VISIBLE;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VISIBLE = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -344,7 +344,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VARIABLE = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VARIABLE;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VARIABLE = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VARIABLE;
 
 	/**
 	 * The feature id for the '<em><b>Variable Instance</b></em>' reference.
@@ -353,7 +353,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VARIABLE_INSTANCE = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VARIABLE_INSTANCE;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VARIABLE_INSTANCE = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VARIABLE_INSTANCE;
 
 	/**
 	 * The feature id for the '<em><b>Apogy System Api Adapter</b></em>' reference.
@@ -362,7 +362,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__APOGY_SYSTEM_API_ADAPTER = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__APOGY_SYSTEM_API_ADAPTER;
 
 	/**
 	 * The feature id for the '<em><b>Vectorlength</b></em>' attribute.
@@ -371,7 +371,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VECTORLENGTH = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VECTORLENGTH = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH;
 
 	/**
 	 * The feature id for the '<em><b>Vector Color</b></em>' attribute.
@@ -380,7 +380,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VECTOR_COLOR = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__VECTOR_COLOR = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Show Pose</b></em>' attribute.
@@ -389,7 +389,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__SHOW_POSE = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION__SHOW_POSE = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE;
 
 	/**
 	 * The number of structural features of the '<em>Mobile Platform Apogy System Annotation</em>' class.
@@ -398,7 +398,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION_FEATURE_COUNT = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION_FEATURE_COUNT + 0;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION_FEATURE_COUNT = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get XY Shape Annotation</em>' operation.
@@ -407,7 +407,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___GET_XY_SHAPE_ANNOTATION = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___GET_XY_SHAPE_ANNOTATION;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___GET_XY_SHAPE_ANNOTATION = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___GET_XY_SHAPE_ANNOTATION;
 
 	/**
 	 * The operation id for the '<em>Update Pose</em>' operation.
@@ -416,7 +416,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___UPDATE_POSE__MATRIX4X4 = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___UPDATE_POSE__MATRIX4X4 = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4;
 
 	/**
 	 * The operation id for the '<em>Update Pose</em>' operation.
@@ -425,7 +425,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE;
 
 	/**
 	 * The number of operations of the '<em>Mobile Platform Apogy System Annotation</em>' class.
@@ -434,7 +434,7 @@ public interface ApogyExamplesMobilePlatformApogyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION_OPERATION_COUNT = ApogyCoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION_OPERATION_COUNT + 0;
+	int MOBILE_PLATFORM_APOGY_SYSTEM_ANNOTATION_OPERATION_COUNT = ApogySurfaceEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION_OPERATION_COUNT + 0;
 
 
 	/**

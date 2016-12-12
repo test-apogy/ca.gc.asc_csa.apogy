@@ -4,7 +4,7 @@
  */
 package ca.gc.asc_csa.apogy.core.topology.validation;
 
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode}.

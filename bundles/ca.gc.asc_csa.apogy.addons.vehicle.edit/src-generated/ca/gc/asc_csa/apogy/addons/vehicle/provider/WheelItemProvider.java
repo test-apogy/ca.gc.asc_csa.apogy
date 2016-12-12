@@ -33,6 +33,7 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.provider.PhysicalBodyItemProvider;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.vehicle.Wheel} object.
@@ -226,17 +227,62 @@ extends PhysicalBodyItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyAddonsFactory.eINSTANCE.createTrajectoryPickingToolNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createMapsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createMapNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -261,72 +307,12 @@ extends PhysicalBodyItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createMapNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyCoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsMobilityPathplannersFactory.eINSTANCE.createCircularExclusionZone()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createPath()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 	}
 
 }

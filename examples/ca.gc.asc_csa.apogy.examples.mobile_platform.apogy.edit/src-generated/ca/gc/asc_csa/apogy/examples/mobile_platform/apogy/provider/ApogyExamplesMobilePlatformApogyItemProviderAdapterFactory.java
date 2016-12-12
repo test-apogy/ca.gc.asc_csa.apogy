@@ -46,10 +46,9 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.util.ApogyCommonTopologySwitch;
-import ca.gc.asc_csa.apogy.core.environment.ui.MapViewConfiguration;
-import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
-
-import ca.gc.asc_csa.apogy.core.environment.ui.util.ApogyCoreEnvironmentUISwitch;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.util.ApogySurfaceEnvironmentUISwitch;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.util.ApogyCoreInvocatorSwitch;
@@ -402,19 +401,19 @@ public class ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory extends 
 	}
 
 	/**
-	 * A child creation extender for the {@link ApogyCoreEnvironmentUIPackage}.
+	 * A child creation extender for the {@link ApogySurfaceEnvironmentUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class ApogyCoreEnvironmentUIChildCreationExtender implements IChildCreationExtender {
+	public static class ApogySurfaceEnvironmentUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends ApogyCoreEnvironmentUISwitch<Object> {
+		protected static class CreationSwitch extends ApogySurfaceEnvironmentUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -450,12 +449,11 @@ public class ApogyExamplesMobilePlatformApogyItemProviderAdapterFactory extends 
 			public Object caseMapViewConfiguration(MapViewConfiguration object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(ApogyCoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+						(ApogySurfaceEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
 						 ApogyExamplesMobilePlatformApogyFactory.eINSTANCE.createMobilePlatformApogySystemAnnotation()));
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

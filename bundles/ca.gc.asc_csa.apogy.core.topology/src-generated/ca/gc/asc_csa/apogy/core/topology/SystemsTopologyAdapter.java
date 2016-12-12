@@ -14,8 +14,9 @@ package ca.gc.asc_csa.apogy.core.topology;
  */
 
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,14 +55,14 @@ public interface SystemsTopologyAdapter extends EObject
   /**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter#getDeployment <em>Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Deployment</em>' reference.
 	 * @see #getDeployment()
 	 * @generated
 	 */
-  void setDeployment(ApogyEnvironment value);
+	void setDeployment(ApogyEnvironment value);
 
-  /**
+		/**
 	 * Returns the value of the '<em><b>Systems Group</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

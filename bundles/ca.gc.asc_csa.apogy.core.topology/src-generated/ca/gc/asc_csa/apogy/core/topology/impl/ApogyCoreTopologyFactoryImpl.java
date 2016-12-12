@@ -13,19 +13,21 @@ package ca.gc.asc_csa.apogy.core.topology.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.topology.*;
 import java.util.SortedSet;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
-import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFactory;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController;
 import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**

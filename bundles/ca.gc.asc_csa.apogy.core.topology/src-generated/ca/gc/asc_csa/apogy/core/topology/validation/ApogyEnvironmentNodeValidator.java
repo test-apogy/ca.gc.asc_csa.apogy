@@ -4,11 +4,9 @@
  */
 package ca.gc.asc_csa.apogy.core.topology.validation;
 
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
-
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
-
 import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
 
 /**

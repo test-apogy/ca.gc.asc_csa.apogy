@@ -14,7 +14,7 @@ package ca.gc.asc_csa.apogy.core.topology;
  */
 
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,11 +53,11 @@ public interface ApogySystemAPIsNode extends ReferencedGroupNode
   /**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode#getApogyEnvironment <em>Apogy Environment</em>}' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Apogy Environment</em>' reference.
 	 * @see #getApogyEnvironment()
 	 * @generated
 	 */
-  void setApogyEnvironment(ApogyEnvironment value);
+	void setApogyEnvironment(ApogyEnvironment value);
 
 } // ApogySystemAPIsNode

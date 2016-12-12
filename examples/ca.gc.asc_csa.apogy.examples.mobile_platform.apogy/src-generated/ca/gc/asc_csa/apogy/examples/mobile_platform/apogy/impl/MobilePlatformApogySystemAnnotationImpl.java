@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.impl.PoseVariableAnnotationImpl;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Stroke;
@@ -20,7 +21,6 @@ import java.awt.geom.Ellipse2D;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
-import ca.gc.asc_csa.apogy.core.environment.ui.impl.PoseVariableAnnotationImpl;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.MobilePlatform;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.MobilePlatformApogySystemAnnotation;
 import ca.gc.asc_csa.apogy.examples.mobile_platform.apogy.ApogyExamplesMobilePlatformApogyPackage;

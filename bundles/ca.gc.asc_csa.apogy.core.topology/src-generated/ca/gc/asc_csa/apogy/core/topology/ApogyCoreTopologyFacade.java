@@ -14,11 +14,12 @@ package ca.gc.asc_csa.apogy.core.topology;
  */
 
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
+import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.Variable;
 import ca.gc.asc_csa.apogy.core.topology.impl.ApogyCoreTopologyFacadeImpl;
@@ -96,7 +97,7 @@ public interface ApogyCoreTopologyFacade extends EObject
 	 */
 	ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment);
 
-	/**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

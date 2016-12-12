@@ -10,7 +10,7 @@ import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
 
 import ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerToolNode;
 
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayer;
 
 /**
  * A sample validator interface for {@link ca.gc.asc_csa.apogy.addons.vehicle.PathPlannerTool}.

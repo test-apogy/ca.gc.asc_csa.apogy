@@ -17,14 +17,15 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ReferencedGroupNode;
-import ca.gc.asc_csa.apogy.core.topology.*;
-import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
-import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
+import ca.gc.asc_csa.apogy.core.topology.ApogyEnvironmentNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
+import ca.gc.asc_csa.apogy.core.topology.ApogyTopologyController;
 import ca.gc.asc_csa.apogy.core.topology.SystemsTopologyAdapter;
 
 /**

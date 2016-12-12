@@ -66,7 +66,7 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.ApogyCommonTopologyAddonsDynamicsPackage;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsPackage;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
@@ -338,7 +338,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 		// Initialize simple dependencies
 		ApogyCommonTopologyAddonsDynamicsPackage.eINSTANCE.eClass();
 		ApogyAddonsPackage.eINSTANCE.eClass();
-		ApogyCoreEnvironmentPackage.eINSTANCE.eClass();
+		ApogySurfaceEnvironmentPackage.eINSTANCE.eClass();
 		ApogyAddonsMobilityPathplannersPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -1265,7 +1265,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 		ApogyCommonTopologyPackage theApogyCommonTopologyPackage = (ApogyCommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyPackage.eNS_URI);
 		ApogyCommonTopologyBindingsPackage theApogyCommonTopologyBindingsPackage = (ApogyCommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCommonTopologyBindingsPackage.eNS_URI);
 		ApogyAddonsPackage theApogyAddonsPackage = (ApogyAddonsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsPackage.eNS_URI);
-		ApogyCoreEnvironmentPackage theApogyCoreEnvironmentPackage = (ApogyCoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreEnvironmentPackage.eNS_URI);
+		ApogySurfaceEnvironmentPackage theApogySurfaceEnvironmentPackage = (ApogySurfaceEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ApogySurfaceEnvironmentPackage.eNS_URI);
 		ApogyAddonsMobilityPathplannersPackage theApogyAddonsMobilityPathplannersPackage = (ApogyAddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsMobilityPathplannersPackage.eNS_URI);
 		ApogyAddonsGeometryPathsPackage theApogyAddonsGeometryPathsPackage = (ApogyAddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyAddonsGeometryPathsPackage.eNS_URI);
 		ApogyCoreInvocatorPackage theApogyCoreInvocatorPackage = (ApogyCoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreInvocatorPackage.eNS_URI);
@@ -1406,7 +1406,7 @@ public class ApogyAddonsVehiclePackageImpl extends EPackageImpl implements Apogy
 		initEClass(pathPlannerToolEClass, PathPlannerTool.class, "PathPlannerTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPathPlannerTool_Busy(), theEcorePackage.getEBoolean(), "busy", "false", 0, 1, PathPlannerTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathPlannerTool_AutoPathPlanEnabled(), theEcorePackage.getEBoolean(), "autoPathPlanEnabled", "false", 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathPlannerTool_MeshLayer(), theApogyCoreEnvironmentPackage.getCartesianTriangularMeshMapLayer(), null, "meshLayer", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathPlannerTool_MeshLayer(), theApogySurfaceEnvironmentPackage.getCartesianTriangularMeshMapLayer(), null, "meshLayer", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathPlannerTool_PathPlanner(), theApogyAddonsMobilityPathplannersPackage.getMeshWayPointPathPlanner(), null, "pathPlanner", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathPlannerTool_PlannedPath(), theApogyAddonsGeometryPathsPackage.getWayPointPath(), null, "plannedPath", null, 0, 1, PathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPathPlannerTool_PathPlannerToolNode(), this.getPathPlannerToolNode(), this.getPathPlannerToolNode_PathPlannerTool(), "pathPlannerToolNode", null, 0, 1, PathPlannerTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

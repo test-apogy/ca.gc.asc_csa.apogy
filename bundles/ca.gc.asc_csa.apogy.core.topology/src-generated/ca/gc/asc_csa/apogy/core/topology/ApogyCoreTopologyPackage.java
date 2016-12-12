@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 
 /**
@@ -664,21 +665,21 @@ public interface ApogyCoreTopologyPackage extends EPackage
 	EOperation getApogyCoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#createApogyEnvironmentNode(ca.gc.asc_csa.apogy.core.ApogyEnvironment) <em>Create Apogy Environment Node</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#createApogyEnvironmentNode(ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment) <em>Create Apogy Environment Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Apogy Environment Node</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#createApogyEnvironmentNode(ca.gc.asc_csa.apogy.core.ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#createApogyEnvironmentNode(ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment)
 	 * @generated
 	 */
 	EOperation getApogyCoreTopologyFacade__CreateApogyEnvironmentNode__ApogyEnvironment();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#initApogyTopology(ca.gc.asc_csa.apogy.core.ApogyEnvironment) <em>Init Apogy Topology</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#initApogyTopology(ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment) <em>Init Apogy Topology</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init Apogy Topology</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#initApogyTopology(ca.gc.asc_csa.apogy.core.ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade#initApogyTopology(ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment)
 	 * @generated
 	 */
 	EOperation getApogyCoreTopologyFacade__InitApogyTopology__ApogyEnvironment();

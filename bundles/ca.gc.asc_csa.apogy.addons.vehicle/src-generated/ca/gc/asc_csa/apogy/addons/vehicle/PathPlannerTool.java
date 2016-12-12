@@ -16,7 +16,7 @@ package ca.gc.asc_csa.apogy.addons.vehicle;
 import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
 import ca.gc.asc_csa.apogy.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import ca.gc.asc_csa.apogy.core.environment.CartesianTriangularMeshMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayer;
 
 /**
  * <!-- begin-user-doc -->
