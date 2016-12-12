@@ -15,9 +15,6 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -40,8 +37,8 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
@@ -54,8 +51,6 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 	private TriggerComposite triggerComposite;
 	
 	private DataBindingContext m_bindingContext;
-	
-	private Adapter adapter;
 	
 	private OperationCallControllerBinding operationCallControllerBinding;
 
@@ -103,19 +98,20 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 						ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 						eOperationsComposite.getSelectedEOperation());
 				if (!operationCallControllerBinding.getEOperation().getEParameters().isEmpty()) {
-					ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList();
-					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
-							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
-					
+					ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList();				
 					
 					for(@SuppressWarnings("unused") EParameter eParameter : operationCallControllerBinding.getEOperation().getEParameters()){
 						BindedEDataTypeArgument bindedArgument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(argumentsList, ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS, bindedArgument);
-						
 						ControllerValueSource valueSource = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerValueSource();
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(bindedArgument, ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, valueSource);
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(valueSource, ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING, ApogyCoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning());
+						CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE.createCenteredLinearInputConditioning();
+						
+						conditioning.setDeadBand((float) 0.1);
+						valueSource.setConditioning(conditioning);
+						bindedArgument.setValueSource(valueSource);
+						argumentsList.getArguments().add(bindedArgument);
 					}
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
 				}else{
 					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
 							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, null);
@@ -160,9 +156,6 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 	}
 	
 	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
-		if(this.operationCallControllerBinding != null){
-			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
-		}
 		this.operationCallControllerBinding = operationCallControllerBinding;
 		
 		variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(), this.operationCallControllerBinding);
@@ -172,8 +165,6 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 			eOperationsComposite.setEClass(null);
 		}
 		triggerComposite.setOperationCallControllerBinding(this.operationCallControllerBinding);
-	
-		this.operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 	
 	protected DataBindingContext initDataBindings() {
@@ -183,25 +174,10 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 		return m_bindingContext;
 	}
 	
-	public Adapter getAdapter() {
-		if (adapter == null) {
-			adapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification notification) {
-					if (notification.getFeature() == ApogyCoreInvocatorPackage.Literals.PROGRAM__PROGRAMS_GROUP) {
-						setOperationCallControllerBinding(operationCallControllerBinding);
-					}
-				}
-			};
-		}
-		return adapter;
-	}
 
 	@Override
 	public void dispose() {
-		if(this.operationCallControllerBinding != null){
-			operationCallControllerBinding.eAdapters().remove(getAdapter());
-		}
+		toolkit.dispose();
 		super.dispose();
 	}
 }

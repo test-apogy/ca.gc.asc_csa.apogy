@@ -152,10 +152,7 @@ public class ControllerBindingsComposite extends Composite {
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-//				MessageBox dialog = new MessageBox(getShell());
-//				dialog.setText("TODO");
-//				dialog.open();
-				
+				// FIXME Finish
 				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration){
 					@Override
 					public boolean performFinish() {
@@ -165,19 +162,6 @@ public class ControllerBindingsComposite extends Composite {
 				};
 				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
 				dialog.open();
-//				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration);
-				// Listener that sets the new child as the selected item
-//				newControllerBindingWizard.getCreatedControllerBinding().addChangeListener(new IChangeListener() {
-//					@SuppressWarnings("unchecked")
-//					@Override
-//					public void handleChange(ChangeEvent event) {
-//						treeViewer.setSelection(new StructuredSelection(((WritableValue<OperationCallControllerBinding>)event.getObservable()).getValue()));
-//					}
-//				});
-//				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
-//
-//				dialog.open();
-//				System.out.println("ControllerBindingsComposite.ControllerBindingsComposite() BTN NEW");
 		}});
 		
 		Button btnDelete = new Button(this, SWT.NONE);
@@ -291,7 +275,6 @@ public class ControllerBindingsComposite extends Composite {
 
 				@Override
 				public void notifyChanged(Notification notification) {
-//					System.out.println(notification.getFeature());
 					if (getEStructuralFeature().contains(notification.getFeature())) {
 						treeViewer.refresh();
 						for (TreeColumn column : treeViewer.getTree().getColumns()) {

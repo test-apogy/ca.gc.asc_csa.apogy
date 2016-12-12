@@ -23,6 +23,9 @@ import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -114,7 +117,12 @@ public class NewControllerBindingWizard extends Wizard {
 					getControllerBinding()) {
 				@Override
 				protected void resetOperationCall() {
-					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
+//					if(bindedEDataTypeArgumentsWizardPage != null){
+//						bindedEDataTypeArgumentsWizardPage.dispose();
+//						bindedEDataTypeArgumentsWizardPage = null;
+//						getBindedEDataTypeArgumentsWizardPage();
+//					}
+//					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
 				}
 			};
 		}
@@ -171,6 +179,18 @@ public class NewControllerBindingWizard extends Wizard {
 					getControllersConfiguration(),
 					getControllerBinding(), 
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
+			
+			getShell().addListener(SWT.Traverse, new Listener() {
+				@Override
+				public void handleEvent(Event event) {
+					if (event.detail == SWT.TRAVERSE_ESCAPE) {
+						if(event.doit){
+							// TODO warning dialog
+							event.doit = false;
+						}	
+					}
+				}
+			});
 		}
 
 		return controllerBinding;

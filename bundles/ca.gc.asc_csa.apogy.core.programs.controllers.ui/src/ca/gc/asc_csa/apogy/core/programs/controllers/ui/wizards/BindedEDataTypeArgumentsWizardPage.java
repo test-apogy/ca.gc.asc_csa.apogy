@@ -15,10 +15,11 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -49,40 +50,22 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	
 	public BindedEDataTypeArgumentsWizardPage(OperationCallControllerBinding operationCallControllerBinding){
 		this();
-		if (this.operationCallControllerBinding != null){
-			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
-		}
-		
 		this.operationCallControllerBinding = operationCallControllerBinding;
-		
-		operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 	
-	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
-		if (this.operationCallControllerBinding != null){
-			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
-		}
-		
-		this.operationCallControllerBinding = operationCallControllerBinding;
-		
-		operationCallControllerBinding.eAdapters().add(getAdapter());
-		
-		if(bindedEDataTypeArgumentsComposite != null){
-			bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
-		}
-	}
-	
-	private Adapter getAdapter() {
-		if (adapter == null){
-			adapter = new AdapterImpl(){
-				@Override
-				public void notifyChanged(Notification msg) {
-					validate();
-				}
-			};
-		}				
-		return adapter;
-	}
+//	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
+//		if (this.operationCallControllerBinding != null){
+//			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
+//		}
+//		
+//		this.operationCallControllerBinding = operationCallControllerBinding;
+//		
+//		operationCallControllerBinding.eAdapters().add(getAdapter());
+//		
+//		if(bindedEDataTypeArgumentsComposite != null){
+//			bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
+//		}
+//	}
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
@@ -91,7 +74,12 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.None);
 		container.setLayout(new FillLayout());
 
-		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None);
+		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None){
+			@Override
+			protected void newSelection(ISelection selection) {
+				validate();
+			}
+		};
 		bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
 	
 		setControl(container);
@@ -105,14 +93,18 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	protected void validate() {
 		String errorStr = null;
 
-		if(operationCallControllerBinding.getArgumentsList() != null){
-			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCallControllerBinding.getArgumentsList());
-			if (diagnosticContext.getSeverity() != Diagnostic.OK){
-				errorStr  = "Please enter a value for each argument";
-			}	
-		}
+//		if(operationCallControllerBinding.getArgumentsList() != null){
+//			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCallControllerBinding.getArgumentsList());
+//			if (diagnosticContext.getSeverity() != Diagnostic.OK){
+//				errorStr  = "Please enter a value for each argument";
+//			}	
+//		}
 		setErrorMessage(errorStr );
 		setPageComplete(errorStr  == null);
 	}
-
+	
+	@Override
+	public void dispose() {
+		super.dispose();
+	}
 }

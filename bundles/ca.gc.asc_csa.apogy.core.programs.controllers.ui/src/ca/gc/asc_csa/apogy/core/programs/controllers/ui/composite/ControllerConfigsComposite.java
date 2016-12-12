@@ -35,10 +35,6 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
-import org.eclipse.swt.events.KeyEvent;
-import org.eclipse.swt.events.KeyListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -46,7 +42,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
@@ -161,28 +156,6 @@ public class ControllerConfigsComposite extends ScrolledComposite {
 			}
 		});
 		
-		Button btnTest = new Button(composite, SWT.None);
-		btnTest.setText("Test");
-		btnTest.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				MessageBox dialog = new MessageBox(getShell());
-				dialog.setMessage("Please activate the component");
-				ControllerConfigsComposite.this.addKeyListener(new KeyListener() {		
-					@Override
-					public void keyReleased(KeyEvent e) {
-					}
-					
-					@Override
-					public void keyPressed(KeyEvent e) {
-//						System.out.println(
-//								"ControllerConfigsComposite.ControllerConfigsComposite(...).new SelectionAdapter() {...}.widgetSelected(...).new KeyListener() {...}.keyPressed()" + e.get);
-					}
-				});
-				dialog.open();
-			}
-		});
-
 		setContent(composite);
 		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 		
@@ -224,7 +197,7 @@ public class ControllerConfigsComposite extends ScrolledComposite {
 		tableViewer.setInput(programGroupProgramsObserveList);
 
 		/*
-		 * Delete Button Enabled Binding. TODO
+		 * Delete Button Enabled Binding.
 		 */
 		IObservableValue<?> tableViewerSingleSelectionObserveValue = ViewerProperties.singleSelection().observe(tableViewer);
 		

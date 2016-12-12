@@ -150,7 +150,7 @@ public abstract class ArgumentImpl extends MinimalEObjectImpl.Container implemen
   public EParameter getEParameter()
   {
 	  int index = getArgumentsList().getArguments().indexOf(this);
-	  if(getOperationCall().getEOperation() != null){
+	  if(getOperationCall().getEOperation() != null && !getOperationCall().getEOperation().getEParameters().isEmpty()){
 		  return getOperationCall().getEOperation().getEParameters().get(index);
 	  }else{
 		  return null;

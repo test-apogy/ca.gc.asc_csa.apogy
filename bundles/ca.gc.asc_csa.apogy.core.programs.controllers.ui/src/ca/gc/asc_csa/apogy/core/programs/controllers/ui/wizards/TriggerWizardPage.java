@@ -89,4 +89,10 @@ public class TriggerWizardPage extends WizardPage {
 		setErrorMessage(errorTriggerStr);
 		setPageComplete(errorTriggerStr == null);
 	}
+	
+	
+	@Override
+	public void dispose() {
+		super.dispose();
+	}
 }

@@ -12,7 +12,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -44,6 +46,7 @@ import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
@@ -184,7 +187,14 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		sectionConditioning.setLayout(new FillLayout());
 		sectionConditioning.setText("Conditioning");
 
-		compositeConditioning = new Composite(sectionConditioning, SWT.None);
+		compositeConditioning = new Composite(sectionConditioning, SWT.None){
+			@Override
+			public void dispose() {
+			System.out.println(
+					"BindedEDataTypeArgumentsComposite.BindedEDataTypeArgumentsComposite(...).new Composite() {...}.dispose()");
+			super.dispose();
+			}
+		};
 		GridLayout gridLayout_conditioning = new GridLayout(1, false);
 		gridLayout_conditioning.marginWidth = 0;
 		gridLayout_conditioning.marginHeight = 0;
@@ -199,7 +209,14 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		sectionValue.setLayout(new FillLayout());
 		sectionValue.setText("Value");
 
-		compositeValue = new Composite(sectionValue, SWT.None);
+		compositeValue = new Composite(sectionValue, SWT.None){
+			@Override
+			public void dispose() {
+			System.out.println(
+					"BindedEDataTypeArgumentsComposite.BindedEDataTypeArgumentsComposite(...).new Composite() {...}.dispose()");
+			super.dispose();
+			}
+		};
 		GridLayout gridLayout_value = new GridLayout(1, false);
 		gridLayout_value.marginWidth = 0;
 		gridLayout_value.marginHeight = 0;
@@ -228,19 +245,18 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				@Override
 				protected void newSelection(TreeSelection selection) {
 					if (getSelectedArgument().getValueSource().eClass() != (EClass) selection.getFirstElement()) {
-						ValueSource valueSource = (ValueSource) EcoreUtil.create((EClass) selection.getFirstElement());
 						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getSelectedArgument(),
 								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-								valueSource);
-
-						if (valueSource instanceof ControllerValueSource) {
-							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(valueSource,
+								EcoreUtil.create((EClass) selection.getFirstElement()));
+						if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
+							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getSelectedArgument().getValueSource(),
 									ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
 									ApogyCoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning());
 						}
 						updateCompositeValue();
 						updateCompositeConditioning();
 						tableViewerArguments.refresh();
+						BindedEDataTypeArgumentsComposite.this.newSelection(null);
 					}
 				}
 
@@ -362,6 +378,9 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				@Override
 				protected void newSelection(TreeSelection selection) {
 					if (!selection.isEmpty()) {
+						EList<?> test = controllerValueSource.eContents();
+						
+						
 						AbstractInputConditioning abstractInputConditioning = (AbstractInputConditioning) EcoreUtil
 								.create((EClass) selection.getFirstElement());
 						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(controllerValueSource,
@@ -371,6 +390,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 						plotComposite.setAbstractInputConditioning(controllerValueSource.getConditioning());
 						ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditionningEMFForms,
 								controllerValueSource.getConditioning());
+						BindedEDataTypeArgumentsComposite.this.newSelection(null);
 					}
 				}
 			};
@@ -406,7 +426,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 * @param section
 	 * @return
 	 */
-	private NoContentComposite getNoContentComposite(Section section) {
+	private Composite getNoContentComposite(Section section) {
 		NoContentComposite composite = new NoContentComposite(section, SWT.None) {
 			@Override
 			protected String getMessage() {
@@ -478,12 +498,16 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
 				.getEditingDomainFor(operationCallControllerBinding);
 
-		tableViewerArguments
-				.setInput(EMFEditProperties.list(domain, ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS)
-						.observe(operationCallControllerBinding.getArgumentsList()));
-
+		if(operationCallControllerBinding != null && operationCallControllerBinding.getArgumentsList() != null){
+			tableViewerArguments
+			.setInput(EMFEditProperties.list(domain, ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS)
+					.observe(operationCallControllerBinding.getArgumentsList()));
+			tableViewerArguments.refresh();
+		}else{
+			tableViewerArguments.setInput(null);
+		}
+		
 		packColumns();
-
 		this.operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 
@@ -547,6 +571,10 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		@Override
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
+					
+			if(operationCallControllerBinding.getArgumentsList() == null || !operationCallControllerBinding.getArgumentsList().getArguments().contains(object)){
+				return str;
+			}
 
 			ValueSource valueSource = ((BindedEDataTypeArgument) object).getValueSource();
 			switch (columnIndex) {
@@ -573,7 +601,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				if (valueSource instanceof ControllerValueSource) {
 					str = super.getColumnText(((ControllerValueSource) valueSource).getConditioning(), columnIndex);
 				} else {
-					str = "";
+					str = "N/A";
 				}
 
 				break;
@@ -604,39 +632,62 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 * 
 	 * @return
 	 */
-	public Adapter getAdapter() {
+	private Adapter getAdapter() {
 		if (adapter == null) {
 			adapter = new EContentAdapter() {
+				List<EStructuralFeature> features;
+
 				@Override
 				public void notifyChanged(Notification notification) {
-					// TODO fix the adapter
-					if (notification
-							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST) {
-						if (notification.getNewValue() != null) {
-							setOperationCallControllerBinding(
-									(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
-											.getOperationCall());
+					System.out.println(notification.getFeature());
+					if(notification.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST){
+						System.out.println("1");
+						if(notification.getNewValue() == null){
+							System.out.println("2");
+							if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
+								tableViewerArguments.refresh();
+								packColumns();
+							}
+						}else{
+							System.out.println("3");
+//							setOperationCallControllerBinding(
+//									(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
+//											.getOperationCall());
 						}
 					}
-					if (notification
-							.getFeature() == ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE) {
-						if (notification.getOldValue() != null) {
-							((EObject) notification.getOldValue()).eAdapters().remove(getAdapter());
-						}
-						((EObject) notification.getNewValue()).eAdapters().add(getAdapter());
-					}
-					if (notification.getFeature() == ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE
-							|| notification
-									.getFeature() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER
-							|| notification
-									.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME
-							|| notification
-									.getFeature() == ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME) {
-						if (!tableViewerArguments.isBusy()) {
+					if (getEStructuralFeature().contains(notification.getFeature()) || notification.getNotifier() instanceof AbstractInputConditioning) {
+						System.out.println("4");
+						if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
 							tableViewerArguments.refresh();
 							packColumns();
-						}
+						}				
 					}
+					super.notifyChanged(notification);
+				}
+
+				private List<EStructuralFeature> getEStructuralFeature() {
+					if (features == null) {
+						features = new ArrayList<EStructuralFeature>();
+
+						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
+						
+						features.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+						
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
+						
+						features.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
+
+						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
+						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME);
+					}
+					return features;
+
 				}
 			};
 		}
@@ -646,9 +697,10 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	@Override
 	public void dispose() {
 		if (this.operationCallControllerBinding != null) {
+			System.out.println("BindedEDataTypeArgumentsComposite.dispose()");
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
-		adapterFactory.dispose();
+		toolkit.dispose();
 		super.dispose();
 	}
 
