@@ -13,6 +13,9 @@ package ca.gc.asc_csa.apogy.common.io.jinput.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
@@ -25,13 +28,17 @@ import org.eclipse.swt.events.FocusAdapter;
 import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
@@ -42,6 +49,9 @@ public class ControllerSelectionComposite extends Composite {
 
 	private Text controllerText;
 	private Text componentText;
+	
+	private boolean selectionStarted = false;
+	private Listener listener;
 
 	private EComponentQualifier eComponentQualifier;
 
@@ -69,13 +79,17 @@ public class ControllerSelectionComposite extends Composite {
 		controllerText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				startSelection();
+				if(!selectionStarted){
+					startSelection();
+				}
 			}
 		});
 		controllerText.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				stopSelection();
+				if (selectionStarted) {
+					stopSelection();
+				}
 			}
 		});
 
@@ -89,30 +103,61 @@ public class ControllerSelectionComposite extends Composite {
 		componentText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				startSelection();
+				if (!selectionStarted) {
+					startSelection();
+				}
 			}
 		});
 		componentText.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				stopSelection();
+				if (selectionStarted) {
+					stopSelection();
+				}
 			}
 		});
 	}
 
 	private void startSelection() {
 		if (!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()) {
+			selectionStarted = true;
 			ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
 		}
-		controllerText.setBackground(SWTResourceManager.getColor(SWT.COLOR_YELLOW));
-		componentText.setBackground(SWTResourceManager.getColor(SWT.COLOR_YELLOW));
+		controllerText.setBackground(getTextsBackgroundColor());
+		componentText.setBackground(getTextsBackgroundColor());
+
+		List<Listener> listeners = Arrays.asList(getShell().getListeners(SWT.Traverse));
+		for (Listener listener : listeners) {
+			getShell().removeListener(SWT.Traverse, listener);
+		}
+		getShell().addListener(SWT.Traverse, getListener());
+		for (Listener listener : listeners) {
+			getShell().addListener(SWT.Traverse, listener);
+		}
+	}
+
+	private Listener getListener() {
+		if (this.listener == null) {
+			listener = new Listener() {
+				@Override
+				public void handleEvent(Event event) {
+					if (event.detail == SWT.TRAVERSE_ESCAPE || event.detail == SWT.TRAVERSE_RETURN) {
+						stopSelection();
+						event.doit = false;
+					}
+				}
+			};
+		}
+		return listener;
 	}
 
 	private void stopSelection() {
 		ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
-		controllerText.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		componentText.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		selectionStarted = false;
+		controllerText.setBackground(getTextsBackgroundColor());
+		componentText.setBackground(getTextsBackgroundColor());
 		newSelection(null);
+		getShell().removeListener(SWT.Traverse, getListener());
 	}
 
 	/**
@@ -128,9 +173,29 @@ public class ControllerSelectionComposite extends Composite {
 		this.eComponentQualifier = eComponentQualifier;
 
 		initDataBindingsCustom();
+		
+		if (eComponentQualifier.getEControllerName() != null) {
+			controllerText.setText(eComponentQualifier.getEControllerName());
+		}
+		if (eComponentQualifier.getEComponentName() != null) {
+			controllerText.setText(eComponentQualifier.getEComponentName());
+		}
+		controllerText.setBackground(getTextsBackgroundColor());
+		componentText.setBackground(getTextsBackgroundColor());		
 	}
 
 	protected void newSelection(ISelection selection) {
+	}
+	
+	private Color getTextsBackgroundColor(){
+		if(selectionStarted){
+			return SWTResourceManager.getColor(SWT.COLOR_YELLOW);
+		}
+		if(Activator.getEControllerEnvironment().resolveEComponent(eComponentQualifier) != null){
+			return SWTResourceManager.getColor(SWT.COLOR_GREEN);
+		}else{
+			return SWTResourceManager.getColor(SWT.COLOR_RED);
+		}
 	}
 
 	@SuppressWarnings("unchecked")
@@ -140,9 +205,10 @@ public class ControllerSelectionComposite extends Composite {
 		IObservableValue<?> observeEComponentQualifierControllerName = EMFProperties
 				.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME)
 				.observe(eComponentQualifier);
-		IObservableValue<?> observeControllerText = WidgetProperties.text().observe(controllerText);
+		IObservableValue<?> observeControllerTextText = WidgetProperties.text().observe(controllerText);
+		IObservableValue<?> observeControllerTextBackground = WidgetProperties.background().observe(controllerText);
 
-		m_bindingContext.bindValue(observeControllerText, observeEComponentQualifierControllerName, null,
+		m_bindingContext.bindValue(observeControllerTextText, observeEComponentQualifierControllerName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, String.class) {
 
 					@Override
@@ -151,14 +217,22 @@ public class ControllerSelectionComposite extends Composite {
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-		if (eComponentQualifier.getEControllerName() != null) {
-			controllerText.setText(eComponentQualifier.getEControllerName());
-		}
+		m_bindingContext.bindValue(observeControllerTextBackground, observeEComponentQualifierControllerName, null,
+				new UpdateValueStrategy().setConverter(new Converter(String.class, Color.class) {
+					
+					@Override
+					public Object convert(Object fromObject) {
+						return getTextsBackgroundColor();
+					}
+				}));
+	
 		IObservableValue<?> observeEComponentQualifierComponentName = EMFProperties
 				.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME)
 				.observe(eComponentQualifier);
-		IObservableValue<?> observeComponentText = WidgetProperties.text().observe(componentText);
-		m_bindingContext.bindValue(observeComponentText, observeEComponentQualifierComponentName, null,
+		IObservableValue<?> observeComponentTextText = WidgetProperties.text().observe(componentText);
+		IObservableValue<?> observeComponentTextBackground = WidgetProperties.background().observe(controllerText);
+		
+		m_bindingContext.bindValue(observeComponentTextText, observeEComponentQualifierComponentName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, String.class) {
 
 					@Override
@@ -167,9 +241,15 @@ public class ControllerSelectionComposite extends Composite {
 						return fromObject == null ? CLICK_PROMPT : fromObject;
 					}
 				}));
-		if (eComponentQualifier.getEComponentName() != null) {
-			controllerText.setText(eComponentQualifier.getEComponentName());
-		}
+		m_bindingContext.bindValue(observeComponentTextBackground, observeEComponentQualifierComponentName, null,
+				new UpdateValueStrategy().setConverter(new Converter(String.class, Color.class) {
+					
+					@Override
+					public Object convert(Object fromObject) {
+						return getTextsBackgroundColor();
+					}
+				}));
+		
 		return m_bindingContext;
 	}
 
