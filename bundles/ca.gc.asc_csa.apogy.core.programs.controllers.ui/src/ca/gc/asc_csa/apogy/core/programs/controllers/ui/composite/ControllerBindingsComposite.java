@@ -31,20 +31,18 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MessageBox;
@@ -100,10 +98,6 @@ public class ControllerBindingsComposite extends Composite {
 		});
 		setLayout(new GridLayout(2, false));
 		
-		TEMPCREATECHILDREN();
-	}
-	
-	private void TEMPCREATECHILDREN(){
 		treeViewer = new TreeViewer(this, SWT.BORDER | SWT.FULL_SELECTION);
 		Tree tree = treeViewer.getTree();
 		tree.setHeaderVisible(true);
@@ -164,6 +158,7 @@ public class ControllerBindingsComposite extends Composite {
 						ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(controllersConfiguration,
 								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
 								getControllerBinding());
+						treeViewer.setSelection(new StructuredSelection(getControllerBinding()));
 						return true;
 					}
 				};
@@ -193,25 +188,11 @@ public class ControllerBindingsComposite extends Composite {
 				dialog.open();
 			}});
 		
-		Button resetButton = new Button(this, SWT.None);
-		resetButton.setText("Magic dev button");
-		resetButton.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				for(Control control : ControllerBindingsComposite.this.getChildren()){
-					control.dispose();
-				}
-				TEMPCREATECHILDREN();
-			
-				layout();
-				setControllersConfiguration(controllersConfiguration);
-			}
-		});
-		
 		treeViewer.addSelectionChangedListener(getTreeViewerSelectionChangedListener());
 		
 		m_bindingContext = initDataBindings();
 	}
+
 	
 	
 	

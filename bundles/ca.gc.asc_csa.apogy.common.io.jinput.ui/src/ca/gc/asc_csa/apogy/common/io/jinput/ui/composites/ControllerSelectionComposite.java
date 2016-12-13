@@ -38,6 +38,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.SWTResourceManager;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
@@ -54,6 +55,8 @@ public class ControllerSelectionComposite extends Composite {
 	private Listener listener;
 
 	private EComponentQualifier eComponentQualifier;
+	private String initialControllerName;
+	private String initialComponentName;
 
 	private DataBindingContext m_bindingContext;
 
@@ -118,9 +121,13 @@ public class ControllerSelectionComposite extends Composite {
 		});
 	}
 
-	private void startSelection() {
+	private void startSelection() {		
 		if (!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()) {
 			selectionStarted = true;
+			if(eComponentQualifier != null){
+				initialControllerName = eComponentQualifier.getEControllerName();
+				initialComponentName = eComponentQualifier.getEComponentName();
+			}
 			ApogyCommonIOJInputFacade.INSTANCE.startSelectComponent(eComponentQualifier);
 		}
 		controllerText.setBackground(getTextsBackgroundColor());
@@ -143,6 +150,10 @@ public class ControllerSelectionComposite extends Composite {
 				public void handleEvent(Event event) {
 					if (event.detail == SWT.TRAVERSE_ESCAPE || event.detail == SWT.TRAVERSE_RETURN) {
 						stopSelection();
+						if(event.detail == SWT.TRAVERSE_ESCAPE && eComponentQualifier != null){
+							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, initialControllerName);
+							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, initialComponentName);
+						}
 						event.doit = false;
 					}
 				}

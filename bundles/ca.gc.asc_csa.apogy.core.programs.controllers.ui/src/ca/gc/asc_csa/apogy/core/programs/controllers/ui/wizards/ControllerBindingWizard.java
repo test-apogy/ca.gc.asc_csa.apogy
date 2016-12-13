@@ -20,12 +20,16 @@ import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -59,6 +63,23 @@ public class ControllerBindingWizard extends Wizard {
 		setDefaultPageImageDescriptor(image);
 		this.controllersConfiguration = controllersConfiguration;
 	}
+	
+	@Override
+	public void createPageControls(Composite pageContainer) {
+		super.createPageControls(pageContainer);
+		
+		getShell().addListener(SWT.Traverse,  new Listener() {
+			@Override
+			public void handleEvent(Event event) {
+				if (event.detail == SWT.TRAVERSE_ESCAPE) {
+					if (event.doit) {
+						performCancel();
+						event.doit = false;
+					}
+				}
+			}
+		});
+	}
 
 	/**
 	 * Add the page to the wizard.
@@ -71,16 +92,12 @@ public class ControllerBindingWizard extends Wizard {
 	}
 	
 	@Override
-	public boolean canFinish() {
-		return true;
-	}
-	
-	@Override
 	public IWizardPage getNextPage(IWizardPage page) {	
 		if (page == getOperationCallControllerBindingDetailsWizardPage()) {
 			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
 				if (!Arrays.asList(getPages()).contains(getBindedEDataTypeArgumentsWizardPage())) {
 					addPage(getBindedEDataTypeArgumentsWizardPage());
+					System.out.println(getBindedEDataTypeArgumentsWizardPage().isPageComplete());
 				} else {				
 					return getBindedEDataTypeArgumentsWizardPage();
 				}
@@ -169,22 +186,56 @@ public class ControllerBindingWizard extends Wizard {
 					getControllersConfiguration(),
 					getControllerBinding(), 
 					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
-			
-			getShell().addListener(SWT.Traverse, new Listener() {
-				@Override
-				public void handleEvent(Event event) {
-					if (event.detail == SWT.TRAVERSE_ESCAPE) {
-						if(event.doit){
-							// TODO warning dialog
-							event.doit = false;
-						}	
-					}
-				}
-			});
 		}
 
 		return controllerBinding;
 	}
+	
+	@Override
+	public boolean performCancel() {
+		String[] buttons = { "Yes", "No" };
+		CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
+				"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
+				MessageDialog.QUESTION, buttons, 0);
+		dialog.open();
+		return dialog.getCancel();
+	}
+	
+	private class CloseOnCancelDialog extends MessageDialog{
+
+		private boolean cancel = true;
+		
+		public CloseOnCancelDialog(Shell parentShell, String dialogTitle, Image dialogTitleImage, String dialogMessage,
+				int dialogImageType, String[] dialogButtonLabels, int defaultIndex) {
+			super(parentShell, dialogTitle, dialogTitleImage, dialogMessage, dialogImageType, dialogButtonLabels, defaultIndex);
+		}
+	
+		@Override
+		protected void buttonPressed(int buttonId) {
+			if(buttonId == 1){
+				cancel = false;
+			}
+			this.close();
+			switch (buttonId) {
+			case 0:
+				ControllerBindingWizard.this.getShell().setVisible(false);
+				ControllerBindingWizard.this.dispose();
+				this.close();
+				break;
+			case 1:
+				cancel = false;
+				this.cancelPressed();
+				break;
+			default:
+				break;
+			}
+		}
+		public boolean getCancel(){
+			return cancel;
+		}
+		
+	}
+	
 	
 	/**
 	 * Returns the {@link ControllersConfiguration}.
