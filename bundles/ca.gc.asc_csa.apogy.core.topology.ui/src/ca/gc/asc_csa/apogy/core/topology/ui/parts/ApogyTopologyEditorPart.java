@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
-public abstract class ApogyTopologyEditorPart extends AbstractApogyTopologyBasedPart {
+public class ApogyTopologyEditorPart extends AbstractApogyTopologyBasedPart {
 
 	@Override
 	protected void setNullSelection() {

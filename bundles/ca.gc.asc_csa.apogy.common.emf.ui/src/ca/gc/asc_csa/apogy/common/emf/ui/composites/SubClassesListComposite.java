@@ -13,6 +13,9 @@ package ca.gc.asc_csa.apogy.common.emf.ui.composites;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Comparator;
+import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EClass;
@@ -123,7 +126,14 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		@Override
 		public Object[] getElements(Object inputElement) {
 			if (eClass != null) {
-				return ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(eClass).toArray();
+				List<EClass> subClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(eClass);
+				subClasses.sort(new Comparator<EClass>() {
+					@Override
+					public int compare(EClass arg0, EClass arg1) {
+						return String.CASE_INSENSITIVE_ORDER.compare(arg0.getName(), arg1.getName());
+					}
+				});
+				return subClasses.toArray();
 			}
 			Object[] objects = new Object[0];
 			return objects;
