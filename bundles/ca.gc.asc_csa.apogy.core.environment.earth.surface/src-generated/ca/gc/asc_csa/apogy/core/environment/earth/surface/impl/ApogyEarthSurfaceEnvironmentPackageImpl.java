@@ -13,12 +13,20 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.impl;
 
+import javax.vecmath.Point3d;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
-
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
@@ -30,19 +38,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
-
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import javax.vecmath.Point3d;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -312,7 +308,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(0);
 	}
 
@@ -321,7 +317,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(1);
 	}
 
@@ -330,7 +326,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(2);
 	}
 
@@ -339,7 +335,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(3);
 	}
 
@@ -348,8 +344,26 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateApogySession() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode() {
+		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateApogySession() {
+		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -687,6 +701,8 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		earthSkyNodeEClass = createEClass(EARTH_SKY_NODE);
 
 		apogyEarthSurfaceEnvironmentFacadeEClass = createEClass(APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE);
+		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES);
+		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
@@ -797,6 +813,12 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		initEClass(earthSkyNodeEClass, EarthSkyNode.class, "EarthSkyNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(apogyEarthSurfaceEnvironmentFacadeEClass, ApogyEarthSurfaceEnvironmentFacade.class, "ApogyEarthSurfaceEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates(), this.getEarthSky(), "createEarthSky", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "gsiteGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates(), this.getEarthSkyNode(), "createEarthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "gsiteGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), this.getEarthSurfaceWorksite(), "createAndInitializeDefaultCSAWorksite", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1048,6 +1070,18 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nFacade\n\n-------------------------------------------------------------------------"
+		   });	
+		addAnnotation
+		  (getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates an EarthSky"
+		   });	
+		addAnnotation
+		  (getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates an EarthSkyNode"
 		   });	
 		addAnnotation
 		  (getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), 

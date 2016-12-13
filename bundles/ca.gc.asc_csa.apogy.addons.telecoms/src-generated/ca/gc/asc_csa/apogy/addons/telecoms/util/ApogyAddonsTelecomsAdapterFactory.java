@@ -19,7 +19,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.addons.AbstractTool;
 import ca.gc.asc_csa.apogy.addons.SimpleTool;
-import ca.gc.asc_csa.apogy.addons.telecoms.*;
 import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.DipoleAntennaRadiationPattern;
@@ -35,6 +34,12 @@ import ca.gc.asc_csa.apogy.addons.telecoms.URlBasedAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,27 +162,27 @@ public class ApogyAddonsTelecomsAdapterFactory extends AdapterFactoryImpl {
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter caseAbstractMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayer object) {
+			public Adapter caseAbstractMapLayer(AbstractMapLayer object) {
 				return createAbstractMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseRectangularRegionProvider(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider object) {
+			public Adapter caseRectangularRegionProvider(RectangularRegionProvider object) {
 				return createRectangularRegionProviderAdapter();
 			}
 			@Override
-			public Adapter caseRectangularRegionImage(ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionImage object) {
+			public Adapter caseRectangularRegionImage(RectangularRegionImage object) {
 				return createRectangularRegionImageAdapter();
 			}
 			@Override
-			public Adapter caseImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer object) {
+			public Adapter caseImageMapLayer(ImageMapLayer object) {
 				return createImageMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseCartesianTriangularMeshDerivedImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshDerivedImageMapLayer object) {
+			public Adapter caseCartesianTriangularMeshDerivedImageMapLayer(CartesianTriangularMeshDerivedImageMapLayer object) {
 				return createCartesianTriangularMeshDerivedImageMapLayerAdapter();
 			}
 			@Override
-			public Adapter caseLineOfSightImageMapLayer(ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer object) {
+			public Adapter caseLineOfSightImageMapLayer(LineOfSightImageMapLayer object) {
 				return createLineOfSightImageMapLayerAdapter();
 			}
 			@Override

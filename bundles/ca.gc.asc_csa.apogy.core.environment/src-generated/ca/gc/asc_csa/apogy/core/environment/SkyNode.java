@@ -34,6 +34,7 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 public interface SkyNode extends GroupNode {
 	/**
 	 * Returns the value of the '<em><b>Sky</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode <em>Sky Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sky</em>' reference isn't clear,
@@ -43,7 +44,8 @@ public interface SkyNode extends GroupNode {
 	 * @return the value of the '<em>Sky</em>' reference.
 	 * @see #setSky(Sky)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSkyNode_Sky()
-	 * @model transient="true"
+	 * @see ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode
+	 * @model opposite="skyNode" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */

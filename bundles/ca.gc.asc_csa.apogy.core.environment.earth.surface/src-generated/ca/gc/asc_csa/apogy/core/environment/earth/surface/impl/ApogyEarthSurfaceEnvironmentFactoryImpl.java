@@ -19,12 +19,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.*;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 
 /**
  * <!-- begin-user-doc -->

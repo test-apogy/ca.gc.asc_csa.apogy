@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.addons.telecoms;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer;
 import javax.vecmath.Color3f;
 
 /**
@@ -33,7 +34,7 @@ import javax.vecmath.Color3f;
  * @model
  * @generated
  */
-public interface AntennaRadiationPatternImageMapLayer extends ca.gc.asc_csa.apogy.core.environment.surface.LineOfSightImageMapLayer {
+public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMapLayer {
 	/**
 	 * Returns the value of the '<em><b>Antenna Radiation Pattern</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

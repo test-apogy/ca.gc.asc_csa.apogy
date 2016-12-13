@@ -186,7 +186,7 @@ class Sky extends Timed
 	
 	
 	@GenModel(children="true", notify="true", property="None")
-	refers derived transient readonly SkyNode[1] skyNode
+	refers transient SkyNode skyNode opposite sky
 	
 	/*
 	 * Returns the Sun angular diameter, in radians.
@@ -328,8 +328,24 @@ class ApogyCoreEnvironmentFacade
 	 */
 	op SortedSet<Star> sortByMagnitude(List<Star> stars)
 	
+	/**
+	 * Creates and initialize a Sky. This includes creating and initializing the associated SkyNode.
+	 * @return An initialized Sky.
+	 */
+	op Sky createSky()
+	
+	/**
+	 * Creates and initialize a SkyNode.
+	 * @return An initialized SkyNode.
+	 */
+	op SkyNode createSkyNode()
 		
-	op void initializeSkyNode(Sky sky, SkyNode skyNode)
+	/**
+	 * Initialize an existing SkyNode.
+	 */
+	op void initializeSkyNode(SkyNode skyNode)
+		
+	// op void initializeSkyNode(Sky sky, SkyNode skyNode)
 	
 				
 	op Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
@@ -390,7 +406,7 @@ class WorksiteNode extends AggregateGroupNode
 class SkyNode extends GroupNode
 {	
  	@GenModel(property="None")
-	refers transient Sky sky
+	refers transient Sky sky opposite skyNode
 } 
 
 

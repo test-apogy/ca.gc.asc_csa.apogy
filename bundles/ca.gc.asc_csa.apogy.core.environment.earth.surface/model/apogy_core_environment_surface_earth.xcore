@@ -157,6 +157,17 @@ class EarthSkyNode extends SkyNode
  
 class ApogyEarthSurfaceEnvironmentFacade
 {
+	
+	/**
+	 * Creates an EarthSky
+	 */
+	op EarthSky createEarthSky(GeographicCoordinates gsiteGeographicCoordinates)
+	
+	/**
+	 * Creates an EarthSkyNode
+	 */
+	op EarthSkyNode createEarthSkyNode(GeographicCoordinates gsiteGeographicCoordinates)
+			
 	/*
 	 * Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates.
 	 */

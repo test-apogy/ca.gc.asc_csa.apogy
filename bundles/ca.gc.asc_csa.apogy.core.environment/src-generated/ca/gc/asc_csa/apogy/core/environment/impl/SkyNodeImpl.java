@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.environment.impl;
  */
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -101,18 +102,70 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSky(Sky newSky, NotificationChain msgs) {
+		Sky oldSky = sky;
+		sky = newSky;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, oldSky, newSky);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
   public void setSky(Sky newSky)
   {
-		Sky oldSky = sky;
-		sky = newSky;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
+		if (newSky != sky) {
+			NotificationChain msgs = null;
+			if (sky != null)
+				msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, Sky.class, msgs);
+			if (newSky != null)
+				msgs = ((InternalEObject)newSky).eInverseAdd(this, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, Sky.class, msgs);
+			msgs = basicSetSky(newSky, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, newSky, newSky));
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
+				if (sky != null)
+					msgs = ((InternalEObject)sky).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, Sky.class, msgs);
+				return basicSetSky((Sky)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.SKY_NODE__SKY:
+				return basicSetSky(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

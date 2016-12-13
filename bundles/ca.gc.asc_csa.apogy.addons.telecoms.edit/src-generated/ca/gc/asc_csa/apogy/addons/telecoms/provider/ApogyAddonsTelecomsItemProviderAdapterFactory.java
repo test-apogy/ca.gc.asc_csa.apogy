@@ -55,6 +55,7 @@ import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.Map;
 import ca.gc.asc_csa.apogy.core.environment.surface.util.ApogySurfaceEnvironmentSwitch;
 import ca.gc.asc_csa.apogy.core.util.ApogyCoreSwitch;
 
@@ -846,7 +847,7 @@ public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTe
 			 * @generated
 			 */
 			@Override
-			public Object caseMap(ca.gc.asc_csa.apogy.core.environment.surface.Map object) {
+			public Object caseMap(Map object) {
 				newChildDescriptors.add
 					(createChildParameter
 						(ApogySurfaceEnvironmentPackage.Literals.MAP__LAYERS,
@@ -854,7 +855,6 @@ public class ApogyAddonsTelecomsItemProviderAdapterFactory extends ApogyAddonsTe
 
 				return null;
 			}
- 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

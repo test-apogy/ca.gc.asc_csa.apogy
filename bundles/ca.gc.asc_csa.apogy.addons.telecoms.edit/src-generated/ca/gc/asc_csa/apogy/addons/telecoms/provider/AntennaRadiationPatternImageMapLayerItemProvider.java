@@ -28,6 +28,7 @@ import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsFactory;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.provider.LineOfSightImageMapLayerItemProvider;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer} object.
@@ -35,7 +36,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPacka
  * <!-- end-user-doc -->
  * @generated
  */
-public class AntennaRadiationPatternImageMapLayerItemProvider extends ca.gc.asc_csa.apogy.core.environment.surface.provider.LineOfSightImageMapLayerItemProvider {
+public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSightImageMapLayerItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -112,7 +112,8 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 	}
 
 	@Override
-	public void setSky(Sky newSky) {
+	public void setSky(Sky newSky) 
+	{
 		// TODO Do this in a Transaction.
 
 		// Removes topology from previous Sky if applicable.
@@ -127,9 +128,16 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		super.setSky(newSky);
 
 		// Adds topology from new Sky Sky if applicable.
-		if (newSky != null) {
-			if (this.getWorksiteNode() instanceof WorksiteNode) {
+		if (newSky != null) 
+		{
+			if (this.getWorksiteNode() instanceof WorksiteNode) 
+			{
 				WorksiteNode worksiteNode = (WorksiteNode) this.getWorksiteNode();
+				
+				System.out.println("SurfaceWorksiteImpl.setSky() worksiteNode : " + worksiteNode);
+				System.out.println("SurfaceWorksiteImpl.setSky() newSky : " + newSky);
+				System.out.println("SurfaceWorksiteImpl.setSky() newSky.getSkyNode() : " + newSky.getSkyNode());
+				
 				worksiteNode.getChildren().add(newSky.getSkyNode());
 			}
 		}

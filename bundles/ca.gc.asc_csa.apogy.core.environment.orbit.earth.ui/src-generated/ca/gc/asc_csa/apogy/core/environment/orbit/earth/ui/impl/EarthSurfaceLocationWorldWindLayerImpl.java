@@ -64,7 +64,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * @generated
 	 * @ordered
 	 */
-	protected ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation earthSurfaceLocation;
+	protected EarthSurfaceLocation earthSurfaceLocation;
 
 	/**
 	 * The default value of the '{@link #getTargetRadius() <em>Target Radius</em>}' attribute.
@@ -109,10 +109,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation getEarthSurfaceLocation() {
+	public EarthSurfaceLocation getEarthSurfaceLocation() {
 		if (earthSurfaceLocation != null && earthSurfaceLocation.eIsProxy()) {
 			InternalEObject oldEarthSurfaceLocation = (InternalEObject)earthSurfaceLocation;
-			earthSurfaceLocation = (ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)eResolveProxy(oldEarthSurfaceLocation);
+			earthSurfaceLocation = (EarthSurfaceLocation)eResolveProxy(oldEarthSurfaceLocation);
 			if (earthSurfaceLocation != oldEarthSurfaceLocation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
@@ -126,7 +126,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation basicGetEarthSurfaceLocation() {
+	public EarthSurfaceLocation basicGetEarthSurfaceLocation() {
 		return earthSurfaceLocation;
 	}
 
@@ -219,7 +219,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
-				setEarthSurfaceLocation((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)newValue);
+				setEarthSurfaceLocation((EarthSurfaceLocation)newValue);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius((Double)newValue);
@@ -237,7 +237,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
-				setEarthSurfaceLocation((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)null);
+				setEarthSurfaceLocation((EarthSurfaceLocation)null);
 				return;
 			case ApogyCoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius(TARGET_RADIUS_EDEFAULT);

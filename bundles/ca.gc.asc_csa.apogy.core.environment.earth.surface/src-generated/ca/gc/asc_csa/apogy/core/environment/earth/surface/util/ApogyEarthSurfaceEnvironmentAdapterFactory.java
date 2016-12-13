@@ -13,30 +13,32 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.util;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Timed;
-
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
-
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.*;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.AtmosphereUtils;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode;
-
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notifier;
-
-import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

@@ -29,5 +29,6 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.processors;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.topology.bindings;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
- ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0"
+ ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
+ org.gavaghan.geodesy.core;bundle-version="1.1.1"
 Bundle-ActivationPolicy: lazy

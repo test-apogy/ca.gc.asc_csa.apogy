@@ -39,7 +39,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
-import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
@@ -53,8 +53,8 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFacto
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.Map;
+import ca.gc.asc_csa.apogy.core.environment.surface.MapsList;
 import ca.gc.asc_csa.apogy.core.environment.surface.URLImageMapLayer;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
@@ -101,6 +101,61 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public EarthSky createEarthSky(GeographicCoordinates siteGeographicCoordinates) 
+	{
+		EarthSky earthSky = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSky();
+		earthSky.setTime(new Date());
+		
+		EarthSkyNode earthSkyNode = createEarthSkyNode(siteGeographicCoordinates);		
+		earthSky.setSkyNode(earthSkyNode);
+		
+		initializeEarthSkyNode(earthSky, earthSkyNode);		
+		return earthSky;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EarthSkyNode createEarthSkyNode(GeographicCoordinates siteGeographicCoordinates) 
+	{
+		Date now = new Date();
+		
+		EarthSkyNode earthSkyNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSkyNode();
+		
+		// Initialize the generic Sky.
+		ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(earthSkyNode);
+		
+		// Initialize EarthSky specifics.
+		// Creates the Moon.
+		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
+		moon.setDescription("The Moon.");
+		moon.setNodeId("MOON");
+		
+		// Creates the Moon transform that attaches it to the sky.				
+		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, siteGeographicCoordinates.getLongitude(), siteGeographicCoordinates.getLatitude());		
+		
+		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
+		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
+		moonTransformNode.setDescription("Transform attaching the Moon to the Sky.");	
+		moonTransformNode.setNodeId("MOON_TRANSFORM");
+		
+		// Attaches the Moon to the sky.
+		earthSkyNode.getChildren().add(moonTransformNode);						
+		moonTransformNode.getChildren().add(moon);	
+		
+		earthSkyNode.setDescription("Earth's Sky.");
+		earthSkyNode.setNodeId("SKY");
+				
+		return earthSkyNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public EarthSurfaceWorksite createAndInitializeDefaultCSAWorksite() 
 	{
 		Date now = new Date();
@@ -114,22 +169,31 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		worksite.setGeographicalCoordinates(getMarsYardGeographicalCoordinates());
 		worksite.setXAxisAzimuth(Math.toRadians(179.4));
 		
-		// Creates and initialise the Earth Sky.
-		EarthSky earthSky = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSky();
-		worksite.setSky(earthSky);
+		// Creates the Earth Sky.
+		EarthSky earthSky = createEarthSky(worksite.getGeographicalCoordinates());
+		
+		// Sets the worksite sky.
+		// worksite.setSky(earthSky);
 		
 		// Create and initialise the EarthSkyNode.
-		EarthSkyNode earthSkyNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSkyNode();		
-		initializeEarthSkyNode(earthSky, earthSkyNode);
+		EarthSkyNode earthSkyNode = createEarthSkyNode(worksite.getGeographicalCoordinates());					
+		earthSky.setSkyNode(earthSkyNode);
+		worksite.setSky(earthSky);	
 		
+		//initializeEarthSkyNode(earthSky, earthSkyNode);
+				
 		// Attaches the sky to the worksite.
 		// worksite.setEarthSky(earthSky);
 				
 		// Sets time stamp.		
 		worksite.getEarthSky().setTime(now);	
 		
+		// Initialize the map lists.
+		MapsList mapList = ApogySurfaceEnvironmentFactory.eINSTANCE.createMapsList();
+		worksite.setMapsList(mapList);
+		
 		// Attaches a Map
-		Map map = getDefaultMarsTerrainMap();
+		Map map = getDefaultMarsTerrainMap();						
 		worksite.getMapsList().getMaps().add(map);			
 		
 		return worksite;
@@ -142,42 +206,42 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode) 
 	{
-	  	// Initialize the Sun and Stars.
-		ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(earthSky, earthSkyNode);						
-		
-	  	Date now = new Date();
-		if(earthSky.getTime() != null)
-		{
-			now = earthSky.getTime();
-		}
-		
-		// Gets the Geographic Coordinates of the Worksite
-		EarthSurfaceWorksite worksite =  (EarthSurfaceWorksite) earthSky.getWorksite();
-		GeographicCoordinates coord = worksite.getGeographicalCoordinates();
-		
-		// Creates the Moon.
-		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
-		moon.setDescription("The Moon.");
-		moon.setNodeId("MOON");
-		
-		// Creates the Moon transform that attaches it to the sky.		
-		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, coord.getLongitude(), coord.getLatitude());		
-		
-		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
-		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
-		moonTransformNode.setDescription("Transform attaching the Moon to the Sky.");	
-		moonTransformNode.setNodeId("MOON_TRANSFORM");
-		
-		// Attaches the Moon to the sky.
-		earthSky.getSkyNode().getChildren().add(moonTransformNode);				
-		moonTransformNode.setParent(earthSky.getSkyNode()); // Should not have to this this explicitly.
-		
-		moonTransformNode.getChildren().add(moon);	
-		
-		earthSky.getSkyNode().setDescription("Earth's Sky.");
-		earthSky.getSkyNode().setNodeId("SKY");
-		
-		earthSky.setTime(now);
+//	  	// Initialize the Sun and Stars.
+//		ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(earthSkyNode);						
+//		
+//	  	Date now = new Date();
+//		if(earthSky.getTime() != null)
+//		{
+//			now = earthSky.getTime();
+//		}
+//		
+//		// Gets the Geographic Coordinates of the Worksite
+//		EarthSurfaceWorksite worksite =  (EarthSurfaceWorksite) earthSky.getWorksite();
+//		GeographicCoordinates coord = worksite.getGeographicalCoordinates();
+//		
+//		// Creates the Moon.
+//		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
+//		moon.setDescription("The Moon.");
+//		moon.setNodeId("MOON");
+//		
+//		// Creates the Moon transform that attaches it to the sky.		
+//		System.out.println("COORD : " + coord);
+//		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, coord.getLongitude(), coord.getLatitude());		
+//		
+//		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
+//		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
+//		moonTransformNode.setDescription("Transform attaching the Moon to the Sky.");	
+//		moonTransformNode.setNodeId("MOON_TRANSFORM");
+//		
+//		// Attaches the Moon to the sky.
+//		earthSkyNode.getChildren().add(moonTransformNode);				
+//		moonTransformNode.setParent(earthSky.getSkyNode()); // Should not have to this this explicitly.		
+//		moonTransformNode.getChildren().add(moon);	
+//		
+//		earthSkyNode.setDescription("Earth's Sky.");
+//		earthSkyNode.setNodeId("SKY");
+//		
+//		earthSky.setTime(now);
 	}
 
 	/**
@@ -187,12 +251,7 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public GeographicCoordinates getMarsYardGeographicalCoordinates() 
 	{
-		GeographicCoordinates coordinates = ApogyEarthEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
-		
-		coordinates.setElevation(30.0);
-		coordinates.setLongitude(Math.toRadians(-73.393904468182));
-		coordinates.setLatitude(Math.toRadians(45.518206644445));
-		
+		GeographicCoordinates coordinates = ApogyEarthFacade.INSTANCE.createGeographicCoordinates(Math.toRadians(-73.393904468182), Math.toRadians(45.518206644445), 30.0);
 		return coordinates;
 	}
 
@@ -218,10 +277,8 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 */
 	public InvocatorSession createApogySession() 
 	{	
-		InvocatorSession session = ApogyCoreInvocatorFactory.eINSTANCE.createInvocatorSession();
-		
-		ApogyEnvironment environment = ApogyCoreEnvironmentFactory.eINSTANCE.createApogyEnvironment();
-		session.setEnvironment(environment);
+		InvocatorSession session = ApogyCoreEnvironmentFacade.INSTANCE.createApogySession(true, true, true, true);
+		ApogyEnvironment environment = (ApogyEnvironment) session.getEnvironment();
 		
 		CurrentTimeSource currentTimeSource = ApogyCommonEMFFactory.eINSTANCE.createCurrentTimeSource();
 		environment.getTimeSourcesList().getTimeSources().add(currentTimeSource);
@@ -293,6 +350,10 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES:
+				return createEarthSky((GeographicCoordinates)arguments.get(0));
+			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES:
+				return createEarthSkyNode((GeographicCoordinates)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:

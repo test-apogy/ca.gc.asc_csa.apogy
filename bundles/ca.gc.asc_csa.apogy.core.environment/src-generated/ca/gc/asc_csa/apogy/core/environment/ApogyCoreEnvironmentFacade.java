@@ -89,13 +89,43 @@ public interface ApogyCoreEnvironmentFacade extends EObject
 
 		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @model skyUnique="false" skyNodeUnique="false"
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates and initialize a Sky. This includes creating and initializing the associated SkyNode.
+	 * @return An initialized Sky.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
 	 * @generated
 	 */
-  void initializeSkyNode(Sky sky, SkyNode skyNode);
+	Sky createSky();
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates and initialize a SkyNode.
+	 * @return An initialized SkyNode.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 * @generated
+	 */
+	SkyNode createSkyNode();
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Initialize an existing SkyNode.
+	 * <!-- end-model-doc -->
+	 * @model skyNodeUnique="false"
+	 * @generated
+	 */
+	void initializeSkyNode(SkyNode skyNode);
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->

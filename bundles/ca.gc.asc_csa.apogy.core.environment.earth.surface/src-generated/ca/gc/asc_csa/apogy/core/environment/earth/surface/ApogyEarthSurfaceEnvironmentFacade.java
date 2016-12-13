@@ -40,6 +40,30 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
  */
 public interface ApogyEarthSurfaceEnvironmentFacade extends EObject 
 {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates an EarthSky
+	 * <!-- end-model-doc -->
+	 * @model unique="false" gsiteGeographicCoordinatesUnique="false"
+	 * @generated
+	 */
+	EarthSky createEarthSky(GeographicCoordinates gsiteGeographicCoordinates);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates an EarthSkyNode
+	 * <!-- end-model-doc -->
+	 * @model unique="false" gsiteGeographicCoordinatesUnique="false"
+	 * @generated
+	 */
+	EarthSkyNode createEarthSkyNode(GeographicCoordinates gsiteGeographicCoordinates);
+
 	public static ApogyEarthSurfaceEnvironmentFacade INSTANCE = ApogyEarthSurfaceEnvironmentFacadeImpl.getInstance();
 
 	

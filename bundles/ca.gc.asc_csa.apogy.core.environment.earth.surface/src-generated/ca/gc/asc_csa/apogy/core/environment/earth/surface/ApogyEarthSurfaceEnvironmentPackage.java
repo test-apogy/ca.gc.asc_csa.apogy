@@ -13,16 +13,15 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface;
 
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -552,13 +551,31 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>Create Earth Sky</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES = 0;
+
+	/**
+	 * The operation id for the '<em>Create Earth Sky Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES = 1;
+
+	/**
 	 * The operation id for the '<em>Create And Initialize Default CSA Worksite</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 0;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 2;
 
 	/**
 	 * The operation id for the '<em>Initialize Earth Sky Node</em>' operation.
@@ -567,7 +584,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 1;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 3;
 
 	/**
 	 * The operation id for the '<em>Get Mars Yard Geographical Coordinates</em>' operation.
@@ -576,7 +593,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 2;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 4;
 
 	/**
 	 * The operation id for the '<em>Get Mars Yard Transform Node</em>' operation.
@@ -585,7 +602,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 3;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 5;
 
 	/**
 	 * The operation id for the '<em>Create Apogy Session</em>' operation.
@@ -594,7 +611,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 4;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 6;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -603,7 +620,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 5;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.AtmosphereUtilsImpl <em>Atmosphere Utils</em>}' class.
@@ -1089,6 +1106,26 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getApogyEarthSurfaceEnvironmentFacade();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSky(ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates) <em>Create Earth Sky</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Earth Sky</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSky(ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates)
+	 * @generated
+	 */
+	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates) <em>Create Earth Sky Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Earth Sky Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates)
+	 * @generated
+	 */
+	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
@@ -1613,6 +1650,22 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Earth Sky</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Earth Sky Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create And Initialize Default CSA Worksite</b></em>' operation.

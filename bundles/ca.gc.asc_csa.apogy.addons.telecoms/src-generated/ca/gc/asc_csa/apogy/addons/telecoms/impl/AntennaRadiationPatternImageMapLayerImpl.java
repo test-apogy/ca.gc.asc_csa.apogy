@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import ca.gc.asc_csa.apogy.addons.telecoms.AbstractAntennaRadiationPattern;
 import ca.gc.asc_csa.apogy.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.impl.LineOfSightImageMapLayerImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +45,7 @@ import ca.gc.asc_csa.apogy.addons.telecoms.ApogyAddonsTelecomsPackage;
  *
  * @generated
  */
-public class AntennaRadiationPatternImageMapLayerImpl extends ca.gc.asc_csa.apogy.core.environment.surface.impl.LineOfSightImageMapLayerImpl implements AntennaRadiationPatternImageMapLayer 
+public class AntennaRadiationPatternImageMapLayerImpl extends LineOfSightImageMapLayerImpl implements AntennaRadiationPatternImageMapLayer 
 {	
 	/**
 	 * The cached value of the '{@link #getAntennaRadiationPattern() <em>Antenna Radiation Pattern</em>}' containment reference.

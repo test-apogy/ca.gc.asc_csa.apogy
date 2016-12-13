@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Earth Surface Location World Wind Layer</b></em>'.
@@ -40,12 +42,12 @@ public interface EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLay
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Earth Surface Location</em>' reference.
-	 * @see #setEarthSurfaceLocation(ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)
+	 * @see #setEarthSurfaceLocation(EarthSurfaceLocation)
 	 * @see ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.ApogyCoreEnvironmentOrbitEarthUIPackage#getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation()
 	 * @model
 	 * @generated
 	 */
-	ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation getEarthSurfaceLocation();
+	EarthSurfaceLocation getEarthSurfaceLocation();
 
 	/**
 	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getEarthSurfaceLocation <em>Earth Surface Location</em>}' reference.
@@ -55,7 +57,7 @@ public interface EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLay
 	 * @see #getEarthSurfaceLocation()
 	 * @generated
 	 */
-	void setEarthSurfaceLocation(ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation value);
+	void setEarthSurfaceLocation(EarthSurfaceLocation value);
 
 	/**
 	 * Returns the value of the '<em><b>Target Radius</b></em>' attribute.

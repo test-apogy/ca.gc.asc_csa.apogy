@@ -33,16 +33,12 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.Activator;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
-import ca.gc.asc_csa.apogy.core.environment.SkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl;
 
@@ -289,16 +285,6 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 	}
 
 	@Override
-	public SkyNode getSkyNode() {
-		if (skyNode == null || !(skyNode instanceof EarthSkyNode)) {
-			skyNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSkyNode();
-			ApogyEarthSurfaceEnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);
-		}
-
-		return getSkyNodeGen();
-	}
-
-	@Override
 	public void setTime(Date newTime) {
 		super.setTime(newTime);
 
@@ -311,8 +297,10 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 		}
 	}
 
-	private void updateSky(long newTime) {
-		try {
+	private void updateSky(long newTime) 
+	{
+		try 
+		{
 			Date newDate = new Date(newTime);
 
 			// Gets the Geographical coordinates.

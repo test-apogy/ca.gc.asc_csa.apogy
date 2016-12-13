@@ -13,11 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.impl;
 
+import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.impl.SkyNodeImpl;
-
-import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->

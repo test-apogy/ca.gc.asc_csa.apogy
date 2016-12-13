@@ -46,14 +46,10 @@ import ca.gc.asc_csa.apogy.core.topology.ApogySystemAPIsNode;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogyEnvironment
- * <em>Apogy Environment</em>}</li>
- * <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getWorksiteNode
- * <em>Worksite Node</em>}</li>
- * <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getResultsListNode
- * <em>Results List Node</em>}</li>
- * <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogySystemAPIsNode
- * <em>Apogy System AP Is Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogyEnvironment <em>Apogy Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getWorksiteNode <em>Worksite Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getResultsListNode <em>Results List Node</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.topology.impl.ApogyEnvironmentNodeImpl#getApogySystemAPIsNode <em>Apogy System AP Is Node</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,9 +69,8 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 	private Adapter adapter = null;
 
 	/**
-	 * The cached value of the '{@link #getWorksiteNode() <em>Worksite
-	 * Node</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getWorksiteNode() <em>Worksite Node</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getWorksiteNode()
 	 * @generated
 	 * @ordered
@@ -83,9 +78,8 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 	protected WorksiteNode worksiteNode;
 
 	/**
-	 * The cached value of the '{@link #getResultsListNode() <em>Results List
-	 * Node</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getResultsListNode() <em>Results List Node</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getResultsListNode()
 	 * @generated
 	 * @ordered
@@ -93,10 +87,9 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 	protected ResultsListNode resultsListNode;
 
 	/**
-	 * The cached value of the '{@link #getApogySystemAPIsNode() <em>Apogy
-	 * System AP Is Node</em>}' reference. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getApogySystemAPIsNode() <em>Apogy System AP Is Node</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getApogySystemAPIsNode()
 	 * @generated
 	 * @ordered
@@ -105,7 +98,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ApogyEnvironmentNodeImpl() {
@@ -114,7 +106,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -124,18 +115,15 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ApogyEnvironment getApogyEnvironment() {
 		if (apogyEnvironment != null && apogyEnvironment.eIsProxy()) {
-			InternalEObject oldApogyEnvironment = (InternalEObject) apogyEnvironment;
-			apogyEnvironment = (ApogyEnvironment) eResolveProxy(oldApogyEnvironment);
+			InternalEObject oldApogyEnvironment = (InternalEObject)apogyEnvironment;
+			apogyEnvironment = (ApogyEnvironment)eResolveProxy(oldApogyEnvironment);
 			if (apogyEnvironment != oldApogyEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment,
-							apogyEnvironment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 			}
 		}
 		return apogyEnvironment;
@@ -143,7 +131,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ApogyEnvironment basicGetApogyEnvironment() {
@@ -162,32 +149,26 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setApogyEnvironmentGen(ApogyEnvironment newApogyEnvironment) {
 		ApogyEnvironment oldApogyEnvironment = apogyEnvironment;
 		apogyEnvironment = newApogyEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment,
-					apogyEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT, oldApogyEnvironment, apogyEnvironment));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public WorksiteNode getWorksiteNode() {
 		if (worksiteNode != null && worksiteNode.eIsProxy()) {
-			InternalEObject oldWorksiteNode = (InternalEObject) worksiteNode;
-			worksiteNode = (WorksiteNode) eResolveProxy(oldWorksiteNode);
+			InternalEObject oldWorksiteNode = (InternalEObject)worksiteNode;
+			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode,
-							worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -195,18 +176,15 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public WorksiteNode getWorksiteNodeGen() {
 		if (worksiteNode != null && worksiteNode.eIsProxy()) {
-			InternalEObject oldWorksiteNode = (InternalEObject) worksiteNode;
-			worksiteNode = (WorksiteNode) eResolveProxy(oldWorksiteNode);
+			InternalEObject oldWorksiteNode = (InternalEObject)worksiteNode;
+			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode,
-							worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -214,7 +192,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public WorksiteNode basicGetWorksiteNode() {
@@ -240,15 +217,13 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setWorksiteNodeGen(WorksiteNode newWorksiteNode) {
 		WorksiteNode oldWorksiteNode = worksiteNode;
 		worksiteNode = newWorksiteNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 	}
 
 	/**
@@ -272,18 +247,15 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ResultsListNode getResultsListNodeGen() {
 		if (resultsListNode != null && resultsListNode.eIsProxy()) {
-			InternalEObject oldResultsListNode = (InternalEObject) resultsListNode;
-			resultsListNode = (ResultsListNode) eResolveProxy(oldResultsListNode);
+			InternalEObject oldResultsListNode = (InternalEObject)resultsListNode;
+			resultsListNode = (ResultsListNode)eResolveProxy(oldResultsListNode);
 			if (resultsListNode != oldResultsListNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode,
-							resultsListNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode, resultsListNode));
 			}
 		}
 		return resultsListNode;
@@ -291,7 +263,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ResultsListNode basicGetResultsListNode() {
@@ -320,18 +291,15 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ApogySystemAPIsNode getApogySystemAPIsNodeGen() {
 		if (apogySystemAPIsNode != null && apogySystemAPIsNode.eIsProxy()) {
-			InternalEObject oldApogySystemAPIsNode = (InternalEObject) apogySystemAPIsNode;
-			apogySystemAPIsNode = (ApogySystemAPIsNode) eResolveProxy(oldApogySystemAPIsNode);
+			InternalEObject oldApogySystemAPIsNode = (InternalEObject)apogySystemAPIsNode;
+			apogySystemAPIsNode = (ApogySystemAPIsNode)eResolveProxy(oldApogySystemAPIsNode);
 			if (apogySystemAPIsNode != oldApogySystemAPIsNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE,
-							oldApogySystemAPIsNode, apogySystemAPIsNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE, oldApogySystemAPIsNode, apogySystemAPIsNode));
 			}
 		}
 		return apogySystemAPIsNode;
@@ -339,7 +307,6 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ApogySystemAPIsNode basicGetApogySystemAPIsNode() {
@@ -367,99 +334,90 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
-			if (resolve)
-				return getApogyEnvironment();
-			return basicGetApogyEnvironment();
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
-			if (resolve)
-				return getWorksiteNode();
-			return basicGetWorksiteNode();
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
-			if (resolve)
-				return getResultsListNode();
-			return basicGetResultsListNode();
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
-			if (resolve)
-				return getApogySystemAPIsNode();
-			return basicGetApogySystemAPIsNode();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				if (resolve) return getApogyEnvironment();
+				return basicGetApogyEnvironment();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
+				if (resolve) return getWorksiteNode();
+				return basicGetWorksiteNode();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+				if (resolve) return getResultsListNode();
+				return basicGetResultsListNode();
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
+				if (resolve) return getApogySystemAPIsNode();
+				return basicGetApogySystemAPIsNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
-			setApogyEnvironment((ApogyEnvironment) newValue);
-			return;
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
-			setWorksiteNode((WorksiteNode) newValue);
-			return;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)newValue);
+				return;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
+				setWorksiteNode((WorksiteNode)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
-			setApogyEnvironment((ApogyEnvironment) null);
-			return;
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
-			setWorksiteNode((WorksiteNode) null);
-			return;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				setApogyEnvironment((ApogyEnvironment)null);
+				return;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
+				setWorksiteNode((WorksiteNode)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
-			return apogyEnvironment != null;
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
-			return worksiteNode != null;
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
-			return resultsListNode != null;
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
-			return apogySystemAPIsNode != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_ENVIRONMENT:
+				return apogyEnvironment != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__WORKSITE_NODE:
+				return worksiteNode != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+				return resultsListNode != null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE__APOGY_SYSTEM_AP_IS_NODE:
+				return apogySystemAPIsNode != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE___DISPOSE:
-			dispose();
-			return null;
+			case ApogyCoreTopologyPackage.APOGY_ENVIRONMENT_NODE___DISPOSE:
+				dispose();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

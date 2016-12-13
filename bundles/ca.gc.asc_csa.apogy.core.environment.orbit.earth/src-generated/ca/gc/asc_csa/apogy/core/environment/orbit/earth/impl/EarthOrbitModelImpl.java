@@ -118,7 +118,7 @@ public abstract class EarthOrbitModelImpl extends OrbitModelImpl implements Eart
 				return getOreKitPropagator();
 			case ApogyCoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_MODEL___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
 				try {
-					return getTargetPasses((ca.gc.asc_csa.apogy.core.environment.earth.EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
+					return getTargetPasses((EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);

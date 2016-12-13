@@ -14,9 +14,7 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.surface;
 
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
-
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
-
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite;
 
 /**

@@ -1270,13 +1270,31 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	int APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST = 4;
 
 		/**
+	 * The operation id for the '<em>Create Sky</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY = 5;
+
+		/**
+	 * The operation id for the '<em>Create Sky Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY_NODE = 6;
+
+		/**
 	 * The operation id for the '<em>Initialize Sky Node</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = 5;
+	int APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE = 7;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1285,7 +1303,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 6;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 8;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1294,7 +1312,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 7;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 9;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1303,7 +1321,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 8;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 10;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1312,7 +1330,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 9;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 11;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1321,7 +1339,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = 10;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT = 12;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -1330,7 +1348,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 11;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 13;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1339,7 +1357,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE_OPERATION_COUNT = 12;
+	int APOGY_CORE_ENVIRONMENT_FACADE_OPERATION_COUNT = 14;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.impl.StarImpl <em>Star</em>}' class.
@@ -2277,14 +2295,34 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	EOperation getApogyCoreEnvironmentFacade__SortByMagnitude__List();
 
 		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.Sky, ca.gc.asc_csa.apogy.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createSky() <em>Create Sky</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Sky</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createSky()
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__CreateSky();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createSkyNode() <em>Create Sky Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Sky Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createSkyNode()
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__CreateSkyNode();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize Sky Node</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.Sky, ca.gc.asc_csa.apogy.core.environment.SkyNode)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#initializeSkyNode(ca.gc.asc_csa.apogy.core.environment.SkyNode)
 	 * @generated
 	 */
-	EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
+	EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__SkyNode();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
@@ -2935,12 +2973,26 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST = eINSTANCE.getApogyCoreEnvironmentFacade__SortByMagnitude__List();
 				/**
+		 * The meta object literal for the '<em><b>Create Sky</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY = eINSTANCE.getApogyCoreEnvironmentFacade__CreateSky();
+				/**
+		 * The meta object literal for the '<em><b>Create Sky Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY_NODE = eINSTANCE.getApogyCoreEnvironmentFacade__CreateSkyNode();
+				/**
 		 * The meta object literal for the '<em><b>Initialize Sky Node</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = eINSTANCE.getApogyCoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE = eINSTANCE.getApogyCoreEnvironmentFacade__InitializeSkyNode__SkyNode();
 				/**
 		 * The meta object literal for the '<em><b>Create Star</b></em>' operation.
 		 * <!-- begin-user-doc -->

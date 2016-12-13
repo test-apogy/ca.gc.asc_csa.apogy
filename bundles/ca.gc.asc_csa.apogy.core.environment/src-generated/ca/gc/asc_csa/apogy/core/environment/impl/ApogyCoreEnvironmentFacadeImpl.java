@@ -17,7 +17,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
@@ -219,18 +218,39 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated_NOT
-   */
-  public void initializeSkyNode(Sky sky, SkyNode skyNode)
-  {
-	  	Date now = new Date();
-		if(sky.getTime() != null)
-		{
-			now = sky.getTime();
-		}
-	  
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Sky createSky() 
+	{
+		Sky sky = ApogyCoreEnvironmentFactory.eINSTANCE.createSky();
+		SkyNode skyNode = createSkyNode();
+		sky.setSkyNode(skyNode);
+		return sky;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public SkyNode createSkyNode() 
+	{
+		SkyNode skyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode();		
+	  	
+		initializeSkyNode(skyNode);
+		
+		return skyNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initializeSkyNode(SkyNode skyNode) 
+	{
 	  	skyNode.setDescription("Sky");
 		skyNode.setNodeId("SKY");
 	  
@@ -246,8 +266,8 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 		sunTransformNode.setNodeId("SUN_TRANSFORM");
 		
 		// Attaches the Sun to the sky.
-		sky.getSkyNode().getChildren().add(sunTransformNode);				
-		sunTransformNode.setParent(sky.getSkyNode()); // Should not have to this this explicitly.
+		skyNode.getChildren().add(sunTransformNode);				
+		sunTransformNode.setParent(skyNode); // Should not have to this this explicitly.
 		
 		sunTransformNode.getChildren().add(sun);	
 				
@@ -263,9 +283,7 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 			starFieldTransformNode.setNodeId("STAR_FIELD_TRANSFORM");
 			
 			// Attaches the StarField to the sky.
-			sky.getSkyNode().getChildren().add(starFieldTransformNode);
-			starFieldTransformNode.setParent(sky.getSkyNode()); // Should not have to this this explicitly.
-			
+			skyNode.getChildren().add(starFieldTransformNode);
 			starFieldTransformNode.getChildren().add(starField);
 		}
 		catch(Exception e)
@@ -273,9 +291,66 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 			Logger.INSTANCE.log(Activator.ID, this, "initializeSkyNode(Sky sky, SkyNode skyNode) : Could not initialize the StarField!", EventSeverity.ERROR, e);
 			e.printStackTrace();
 		}
-		
-		skyNode.setSky(sky);
-  }
+	}
+
+		//		/**
+//   * <!-- begin-user-doc -->
+//   * <!-- end-user-doc -->
+//   * @generated_NOT
+//   */
+//  public void initializeSkyNode(Sky sky, SkyNode skyNode)
+//  {
+//	  	Date now = new Date();
+//		if(sky.getTime() != null)
+//		{
+//			now = sky.getTime();
+//		}
+//	  
+//	  	skyNode.setDescription("Sky");
+//		skyNode.setNodeId("SKY");
+//	  
+//		// Creates the Sun
+//		Sun sun = ApogyCoreEnvironmentFactory.eINSTANCE.createSun();
+//		sun.setDescription("The Sun.");
+//		sun.setNodeId("SUN");
+//		
+//		// Creates the Sun transform that attaches it to the sky.							
+//		Point3d sunPosition = new Point3d();						
+//		TransformNode sunTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(sunPosition.x, sunPosition.y, sunPosition.z, 0, 0, 0);
+//		sunTransformNode.setDescription("Transform attaching the Sun to the Sky.");
+//		sunTransformNode.setNodeId("SUN_TRANSFORM");
+//		
+//		// Attaches the Sun to the sky.
+//		skyNode.getChildren().add(sunTransformNode);				
+//		sunTransformNode.setParent(skyNode); // Should not have to this this explicitly.
+//		
+//		sunTransformNode.getChildren().add(sun);	
+//				
+//		// Creates the stars and attached them to the sky.
+//		try
+//		{
+//			StarField starField = createAndInitializeStars();
+//			
+//			// Creates the StarField transform that attaches it to the sky.
+//			// TODO : Initialise this correctly !
+//			TransformNode starFieldTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+//			starFieldTransformNode.setDescription("Transform attaching the Star Field to the Sky.");	
+//			starFieldTransformNode.setNodeId("STAR_FIELD_TRANSFORM");
+//			
+//			// Attaches the StarField to the sky.
+//			skyNode.getChildren().add(starFieldTransformNode);
+//			starFieldTransformNode.setParent(sky.getSkyNode()); // Should not have to this this explicitly.
+//			
+//			starFieldTransformNode.getChildren().add(starField);
+//		}
+//		catch(Exception e)
+//		{
+//			Logger.INSTANCE.log(Activator.ID, this, "initializeSkyNode(Sky sky, SkyNode skyNode) : Could not initialize the StarField!", EventSeverity.ERROR, e);
+//			e.printStackTrace();
+//		}
+//				
+//		sky.setSkyNode(skyNode);
+//  }
 
   /**
    * <!-- begin-user-doc -->
@@ -472,8 +547,12 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 				return createAndInitializeStars();
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___SORT_BY_MAGNITUDE__LIST:
 				return sortByMagnitude((List<Star>)arguments.get(0));
-			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE:
-				initializeSkyNode((Sky)arguments.get(0), (SkyNode)arguments.get(1));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY:
+				return createSky();
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY_NODE:
+				return createSkyNode();
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE:
+				initializeSkyNode((SkyNode)arguments.get(0));
 				return null;
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT:
 				return getSunVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));

@@ -14,7 +14,6 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.surface;
 
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
-
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode;
 
 /**

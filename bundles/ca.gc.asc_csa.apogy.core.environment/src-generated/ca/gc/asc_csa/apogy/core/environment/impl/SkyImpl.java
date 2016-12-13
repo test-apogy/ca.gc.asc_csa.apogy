@@ -31,8 +31,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
-import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
@@ -56,7 +54,8 @@ import ca.gc.asc_csa.apogy.core.environment.Worksite;
  *
  * @generated
  */
-public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
+public class SkyImpl extends MinimalEObjectImpl.Container implements Sky 
+{
 	protected Adapter worksiteAdapter;
 
 	/**
@@ -210,23 +209,9 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public SkyNode getSkyNode() {
-		if (getSkyNodeGen() == null) {
-			skyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode();
-			ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(this, skyNode);
-		}
-
-		return getSkyNodeGen();
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SkyNode getSkyNodeGen() {
+	public SkyNode getSkyNode() {
 		if (skyNode != null && skyNode.eIsProxy()) {
 			InternalEObject oldSkyNode = (InternalEObject)skyNode;
 			skyNode = (SkyNode)eResolveProxy(oldSkyNode);
@@ -247,11 +232,46 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSkyNode(SkyNode newSkyNode, NotificationChain msgs) {
+		SkyNode oldSkyNode = skyNode;
+		skyNode = newSkyNode;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, oldSkyNode, newSkyNode);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSkyNode(SkyNode newSkyNode) {
+		if (newSkyNode != skyNode) {
+			NotificationChain msgs = null;
+			if (skyNode != null)
+				msgs = ((InternalEObject)skyNode).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
+			if (newSkyNode != null)
+				msgs = ((InternalEObject)newSkyNode).eInverseAdd(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
+			msgs = basicSetSkyNode(newSkyNode, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, newSkyNode, newSkyNode));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */
-	public Sun getSun() {
+	public Sun getSun() 
+	{
 		// Explores children to find the Sun.
 		if (basicGetSun() == null) {
 			sun = findSunInTopology();
@@ -264,7 +284,8 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 	 * 
 	 * @return The Sun, null if not found.
 	 */
-	private Sun findSunInTopology() {
+	private Sun findSunInTopology() 
+	{
 		Sun sunFound = null;
 
 		EList<Node> children = getSkyNode().getChildren();
@@ -386,6 +407,10 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetWorksite((Worksite)otherEnd, msgs);
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
+				if (skyNode != null)
+					msgs = ((InternalEObject)skyNode).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
+				return basicSetSkyNode((SkyNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -399,6 +424,8 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 		switch (featureID) {
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				return basicSetWorksite(null, msgs);
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
+				return basicSetSkyNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -454,6 +481,9 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				setWorksite((Worksite)newValue);
 				return;
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
+				setSkyNode((SkyNode)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -470,6 +500,9 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky {
 				return;
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				setWorksite((Worksite)null);
+				return;
+			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
+				setSkyNode((SkyNode)null);
 				return;
 		}
 		super.eUnset(featureID);
