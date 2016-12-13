@@ -17,7 +17,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.parts;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectEditorComposite;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
-public class SessionEditorPart extends AbstractSessionContainedEObjectEditorPart {
+public class ApogySessionEditorPart extends AbstractSessionContainedEObjectEditorPart {
 	@Override
 	protected void newInvocatorSession(InvocatorSession invocatorSession) {
 		((EObjectEditorComposite) getActualComposite()).setEObject(invocatorSession);

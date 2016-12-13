@@ -38,9 +38,7 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 			@Override
 			protected String getMessage() {
 				return "No active session";
-			}
-			
-			
+			}		
 		};	
 	}
 			
