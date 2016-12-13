@@ -139,26 +139,14 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		@Override
 		public Object[] getElements(Object inputElement) {
 			if (eClass != null) {
-				
 				List<EClass> subClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(eClass);
-				System.out.println("Start");
-				for(EClass eClass : subClasses){
-					System.out.println(eClass.getName());
-				}
 				subClasses.sort(new Comparator<EClass>() {
 					@Override
 					public int compare(EClass arg0, EClass arg1) {
-						System.out.println( String.CASE_INSENSITIVE_ORDER.compare(arg0.getName(), arg1.getName()));
 						return String.CASE_INSENSITIVE_ORDER.compare(arg0.getName(), arg1.getName());
 					}
 				});
-				System.out.println("Finish");
-				for(EClass eClass : subClasses){
-					System.out.println(eClass.getName());
-				}
 				return subClasses.toArray();
-//				 return
-//				 ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(eClass).toArray();
 			}
 			Object[] objects = new Object[0];
 			return objects;

@@ -15,7 +15,6 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
@@ -26,7 +25,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTypeArgumentsComposite;
 
@@ -100,20 +98,16 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	protected void validate() {
 		String errorStr = null;
 
-		if(operationCallControllerBinding.getArgumentsList() != null){
-			for(Argument argument : operationCallControllerBinding.getArgumentsList().getArguments()){
-				Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(argument);
-				if (diagnosticContext.getSeverity() != Diagnostic.OK){
-					System.out.println("fdlisfoi" + diagnosticContext.getSeverity());
-					errorStr  = "Please complete the  for each argument";
-					break;
-				}	
-			}	
+		if (operationCallControllerBinding.getArgumentsList() != null) {
+			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCallControllerBinding);
+			if (diagnosticContext.getSeverity() != Diagnostic.OK) {
+				errorStr = "Please complete the  for each argument";
+			}
 		}
-		System.out.println("ikweyiuefh");
-		setErrorMessage(errorStr );
-		setPageComplete(getErrorMessage()  == null);
+		setErrorMessage(errorStr);
+		setPageComplete(getErrorMessage() == null);
 	}
+	
 	
 	@Override
 	public void dispose() {

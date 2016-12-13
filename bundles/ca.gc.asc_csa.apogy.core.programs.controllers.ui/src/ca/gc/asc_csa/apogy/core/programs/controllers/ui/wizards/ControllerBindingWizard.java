@@ -63,12 +63,15 @@ public class ControllerBindingWizard extends Wizard {
 		setDefaultPageImageDescriptor(image);
 		this.controllersConfiguration = controllersConfiguration;
 	}
-	
+
 	@Override
 	public void createPageControls(Composite pageContainer) {
 		super.createPageControls(pageContainer);
-		
-		getShell().addListener(SWT.Traverse,  new Listener() {
+
+		/**
+		 * Overrides the default behavior of a excape keyPress in the wizrd
+		 */
+		getShell().addListener(SWT.Traverse, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
 				if (event.detail == SWT.TRAVERSE_ESCAPE) {
@@ -84,27 +87,26 @@ public class ControllerBindingWizard extends Wizard {
 	/**
 	 * Add the page to the wizard.
 	 */
-	public void addPages() {	
+	public void addPages() {
 		addPage(getNamedDescribedWizardPage());
 		addPage(getOperationCallControllerBindingDetailsWizardPage());
-		
+
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
-	
+
 	@Override
-	public IWizardPage getNextPage(IWizardPage page) {	
+	public IWizardPage getNextPage(IWizardPage page) {
 		if (page == getOperationCallControllerBindingDetailsWizardPage()) {
-			if(getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null){
+			if (getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null) {
 				if (!Arrays.asList(getPages()).contains(getBindedEDataTypeArgumentsWizardPage())) {
 					addPage(getBindedEDataTypeArgumentsWizardPage());
-					System.out.println(getBindedEDataTypeArgumentsWizardPage().isPageComplete());
-				} else {				
+				} else {
 					return getBindedEDataTypeArgumentsWizardPage();
 				}
-			}else{
+			} else {
 				return null;
 			}
-			
+
 		}
 		return super.getNextPage(page);
 	}
@@ -135,10 +137,10 @@ public class ControllerBindingWizard extends Wizard {
 		}
 		return operationCallControllerBindingDetailsWizardPage;
 	}
-	
+
 	/**
-	 * Returns the {@link BindedEDataTypeArgumentsWizardPage}. If null is returned,
-	 * the page is not added to the wizard.
+	 * Returns the {@link BindedEDataTypeArgumentsWizardPage}. If null is
+	 * returned, the page is not added to the wizard.
 	 * 
 	 * @return Reference to the page.
 	 */
@@ -154,19 +156,17 @@ public class ControllerBindingWizard extends Wizard {
 		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
 		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
 		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getControllersConfiguration());
-		
+
 		/** Check if there is a domain. */
-		if (editingDomain == null){
+		if (editingDomain == null) {
 			/** No Domain */
 			getControllersConfiguration().getOperationCalls().add(getControllerBinding());
-		}else{
+		} else {
 			/** Use the command stack. */
-			AddCommand command = new AddCommand(
-					editingDomain,
-					getControllersConfiguration(),
+			AddCommand command = new AddCommand(editingDomain, getControllersConfiguration(),
 					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
 					getControllerBinding());
-			editingDomain.getCommandStack().execute(command);	
+			editingDomain.getCommandStack().execute(command);
 		}
 		return true;
 	}
@@ -182,17 +182,21 @@ public class ControllerBindingWizard extends Wizard {
 		if (controllerBinding == null) {
 			controllerBinding = ApogyCoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding();
 			ApogyCommonEmfTransactionFacade.INSTANCE.addInTempTransactionalEditingDomain(controllerBinding);
-			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(controllerBinding, ApogyCommonEMFPackage.Literals.NAMED__NAME, ApogyCommonEMFFacade.INSTANCE.getDefaultName(
-					getControllersConfiguration(),
-					getControllerBinding(), 
-					ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(controllerBinding,
+					ApogyCommonEMFPackage.Literals.NAMED__NAME,
+					ApogyCommonEMFFacade.INSTANCE.getDefaultName(getControllersConfiguration(), getControllerBinding(),
+							ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS));
 		}
 
 		return controllerBinding;
 	}
-	
+
 	@Override
 	public boolean performCancel() {
+		/**
+		 * Confirmation dialog
+		 */
+		// TODO replace with general confirmation dialog
 		String[] buttons = { "Yes", "No" };
 		CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
 				"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
@@ -200,19 +204,21 @@ public class ControllerBindingWizard extends Wizard {
 		dialog.open();
 		return dialog.getCancel();
 	}
-	
-	private class CloseOnCancelDialog extends MessageDialog{
+
+	// TODO move to common.ui
+	private class CloseOnCancelDialog extends MessageDialog {
 
 		private boolean cancel = true;
-		
+
 		public CloseOnCancelDialog(Shell parentShell, String dialogTitle, Image dialogTitleImage, String dialogMessage,
 				int dialogImageType, String[] dialogButtonLabels, int defaultIndex) {
-			super(parentShell, dialogTitle, dialogTitleImage, dialogMessage, dialogImageType, dialogButtonLabels, defaultIndex);
+			super(parentShell, dialogTitle, dialogTitleImage, dialogMessage, dialogImageType, dialogButtonLabels,
+					defaultIndex);
 		}
-	
+
 		@Override
 		protected void buttonPressed(int buttonId) {
-			if(buttonId == 1){
+			if (buttonId == 1) {
 				cancel = false;
 			}
 			this.close();
@@ -230,13 +236,13 @@ public class ControllerBindingWizard extends Wizard {
 				break;
 			}
 		}
-		public boolean getCancel(){
+
+		public boolean getCancel() {
 			return cancel;
 		}
-		
+
 	}
-	
-	
+
 	/**
 	 * Returns the {@link ControllersConfiguration}.
 	 * 
