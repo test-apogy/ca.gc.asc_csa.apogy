@@ -40,7 +40,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
-public class NewOperationCallWizard extends Wizard implements INewWizard {
+public class OperationCallWizard extends Wizard implements INewWizard {
 
 	private OperationCallsListWizardPage operationCallsListWizardPage;
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
@@ -54,7 +54,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	/**
 	 * Constructor for NewApogySessionWizard.
 	 */	
-	public NewOperationCallWizard(OperationCallsList operationCallsList){
+	public OperationCallWizard(OperationCallsList operationCallsList){
 		super();
 		this.operationCallsList = operationCallsList;
 		initialize(operationCallsList.getProgramsGroup());

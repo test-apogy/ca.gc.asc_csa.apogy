@@ -69,7 +69,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards.NewControllerBindingWizard;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards.ControllerBindingWizard;
 
 public class ControllerBindingsComposite extends Composite {
 
@@ -153,7 +153,7 @@ public class ControllerBindingsComposite extends Composite {
 			@Override
 			public void handleEvent(Event event) {
 				// FIXME Finish
-				NewControllerBindingWizard newControllerBindingWizard = new NewControllerBindingWizard(controllersConfiguration){
+				ControllerBindingWizard newControllerBindingWizard = new ControllerBindingWizard(controllersConfiguration){
 					@Override
 					public boolean performFinish() {
 						// TODO

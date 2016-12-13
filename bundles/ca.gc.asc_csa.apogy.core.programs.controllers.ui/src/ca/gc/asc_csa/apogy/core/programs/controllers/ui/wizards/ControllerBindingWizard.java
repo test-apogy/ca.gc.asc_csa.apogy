@@ -39,7 +39,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
 
-public class NewControllerBindingWizard extends Wizard {
+public class ControllerBindingWizard extends Wizard {
 
 	private NamedDescribedWizardPage namedDescribedWizardPage;
 	private OperationCallControllerBindingDetailsWizardPage operationCallControllerBindingDetailsWizardPage;
@@ -51,7 +51,7 @@ public class NewControllerBindingWizard extends Wizard {
 	/**
 	 * Constructor for NewContextWizard.
 	 */
-	public NewControllerBindingWizard(ControllersConfiguration controllersConfiguration) {
+	public ControllerBindingWizard(ControllersConfiguration controllersConfiguration) {
 		setWindowTitle("New Controller Binding");
 		setNeedsProgressMonitor(true);
 		ImageDescriptor image = AbstractUIPlugin.imageDescriptorFromPlugin(Activator.ID,
