@@ -299,30 +299,40 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 
 	private void updateSky(long newTime) 
 	{
-		try 
+		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getWorksite();
+				
+		if(worksite != null)
 		{
-			Date newDate = new Date(newTime);
-
-			// Gets the Geographical coordinates.
-			EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getWorksite();
-			double observerLongitude = worksite.getGeographicalCoordinates().getLongitude();
-			double observerLatitude = worksite.getGeographicalCoordinates().getLatitude();
-
-			// Sun Position Update
-			// Computes the new Sun position.
-			HorizontalCoordinates sunHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(newDate,
-					observerLongitude, observerLatitude);
-			setSunHorizontalCoordinates(sunHorizontalCoordinates);
-
-			// Moon Position Update
-			// Computes the new Moon position.
-			HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(newDate,
-					observerLongitude, observerLatitude);
-			setMoonHorizontalCoordinates(moonHorizontalCoordinates);
-		} catch (Exception e) {
-			e.printStackTrace();
-
-			Logger.INSTANCE.log(Activator.ID, this, "Error occured during Sky Update !", EventSeverity.ERROR, e);
+			GeographicCoordinates geographicalCoordinates = worksite.getGeographicalCoordinates();
+			
+			if(geographicalCoordinates != null)
+			{
+				try 
+				{
+					Date newDate = new Date(newTime);
+		
+					// Gets the Geographical coordinates.			
+					double observerLongitude = geographicalCoordinates.getLongitude();
+					double observerLatitude = geographicalCoordinates.getLatitude();
+		
+					// Sun Position Update
+					// Computes the new Sun position.
+					HorizontalCoordinates sunHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(newDate,
+							observerLongitude, observerLatitude);
+					setSunHorizontalCoordinates(sunHorizontalCoordinates);
+		
+					// Moon Position Update
+					// Computes the new Moon position.
+					HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(newDate,
+							observerLongitude, observerLatitude);
+					setMoonHorizontalCoordinates(moonHorizontalCoordinates);
+				} 
+				catch (Exception e) 
+				{
+					e.printStackTrace();
+					Logger.INSTANCE.log(Activator.ID, this, "Error occured during Sky Update !", EventSeverity.ERROR, e);
+				}
+			}
 		}
 	}
 

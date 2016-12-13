@@ -195,9 +195,9 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 		apogyEnvironmentNode.setApogyEnvironment(apogyEnvironment);										
 		
 		// Forces the update of the child nodes.
-		apogyEnvironmentNode.getApogySystemAPIsNode();
+		// TODO apogyEnvironmentNode.getApogySystemAPIsNode();
 		apogyEnvironmentNode.getWorksiteNode();		
-		apogyEnvironmentNode.getResultsListNode();
+		// TODO apogyEnvironmentNode.getResultsListNode();
 		
 		return apogyEnvironmentNode;
 	}

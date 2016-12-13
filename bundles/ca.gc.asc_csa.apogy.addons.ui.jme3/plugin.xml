@@ -23,12 +23,6 @@
    <extension
          point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
       <Class
-            Class="ca.gc.asc_csa.apogy.addons.ui.jme3.adapters.SunVector3DToolNodeJME3Adapter">
-      </Class>
-   </extension>
-   <extension
-         point="ca.gc.asc_csa.apogy.common.topology.ui.jme3.jme3Adapter">
-      <Class
             Class="ca.gc.asc_csa.apogy.addons.ui.jme3.adapters.Trajectory3DToolNodeJME3Adapter">
       </Class>
    </extension>
