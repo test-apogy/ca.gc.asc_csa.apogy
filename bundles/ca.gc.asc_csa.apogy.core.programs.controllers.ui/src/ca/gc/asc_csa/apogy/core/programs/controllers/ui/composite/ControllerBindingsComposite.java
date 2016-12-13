@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
@@ -54,6 +55,7 @@ import org.eclipse.swt.widgets.TreeItem;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
@@ -152,12 +154,17 @@ public class ControllerBindingsComposite extends Composite {
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				// FIXME Finish
 				ControllerBindingWizard newControllerBindingWizard = new ControllerBindingWizard(controllersConfiguration){
 					@Override
 					public boolean performFinish() {
-						// TODO
-						return super.performFinish();
+						getControllerBinding().eResource().getResourceSet().getResources()
+								.remove(getControllerBinding().eResource());
+						TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
+
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(controllersConfiguration,
+								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+								getControllerBinding());
+						return true;
 					}
 				};
 				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);

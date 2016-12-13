@@ -82,7 +82,6 @@ public class OperationCallControllerBindingDetailsWizardPage extends WizardPage 
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
-				resetOperationCall();
 			}
 		};
 		composite.setOperationCallControllerBinding(operationCallControllerBinding);
@@ -90,10 +89,6 @@ public class OperationCallControllerBindingDetailsWizardPage extends WizardPage 
 		setControl(container);
 		
 		validate();
-	}
-	
-
-	protected void resetOperationCall(){
 	}
 	
 	/** 

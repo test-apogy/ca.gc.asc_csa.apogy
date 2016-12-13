@@ -114,17 +114,7 @@ public class ControllerBindingWizard extends Wizard {
 	protected OperationCallControllerBindingDetailsWizardPage getOperationCallControllerBindingDetailsWizardPage() {
 		if (operationCallControllerBindingDetailsWizardPage == null) {
 			operationCallControllerBindingDetailsWizardPage = new OperationCallControllerBindingDetailsWizardPage(
-					getControllerBinding()) {
-				@Override
-				protected void resetOperationCall() {
-//					if(bindedEDataTypeArgumentsWizardPage != null){
-//						bindedEDataTypeArgumentsWizardPage.dispose();
-//						bindedEDataTypeArgumentsWizardPage = null;
-//						getBindedEDataTypeArgumentsWizardPage();
-//					}
-//					getBindedEDataTypeArgumentsWizardPage().setOperationCallControllerBinding(getControllerBinding());
-				}
-			};
+					getControllerBinding());
 		}
 		return operationCallControllerBindingDetailsWizardPage;
 	}
