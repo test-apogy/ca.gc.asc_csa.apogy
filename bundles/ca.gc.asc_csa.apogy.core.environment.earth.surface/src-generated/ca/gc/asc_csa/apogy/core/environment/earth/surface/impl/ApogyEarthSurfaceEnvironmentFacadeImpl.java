@@ -49,6 +49,7 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
@@ -156,6 +157,42 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode() 
+	{
+		EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
+		
+		TransformNode transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
+		transformNode.setNodeId("SKY_TRANSFORM");
+		transformNode.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
+		earthSurfaceWorksiteNode.getChildren().add(transformNode);
+		earthSurfaceWorksiteNode.setSkyTransformNode(transformNode);
+		
+		return earthSurfaceWorksiteNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode(EarthSurfaceWorksite earthSurfaceWorksite) 
+	{
+		EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
+		
+		TransformNode transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());  
+		transformNode.setNodeId("SKY_TRANSFORM");
+		transformNode.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
+		earthSurfaceWorksiteNode.getChildren().add(transformNode);
+		earthSurfaceWorksiteNode.setSkyTransformNode(transformNode);
+		
+		return earthSurfaceWorksiteNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public EarthSurfaceWorksite createAndInitializeDefaultCSAWorksite() 
 	{
 		Date now = new Date();
@@ -167,17 +204,15 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		
 		// Sets the coordinates.
 		worksite.setGeographicalCoordinates(getMarsYardGeographicalCoordinates());
-		worksite.setXAxisAzimuth(Math.toRadians(179.4));
-		
+		worksite.setXAxisAzimuth(Math.toRadians(179.4));						
+				
 		// Creates the Earth Sky.
-		EarthSky earthSky = createEarthSky(worksite.getGeographicalCoordinates());
+		EarthSky earthSky = createEarthSky(worksite.getGeographicalCoordinates());						
 		
 		// Sets the worksite sky.
 		worksite.setSky(earthSky);	
 		earthSky.setWorksite(worksite);
-		
-		//initializeEarthSkyNode(earthSky, earthSkyNode);
-				
+						
 		// Attaches the sky to the worksite.
 		// worksite.setEarthSky(earthSky);
 				
@@ -350,6 +385,10 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 				return createEarthSky((GeographicCoordinates)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES:
 				return createEarthSkyNode((GeographicCoordinates)arguments.get(0));
+			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE:
+				return createEarthSurfaceWorksiteNode();
+			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE__EARTHSURFACEWORKSITE:
+				return createEarthSurfaceWorksiteNode((EarthSurfaceWorksite)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:

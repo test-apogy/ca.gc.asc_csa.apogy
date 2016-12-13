@@ -32,8 +32,10 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
+import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
@@ -249,6 +251,18 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  }	
   }
 	
+  @Override
+  public WorksiteNode getWorksiteNode() 
+  	{
+	  if(!(super.getWorksiteNode() instanceof EarthSurfaceWorksiteNode))
+		{
+			worksiteNode = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.createEarthSurfaceWorksiteNode(this);
+			worksiteNode.setWorksite(this);  			
+		}
+		
+		return worksiteNode;
+	}
+  
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

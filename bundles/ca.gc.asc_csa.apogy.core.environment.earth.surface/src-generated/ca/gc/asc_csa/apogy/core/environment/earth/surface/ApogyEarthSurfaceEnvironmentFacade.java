@@ -64,6 +64,30 @@ public interface ApogyEarthSurfaceEnvironmentFacade extends EObject
 	 */
 	EarthSkyNode createEarthSkyNode(GeographicCoordinates gsiteGeographicCoordinates);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates an EarthSurfaceWorksiteNode.
+	 * <!-- end-model-doc -->
+	 * @model unique="false"
+	 * @generated
+	 */
+	EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates an EarthSurfaceWorksiteNode.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" earthSurfaceWorksiteUnique="false"
+	 * @generated
+	 */
+	EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode(EarthSurfaceWorksite earthSurfaceWorksite);
+
 	public static ApogyEarthSurfaceEnvironmentFacade INSTANCE = ApogyEarthSurfaceEnvironmentFacadeImpl.getInstance();
 
 	

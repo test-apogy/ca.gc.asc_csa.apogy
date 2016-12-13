@@ -569,13 +569,31 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES = 1;
 
 	/**
+	 * The operation id for the '<em>Create Earth Surface Worksite Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE = 2;
+
+	/**
+	 * The operation id for the '<em>Create Earth Surface Worksite Node</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE__EARTHSURFACEWORKSITE = 3;
+
+	/**
 	 * The operation id for the '<em>Create And Initialize Default CSA Worksite</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 2;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 4;
 
 	/**
 	 * The operation id for the '<em>Initialize Earth Sky Node</em>' operation.
@@ -584,7 +602,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 3;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 5;
 
 	/**
 	 * The operation id for the '<em>Get Mars Yard Geographical Coordinates</em>' operation.
@@ -593,7 +611,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 4;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 6;
 
 	/**
 	 * The operation id for the '<em>Get Mars Yard Transform Node</em>' operation.
@@ -602,7 +620,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 5;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 7;
 
 	/**
 	 * The operation id for the '<em>Create Apogy Session</em>' operation.
@@ -611,7 +629,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 6;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 8;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -620,7 +638,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 7;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.AtmosphereUtilsImpl <em>Atmosphere Utils</em>}' class.
@@ -1126,6 +1144,26 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSurfaceWorksiteNode() <em>Create Earth Surface Worksite Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Earth Surface Worksite Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSurfaceWorksiteNode()
+	 * @generated
+	 */
+	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSurfaceWorksiteNode();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSurfaceWorksiteNode(ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite) <em>Create Earth Surface Worksite Node</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Earth Surface Worksite Node</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSurfaceWorksiteNode(ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite)
+	 * @generated
+	 */
+	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSurfaceWorksiteNode__EarthSurfaceWorksite();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
@@ -1666,6 +1704,22 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateEarthSkyNode__GeographicCoordinates();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Earth Surface Worksite Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateEarthSurfaceWorksiteNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Create Earth Surface Worksite Node</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE__EARTHSURFACEWORKSITE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateEarthSurfaceWorksiteNode__EarthSurfaceWorksite();
 
 		/**
 		 * The meta object literal for the '<em><b>Create And Initialize Default CSA Worksite</b></em>' operation.

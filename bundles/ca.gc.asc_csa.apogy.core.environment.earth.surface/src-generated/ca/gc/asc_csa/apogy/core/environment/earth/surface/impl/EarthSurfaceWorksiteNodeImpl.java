@@ -18,8 +18,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.impl.SurfaceWorksiteNodeImpl;
 
@@ -66,12 +68,44 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		return ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE;
 	}
 
-	/**
+
+
+	  /**
+	   * <!-- begin-user-doc -->
+	   * <!-- end-user-doc -->
+	   * @generated_NOT
+	   */
+	  public TransformNode getSkyTransformNode()
+	  {
+		  TransformNode t = getSkyTransformNodeGen();
+		  if(t == null)
+		  {
+			  if(getWorksite() instanceof EarthSurfaceWorksite)
+			  {
+				  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
+				  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
+			  }
+			  else
+			  {
+				  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
+			  }		  		  		  
+			  t.setNodeId("SKY_TRANSFORM");
+			  t.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
+			  getChildren().add(t);
+			  t.setParent(this); // Should not have to this this explicitly.
+			  
+			  setSkyTransformNode(t);
+		  }
+		  
+		  return t;
+	  }
+	
+		/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransformNode getSkyTransformNode() {
+		public TransformNode getSkyTransformNodeGen() {
 		if (skyTransformNode != null && skyTransformNode.eIsProxy()) {
 			InternalEObject oldSkyTransformNode = (InternalEObject)skyTransformNode;
 			skyTransformNode = (TransformNode)eResolveProxy(oldSkyTransformNode);
@@ -82,7 +116,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		}
 		return skyTransformNode;
 	}
-
+		
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

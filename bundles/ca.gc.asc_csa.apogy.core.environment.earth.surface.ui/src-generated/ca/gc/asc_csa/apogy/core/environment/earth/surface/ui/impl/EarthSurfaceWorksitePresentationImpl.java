@@ -145,8 +145,8 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
   
   	@Override
 	protected void applyPreferences() 
-  	{
-  		IPreferenceStore surfaceUIPreferenceStore = ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator.getDefault().getPreferenceStore();
+  	{ 		
+  		IPreferenceStore surfaceUIPreferenceStore = ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Activator.getDefault().getPreferenceStore();
   		
   		// Set the axis visibility and length.
   		setAxisVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE_ID));

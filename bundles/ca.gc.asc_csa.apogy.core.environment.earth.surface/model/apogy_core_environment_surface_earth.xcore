@@ -168,6 +168,16 @@ class ApogyEarthSurfaceEnvironmentFacade
 	 */
 	op EarthSkyNode createEarthSkyNode(GeographicCoordinates gsiteGeographicCoordinates)
 			
+	/**
+	 * Creates an EarthSurfaceWorksiteNode.
+	 */
+	op EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode()
+	
+	/**
+	 * Creates an EarthSurfaceWorksiteNode.
+	 */
+	op EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode(EarthSurfaceWorksite earthSurfaceWorksite)
+			
 	/*
 	 * Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates.
 	 */
