@@ -105,9 +105,23 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setUrl(String newUrl) 
+	{
+		setUrlGen(newUrl);
+		
+		// Set mesh dirty to true
+		// TODO : Do this using ApogyCommonEmfTransactionFacade.
+		transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(true));
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrl(String newUrl) {
+	public void setUrlGen(String newUrl) {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
@@ -122,8 +136,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	  public CartesianTriangularMesh getMesh()
 	  {	  	  
 		  if(isMeshIsDirty())
-		  {
-			  // TODO : Do this using Transactions.
+		  {			  			  			  
 			  mesh = loadMesh(getUrl());		 
 		  }
 		  return mesh;
@@ -150,6 +163,12 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogySurfaceEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH, oldMesh, mesh));
 	}
 
+	@Override
+	public CartesianTriangularMesh getCurrentMesh() 
+	{
+		return getMesh();
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -291,8 +310,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 
 			loadedMesh = null;
 		}
-
-		setMeshIsDirty(false);
+		
+		// Set mesh dirty to false
+		// TODO : Do this using ApogyCommonEmfTransactionFacade.
+		transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(false));
 		return loadedMesh;
 	}
 

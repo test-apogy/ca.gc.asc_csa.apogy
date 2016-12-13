@@ -13,24 +13,53 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.impl;
 
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.vecmath.Matrix4d;
+import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesFactory;
+import ca.gc.asc_csa.apogy.common.images.EImage;
+import ca.gc.asc_csa.apogy.common.images.EImagesUtilities;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
+import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.surface.Activator;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayerNode;
+import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.MapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +77,15 @@ import ca.gc.asc_csa.apogy.core.environment.surface.MapLayerPresentation;
  *
  * @generated
  */
-public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl implements CartesianTriangularMeshMapLayer {
+public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl implements CartesianTriangularMeshMapLayer 
+{
+	protected boolean verbose = false;
+	
+	protected CartesianTriangularMesh emptyMesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
+	protected boolean textureImageIsDirty = true;
+
+	private EContentAdapter meshTextureAdapter = null;
+
 	/**
 	 * The default value of the '{@link #isMeshIsDirty() <em>Mesh Is Dirty</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,10 +139,13 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	protected CartesianTriangularMeshMapLayerImpl() {
+	protected CartesianTriangularMeshMapLayerImpl() 
+	{
 		super();
+		
+		this.eAdapters().add(getMeshTextureAdapter());
 	}
 
 	/**
@@ -154,9 +194,28 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public AbstractEImage getTextureImage()
+	{
+		if(textureImageIsDirty)
+		{			
+			AbstractEImage img = getMeshTextureImage();
+			
+			// TODO : Do this using ApogyCommonEmfTransactionFacade.
+			transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
+			textureImageIsDirty = false;
+		}				
+		return getTextureImageGen();
+	}
+
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbstractEImage getTextureImage() {
+	public AbstractEImage getTextureImageGen() {
 		if (textureImage != null && textureImage.eIsProxy()) {
 			InternalEObject oldTextureImage = (InternalEObject)textureImage;
 			textureImage = (AbstractEImage)eResolveProxy(oldTextureImage);
@@ -192,9 +251,28 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public CartesianTriangularMeshMapLayerNode getCartesianTriangularMeshMapLayerNode() 
+	{
+		CartesianTriangularMeshMapLayerNode tmp = getCartesianTriangularMeshMapLayerNodeGen();
+		
+		if(tmp == null)
+		{
+			tmp = ApogySurfaceEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode();
+			tmp.setAbstractMapLayer(this);			
+			setCartesianTriangularMeshMapLayerNode(tmp);
+		}
+		
+		return tmp;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CartesianTriangularMeshMapLayerNode getCartesianTriangularMeshMapLayerNode() {
+	public CartesianTriangularMeshMapLayerNode getCartesianTriangularMeshMapLayerNodeGen() {
 		if (cartesianTriangularMeshMapLayerNode != null && cartesianTriangularMeshMapLayerNode.eIsProxy()) {
 			InternalEObject oldCartesianTriangularMeshMapLayerNode = (InternalEObject)cartesianTriangularMeshMapLayerNode;
 			cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode)eResolveProxy(oldCartesianTriangularMeshMapLayerNode);
@@ -241,14 +319,15 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public void forceUpdateTextureImage() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void forceUpdateTextureImage() 
+	{
+		AbstractEImage img = getMeshTextureImage();		
+		setTextureImage(img);
+		textureImageIsDirty = false;	
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,4 +467,254 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		return result.toString();
 	}
 
+	protected List<ImageMapLayerPresentation> getImageMapLayerPresentation()
+	{
+		List<ImageMapLayerPresentation> list = new ArrayList<ImageMapLayerPresentation>();
+		
+		for(MapLayerPresentation mapLayerPresentation : getMapLayerPresentations())		
+		{
+			if(mapLayerPresentation instanceof ImageMapLayerPresentation)
+			{
+				list.add((ImageMapLayerPresentation) mapLayerPresentation);
+			}
+		}
+		
+		return list;
+	}
+		
+	protected AbstractEImage getMeshTextureImage()
+	{		
+		Logger.INSTANCE.log(Activator.ID, this, getName() + " : Updating Texture Image starts.", EventSeverity.INFO);
+		
+		// First, finds the mesh extent in its own frame.		
+		RectangularRegion meshRegion = ApogySurfaceEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCurrentMesh());
+		
+		// Finds the mesh extent transform relative to the worksite origin.		
+		Matrix4d meshTransformMatrix = new Matrix4d();
+		meshTransformMatrix.setIdentity();		
+		if(getMap().getTransformation() != null) 
+		{
+			meshTransformMatrix.mul(getMap().getTransformation().asMatrix4d());
+		}
+		
+		// Do a first pass through the ImageMapLayerPresentation to select the ones that are visible and that intersects and
+		// find the best resolution image, in meters/pixel. The smallest, the better.
+				
+		double bestResolution = 10000;
+		java.util.Map<ImageMapLayerPresentation, Matrix4d> layerPresentationToTransformMap = new HashMap<ImageMapLayerPresentation, Matrix4d>();
+		List<ImageMapLayerPresentation> imageMapLayerPresentationsToProcess = new ArrayList<ImageMapLayerPresentation>();		
+		List<ImageMapLayerPresentation> imageMapLayerPresentationList = getImageMapLayerPresentation();		
+				
+		for(ImageMapLayerPresentation imageMapLayerPresentation : imageMapLayerPresentationList)
+		{
+			// If the layer is visible.
+			if(imageMapLayerPresentation.isVisible() && imageMapLayerPresentation.getRegionImage() != null)
+			{								
+				// Finds the layer transform relative to the mesh origin.	
+				if(verbose)
+				{
+					System.out.println("Mesh Transform   : " + meshTransformMatrix);
+					System.out.println("Region Transform : " + imageMapLayerPresentation.getRegion().getTransformation().asMatrix4d());
+				}
+				
+				Matrix4d imageToMeshTransform = new Matrix4d(meshTransformMatrix);												
+				imageToMeshTransform.invert();				
+				imageToMeshTransform.mul(imageMapLayerPresentation.getRegion().getTransformation().asMatrix4d());
+												
+				// If the regions intersect the mesh.
+				if(ApogySurfaceEnvironmentFacade.INSTANCE.intersects(meshRegion, imageMapLayerPresentation.getRegion(), ApogyCommonMathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform)))
+				{
+					// Check to see if it has a better resolution as what we currently have.
+					if(imageMapLayerPresentation.getResolution() < bestResolution) bestResolution = imageMapLayerPresentation.getResolution();
+					
+					// Adds the layer to the list of the ones we will process.
+					imageMapLayerPresentationsToProcess.add(imageMapLayerPresentation);
+					
+					// Saves the corresponding parameters (to save some processing latter).
+					layerPresentationToTransformMap.put(imageMapLayerPresentation, imageToMeshTransform);
+				}
+			}
+		}
+		
+		if(verbose)
+		{
+			System.out.println("Layer To Processs : " + imageMapLayerPresentationsToProcess.size());
+			System.out.println("Best Resolution   : " + bestResolution + " m/pixel");
+		}
+		
+		// Computes the mesh texture image size.
+		int meshImageWidth = (int) Math.round(meshRegion.getXDimension() / bestResolution);
+		int meshImageHeight = (int) Math.round(meshRegion.getYDimension() / bestResolution);;
+		
+
+		if(verbose)
+		{		
+			System.out.println("meshImageWidth : " + meshImageWidth);
+			System.out.println("meshImageHeight : " + meshImageHeight);
+		}
+		
+		if(meshImageHeight > 0 && meshImageWidth > 0)
+		{		
+			// Creates a transparent image as the base image for the mesh texture.
+			AbstractEImage meshTextureImage = EImagesUtilities.INSTANCE.createTransparentImage(meshImageWidth, meshImageHeight);
+					
+			// Process all the applicable ImageMapLayerPresentation
+			for(ImageMapLayerPresentation imageMapLayerPresentation : imageMapLayerPresentationsToProcess)
+			{
+				
+				if(verbose) System.out.println("ImageMapLayerPresentation " + imageMapLayerPresentation.getName());
+				
+				try
+				{
+					Matrix4d imageToMeshTransform = new Matrix4d(layerPresentationToTransformMap.get(imageMapLayerPresentation));
+															
+					// Finds the relative rotation around +Z between the image and the mesh.	
+					Tuple3d rotation = ApogyCommonMathFacade.INSTANCE.extractOrientation(ApogyCommonMathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform));
+					double zRotationAngle = -rotation.getZ();				
+					
+					// Finds the translation between the image and the mesh in the XY plane.
+					Vector3d translation = new Vector3d();
+					imageToMeshTransform.get(translation);
+					
+					// Converts the transform into pixels.				
+					double xTranslation = translation.x / bestResolution;
+					double yTranslation = translation.y / bestResolution;
+					
+					if(verbose)
+					{
+						System.out.println("Image To Mesh Transform : " + imageToMeshTransform);
+						System.out.println("\t xTranslation   : " + xTranslation);
+						System.out.println("\t yTranslation   : " + yTranslation);
+						System.out.println("\t zRotationAngle : " + Math.toDegrees(zRotationAngle) + " deg");
+					}
+					
+					// Resize the layer image to match the best resolution
+					double scaleFactor = imageMapLayerPresentation.getResolution() /bestResolution ;
+					AbstractEImage scaledLayerImage = EImagesUtilities.INSTANCE.resize(imageMapLayerPresentation.getRegionImage(), scaleFactor);
+					
+					if(verbose)
+					{
+						System.out.println("\t scaling factor : " + scaleFactor);
+						System.out.println("\t layer image scaled : " + scaledLayerImage.getWidth() + " X " + scaledLayerImage.getHeight());
+					}
+					
+					double Y = meshImageHeight - (scaledLayerImage.getHeight() + yTranslation);
+					
+					// Creates a rotation about the lower left corner of the layer image
+					AffineTransform translationTransform = new AffineTransform();							
+					translationTransform.translate(xTranslation, Y);
+					
+					AffineTransform rotationTranform = new AffineTransform();	
+					rotationTranform.rotate(zRotationAngle, 0, scaledLayerImage.getHeight());
+					
+					translationTransform.concatenate(rotationTranform);
+					
+					// Applies the transform onto the layer image to get its projection on the mesh extent.
+					BufferedImage bufferedImage = new BufferedImage(meshImageWidth, meshImageHeight, BufferedImage.TYPE_INT_ARGB);
+					Graphics2D g = (Graphics2D) bufferedImage.createGraphics();
+				    g.drawImage(scaledLayerImage.asBufferedImage(), translationTransform, null);
+				    g.dispose();
+								    
+				    EImage layerMeshImage = ApogyCommonImagesFactory.eINSTANCE.createEImage();
+				    layerMeshImage.setImageContent(bufferedImage);
+				    				    
+				    // Adds the resulting image on top of the mesh image.
+				    meshTextureImage = EImagesUtilities.INSTANCE.applyOverlay(meshTextureImage, layerMeshImage, false);	
+				    				    
+				}
+				catch(Throwable t)
+				{
+					t.printStackTrace();
+				}
+			}
+			
+			Logger.INSTANCE.log(Activator.ID, this, getName() + " : Updating Texture Image completed.", EventSeverity.OK);
+			return meshTextureImage;
+		}
+		
+		Logger.INSTANCE.log(Activator.ID, this, getName() + " : Updating Texture Image returned no image.", EventSeverity.WARNING);
+		return null;
+		
+	}	
+	
+	private EContentAdapter getMeshTextureAdapter()
+	{
+		if(meshTextureAdapter == null)
+		{
+			meshTextureAdapter = new EContentAdapter()
+			{
+				@Override
+				public void notifyChanged(Notification notification) 
+				{
+					super.notifyChanged(notification);
+					
+					boolean updateImage = false;
+					
+					if(notification.getNotifier() instanceof CartesianTriangularMeshMapLayer)
+					{
+						int featureId = notification.getFeatureID(CartesianTriangularMeshMapLayer.class);
+						switch (featureId) 
+						{
+							case ApogySurfaceEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+								updateImage = true;
+							break;
+
+						default:
+							break;
+						}
+					}
+					
+					if(notification.getNotifier() instanceof MapLayerPresentation)
+					{
+						int featureId = notification.getFeatureID(MapLayerPresentation.class);
+						switch (featureId) 
+						{
+							case ApogySurfaceEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:						
+								updateImage = true;
+							break;
+
+						default:
+							break;
+						}
+					}
+					
+					if(notification.getNotifier() instanceof ImageMapLayerPresentation)
+					{
+						int featureId = notification.getFeatureID(ImageMapLayerPresentation.class);
+						switch (featureId) 
+						{
+							// Cases where NOT to update the images.
+							case ApogySurfaceEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__NAME:	
+							case ApogySurfaceEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__DESCRIPTION:	
+							break;																					
+							
+							default:
+								updateImage = true;
+							break;						
+						}
+					}
+					
+					if(updateImage)
+					{
+						AbstractEImage img = getMeshTextureImage();		
+						setTextureImage(img);
+						textureImageIsDirty = false;
+					}
+				}
+			};
+		}
+		
+		return meshTextureAdapter;
+	}
+		
+	protected void transactionSet(EObject owner, EStructuralFeature feature, Object value)
+	{
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
+		if(domain instanceof TransactionalEditingDomain)
+		{
+			SetCommand command = new SetCommand(domain, owner, feature, value);
+			domain.getCommandStack().execute(command);
+		}
+	}
+	
 } //CartesianTriangularMeshMapLayerImpl

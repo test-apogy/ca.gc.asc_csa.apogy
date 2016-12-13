@@ -19,22 +19,10 @@
    <extension
          point="ca.gc.asc_csa.apogy.common.topology.ui.presentation">
       <Class
-            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.EarthSkyPresentationAdapter">
-      </Class>
-      <Class
             Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.StarFieldPresentationAdapter">
       </Class>
       <Class
             Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.SunPresentationAdapter">
-      </Class>
-      <Class
-            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.MoonPresentationAdapter">
-      </Class>
-      <Class
-            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.EarthSurfaceWorksitePresentationAdapter">
-      </Class>
-      <Class
-            Class="ca.gc.asc_csa.apogy.core.environment.ui.adapters.FeatureOfInterestPresentationAdapter">
       </Class>
    </extension>
    <extension

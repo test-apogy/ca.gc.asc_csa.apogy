@@ -150,7 +150,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 		return msgs;
 	}
 
-		/**
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

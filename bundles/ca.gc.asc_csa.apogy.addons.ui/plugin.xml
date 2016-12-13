@@ -30,9 +30,6 @@
             Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Ruler3dToolNodePresentationAdapter">
       </Class>
       <Class
-            Class="ca.gc.asc_csa.apogy.addons.ui.adapters.SunVector3DToolNodePresentationAdapter">
-      </Class>
-      <Class
             Class="ca.gc.asc_csa.apogy.addons.ui.adapters.Trajectory3DToolNodePresentationAdapter">
       </Class>
    </extension>

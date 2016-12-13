@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.core.environment.CelestialBody;
-import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.impl.WorksiteImpl;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
@@ -110,38 +109,38 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 
 		return worksiteNode;
 	}
-
-	@Override
-	public void setSky(Sky newSky) 
-	{
-		// TODO Do this in a Transaction.
-
-		// Removes topology from previous Sky if applicable.
-		if (this.getSky() != null) {
-			if (this.getWorksiteNode() instanceof WorksiteNode) {
-				WorksiteNode worksiteNode = (WorksiteNode) this.getWorksiteNode();
-				worksiteNode.getChildren().remove(this.getSky().getSkyNode());
-			}
-		}
-
-		// Updates sky
-		super.setSky(newSky);
-
-		// Adds topology from new Sky Sky if applicable.
-		if (newSky != null) 
-		{
-			if (this.getWorksiteNode() instanceof WorksiteNode) 
-			{
-				WorksiteNode worksiteNode = (WorksiteNode) this.getWorksiteNode();
-				
-				System.out.println("SurfaceWorksiteImpl.setSky() worksiteNode : " + worksiteNode);
-				System.out.println("SurfaceWorksiteImpl.setSky() newSky : " + newSky);
-				System.out.println("SurfaceWorksiteImpl.setSky() newSky.getSkyNode() : " + newSky.getSkyNode());
-				
-				worksiteNode.getChildren().add(newSky.getSkyNode());
-			}
-		}
-	}
+	
+//	@Override
+//	public void setSky(Sky newSky) 
+//	{
+//		// TODO Do this in a Transaction.
+//
+//		// Removes topology from previous Sky if applicable.
+//		if (this.getSky() != null) {
+//			if (this.getWorksiteNode() instanceof WorksiteNode) {
+//				WorksiteNode worksiteNode = (WorksiteNode) this.getWorksiteNode();
+//				worksiteNode.getChildren().remove(this.getSky().getSkyNode());
+//			}
+//		}
+//
+//		// Updates sky
+//		super.setSky(newSky);
+//
+//		// Adds topology from new Sky Sky if applicable.
+//		if (newSky != null) 
+//		{
+//			if (this.getWorksiteNode() instanceof WorksiteNode) 
+//			{
+//				WorksiteNode worksiteNode = (WorksiteNode) this.getWorksiteNode();
+//				
+//				System.out.println("SurfaceWorksiteImpl.setSky() worksiteNode : " + worksiteNode);
+//				System.out.println("SurfaceWorksiteImpl.setSky() newSky : " + newSky);
+//				System.out.println("SurfaceWorksiteImpl.setSky() newSky.getSkyNode() : " + newSky.getSkyNode());
+//				
+//				worksiteNode.getChildren().add(newSky.getSkyNode());
+//			}
+//		}
+//	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

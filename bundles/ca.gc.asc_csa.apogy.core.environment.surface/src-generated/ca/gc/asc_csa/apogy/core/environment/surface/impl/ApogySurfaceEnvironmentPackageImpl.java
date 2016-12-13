@@ -51,7 +51,6 @@ import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLa
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshSlopeImageMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.EllipseShapeImageLayer;
-import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceEnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
@@ -69,6 +68,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
 import ca.gc.asc_csa.apogy.core.environment.surface.RectangularVolumeRegion;
 import ca.gc.asc_csa.apogy.core.environment.surface.Region;
 import ca.gc.asc_csa.apogy.core.environment.surface.SlopeRange;
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceEnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.TopologyTreeMapLayer;

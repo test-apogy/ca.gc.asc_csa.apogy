@@ -343,10 +343,7 @@ class ApogyCoreEnvironmentFacade
 	/**
 	 * Initialize an existing SkyNode.
 	 */
-	op void initializeSkyNode(SkyNode skyNode)
-		
-	// op void initializeSkyNode(Sky sky, SkyNode skyNode)
-	
+	op void initializeSkyNode(SkyNode skyNode)		
 				
 	op Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
 	op Tuple3d getSunVector(Node node, ca.gc.asc_csa.apogy.core.invocator.Environment environment)

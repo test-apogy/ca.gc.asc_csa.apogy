@@ -173,12 +173,8 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		EarthSky earthSky = createEarthSky(worksite.getGeographicalCoordinates());
 		
 		// Sets the worksite sky.
-		// worksite.setSky(earthSky);
-		
-		// Create and initialise the EarthSkyNode.
-		EarthSkyNode earthSkyNode = createEarthSkyNode(worksite.getGeographicalCoordinates());					
-		earthSky.setSkyNode(earthSkyNode);
 		worksite.setSky(earthSky);	
+		earthSky.setWorksite(worksite);
 		
 		//initializeEarthSkyNode(earthSky, earthSkyNode);
 				
