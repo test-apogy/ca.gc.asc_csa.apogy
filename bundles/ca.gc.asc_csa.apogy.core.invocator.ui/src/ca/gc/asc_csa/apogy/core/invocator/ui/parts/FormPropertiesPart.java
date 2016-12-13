@@ -5,12 +5,15 @@ import java.util.List;
 
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.workbench.modeling.ISelectionListener;
+import org.eclipse.emf.ecore.EObject;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts.AbstractFormPropertiesPart;
 import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyAdvancedEditorPartSelection;
 
 public class FormPropertiesPart extends AbstractFormPropertiesPart {
 
+	// TODO move this class to EMFUI
+	
 	@Override
 	protected boolean isReadOnly() {
 		return false;
@@ -20,8 +23,9 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 	protected List<String> getSelectionProvidersIds() {
 		List<String> ids = new ArrayList<>();
 
-		ids.add("ca.gc.asc_csa.apogy.rcp.part.ApogyAdvancedEditorPart");
-
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ApogySessionEditorPart");
+		ids.add("ca.gc.asc_csa.apogy.rcp.part.ApogyTopologyEditorPart");
+		
 		return ids;
 	}
 
@@ -34,6 +38,14 @@ public class FormPropertiesPart extends AbstractFormPropertiesPart {
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ApogyAdvancedEditorPartSelection) {
 					setEObject(((ApogyAdvancedEditorPartSelection) selection).getEObject());
+				}
+			}
+		});
+		listeners.add(new ISelectionListener() {
+			@Override
+			public void selectionChanged(MPart part, Object selection) {
+				if (selection instanceof EObject) {
+					setEObject((EObject)selection);
 				}
 			}
 		});

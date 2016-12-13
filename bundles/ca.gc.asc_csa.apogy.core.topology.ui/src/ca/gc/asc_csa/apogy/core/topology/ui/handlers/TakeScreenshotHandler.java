@@ -5,7 +5,7 @@ import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.topology.ui.parts.AbstractApogyTopologyBasedPart;
+import ca.gc.asc_csa.apogy.core.topology.ui.parts.AbstractApogy3dPart;
 
 public class TakeScreenshotHandler {
 
@@ -16,9 +16,9 @@ public class TakeScreenshotHandler {
 	
 	@Execute
 	public void execute(MPart part){
-		if (part.getObject() instanceof AbstractApogyTopologyBasedPart){
-			AbstractApogyTopologyBasedPart apogyTopologyBasedPart = (AbstractApogyTopologyBasedPart) part.getObject();
-			apogyTopologyBasedPart.takeScreenshot();			
+		if (part.getObject() instanceof AbstractApogy3dPart ){
+			AbstractApogy3dPart apogy3dPart = (AbstractApogy3dPart) part.getObject();
+			apogy3dPart.takeScreenshot();			
 		}
 	}
 }

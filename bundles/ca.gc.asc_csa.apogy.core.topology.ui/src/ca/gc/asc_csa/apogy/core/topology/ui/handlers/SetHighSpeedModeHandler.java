@@ -6,7 +6,7 @@ import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.e4.ui.model.application.ui.menu.MToolItem;
 
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.topology.ui.parts.AbstractApogyTopologyBasedPart;
+import ca.gc.asc_csa.apogy.core.topology.ui.parts.AbstractApogy3dPart;
 
 public class SetHighSpeedModeHandler {
 
@@ -17,9 +17,9 @@ public class SetHighSpeedModeHandler {
 	
 	@Execute
 	public void execute(MPart part, final MToolItem item){
-		if (part.getObject() instanceof AbstractApogyTopologyBasedPart){
-			AbstractApogyTopologyBasedPart apogyTopologyBasedPart = (AbstractApogyTopologyBasedPart) part.getObject();
-			apogyTopologyBasedPart.setHighSpeedMode(item.isSelected());
+		if (part.getObject() instanceof AbstractApogy3dPart){
+			AbstractApogy3dPart apogy3dPart = (AbstractApogy3dPart) part.getObject();
+			apogy3dPart.setHighSpeedMode(item.isSelected());
 		}
 	}
 }
