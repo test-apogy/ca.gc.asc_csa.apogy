@@ -22,7 +22,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.ViewerCell;
@@ -36,13 +38,15 @@ import org.eclipse.swt.widgets.Label;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 
 public class ChooseChildEReferenceWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseChildEReferenceWizardPage";
 
 	private EObjectListComposite eReferencesListComposite;
-	private EObjectListComposite eClassesListComposite;
+	private SubClassesListComposite subClassesListComposite;
+//	private EObjectListComposite eClassesListComposite;
 	private Adapter adapter;
 	private EList<EReference> childEReferences;
 
@@ -100,7 +104,8 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				// Sets the eClassList of the EObjectListComposite of EClasses
-				if (eClassesListComposite != null) {
+				if(subClassesListComposite != null){
+//				if (eClassesListComposite != null) {
 					ChooseChildEReferenceWizardPage.this
 							.setEClassListCompositeList((EReference) this.getSelectedEObject());
 				}
@@ -118,7 +123,7 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 		eReferencesListComposite.setEObjectsList(eObjectsEReferenceList);
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
-		eClassesListComposite = new EObjectListComposite(container, SWT.None) {
+		subClassesListComposite = new SubClassesListComposite(container, SWT.None){
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				ChooseChildEReferenceWizardPage.this.validate();
@@ -129,11 +134,23 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 				return new EClassLabelProvider();
 			}
 		};
+//		eClassesListComposite = new EObjectListComposite(container, SWT.None) {
+//			@Override
+//			protected void newSelection(TreeSelection selection) {
+//				ChooseChildEReferenceWizardPage.this.validate();
+//			}
+//
+//			@Override
+//			protected StyledCellLabelProvider getLabelProvider() {
+//				return new EClassLabelProvider();
+//			}
+//		};
 
 		if (eReferencesListComposite.getSelectedEObject() != null) {
 			setEClassListCompositeList((EReference) eReferencesListComposite.getSelectedEObject());
 		}
-		eClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+//		eClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		eReferencesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
 		setControl(container);
@@ -157,7 +174,8 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 	 * @return EReference The {@link EClass} selected by the user
 	 */
 	public EClass getSelectedEClass() {
-		return (EClass) eClassesListComposite.getSelectedEObject();
+		return subClassesListComposite.getSelectedSubClass();
+//		return (EClass) eClassesListComposite.getSelectedEObject();
 	}
 
 	/**
@@ -168,10 +186,12 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 	 * @param eReference
 	 */
 	private void setEClassListCompositeList(EReference eReference) {
-		EList<EObject> eObjectsEClassList = new BasicEList<EObject>();
-		eObjectsEClassList.addAll(ApogyCommonEMFFacade.INSTANCE
-				.getAllSubEClasses(((EReference) eReferencesListComposite.getSelectedEObject()).getEReferenceType()));
-		eClassesListComposite.setEObjectsList(eObjectsEClassList);
+		subClassesListComposite.setSuperClass(((EReference) eReferencesListComposite.getSelectedEObject()).getEReferenceType());
+//		EList<EObject> eObjectsEClassList = new BasicEList<EObject>();
+//		eObjectsEClassList.addAll(ApogyCommonEMFFacade.INSTANCE
+//				.getAllSubEClasses(((EReference) eReferencesListComposite.getSelectedEObject()).getEReferenceType()));
+//		
+//		eClassesListComposite.setEObjectsList(eObjectsEClassList);
 	}
 
 	/**
@@ -264,7 +284,8 @@ public class ChooseChildEReferenceWizardPage extends WizardPage {
 		if (eReferencesListComposite.getSelectedEObject() == null) {
 			errorEReference = "<Reference> ";
 		}
-		if (eClassesListComposite == null || eClassesListComposite.getSelectedEObject() == null) {
+		if(subClassesListComposite == null || subClassesListComposite.getSelectedSubClass() == null){
+//		if (eClassesListComposite == null || eClassesListComposite.getSelectedEObject() == null) {
 			errorEClass = "<Type> ";
 		}
 
