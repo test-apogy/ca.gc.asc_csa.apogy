@@ -24,7 +24,6 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmen
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.scene_objects.EarthSurfaceWorksiteSceneObject;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.impl.AbstractSurfaceWorksitePresentationImpl;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceUIPreferencesConstants;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,38 +78,8 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
 			
 			switch (featureID) 
 			{
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
-					earthSurfaceWorksiteSceneObject.setAxisVisible(notification.getNewBooleanValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
-					earthSurfaceWorksiteSceneObject.setAxisLength(notification.getNewDoubleValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
-					earthSurfaceWorksiteSceneObject.setAzimuthVisible(notification.getNewBooleanValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
-					earthSurfaceWorksiteSceneObject.setAzimuthLinesVisible(notification.getNewBooleanValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
-					earthSurfaceWorksiteSceneObject.setElevationLinesVisible(notification.getNewBooleanValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
-					earthSurfaceWorksiteSceneObject.setPlaneVisible(notification.getNewBooleanValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
-					earthSurfaceWorksiteSceneObject.setPlaneParameters(getPlaneGridSize(), notification.getNewDoubleValue());
-				break;
-				
-				case ApogyCoreEnvironmentSurfaceEarthUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
-					earthSurfaceWorksiteSceneObject.setPlaneParameters(notification.getNewDoubleValue(), getPlaneSize());
-				break;
-				
+				// Nothing yet.
+			
 				default:
 				break;
 			}
@@ -123,21 +92,13 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
   	protected void initialSceneObject() 
   	{
   		EarthSurfaceWorksiteSceneObject earthSurfaceWorksiteSceneObject = (EarthSurfaceWorksiteSceneObject) sceneObject;
-    		
-  		// Axis
-  		earthSurfaceWorksiteSceneObject.setAxisVisible(isAxisVisible());
-  		earthSurfaceWorksiteSceneObject.setAxisLength(getAxisLength());
+    	
+  		// Nothing yet.
   		
-  		// Plane
-  		earthSurfaceWorksiteSceneObject.setPlaneVisible(isPlaneVisible());
-  		earthSurfaceWorksiteSceneObject.setPlaneParameters(getPlaneGridSize(), getPlaneSize());
+  		// DEBUG
+  		earthSurfaceWorksiteSceneObject.setPlaneVisible(true);
+  		earthSurfaceWorksiteSceneObject.setPlaneParameters(1, 100);
   		
-  		// Azimuth
-  		earthSurfaceWorksiteSceneObject.setAzimuthVisible(isAzimuthVisible());
-  		earthSurfaceWorksiteSceneObject.setAzimuthLinesVisible(isAzimuthLinesVisible());
-  		
-  		// Elevation
-  		earthSurfaceWorksiteSceneObject.setElevationLinesVisible(isElevationLinesVisible());
   		
   		super.initialSceneObject();
   	}
@@ -148,21 +109,7 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
   	{ 		
   		IPreferenceStore surfaceUIPreferenceStore = ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Activator.getDefault().getPreferenceStore();
   		
-  		// Set the axis visibility and length.
-  		setAxisVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE_ID));
-  		setAxisLength(surfaceUIPreferenceStore.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_LENGTH_ID));
-  		
-  		// Set Azimuth and Azimuth Lines visibility.
-  		setAzimuthVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID));
-  		setAzimuthLinesVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_LINES_VISIBLE_ID));
-  		
-  		// Set Elevation Line visibility.
-  		setElevationLinesVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_ELEVATION_LINES_VISIBLE_ID));
-  		
-  		// Set plane settings.
-  		setPlaneVisible(surfaceUIPreferenceStore.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_VISIBLE_ID));  		  
-  		setPlaneSize(surfaceUIPreferenceStore.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_SIZE_ID));
-  		setPlaneGridSize(surfaceUIPreferenceStore.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_GRID_SIZE_ID));
+  		// Nothing yet.
   		
 		super.applyPreferences();
 	}

@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.core.environment.surface.ui;singleton:=true
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ca.gc.asc_csa.apogy.core.environment.surface.ui,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.adapters,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.commands,
@@ -50,4 +50,4 @@ Require-Bundle: org.eclipse.core.runtime,
  ca.gc.asc_csa.apogy.common.topology.ui;bundle-version="0.5.0";visibility:=reexport,
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogyCoreSurfaceEnvironmentUIEditPlugin$Implementation
+Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator

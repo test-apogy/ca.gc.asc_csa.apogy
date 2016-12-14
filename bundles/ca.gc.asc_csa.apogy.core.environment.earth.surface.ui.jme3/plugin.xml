@@ -10,5 +10,11 @@
             Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
       </Class>
    </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.preferences.ApogyEarthSurfaceEnvironmentUIJME3Initializer">
+      </initializer>
+   </extension>
 
 </plugin>

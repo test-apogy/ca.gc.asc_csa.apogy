@@ -48,7 +48,7 @@ Require-Bundle: ca.gc.asc_csa.apogy.core.environment;visibility:=reexport,
  ca.gc.asc_csa.apogy.common.converters.ui,
  ca.gc.asc_csa.apogy.common.emf.ui;bundle-version="0.5.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIEditPlugin$Implementation
+Bundle-Activator: ca.gc.asc_csa.apogy.core.environment.ui.Activator
 Export-Package: ca.gc.asc_csa.apogy.core.environment.ui,
  ca.gc.asc_csa.apogy.core.environment.ui.adapters,
  ca.gc.asc_csa.apogy.core.environment.ui.composites,

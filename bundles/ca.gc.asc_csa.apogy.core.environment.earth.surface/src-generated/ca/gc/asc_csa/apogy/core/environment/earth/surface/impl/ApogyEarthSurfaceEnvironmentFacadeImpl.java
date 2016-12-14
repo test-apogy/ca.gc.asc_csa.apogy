@@ -190,7 +190,7 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		
 		// Attaches a Map
 		Map map = getDefaultMarsTerrainMap();						
-		worksite.getMapsList().getMaps().add(map);			
+		// TODO worksite.getMapsList().getMaps().add(map);			
 		
 		return worksite;
 	}

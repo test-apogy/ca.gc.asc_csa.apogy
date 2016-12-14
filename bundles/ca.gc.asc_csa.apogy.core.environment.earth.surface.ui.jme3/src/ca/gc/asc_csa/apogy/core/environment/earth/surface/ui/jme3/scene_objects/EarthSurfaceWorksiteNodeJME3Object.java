@@ -100,8 +100,8 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	private float axisLength = 1.0f;
 	
 	private boolean planeVisible = true;
-	private float gridSize = 1;
-	private float planeSize = 1;	
+	private float gridSize = 100.0f;
+	private float planeSize = 10.0f;	
 	
 	private boolean azimuthVisible = true;
 	private boolean azimuthLinesVisible = true;
@@ -182,34 +182,43 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	public void setPlaneParameters(double newGridSize, double newPlaneSize)
 	{
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Plane grid size to <" + newGridSize + "> and grid size to <" + newPlaneSize + ">", EventSeverity.INFO);
-		this.gridSize = (float) newGridSize;
-		this.planeSize = (float) newPlaneSize;		
 		
-		jme3Application.enqueue(new Callable<Object>() 
+		if(newGridSize > 0 && newPlaneSize > 0)
 		{
-			@Override
-			public Object call() throws Exception 
-			{									
-				// Detach previous geometry.
-				if(gridGeometry != null)
-				{
-					getAttachmentNode().detachChild(gridGeometry);
+			this.gridSize = (float) newGridSize;
+			this.planeSize = (float) newPlaneSize;		
+			
+			jme3Application.enqueue(new Callable<Object>() 
+			{
+				@Override
+				public Object call() throws Exception 
+				{									
+					// Detach previous geometry.
+					if(gridGeometry != null)
+					{
+						getAttachmentNode().detachChild(gridGeometry);
+					}
+					
+					gridGeometry = createGridGeometry();
+					
+					if(planeVisible)
+					{
+						getAttachmentNode().attachChild(gridGeometry);
+					}
+					else
+					{
+						getAttachmentNode().detachChild(gridGeometry);
+					}			
+					
+					return null;
 				}
-				
-				gridGeometry = createGridGeometry();
-				
-				if(planeVisible)
-				{
-					getAttachmentNode().attachChild(gridGeometry);
-				}
-				else
-				{
-					getAttachmentNode().detachChild(gridGeometry);
-				}			
-				
-				return null;
-			}
-		});	
+			});	
+		}
+		else
+		{
+			Logger.INSTANCE.log(Activator.ID, this, "Failed to set Plane grid size to <" + newGridSize + "> and grid size to <" + newPlaneSize + ">", EventSeverity.ERROR);
+
+		}
 	}
 
 	@Override

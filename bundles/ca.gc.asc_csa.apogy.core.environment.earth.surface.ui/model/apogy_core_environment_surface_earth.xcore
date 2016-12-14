@@ -55,6 +55,7 @@ class EarthSurfaceWorksitePresentation extends AbstractSurfaceWorksitePresentati
 {
 }
 
+
 /**
  * Defines the display properties associated with an EarthSky. 
  */

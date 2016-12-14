@@ -32,7 +32,7 @@ Contributors:
 		  dynamicTemplates="true", 
 		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
 @GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated")
-@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated")
+@GenModel(editDirectory="/ca.gc.asc_csa.apogy.core.environment.surface.ui.edit/src-generated")
 
 package ca.gc.asc_csa.apogy.core.environment.surface.ui
 

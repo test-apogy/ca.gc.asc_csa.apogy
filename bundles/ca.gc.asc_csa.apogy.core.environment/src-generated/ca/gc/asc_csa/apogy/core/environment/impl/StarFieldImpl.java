@@ -56,8 +56,7 @@ import ca.gc.asc_csa.apogy.core.environment.StarField;
  * @generated
  */
 public class StarFieldImpl extends NodeImpl implements StarField
-{
-	
+{	
 	private boolean starsAreDirty = true;
 	
   /**

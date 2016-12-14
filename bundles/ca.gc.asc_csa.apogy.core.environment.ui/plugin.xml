@@ -107,28 +107,6 @@
             genModel="model/apogy_core_environment_ui.xcore"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated apogy_core_environment_ui -->
-      <factory
-            uri="ca.gc.asc_csa.apogy.core.environment.ui"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated apogy_core_environment_ui -->
-      <extender
-            uri="ca.gc.asc_csa.apogy.common.topology.ui"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
-      <extender
-            uri="ca.gc.asc_csa.apogy.common.topology"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.provider.ApogyCoreEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
-   </extension>
    <extension
          point="org.eclipse.ui.commands">
       <command

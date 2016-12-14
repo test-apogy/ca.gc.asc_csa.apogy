@@ -13,16 +13,19 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
+
+import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.scene_objects.AbstractSurfaceWorksiteSceneObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +47,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImpl implements AbstractSurfaceWorksitePresentation {
+public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImpl implements AbstractSurfaceWorksitePresentation 
+{
+	protected IPropertyChangeListener preferencesListener = null;
+	
 	/**
 	 * The default value of the '{@link #isAxisVisible() <em>Axis Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -208,10 +214,16 @@ public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImp
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	protected AbstractSurfaceWorksitePresentationImpl() {
 		super();
+				
+		// Initializes values from preferences
+		applyPreferences();	
+		
+		// Register a listener to the preference store
+		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getPreferencesListener());	
 	}
 
 	/**
@@ -550,4 +562,123 @@ public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImp
 		return result.toString();
 	}
 
-} //AbstractSurfaceWorksitePresentationImpl
+  	@Override
+	public boolean isUseInBoundingCalculation() 
+  	{
+	  return false;
+	}  	   	
+  	
+  	@Override
+  	protected void updateSceneObject(Notification notification) 
+  	{
+		if (sceneObject != null) 
+		{
+			AbstractSurfaceWorksiteSceneObject abstractSurfaceWorksiteSceneObject = (AbstractSurfaceWorksiteSceneObject) sceneObject;
+			
+			int featureID = notification.getFeatureID(AbstractSurfaceWorksitePresentation.class);
+			
+			switch (featureID) 
+			{
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+					abstractSurfaceWorksiteSceneObject.setAxisVisible(notification.getNewBooleanValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+					abstractSurfaceWorksiteSceneObject.setAxisLength(notification.getNewDoubleValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+					abstractSurfaceWorksiteSceneObject.setAzimuthVisible(notification.getNewBooleanValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+					abstractSurfaceWorksiteSceneObject.setAzimuthLinesVisible(notification.getNewBooleanValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+					abstractSurfaceWorksiteSceneObject.setElevationLinesVisible(notification.getNewBooleanValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+					abstractSurfaceWorksiteSceneObject.setPlaneVisible(notification.getNewBooleanValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+					abstractSurfaceWorksiteSceneObject.setPlaneParameters(getPlaneGridSize(), notification.getNewDoubleValue());
+				break;
+				
+				case ApogySurfaceEnvironmentUIPackage.ABSTRACT_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+					abstractSurfaceWorksiteSceneObject.setPlaneParameters(notification.getNewDoubleValue(), getPlaneSize());
+				break;
+				
+				default:
+				break;
+			}
+		}
+		
+		super.updateSceneObject(notification);
+	}
+  	
+  	@Override
+  	protected void initialSceneObject() 
+  	{
+  		AbstractSurfaceWorksiteSceneObject abstractSurfaceWorksiteSceneObject = (AbstractSurfaceWorksiteSceneObject) sceneObject;
+    		
+  		// Axis
+  		abstractSurfaceWorksiteSceneObject.setAxisVisible(isAxisVisible());
+  		abstractSurfaceWorksiteSceneObject.setAxisLength(getAxisLength());
+  		
+  		// Plane
+  		abstractSurfaceWorksiteSceneObject.setPlaneVisible(isPlaneVisible());
+  		abstractSurfaceWorksiteSceneObject.setPlaneParameters(getPlaneGridSize(), getPlaneSize());
+  		
+  		// Azimuth
+  		abstractSurfaceWorksiteSceneObject.setAzimuthVisible(isAzimuthVisible());
+  		abstractSurfaceWorksiteSceneObject.setAzimuthLinesVisible(isAzimuthLinesVisible());
+  		
+  		// Elevation
+  		abstractSurfaceWorksiteSceneObject.setElevationLinesVisible(isElevationLinesVisible());
+  		
+  		super.initialSceneObject();
+  	}
+  	
+  
+  	@Override
+	protected void applyPreferences() 
+  	{
+  		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+  		
+  		// Set the axis visibility and length.
+  		setAxisVisible(store.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE_ID));
+  		setAxisLength(store.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_LENGTH_ID));
+  		
+  		// Set Azimuth and Azimuth Lines visibility.
+  		setAzimuthVisible(store.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID));
+  		setAzimuthLinesVisible(store.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_LINES_VISIBLE_ID));
+  		
+  		// Set Elevation Line visibility.
+  		setElevationLinesVisible(store.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_ELEVATION_LINES_VISIBLE_ID));
+  		
+  		// Set plane settings.
+  		setPlaneVisible(store.getBoolean(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_VISIBLE_ID));  		  
+  		setPlaneSize(store.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_SIZE_ID));
+  		setPlaneGridSize(store.getDouble(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_GRID_SIZE_ID));
+  		
+		super.applyPreferences();
+	}
+  	
+	private IPropertyChangeListener getPreferencesListener()
+	{
+		if(preferencesListener == null)
+		{
+			preferencesListener = new IPropertyChangeListener() 
+			{
+				public void propertyChange(PropertyChangeEvent event) 
+				{	
+					applyPreferences();		
+				}	
+			};
+		}
+		
+		return preferencesListener;
+	}} //AbstractSurfaceWorksitePresentationImpl

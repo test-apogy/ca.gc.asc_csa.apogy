@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Activator;
 
 public class ApogyEnvironmentSurfaceEarthUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	

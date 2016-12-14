@@ -25,30 +25,4 @@
             genModel="model/apogy_core_environment_surface_ui.xcore"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated apogy_core_environment_surface_ui -->
-      <factory
-            uri="ca.gc.asc_csa.apogy.core.environment.surface.ui"
-            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogySurfaceEnvironmentUIItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated apogy_core_environment_surface_ui -->
-      <extender
-            uri="ca.gc.asc_csa.apogy.common.topology.ui"
-            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogySurfaceEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyUIChildCreationExtender"/>
-      <extender
-            uri="ca.gc.asc_csa.apogy.core.invocator"
-            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogySurfaceEnvironmentUIItemProviderAdapterFactory$ApogyCoreInvocatorChildCreationExtender"/>
-      <extender
-            uri="ca.gc.asc_csa.apogy.common.topology"
-            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.provider.ApogySurfaceEnvironmentUIItemProviderAdapterFactory$ApogyCommonTopologyChildCreationExtender"/>
-   </extension>
-
 </plugin>

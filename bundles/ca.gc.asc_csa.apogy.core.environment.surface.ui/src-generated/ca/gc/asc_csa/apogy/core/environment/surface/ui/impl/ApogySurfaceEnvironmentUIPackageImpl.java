@@ -1644,7 +1644,7 @@ public class ApogySurfaceEnvironmentUIPackageImpl extends EPackageImpl implement
 			 "dynamicTemplates", "true",
 			 "templateDirectory", "platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates",
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated",
-			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated",
+			 "editDirectory", "/ca.gc.asc_csa.apogy.core.environment.surface.ui.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.core.environment.surface"
 		   });	
 		addAnnotation
