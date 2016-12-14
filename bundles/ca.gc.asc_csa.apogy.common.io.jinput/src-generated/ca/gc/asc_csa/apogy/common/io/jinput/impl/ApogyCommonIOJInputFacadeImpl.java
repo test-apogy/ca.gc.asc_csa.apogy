@@ -37,9 +37,8 @@ import net.java.games.input.Event;
 import net.java.games.input.EventQueue;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Facade</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Facade</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -49,11 +48,10 @@ import net.java.games.input.EventQueue;
  *
  * @generated
  */
-public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonIOJInputFacade {	
+public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCommonIOJInputFacade {
 	/**
 	 * The default value of the '{@link #isSelectingComponent() <em>Selecting Component</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isSelectingComponent()
 	 * @generated
 	 * @ordered
@@ -61,8 +59,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	protected static final boolean SELECTING_COMPONENT_EDEFAULT = false;
 	/**
 	 * The cached value of the '{@link #isSelectingComponent() <em>Selecting Component</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isSelectingComponent()
 	 * @generated
 	 * @ordered
@@ -81,11 +78,10 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 			instance = new ApogyCommonIOJInputFacadeImpl();
 		}
 		return instance;
-	}	
-	
+	}
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected ApogyCommonIOJInputFacadeImpl() {
@@ -93,8 +89,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -103,8 +98,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isSelectingComponent() {
@@ -112,8 +106,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSelectingComponent(boolean newSelectingComponent) {
@@ -127,64 +120,68 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	 * @generated_NOT
 	 */
 	private Adapter selectComponentAdapter;
-	
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void startSelectComponent(EComponentQualifier eComponentQualifier) {
+		// Message to warn that there is already a controller selection running.
 		if (isSelectingComponent()) {
 			String message = this.getClass().getSimpleName()
 					+ "Component selection already started. \nUse ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier) to stop a selection and prevent memory leaks.";
 			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 		}
+		// Clears the EventQueue for each controller
 		for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
 			EventQueue queue = eController.getPojoController().getEventQueue();
 			Event event = new Event();
-			while (queue.getNextEvent(event));
+			while (queue.getNextEvent(event)){}
 		}
 
-		if (selectComponentAdapter == null) {
-			selectComponentAdapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification msg) {
-					for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
+		selectComponentAdapter = new AdapterImpl() {
+			@Override
+			public void notifyChanged(Notification msg) {
+				// Polls every controller
+				for (EController eController : Activator.getEControllerEnvironment().getControllers()) {
 
-						Display.getDefault().asyncExec(new Runnable() {
-							@Override
-							public void run() {
-								Controller controller = eController.getPojoController();
+					Display.getDefault().asyncExec(new Runnable() {
+						@Override
+						public void run() {
+							Controller controller = eController.getPojoController();
 
-								controller.poll();
-								EventQueue queue = controller.getEventQueue();
-								Event event = new Event();
+							controller.poll();
+							EventQueue queue = controller.getEventQueue();
+							Event event = new Event();
 
-								while (queue.getNextEvent(event)) {
-									if (Math.abs(event.getValue()) > 0.5) {
-										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
-												ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
-												event.getComponent().getName());
-										ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
-												ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
-												eController.getName());
-									}
+							while (queue.getNextEvent(event)) {
+								// If a value registered is higher than 0.5 or
+								// lower than -0.5, the EComponentQualifier is
+								// modified.
+								if (Math.abs(event.getValue()) > 0.5) {
+									ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+											ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
+											event.getComponent().getName());
+									ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+											ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
+											eController.getName());
 								}
 							}
-						});
-					}
-					;
+						}
+					});
 				}
+				;
+			}
 
-			};
-		}
+		};
 		Activator.getEControllerEnvironment().eAdapters().add(selectComponentAdapter);
 		setSelectingComponent(true);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	public void stopSelectComponent(EComponentQualifier eComponentQualifier) {
@@ -196,8 +193,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -210,8 +206,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -225,8 +220,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -240,8 +234,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -254,8 +247,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -272,8 +264,7 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -287,4 +278,4 @@ public class ApogyCommonIOJInputFacadeImpl extends MinimalEObjectImpl.Container 
 		return result.toString();
 	}
 
-} //ApogyCommonIOJInputFacadeImpl
+} // ApogyCommonIOJInputFacadeImpl

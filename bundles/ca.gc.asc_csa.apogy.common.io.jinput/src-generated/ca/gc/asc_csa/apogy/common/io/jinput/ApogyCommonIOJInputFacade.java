@@ -36,6 +36,7 @@ import ca.gc.asc_csa.apogy.common.io.jinput.impl.ApogyCommonIOJInputFacadeImpl;
 public interface ApogyCommonIOJInputFacade extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Selecting Component</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Selecting Component</em>' attribute isn't clear,
@@ -45,7 +46,7 @@ public interface ApogyCommonIOJInputFacade extends EObject {
 	 * @return the value of the '<em>Selecting Component</em>' attribute.
 	 * @see #setSelectingComponent(boolean)
 	 * @see ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage#getApogyCommonIOJInputFacade_SelectingComponent()
-	 * @model unique="false"
+	 * @model default="false" unique="false"
 	 * @generated
 	 */
 	boolean isSelectingComponent();
@@ -63,6 +64,10 @@ public interface ApogyCommonIOJInputFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Starts the component selection.
+	 * @param eComponentQualifier The {@link EComponentQualifier} to save the selection.
+	 * <!-- end-model-doc -->
 	 * @model eComponentQualifierUnique="false"
 	 * @generated
 	 */
@@ -71,6 +76,10 @@ public interface ApogyCommonIOJInputFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Stops the component selection.
+	 * @param eComponentQualifier The {@link EComponentQualifier} that was being selected.
+	 * <!-- end-model-doc -->
 	 * @model eComponentQualifierUnique="false"
 	 * @generated
 	 */

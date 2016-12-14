@@ -46,6 +46,7 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 	
+	private CreateResultsComposite createResultsComposite;
 	private VariableFeatureReferenceComposite variableFeatureReferenceComposite;
 	private EOperationsComposite eOperationsComposite;
 	private TriggerComposite triggerComposite;
@@ -68,6 +69,9 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 		Composite composite = new Composite(this, SWT.None);
 		composite.setLayout(new GridLayout(2, true));
 	
+		createResultsComposite = new CreateResultsComposite(composite, SWT.None);
+		createResultsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1));
+		
 		/**
 		 * VariableFeatureReference
 		 */
@@ -82,9 +86,6 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
 			}
 		};
-		GridLayout gridLayout = (GridLayout) variableFeatureReferenceComposite.getLayout();
-		gridLayout.marginWidth = 0;
-		gridLayout.marginHeight = 0;
 		variableFeatureReferenceComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 1));
 	
 		Section sectionOperaion = toolkit.createSection(composite,  Section.EXPANDED | Section.TITLE_BAR);		
@@ -158,6 +159,7 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
 		this.operationCallControllerBinding = operationCallControllerBinding;
 		
+		createResultsComposite.setOperationCallControllerBinding(this.operationCallControllerBinding);
 		variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(), this.operationCallControllerBinding);
 		if (this.operationCallControllerBinding.getVariable()!=null){		
 			eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(this.operationCallControllerBinding), this.operationCallControllerBinding.getEOperation());

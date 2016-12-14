@@ -126,8 +126,8 @@ public class ApogyCommonEMFUIFacadeImpl extends MinimalEObjectImpl.Container imp
 
 		eObjectsToDeleteMessage += ApogyCommonEMFFacade.INSTANCE.toString(namedList, ", ");
 
-		MessageDialog dialog = new MessageDialog(null, "Delete the selected variables", null,
-				"Are you sure to delete these variables: " + eObjectsToDeleteMessage, MessageDialog.QUESTION,
+		MessageDialog dialog = new MessageDialog(null, "Delete the selected elements", null,
+				"Are you sure to delete these elements: " + eObjectsToDeleteMessage + "?", MessageDialog.QUESTION,
 				new String[] { "Yes", "No" }, 1);
 		int result = dialog.open();
 		if (result == 0) {

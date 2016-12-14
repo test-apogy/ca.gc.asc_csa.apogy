@@ -28,7 +28,10 @@ public class NoContentComposite extends Composite {
 	 */
 	public NoContentComposite(Composite parent, int style) {
 		super(parent, style);
-		setLayout(new GridLayout(1, false));
+		GridLayout gridLayout_arguments = new GridLayout(1, false);
+		gridLayout_arguments.marginWidth = 0;
+		gridLayout_arguments.marginHeight = 0;
+		setLayout(gridLayout_arguments);
 		
 		Label lblNoActiveSession = new Label(this, SWT.NONE);
 		lblNoActiveSession.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true, 1, 1));

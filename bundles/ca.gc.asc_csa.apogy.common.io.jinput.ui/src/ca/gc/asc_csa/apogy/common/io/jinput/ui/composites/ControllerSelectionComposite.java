@@ -50,7 +50,7 @@ public class ControllerSelectionComposite extends Composite {
 
 	private Text controllerText;
 	private Text componentText;
-	
+
 	private boolean selectionStarted = false;
 	private Listener listener;
 
@@ -82,7 +82,7 @@ public class ControllerSelectionComposite extends Composite {
 		controllerText.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				if(!selectionStarted){
+				if (!selectionStarted) {
 					startSelection();
 				}
 			}
@@ -121,10 +121,13 @@ public class ControllerSelectionComposite extends Composite {
 		});
 	}
 
-	private void startSelection() {		
+	/**
+	 * Starts the controller selection.
+	 */
+	private void startSelection() {
 		if (!ApogyCommonIOJInputFacade.INSTANCE.isSelectingComponent()) {
 			selectionStarted = true;
-			if(eComponentQualifier != null){
+			if (eComponentQualifier != null) {
 				initialControllerName = eComponentQualifier.getEControllerName();
 				initialComponentName = eComponentQualifier.getEComponentName();
 			}
@@ -143,6 +146,12 @@ public class ControllerSelectionComposite extends Composite {
 		}
 	}
 
+	/**
+	 * {@link Listener} that cancels the selection if the user presses escape
+	 * and confirms the selection if the user presses enter
+	 * 
+	 * @return {@link Listener}
+	 */
 	private Listener getListener() {
 		if (this.listener == null) {
 			listener = new Listener() {
@@ -150,9 +159,13 @@ public class ControllerSelectionComposite extends Composite {
 				public void handleEvent(Event event) {
 					if (event.detail == SWT.TRAVERSE_ESCAPE || event.detail == SWT.TRAVERSE_RETURN) {
 						stopSelection();
-						if(event.detail == SWT.TRAVERSE_ESCAPE && eComponentQualifier != null){
-							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME, initialControllerName);
-							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier, ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME, initialComponentName);
+						if (event.detail == SWT.TRAVERSE_ESCAPE && eComponentQualifier != null) {
+							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+									ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME,
+									initialControllerName);
+							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(eComponentQualifier,
+									ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME,
+									initialComponentName);
 						}
 						event.doit = false;
 					}
@@ -162,6 +175,9 @@ public class ControllerSelectionComposite extends Composite {
 		return listener;
 	}
 
+	/**
+	 * Stops the controller selection.
+	 */
 	private void stopSelection() {
 		ApogyCommonIOJInputFacade.INSTANCE.stopSelectComponent(eComponentQualifier);
 		selectionStarted = false;
@@ -184,7 +200,7 @@ public class ControllerSelectionComposite extends Composite {
 		this.eComponentQualifier = eComponentQualifier;
 
 		initDataBindingsCustom();
-		
+
 		if (eComponentQualifier.getEControllerName() != null) {
 			controllerText.setText(eComponentQualifier.getEControllerName());
 		}
@@ -192,19 +208,26 @@ public class ControllerSelectionComposite extends Composite {
 			controllerText.setText(eComponentQualifier.getEComponentName());
 		}
 		controllerText.setBackground(getTextsBackgroundColor());
-		componentText.setBackground(getTextsBackgroundColor());		
+		componentText.setBackground(getTextsBackgroundColor());
 	}
 
 	protected void newSelection(ISelection selection) {
 	}
-	
-	private Color getTextsBackgroundColor(){
-		if(selectionStarted){
+
+	/**
+	 * Returns yellow if the selection is activated. Returns red is the
+	 * {@link EComponentQualifier} is not valid. Returns red is the
+	 * {@link EComponentQualifier} is valid.
+	 * 
+	 * @return {@link Color}
+	 */
+	private Color getTextsBackgroundColor() {
+		if (selectionStarted) {
 			return SWTResourceManager.getColor(SWT.COLOR_YELLOW);
 		}
-		if(Activator.getEControllerEnvironment().resolveEComponent(eComponentQualifier) != null){
+		if (Activator.getEControllerEnvironment().resolveEComponent(eComponentQualifier) != null) {
 			return SWTResourceManager.getColor(SWT.COLOR_GREEN);
-		}else{
+		} else {
 			return SWTResourceManager.getColor(SWT.COLOR_RED);
 		}
 	}
@@ -230,19 +253,19 @@ public class ControllerSelectionComposite extends Composite {
 				}));
 		m_bindingContext.bindValue(observeControllerTextBackground, observeEComponentQualifierControllerName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, Color.class) {
-					
+
 					@Override
 					public Object convert(Object fromObject) {
 						return getTextsBackgroundColor();
 					}
 				}));
-	
+
 		IObservableValue<?> observeEComponentQualifierComponentName = EMFProperties
 				.value(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME)
 				.observe(eComponentQualifier);
 		IObservableValue<?> observeComponentTextText = WidgetProperties.text().observe(componentText);
 		IObservableValue<?> observeComponentTextBackground = WidgetProperties.background().observe(controllerText);
-		
+
 		m_bindingContext.bindValue(observeComponentTextText, observeEComponentQualifierComponentName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, String.class) {
 
@@ -254,18 +277,13 @@ public class ControllerSelectionComposite extends Composite {
 				}));
 		m_bindingContext.bindValue(observeComponentTextBackground, observeEComponentQualifierComponentName, null,
 				new UpdateValueStrategy().setConverter(new Converter(String.class, Color.class) {
-					
+
 					@Override
 					public Object convert(Object fromObject) {
 						return getTextsBackgroundColor();
 					}
 				}));
-		
-		return m_bindingContext;
-	}
 
-	@Override
-	public void dispose() {
-		super.dispose();
+		return m_bindingContext;
 	}
 }

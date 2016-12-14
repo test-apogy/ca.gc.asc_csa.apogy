@@ -17,7 +17,8 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
-import org.eclipse.emf.databinding.EMFProperties;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -49,26 +50,7 @@ public class CreateResultsComposite extends Composite {
 		checkBox = new Button(this, SWT.CHECK);
 		checkBox.setText("Create results");
 
-		m_bindingContext = customDataBindings();
-	}
-
-	@SuppressWarnings("unchecked")
-	private DataBindingContext customDataBindings() {
-		m_bindingContext = new DataBindingContext();
 		operationCallControllerBindingBinder = new WritableValue<>();
-
-		/**
-		 * CheckBox data binding.
-		 */
-		IObservableValue<?> observeOperationCallControllerBindingCreateResult = EMFProperties
-				.value(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT)
-				.observeDetail(operationCallControllerBindingBinder);
-		IObservableValue<?> observeCheckBoxChecked = WidgetProperties.selection().observe(checkBox);
-
-		m_bindingContext.bindValue(observeCheckBoxChecked, observeOperationCallControllerBindingCreateResult,
-				new UpdateValueStrategy(), new UpdateValueStrategy());
-
-		return m_bindingContext;
 	}
 
 	/**
@@ -92,6 +74,31 @@ public class CreateResultsComposite extends Composite {
 			operationCallControllerBindingBinder = new WritableValue<>();
 		}
 		operationCallControllerBindingBinder.setValue(operationCallControllerBinding);
+		
+		customDataBinding();
+	}
+	
+	@SuppressWarnings("unchecked")
+	private DataBindingContext customDataBinding(){
+		
+		if(m_bindingContext != null){
+			m_bindingContext.dispose();
+		}
+		
+		m_bindingContext = new DataBindingContext();
+		/**
+		 * CheckBox data binding.
+		 */
+		IObservableValue<?> observeOperationCallControllerBindingCreateResult = EMFEditProperties
+				.value(TransactionUtil.getEditingDomain(getOperationCallControllerBinding()),
+						ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT)
+				.observeDetail(operationCallControllerBindingBinder);
+		IObservableValue<?> observeCheckBoxChecked = WidgetProperties.selection().observe(checkBox);
+
+		m_bindingContext.bindValue(observeCheckBoxChecked, observeOperationCallControllerBindingCreateResult,
+				new UpdateValueStrategy(), new UpdateValueStrategy());
+		
+		return m_bindingContext;
 	}
 
 }

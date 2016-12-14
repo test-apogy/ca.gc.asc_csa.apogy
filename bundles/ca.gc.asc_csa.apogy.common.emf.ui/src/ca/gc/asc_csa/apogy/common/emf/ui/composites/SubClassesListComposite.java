@@ -34,8 +34,7 @@ import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
@@ -56,12 +55,11 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	public SubClassesListComposite(Composite parent, int style) {
 		super(parent, style);
-		setLayout(new GridLayout());
+		setLayout(new FillLayout());
 
 		treeViewerSubClasses = new TreeViewer(this, SWT.BORDER);
 		Tree treeTypes = treeViewerSubClasses.getTree();
 		treeTypes.setLinesVisible(true);
-		treeTypes.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		ColumnViewerToolTipSupport.enableFor(treeViewerSubClasses);
 
 		TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewerSubClasses, SWT.NONE);
@@ -235,5 +233,9 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	@Override
 	public void setSelection(ISelection selection) {
 		eClass = (EClass) selection;
+	}
+	
+	public void refresh(){
+		treeViewerSubClasses.refresh();
 	}
 }

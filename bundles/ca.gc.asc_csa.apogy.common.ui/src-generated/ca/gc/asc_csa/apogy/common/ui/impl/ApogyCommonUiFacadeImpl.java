@@ -145,6 +145,7 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 			}
 
 		});
+		// Adjusts the columns when the tree is expanded
 		treeViewer.getTree().addListener(SWT.Expand, new Listener() {
 			public void handleEvent(Event e) {
 			TreeItem treeItem = (TreeItem)e.item;

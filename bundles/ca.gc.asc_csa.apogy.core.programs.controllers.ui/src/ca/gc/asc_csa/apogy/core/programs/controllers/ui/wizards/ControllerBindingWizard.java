@@ -76,7 +76,13 @@ public class ControllerBindingWizard extends Wizard {
 			public void handleEvent(Event event) {
 				if (event.detail == SWT.TRAVERSE_ESCAPE) {
 					if (event.doit) {
-						performCancel();
+						CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
+								"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
+								MessageDialog.QUESTION, new String[] { "Yes", "No" }, 1);
+						int result = dialog.open();
+						if (result == 0) {
+							performCancel();
+						}
 						event.doit = false;
 					}
 				}
@@ -191,19 +197,19 @@ public class ControllerBindingWizard extends Wizard {
 		return controllerBinding;
 	}
 
-	@Override
-	public boolean performCancel() {
-		/**
-		 * Confirmation dialog
-		 */
-		// TODO replace with general confirmation dialog
-		String[] buttons = { "Yes", "No" };
-		CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
-				"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
-				MessageDialog.QUESTION, buttons, 0);
-		dialog.open();
-		return dialog.getCancel();
-	}
+//	@Override
+//	public boolean performCancel() {
+//		/**
+//		 * Confirmation dialog
+//		 */
+//		// TODO replace with general confirmation dialog
+//		String[] buttons = { "Yes", "No" };
+//		CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
+//				"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
+//				MessageDialog.QUESTION, buttons, 0);
+//		dialog.open();
+//		return dialog.getCancel();
+//	}
 
 	// TODO move to common.ui
 	private class CloseOnCancelDialog extends MessageDialog {

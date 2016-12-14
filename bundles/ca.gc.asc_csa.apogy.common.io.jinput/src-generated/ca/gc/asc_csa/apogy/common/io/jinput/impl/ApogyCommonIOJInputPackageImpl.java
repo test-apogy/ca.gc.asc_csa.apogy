@@ -832,7 +832,7 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCommonIOJInputFacadeEClass, ApogyCommonIOJInputFacade.class, "ApogyCommonIOJInputFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getApogyCommonIOJInputFacade_SelectingComponent(), theEcorePackage.getEBoolean(), "selectingComponent", null, 0, 1, ApogyCommonIOJInputFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApogyCommonIOJInputFacade_SelectingComponent(), theEcorePackage.getEBoolean(), "selectingComponent", "false", 0, 1, ApogyCommonIOJInputFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier(), null, "startSelectComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -941,6 +941,18 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.io"
+		   });	
+		addAnnotation
+		  (getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Starts the component selection.\n@param eComponentQualifier The {@link EComponentQualifier} to save the selection."
+		   });	
+		addAnnotation
+		  (getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Stops the component selection.\n@param eComponentQualifier The {@link EComponentQualifier} that was being selected."
 		   });
 	}
 

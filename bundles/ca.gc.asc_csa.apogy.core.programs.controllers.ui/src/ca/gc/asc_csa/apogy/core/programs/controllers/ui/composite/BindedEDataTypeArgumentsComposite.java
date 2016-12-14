@@ -9,11 +9,8 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
@@ -22,12 +19,8 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
-import org.eclipse.jface.viewers.TreeSelection;
-import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.graphics.Image;
@@ -35,6 +28,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
@@ -42,22 +36,15 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
-import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
-import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
-import ca.gc.asc_csa.apogy.common.io.jinput.ui.composites.ControllerSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
@@ -83,12 +70,9 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
 	private TableViewer tableViewerArguments;
+	private Composite composite;
 
-	private Section sectionValueSource;
 	private Composite compositeValueSource;
-
-	private Section sectionValue;
-	private Composite compositeValue;
 
 	private Section sectionConditioning;
 	private Composite compositeConditioning;
@@ -114,7 +98,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		setExpandHorizontal(true);
 		setExpandVertical(true);
 
-		Composite composite = new Composite(this, SWT.None);
+		composite = new Composite(this, SWT.None);
 		composite.setLayout(new GridLayout(2, true));
 		/**
 		 * Arguments list
@@ -169,34 +153,20 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		/**
 		 * Value source
 		 */
-		sectionValueSource = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
-		sectionValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		sectionValueSource.setLayout(new FillLayout());
-		sectionValueSource.setText("Source");
-
+		compositeValueSource = new Composite(composite, SWT.None);
+		compositeValueSource.setLayout(new FillLayout());
+		compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		compositeValueSource.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		compositeValueSource.setBackgroundMode(SWT.INHERIT_FORCE);
+		
 		/**
 		 * Conditioning
 		 */
 		sectionConditioning = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
-		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		sectionConditioning.setLayout(new FillLayout());
 		sectionConditioning.setText("Conditioning");
 		compositeConditioning = getNoContentComposite(sectionConditioning);
-
-		/**
-		 * Value source value
-		 */
-		sectionValue = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
-		sectionValue.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		sectionValue.setLayout(new FillLayout());
-		sectionValue.setText("Value");
-
-		compositeValue = new Composite(sectionValue, SWT.None);
-		GridLayout gridLayout_value = new GridLayout(1, false);
-		gridLayout_value.marginWidth = 0;
-		gridLayout_value.marginHeight = 0;
-		gridLayout_value.marginBottom = 5;
-		compositeArguments.setLayout(gridLayout_value);
 
 		updateDetailsComposites();
 
@@ -211,131 +181,62 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 */
 	private void updateCompositeValueSource() {
 		if (compositeValueSource != null) {
-			compositeValueSource.dispose();
-		}
-
-		if (getSelectedArgument() != null) {
-			compositeValueSource = new SubClassesListComposite(sectionValueSource, SWT.None) {
-				@Override
-				protected void newSelection(TreeSelection selection) {
-					if (getSelectedArgument().getValueSource().eClass() != (EClass) selection.getFirstElement()) {
-						// Set the new value source.
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getSelectedArgument(),
-								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-								EcoreUtil.create((EClass) selection.getFirstElement()));
-
-						if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-							// Set a conditioning if the value source is a
-							// ControllerValueSource.
-							CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE
-									.createCenteredLinearInputConditioning();
-							conditioning.setDeadBand((float) 0.1);
-							ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getSelectedArgument().getValueSource(),
-									ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-									conditioning);
-						}
-						updateCompositeValue();
-						updateCompositeConditioning();
-						tableViewerArguments.refresh();
-						BindedEDataTypeArgumentsComposite.this.newSelection(null);
-					}
-				}
-
-				/**
-				 * This content provider removes the ToggleValueSource if the
-				 * EParameter of the Argument is not a boolean.
-				 */
-				@Override
-				protected AdapterFactoryContentProvider getContentProvider() {
-					return new AdapterFactoryContentProvider(adapterFactory) {
-						@Override
-						public boolean hasChildren(Object object) {
-							return false;
-						}
-
-						@Override
-						public Object[] getElements(Object object) {
-							List<EClass> eClasses = ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses((EClass) object);
-
-							if (getSelectedArgument().getEParameter().getEType() != EcorePackage.Literals.EBOOLEAN) {
-								eClasses.remove(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE);
-							}
-							return eClasses.toArray();
-						}
-					};
-				}
-
-				@Override
-				protected StyledCellLabelProvider getLabelProvider() {
-					return new StyledCellLabelProvider() {
-						@Override
-						public void update(ViewerCell cell) {
-							if (cell.getElement() instanceof EClass) {
-								cell.setText(((EClass) cell.getElement()).getName());
-							}
-						}
-					};
-				}
-			};
-
-			((SubClassesListComposite) compositeValueSource)
-					.setSuperClass(ApogyCoreProgramsControllersPackage.Literals.VALUE_SOURCE);
-			((SubClassesListComposite) compositeValueSource)
-					.setSelectedEClass((getSelectedArgument().getValueSource().eClass()));
-
-			GridLayout gridLayout_valueSource = new GridLayout(1, false);
-			gridLayout_valueSource.marginWidth = 0;
-			gridLayout_valueSource.marginHeight = 0;
-			gridLayout_valueSource.marginBottom = 5;
-			compositeValueSource.setLayout(gridLayout_valueSource);
-		} else {
-			compositeValueSource = getNoContentComposite(sectionValueSource);
-		}
-
-		sectionValueSource.setClient(compositeValueSource);
-		sectionValueSource.layout();
-		layout();
-	}
-
-	/**
-	 * Updates the value composite depending on the selected argument.
-	 */
-	private void updateCompositeValue() {
-		if (compositeValue != null) {
-			compositeValue.dispose();
-		}
-
-		if (getSelectedArgument() != null) {
-			compositeValue = new Composite(sectionValue, SWT.None);
-			compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-			GridLayout gridLayout_value = new GridLayout(2, false);
-			gridLayout_value.marginWidth = 0;
-			gridLayout_value.marginHeight = 0;
-			gridLayout_value.marginBottom = 5;
-			compositeValue.setLayout(gridLayout_value);
-
-			/**
-			 * Set the value composite depending on the value source.
-			 */
-			if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
-				// TODO replace by Apogy custom EMF with units.
-				ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(compositeValue,
-						getSelectedArgument().getValueSource());
-			} else if (getSelectedArgument().getValueSource() instanceof ToggleValueSource) {
-				compositeValue = getNoContentComposite(sectionValue);
-			} else if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-				compositeValue = new ControllerSelectionComposite(sectionValue, SWT.None);
-				((ControllerSelectionComposite) compositeValue).setEComponentQualifier(
-						((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier());
-				compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+			for (Control control : compositeValueSource.getChildren()) {
+				control.dispose();
 			}
-		} else {
-			compositeValue = getNoContentComposite(sectionValue);
 		}
-		sectionValue.setClient(compositeValue);
-		sectionValue.layout();
-		layout();
+		
+		if (getSelectedArgument() != null) {
+			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None);
+//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+			contentComposite.setBindedEDataTypeArgument(getSelectedArgument());
+		} else {
+			getNoContentComposite(compositeValueSource);
+//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		}
+		compositeValueSource.layout();
+		this.layout();
 	}
+
+//	/**
+//	 * Updates the value composite depending on the selected argument.
+//	 */
+//	private void updateCompositeValue() {
+//		if (compositeValue != null) {
+//			compositeValue.dispose();
+//		}
+//
+//		if (getSelectedArgument() != null) {
+//			compositeValue = new Composite(sectionValue, SWT.None);
+//			compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+//			GridLayout gridLayout_value = new GridLayout(2, false);
+//			gridLayout_value.marginWidth = 0;
+//			gridLayout_value.marginHeight = 0;
+//			gridLayout_value.marginBottom = 5;
+//			compositeValue.setLayout(gridLayout_value);
+//
+//			/**
+//			 * Set the value composite depending on the value source.
+//			 */
+//			if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
+//				// TODO replace by Apogy custom EMF with units.
+//				ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(compositeValue,
+//						getSelectedArgument().getValueSource());
+//			} else if (getSelectedArgument().getValueSource() instanceof ToggleValueSource) {
+//				compositeValue = getNoContentComposite(sectionValue);
+//			} else if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
+//				compositeValue = new ControllerSelectionComposite(sectionValue, SWT.None);
+//				((ControllerSelectionComposite) compositeValue).setEComponentQualifier(
+//						((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier());
+//				compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+//			}
+//		} else {
+//			compositeValue = getNoContentComposite(sectionValue);
+//		}
+//		sectionValue.setClient(compositeValue);
+//		sectionValue.layout();
+//		layout();
+//	}
 
 	/**
 	 * Updates the conditioning composite depending on the selected argument.
@@ -346,7 +247,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 
 		if (getSelectedArgument() != null && getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.None){
+			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.NO_SCROLL){
 				@Override
 				protected void newSelection(ISelection selection) {
 					BindedEDataTypeArgumentsComposite.this.newSelection(selection);
@@ -354,6 +255,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			};
 			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(
 					((ControllerValueSource) getSelectedArgument().getValueSource()).getConditioning());
+			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		} else {
 			compositeConditioning = getNoContentComposite(sectionConditioning);
 		}
@@ -368,7 +270,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 */
 	private void updateDetailsComposites() {
 		updateCompositeValueSource();
-		updateCompositeValue();
+//		updateCompositeValue();
 		updateCompositeConditioning();
 	}
 
@@ -380,14 +282,15 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 *            The parent {@link Section}.
 	 * @return Reference to the {@link NoContentComposite}.
 	 */
-	private Composite getNoContentComposite(Section section) {
-		NoContentComposite composite = new NoContentComposite(section, SWT.None) {
+	private Composite getNoContentComposite(Composite parent) {
+		NoContentComposite composite = new NoContentComposite(parent, SWT.None) {
 			@Override
 			protected String getMessage() {
 				return "No compatible selection";
 			}
 		};
 		composite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		composite.setBackgroundMode(SWT.INHERIT_FORCE);
 		return composite;
 	}
 

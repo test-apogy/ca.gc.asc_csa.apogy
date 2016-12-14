@@ -15,7 +15,6 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
-import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
@@ -37,6 +36,8 @@ public class ConditioningComposite extends Composite {
 	private SubClassesListComposite subClassesListComposite;
 	private AbstractInputConditioningResponsePlotComposite plotComposite;
 
+	private AbstractInputConditioning abstractInputConditioning;
+	
 	/**
 	 * Create the parentComposite.
 	 * 
@@ -47,11 +48,7 @@ public class ConditioningComposite extends Composite {
 	 */
 	public ConditioningComposite(Composite parent, int style) {
 		super(parent, style);
-		GridLayout gridLayout_value = new GridLayout(2, true);
-		gridLayout_value.marginWidth = 0;
-		gridLayout_value.marginHeight = 0;
-		gridLayout_value.marginBottom = 5;
-		this.setLayout(gridLayout_value);
+		this.setLayout(new GridLayout(2, true));
 
 		/**
 		 * PlotComposite
@@ -64,7 +61,10 @@ public class ConditioningComposite extends Composite {
 		 * EMFForms
 		 */
 		conditioningEMFForms = new Composite(this, SWT.None);
-		conditioningEMFForms.setLayout(new GridLayout());
+		GridLayout gridLayout_EMFFormsvalue = new GridLayout(2, true);
+		gridLayout_EMFFormsvalue.marginWidth = 0;
+		gridLayout_EMFFormsvalue.marginHeight = 0;
+		conditioningEMFForms.setLayout(gridLayout_EMFFormsvalue);
 		conditioningEMFForms.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		conditioningEMFForms.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
@@ -75,21 +75,22 @@ public class ConditioningComposite extends Composite {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				if (!selection.isEmpty()) {
-					AbstractInputConditioning abstractInputConditioning = (AbstractInputConditioning) EcoreUtil
+					AbstractInputConditioning tempAbstractInputConditioning = (AbstractInputConditioning) EcoreUtil
 							.create((EClass) selection.getFirstElement());
 					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(abstractInputConditioning.eContainer(),
 							ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-							abstractInputConditioning);
+							tempAbstractInputConditioning);
+					
+					abstractInputConditioning = tempAbstractInputConditioning;
 
 					plotComposite.setAbstractInputConditioning(abstractInputConditioning);
 					ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms,
 							abstractInputConditioning);
-					ConditioningComposite.this.newSelection(null);
+					ConditioningComposite.this.newSelection(selection);
 				}
 			}
 		};
 		subClassesListComposite.setSuperClass(ApogyCoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING);
-
 		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		subClassesListComposite.moveAbove(plotComposite);
 	}
@@ -104,15 +105,17 @@ public class ConditioningComposite extends Composite {
 	}
 
 	/**
-	 * Binds the {@link OperationCallControllerBinding} with the UI components.
+	 * Binds the {@link AbstractInputConditioning} with the UI components.
 	 * 
-	 * @param operationCall
-	 *            Reference to the {@link OperationCallControllerBinding}.
+	 * @param abstractInputConditioning
+	 *            Reference to the {@link AbstractInputConditioning}.
 	 */
 	public void setAbstractInputConditioning(AbstractInputConditioning abstractInputConditioning) {
-		ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms, abstractInputConditioning);
-		subClassesListComposite.setSelectedEClass(abstractInputConditioning.eClass());
-		plotComposite.setAbstractInputConditioning(abstractInputConditioning);
+		this.abstractInputConditioning = abstractInputConditioning;
+		
+		ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms, this.abstractInputConditioning);
+		subClassesListComposite.setSelectedEClass(this.abstractInputConditioning.eClass());
+		plotComposite.setAbstractInputConditioning(this.abstractInputConditioning);
 		this.layout();
 	}
 
