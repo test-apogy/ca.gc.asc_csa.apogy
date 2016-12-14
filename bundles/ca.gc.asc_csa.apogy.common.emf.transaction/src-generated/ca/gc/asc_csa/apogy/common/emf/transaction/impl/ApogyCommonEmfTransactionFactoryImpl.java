@@ -145,6 +145,7 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public Collection<?> createCollectionFromString(EDataType eDataType, String initialValue) {
 		return (Collection<?>)super.createFromString(initialValue);
 	}

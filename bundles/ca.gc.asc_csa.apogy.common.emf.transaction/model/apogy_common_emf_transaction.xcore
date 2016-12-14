@@ -66,4 +66,6 @@ class ApogyCommonEmfTransactionFacade{
 	 op void basicAdd(EObject owner, EStructuralFeature feature, Collection collection)
 	 
 	 op void basicRemove(EObject owner, EStructuralFeature feature, Object value)
+	 
+	 op void basicDelete(EObject owner, EStructuralFeature feature, Object value)
 }

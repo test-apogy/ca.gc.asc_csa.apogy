@@ -8,10 +8,8 @@ import org.eclipse.core.databinding.observable.list.DecoratingObservableList;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -54,7 +52,6 @@ import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 import ca.gc.asc_csa.apogy.common.io.jinput.ui.composites.ControllerSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
@@ -184,13 +181,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 		sectionConditioning.setLayout(new FillLayout());
 		sectionConditioning.setText("Conditioning");
-
-		compositeConditioning = new Composite(sectionConditioning, SWT.None);
-		GridLayout gridLayout_conditioning = new GridLayout(1, false);
-		gridLayout_conditioning.marginWidth = 0;
-		gridLayout_conditioning.marginHeight = 0;
-		gridLayout_conditioning.marginBottom = 5;
-		compositeArguments.setLayout(gridLayout_conditioning);
+		compositeConditioning = getNoContentComposite(sectionConditioning);
 
 		/**
 		 * Value source value
@@ -228,14 +219,14 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				@Override
 				protected void newSelection(TreeSelection selection) {
 					if (getSelectedArgument().getValueSource().eClass() != (EClass) selection.getFirstElement()) {
-						// Set the new value source
+						// Set the new value source.
 						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getSelectedArgument(),
 								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
 								EcoreUtil.create((EClass) selection.getFirstElement()));
 
 						if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
 							// Set a conditioning if the value source is a
-							// ControllerValueSource
+							// ControllerValueSource.
 							CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE
 									.createCenteredLinearInputConditioning();
 							conditioning.setDeadBand((float) 0.1);
@@ -307,7 +298,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Updates the value composite depending on the selected argument
+	 * Updates the value composite depending on the selected argument.
 	 */
 	private void updateCompositeValue() {
 		if (compositeValue != null) {
@@ -324,7 +315,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			compositeValue.setLayout(gridLayout_value);
 
 			/**
-			 * Set the value composite depending on the value source
+			 * Set the value composite depending on the value source.
 			 */
 			if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
 				// TODO replace by Apogy custom EMF with units.
@@ -347,7 +338,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Updates the conditioning composite depending on the selected argument
+	 * Updates the conditioning composite depending on the selected argument.
 	 */
 	private void updateCompositeConditioning() {
 		if (compositeConditioning != null) {
@@ -355,67 +346,14 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 
 		if (getSelectedArgument() != null && getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-			ControllerValueSource controllerValueSource = (ControllerValueSource) getSelectedArgument()
-					.getValueSource();
-
-			compositeConditioning = new Composite(sectionConditioning, SWT.None);
-			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-			GridLayout gridLayout_value = new GridLayout(2, true);
-			gridLayout_value.marginWidth = 0;
-			gridLayout_value.marginHeight = 0;
-			gridLayout_value.marginBottom = 5;
-			compositeConditioning.setLayout(gridLayout_value);
-
-			/**
-			 * PlotComposite
-			 */
-			AbstractInputConditioningResponsePlotComposite plotComposite = new AbstractInputConditioningResponsePlotComposite(
-					compositeConditioning, SWT.None);
-			plotComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
-			plotComposite.setAbstractInputConditioning(controllerValueSource.getConditioning());
-
-			/**
-			 * EMFForms
-			 */
-			Composite conditioningEMFForms = new Composite(compositeConditioning, SWT.None);
-			conditioningEMFForms.setLayout(new GridLayout());
-			conditioningEMFForms.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-			conditioningEMFForms.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-			ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms,
-					controllerValueSource.getConditioning());
-
-			/**
-			 * Conditioning sub classes list
-			 */
-			SubClassesListComposite subClassesListComposite = new SubClassesListComposite(compositeConditioning,
-					SWT.None) {
+			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.None){
 				@Override
-				protected void newSelection(TreeSelection selection) {
-					if (!selection.isEmpty()) {
-						AbstractInputConditioning abstractInputConditioning = (AbstractInputConditioning) EcoreUtil
-								.create((EClass) selection.getFirstElement());
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(controllerValueSource,
-								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-								abstractInputConditioning);
-
-						plotComposite.setAbstractInputConditioning(controllerValueSource.getConditioning());
-						ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms,
-								controllerValueSource.getConditioning());
-						BindedEDataTypeArgumentsComposite.this.newSelection(null);
-					}
+				protected void newSelection(ISelection selection) {
+					BindedEDataTypeArgumentsComposite.this.newSelection(selection);
 				}
 			};
-			((SubClassesListComposite) subClassesListComposite)
-					.setSuperClass(ApogyCoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING);
-			if (controllerValueSource.getConditioning() != null) {
-				((SubClassesListComposite) subClassesListComposite).setSelectedEClass(
-						((EClass) ((StructuredSelection) subClassesListComposite.getSelection()).getFirstElement()));
-			}
-
-			subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-			subClassesListComposite.moveAbove(plotComposite);
-
-			compositeConditioning.layout();
+			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(
+					((ControllerValueSource) getSelectedArgument().getValueSource()).getConditioning());
 		} else {
 			compositeConditioning = getNoContentComposite(sectionConditioning);
 		}
@@ -426,7 +364,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Updates the details composites depending on the selected argument
+	 * Updates the details composites depending on the selected argument.
 	 */
 	private void updateDetailsComposites() {
 		updateCompositeValueSource();
@@ -435,9 +373,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
+	 * Returns a {@link NoContentComposite} if a detail section is not
+	 * applicable.
 	 * 
 	 * @param section
-	 * @return
+	 *            The parent {@link Section}.
+	 * @return Reference to the {@link NoContentComposite}.
 	 */
 	private Composite getNoContentComposite(Section section) {
 		NoContentComposite composite = new NoContentComposite(section, SWT.None) {
@@ -450,12 +391,23 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		return composite;
 	}
 
-	protected void packColumns() {
-		for (TableColumn column : tableViewerArguments.getTable().getColumns()) {
-			column.pack();
+	/**
+	 * Refreshed the viewer and adjusts the columns.
+	 */
+	protected void refreshViewer() {
+		if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
+			tableViewerArguments.refresh();
+			for (TableColumn column : tableViewerArguments.getTable().getColumns()) {
+				column.pack();
+			}
 		}
 	}
 
+	/**
+	 * Gets the {@link BindedEDataTypeArgument} selected in the viewer
+	 * 
+	 * @return
+	 */
 	private BindedEDataTypeArgument getSelectedArgument() {
 		if (!tableViewerArguments.getStructuredSelection().isEmpty()) {
 			return (BindedEDataTypeArgument) tableViewerArguments.getStructuredSelection().getFirstElement();
@@ -464,35 +416,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * This method is called when a new selection is made in the
-	 * parentComposite.
+	 * This method is called when a new selection is made .
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {
-	}
-
-	public EObject getSelectedEObject() {
-		return (EObject) tableViewerArguments.getStructuredSelection().getFirstElement();
-	}
-
-	/**
-	 * Returns the reference to the {@link ArgumentsList}.
-	 * 
-	 * @return Reference to the {@link ArgumentsList}.
-	 */
-	public ArgumentsList getArgumentsList() {
-		return operationCallControllerBinding.getArgumentsList();
-	}
-
-	/**
-	 * Gets the {@link EList} of {@link Argument} in the {@link ArgumentsList}.
-	 * 
-	 * @return List of {@link Argument}.
-	 */
-	public EList<Argument> getArguments() {
-		return operationCallControllerBinding.getArgumentsList().getArguments();
 	}
 
 	/**
@@ -515,12 +444,11 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			tableViewerArguments.setInput(
 					EMFEditProperties.list(domain, ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS)
 							.observe(operationCallControllerBinding.getArgumentsList()));
-			tableViewerArguments.refresh();
 		} else {
 			tableViewerArguments.setInput(null);
 		}
 
-		packColumns();
+		refreshViewer();
 		this.operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 
@@ -535,7 +463,6 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
 	/**
 	 * Content provider for the arguments.
-	 * 
 	 */
 	private class ArgumentsContentProvier extends AdapterFactoryContentProvider {
 
@@ -562,7 +489,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		@Override
 		public void notifyChanged(Notification notification) {
 			super.notifyChanged(notification);
-			packColumns();
+			refreshViewer();
 		}
 
 	}
@@ -585,6 +512,8 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
 
+			// This is used in the case where refresh is called on an Argument
+			// that is not in the ArgumentsList anymore.
 			if (operationCallControllerBinding.getArgumentsList() == null
 					|| !operationCallControllerBinding.getArgumentsList().getArguments().contains(object)) {
 				return str;
@@ -617,7 +546,6 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				} else {
 					str = "N/A";
 				}
-
 				break;
 			default:
 				break;
@@ -641,8 +569,8 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Adapter that updates the treeViewer input if the {@link ArgumentsList} is
-	 * changed.
+	 * Adapter that updates the tableViewer input if the
+	 * {@link OperationCallControllerBinding} is changed.
 	 * 
 	 * @return
 	 */
@@ -653,36 +581,31 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
 				@Override
 				public void notifyChanged(Notification notification) {
-					System.out.println(notification.getFeature());
-					if (notification
-							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST) {
-						if (notification.getNewValue() == null) {
-							if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
-								tableViewerArguments.refresh();
-								packColumns();
-							}
-						} else {
-							setOperationCallControllerBinding(
-									(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
-											.getOperationCall());
-						}
+					if (notification.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST
+							&& notification.getNewValue() != null) {
+						setOperationCallControllerBinding(
+								(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
+										.getOperationCall());
 					}
 					if (getEStructuralFeature().contains(notification.getFeature())
 							|| notification.getNotifier() instanceof AbstractInputConditioning) {
-						if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
-							tableViewerArguments.refresh();
-							packColumns();
-						}
+						refreshViewer();
 					}
 					newSelection(null);
 					super.notifyChanged(notification);
 				}
 
+				/**
+				 * Provides a list of the structural features that should
+				 * refresh the tableViewer. This method implements a pattern of
+				 * lazy loading.
+				 */
 				private List<EStructuralFeature> getEStructuralFeature() {
 					if (features == null) {
 						features = new ArrayList<EStructuralFeature>();
 
 						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION);
+						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
 						features.add(
 								ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
 

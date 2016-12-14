@@ -197,6 +197,19 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void basicDelete(EObject owner, EStructuralFeature feature, Object value) {
+		if(feature.isMany()){
+			basicRemove(owner, feature, value);
+		}else{
+			basicSet(owner, feature, null);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -222,6 +235,9 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 				return null;
 			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT:
 				basicRemove((EObject)arguments.get(0), (EStructuralFeature)arguments.get(1), arguments.get(2));
+				return null;
+			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT:
+				basicDelete((EObject)arguments.get(0), (EStructuralFeature)arguments.get(1), arguments.get(2));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

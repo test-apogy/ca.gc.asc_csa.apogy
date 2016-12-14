@@ -197,6 +197,10 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 		}
 	}
 	
+	/**
+	 * Adapter to update the plot when the parameters of the conditioning are changed.
+	 * @return
+	 */
 	private Adapter getAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {

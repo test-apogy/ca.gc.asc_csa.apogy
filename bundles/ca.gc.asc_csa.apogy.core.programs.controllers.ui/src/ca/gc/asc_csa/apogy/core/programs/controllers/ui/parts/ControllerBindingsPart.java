@@ -40,8 +40,9 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
+					// TODO .get(0)
 					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite())
-							.getOperationCallControllerBinding();
+							.getSelectedBindings().get(0);
 					if (operationCallControllerBinding != null) {
 						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
 								.createControllerBindingsPartSelection();

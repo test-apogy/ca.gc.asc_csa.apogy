@@ -166,13 +166,22 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 6;
 
 	/**
+	 * The operation id for the '<em>Basic Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 7;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 7;
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '<em>Transactional Editing Domain</em>' data type.
@@ -275,6 +284,16 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicDelete(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object) <em>Basic Delete</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Delete</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicDelete(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.transaction.TransactionalEditingDomain <em>Transactional Editing Domain</em>}'.
@@ -386,6 +405,14 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Delete</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
 
 		/**
 		 * The meta object literal for the '<em>Transactional Editing Domain</em>' data type.

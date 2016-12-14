@@ -67,7 +67,6 @@ public class VariablesListComposite extends Composite {
 	
 	private TreeViewer treeViewer;
 	private Button btnDelete;
-//	private WritableValue<VariablesList> variablesListBinder = new WritableValue<>();
 	
 	private VariablesList variablesList;
 	

@@ -111,4 +111,12 @@ public interface ApogyCommonEmfTransactionFacade extends EObject {
 	 */
 	void basicRemove(EObject owner, EStructuralFeature feature, Object value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicDelete(EObject owner, EStructuralFeature feature, Object value);
+
 } // ApogyCommonEmfTransactionFacade

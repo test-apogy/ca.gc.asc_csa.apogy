@@ -198,6 +198,15 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getTransactionalEditingDomain() {
 		return transactionalEditingDomainEDataType;
 	}
@@ -247,6 +256,7 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_COLLECTION);
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
 
 		// Create data types
 		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
@@ -315,6 +325,11 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		addEParameter(op, this.getCollection(), "collection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object(), null, "basicRemove", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object(), null, "basicDelete", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
