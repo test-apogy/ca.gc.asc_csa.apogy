@@ -31,6 +31,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
@@ -164,13 +166,16 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	 * 
 	 * @generated_NOT
 	 */
-	public NotificationChain basicSetWorksite(Worksite newWorksite, NotificationChain msgs) {
-		if (basicGetWorksite() != null) {
+	public NotificationChain basicSetWorksite(Worksite newWorksite, NotificationChain msgs) 
+	{
+		if (basicGetWorksite() != null) 
+		{
 			// Un-Register Listener from previous to the worksite.
 			basicGetWorksite().eAdapters().remove(getWorksiteAdapter());
 		}
 
-		if (newWorksite != null) {
+		if (newWorksite != null) 
+		{
 			// Register Listener for changes to the worksite.
 			newWorksite.eAdapters().add(getWorksiteAdapter());
 		}
@@ -208,10 +213,28 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	  public SkyNode getSkyNode()
+	  {
+		  if(getSkyNodeGen() == null)
+		  {
+			  	skyNode = ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode();			
+			  	ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(skyNode);
+			  	skyNode.setSky(this);
+		  }
+		  
+		  return getSkyNodeGen();
+	  }
+	  
+	
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SkyNode getSkyNode() {
+	public SkyNode getSkyNodeGen() {
 		if (skyNode != null && skyNode.eIsProxy()) {
 			InternalEObject oldSkyNode = (InternalEObject)skyNode;
 			skyNode = (SkyNode)eResolveProxy(oldSkyNode);
@@ -232,40 +255,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSkyNode(SkyNode newSkyNode, NotificationChain msgs) {
-		SkyNode oldSkyNode = skyNode;
-		skyNode = newSkyNode;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, oldSkyNode, newSkyNode);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSkyNode(SkyNode newSkyNode) {
-		if (newSkyNode != skyNode) {
-			NotificationChain msgs = null;
-			if (skyNode != null)
-				msgs = ((InternalEObject)skyNode).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
-			if (newSkyNode != null)
-				msgs = ((InternalEObject)newSkyNode).eInverseAdd(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
-			msgs = basicSetSkyNode(newSkyNode, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.SKY__SKY_NODE, newSkyNode, newSkyNode));
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -279,37 +268,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		return sun;
 	}
 
-	/**
-	 * Searches the topology to find the Sun.
-	 * 
-	 * @return The Sun, null if not found.
-	 */
-	private Sun findSunInTopology() 
-	{
-		Sun sunFound = null;
 
-		EList<Node> children = getSkyNode().getChildren();
-		Iterator<Node> it = children.iterator();
-		while (it.hasNext() && (sunFound == null)) {
-			Node node = it.next();
-
-			if (node instanceof TransformNode) {
-				TransformNode t = (TransformNode) node;
-
-				EList<Node> tChildren = t.getChildren();
-				Iterator<Node> tIt = tChildren.iterator();
-				while (tIt.hasNext() && (sunFound == null)) {
-					Node n = tIt.next();
-
-					if (n instanceof Sun) {
-						sunFound = (Sun) n;
-					}
-				}
-			}
-		}
-
-		return sunFound;
-	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -331,37 +290,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		}
 
 		return starField;
-	}
-
-	/**
-	 * Searches the topology to find the StarField.
-	 * 
-	 * @return The StarField, null if not found.
-	 */
-	private StarField findStarFieldInTopology() {
-		StarField foundStarField = null;
-
-		EList<Node> children = getSkyNode().getChildren();
-		Iterator<Node> it = children.iterator();
-		while (it.hasNext() && (foundStarField == null)) {
-			Node node = it.next();
-
-			if (node instanceof TransformNode) {
-				TransformNode t = (TransformNode) node;
-
-				EList<Node> tChildren = t.getChildren();
-				Iterator<Node> tIt = tChildren.iterator();
-				while (tIt.hasNext() && (foundStarField == null)) {
-					Node n = tIt.next();
-
-					if (n instanceof StarField) {
-						foundStarField = (StarField) n;
-					}
-				}
-			}
-		}
-
-		return foundStarField;
 	}
 
 	/**
@@ -407,10 +335,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetWorksite((Worksite)otherEnd, msgs);
-			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
-				if (skyNode != null)
-					msgs = ((InternalEObject)skyNode).eInverseRemove(this, ApogyCoreEnvironmentPackage.SKY_NODE__SKY, SkyNode.class, msgs);
-				return basicSetSkyNode((SkyNode)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -424,8 +348,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		switch (featureID) {
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				return basicSetWorksite(null, msgs);
-			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
-				return basicSetSkyNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -481,9 +403,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				setWorksite((Worksite)newValue);
 				return;
-			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
-				setSkyNode((SkyNode)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -500,9 +419,6 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 				return;
 			case ApogyCoreEnvironmentPackage.SKY__WORKSITE:
 				setWorksite((Worksite)null);
-				return;
-			case ApogyCoreEnvironmentPackage.SKY__SKY_NODE:
-				setSkyNode((SkyNode)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -557,6 +473,69 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 		return result.toString();
 	}
 
+	/**
+	 * Searches the topology to find the Sun.
+	 * 
+	 * @return The Sun, null if not found.
+	 */
+	private Sun findSunInTopology() 
+	{
+		Sun sunFound = null;
+
+		EList<Node> children = getSkyNode().getChildren();
+		Iterator<Node> it = children.iterator();
+		while (it.hasNext() && (sunFound == null)) {
+			Node node = it.next();
+
+			if (node instanceof TransformNode) {
+				TransformNode t = (TransformNode) node;
+
+				EList<Node> tChildren = t.getChildren();
+				Iterator<Node> tIt = tChildren.iterator();
+				while (tIt.hasNext() && (sunFound == null)) {
+					Node n = tIt.next();
+
+					if (n instanceof Sun) {
+						sunFound = (Sun) n;
+					}
+				}
+			}
+		}
+
+		return sunFound;
+	}
+	
+	/**
+	 * Searches the topology to find the StarField.
+	 * 
+	 * @return The StarField, null if not found.
+	 */
+	private StarField findStarFieldInTopology() {
+		StarField foundStarField = null;
+
+		EList<Node> children = getSkyNode().getChildren();
+		Iterator<Node> it = children.iterator();
+		while (it.hasNext() && (foundStarField == null)) {
+			Node node = it.next();
+
+			if (node instanceof TransformNode) {
+				TransformNode t = (TransformNode) node;
+
+				EList<Node> tChildren = t.getChildren();
+				Iterator<Node> tIt = tChildren.iterator();
+				while (tIt.hasNext() && (foundStarField == null)) {
+					Node n = tIt.next();
+
+					if (n instanceof StarField) {
+						foundStarField = (StarField) n;
+					}
+				}
+			}
+		}
+
+		return foundStarField;
+	}
+	
 	protected Adapter getWorksiteAdapter() {
 		if (worksiteAdapter == null) {
 			worksiteAdapter = new AdapterImpl() {

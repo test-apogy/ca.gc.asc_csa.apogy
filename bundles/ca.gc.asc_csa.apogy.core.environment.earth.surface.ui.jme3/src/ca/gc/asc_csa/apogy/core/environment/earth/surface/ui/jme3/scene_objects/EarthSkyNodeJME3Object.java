@@ -178,7 +178,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		};
 		job.schedule();
 		
-		ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);		
+		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(this);		
 	}
 	
 	@Override

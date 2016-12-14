@@ -39,6 +39,7 @@ import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
@@ -49,7 +50,6 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshURLMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
@@ -107,10 +107,9 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		EarthSky earthSky = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSky();
 		earthSky.setTime(new Date());
 		
-		EarthSkyNode earthSkyNode = createEarthSkyNode(siteGeographicCoordinates);		
-		earthSky.setSkyNode(earthSkyNode);
-		
-		initializeEarthSkyNode(earthSky, earthSkyNode);		
+//		EarthSkyNode earthSkyNode = createEarthSkyNode(siteGeographicCoordinates);		
+//		earthSky.setSkyNode(earthSkyNode);
+					
 		return earthSky;
 	}
 
@@ -133,9 +132,13 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
 		moon.setDescription("The Moon.");
 		moon.setNodeId("MOON");
-		
-		// Creates the Moon transform that attaches it to the sky.				
-		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, siteGeographicCoordinates.getLongitude(), siteGeographicCoordinates.getLatitude());		
+				
+		// Creates the Moon transform that attaches it to the sky.
+		HorizontalCoordinates moonHorizontalCoordinates = ApogyEarthEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+		if(siteGeographicCoordinates != null)
+		{			
+			moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, siteGeographicCoordinates.getLongitude(), siteGeographicCoordinates.getLatitude());		
+		}
 		
 		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
 		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
@@ -152,41 +155,6 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		return earthSkyNode;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode() 
-	{
-		EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
-		
-		TransformNode transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
-		transformNode.setNodeId("SKY_TRANSFORM");
-		transformNode.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
-		earthSurfaceWorksiteNode.getChildren().add(transformNode);
-		earthSurfaceWorksiteNode.setSkyTransformNode(transformNode);
-		
-		return earthSurfaceWorksiteNode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public EarthSurfaceWorksiteNode createEarthSurfaceWorksiteNode(EarthSurfaceWorksite earthSurfaceWorksite) 
-	{
-		EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
-		
-		TransformNode transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());  
-		transformNode.setNodeId("SKY_TRANSFORM");
-		transformNode.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
-		earthSurfaceWorksiteNode.getChildren().add(transformNode);
-		earthSurfaceWorksiteNode.setSkyTransformNode(transformNode);
-		
-		return earthSurfaceWorksiteNode;
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,10 +180,7 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		// Sets the worksite sky.
 		worksite.setSky(earthSky);	
 		earthSky.setWorksite(worksite);
-						
-		// Attaches the sky to the worksite.
-		// worksite.setEarthSky(earthSky);
-				
+
 		// Sets time stamp.		
 		worksite.getEarthSky().setTime(now);	
 		
@@ -365,6 +330,11 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		}
 		catch(Throwable t)
 		{
+			// DEBUG
+			FeatureOfInterest foi = ApogyCoreFactory.eINSTANCE.createFeatureOfInterest();
+			foi.setPose(ApogyCommonMathFacade.INSTANCE.createIdentityMatrix4x4());
+			foiLayer.getFeatures().getFeaturesOfInterest().add(foi);
+			
 			Logger.INSTANCE.log(Activator.ID, this, "Failed to load Feature Of Interest from <" + foiURL + ">!", EventSeverity.ERROR);
 		}
 		
@@ -385,10 +355,6 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 				return createEarthSky((GeographicCoordinates)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES:
 				return createEarthSkyNode((GeographicCoordinates)arguments.get(0));
-			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE:
-				return createEarthSurfaceWorksiteNode();
-			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SURFACE_WORKSITE_NODE__EARTHSURFACEWORKSITE:
-				return createEarthSurfaceWorksiteNode((EarthSurfaceWorksite)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:

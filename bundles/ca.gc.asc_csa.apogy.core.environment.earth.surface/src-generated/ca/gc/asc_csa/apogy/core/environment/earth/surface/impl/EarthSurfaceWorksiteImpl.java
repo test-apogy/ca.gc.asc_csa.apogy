@@ -35,7 +35,6 @@ import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.WorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
@@ -188,7 +187,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 			  setSky(es);
 		  }
 		  
-		  return es;
+		  return es;	
 	}
 	
 	/**
@@ -242,26 +241,26 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  {		  
 		  if(this.getWorksiteNode() instanceof EarthSurfaceWorksiteNode)
 		  {
-			  EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = (EarthSurfaceWorksiteNode) this.getWorksiteNode();				  
+			  EarthSurfaceWorksiteNode earthSurfaceWorksiteNode = (EarthSurfaceWorksiteNode) this.getWorksiteNode();				 
 			  earthSurfaceWorksiteNode.getSkyTransformNode().getChildren().add(newSky.getSkyNode());
 			  
 			  // Should not have to do this..
-			  newSky.getSkyNode().setParent(earthSurfaceWorksiteNode.getSkyTransformNode());
+			  //newSky.getSkyNode().setParent(earthSurfaceWorksiteNode.getSkyTransformNode());
 		  }		  
 	  }	
   }
 	
   @Override
   public WorksiteNode getWorksiteNode() 
-  	{
+  {
 	  if(!(super.getWorksiteNode() instanceof EarthSurfaceWorksiteNode))
-		{
-			worksiteNode = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.createEarthSurfaceWorksiteNode(this);
+	  {
+			worksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
 			worksiteNode.setWorksite(this);  			
-		}
+	  }
 		
-		return worksiteNode;
-	}
+	  return worksiteNode;
+  }
   
 	/**
 	 * <!-- begin-user-doc -->

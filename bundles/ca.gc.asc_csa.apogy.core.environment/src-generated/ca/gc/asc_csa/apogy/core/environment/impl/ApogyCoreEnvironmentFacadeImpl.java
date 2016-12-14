@@ -226,9 +226,7 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public Sky createSky() 
 	{
-		Sky sky = ApogyCoreEnvironmentFactory.eINSTANCE.createSky();
-		SkyNode skyNode = createSkyNode();
-		sky.setSkyNode(skyNode);
+		Sky sky = ApogyCoreEnvironmentFactory.eINSTANCE.createSky();			
 		return sky;
 	}
 

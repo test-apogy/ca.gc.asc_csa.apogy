@@ -73,7 +73,6 @@ public interface Sky extends Timed {
 
 	/**
 	 * Returns the value of the '<em><b>Sky Node</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link ca.gc.asc_csa.apogy.core.environment.SkyNode#getSky <em>Sky</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sky Node</em>' reference isn't clear,
@@ -81,24 +80,12 @@ public interface Sky extends Timed {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky Node</em>' reference.
-	 * @see #setSkyNode(SkyNode)
 	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getSky_SkyNode()
-	 * @see ca.gc.asc_csa.apogy.core.environment.SkyNode#getSky
-	 * @model opposite="sky" transient="true"
+	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
 	 */
 	SkyNode getSkyNode();
-
-	/**
-	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.Sky#getSkyNode <em>Sky Node</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sky Node</em>' reference.
-	 * @see #getSkyNode()
-	 * @generated
-	 */
-	void setSkyNode(SkyNode value);
 
 	/**
 	 * Returns the value of the '<em><b>Sun</b></em>' reference.

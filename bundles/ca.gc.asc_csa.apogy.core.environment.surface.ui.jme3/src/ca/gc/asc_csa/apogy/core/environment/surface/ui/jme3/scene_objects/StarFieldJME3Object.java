@@ -43,7 +43,7 @@ import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.StarField;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.SurfaceEnvironmentJMEConstants;
-import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.Activator;
 import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
 import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 

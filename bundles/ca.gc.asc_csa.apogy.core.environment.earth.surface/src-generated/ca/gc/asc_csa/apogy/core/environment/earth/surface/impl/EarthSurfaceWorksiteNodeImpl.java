@@ -13,22 +13,28 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.impl;
 
+import javax.vecmath.Matrix4d;
+
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
+import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksiteNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.impl.SurfaceWorksiteNodeImpl;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Earth Surface Worksite Node</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Earth
+ * Surface Worksite Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -38,11 +44,13 @@ import ca.gc.asc_csa.apogy.core.environment.surface.impl.SurfaceWorksiteNodeImpl
  *
  * @generated
  */
-public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implements EarthSurfaceWorksiteNode {
+public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implements EarthSurfaceWorksiteNode 
+{
+	private Adapter earthSurfaceWorksiteAdapter;
+	
 	/**
 	 * The cached value of the '{@link #getSkyTransformNode() <em>Sky Transform Node</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSkyTransformNode()
 	 * @generated
 	 * @ordered
@@ -50,17 +58,16 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	protected TransformNode skyTransformNode;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EarthSurfaceWorksiteNodeImpl() {
+	protected EarthSurfaceWorksiteNodeImpl() 
+	{
 		super();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -68,44 +75,42 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		return ApogyEarthSurfaceEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE;
 	}
 
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	public TransformNode getSkyTransformNode() 
+	{
+		TransformNode transformNode = getSkyTransformNodeGen();
+		if (transformNode == null) 
+		{
+			if (getWorksite() instanceof EarthSurfaceWorksite) 
+			{
+				EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
+				transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0,
+						earthSurfaceWorksite.getXAxisAzimuth());
+			} 
+			else 
+			{
+				transformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+			}
+			transformNode.setNodeId("SKY_TRANSFORM");
+			transformNode.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
+			getChildren().add(transformNode);
+			
+			//transformNode.setParent(this); // Should not have to this this explicitly.
+									
+			setSkyTransformNode(transformNode);
+		}	
+		return transformNode;
+	}
 
-
-	  /**
-	   * <!-- begin-user-doc -->
-	   * <!-- end-user-doc -->
-	   * @generated_NOT
-	   */
-	  public TransformNode getSkyTransformNode()
-	  {
-		  TransformNode t = getSkyTransformNodeGen();
-		  if(t == null)
-		  {
-			  if(getWorksite() instanceof EarthSurfaceWorksite)
-			  {
-				  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
-				  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
-			  }
-			  else
-			  {
-				  t = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
-			  }		  		  		  
-			  t.setNodeId("SKY_TRANSFORM");
-			  t.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");
-			  getChildren().add(t);
-			  t.setParent(this); // Should not have to this this explicitly.
-			  
-			  setSkyTransformNode(t);
-		  }
-		  
-		  return t;
-	  }
-	
-		/**
-	 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-		public TransformNode getSkyTransformNodeGen() {
+	public TransformNode getSkyTransformNodeGen() {
 		if (skyTransformNode != null && skyTransformNode.eIsProxy()) {
 			InternalEObject oldSkyTransformNode = (InternalEObject)skyTransformNode;
 			skyTransformNode = (TransformNode)eResolveProxy(oldSkyTransformNode);
@@ -116,10 +121,9 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		}
 		return skyTransformNode;
 	}
-		
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public TransformNode basicGetSkyTransformNode() {
@@ -127,8 +131,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setSkyTransformNode(TransformNode newSkyTransformNode) {
@@ -139,8 +142,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -154,8 +156,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -169,8 +170,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -184,8 +184,7 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -196,5 +195,72 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		}
 		return super.eIsSet(featureID);
 	}
+	
+	  @Override
+	  public void setWorksite(Worksite newWorksite) 
+	  {	
+		  	// Unregister from previous EarthSurfaceWorksite if applicable
+		  	if(getWorksite() instanceof EarthSurfaceWorksite)
+		  	{
+		  		getWorksite().eAdapters().remove(getEarthSurfaceWorksiteAdapter());
+		  	}
+		  
+			super.setWorksite(newWorksite);
+			
+			// Register to new EarthSurfaceWorksite if applicable
+			if(newWorksite instanceof EarthSurfaceWorksite)
+			{
+				EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) newWorksite;									
+				earthSurfaceWorksite.eAdapters().add(getEarthSurfaceWorksiteAdapter());
+				
+				updateSkyTransform(earthSurfaceWorksite.getXAxisAzimuth());
+			}		
+	  }
+	  
+	  @Override
+	  public void accept(INodeVisitor visitor) 
+	  {
+		  if (visitor.getType().isInstance(this)) 
+		  {
+				visitor.visit(this);
+		  }
 
-} //EarthSurfaceWorksiteNodeImpl
+		  // We do the same for all the children.
+		  for (Node child : getChildren()) 
+		  {
+				child.accept(visitor);
+		  }
+	  }
+	  
+	  private void updateSkyTransform(double xAxisAzimuth)
+	  {
+		  Matrix4d matrix = new Matrix4d();
+		  matrix.setIdentity();
+		  
+		  // Sky is rotated opposite of worksite relative to north.
+		  matrix.rotZ(-xAxisAzimuth);
+		  
+		  getSkyTransformNode().setTransformation(matrix);
+	  }
+	  
+	  private Adapter getEarthSurfaceWorksiteAdapter()
+	  {
+		  if(earthSurfaceWorksiteAdapter == null)
+		  {
+			  earthSurfaceWorksiteAdapter = new AdapterImpl()
+			  {
+				  @Override
+				  public void notifyChanged(Notification msg) 
+				  {				
+					  if(msg.getFeatureID(EarthSurfaceWorksite.class) == ApogyEarthSurfaceEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH)
+					  {
+						  updateSkyTransform(msg.getNewDoubleValue()); 
+					  }
+				  }  
+			  };
+		  }
+		  
+		  return earthSurfaceWorksiteAdapter;
+	  }
+
+} // EarthSurfaceWorksiteNodeImpl

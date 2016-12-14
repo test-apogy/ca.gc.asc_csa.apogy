@@ -186,7 +186,7 @@ class Sky extends Timed
 	
 	
 	@GenModel(children="true", notify="true", property="None")
-	refers transient SkyNode skyNode opposite sky
+	refers derived transient readonly SkyNode skyNode
 	
 	/*
 	 * Returns the Sun angular diameter, in radians.
@@ -403,7 +403,7 @@ class WorksiteNode extends AggregateGroupNode
 class SkyNode extends GroupNode
 {	
  	@GenModel(property="None")
-	refers transient Sky sky opposite skyNode
+	refers transient Sky sky
 } 
 
 

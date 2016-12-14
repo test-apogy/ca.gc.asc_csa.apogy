@@ -74,7 +74,9 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   protected StarFieldPresentationImpl()
   {
 		super();
-		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getIPropertyChangeListener());
+		
+		
+		// TODO Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getIPropertyChangeListener());
 	}
 
   /**

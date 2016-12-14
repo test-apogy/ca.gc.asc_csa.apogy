@@ -17,5 +17,7 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.core.environment.surface;bundle-version="0.1.0",
  ca.gc.asc_csa.apogy.core.environment.surface.ui;bundle-version="0.1.0"
 Export-Package: ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3,
- ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.preferences
+ ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.adapters,
+ ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.preferences,
+ ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.scene_objects
 Bundle-Vendor: %providerName

@@ -17,7 +17,7 @@ import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.Activator;
 
 public class ApogyEnvironmentSurfaceEarthUIPreferencesInitializer extends AbstractPreferenceInitializer {
 

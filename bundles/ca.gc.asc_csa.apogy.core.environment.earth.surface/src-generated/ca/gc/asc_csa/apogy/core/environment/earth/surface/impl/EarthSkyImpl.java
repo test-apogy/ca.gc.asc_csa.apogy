@@ -33,12 +33,15 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.core.environment.Activator;
 import ca.gc.asc_csa.apogy.core.environment.Moon;
+import ca.gc.asc_csa.apogy.core.environment.SkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
 import ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl;
 
@@ -56,7 +59,8 @@ import ca.gc.asc_csa.apogy.core.environment.impl.SkyImpl;
  *
  * @generated
  */
-public class EarthSkyImpl extends SkyImpl implements EarthSky {
+public class EarthSkyImpl extends SkyImpl implements EarthSky 
+{
 	private Adapter adapter = null;
 
 	/**
@@ -162,44 +166,30 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 	 * 
 	 * @generated_NOT
 	 */
-	public Moon getMoon() {
+	public Moon getMoon() 
+	{
 		// Explores children to find the Moon.
-		if (basicGetMoon() == null) {
+		if (basicGetMoon() == null) 
+		{
 			moon = findMoonInTopology();
 		}
 		return moon;
 	}
 
-	/**
-	 * Searches the topology to find the Moon.
-	 * 
-	 * @return The Moon, null if not found.
-	 */
-	private Moon findMoonInTopology() {
-		Moon foundMoon = null;
-
-		EList<Node> children = getSkyNode().getChildren();
-		Iterator<Node> it = children.iterator();
-		while (it.hasNext() && (foundMoon == null)) {
-			Node node = it.next();
-
-			if (node instanceof TransformNode) {
-				TransformNode t = (TransformNode) node;
-
-				EList<Node> tChildren = t.getChildren();
-				Iterator<Node> tIt = tChildren.iterator();
-				while (tIt.hasNext() && (foundMoon == null)) {
-					Node n = tIt.next();
-
-					if (n instanceof Moon) {
-						foundMoon = (Moon) n;
-					}
-				}
-			}
-		}
-
-		return foundMoon;
+	@Override
+	public SkyNode getSkyNode() 
+	{
+	  	if(skyNode == null || !(skyNode instanceof EarthSkyNode))
+	  	{	  
+	  		EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
+	  		skyNode = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.createEarthSkyNode(earthSurfaceWorksite.getGeographicalCoordinates());
+	  		skyNode.setSky(this);							
+	  	}
+	  	
+	  	return getSkyNodeGen();		
 	}
+	
+
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -214,10 +204,11 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 	 * 
 	 * @generated_NOT
 	 */
-	public HorizontalCoordinates getMoonHorizontalCoordinates() {
-		if (getMoonHorizontalCoordinatesGen() == null) {
-			HorizontalCoordinates newHorizontalCoordinates = ApogyEarthEnvironmentFactory.eINSTANCE
-					.createHorizontalCoordinates();
+	public HorizontalCoordinates getMoonHorizontalCoordinates() 
+	{
+		if (getMoonHorizontalCoordinatesGen() == null) 
+		{
+			HorizontalCoordinates newHorizontalCoordinates = ApogyEarthEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 			setMoonHorizontalCoordinates(newHorizontalCoordinates);
 		}
 
@@ -264,7 +255,8 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 	 * 
 	 * @generated_NOT
 	 */
-	public double getMoonAngularDiameter() {
+	public double getMoonAngularDiameter() 
+	{
 		// Find the distance between the moon and the origin.
 		TransformNode transform = (TransformNode) getMoon().getParent();
 		Vector3d vector = new Vector3d();
@@ -277,26 +269,151 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 	}
 
 	@Override
-	public double getSunAngularDiameter() {
+	public double getSunAngularDiameter() 
+	{
 		// Return the average angular size for now.
 		double angularDiameter = Math.toRadians(0.535833333);
 
 		return angularDiameter;
 	}
 
+	
+	
 	@Override
-	public void setTime(Date newTime) {
+	public void setTime(Date newTime) 
+	{
 		super.setTime(newTime);
 
-		if (getWorksite() != null) {
-			if (newTime != null) {
+		if (getWorksite() != null) 
+		{
+			if (newTime != null) 
+			{
 				updateSky(newTime.getTime());
-			} else {
+			} 
+			else 
+			{
 				updateSky(new Date().getTime());
 			}
 		}
 	}
 
+
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
+				if (resolve) return getSunHorizontalCoordinates();
+				return basicGetSunHorizontalCoordinates();
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON:
+				if (resolve) return getMoon();
+				return basicGetMoon();
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+				if (resolve) return getMoonHorizontalCoordinates();
+				return basicGetMoonHorizontalCoordinates();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
+				setSunHorizontalCoordinates((HorizontalCoordinates)newValue);
+				return;
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+				setMoonHorizontalCoordinates((HorizontalCoordinates)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
+				setSunHorizontalCoordinates((HorizontalCoordinates)null);
+				return;
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+				setMoonHorizontalCoordinates((HorizontalCoordinates)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
+				return sunHorizontalCoordinates != null;
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON:
+				return moon != null;
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+				return moonHorizontalCoordinates != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
+				return getMoonAngularDiameter();
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * Searches the topology to find the Moon.
+	 * 
+	 * @return The Moon, null if not found.
+	 */
+	private Moon findMoonInTopology() {
+		Moon foundMoon = null;
+
+		EList<Node> children = getSkyNode().getChildren();
+		Iterator<Node> it = children.iterator();
+		while (it.hasNext() && (foundMoon == null)) {
+			Node node = it.next();
+
+			if (node instanceof TransformNode) {
+				TransformNode t = (TransformNode) node;
+
+				EList<Node> tChildren = t.getChildren();
+				Iterator<Node> tIt = tChildren.iterator();
+				while (tIt.hasNext() && (foundMoon == null)) {
+					Node n = tIt.next();
+
+					if (n instanceof Moon) {
+						foundMoon = (Moon) n;
+					}
+				}
+			}
+		}
+
+		return foundMoon;
+	}
+	
 	private void updateSky(long newTime) 
 	{
 		EarthSurfaceWorksite worksite = (EarthSurfaceWorksite) getWorksite();
@@ -435,89 +552,4 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky {
 
 		return adapter;
 	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
-				if (resolve) return getSunHorizontalCoordinates();
-				return basicGetSunHorizontalCoordinates();
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON:
-				if (resolve) return getMoon();
-				return basicGetMoon();
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
-				if (resolve) return getMoonHorizontalCoordinates();
-				return basicGetMoonHorizontalCoordinates();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
-				setSunHorizontalCoordinates((HorizontalCoordinates)newValue);
-				return;
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
-				setMoonHorizontalCoordinates((HorizontalCoordinates)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
-				setSunHorizontalCoordinates((HorizontalCoordinates)null);
-				return;
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
-				setMoonHorizontalCoordinates((HorizontalCoordinates)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES:
-				return sunHorizontalCoordinates != null;
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON:
-				return moon != null;
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
-				return moonHorizontalCoordinates != null;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ApogyEarthSurfaceEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
-				return getMoonAngularDiameter();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 } // EarthSkyImpl
