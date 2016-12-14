@@ -25,10 +25,10 @@ public class ApogyEnvironmentSurfaceUIPreferencesInitializer extends AbstractPre
 	{			
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		
-		// Initailize the Earth Sky
+		// Initialize the Sky Preferences
 		store.setDefault(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SKY_HORIZON_VISIBLE_ID, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SKY_HORIZON_VISIBLE);
 		
-		// Initialize Earth Surface Worksite
+		// Initialize Surface Worksite Preferences
 		store.setDefault(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE_ID, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE);
 		store.setDefault(ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_LENGTH_ID, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_LENGTH);
 		

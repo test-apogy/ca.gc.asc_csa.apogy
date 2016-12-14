@@ -646,6 +646,8 @@ public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImp
   	@Override
 	protected void applyPreferences() 
   	{
+  		System.out.println("AbstractSurfaceWorksitePresentationImpl.applyPreferences()");
+  		
   		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
   		
   		// Set the axis visibility and length.
@@ -681,4 +683,5 @@ public class AbstractSurfaceWorksitePresentationImpl extends NodePresentationImp
 		}
 		
 		return preferencesListener;
-	}} //AbstractSurfaceWorksitePresentationImpl
+	}
+} //AbstractSurfaceWorksitePresentationImpl

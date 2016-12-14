@@ -54,6 +54,7 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 	public static final float MAX_POINT_SIZE = 4.0f;	
 	
 	private StarField starField = null;		
+	private float highestMagnitude = 6.0f;
 	private int minMagnitudeLevel = 0;
 	private int maxMagnitudeLevel = 10;
 
@@ -98,12 +99,15 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 		
 	public void setCutOffMagnitude(float cutOffMagnitude)
 	{		
+		// TODO this.highestMagnitude = cutOffMagnitude;
+		this.highestMagnitude = 6.0f;
+		
 		jme3Application.enqueue(new Callable<Object>() 
 		{
 			@Override
 			public Object call() throws Exception 
 			{	
-				SortedMap<Float, Geometry> toSwitchOff = starsMagnitudeToGeometry.tailMap(new Float(cutOffMagnitude));
+				SortedMap<Float, Geometry> toSwitchOff = starsMagnitudeToGeometry.tailMap(new Float(highestMagnitude));
 				Iterator<Geometry> itOff = toSwitchOff.values().iterator();
 				while(itOff.hasNext())
 				{
@@ -111,7 +115,7 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 					if(s != null) getAttachmentNode().detachChild(s);
 				}
 				
-				SortedMap<Float, Geometry> toSwitchOn = starsMagnitudeToGeometry.headMap(new Float(cutOffMagnitude));
+				SortedMap<Float, Geometry> toSwitchOn = starsMagnitudeToGeometry.headMap(new Float(highestMagnitude));
 				Iterator<Geometry> itOn = toSwitchOn.values().iterator();
 				while(itOn.hasNext())
 				{

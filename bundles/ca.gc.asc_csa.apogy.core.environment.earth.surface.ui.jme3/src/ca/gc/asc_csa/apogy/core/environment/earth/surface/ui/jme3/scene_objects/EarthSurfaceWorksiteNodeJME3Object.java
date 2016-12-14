@@ -100,8 +100,8 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	private float axisLength = 1.0f;
 	
 	private boolean planeVisible = true;
-	private float gridSize = 100.0f;
-	private float planeSize = 10.0f;	
+	private float gridSize = 10.0f;
+	private float planeSize = 100.0f;	
 	
 	private boolean azimuthVisible = true;
 	private boolean azimuthLinesVisible = true;
@@ -153,7 +153,8 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setPlaneVisible(boolean newPlaneVisible)
 	{
-		this.planeVisible = newPlaneVisible;
+		// TODO this.planeVisible = newPlaneVisible;
+		this.planeVisible = true;
 		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Plane visibility to <" + newPlaneVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 
@@ -224,7 +225,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setAxisVisible(boolean newAxisVisible)
 	{
-		this.axisVisible = newAxisVisible;
+		this.axisVisible = newAxisVisible;		
 		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Axis visibility to <" + newAxisVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 
@@ -292,7 +293,9 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setAzimuthVisible(boolean newAzimuthVisible) 	
 	{
-		this.azimuthVisible = newAzimuthVisible;
+		// TODO this.azimuthVisible = newAzimuthVisible;
+		this.azimuthVisible = true;
+		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Azimuth visibility to <" + newAzimuthVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -323,7 +326,9 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setElevationLinesVisible(boolean newElevationLinesVisible) 
 	{
-		this.elevationLinesVisible = newElevationLinesVisible;
+		// TODO this.elevationLinesVisible = newElevationLinesVisible;
+		this.elevationLinesVisible = true;
+		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Elevation Lines visibility to <" + newElevationLinesVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -353,7 +358,9 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setAzimuthLinesVisible(final boolean newAzimuthLinesVisible) 
 	{
-		this.azimuthLinesVisible = newAzimuthLinesVisible;
+		// TODO this.azimuthLinesVisible = newAzimuthLinesVisible;
+		
+		this.azimuthLinesVisible = true;
 		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Azimuth Lines visibility to <" + newAzimuthLinesVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 

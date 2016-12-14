@@ -34,7 +34,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ui.impl.AbstractSurfaceWorks
  */
 public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksitePresentationImpl implements EarthSurfaceWorksitePresentation 
 {
-	protected IPropertyChangeListener preferencesListener = null;
+	protected IPropertyChangeListener surfaceUIPreferencesListener = null;
 	 
 	/**
 	 * <!-- begin-user-doc -->
@@ -47,8 +47,8 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
 		// Initializes values from preferences
 		applyPreferences();	
 		
-		// Register a listener to the preference store
-		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getPreferencesListener());
+		// Register a listener to the Environment UI Preference store
+		ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getSurfaceUIPreferencesListener());
 	}
 
 	/**
@@ -114,11 +114,11 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
 		super.applyPreferences();
 	}
   	
-	private IPropertyChangeListener getPreferencesListener()
+	private IPropertyChangeListener getSurfaceUIPreferencesListener()
 	{
-		if(preferencesListener == null)
+		if(surfaceUIPreferencesListener == null)
 		{
-			preferencesListener = new IPropertyChangeListener() 
+			surfaceUIPreferencesListener = new IPropertyChangeListener() 
 			{
 				public void propertyChange(PropertyChangeEvent event) 
 				{	
@@ -127,7 +127,7 @@ public class EarthSurfaceWorksitePresentationImpl extends AbstractSurfaceWorksit
 			};
 		}
 		
-		return preferencesListener;
+		return surfaceUIPreferencesListener;
 	}
 
 } //EarthSurfaceWorksitePresentationImpl

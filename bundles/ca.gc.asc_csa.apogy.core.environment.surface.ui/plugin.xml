@@ -24,5 +24,11 @@
             class="ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage"
             genModel="model/apogy_core_environment_surface_ui.xcore"/>
    </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceUIPreferencesInitializer">
+      </initializer>
+   </extension>
 
 </plugin>

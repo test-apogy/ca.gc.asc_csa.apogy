@@ -13,7 +13,6 @@ Export-Package: ca.gc.asc_csa.apogy.core.environment.surface.ui,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.dialogs,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.impl,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences,
- ca.gc.asc_csa.apogy.core.environment.surface.ui.provider,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.scene_objects,
  ca.gc.asc_csa.apogy.core.environment.surface.ui.util
 Require-Bundle: org.eclipse.core.runtime,

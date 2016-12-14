@@ -75,17 +75,10 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	
 	private EarthSky earthSky;
 	private AssetManager assetManager;		
-	
-//	public static final float CELESTIAL_SPHERE_RADIUS = 20000.0f; // 20km.
-//	public static final float ATMOSPHERE_RADIUS       = CELESTIAL_SPHERE_RADIUS * 0.95f;
-//	public static final float SUN_AND_MOON_RADIUS     = CELESTIAL_SPHERE_RADIUS * 0.9f;
-//	public static final float HORIZON_RADIUS          = CELESTIAL_SPHERE_RADIUS * 0.85f;				
-	
+		
 	private static ColorRGBA HORIZON_COLOR = new ColorRGBA(0.0753f, 0.04414f, 0.015686f, 1.0f);
 	private static ColorRGBA SUN_SPHERE_COLOR = new ColorRGBA(0.976470588f, 0.968627451f, 0.6f, 1.0f);
-	private static ColorRGBA MOON_SPHERE_COLOR = new ColorRGBA(1f, 1f, 1f, 0.2f);
-	
-	//private static ColorRGBA HORIZON_COLOR = new ColorRGBA(0.588f, 0.294f, 0f, 1.0f);
+	private static ColorRGBA MOON_SPHERE_COLOR = new ColorRGBA(1f, 1f, 1f, 0.2f);		
 
 	// Horizon
 	private boolean horizonVisible = true;
@@ -254,7 +247,9 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	@Override
 	public void setHorizonVisible(final boolean newHorizonVisible) 
 	{		
-		this.horizonVisible = newHorizonVisible;
+		// TODO this.horizonVisible = newHorizonVisible;
+		
+		this.horizonVisible = true;
 		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Horizon visibility to <" + newHorizonVisible + ">", EventSeverity.INFO);
 		jme3Application.enqueue(new Callable<Object>() 
