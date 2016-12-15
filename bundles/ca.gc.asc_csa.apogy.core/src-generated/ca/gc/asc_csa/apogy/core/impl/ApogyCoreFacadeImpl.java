@@ -24,6 +24,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -133,7 +134,9 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		resultNode.setResult(result);
 
 		// Sets the time as the ID
-		resultNode.setNodeId(Long.toString(result.getTime().getTime()));
+		Date time = result.getTime();
+		if(time == null) time = new Date();
+		resultNode.setNodeId(Long.toString(time.getTime()));
 
 		// Attaches the result itself to the ResultNode.
 		if (result.getResultValue() instanceof AttributeResultValue) {

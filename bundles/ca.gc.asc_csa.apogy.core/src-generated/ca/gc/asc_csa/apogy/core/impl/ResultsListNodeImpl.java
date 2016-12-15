@@ -17,26 +17,29 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.vecmath.Matrix4d;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.Positioned;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
 import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResult;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.ResultsList;
@@ -221,7 +224,21 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			// Creates a ResultNode.
 			ResultNode resultNode = ApogyCoreFacade.INSTANCE.createResultNode(positionedResult);
 
-			TransformNode transform = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(positionedResult.getPose().asMatrix4d());
+			// Sets the pose
+			Matrix4d pose = null;		
+			
+			// If the pose is defined, use it.
+			if(positionedResult.getPose() != null)
+			{
+				pose = positionedResult.getPose().asMatrix4d();
+			}			
+			else
+			{
+				pose = new Matrix4d();
+				pose.setIdentity();	
+			}
+			TransformNode transform = ApogyCommonTopologyFacade.INSTANCE.createTransformNode(pose);
+			
 			if(positionedResult.getTime() != null)
 			{
 				String description = Long.toString(positionedResult.getTime().getTime());

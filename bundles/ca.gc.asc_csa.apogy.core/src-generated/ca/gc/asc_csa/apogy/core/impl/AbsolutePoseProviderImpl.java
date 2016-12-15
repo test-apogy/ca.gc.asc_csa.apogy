@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core.impl;
  */
 
 import org.eclipse.emf.ecore.EClass;
+
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 

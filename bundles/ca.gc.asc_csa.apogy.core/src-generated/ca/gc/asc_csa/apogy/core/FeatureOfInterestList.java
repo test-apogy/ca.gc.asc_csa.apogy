@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core;
  */
 
 import org.eclipse.emf.common.util.EList;
+
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 

@@ -22,9 +22,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '

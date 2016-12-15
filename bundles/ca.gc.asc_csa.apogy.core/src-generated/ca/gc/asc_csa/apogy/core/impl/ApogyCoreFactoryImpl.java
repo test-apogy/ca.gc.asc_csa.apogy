@@ -16,13 +16,22 @@ package ca.gc.asc_csa.apogy.core.impl;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import ca.gc.asc_csa.apogy.core.AbsolutePoseProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
+import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
+import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.AssemblyLink;
 import ca.gc.asc_csa.apogy.core.AssemblyLinksList;
 import ca.gc.asc_csa.apogy.core.ConnectionPoint;
@@ -37,13 +46,6 @@ import ca.gc.asc_csa.apogy.core.Positioned;
 import ca.gc.asc_csa.apogy.core.PositionedResult;
 import ca.gc.asc_csa.apogy.core.ResultNode;
 import ca.gc.asc_csa.apogy.core.ResultsListNode;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-import ca.gc.asc_csa.apogy.core.ApogyInitializationData;
-import ca.gc.asc_csa.apogy.core.ApogySystem;
-import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-import ca.gc.asc_csa.apogy.core.ApogyTopology;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.UserDefinedResult;
 

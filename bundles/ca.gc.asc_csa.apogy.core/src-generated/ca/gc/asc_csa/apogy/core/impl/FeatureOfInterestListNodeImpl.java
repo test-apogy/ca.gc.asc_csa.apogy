@@ -23,16 +23,17 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.Activator;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestListNode;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
-import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->

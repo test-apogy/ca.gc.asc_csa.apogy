@@ -20,12 +20,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.impl.TransformNodeImpl;
+import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterest;
 import ca.gc.asc_csa.apogy.core.FeatureOfInterestNode;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 
 /**
  * <!-- begin-user-doc -->

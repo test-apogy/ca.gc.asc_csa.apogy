@@ -19,14 +19,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.common.emf.Described;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.AssemblyLink;
-import ca.gc.asc_csa.apogy.core.ConnectionPoint;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
 
 /**

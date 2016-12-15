@@ -23,10 +23,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-import ca.gc.asc_csa.apogy.core.PoseCorrector;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.PoseCorrector;
 
 /**
  * <!-- begin-user-doc -->

@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;

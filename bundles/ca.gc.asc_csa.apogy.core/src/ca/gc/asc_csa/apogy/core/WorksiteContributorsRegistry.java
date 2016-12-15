@@ -20,6 +20,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionPoint;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 

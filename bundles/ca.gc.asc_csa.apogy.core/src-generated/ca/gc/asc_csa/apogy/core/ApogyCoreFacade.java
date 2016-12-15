@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.core;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.core.impl.ApogyCoreFacadeImpl;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;

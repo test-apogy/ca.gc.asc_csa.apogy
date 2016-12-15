@@ -14,6 +14,7 @@ package ca.gc.asc_csa.apogy.core;
  */
 
 import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 
 /**

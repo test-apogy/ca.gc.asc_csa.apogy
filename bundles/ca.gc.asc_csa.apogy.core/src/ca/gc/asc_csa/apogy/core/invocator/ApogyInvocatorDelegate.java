@@ -18,20 +18,21 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.bindings.AbstractTopologyBinding;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFacade;
 import ca.gc.asc_csa.apogy.common.topology.bindings.ApogyCommonTopologyBindingsFactory;
-import ca.gc.asc_csa.apogy.core.AssemblyLink;
-import ca.gc.asc_csa.apogy.core.ConnectionPoint;
-import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.AssemblyLink;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.PoseProvider;
 import ca.gc.asc_csa.apogy.core.TopologyRoot;
 import ca.gc.asc_csa.apogy.core.invocator.delegates.DefaultInvocatorDelegate;
 

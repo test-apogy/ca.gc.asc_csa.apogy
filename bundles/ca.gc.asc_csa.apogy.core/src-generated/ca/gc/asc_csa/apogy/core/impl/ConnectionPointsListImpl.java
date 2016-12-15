@@ -25,10 +25,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import ca.gc.asc_csa.apogy.core.ConnectionPoint;
-import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
+import ca.gc.asc_csa.apogy.core.ConnectionPoint;
+import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
