@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.edit.command.AbstractOverrideableCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 /**
@@ -56,6 +57,13 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EDataType collectionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType abstractOverrideableCommandEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -207,6 +215,24 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonEmfTransactionFacade__ExecuteCommand__AbstractOverrideableCommand() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__GetTransactionalEditingDomain__EObject() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getTransactionalEditingDomain() {
 		return transactionalEditingDomainEDataType;
 	}
@@ -218,6 +244,15 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 */
 	public EDataType getCollection() {
 		return collectionEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getAbstractOverrideableCommand() {
+		return abstractOverrideableCommandEDataType;
 	}
 
 	/**
@@ -257,10 +292,13 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_COLLECTION);
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___EXECUTE_COMMAND__ABSTRACTOVERRIDEABLECOMMAND);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT);
 
 		// Create data types
 		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
 		collectionEDataType = createEDataType(COLLECTION);
+		abstractOverrideableCommandEDataType = createEDataType(ABSTRACT_OVERRIDEABLE_COMMAND);
 	}
 
 	/**
@@ -334,9 +372,16 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEmfTransactionFacade__ExecuteCommand__AbstractOverrideableCommand(), null, "executeCommand", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAbstractOverrideableCommand(), "command", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__GetTransactionalEditingDomain__EObject(), this.getTransactionalEditingDomain(), "getTransactionalEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(transactionalEditingDomainEDataType, TransactionalEditingDomain.class, "TransactionalEditingDomain", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(collectionEDataType, Collection.class, "Collection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.Collection<?>");
+		initEDataType(abstractOverrideableCommandEDataType, AbstractOverrideableCommand.class, "AbstractOverrideableCommand", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
