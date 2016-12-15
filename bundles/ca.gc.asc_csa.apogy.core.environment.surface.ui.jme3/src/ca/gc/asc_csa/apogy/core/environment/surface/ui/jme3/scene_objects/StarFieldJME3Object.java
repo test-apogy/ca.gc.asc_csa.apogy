@@ -36,16 +36,18 @@ import com.jme3.math.Vector3f;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.Mesh;
 
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import ca.gc.asc_csa.apogy.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 import ca.gc.asc_csa.apogy.core.environment.Star;
 import ca.gc.asc_csa.apogy.core.environment.StarField;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.SurfaceEnvironmentJMEConstants;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.SurfaceEnvironmentJMEConstants;
 import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.core.environment.ui.scene_objects.StarFieldSceneObject;
 
 public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> implements StarFieldSceneObject
 {					
@@ -99,8 +101,9 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 		
 	public void setCutOffMagnitude(float cutOffMagnitude)
 	{		
-		// TODO this.highestMagnitude = cutOffMagnitude;
-		this.highestMagnitude = 6.0f;
+		this.highestMagnitude = cutOffMagnitude;
+				
+		Logger.INSTANCE.log(Activator.ID, this, "Setting Cutoff Magnitude to <" + cutOffMagnitude + ">", EventSeverity.INFO);
 		
 		jme3Application.enqueue(new Callable<Object>() 
 		{

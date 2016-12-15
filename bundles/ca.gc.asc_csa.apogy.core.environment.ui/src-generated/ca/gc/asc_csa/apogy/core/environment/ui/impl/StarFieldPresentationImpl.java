@@ -24,8 +24,8 @@ import ca.gc.asc_csa.apogy.common.topology.ui.impl.NodePresentationImpl;
 import ca.gc.asc_csa.apogy.core.environment.ui.Activator;
 import ca.gc.asc_csa.apogy.core.environment.ui.ApogyCoreEnvironmentUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldPresentation;
-import ca.gc.asc_csa.apogy.core.environment.ui.StarFieldSceneObject;
 import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
+import ca.gc.asc_csa.apogy.core.environment.ui.scene_objects.StarFieldSceneObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,9 +74,8 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   protected StarFieldPresentationImpl()
   {
 		super();
-		
-		
-		// TODO Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getIPropertyChangeListener());
+				
+		Activator.getDefault().getPreferenceStore().addPropertyChangeListener(getIPropertyChangeListener());
 	}
 
   /**
@@ -210,6 +209,24 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
 	  return false;
 	}
   
+  	@Override
+	protected void initialSceneObject() 
+  	{
+  		applyPreferences();
+		super.initialSceneObject();
+	}
+  
+  	@Override
+  	protected void applyPreferences() 
+  	{
+ 		IPreferenceStore preferenceStore = Activator.getDefault().getPreferenceStore();
+ 		   		
+  		StarFieldSceneObject starFieldSceneObject = (StarFieldSceneObject) sceneObject;  		
+  		starFieldSceneObject.setCutOffMagnitude(preferenceStore.getFloat(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID));
+  		
+		super.applyPreferences();
+  	}
+  	
   	protected IPropertyChangeListener getIPropertyChangeListener()
   	{
   		if(iPropertyChangeListener == null)
@@ -219,14 +236,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
 				@Override
 				public void propertyChange(PropertyChangeEvent event) 
 				{					
-					if(event.getProperty().compareTo(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID) == 0)
-					{
-						System.out.println("StarFieldPresentationImpl " + event.getNewValue().getClass().getName());
-						
-						IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-						float magnitudeCutoff = (float) store.getDouble(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);					
-						setCutOffMagnitude(magnitudeCutoff);						
-					}
+					applyPreferences();
 				}
 			};
   		}

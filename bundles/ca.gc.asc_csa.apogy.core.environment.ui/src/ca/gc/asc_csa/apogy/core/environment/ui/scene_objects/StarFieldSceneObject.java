@@ -1,4 +1,4 @@
-package ca.gc.asc_csa.apogy.core.environment.ui;
+package ca.gc.asc_csa.apogy.core.environment.ui.scene_objects;
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
