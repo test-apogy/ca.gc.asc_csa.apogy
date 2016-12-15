@@ -37,6 +37,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
+import ca.gc.asc_csa.apogy.common.ui.dialogs.CloseWizardEscapeDialog;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
@@ -76,9 +77,10 @@ public class ControllerBindingWizard extends Wizard {
 			public void handleEvent(Event event) {
 				if (event.detail == SWT.TRAVERSE_ESCAPE) {
 					if (event.doit) {
-						CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
-								"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
-								MessageDialog.QUESTION, new String[] { "Yes", "No" }, 1);
+						CloseWizardEscapeDialog dialog = new CloseWizardEscapeDialog(ControllerBindingWizard.this);
+//						CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
+//								"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
+//								MessageDialog.QUESTION, new String[] { "Yes", "No" }, 1);
 						int result = dialog.open();
 						if (result == 0) {
 							performCancel();
@@ -197,24 +199,15 @@ public class ControllerBindingWizard extends Wizard {
 		return controllerBinding;
 	}
 
-//	@Override
-//	public boolean performCancel() {
-//		/**
-//		 * Confirmation dialog
-//		 */
-//		// TODO replace with general confirmation dialog
-//		String[] buttons = { "Yes", "No" };
-//		CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
-//				"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
-//				MessageDialog.QUESTION, buttons, 0);
-//		dialog.open();
-//		return dialog.getCancel();
-//	}
-
+	@Override
+	public boolean performCancel() {
+		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
+		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
+		return super.performCancel();
+	}
+	
 	// TODO move to common.ui
 	private class CloseOnCancelDialog extends MessageDialog {
-
-		private boolean cancel = true;
 
 		public CloseOnCancelDialog(Shell parentShell, String dialogTitle, Image dialogTitleImage, String dialogMessage,
 				int dialogImageType, String[] dialogButtonLabels, int defaultIndex) {
@@ -224,9 +217,6 @@ public class ControllerBindingWizard extends Wizard {
 
 		@Override
 		protected void buttonPressed(int buttonId) {
-			if (buttonId == 1) {
-				cancel = false;
-			}
 			this.close();
 			switch (buttonId) {
 			case 0:
@@ -235,18 +225,12 @@ public class ControllerBindingWizard extends Wizard {
 				this.close();
 				break;
 			case 1:
-				cancel = false;
 				this.cancelPressed();
 				break;
 			default:
 				break;
 			}
 		}
-
-		public boolean getCancel() {
-			return cancel;
-		}
-
 	}
 
 	/**
