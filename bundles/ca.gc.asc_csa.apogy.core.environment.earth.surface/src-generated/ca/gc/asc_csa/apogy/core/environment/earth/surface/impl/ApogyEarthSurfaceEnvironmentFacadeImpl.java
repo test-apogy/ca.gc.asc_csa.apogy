@@ -190,54 +190,9 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 		
 		// Attaches a Map
 		Map map = getDefaultMarsTerrainMap();						
-		// TODO worksite.getMapsList().getMaps().add(map);			
+		worksite.getMapsList().getMaps().add(map);			
 		
 		return worksite;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode) 
-	{
-//	  	// Initialize the Sun and Stars.
-//		ApogyCoreEnvironmentFacade.INSTANCE.initializeSkyNode(earthSkyNode);						
-//		
-//	  	Date now = new Date();
-//		if(earthSky.getTime() != null)
-//		{
-//			now = earthSky.getTime();
-//		}
-//		
-//		// Gets the Geographic Coordinates of the Worksite
-//		EarthSurfaceWorksite worksite =  (EarthSurfaceWorksite) earthSky.getWorksite();
-//		GeographicCoordinates coord = worksite.getGeographicalCoordinates();
-//		
-//		// Creates the Moon.
-//		Moon moon = ApogyCoreEnvironmentFactory.eINSTANCE.createMoon();
-//		moon.setDescription("The Moon.");
-//		moon.setNodeId("MOON");
-//		
-//		// Creates the Moon transform that attaches it to the sky.		
-//		System.out.println("COORD : " + coord);
-//		HorizontalCoordinates moonHorizontalCoordinates = AstronomyUtils.INSTANCE.getHorizontalMoonPosition(now, coord.getLongitude(), coord.getLatitude());		
-//		
-//		Point3d moonPosition = AstronomyUtils.INSTANCE.convertFromHorizontalCoordinatesToHorizontalRectangular(moonHorizontalCoordinates);
-//		TransformNode moonTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(moonPosition.x, moonPosition.y, moonPosition.z, 0, 0, 0);
-//		moonTransformNode.setDescription("Transform attaching the Moon to the Sky.");	
-//		moonTransformNode.setNodeId("MOON_TRANSFORM");
-//		
-//		// Attaches the Moon to the sky.
-//		earthSkyNode.getChildren().add(moonTransformNode);				
-//		moonTransformNode.setParent(earthSky.getSkyNode()); // Should not have to this this explicitly.		
-//		moonTransformNode.getChildren().add(moon);	
-//		
-//		earthSkyNode.setDescription("Earth's Sky.");
-//		earthSkyNode.setNodeId("SKY");
-//		
-//		earthSky.setTime(now);
 	}
 
 	/**
@@ -357,9 +312,6 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 				return createEarthSkyNode((GeographicCoordinates)arguments.get(0));
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
-			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:
-				initializeEarthSkyNode((EarthSky)arguments.get(0), (EarthSkyNode)arguments.get(1));
-				return null;
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES:
 				return getMarsYardGeographicalCoordinates();
 			case ApogyEarthSurfaceEnvironmentPackage.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:

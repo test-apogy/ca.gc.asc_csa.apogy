@@ -172,12 +172,7 @@ class ApogyEarthSurfaceEnvironmentFacade
 	 * Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates.
 	 */
 	op EarthSurfaceWorksite createAndInitializeDefaultCSAWorksite()
-	
-	/**
-	 * Initialize a EarthSkyNode using an EarthSky.
-	 */
-	op void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode)
-	
+		
 	/**
 	 * Return the GeographicCoordinates of the CSA Mars Yard.
 	 */

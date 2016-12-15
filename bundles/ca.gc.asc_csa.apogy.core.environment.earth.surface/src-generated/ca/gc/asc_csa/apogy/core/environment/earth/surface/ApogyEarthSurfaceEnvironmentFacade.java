@@ -83,18 +83,6 @@ public interface ApogyEarthSurfaceEnvironmentFacade extends EObject
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
-	 * Initialize a EarthSkyNode using an EarthSky.
-	 * <!-- end-model-doc -->
-	 * @model earthSkyUnique="false" earthSkyNodeUnique="false"
-	 * @generated
-	 */
-	void initializeEarthSkyNode(EarthSky earthSky, EarthSkyNode earthSkyNode);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the GeographicCoordinates of the CSA Mars Yard.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"

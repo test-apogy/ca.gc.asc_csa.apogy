@@ -33,13 +33,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import ca.gc.asc_csa.apogy.addons.vehicle.Activator;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehicleFactory;
+import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.ClosestNeighbourIteratorProvider;
 import ca.gc.asc_csa.apogy.addons.vehicle.ContactProvider;
 import ca.gc.asc_csa.apogy.addons.vehicle.MeshExtent2D;
 import ca.gc.asc_csa.apogy.addons.vehicle.MeshNodeEntry;
 import ca.gc.asc_csa.apogy.addons.vehicle.OrientationCorrectionMode;
-import ca.gc.asc_csa.apogy.addons.vehicle.ApogyAddonsVehiclePackage;
 import ca.gc.asc_csa.apogy.addons.vehicle.VehiclePoseCorrector;
 import ca.gc.asc_csa.apogy.addons.vehicle.WheelVehicleUtilities;
 import ca.gc.asc_csa.apogy.addons.vehicle.ZCorrectionMode;
@@ -49,11 +51,15 @@ import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.addons.dynamics.PhysicalBody;
-import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayerNode;
 import ca.gc.asc_csa.apogy.core.impl.PoseCorrectorImpl;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -855,52 +861,49 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 	  
 	  try
 	  {		  
-		  ApogyEnvironment env = (ApogyEnvironment) getApogySystemApiAdapter().getEnvironment();		
+		  Node root = ApogyCoreTopologyFacade.INSTANCE.getApogyTopology().getRootNode();		  		  		  
 		  
-// FIXME TRANSACTION: SINGLETON, Volatile -> Facade.		  
-//		  Node root = env.getApogyTopology().getRootNode();		  		  		  
-//		  
-//		  // Gets the list of nodes that are part of the system topology.
-//		  Node systemRoot = getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
-//		  List<Node> systemNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.NODE, systemRoot);
-//		  		  
-//		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
-//		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.CONTENT_NODE, root));
-//		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
-//		  
-//		  for(Node node : nodes)
-//		  {
-//			  // Adds only nodes that are not part of the system itself.
-//			  if(!systemNodes.contains(node))
-//			  {			  
-//				  if(node instanceof ContentNode<?>) 
-//				  {
-//					  ContentNode<?> contentNode = (ContentNode<?>) node;
-//					  
-//					   if(contentNode.getContent() instanceof CartesianTriangularMesh)
-//					   {
-//						  if(!extractedMeshes.contains((ContentNode<CartesianTriangularMesh>) contentNode))
-//						  {						  
-//							  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
-//							  entry.setNode(contentNode);
-//							  entry.setMesh(((ContentNode<CartesianTriangularMesh>) contentNode).getContent());							  							 
-//							  extractedMeshes.add(entry);
-//						  }
-//					   }					  
-//				  }
-//				  else if(node instanceof CartesianTriangularMeshMapLayerNode)
-//				  {
-//					  CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode) node;
-//					  if(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer() != null)
-//					  {
-//						  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
-//						  entry.setNode(cartesianTriangularMeshMapLayerNode);
-//						  entry.setMesh(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer().getCurrentMesh());	
-//						  extractedMeshes.add(entry);
-//					  }
-//				  }
-//			  }
-//		  }	  
+		  // Gets the list of nodes that are part of the system topology.
+		  Node systemRoot = getApogySystemApiAdapter().getApogySystem().getTopologyRoot().getOriginNode();
+		  List<Node> systemNodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.NODE, systemRoot);
+		  		  
+		  List<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
+		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogyCommonTopologyPackage.Literals.CONTENT_NODE, root));
+		  nodes.addAll(ApogyCommonTopologyFacade.INSTANCE.findNodesByType(ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
+		  
+		  for(Node node : nodes)
+		  {
+			  // Adds only nodes that are not part of the system itself.
+			  if(!systemNodes.contains(node))
+			  {			  
+				  if(node instanceof ContentNode<?>) 
+				  {
+					  ContentNode<?> contentNode = (ContentNode<?>) node;
+					  
+					   if(contentNode.getContent() instanceof CartesianTriangularMesh)
+					   {
+						  if(!extractedMeshes.contains((ContentNode<CartesianTriangularMesh>) contentNode))
+						  {						  
+							  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+							  entry.setNode(contentNode);
+							  entry.setMesh(((ContentNode<CartesianTriangularMesh>) contentNode).getContent());							  							 
+							  extractedMeshes.add(entry);
+						  }
+					   }					  
+				  }
+				  else if(node instanceof CartesianTriangularMeshMapLayerNode)
+				  {
+					  CartesianTriangularMeshMapLayerNode cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode) node;
+					  if(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer() != null)
+					  {
+						  MeshNodeEntry entry = ApogyAddonsVehicleFactory.eINSTANCE.createMeshNodeEntry();
+						  entry.setNode(cartesianTriangularMeshMapLayerNode);
+						  entry.setMesh(cartesianTriangularMeshMapLayerNode.getCartesianTriangularMeshMapLayer().getCurrentMesh());	
+						  extractedMeshes.add(entry);
+					  }
+				  }
+			  }
+		  }	  
 	  }
 	  catch(Exception e)
 	  {

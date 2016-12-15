@@ -52,12 +52,18 @@ public class CartesianTriangularMeshMapLayerNodeImpl extends AbstractMapLayerNod
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public CartesianTriangularMeshMapLayer getCartesianTriangularMeshMapLayer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public CartesianTriangularMeshMapLayer getCartesianTriangularMeshMapLayer() 
+	{
+		if(getAbstractMapLayer() instanceof CartesianTriangularMeshMapLayer)
+		{
+			return (CartesianTriangularMeshMapLayer) getAbstractMapLayer();
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/**

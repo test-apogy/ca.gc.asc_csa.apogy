@@ -79,11 +79,9 @@ import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
  */
 public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl implements CartesianTriangularMeshMapLayer 
 {
-	protected boolean verbose = false;
-	
+	protected boolean verbose = false;	
 	protected CartesianTriangularMesh emptyMesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	protected boolean textureImageIsDirty = true;
-
 	private EContentAdapter meshTextureAdapter = null;
 
 	/**
@@ -203,7 +201,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 			AbstractEImage img = getMeshTextureImage();
 			
 			// TODO : Do this using ApogyCommonEmfTransactionFacade.
-			transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
+			// TODO transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
 			textureImageIsDirty = false;
 		}				
 		return getTextureImageGen();
@@ -255,16 +253,16 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	 */
 	public CartesianTriangularMeshMapLayerNode getCartesianTriangularMeshMapLayerNode() 
 	{
-		CartesianTriangularMeshMapLayerNode tmp = getCartesianTriangularMeshMapLayerNodeGen();
+		CartesianTriangularMeshMapLayerNode node = getCartesianTriangularMeshMapLayerNodeGen();
 		
-		if(tmp == null)
+		if(node == null)
 		{
-			tmp = ApogySurfaceEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode();
-			tmp.setAbstractMapLayer(this);			
-			setCartesianTriangularMeshMapLayerNode(tmp);
+			node = ApogySurfaceEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode();
+			node.setAbstractMapLayer(this);			
+			setCartesianTriangularMeshMapLayerNode(node);
 		}
 		
-		return tmp;
+		return node;
 	}
 	
 	/**

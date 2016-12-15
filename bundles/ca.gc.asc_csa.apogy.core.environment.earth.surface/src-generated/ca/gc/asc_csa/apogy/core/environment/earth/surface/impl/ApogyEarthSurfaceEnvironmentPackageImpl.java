@@ -335,7 +335,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(3);
 	}
 
@@ -344,7 +344,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates() {
+	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(4);
 	}
 
@@ -353,17 +353,8 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyEarthSurfaceEnvironmentFacade__GetMarsYardTransformNode() {
-		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateApogySession() {
-		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(6);
+		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -704,7 +695,6 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
-		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION);
@@ -821,10 +811,6 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		addEParameter(op, theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "gsiteGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite(), this.getEarthSurfaceWorksite(), "createAndInitializeDefaultCSAWorksite", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode(), null, "initializeEarthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEarthSky(), "earthSky", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getEarthSkyNode(), "earthSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates(), theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "getMarsYardGeographicalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1088,12 +1074,6 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		   source, 
 		   new String[] {
 			 "documentation", "Create an empty EarthSurfaceWorksite with the CSA Mars Yard coordinates."
-		   });	
-		addAnnotation
-		  (getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode(), 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nInitialize a EarthSkyNode using an EarthSky."
 		   });	
 		addAnnotation
 		  (getApogyEarthSurfaceEnvironmentFacade__GetMarsYardGeographicalCoordinates(), 

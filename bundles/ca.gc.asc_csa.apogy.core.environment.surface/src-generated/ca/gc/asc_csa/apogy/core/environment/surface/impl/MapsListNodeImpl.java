@@ -31,26 +31,25 @@ import ca.gc.asc_csa.apogy.core.environment.surface.MapsList;
 import ca.gc.asc_csa.apogy.core.environment.surface.MapsListNode;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Maps List Node</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Maps
+ * List Node</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.environment.surface.impl.MapsListNodeImpl#getMapsList <em>Maps List</em>}</li>
+ * <li>{@link ca.gc.asc_csa.apogy.core.environment.surface.impl.MapsListNodeImpl#getMapsList
+ * <em>Maps List</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsListNode 
-{
+public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsListNode {
 	private Adapter adapter;
-	
+
 	/**
-	 * The cached value of the '{@link #getMapsList() <em>Maps List</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getMapsList() <em>Maps List</em>}'
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getMapsList()
 	 * @generated
 	 * @ordered
@@ -58,8 +57,8 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	protected MapsList mapsList;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated_NOT
 	 */
 	protected MapsListNodeImpl() {
@@ -68,8 +67,8 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -78,25 +77,26 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public MapsList getMapsList() {
 		if (mapsList != null && mapsList.eIsProxy()) {
-			InternalEObject oldMapsList = (InternalEObject)mapsList;
-			mapsList = (MapsList)eResolveProxy(oldMapsList);
+			InternalEObject oldMapsList = (InternalEObject) mapsList;
+			mapsList = (MapsList) eResolveProxy(oldMapsList);
 			if (mapsList != oldMapsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 			}
 		}
 		return mapsList;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public MapsList basicGetMapsList() {
@@ -104,183 +104,171 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void setMapsList(MapsList newMapsList) {
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-				if (resolve) return getMapsList();
-				return basicGetMapsList();
+		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			if (resolve)
+				return getMapsList();
+			return basicGetMapsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-				setMapsList((MapsList)newValue);
-				return;
+		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			setMapsList((MapsList) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-				setMapsList((MapsList)null);
-				return;
+		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			setMapsList((MapsList) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-				return mapsList != null;
+		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			return mapsList != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	 @Override
-	  public void accept(INodeVisitor visitor) 
-	  {
-		  if (visitor.getType().isInstance(this)) 
-		  {
-				visitor.visit(this);
-		  }
+	@Override
+	public void accept(INodeVisitor visitor) {
+		if (visitor.getType().isInstance(this)) {
+			visitor.visit(this);
+		}
 
-		  // We do the same for all the children.
-		  for (Node child : getChildren()) 
-		  {
-				child.accept(visitor);
-		  }
-	  }
-	  
-	  private void clearTopology()
-	  {
-		  getChildren().clear();
-	  }
-	  
-		protected void addMap(Map map)
-	  	{
-	  		//System.out.println("SurfaceWorksiteNodeImpl.addMap() " + map);
-	  		
-	  		getChildren().add(map.getMapNode());
-	  	}
-	  	
-	  	protected void removeMap(Map map)
-	  	{
-	  		//System.out.println("SurfaceWorksiteNodeImpl.removeMap() " + map);
-	  		
-	  		getChildren().remove(map.getMapNode());
-	  	}
-	  
-	  protected Adapter getAdapter() 
-	  {
-			if(adapter == null)
-			{
-				adapter = new AdapterImpl()
-				{				
-					@SuppressWarnings("unchecked")
-					@Override
-					public void notifyChanged(Notification notification) 
-					{					
-						super.notifyChanged(notification);
-						
-						// System.out.println("=======> notification " + notification);
-		
-						if(notification.getNotifier() instanceof MapsListNode)
+		// We do the same for all the children.
+		for (Node child : getChildren()) {
+			child.accept(visitor);
+		}
+	}
+
+	private void clearTopology() {
+		getChildren().clear();
+	}
+
+	protected void addMap(Map map) {
+		// System.out.println("SurfaceWorksiteNodeImpl.addMap() " + map);
+
+		getChildren().add(map.getMapNode());
+	}
+
+	protected void removeMap(Map map) {
+		// System.out.println("SurfaceWorksiteNodeImpl.removeMap() " + map);
+
+		getChildren().remove(map.getMapNode());
+	}
+
+	protected Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
+				@SuppressWarnings("unchecked")
+				@Override
+				public void notifyChanged(Notification notification) {
+					super.notifyChanged(notification);
+
+					// System.out.println("=======> notification " +
+					// notification);
+
+					if (notification.getNotifier() instanceof MapsListNode) 
+					{
+						if (notification.getFeatureID(MapsListNode.class) == ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST) 
 						{
-							if(notification.getFeatureID(MapsListNode.class) == ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST)
+							clearTopology();
+
+							if (notification.getOldValue() instanceof MapsList) 
 							{
-								clearTopology();
-								
-								if(notification.getOldValue() instanceof MapsList)
-								{
-									((MapsList)notification.getOldValue()).eAdapters().remove(getAdapter());
-								}
-								
-								if(notification.getNewValue() instanceof MapsList)
-								{
-									((MapsList)notification.getNewValue()).eAdapters().add(getAdapter());
-								}
+								((MapsList) notification.getOldValue()).eAdapters().remove(getAdapter());
+							}
+
+							if (notification.getNewValue() instanceof MapsList) 
+							{
+								((MapsList) notification.getNewValue()).eAdapters().add(getAdapter());
 							}
 						}
-						else if(notification.getNotifier() instanceof MapsList)
+					} else if (notification.getNotifier() instanceof MapsList) 
+					{
+						switch (notification.getEventType()) {
+						case Notification.ADD: 
 						{
-							switch(notification.getEventType())
-							{
-								case Notification.ADD:
-								{
-									Map mapAdded = (Map) notification.getNewValue();
-									addMap(mapAdded);
-									break;
-								}
-								case Notification.ADD_MANY:
-								{
-									Collection<? extends Map> mapsAdded = (Collection<? extends Map>) notification.getNewValue();
-									for (Map map : mapsAdded) 
-									{
-										addMap(map);
-									}
-									break;
-								}
-								case Notification.REMOVE:
-								{
-									Map mapRemoved = (Map) notification.getOldValue();
-									removeMap(mapRemoved);
-									break;
-								}
-								case Notification.REMOVE_MANY:
-								{
-									Collection<? extends Map> mapsRemoved = (Collection<? extends Map>) notification.getOldValue();
-									for (Map map : mapsRemoved) 
-									{
-										removeMap(map);
-									}								
-									break;
-								}
-								default:
-								{								
-								}
+							Map mapAdded = (Map) notification.getNewValue();
+							addMap(mapAdded);
+							break;
+						}
+						case Notification.ADD_MANY: 
+						{
+							Collection<? extends Map> mapsAdded = (Collection<? extends Map>) notification
+									.getNewValue();
+							for (Map map : mapsAdded) {
+								addMap(map);
 							}
+							break;
+						}
+						case Notification.REMOVE: {
+							Map mapRemoved = (Map) notification.getOldValue();
+							removeMap(mapRemoved);
+							break;
+						}
+						case Notification.REMOVE_MANY: {
+							Collection<? extends Map> mapsRemoved = (Collection<? extends Map>) notification
+									.getOldValue();
+							for (Map map : mapsRemoved) {
+								removeMap(map);
+							}
+							break;
+						}
+						default: {
+						}
 						}
 					}
-				};
-			}
-			return adapter;
-	  }
-} //MapsListNodeImpl
+				}
+			};
+		}
+		return adapter;
+	}
+} // MapsListNodeImpl

@@ -587,22 +587,13 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 2;
 
 	/**
-	 * The operation id for the '<em>Initialize Earth Sky Node</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 3;
-
-	/**
 	 * The operation id for the '<em>Get Mars Yard Geographical Coordinates</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 4;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 3;
 
 	/**
 	 * The operation id for the '<em>Get Mars Yard Transform Node</em>' operation.
@@ -611,7 +602,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 5;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Apogy Session</em>' operation.
@@ -620,7 +611,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 6;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION = 5;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -629,7 +620,7 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 7;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.impl.AtmosphereUtilsImpl <em>Atmosphere Utils</em>}' class.
@@ -1145,16 +1136,6 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#initializeEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky, ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode) <em>Initialize Earth Sky Node</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Initialize Earth Sky Node</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#initializeEarthSkyNode(ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSky, ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode)
-	 * @generated
-	 */
-	EOperation getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
 
 	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}' operation.
@@ -1683,14 +1664,6 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
-
-		/**
-		 * The meta object literal for the '<em><b>Initialize Earth Sky Node</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Mars Yard Geographical Coordinates</b></em>' operation.
