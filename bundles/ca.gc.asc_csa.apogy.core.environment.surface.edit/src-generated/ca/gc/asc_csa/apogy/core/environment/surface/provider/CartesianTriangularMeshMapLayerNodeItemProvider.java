@@ -76,18 +76,20 @@ public class CartesianTriangularMeshMapLayerNodeItemProvider extends AbstractMap
 	@Override
 	public String getText(Object object) 
 	{
-		CartesianTriangularMeshMapLayerNode node = (CartesianTriangularMeshMapLayerNode) object;
+//		CartesianTriangularMeshMapLayerNode node = (CartesianTriangularMeshMapLayerNode) object;
+//		
+//		String label = null;
+//		if(node.getNodeId() != null && node.getNodeId().length() > 0)
+//		{
+//			label = node.getNodeId();
+//		}
+//		else
+//		{
+//			label = getString("_UI_CartesianTriangularMeshMapLayerNode_type"); 
+//		}
+//		return label;
 		
-		String label = null;
-		if(node.getNodeId() != null && node.getNodeId().length() > 0)
-		{
-			label = node.getNodeId();
-		}
-		else
-		{
-			label = getString("_UI_CartesianTriangularMeshMapLayerNode_type"); 
-		}
-		return label;
+		return "ALLO";
 	}
 	
 

@@ -13,12 +13,25 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.impl;
 
+import java.awt.Color;
+
+import javax.vecmath.Point3d;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.common.log.EventSeverity;
+import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.core.environment.surface.Activator;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshHeightImageMapLayer;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularVolumeRegion;
+import edu.wlu.cs.levy.CG.KDTree;
 
 /**
  * <!-- begin-user-doc -->
@@ -276,4 +289,95 @@ public class CartesianTriangularMeshHeightImageMapLayerImpl extends CartesianTri
 		return result.toString();
 	}
 
+	@Override
+	public void updateImage(IProgressMonitor progressMonitor) 
+	{
+		if(getCartesianTriangularMeshMapLayer() != null)
+		{
+			CartesianTriangularMesh mesh = getCartesianTriangularMeshMapLayer().getCurrentMesh();
+			
+			if(mesh != null)
+			{				
+				SubMonitor subMonitor = SubMonitor.convert(progressMonitor, 4);
+				
+				long startTime = System.currentTimeMillis();												
+				
+				// Updates the mesh volume
+				RectangularVolumeRegion meshRegion = getRectangularVolumeRegion();				
+			
+				if(meshRegion.getXDimension() > 0 && meshRegion.getYDimension() > 0)
+				{									
+					// Generate the pixel locations.
+					// progressMonitor.subTask("Generating pixel locations");										
+					Point3d[][] pixelsLocation = getPixelsLocation(getCartesianTriangularMeshMapLayer().getCurrentMesh(), subMonitor.newChild(1));	
+					//progressMonitor.worked(1);							
+										
+					int numberPixelAlongX = pixelsLocation.length;
+					int numberPixelAlongY = pixelsLocation[0].length;
+								
+					double xIncrement = meshRegion.getXDimension() / numberPixelAlongX;
+					double yIncrement = meshRegion.getYDimension() / numberPixelAlongY;
+					double averagingRadius = Math.sqrt(xIncrement*xIncrement + yIncrement*yIncrement);
+					
+					// Create KD Tree.
+					//progressMonitor.subTask("Create KD tree");
+					KDTree kdTree = createTriangleKDTree(mesh, subMonitor.newChild(1));
+					//progressMonitor.worked(1);
+					
+					// Find intersections.
+					//progressMonitor.subTask("Find pixel intersection");
+					Point3d[][] pixelsIntersectionPoints = getPixelsIntersectionPoints(pixelsLocation, mesh, kdTree, averagingRadius, subMonitor.newChild(1));
+					//progressMonitor.worked(1);	
+					
+					double minimumMeshHeight = meshRegion.getZMin();
+					double maximumMeshHeight = meshRegion.getZMax();
+					 									
+					// Fills in the colors.
+					int[][] pixelColors = new int[numberPixelAlongX][numberPixelAlongY];					
+					for(int i=0; i< numberPixelAlongX; i++)
+					{
+						for(int j=0; j< numberPixelAlongY; j++)
+						{
+							Point3d point = pixelsIntersectionPoints[i][j];						
+							if(point != null)
+							{							
+								pixelColors[i][j] = getColor(point.z, minimumMeshHeight, maximumMeshHeight);
+							}
+						}	
+					}	
+					
+					// Generate the image.					
+					//progressMonitor.subTask("Converting to color image.");		
+					AbstractEImage image = convertToImage(pixelColors, subMonitor.newChild(1));
+					//progressMonitor.worked(1);		
+					
+					long endTime = System.currentTimeMillis();
+					double duration =  (endTime - startTime) * 0.001;
+					Logger.INSTANCE.log(Activator.ID, this, "Updated image in <" + duration + "> seconds.", EventSeverity.INFO);
+					
+					setImage(image);
+				}
+			}
+		}
+	}
+	
+	private int getColor(double height, double minimumMeshHeight, double maximumMeshHeight)
+	{
+		
+		double factor = 0.0;
+		if(isAutoScale())
+		{
+			factor = (height - minimumMeshHeight) / (maximumMeshHeight - minimumMeshHeight);
+		}
+		else
+		{
+			factor = (height - getMinimumHeight()) / (getMaximumHeight() - getMinimumHeight());
+		}
+		if(factor < 0) factor = 0;
+		if(factor > 1) factor = 1;
+	  
+	    float hue = (float)(0.666 - (factor * 0.666));	    
+	    Color color = Color.getHSBColor(hue, 0.9f, 0.9f);    
+	    return color.getRGB();
+	}
 } //CartesianTriangularMeshHeightImageMapLayerImpl

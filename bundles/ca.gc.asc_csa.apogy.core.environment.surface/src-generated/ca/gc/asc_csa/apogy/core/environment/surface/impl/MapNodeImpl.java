@@ -211,7 +211,8 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode {
 	 *            The Map Layer.
 	 * @return The topology node removed.
 	 */
-	protected void removeLayer(final AbstractMapLayer layer) {
+	protected void removeLayer(final AbstractMapLayer layer) 
+	{
 		// Find the node that represents the layer in the map topology.
 		AbstractMapLayerNode layerNode = layer.getAbstractMapLayerNode();
 
@@ -226,8 +227,10 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode {
 		Logger.INSTANCE.log(Activator.ID, this, "Removed layer <" + layer.getName() + ">.", EventSeverity.INFO);
 	}
 
-	private ReferencedGroupNode getReferencedGroupNode() {
-		if (referencedGroupNode == null) {
+	private ReferencedGroupNode getReferencedGroupNode() 
+	{
+		if (referencedGroupNode == null) 
+		{
 			referencedGroupNode = ApogyCommonTopologyFactory.eINSTANCE.createReferencedGroupNode();
 			referencedGroupNode.setDescription("Map Group Node.");
 			referencedGroupNode.setNodeId("Map Content (" + getMap().getName() + ")");
@@ -242,8 +245,10 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode {
 			adapter = new AdapterImpl() {
 				@SuppressWarnings("unchecked")
 				@Override
-				public void notifyChanged(Notification msg) {
-					if (msg.getNotifier() instanceof MapNode) {
+				public void notifyChanged(Notification msg) 
+				{
+					if (msg.getNotifier() instanceof MapNode) 
+					{
 						if (msg.getFeatureID(MapNode.class) == ApogySurfaceEnvironmentPackage.MAP_NODE__MAP) {
 							// Clear topology.
 							clearTopology();

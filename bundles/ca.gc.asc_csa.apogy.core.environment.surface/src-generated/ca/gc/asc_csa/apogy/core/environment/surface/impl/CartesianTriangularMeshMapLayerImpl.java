@@ -51,6 +51,7 @@ import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
+import ca.gc.asc_csa.apogy.core.environment.surface.AbstractMapLayerNode;
 import ca.gc.asc_csa.apogy.core.environment.surface.Activator;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
@@ -200,9 +201,15 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		{			
 			AbstractEImage img = getMeshTextureImage();
 			
-			// TODO : Do this using ApogyCommonEmfTransactionFacade.
-			// TODO transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
-			textureImageIsDirty = false;
+			try
+			{
+				transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
+				textureImageIsDirty = false;
+			}
+			catch(Throwable t)
+			{
+				t.printStackTrace();
+			}
 		}				
 		return getTextureImageGen();
 	}
@@ -246,6 +253,12 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogySurfaceEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, oldTextureImage, textureImage));
 	}
 
+	@Override
+	public AbstractMapLayerNode getAbstractMapLayerNode() 
+	{	
+		return getCartesianTriangularMeshMapLayerNode();
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
