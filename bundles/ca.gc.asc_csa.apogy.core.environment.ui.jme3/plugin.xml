@@ -23,10 +23,10 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.apogy.core.environment.ui.page1"
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="ca.gc.asc_csa.apogy.core.environment.ui.jme3.preferences.ApogyEnvironmentUIJME3PreferencesPage"
-            id="ca.gc.asc_csa.apogy.core.environment.ui.jme3.page1"
-            name="Earth Sky">
+            id="ca.gc.asc_csa.apogy.core.environment.ui.jme3.shadows"
+            name="Shadows">
       </page>
    </extension>
 

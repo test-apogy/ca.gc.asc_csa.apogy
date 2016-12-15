@@ -1642,7 +1642,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE__PARENT = ApogyCommonTopologyPackage.GROUP_NODE__PARENT;
+  int SKY_NODE__PARENT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__PARENT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1651,7 +1651,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE__DESCRIPTION = ApogyCommonTopologyPackage.GROUP_NODE__DESCRIPTION;
+  int SKY_NODE__DESCRIPTION = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
@@ -1660,7 +1660,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE__NODE_ID = ApogyCommonTopologyPackage.GROUP_NODE__NODE_ID;
+  int SKY_NODE__NODE_ID = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__NODE_ID;
 
   /**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1669,16 +1669,25 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE__CHILDREN = ApogyCommonTopologyPackage.GROUP_NODE__CHILDREN;
+  int SKY_NODE__CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__CHILDREN;
 
   /**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SKY_NODE__AGGREGATED_CHILDREN = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
+
+		/**
 	 * The feature id for the '<em><b>Sky</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE__SKY = ApogyCommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 0;
+  int SKY_NODE__SKY = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Sky Node</em>' class.
@@ -1687,7 +1696,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.GROUP_NODE_FEATURE_COUNT + 1;
+  int SKY_NODE_FEATURE_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
@@ -1696,7 +1705,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.GROUP_NODE___ACCEPT__INODEVISITOR;
+  int SKY_NODE___ACCEPT__INODEVISITOR = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE___ACCEPT__INODEVISITOR;
 
   /**
 	 * The number of operations of the '<em>Sky Node</em>' class.
@@ -1705,7 +1714,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int SKY_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.GROUP_NODE_OPERATION_COUNT + 0;
+  int SKY_NODE_OPERATION_COUNT = ApogyCommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '<em>List</em>' data type.

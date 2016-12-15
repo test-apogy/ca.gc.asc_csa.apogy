@@ -81,12 +81,13 @@ public class ApogyEnvironmentSurfaceUIJME3PreferencesPage extends PreferencePage
 		earthSkyMoonCastShadowsEnableLabel.setText("Moon Cast Shadows Enable");
 		earthSkyMoonCastShadowsEnableEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentSurfaceUIJME3PreferencesConstants.DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID, "");
 		
-		Label earthSkyHorizonVisibleLabel = new Label(earthSkyGroup, SWT.NONE);
-		earthSkyHorizonVisibleLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
-		earthSkyHorizonVisibleLabel.setText("Horizon Visible");
-		earthSkyHorizonVisibleEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID, "");
-		earthSkyHorizonVisibleEditor.setPreferenceStore(ca.gc.asc_csa.apogy.core.environment.ui.Activator.getDefault().getPreferenceStore());
-		earthSkyHorizonVisibleEditor.load();
+// TODO
+//		Label earthSkyHorizonVisibleLabel = new Label(earthSkyGroup, SWT.NONE);
+//		earthSkyHorizonVisibleLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
+//		earthSkyHorizonVisibleLabel.setText("Horizon Visible");
+//		earthSkyHorizonVisibleEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID, "");
+//		earthSkyHorizonVisibleEditor.setPreferenceStore(ca.gc.asc_csa.apogy.core.environment.ui.Activator.getDefault().getPreferenceStore());
+//		earthSkyHorizonVisibleEditor.load();
 		
 		return container;
 	}

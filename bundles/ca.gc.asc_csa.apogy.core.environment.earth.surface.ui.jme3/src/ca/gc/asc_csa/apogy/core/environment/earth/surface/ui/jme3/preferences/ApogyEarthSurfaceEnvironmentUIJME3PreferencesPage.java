@@ -27,7 +27,6 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 
 public class ApogyEarthSurfaceEnvironmentUIJME3PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
@@ -70,7 +69,6 @@ public class ApogyEarthSurfaceEnvironmentUIJME3PreferencesPage extends Preferenc
 		earthSkyShadowMapSizeLabel.setText("Shadow Map Size");
 		earthSkyShadowMapSizeEditor = createStringFieldEditor(earthSkyGroup, ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID, "");
 
-
 		Label earthSkySunCastShadowsEnableLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkySunCastShadowsEnableLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkySunCastShadowsEnableLabel.setText("Sun Cast Shadows Enable");
@@ -84,7 +82,7 @@ public class ApogyEarthSurfaceEnvironmentUIJME3PreferencesPage extends Preferenc
 		Label earthSkyHorizonVisibleLabel = new Label(earthSkyGroup, SWT.NONE);
 		earthSkyHorizonVisibleLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		earthSkyHorizonVisibleLabel.setText("Horizon Visible");
-		earthSkyHorizonVisibleEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SKY_HORIZON_VISIBLE_ID, "");
+		earthSkyHorizonVisibleEditor = createBooleanFieldEditor(earthSkyGroup, ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_HORIZON_VISIBLE_ID, "");
 		earthSkyHorizonVisibleEditor.setPreferenceStore(ca.gc.asc_csa.apogy.core.environment.ui.Activator.getDefault().getPreferenceStore());
 		earthSkyHorizonVisibleEditor.load();
 		

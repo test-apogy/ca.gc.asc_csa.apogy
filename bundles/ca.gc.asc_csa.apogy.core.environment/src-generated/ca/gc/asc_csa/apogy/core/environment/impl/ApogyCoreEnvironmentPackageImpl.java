@@ -1222,7 +1222,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		moonEClass.getESuperTypes().add(this.getCelestialBody());
 		starFieldEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getNode());
 		worksiteNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
-		skyNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getGroupNode());
+		skyNodeEClass.getESuperTypes().add(theApogyCommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyEnvironmentEClass, ApogyEnvironment.class, "ApogyEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

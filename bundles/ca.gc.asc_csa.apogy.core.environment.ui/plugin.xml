@@ -350,18 +350,6 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.apogy.core.ui.preferences.ApogyCorePreferencesPage"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesPage"
-            id="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesPage"
-            name="Maps and Map View">
-      </page>
-      <page
-            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
-            class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentWorksitePreferencesPage"
-            id="ca.gc.asc_csa.apogy.core.environment.ui.page1"
-            name="Earth Surface Worksite">
-      </page>
-      <page
             category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
             class="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentSkyPreferencesPage"
             id="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentSkyPreferencesPage"

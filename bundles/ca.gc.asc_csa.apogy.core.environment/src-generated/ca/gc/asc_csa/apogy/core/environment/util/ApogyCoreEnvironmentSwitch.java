@@ -23,6 +23,7 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.core.environment.*;
 import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
 import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
@@ -264,6 +265,7 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 			case ApogyCoreEnvironmentPackage.SKY_NODE: {
 				SkyNode skyNode = (SkyNode)theEObject;
 				T result = caseSkyNode(skyNode);
+				if (result == null) result = caseAggregateGroupNode(skyNode);
 				if (result == null) result = caseGroupNode(skyNode);
 				if (result == null) result = caseNode(skyNode);
 				if (result == null) result = defaultCase(theEObject);

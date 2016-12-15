@@ -400,7 +400,7 @@ class WorksiteNode extends AggregateGroupNode
 	refers transient Worksite worksite	
 }
 
-class SkyNode extends GroupNode
+class SkyNode extends AggregateGroupNode
 {	
  	@GenModel(property="None")
 	refers transient Sky sky

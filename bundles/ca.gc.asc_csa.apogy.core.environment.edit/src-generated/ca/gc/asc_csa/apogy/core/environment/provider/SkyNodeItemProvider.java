@@ -14,14 +14,16 @@ package ca.gc.asc_csa.apogy.core.environment.provider;
  */
 
 
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.provider.AggregateGroupNodeItemProvider;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
-import ca.gc.asc_csa.apogy.common.topology.provider.GroupNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.ApogyCoreFactory;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
 
 /**
@@ -31,7 +33,7 @@ import ca.gc.asc_csa.apogy.core.environment.SkyNode;
  * @generated
  */
 public class SkyNodeItemProvider
-  extends GroupNodeItemProvider
+  extends AggregateGroupNodeItemProvider
 {
   /**
 	 * This constructs an instance from a factory and a notifier.
@@ -112,6 +114,56 @@ public class SkyNodeItemProvider
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
   {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSun()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createEarth()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createMoon()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createStarField()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createResultsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 }

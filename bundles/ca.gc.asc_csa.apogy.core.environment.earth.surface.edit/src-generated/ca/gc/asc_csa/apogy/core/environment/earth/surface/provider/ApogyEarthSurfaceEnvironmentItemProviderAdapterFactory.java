@@ -870,6 +870,11 @@ public class ApogyEarthSurfaceEnvironmentItemProviderAdapterFactory extends Apog
 						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
 						 ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+
 				return null;
 			}
  

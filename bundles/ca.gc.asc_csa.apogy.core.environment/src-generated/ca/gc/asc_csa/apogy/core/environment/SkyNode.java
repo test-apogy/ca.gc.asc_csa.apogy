@@ -13,7 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment;
 
-import ca.gc.asc_csa.apogy.common.topology.GroupNode;
+import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
  * @model
  * @generated
  */
-public interface SkyNode extends GroupNode {
+public interface SkyNode extends AggregateGroupNode {
 	/**
 	 * Returns the value of the '<em><b>Sky</b></em>' reference.
 	 * <!-- begin-user-doc -->

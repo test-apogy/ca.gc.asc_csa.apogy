@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.common.topology.impl.GroupNodeImpl;
+import ca.gc.asc_csa.apogy.common.topology.impl.AggregateGroupNodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.Sky;
 import ca.gc.asc_csa.apogy.core.environment.SkyNode;
@@ -38,7 +38,7 @@ import ca.gc.asc_csa.apogy.core.environment.SkyNode;
  *
  * @generated
  */
-public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
+public class SkyNodeImpl extends AggregateGroupNodeImpl implements SkyNode
 {
   /**
 	 * The cached value of the '{@link #getSky() <em>Sky</em>}' reference.

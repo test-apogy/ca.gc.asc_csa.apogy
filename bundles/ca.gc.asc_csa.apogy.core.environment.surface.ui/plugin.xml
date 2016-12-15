@@ -30,5 +30,20 @@
             class="ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceUIPreferencesInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceWorksitePreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.surface.ui.surface.worksite"
+            name="Surface Worksite">
+      </page>
+      <page
+            category="ca.gc.asc_csa.apogy.core.environment.surface.ui.surface.worksite"
+            class="ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences.ApogyEnvironmentSurfaceMapsUIPreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.surface.ui.maps"
+            name="Maps and Map View">
+      </page>
+   </extension>
 
 </plugin>

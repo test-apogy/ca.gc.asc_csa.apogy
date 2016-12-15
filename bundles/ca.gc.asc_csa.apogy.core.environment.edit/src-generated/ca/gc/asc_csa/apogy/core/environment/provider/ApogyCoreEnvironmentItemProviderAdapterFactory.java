@@ -1197,6 +1197,11 @@ public class ApogyCoreEnvironmentItemProviderAdapterFactory extends ApogyCoreEnv
 						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
 						 ApogyCoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
+				newChildDescriptors.add
+					(createChildParameter
+						(ApogyCommonTopologyBindingsPackage.Literals.BOOLEAN_CASE__TOPOLOGY_ROOT,
+						 ApogyCoreEnvironmentFactory.eINSTANCE.createSkyNode()));
+
 				return null;
 			}
 			/**

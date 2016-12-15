@@ -496,6 +496,15 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int EARTH_SKY_NODE__CHILDREN = ApogyCoreEnvironmentPackage.SKY_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EARTH_SKY_NODE__AGGREGATED_CHILDREN = ApogyCoreEnvironmentPackage.SKY_NODE__AGGREGATED_CHILDREN;
+
+	/**
 	 * The feature id for the '<em><b>Sky</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

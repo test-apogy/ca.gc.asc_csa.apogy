@@ -15,9 +15,11 @@ package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.preferences;
 
 
 public class ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants 
-{
-	
-	// Earth Sky Constants.
+{	
+	// Earth Sky Constants.	
+	public static final String DEFAULT_HORIZON_VISIBLE_ID = "DEFAULT_HORIZON_VISIBLE_ID";	
+	public static final Boolean DEFAULT_HORIZON_VISIBLE_DEFAULT = new Boolean(true);	
+
 	
 	// Bloom Constant.
 	public static final String DEFAULT_BLOOM_ENABLED_ID = "DEFAULT_BLOOM_ENABLED_ID";	
@@ -34,4 +36,5 @@ public class ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants
 	// Moon Constants.
 	public static final String DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID = "DEFAULT_MOON_CAST_SHADOWS_ENABLED_ID";	
 	public static final Boolean DEFAULT_MOON_CAST_SHADOWS_ENABLED_DEFAULT =  new Boolean(false);	
+	
 }

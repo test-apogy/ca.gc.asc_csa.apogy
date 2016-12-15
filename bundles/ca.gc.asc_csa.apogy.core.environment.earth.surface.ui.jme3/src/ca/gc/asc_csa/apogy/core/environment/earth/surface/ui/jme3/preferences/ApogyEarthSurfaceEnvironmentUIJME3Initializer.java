@@ -24,8 +24,7 @@ public class ApogyEarthSurfaceEnvironmentUIJME3Initializer extends AbstractPrefe
 	public void initializeDefaultPreferences() 
 	{			
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		
-		
+				
 		// Initialize Earth Sky Preferences.
 		store.setDefault(ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_ID, ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_BLOOM_ENABLED_DEFAULT);				
 		store.setDefault(ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_ID, ApogyEarthSurfaceEnvironmentUIJME3PreferencesConstants.DEFAULT_SHADOW_MAP_SIZE_DEFAULT);				

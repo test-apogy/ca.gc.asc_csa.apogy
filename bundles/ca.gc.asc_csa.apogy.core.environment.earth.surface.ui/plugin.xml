@@ -45,10 +45,10 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            category="ca.gc.asc_csa.apogy.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"
+            category="ca.gc.asc_csa.apogy.addons.ui.preferences.ApogyToolsUIPreferencesPage"
             class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences.ApogyEnvironmentSurfaceEarthUIPreferencesPage"
             id="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.preferences.ApogyEnvironmentSurfaceEarthUIPreferencesPage"
-            name="Earth Surface UI">
+            name="Earth Surface Tools">
       </page>
    </extension>
 

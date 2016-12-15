@@ -131,6 +131,7 @@ public class ApogyEarthSurfaceEnvironmentSwitch<T> extends Switch<T> {
 				EarthSkyNode earthSkyNode = (EarthSkyNode)theEObject;
 				T result = caseEarthSkyNode(earthSkyNode);
 				if (result == null) result = caseSkyNode(earthSkyNode);
+				if (result == null) result = caseAggregateGroupNode(earthSkyNode);
 				if (result == null) result = caseGroupNode(earthSkyNode);
 				if (result == null) result = caseNode(earthSkyNode);
 				if (result == null) result = defaultCase(theEObject);

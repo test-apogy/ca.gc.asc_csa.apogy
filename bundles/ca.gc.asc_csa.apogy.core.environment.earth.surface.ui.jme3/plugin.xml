@@ -16,5 +16,14 @@
             class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.preferences.ApogyEarthSurfaceEnvironmentUIJME3Initializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentSkyPreferencesPage"
+            class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.preferences.ApogyEarthSurfaceEnvironmentUIJME3PreferencesPage"
+            id="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.sky"
+            name="Earth Sky">
+      </page>
+   </extension>
 
 </plugin>

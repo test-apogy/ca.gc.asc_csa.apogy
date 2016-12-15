@@ -14,9 +14,12 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.provider;
 
 
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSkyNode;
 import ca.gc.asc_csa.apogy.core.environment.provider.SkyNodeItemProvider;
 
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -106,6 +109,46 @@ public class EarthSkyNodeItemProvider extends SkyNodeItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createMapsListNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createMapNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
+				 ApogySurfaceEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 	}
 
 }

@@ -16,7 +16,6 @@ package ca.gc.asc_csa.apogy.core.environment.surface.ui.preferences;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.FieldEditor;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.jface.preference.StringFieldEditor;
@@ -31,7 +30,7 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 
-public class ApogyEnvironmentSurfaceUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
+public class ApogyEnvironmentSurfaceMapsUIPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	// Maps
 	private StringFieldEditor mapMinimumXEditor;
@@ -42,26 +41,13 @@ public class ApogyEnvironmentSurfaceUIPreferencesPage extends PreferencePage imp
 	private StringFieldEditor mapUpdatePeriodEditor;
 	private StringFieldEditor mapMaximumImageSizeEditor;
 		
-	// Surface Worksites
-	private BooleanFieldEditor earthSurfaceWorksiteAxisVisibleEditor;
-	private StringFieldEditor earthSurfaceWorksiteAxisLengthEditor;
-	
-	private BooleanFieldEditor earthSurfaceWorksiteAzimuthVisibleEditor;
-	private BooleanFieldEditor earthSurfaceWorksiteAzimuthLinesVisibleEditor;
-	
-	private BooleanFieldEditor earthSurfaceWorksiteElevationLinesVisibleEditor;
-	
-	private BooleanFieldEditor earthSurfaceWorksitePlaneVisibleEditor;
-	private StringFieldEditor earthSurfaceWorksitePlaneGridSizeEditor;
-	private StringFieldEditor earthSurfaceWorksitePlaneSizeEditor;
-	
 	
 	private List<FieldEditor> editors = new ArrayList<FieldEditor>();
 	
 	/**
 	 * Create the preference page.
 	 */
-	public ApogyEnvironmentSurfaceUIPreferencesPage() {
+	public ApogyEnvironmentSurfaceMapsUIPreferencesPage() {
 	}
 
 	/**
@@ -102,53 +88,7 @@ public class ApogyEnvironmentSurfaceUIPreferencesPage extends PreferencePage imp
 		
 		mapMaximumImageSizeEditor = createStringFieldEditor(grpMapView, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_MAP_VIEW_IMAGE_MAXIMUM_NUMBER_OF_PIXELS_ID, "Maximum Image Size (pixels)");
 		editors.add(mapMaximumImageSizeEditor);
-		
-		
-		Group grpAxis = new Group(container, SWT.NONE);
-		grpAxis.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		grpAxis.setLayout(new GridLayout(1, true));		
-		grpAxis.setText("Surface Worksite Axis");	
-						
-		earthSurfaceWorksiteAxisVisibleEditor = createBooleanFieldEditor(grpAxis, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_VISIBLE_ID, "Axis Visible");
-		editors.add(earthSurfaceWorksiteAxisVisibleEditor);
-		
-		earthSurfaceWorksiteAxisLengthEditor = createStringFieldEditor(grpAxis, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AXIS_LENGTH_ID, "Axis Length (m)");				
-		editors.add(earthSurfaceWorksiteAxisLengthEditor);
-		
-		Group grpAzimuth = new Group(container, SWT.NONE);
-		grpAzimuth.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		grpAzimuth.setLayout(new GridLayout(1, true));		
-		grpAzimuth.setText("Surface Worksite Azimuth Displays");	
-
-		earthSurfaceWorksiteAzimuthVisibleEditor = createBooleanFieldEditor(grpAzimuth, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID, "Azimuth Visible");
-		editors.add(earthSurfaceWorksiteAzimuthVisibleEditor);
-		
-		earthSurfaceWorksiteAzimuthLinesVisibleEditor = createBooleanFieldEditor(grpAzimuth, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_AZIMUTH_LINES_VISIBLE_ID, "Azimuth Lines Visible");
-		editors.add(earthSurfaceWorksiteAzimuthLinesVisibleEditor);
-		
-		Group grpElevation = new Group(container, SWT.NONE);
-		grpElevation.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		grpElevation.setLayout(new GridLayout(1, true));		
-		grpElevation.setText("Surface Worksite Elevation Displays");	
-		
-		earthSurfaceWorksiteElevationLinesVisibleEditor = createBooleanFieldEditor(grpElevation, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_ELEVATION_LINES_VISIBLE_ID, "Elevation Lines Visible");
-		editors.add(earthSurfaceWorksiteElevationLinesVisibleEditor);
-		
-		Group grpPlane = new Group(container, SWT.NONE);
-		grpPlane.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		grpPlane.setLayout(new GridLayout(1, true));				
-		grpPlane.setText("Surface Worksite Plane");	
-		
-		earthSurfaceWorksitePlaneVisibleEditor = createBooleanFieldEditor(grpPlane, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_VISIBLE_ID, "Plane Visible");		
-		editors.add(earthSurfaceWorksitePlaneVisibleEditor);
-		
-		earthSurfaceWorksitePlaneSizeEditor = createStringFieldEditor(grpPlane, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_SIZE_ID,  "Plane Size");
-		editors.add(earthSurfaceWorksitePlaneSizeEditor);
-		
-		earthSurfaceWorksitePlaneGridSizeEditor = createStringFieldEditor(grpPlane, ApogyEnvironmentSurfaceUIPreferencesConstants.DEFAULT_SURFACE_WORKSITE_PLANE_GRID_SIZE_ID,  "Grid Size");
-		editors.add(earthSurfaceWorksitePlaneGridSizeEditor);
-		
-		
+								
 		return container;
 	}
 		
@@ -205,22 +145,7 @@ public class ApogyEnvironmentSurfaceUIPreferencesPage extends PreferencePage imp
 		editor.load();
 		
 		return editor;
-	}
-	
-	private BooleanFieldEditor createBooleanFieldEditor(final Composite container, final String preferenceID, final String preferenceLabel)
-	{
-		Composite editorContainer = new Composite(container, SWT.NULL);
-		editorContainer.setLayout(new GridLayout(1, true));
-		editorContainer.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-
-		BooleanFieldEditor editor = new BooleanFieldEditor(preferenceID, preferenceLabel, editorContainer);
-		
-		//Set the editor up to use this page	
-		editor.setPreferenceStore(getPreferenceStore());
-		editor.load();
-		
-		return editor;
-	}
+	}	
 	
 	private void storePreferences()
 	{
@@ -229,7 +154,4 @@ public class ApogyEnvironmentSurfaceUIPreferencesPage extends PreferencePage imp
 			editor.store();
 		}		
 	}
-	
-
-	
 }

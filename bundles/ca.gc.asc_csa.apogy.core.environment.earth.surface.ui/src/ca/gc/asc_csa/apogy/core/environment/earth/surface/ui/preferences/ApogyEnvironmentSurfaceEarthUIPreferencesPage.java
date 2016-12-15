@@ -51,12 +51,10 @@ public class ApogyEnvironmentSurfaceEarthUIPreferencesPage extends PreferencePag
 		grpSunvectorTool.setLayout(new GridLayout(2, true));
 		grpSunvectorTool.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
 		grpSunvectorTool.setText("Sun Vector Tool");	
-		
-			
+					
 		// FOV Color
 		sunVectorColorFieldEditor = createColorFieldEditor(grpSunvectorTool, ApogyEnvironmentSurfaceEarthUIPreferencesConstants.DEFAULT_SUN_VECTOR_COLOR_ID, "Default Vector Color:");		
-
-			
+		
 		return container;
 	}
 		
