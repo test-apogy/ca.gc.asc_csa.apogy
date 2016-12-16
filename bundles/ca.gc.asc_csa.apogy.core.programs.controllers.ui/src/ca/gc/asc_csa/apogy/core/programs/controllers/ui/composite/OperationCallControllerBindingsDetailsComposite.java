@@ -15,10 +15,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  */
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EParameter;
-import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
@@ -35,14 +32,9 @@ import org.eclipse.wb.swt.SWTResourceManager;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EOperationsComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.composites.VariableFeatureReferenceComposite;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 
 public class OperationCallControllerBindingsDetailsComposite extends ScrolledComposite{
@@ -99,39 +91,12 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				EOperation eOperation = eOperationsComposite.getSelectedEOperation();
-				
-				if (!eOperation.getEParameters().isEmpty()) {
-					ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList();				
-					
-					for(@SuppressWarnings("unused") EParameter eParameter : eOperation.getEParameters()){
-						BindedEDataTypeArgument bindedArgument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
-						ControllerValueSource valueSource = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerValueSource();
-						CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE.createCenteredLinearInputConditioning();
-						
-						conditioning.setDeadBand((float) 0.1);
-						valueSource.setConditioning(conditioning);
-						bindedArgument.setValueSource(valueSource);
-						argumentsList.getArguments().add(bindedArgument);
-					}
-					
-					CompoundCommand compoundCommand = new CompoundCommand();
-					SetCommand setEOperationCommand = new SetCommand(
-							ApogyCommonEmfTransactionFacade.INSTANCE.getTransactionalEditingDomain(
-									operationCallControllerBinding),
-							operationCallControllerBinding,
-							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, eOperation);
-					SetCommand setArgumentsListCommand = new SetCommand(
-							ApogyCommonEmfTransactionFacade.INSTANCE.getTransactionalEditingDomain(
-									operationCallControllerBinding),
-							operationCallControllerBinding,
-							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
-					compoundCommand.append(setEOperationCommand);
-					compoundCommand.append(setArgumentsListCommand);
-					ApogyCommonEmfTransactionFacade.INSTANCE.getTransactionalEditingDomain(
-							operationCallControllerBinding).getCommandStack().execute(compoundCommand);
-				}else{
-					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
-							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, null);
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
+						ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, eOperation);
+				if (operationCallControllerBinding.getEOperation() != null
+						&& !operationCallControllerBinding.getEOperation().getEParameters().isEmpty()) {
+					ApogyCoreProgramsControllersFacade.INSTANCE
+							.initOperationCallControllerBindingArguments(getOperationCallControllerBinding());
 				}
 				OperationCallControllerBindingsDetailsComposite.this.newSelection(selection);
 			}

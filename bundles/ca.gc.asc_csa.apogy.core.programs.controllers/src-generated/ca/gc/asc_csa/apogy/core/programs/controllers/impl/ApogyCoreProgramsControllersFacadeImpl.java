@@ -28,11 +28,16 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.CustomInputConditioningPoint;
@@ -219,6 +224,43 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initOperationCallControllerBindingArguments(OperationCallControllerBinding operationCallControllerBinding) {
+		ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE.createArgumentsList();				
+		
+		for(@SuppressWarnings("unused") EParameter eParameter : operationCallControllerBinding.getEOperation().getEParameters()){
+			BindedEDataTypeArgument bindedArgument = ApogyCoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();
+			initBindedEDataTypeArgument(bindedArgument);
+			argumentsList.getArguments().add(bindedArgument);
+		}
+		
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding, ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void initBindedEDataTypeArgument(BindedEDataTypeArgument bindedEDataTypeArgument) {
+		ControllerValueSource valueSource = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerValueSource();
+		CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE
+				.createCenteredLinearInputConditioning();
+
+		conditioning.setDeadBand((float) 0.1);
+		valueSource.setConditioning(conditioning);
+		if(ApogyCommonEmfTransactionFacade.INSTANCE.getTransactionalEditingDomain(bindedEDataTypeArgument) != null){
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(bindedEDataTypeArgument,ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, valueSource);
+		}else{
+			bindedEDataTypeArgument.setValueSource(valueSource);
+		}
+				
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
@@ -251,6 +293,12 @@ public class ApogyCoreProgramsControllersFacadeImpl extends MinimalEObjectImpl.C
 				return getToggleValueSourceString((ToggleValueSource)arguments.get(0));
 			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT:
 				setControllerValueSourceLastValue((ControllerValueSource)arguments.get(0), arguments.get(1));
+				return null;
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_OPERATION_CALL_CONTROLLER_BINDING_ARGUMENTS__OPERATIONCALLCONTROLLERBINDING:
+				initOperationCallControllerBindingArguments((OperationCallControllerBinding)arguments.get(0));
+				return null;
+			case ApogyCoreProgramsControllersPackage.APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_BINDED_EDATA_TYPE_ARGUMENT__BINDEDEDATATYPEARGUMENT:
+				initBindedEDataTypeArgument((BindedEDataTypeArgument)arguments.get(0));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

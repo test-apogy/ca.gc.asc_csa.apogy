@@ -188,61 +188,13 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
 		if (getSelectedArgument() != null) {
 			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None);
-			// compositeValueSource.setLayoutData(new GridData(SWT.FILL,
-			// SWT.FILL, true, true, 1, 1));
 			contentComposite.setBindedEDataTypeArgument(getSelectedArgument());
 		} else {
 			getNoContentComposite(compositeValueSource);
-			// compositeValueSource.setLayoutData(new GridData(SWT.FILL,
-			// SWT.FILL, true, true, 1, 1));
 		}
 		compositeValueSource.layout();
 		this.layout();
 	}
-
-	// /**
-	// * Updates the value composite depending on the selected argument.
-	// */
-	// private void updateCompositeValue() {
-	// if (compositeValue != null) {
-	// compositeValue.dispose();
-	// }
-	//
-	// if (getSelectedArgument() != null) {
-	// compositeValue = new Composite(sectionValue, SWT.None);
-	// compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-	// GridLayout gridLayout_value = new GridLayout(2, false);
-	// gridLayout_value.marginWidth = 0;
-	// gridLayout_value.marginHeight = 0;
-	// gridLayout_value.marginBottom = 5;
-	// compositeValue.setLayout(gridLayout_value);
-	//
-	// /**
-	// * Set the value composite depending on the value source.
-	// */
-	// if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
-	// // TODO replace by Apogy custom EMF with units.
-	// ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(compositeValue,
-	// getSelectedArgument().getValueSource());
-	// } else if (getSelectedArgument().getValueSource() instanceof
-	// ToggleValueSource) {
-	// compositeValue = getNoContentComposite(sectionValue);
-	// } else if (getSelectedArgument().getValueSource() instanceof
-	// ControllerValueSource) {
-	// compositeValue = new ControllerSelectionComposite(sectionValue,
-	// SWT.None);
-	// ((ControllerSelectionComposite) compositeValue).setEComponentQualifier(
-	// ((ControllerValueSource)
-	// getSelectedArgument().getValueSource()).getEComponentQualifier());
-	// compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-	// }
-	// } else {
-	// compositeValue = getNoContentComposite(sectionValue);
-	// }
-	// sectionValue.setClient(compositeValue);
-	// sectionValue.layout();
-	// layout();
-	// }
 
 	/**
 	 * Updates the conditioning composite depending on the selected argument.
@@ -276,7 +228,6 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 */
 	private void updateDetailsComposites() {
 		updateCompositeValueSource();
-		// updateCompositeValue();
 		updateCompositeConditioning();
 	}
 

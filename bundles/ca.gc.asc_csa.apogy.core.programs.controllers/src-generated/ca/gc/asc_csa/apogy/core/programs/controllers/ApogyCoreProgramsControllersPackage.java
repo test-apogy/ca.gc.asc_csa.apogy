@@ -160,13 +160,31 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT = 5;
 
 	/**
+	 * The operation id for the '<em>Init Operation Call Controller Binding Arguments</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_OPERATION_CALL_CONTROLLER_BINDING_ARGUMENTS__OPERATIONCALLCONTROLLERBINDING = 6;
+
+	/**
+	 * The operation id for the '<em>Init Binded EData Type Argument</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_BINDED_EDATA_TYPE_ARGUMENT__BINDEDEDATATYPEARGUMENT = 7;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 6;
+	int APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
@@ -1603,6 +1621,26 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 	EOperation getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#initOperationCallControllerBindingArguments(ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding) <em>Init Operation Call Controller Binding Arguments</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init Operation Call Controller Binding Arguments</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#initOperationCallControllerBindingArguments(ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding)
+	 * @generated
+	 */
+	EOperation getApogyCoreProgramsControllersFacade__InitOperationCallControllerBindingArguments__OperationCallControllerBinding();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#initBindedEDataTypeArgument(ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument) <em>Init Binded EData Type Argument</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init Binded EData Type Argument</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade#initBindedEDataTypeArgument(ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument)
+	 * @generated
+	 */
+	EOperation getApogyCoreProgramsControllersFacade__InitBindedEDataTypeArgument__BindedEDataTypeArgument();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2242,6 +2280,22 @@ public interface ApogyCoreProgramsControllersPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT = eINSTANCE.getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Operation Call Controller Binding Arguments</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_OPERATION_CALL_CONTROLLER_BINDING_ARGUMENTS__OPERATIONCALLCONTROLLERBINDING = eINSTANCE.getApogyCoreProgramsControllersFacade__InitOperationCallControllerBindingArguments__OperationCallControllerBinding();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Binded EData Type Argument</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_BINDED_EDATA_TYPE_ARGUMENT__BINDEDEDATATYPEARGUMENT = eINSTANCE.getApogyCoreProgramsControllersFacade__InitBindedEDataTypeArgument__BindedEDataTypeArgument();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
