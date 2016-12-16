@@ -21,6 +21,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.edit.command.SetCommand;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Described;
@@ -198,7 +202,7 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		if(tmp == null)
 		{
 			tmp = new Date();
-			setTime(tmp);
+			updateTime(tmp);
 		}
 				
 		return tmp;
@@ -460,4 +464,19 @@ public abstract class TimeSourceImpl extends MinimalEObjectImpl.Container implem
 		return result.toString();
 	}
 
+	/**
+	 * Transaction safe version of setTime().
+	 * @param newTime The new time.
+	 */
+	protected void updateTime(final Date newTime)
+	{
+		// Updates the TimeSource time.
+		// TODO : Do this using ApogyCommonEmfTransactionFacade.
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+		if(domain instanceof TransactionalEditingDomain)
+		{
+			SetCommand command = new SetCommand(domain, this, ApogyCommonEMFPackage.Literals.TIMED__TIME, newTime);
+			domain.getCommandStack().execute(command);
+		}		
+	}
 } //TimeSourceImpl

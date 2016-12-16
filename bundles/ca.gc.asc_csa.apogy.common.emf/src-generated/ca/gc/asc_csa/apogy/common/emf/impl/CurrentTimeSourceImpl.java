@@ -309,12 +309,6 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 		this.updateJob = updateJob;
 	}
 	
-	protected void updateTime(Date now)
-	{
-		// Updates the TimeSource time.
-		setTime(now);		
-	}
-	
 	/**
 	 * Returns the Job used to update the time.
 	 * @return

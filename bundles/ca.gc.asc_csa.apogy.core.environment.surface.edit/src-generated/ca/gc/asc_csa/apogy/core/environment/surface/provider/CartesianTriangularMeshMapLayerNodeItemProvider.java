@@ -14,15 +14,15 @@
 package ca.gc.asc_csa.apogy.core.environment.surface.provider;
 
 
-import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayerNode;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
+import ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayerNode;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.CartesianTriangularMeshMapLayerNode} object.
@@ -76,23 +76,21 @@ public class CartesianTriangularMeshMapLayerNodeItemProvider extends AbstractMap
 	@Override
 	public String getText(Object object) 
 	{
-//		CartesianTriangularMeshMapLayerNode node = (CartesianTriangularMeshMapLayerNode) object;
-//		
-//		String label = null;
-//		if(node.getNodeId() != null && node.getNodeId().length() > 0)
-//		{
-//			label = node.getNodeId();
-//		}
-//		else
-//		{
-//			label = getString("_UI_CartesianTriangularMeshMapLayerNode_type"); 
-//		}
-//		return label;
+		CartesianTriangularMeshMapLayerNode node = (CartesianTriangularMeshMapLayerNode) object;
 		
-		return "ALLO";
+		String label = null;
+		if(node.getNodeId() != null && node.getNodeId().length() > 0)
+		{
+			label = node.getNodeId();
+		}
+		else
+		{
+			label = getString("_UI_CartesianTriangularMeshMapLayerNode_type"); 
+		}
+
+		return label;		
 	}
 	
-
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
@@ -118,4 +116,16 @@ public class CartesianTriangularMeshMapLayerNodeItemProvider extends AbstractMap
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
+	protected String getCartesianTriangularMeshText(CartesianTriangularMesh mesh)
+	{
+		String text = "";
+			
+		if(mesh.getPoints().size() > 0 || mesh.getPolygons().size() > 0)
+		{
+			text += (mesh.getPoints().size() + " points, ");
+			text += mesh.getPolygons().size() + " triangles";
+		}
+		
+		return text;
+	}
 }

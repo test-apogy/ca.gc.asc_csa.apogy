@@ -105,11 +105,7 @@ public class ApogyEarthSurfaceEnvironmentFacadeImpl extends MinimalEObjectImpl.C
 	public EarthSky createEarthSky(GeographicCoordinates siteGeographicCoordinates) 
 	{
 		EarthSky earthSky = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSky();
-		earthSky.setTime(new Date());
-		
-//		EarthSkyNode earthSkyNode = createEarthSkyNode(siteGeographicCoordinates);		
-//		earthSky.setSkyNode(earthSkyNode);
-					
+		earthSky.setTime(new Date());							
 		return earthSky;
 	}
 

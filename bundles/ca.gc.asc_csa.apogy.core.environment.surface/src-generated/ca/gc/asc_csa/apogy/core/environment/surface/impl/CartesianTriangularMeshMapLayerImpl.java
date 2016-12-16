@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
@@ -201,14 +202,28 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		{			
 			AbstractEImage img = getMeshTextureImage();
 			
-			try
+			if(getCurrentMesh() != null)
 			{
-				transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);						
-				textureImageIsDirty = false;
-			}
-			catch(Throwable t)
-			{
-				t.printStackTrace();
+				try
+				{		
+					EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+					if(domain instanceof TransactionalEditingDomain)
+					{
+						domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
+							@Override
+							protected void doExecute() 
+							{							
+								setTextureImage(img);
+							}
+						});										
+					}
+									
+					textureImageIsDirty = false;
+				}
+				catch(Throwable t)
+				{
+					t.printStackTrace();
+				}
 			}
 		}				
 		return getTextureImageGen();

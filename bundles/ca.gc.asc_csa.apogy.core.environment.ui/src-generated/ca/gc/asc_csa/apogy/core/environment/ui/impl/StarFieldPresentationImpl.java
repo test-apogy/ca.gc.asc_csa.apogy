@@ -106,6 +106,16 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
    */
   public void setCutOffMagnitude(float newCutOffMagnitude)
   {
+	  try
+	  {
+		  String s = null;
+		  s.length();
+	  }
+	  catch (Throwable t) 
+	  {
+		  t.printStackTrace();
+	  }
+	  
 	  	setCutOffMagnitudeGen(newCutOffMagnitude);
 	  
 	  	StarFieldSceneObject j3DObject = ((StarFieldSceneObject) sceneObject);	
@@ -211,8 +221,8 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   
   	@Override
 	protected void initialSceneObject() 
-  	{
-  		applyPreferences();
+  	{  		
+  		applyPreferences();  		 	
 		super.initialSceneObject();
 	}
   
@@ -222,6 +232,11 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
  		IPreferenceStore preferenceStore = Activator.getDefault().getPreferenceStore();
  		   		
   		StarFieldSceneObject starFieldSceneObject = (StarFieldSceneObject) sceneObject;  		
+  		
+  		
+  		float mag = preferenceStore.getFloat(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID);
+  		System.out.println("mag = " + mag);
+  		
   		starFieldSceneObject.setCutOffMagnitude(preferenceStore.getFloat(ApogyEnvironmentUIPreferencesConstants.DEFAULT_STAR_MAGNITUDE_CUTOFF_ID));
   		
 		super.applyPreferences();

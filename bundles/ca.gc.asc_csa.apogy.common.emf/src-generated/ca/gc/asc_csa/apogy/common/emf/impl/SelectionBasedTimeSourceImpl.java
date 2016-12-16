@@ -62,11 +62,11 @@ public class SelectionBasedTimeSourceImpl extends TimeSourceImpl implements Sele
 			Date time = timedElement.getTime();
 			
 			// Update the time source time.
-			setTime(time);			
+			updateTime(time);			
 		}
 		else
 		{
-			setTime(null);
+			updateTime(null);
 		}
 	}
 
@@ -84,5 +84,4 @@ public class SelectionBasedTimeSourceImpl extends TimeSourceImpl implements Sele
 		}
 		return super.eInvoke(operationID, arguments);
 	}
-
 } //SelectionBasedTimeSourceImpl

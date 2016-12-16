@@ -37,8 +37,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.MapsListNode;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link ca.gc.asc_csa.apogy.core.environment.surface.impl.MapsListNodeImpl#getMapsList
- * <em>Maps List</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.surface.impl.MapsListNodeImpl#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,9 +46,8 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	private Adapter adapter;
 
 	/**
-	 * The cached value of the '{@link #getMapsList() <em>Maps List</em>}'
-	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getMapsList() <em>Maps List</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getMapsList()
 	 * @generated
 	 * @ordered
@@ -68,7 +66,6 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -78,17 +75,15 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MapsList getMapsList() {
 		if (mapsList != null && mapsList.eIsProxy()) {
-			InternalEObject oldMapsList = (InternalEObject) mapsList;
-			mapsList = (MapsList) eResolveProxy(oldMapsList);
+			InternalEObject oldMapsList = (InternalEObject)mapsList;
+			mapsList = (MapsList)eResolveProxy(oldMapsList);
 			if (mapsList != oldMapsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 			}
 		}
 		return mapsList;
@@ -96,7 +91,6 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public MapsList basicGetMapsList() {
@@ -105,73 +99,66 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setMapsList(MapsList newMapsList) {
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-			if (resolve)
-				return getMapsList();
-			return basicGetMapsList();
+			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+				if (resolve) return getMapsList();
+				return basicGetMapsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-			setMapsList((MapsList) newValue);
-			return;
+			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+				setMapsList((MapsList)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-			setMapsList((MapsList) null);
-			return;
+			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+				setMapsList((MapsList)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
-			return mapsList != null;
+			case ApogySurfaceEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+				return mapsList != null;
 		}
 		return super.eIsSet(featureID);
 	}

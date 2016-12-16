@@ -287,7 +287,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 		{
 			SortedSet<Timed> sorted = getTimeSortedTimedElements();
 			setCurrentTimedElement(sorted.first());
-			setTime(new Date(sorted.first().getTime().getTime()));
+			updateTime(new Date(sorted.first().getTime().getTime()));
 		}
 	}
 	
@@ -313,7 +313,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 				it.next();
 				Timed next = it.next();
 				setCurrentTimedElement(next);
-				setTime(new Date(next.getTime().getTime()));
+				updateTime(new Date(next.getTime().getTime()));
 			}
 			else if(isLoopEnable())
 			{
@@ -321,7 +321,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 				{
 					Timed next = sorted.first();
 					setCurrentTimedElement(next);
-					setTime(new Date(next.getTime().getTime()));
+					updateTime(new Date(next.getTime().getTime()));
 				}
 			}
 		}
@@ -347,7 +347,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 			{
 				Timed previous = head.last();
 				setCurrentTimedElement(previous);
-				setTime(new Date(previous.getTime().getTime()));
+				updateTime(new Date(previous.getTime().getTime()));
 			}
 			else if(isLoopEnable())
 			{
@@ -355,7 +355,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 				{
 					Timed next = sorted.last();
 					setCurrentTimedElement(next);
-					setTime(new Date(next.getTime().getTime()));
+					updateTime(new Date(next.getTime().getTime()));
 				}
 			}
 		}
@@ -637,7 +637,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 								{
 									Timed element = sorted.first();
 									setCurrentTimedElement(element);
-									setTime(new Date(element.getTime().getTime()));
+									updateTime(new Date(element.getTime().getTime()));
 									
 									setEarliestDate(new Date(sorted.first().getTime().getTime()));
 									setLatestDate(new Date(sorted.last().getTime().getTime()));

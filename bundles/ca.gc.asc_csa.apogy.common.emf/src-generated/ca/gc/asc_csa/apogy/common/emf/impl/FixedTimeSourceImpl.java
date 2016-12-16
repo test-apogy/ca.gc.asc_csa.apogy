@@ -54,9 +54,13 @@ public class FixedTimeSourceImpl extends TimeSourceImpl implements FixedTimeSour
 		{
 			Date now = new Date();
 			
-			setTime(now);
+			updateTime(now);	
+			
+			return now;
 		}
-		
-		return super.getTime();
+		else
+		{		
+			return super.getTime();
+		}
 	}
 } //FixedTimeSourceImpl

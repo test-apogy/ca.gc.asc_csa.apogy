@@ -13,7 +13,6 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.common.emf.*;
 import java.util.Collection;
 import java.util.List;
 import java.util.SortedSet;
@@ -46,6 +45,7 @@ import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
 import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.emf.Ranges;
 import ca.gc.asc_csa.apogy.common.emf.SelectionBasedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.Server;

@@ -503,10 +503,19 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public void setSceneObject(SceneObject newSceneObject)
 	{
+		
+		//why are two NodePresentation created for each node ?
+		
+		
+		boolean updateRequired = (newSceneObject != sceneObject);
+		
 		setSceneObjectGen(newSceneObject);
 		
-		// Initialize the scene object just set.
-		initialSceneObject();
+		// Initialize the scene object just set if required.
+		if(updateRequired)
+		{
+			initialSceneObject();
+		}
 	}
 	
 	/**

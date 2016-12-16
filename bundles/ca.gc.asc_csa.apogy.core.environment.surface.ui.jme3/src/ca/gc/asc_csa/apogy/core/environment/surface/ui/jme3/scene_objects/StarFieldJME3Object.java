@@ -103,6 +103,17 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 	{		
 		this.highestMagnitude = cutOffMagnitude;
 				
+		 try
+		  {
+			  String s = null;
+			  s.length();
+		  }
+		  catch (Throwable t) 
+		  {
+			  System.out.println("this : " + this);
+			  t.printStackTrace();
+		  }
+		
 		Logger.INSTANCE.log(Activator.ID, this, "Setting Cutoff Magnitude to <" + cutOffMagnitude + ">", EventSeverity.INFO);
 		
 		jme3Application.enqueue(new Callable<Object>() 

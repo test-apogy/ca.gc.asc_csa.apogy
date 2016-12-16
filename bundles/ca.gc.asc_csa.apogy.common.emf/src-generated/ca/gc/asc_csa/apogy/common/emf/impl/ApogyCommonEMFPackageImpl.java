@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;

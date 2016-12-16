@@ -264,7 +264,8 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 		if(tmp == null)
 		{
 			tmp = getStartTime();
-			setTime(new Date(getStartTime().getTime()));
+			
+			updateTime(new Date(getStartTime().getTime()));
 		}
 		return tmp;
 	}
@@ -329,7 +330,7 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	public void reset() 
 	{
 		this.paused = true;
-		setTime(getStartTime());
+		updateTime(getStartTime());
 		
 		// Force the job to start if not already started.
 		getUpdateJob();	
@@ -472,12 +473,6 @@ public class BrowseableTimeSourceImpl extends TimeSourceImpl implements Browseab
 	protected void setUpdateJob(Job updateJob) 
 	{
 		this.updateJob = updateJob;
-	}
-
-	protected void updateTime(Date now)
-	{
-		// Updates the TimeSource time.
-		setTime(now);	
 	}
 	
 	/**
