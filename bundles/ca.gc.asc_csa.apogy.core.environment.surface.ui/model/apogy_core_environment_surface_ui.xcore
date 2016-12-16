@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Pierre Allard (Pierre.Allard@canada.ca), 
+ *     Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+ *     Sebastien Gemme (Sebastien.Gemme@canada.ca),
+ *     Canadian Space Agency (CSA) - Initial API and implementation
+ */
+@GenModel(prefix="ApogyCoreEnvironmentSurfaceUi",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Copyright (c) 2015-2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Pierre Allard (Pierre.Allard@canada.ca), 
+    Regent L'Archeveque (Regent.Larcheveque@canada.ca),
+    Sebastien Gemme (Sebastien.Gemme@canada.ca),
+    Canadian Space Agency (CSA) - Initial API and implementation",
+		  modelName="ApogyCoreEnvironmentSurfaceUi",
+		  complianceLevel="8.0",
+		  suppressGenModelAnnotations="false",
+		  dynamicTemplates="true", 
+		  templateDirectory="platform:/plugin/ca.gc.asc_csa.apogy.common.emf.templates")
+@GenModel(modelDirectory="/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated")
+@GenModel(editDirectory= "/ca.gc.asc_csa.apogy.core.environment.surface.ui/src-generated")
+
+package ca.gc.asc_csa.apogy.core.environment.surface.ui
+
+/*
+ * Apogy Environment Surface UI Facade (Singleton). 
+ */
+class ApogyCoreEnvironmentSurfaceUiFacade{
+}

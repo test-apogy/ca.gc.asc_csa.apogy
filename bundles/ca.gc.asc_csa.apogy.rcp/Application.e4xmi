@@ -41,10 +41,27 @@
           </children>
         </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.environment" label="Environment" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Environment">
-        <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_0rWpsCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.surface" label="Surface" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.edit/icons/full/obj16/ApogyEnvironment.gif" tooltip="Surface Worksites">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_Sj4c8IyREeajju10_PNlwQ" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.7">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_5S9XQLf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.23" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_7xi5kLf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partstack.26">
+              <children xsi:type="advanced:Placeholder" xmi:id="_IQcDMLf_EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.2" ref="__hhyULf-EeajoIayvPiU1w"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_8G-XALf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partstack.27">
+              <children xsi:type="basic:Part" xmi:id="_QyWZ4Lf_EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.part.maps" label="Maps"/>
+            </children>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_6Eor0Lf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.24" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_8lffALf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partstack.28">
+              <children xsi:type="basic:Part" xmi:id="_Tg8HELf_EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.part.layer" label="Layer"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_8_1RoLf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.partstack.29">
+              <children xsi:type="basic:Part" xmi:id="_XY9hgLf_EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.part.details" label="Details"/>
+            </children>
+          </children>
+        </children>
       </children>
-      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital">
+      <children xsi:type="advanced:Perspective" xmi:id="_7GBnECKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.perspective.orbital" label="Orbital" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.environment.edit/icons/full/obj16/Earth.gif" tooltip="Orbital Worksites">
         <children xsi:type="basic:PartSashContainer" xmi:id="_WkvXkDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.1">
           <children xsi:type="basic:PartSashContainer" xmi:id="_YIwvEDdQEeaqBcDQbmA3aw" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.4" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_-oRW4LAuEea_IN33dRJ5eQ" elementId="ca.gc.asc_csa.apogy.rcp.partstack.4">
@@ -295,6 +312,7 @@
         <children xsi:type="menu:HandledToolItem" xmi:id="_EtoW0LZqEeaTSIALzZwZEw" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.0" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/take_screenshot_16.gif" command="_J4xwkLZrEeaTSIALzZwZEw"/>
       </toolbar>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="__hhyULf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.part.worksites" label="Worksites"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>

@@ -318,6 +318,12 @@
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.orbit.earth.ui.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.orbit.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface.earth</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface.earth.edit</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface.earth.ui</module>
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface.edit</module>		
+		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.surface.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.ui</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.ui.edit</module>
 		<module>../../bundles/ca.gc.asc_csa.apogy.core.environment.ui.jme3</module>
