@@ -19,6 +19,10 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
@@ -108,12 +112,22 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	 * @generated_NOT
 	 */
 	public void setUrl(String newUrl) 
-	{
+	{				
 		setUrlGen(newUrl);
 		
-		// Set mesh dirty to true
-		// TODO : Do this using ApogyCommonEmfTransactionFacade.
-		transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(true));
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+		if(domain instanceof TransactionalEditingDomain)
+		{
+			domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
+				@Override
+				protected void doExecute() 
+				{							
+					setMeshIsDirty(true);
+				}
+			});										
+		}
+	
+		// transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(true));
 	}
 	
 	/**
@@ -135,7 +149,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	   */
 	  public CartesianTriangularMesh getMesh()
 	  {	  	  
-		  if(isMeshIsDirty())
+		  if(isMeshIsDirty() || (mesh == null))
 		  {			  			  			  
 			  mesh = loadMesh(getUrl());		 
 		  }
@@ -292,18 +306,24 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 
 		Logger.INSTANCE.log(Activator.ID, this, "Loading Mesh from <" + url + "> ...", EventSeverity.INFO);
 
-		try {
+		try 
+		{
 			URL url = resolveURLString(urlString);
 			loadedMesh = (CartesianTriangularMesh) ApogyCommonConvertersFacade.INSTANCE.convert(url,CartesianTriangularMesh.class);
 
-			if (loadedMesh != null) {
+			if (loadedMesh != null) 
+			{
 				Logger.INSTANCE.log(Activator.ID, this, "Sucesfully loaded Mesh from url " + url + ">. Mesh contains "
 						+ loadedMesh.getPolygons().size() + " triangles.", EventSeverity.OK);
-			} else {
+			} 
+			else 
+			{
 				Logger.INSTANCE.log(Activator.ID, this,
 						"Could not load Mesh from url " + url + ">. No converter found !", EventSeverity.ERROR);
 			}
-		} catch (Throwable t) {
+		} 
+		catch (Throwable t) 
+		{
 			t.printStackTrace();
 
 			Logger.INSTANCE.log(Activator.ID, this, "Could not load Mesh from <" + url + "> !", EventSeverity.ERROR, t);
@@ -313,7 +333,20 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 		
 		// Set mesh dirty to false
 		// TODO : Do this using ApogyCommonEmfTransactionFacade.
-		transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(false));
+		// transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(false));
+		
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+		if(domain instanceof TransactionalEditingDomain)
+		{
+			domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
+				@Override
+				protected void doExecute() 
+				{							
+					setMeshIsDirty(false);
+				}
+			});										
+		}
+						
 		return loadedMesh;
 	}
 

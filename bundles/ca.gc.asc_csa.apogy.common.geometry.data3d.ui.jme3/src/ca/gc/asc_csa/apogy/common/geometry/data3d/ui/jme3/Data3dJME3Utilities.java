@@ -59,7 +59,8 @@ public class Data3dJME3Utilities
 		Mesh mesh = new Mesh();
 		mesh.setMode(Mode.Triangles);
 		
-		if(mesh != null && cartesianTriangularMesh.getPoints().size() > 0 && cartesianTriangularMesh.getPolygons().size() > 0)
+		if(cartesianTriangularMesh != null && cartesianTriangularMesh.getPoints() != null &&  cartesianTriangularMesh.getPolygons() != null &&
+		   cartesianTriangularMesh.getPoints().size() > 0 && cartesianTriangularMesh.getPolygons().size() > 0)
 		{
 			if(verbose)
 			{

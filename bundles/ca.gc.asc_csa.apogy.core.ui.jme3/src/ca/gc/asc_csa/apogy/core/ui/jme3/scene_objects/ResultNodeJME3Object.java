@@ -249,7 +249,10 @@ public class ResultNodeJME3Object extends AbstractTransformationJME3SceneObject<
 			}
 			else if(getTopologyNode().getResult() != null)
 			{
-				text = getTopologyNode().getResult().getTime().toString();
+				if(getTopologyNode().getResult().getTime() != null)
+				{
+					text = getTopologyNode().getResult().getTime().toString();
+				}	
 			}				
 		}
 		

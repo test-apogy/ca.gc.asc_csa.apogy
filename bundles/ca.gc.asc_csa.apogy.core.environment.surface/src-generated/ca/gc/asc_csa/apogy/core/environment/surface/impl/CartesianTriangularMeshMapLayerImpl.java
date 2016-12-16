@@ -29,14 +29,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.RecordingCommand;
@@ -81,7 +78,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
  */
 public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl implements CartesianTriangularMeshMapLayer 
 {
-	protected boolean verbose = false;	
+	protected boolean verbose = true;	
 	protected CartesianTriangularMesh emptyMesh = ApogyCommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 	protected boolean textureImageIsDirty = true;
 	private EContentAdapter meshTextureAdapter = null;
@@ -198,34 +195,33 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	 */
 	public AbstractEImage getTextureImage()
 	{
+		System.err.println("CartesianTriangularMeshMapLayerImpl.getTextureImage() " + textureImageIsDirty);
+				
 		if(textureImageIsDirty)
-		{			
-			AbstractEImage img = getMeshTextureImage();
+		{	
+			textureImageIsDirty = false;
+			AbstractEImage img = createMeshTextureImage();
 			
-			if(getCurrentMesh() != null)
-			{
-				try
-				{		
-					EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-					if(domain instanceof TransactionalEditingDomain)
-					{
-						domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
-							@Override
-							protected void doExecute() 
-							{							
-								setTextureImage(img);
-							}
-						});										
-					}
-									
-					textureImageIsDirty = false;
-				}
-				catch(Throwable t)
+			try
+			{		
+				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+				if(domain instanceof TransactionalEditingDomain)
 				{
-					t.printStackTrace();
-				}
+					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
+						@Override
+						protected void doExecute() 
+						{							
+							setTextureImage(img);
+						}
+					});										
+				}							
 			}
+			catch(Throwable t)
+			{				
+				t.printStackTrace();
+			}						
 		}				
+		
 		return getTextureImageGen();
 	}
 
@@ -349,7 +345,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	 */
 	public void forceUpdateTextureImage() 
 	{
-		AbstractEImage img = getMeshTextureImage();		
+		AbstractEImage img = createMeshTextureImage();		
 		setTextureImage(img);
 		textureImageIsDirty = false;	
 	}
@@ -508,7 +504,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		return list;
 	}
 		
-	protected AbstractEImage getMeshTextureImage()
+	protected AbstractEImage createMeshTextureImage()
 	{		
 		Logger.INSTANCE.log(Activator.ID, this, getName() + " : Updating Texture Image starts.", EventSeverity.INFO);
 		
@@ -722,7 +718,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 					
 					if(updateImage)
 					{
-						AbstractEImage img = getMeshTextureImage();		
+						AbstractEImage img = createMeshTextureImage();		
 						setTextureImage(img);
 						textureImageIsDirty = false;
 					}
@@ -733,14 +729,14 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		return meshTextureAdapter;
 	}
 		
-	protected void transactionSet(EObject owner, EStructuralFeature feature, Object value)
-	{
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
-		if(domain instanceof TransactionalEditingDomain)
-		{
-			SetCommand command = new SetCommand(domain, owner, feature, value);
-			domain.getCommandStack().execute(command);
-		}
-	}
+//	protected void transactionSet(EObject owner, EStructuralFeature feature, Object value)
+//	{
+//		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
+//		if(domain instanceof TransactionalEditingDomain)
+//		{
+//			SetCommand command = new SetCommand(domain, owner, feature, value);
+//			domain.getCommandStack().execute(command);
+//		}
+//	}
 	
 } //CartesianTriangularMeshMapLayerImpl
