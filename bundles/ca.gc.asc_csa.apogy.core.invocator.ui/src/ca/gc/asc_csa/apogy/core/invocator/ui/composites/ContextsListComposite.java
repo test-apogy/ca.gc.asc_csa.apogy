@@ -36,7 +36,6 @@ import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
@@ -52,6 +51,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
@@ -60,7 +60,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.ContextsList;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
-import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewContextWizard;
 
 public class ContextsListComposite extends ScrolledComposite {
@@ -114,13 +113,21 @@ public class ContextsListComposite extends ScrolledComposite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 
-				/**
-				 * Creates and opens the wizard to create a valid context
-				 */
-				NewContextWizard newContextWizard = new NewContextWizard(getEnvironment().getInvocatorSession());
-				WizardDialog dialog = new WizardDialog(getShell(), newContextWizard);
+				if (getEnvironment().getVariablesList() != null
+						&& !getEnvironment().getVariablesList().getVariables().isEmpty()) {
+					/**
+					 * Creates and opens the wizard to create a valid context
+					 */
+					NewContextWizard newContextWizard = new NewContextWizard(getEnvironment().getInvocatorSession());
+					WizardDialog dialog = new WizardDialog(getShell(), newContextWizard);
 
-				dialog.open();
+					dialog.open();
+				} else {
+					MessageBox dialog = new MessageBox(getShell());
+					dialog.setMessage("Variables list is empty");
+					dialog.open();
+				}
+
 			}
 		});
 
@@ -265,38 +272,6 @@ public class ContextsListComposite extends ScrolledComposite {
 				});
 		tableViewer.setInput(environmentContextListContextsObserveValue);
 
-		/**
-		 * Binding to enable the newButton when there is a VariableList
-		 */
-		IObservableValue<?> observeBtnCreateEnabledObserveWidget = WidgetProperties.enabled().observe(btnNew);
-		IObservableValue<?> environmentVariablesListVariablesObserveValue = EMFProperties
-				.value(ApogyCoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST).observeDetail(environmentBinder);
-
-		m_bindingContext.bindValue(observeBtnCreateEnabledObserveWidget, environmentVariablesListVariablesObserveValue,
-				null, new UpdateValueStrategy().setConverter(new Converter(VariablesList.class, Boolean.class) {
-					@Override
-					public Object convert(Object fromObject) {
-						return fromObject instanceof VariablesList
-								? !((VariablesList) fromObject).getVariables().isEmpty() : false;
-					}
-				}));
-
-		/**
-		 * Binding to enable the deleteButton when there is an active session
-		 */
-		IObservableValue<?> observeSingleSelectionTableViewer = ViewerProperties.singleSelection().observe(tableViewer);
-		IObservableValue<?> observeEnabledBtnDeleteObserveWidget = WidgetProperties.enabled().observe(btnDelete);
-
-		m_bindingContext.bindValue(observeEnabledBtnDeleteObserveWidget, observeSingleSelectionTableViewer, null,
-				new UpdateValueStrategy().setConverter(new Converter(Object.class, Boolean.class) {
-
-					@Override
-					public Object convert(Object fromObject) {
-						return fromObject != null;
-					}
-
-				}));
-		
 		/**
 		 * Binding to disable the activateButton when the variables are instantiated
 		 */

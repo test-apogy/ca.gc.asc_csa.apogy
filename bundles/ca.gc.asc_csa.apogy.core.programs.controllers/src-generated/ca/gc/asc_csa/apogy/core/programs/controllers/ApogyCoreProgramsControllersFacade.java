@@ -95,4 +95,20 @@ public interface ApogyCoreProgramsControllersFacade extends EObject
 	 */
 	void setControllerValueSourceLastValue(ControllerValueSource source, Object value);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model operationCallControllerBindingUnique="false"
+	 * @generated
+	 */
+	void initOperationCallControllerBindingArguments(OperationCallControllerBinding operationCallControllerBinding);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model bindedEDataTypeArgumentUnique="false"
+	 * @generated
+	 */
+	void initBindedEDataTypeArgument(BindedEDataTypeArgument bindedEDataTypeArgument);
+
 } // ApogyCoreProgramsControllersFacade

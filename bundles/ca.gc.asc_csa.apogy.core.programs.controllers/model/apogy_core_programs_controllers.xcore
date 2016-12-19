@@ -77,6 +77,10 @@ class ApogyCoreProgramsControllersFacade
 	op String getToggleValueSourceString(ToggleValueSource toggleValueSource)
 	
 	op void setControllerValueSourceLastValue(ControllerValueSource source, Object value)
+	
+	op void initOperationCallControllerBindingArguments(OperationCallControllerBinding operationCallControllerBinding)
+	
+	op void initBindedEDataTypeArgument(BindedEDataTypeArgument bindedEDataTypeArgument)
 }
 
 /* -------------------------------------------------------------------------

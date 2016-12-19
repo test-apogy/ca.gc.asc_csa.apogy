@@ -17,7 +17,6 @@ package ca.gc.asc_csa.apogy.common.emf.transaction.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -28,6 +27,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.command.AbstractOverrideableCommand;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.command.SetCommand;
@@ -118,15 +118,7 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	 * @generated_NOT
 	 */
 	public void basicSet(EObject owner, EStructuralFeature feature, Object value) {
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
-		if (domain instanceof TransactionalEditingDomain) {
-			SetCommand command = new SetCommand(domain, owner, feature, value);
-			domain.getCommandStack().execute(command);
-		}else{
-			String message = this.getClass().getSimpleName() + ".basicSet(): "
-					+ "Editing domain of" + owner + "is not Transactional";
-			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
-		}
+		executeCommand(new SetCommand(getTransactionalEditingDomain(owner), owner, feature, value));
 	}
 
 	/**
@@ -135,15 +127,7 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	 * @generated_NOT
 	 */
 	public void basicSet(EObject owner, EStructuralFeature feature, Object value, int index) {
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
-		if (domain instanceof TransactionalEditingDomain) {
-			SetCommand command = new SetCommand(domain, owner, feature, value, index);
-			domain.getCommandStack().execute(command);
-		}else{
-			String message = this.getClass().getSimpleName() + ".basicSet(): "
-					+ "Editing domain of" + owner + "is not Transactional";
-			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
-		}		
+		executeCommand(new SetCommand(getTransactionalEditingDomain(owner), owner, feature, value, index));	
 	}
 
 	/**
@@ -152,15 +136,7 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	 * @generated_NOT
 	 */
 	public void basicAdd(EObject owner, EStructuralFeature feature, Object value) {
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
-		if (domain instanceof TransactionalEditingDomain) {
-			AddCommand command = new AddCommand(domain, owner, feature, value);
-			domain.getCommandStack().execute(command);
-		}else{
-			String message = this.getClass().getSimpleName() + ".basicAdd(): "
-					+ "Editing domain of" + owner + "is not Transactional";
-			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
-		}
+		executeCommand(new AddCommand(getTransactionalEditingDomain(owner), owner, feature, value));
 	}
 
 	/**
@@ -169,15 +145,7 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	 * @generated_NOT
 	 */
 	public void basicAdd(EObject owner, EStructuralFeature feature, Collection<?> collection) {
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(owner);
-		if (domain instanceof TransactionalEditingDomain) {
-			AddCommand command = new AddCommand(domain, owner, feature, collection);
-			domain.getCommandStack().execute(command);
-		}else{
-			String message = this.getClass().getSimpleName() + ".basicAdd(): "
-					+ "Editing domain of" + owner + "is not Transactional";
-			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
-		}
+		executeCommand(new AddCommand(getTransactionalEditingDomain(owner), owner, feature, collection));
 	}
 
 	/**
@@ -211,6 +179,38 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void executeCommand(AbstractOverrideableCommand command) {
+		if(command.getDomain() instanceof TransactionalEditingDomain){
+			command.getDomain().getCommandStack().execute(command);
+		}else{
+			String message = this.getClass().getSimpleName() + "executeCommand(AbstractOverrideableCommand command): "
+					+ "Editing domain is not transactional or null";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public TransactionalEditingDomain getTransactionalEditingDomain(EObject eObject) {
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(eObject);
+		if(domain instanceof TransactionalEditingDomain){
+			return (TransactionalEditingDomain) domain;
+		}else{
+			String message = this.getClass().getSimpleName() + " getTransactionalEditingDomain(EObject eObject): "
+					+ "Problem getting the TransactionalEditingDomain. Is the EditingDomain of the ResourceSet transactional?";
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
+			return null;
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -240,6 +240,11 @@ public class ApogyCommonEmfTransactionFacadeImpl extends MinimalEObjectImpl.Cont
 			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT:
 				basicDelete((EObject)arguments.get(0), (EStructuralFeature)arguments.get(1), arguments.get(2));
 				return null;
+			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___EXECUTE_COMMAND__ABSTRACTOVERRIDEABLECOMMAND:
+				executeCommand((AbstractOverrideableCommand)arguments.get(0));
+				return null;
+			case ApogyCommonEmfTransactionPackage.APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT:
+				return getTransactionalEditingDomain((EObject)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

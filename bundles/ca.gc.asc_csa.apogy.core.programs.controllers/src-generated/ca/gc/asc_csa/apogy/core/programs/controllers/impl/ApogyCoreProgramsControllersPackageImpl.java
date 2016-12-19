@@ -353,6 +353,24 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreProgramsControllersFacade__InitOperationCallControllerBindingArguments__OperationCallControllerBinding() {
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreProgramsControllersFacade__InitBindedEDataTypeArgument__BindedEDataTypeArgument() {
+		return apogyCoreProgramsControllersFacadeEClass.getEOperations().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -896,6 +914,8 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_ACTIVE_CONTROLLERS_CONFIGURATION__CONTROLLERSCONFIGURATION_BOOLEAN);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___GET_TOGGLE_VALUE_SOURCE_STRING__TOGGLEVALUESOURCE);
 		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___SET_CONTROLLER_VALUE_SOURCE_LAST_VALUE__CONTROLLERVALUESOURCE_OBJECT);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_OPERATION_CALL_CONTROLLER_BINDING_ARGUMENTS__OPERATIONCALLCONTROLLERBINDING);
+		createEOperation(apogyCoreProgramsControllersFacadeEClass, APOGY_CORE_PROGRAMS_CONTROLLERS_FACADE___INIT_BINDED_EDATA_TYPE_ARGUMENT__BINDEDEDATATYPEARGUMENT);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -1062,6 +1082,12 @@ public class ApogyCoreProgramsControllersPackageImpl extends EPackageImpl implem
 		op = initEOperation(getApogyCoreProgramsControllersFacade__SetControllerValueSourceLastValue__ControllerValueSource_Object(), null, "setControllerValueSourceLastValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getControllerValueSource(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreProgramsControllersFacade__InitOperationCallControllerBindingArguments__OperationCallControllerBinding(), null, "initOperationCallControllerBindingArguments", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getOperationCallControllerBinding(), "operationCallControllerBinding", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCoreProgramsControllersFacade__InitBindedEDataTypeArgument__BindedEDataTypeArgument(), null, "initBindedEDataTypeArgument", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getBindedEDataTypeArgument(), "bindedEDataTypeArgument", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(controllersConfigurationEClass, ControllersConfiguration.class, "ControllersConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getControllersConfiguration_Active(), theEcorePackage.getEBoolean(), "active", "false", 0, 1, ControllersConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -117,7 +117,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 	 */
 	public VariableFeatureReferenceComposite(Composite parent, int style) {
 		super(parent, style);
-		setLayout(new GridLayout(3, true));
+		GridLayout gridLayout = new GridLayout(3, true);
+		gridLayout.marginWidth = 0;
+		gridLayout.marginHeight = 0;
+		setLayout(gridLayout);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				toolkit.dispose();
@@ -208,7 +211,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 		compositeFeature.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		GridLayout gridLayout_feature = new GridLayout(1, false);
 		gridLayout_feature.marginHeight = 0;
-		gridLayout_feature .marginWidth = 0;
+		gridLayout_feature.marginWidth = 0;
 		gridLayout_feature.marginBottom = 5;
 		compositeFeature.setLayout(gridLayout_feature);
 
@@ -389,7 +392,8 @@ public class VariableFeatureReferenceComposite extends Composite {
 		/**
 		 * Bind TypeMemberReference.
 		 */
-		IObservableValue<?> observeSingleSelectionTypeViewer = ViewersObservables.observeSingleSelection(typeMemberViewer);
+		IObservableValue<?> observeSingleSelectionTypeViewer = ViewersObservables
+				.observeSingleSelection(typeMemberViewer);
 
 		IObservableValue<?> observeTypeMemberValue = editingDomain == null
 				? EMFObservables.observeValue(variableFeatureReference,
@@ -482,7 +486,8 @@ public class VariableFeatureReferenceComposite extends Composite {
 							for (int i = 0; i < path.getSegmentCount(); i++) {
 								features[i] = (EStructuralFeature) path.getSegment(i);
 							}
-							return ApogyCoreInvocatorFacade.INSTANCE.createListRootNode(variableFeatureReference, features);
+							return ApogyCoreInvocatorFacade.INSTANCE.createListRootNode(variableFeatureReference,
+									features);
 						}
 						return null;
 					}

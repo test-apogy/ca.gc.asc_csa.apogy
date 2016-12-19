@@ -29,10 +29,9 @@ import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade
 import ca.gc.asc_csa.apogy.common.io.jinput.ui.composites.ControllerSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.programs.controllers.CenteredLinearInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
@@ -94,20 +93,16 @@ public class ValueSourceComposite extends Composite {
 			protected void newSelection(TreeSelection selection) {
 				if (bindedEDataTypeArgument.getValueSource().eClass() != valueSourcesTypesComposite
 						.getSelectedSubClass()) {
-					// Set the new value source.
-					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(bindedEDataTypeArgument,
-							ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-							EcoreUtil.create((EClass) selection.getFirstElement()));
+					if (valueSourcesTypesComposite
+							.getSelectedSubClass() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE) {
+						ApogyCoreProgramsControllersFacade.INSTANCE
+								.initBindedEDataTypeArgument(bindedEDataTypeArgument);
+					} else {
+						// Set the new value source.
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(bindedEDataTypeArgument,
+								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+								EcoreUtil.create((EClass) selection.getFirstElement()));
 
-					if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
-						// Set a conditioning if the value source is a
-						// ControllerValueSource.
-						CenteredLinearInputConditioning conditioning = ApogyCoreProgramsControllersFactory.eINSTANCE
-								.createCenteredLinearInputConditioning();
-						conditioning.setDeadBand((float) 0.1);
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(bindedEDataTypeArgument.getValueSource(),
-								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-								conditioning);
 					}
 					setValueComposite();
 					ValueSourceComposite.this.newSelection(selection);

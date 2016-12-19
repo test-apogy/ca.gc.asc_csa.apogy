@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.eclipse.emf.edit.command.AbstractOverrideableCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 /**
@@ -90,6 +91,8 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 				return createTransactionalEditingDomainFromString(eDataType, initialValue);
 			case ApogyCommonEmfTransactionPackage.COLLECTION:
 				return createCollectionFromString(eDataType, initialValue);
+			case ApogyCommonEmfTransactionPackage.ABSTRACT_OVERRIDEABLE_COMMAND:
+				return createAbstractOverrideableCommandFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +110,8 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 				return convertTransactionalEditingDomainToString(eDataType, instanceValue);
 			case ApogyCommonEmfTransactionPackage.COLLECTION:
 				return convertCollectionToString(eDataType, instanceValue);
+			case ApogyCommonEmfTransactionPackage.ABSTRACT_OVERRIDEABLE_COMMAND:
+				return convertAbstractOverrideableCommandToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -145,6 +150,7 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public Collection<?> createCollectionFromString(EDataType eDataType, String initialValue) {
 		return (Collection<?>)super.createFromString(initialValue);
 	}
@@ -156,6 +162,24 @@ public class ApogyCommonEmfTransactionFactoryImpl extends EFactoryImpl implement
 	 */
 	public String convertCollectionToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractOverrideableCommand createAbstractOverrideableCommandFromString(EDataType eDataType, String initialValue) {
+		return (AbstractOverrideableCommand)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAbstractOverrideableCommandToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

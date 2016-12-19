@@ -14,22 +14,17 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Arrays;
-
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
@@ -78,9 +73,6 @@ public class ControllerBindingWizard extends Wizard {
 				if (event.detail == SWT.TRAVERSE_ESCAPE) {
 					if (event.doit) {
 						CloseWizardEscapeDialog dialog = new CloseWizardEscapeDialog(ControllerBindingWizard.this);
-//						CloseOnCancelDialog dialog = new CloseOnCancelDialog(getShell(), "Closing wizard", null,
-//								"Progress will be lost if the wizard is colsed.\nAre you sure you want to close the wizard?",
-//								MessageDialog.QUESTION, new String[] { "Yes", "No" }, 1);
 						int result = dialog.open();
 						if (result == 0) {
 							performCancel();
@@ -98,7 +90,8 @@ public class ControllerBindingWizard extends Wizard {
 	public void addPages() {
 		addPage(getNamedDescribedWizardPage());
 		addPage(getOperationCallControllerBindingDetailsWizardPage());
-
+		addPage(getBindedEDataTypeArgumentsWizardPage());
+		
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
 
@@ -106,15 +99,10 @@ public class ControllerBindingWizard extends Wizard {
 	public IWizardPage getNextPage(IWizardPage page) {
 		if (page == getOperationCallControllerBindingDetailsWizardPage()) {
 			if (getControllerBinding().getEOperation() != null && getControllerBinding().getArgumentsList() != null) {
-				if (!Arrays.asList(getPages()).contains(getBindedEDataTypeArgumentsWizardPage())) {
-					addPage(getBindedEDataTypeArgumentsWizardPage());
-				} else {
-					return getBindedEDataTypeArgumentsWizardPage();
-				}
+				return getBindedEDataTypeArgumentsWizardPage();
 			} else {
 				return null;
 			}
-
 		}
 		return super.getNextPage(page);
 	}
@@ -204,33 +192,6 @@ public class ControllerBindingWizard extends Wizard {
 		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
 		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
 		return super.performCancel();
-	}
-	
-	// TODO move to common.ui
-	private class CloseOnCancelDialog extends MessageDialog {
-
-		public CloseOnCancelDialog(Shell parentShell, String dialogTitle, Image dialogTitleImage, String dialogMessage,
-				int dialogImageType, String[] dialogButtonLabels, int defaultIndex) {
-			super(parentShell, dialogTitle, dialogTitleImage, dialogMessage, dialogImageType, dialogButtonLabels,
-					defaultIndex);
-		}
-
-		@Override
-		protected void buttonPressed(int buttonId) {
-			this.close();
-			switch (buttonId) {
-			case 0:
-				ControllerBindingWizard.this.getShell().setVisible(false);
-				ControllerBindingWizard.this.dispose();
-				this.close();
-				break;
-			case 1:
-				this.cancelPressed();
-				break;
-			default:
-				break;
-			}
-		}
 	}
 
 	/**

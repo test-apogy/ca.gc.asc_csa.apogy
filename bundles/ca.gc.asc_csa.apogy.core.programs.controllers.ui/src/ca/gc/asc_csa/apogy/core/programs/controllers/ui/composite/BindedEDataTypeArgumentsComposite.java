@@ -158,7 +158,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		compositeValueSource.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeValueSource.setBackgroundMode(SWT.INHERIT_FORCE);
-		
+
 		/**
 		 * Conditioning
 		 */
@@ -185,58 +185,16 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				control.dispose();
 			}
 		}
-		
+
 		if (getSelectedArgument() != null) {
 			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None);
-//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 			contentComposite.setBindedEDataTypeArgument(getSelectedArgument());
 		} else {
 			getNoContentComposite(compositeValueSource);
-//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		}
 		compositeValueSource.layout();
 		this.layout();
 	}
-
-//	/**
-//	 * Updates the value composite depending on the selected argument.
-//	 */
-//	private void updateCompositeValue() {
-//		if (compositeValue != null) {
-//			compositeValue.dispose();
-//		}
-//
-//		if (getSelectedArgument() != null) {
-//			compositeValue = new Composite(sectionValue, SWT.None);
-//			compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-//			GridLayout gridLayout_value = new GridLayout(2, false);
-//			gridLayout_value.marginWidth = 0;
-//			gridLayout_value.marginHeight = 0;
-//			gridLayout_value.marginBottom = 5;
-//			compositeValue.setLayout(gridLayout_value);
-//
-//			/**
-//			 * Set the value composite depending on the value source.
-//			 */
-//			if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
-//				// TODO replace by Apogy custom EMF with units.
-//				ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(compositeValue,
-//						getSelectedArgument().getValueSource());
-//			} else if (getSelectedArgument().getValueSource() instanceof ToggleValueSource) {
-//				compositeValue = getNoContentComposite(sectionValue);
-//			} else if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-//				compositeValue = new ControllerSelectionComposite(sectionValue, SWT.None);
-//				((ControllerSelectionComposite) compositeValue).setEComponentQualifier(
-//						((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier());
-//				compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-//			}
-//		} else {
-//			compositeValue = getNoContentComposite(sectionValue);
-//		}
-//		sectionValue.setClient(compositeValue);
-//		sectionValue.layout();
-//		layout();
-//	}
 
 	/**
 	 * Updates the conditioning composite depending on the selected argument.
@@ -247,7 +205,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 
 		if (getSelectedArgument() != null && getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
-			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.NO_SCROLL){
+			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.NO_SCROLL) {
 				@Override
 				protected void newSelection(ISelection selection) {
 					BindedEDataTypeArgumentsComposite.this.newSelection(selection);
@@ -270,7 +228,6 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 */
 	private void updateDetailsComposites() {
 		updateCompositeValueSource();
-//		updateCompositeValue();
 		updateCompositeConditioning();
 	}
 
@@ -415,6 +372,8 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
 
+			System.out.println(operationCallControllerBinding.getEOperation().toString());
+			System.out.println(operationCallControllerBinding.getArgumentsList().getArguments().size());
 			// This is used in the case where refresh is called on an Argument
 			// that is not in the ArgumentsList anymore.
 			if (operationCallControllerBinding.getArgumentsList() == null
@@ -480,7 +439,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	private Adapter getAdapter() {
 		if (adapter == null) {
 			adapter = new EContentAdapter() {
-				List<EStructuralFeature> features;
+				List<EStructuralFeature> featuresRefresh;
 
 				@Override
 				public void notifyChanged(Notification notification) {
@@ -490,7 +449,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 								(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
 										.getOperationCall());
 					}
-					if (getEStructuralFeature().contains(notification.getFeature())
+					if (getEStructuralFeatureRefresh().contains(notification.getFeature())
 							|| notification.getNotifier() instanceof AbstractInputConditioning) {
 						refreshViewer();
 					}
@@ -503,33 +462,33 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 				 * refresh the tableViewer. This method implements a pattern of
 				 * lazy loading.
 				 */
-				private List<EStructuralFeature> getEStructuralFeature() {
-					if (features == null) {
-						features = new ArrayList<EStructuralFeature>();
-
-						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION);
-						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
-						features.add(
+				private List<EStructuralFeature> getEStructuralFeatureRefresh() {
+					if (featuresRefresh == null) {
+						featuresRefresh = new ArrayList<EStructuralFeature>();
+						featuresRefresh.add(
 								ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
 
-						features.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
-						features.add(
+						featuresRefresh.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
+						featuresRefresh.add(
 								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
-						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
-						features.add(
+						featuresRefresh
+								.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
+						featuresRefresh.add(
 								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
-						features.add(
+						featuresRefresh.add(
 								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
 
-						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
-						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
+						featuresRefresh
+								.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
+						featuresRefresh
+								.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
 
-						features.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
+						featuresRefresh.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
 
-						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
-						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME);
+						featuresRefresh.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
+						featuresRefresh.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME);
 					}
-					return features;
+					return featuresRefresh;
 
 				}
 			};

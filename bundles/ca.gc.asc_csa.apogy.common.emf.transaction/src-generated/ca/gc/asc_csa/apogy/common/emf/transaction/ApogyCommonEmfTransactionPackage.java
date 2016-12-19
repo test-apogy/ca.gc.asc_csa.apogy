@@ -175,13 +175,31 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 7;
 
 	/**
+	 * The operation id for the '<em>Execute Command</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___EXECUTE_COMMAND__ABSTRACTOVERRIDEABLECOMMAND = 8;
+
+	/**
+	 * The operation id for the '<em>Get Transactional Editing Domain</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT = 9;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 8;
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 10;
 
 	/**
 	 * The meta object id for the '<em>Transactional Editing Domain</em>' data type.
@@ -204,6 +222,16 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	 */
 	int COLLECTION = 2;
 
+
+	/**
+	 * The meta object id for the '<em>Abstract Overrideable Command</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.edit.command.AbstractOverrideableCommand
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionPackageImpl#getAbstractOverrideableCommand()
+	 * @generated
+	 */
+	int ABSTRACT_OVERRIDEABLE_COMMAND = 3;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade <em>Facade</em>}'.
@@ -296,6 +324,26 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	EOperation getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#executeCommand(org.eclipse.emf.edit.command.AbstractOverrideableCommand) <em>Execute Command</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Execute Command</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#executeCommand(org.eclipse.emf.edit.command.AbstractOverrideableCommand)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__ExecuteCommand__AbstractOverrideableCommand();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#getTransactionalEditingDomain(org.eclipse.emf.ecore.EObject) <em>Get Transactional Editing Domain</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Transactional Editing Domain</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#getTransactionalEditingDomain(org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__GetTransactionalEditingDomain__EObject();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.transaction.TransactionalEditingDomain <em>Transactional Editing Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -316,6 +364,17 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getCollection();
+
+	/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.edit.command.AbstractOverrideableCommand <em>Abstract Overrideable Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Abstract Overrideable Command</em>'.
+	 * @see org.eclipse.emf.edit.command.AbstractOverrideableCommand
+	 * @model instanceClass="org.eclipse.emf.edit.command.AbstractOverrideableCommand"
+	 * @generated
+	 */
+	EDataType getAbstractOverrideableCommand();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -415,6 +474,22 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
 
 		/**
+		 * The meta object literal for the '<em><b>Execute Command</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___EXECUTE_COMMAND__ABSTRACTOVERRIDEABLECOMMAND = eINSTANCE.getApogyCommonEmfTransactionFacade__ExecuteCommand__AbstractOverrideableCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Transactional Editing Domain</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__GetTransactionalEditingDomain__EObject();
+
+		/**
 		 * The meta object literal for the '<em>Transactional Editing Domain</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -433,6 +508,16 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COLLECTION = eINSTANCE.getCollection();
+
+		/**
+		 * The meta object literal for the '<em>Abstract Overrideable Command</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.edit.command.AbstractOverrideableCommand
+		 * @see ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionPackageImpl#getAbstractOverrideableCommand()
+		 * @generated
+		 */
+		EDataType ABSTRACT_OVERRIDEABLE_COMMAND = eINSTANCE.getAbstractOverrideableCommand();
 
 	}
 

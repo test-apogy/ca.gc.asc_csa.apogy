@@ -17,6 +17,7 @@ package ca.gc.asc_csa.apogy.common.emf.transaction;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.command.AbstractOverrideableCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionFacadeImpl;
@@ -118,5 +119,21 @@ public interface ApogyCommonEmfTransactionFacade extends EObject {
 	 * @generated
 	 */
 	void basicDelete(EObject owner, EStructuralFeature feature, Object value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model commandDataType="ca.gc.asc_csa.apogy.common.emf.transaction.AbstractOverrideableCommand" commandUnique="false"
+	 * @generated
+	 */
+	void executeCommand(AbstractOverrideableCommand command);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.emf.transaction.TransactionalEditingDomain" unique="false" eObjectUnique="false"
+	 * @generated
+	 */
+	TransactionalEditingDomain getTransactionalEditingDomain(EObject eObject);
 
 } // ApogyCommonEmfTransactionFacade
