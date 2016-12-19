@@ -16,13 +16,13 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
 import java.awt.BasicStroke;
 import java.awt.Color;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
-import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
-import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -35,7 +35,13 @@ import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 import org.jfree.ui.RectangleInsets;
 
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputFactory;
+import ca.gc.asc_csa.apogy.common.io.jinput.EVirtualComponent;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+
 public class AbstractInputConditioningResponsePlotComposite extends Composite {
+	
+	private Adapter adapter;
 	
 	private AbstractInputConditioning abstractInputConditioning;
 		
@@ -70,6 +76,10 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 
 	public void setAbstractInputConditioning(AbstractInputConditioning abstractInputConditioning) 
 	{
+		if(this.abstractInputConditioning != null){
+			abstractInputConditioning.eAdapters().remove(getAdapter());
+		}
+		
 		this.abstractInputConditioning = abstractInputConditioning;
 		
 		if(abstractInputConditioning != null)
@@ -79,6 +89,8 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 			getChart().getXYPlot().getDomainAxis().setAutoRange(true);
 			getChart().getXYPlot().getRangeAxis().setAutoRange(true);			
 		}
+		
+		this.abstractInputConditioning.eAdapters().add(getAdapter());
 	}
 
 	protected JFreeChart getChart()
@@ -184,4 +196,21 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 			t.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Adapter to update the plot when the parameters of the conditioning are changed.
+	 * @return
+	 */
+	private Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					setAbstractInputConditioning(abstractInputConditioning);
+				}
+			};
+		}
+		return adapter;
+	}
+
 }

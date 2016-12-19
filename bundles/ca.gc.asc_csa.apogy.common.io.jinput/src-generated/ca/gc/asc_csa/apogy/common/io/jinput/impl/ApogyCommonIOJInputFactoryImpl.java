@@ -17,6 +17,7 @@ import net.java.games.input.Component;
 import net.java.games.input.Controller;
 
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -69,6 +70,7 @@ public class ApogyCommonIOJInputFactoryImpl extends EFactoryImpl implements Apog
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ApogyCommonIOJInputPackage.APOGY_COMMON_IOJ_INPUT_FACADE: return createApogyCommonIOJInputFacade();
 			case ApogyCommonIOJInputPackage.ECONTROLLER: return createEController();
 			case ApogyCommonIOJInputPackage.ECONTROLLER_ENVIRONMENT: return createEControllerEnvironment();
 			case ApogyCommonIOJInputPackage.ECOMPONENT: return createEComponent();
@@ -97,6 +99,8 @@ public class ApogyCommonIOJInputFactoryImpl extends EFactoryImpl implements Apog
 				return createComponentFromString(eDataType, initialValue);
 			case ApogyCommonIOJInputPackage.CONTROLLER:
 				return createControllerFromString(eDataType, initialValue);
+			case ApogyCommonIOJInputPackage.ADAPTER:
+				return createAdapterFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -116,9 +120,21 @@ public class ApogyCommonIOJInputFactoryImpl extends EFactoryImpl implements Apog
 				return convertComponentToString(eDataType, instanceValue);
 			case ApogyCommonIOJInputPackage.CONTROLLER:
 				return convertControllerToString(eDataType, instanceValue);
+			case ApogyCommonIOJInputPackage.ADAPTER:
+				return convertAdapterToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyCommonIOJInputFacade createApogyCommonIOJInputFacade() {
+		ApogyCommonIOJInputFacadeImpl apogyCommonIOJInputFacade = new ApogyCommonIOJInputFacadeImpl();
+		return apogyCommonIOJInputFacade;
 	}
 
 	/**
@@ -230,6 +246,24 @@ public class ApogyCommonIOJInputFactoryImpl extends EFactoryImpl implements Apog
 	 * @generated
 	 */
 	public String convertControllerToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createAdapterFromString(EDataType eDataType, String initialValue) {
+		return (Adapter)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAdapterToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

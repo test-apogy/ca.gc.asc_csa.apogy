@@ -67,7 +67,6 @@ public class VariablesListComposite extends Composite {
 	
 	private TreeViewer treeViewer;
 	private Button btnDelete;
-//	private WritableValue<VariablesList> variablesListBinder = new WritableValue<>();
 	
 	private VariablesList variablesList;
 	
@@ -106,7 +105,6 @@ public class VariablesListComposite extends Composite {
 		btnNew.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				new WizardDialog(parent.getShell(), new VariableWizard(variablesListBinder.getValue())).open();
 				new WizardDialog(parent.getShell(), new VariableWizard(variablesList)).open();
 			}
 		});
@@ -119,7 +117,6 @@ public class VariablesListComposite extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
 				ApogyCoreInvocatorUIFacade.INSTANCE.deleteVariables(variablesList, getSelectedVariables());
-//				ApogyCoreInvocatorUIFacade.INSTANCE.deleteVariables(variablesListBinder.getValue(), getSelectedVariables());
 			}
 		});
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
@@ -170,26 +167,10 @@ public class VariablesListComposite extends Composite {
 		
 		DataBindingContext bindingContext = new DataBindingContext();
 		
-		/*
-		 * Bind variables list.
-		 */
-//		@SuppressWarnings("unchecked")
-//		IObservableList<?> variablesListObserveList = EMFProperties
-//				.list(ApogyCoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES)
-//				.observeDetail(variablesListBinder);
-//
-//		ViewerSupport.bind(tableViewer, variablesListObserveList,
-//				EMFProperties.value(ApogyCommonEMFPackage.Literals.NAMED__NAME), EMFProperties.value(ApogyCommonEMFPackage.Literals.DESCRIBED__DESCRIPTION));
-		
+
 		treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory){
 			@Override
 			public Object[] getElements(Object object) {
-//				Object test = object;
-//				if(object instanceof EObjectReference){
-//					if(((EObjectReference) object).getEObject() instanceof VariablesList){
-//						return ((VariablesList)((EObjectReference) object).getEObject()).getVariables().toArray();
-//					}
-//				}
 				return super.getElements(((EObjectReference) object).getEObject());
 			}
 			@Override
@@ -281,7 +262,6 @@ public class VariablesListComposite extends Composite {
 		}
 		variablesList.eAdapters().add(getAdapter());
 		variablesList.getEnvironment().eAdapters().add(getAdapter());
-//		variablesListBinder.setValue(variablesList);
 	}
 	
 	private Adapter getAdapter(){

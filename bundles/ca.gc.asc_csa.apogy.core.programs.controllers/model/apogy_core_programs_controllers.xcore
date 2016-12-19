@@ -75,6 +75,8 @@ class ApogyCoreProgramsControllersFacade
 	op void setActiveControllersConfiguration(ControllersConfiguration controllersConfiguration, Boolean active)
 	
 	op String getToggleValueSourceString(ToggleValueSource toggleValueSource)
+	
+	op void setControllerValueSourceLastValue(ControllerValueSource source, Object value)
 }
 
 /* -------------------------------------------------------------------------

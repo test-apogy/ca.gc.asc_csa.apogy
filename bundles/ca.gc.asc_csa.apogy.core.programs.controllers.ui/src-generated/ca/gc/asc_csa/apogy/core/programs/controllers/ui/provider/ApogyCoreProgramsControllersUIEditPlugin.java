@@ -17,9 +17,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.provider;
 import ca.gc.asc_csa.apogy.common.emf.provider.ApogyCommonEMFEditPlugin;
 
 import ca.gc.asc_csa.apogy.common.io.jinput.provider.ApogyCommonIOJInputEditPlugin;
-
 import ca.gc.asc_csa.apogy.core.invocator.provider.ApogyCoreInvocatorEditPlugin;
-
 import ca.gc.asc_csa.apogy.core.programs.controllers.provider.ApogyCoreProgramsControllersEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;

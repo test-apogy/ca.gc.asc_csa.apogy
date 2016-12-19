@@ -112,13 +112,76 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	int APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_DEFAULT_EDITING_DOMAIN = 0;
 
 	/**
+	 * The operation id for the '<em>Add In Temp Transactional Editing Domain</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___ADD_IN_TEMP_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT = 1;
+
+	/**
+	 * The operation id for the '<em>Basic Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 2;
+
+	/**
+	 * The operation id for the '<em>Basic Set</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT_INT = 3;
+
+	/**
+	 * The operation id for the '<em>Basic Add</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 4;
+
+	/**
+	 * The operation id for the '<em>Basic Add</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_COLLECTION = 5;
+
+	/**
+	 * The operation id for the '<em>Basic Remove</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 6;
+
+	/**
+	 * The operation id for the '<em>Basic Delete</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = 7;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 1;
+	int APOGY_COMMON_EMF_TRANSACTION_FACADE_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '<em>Transactional Editing Domain</em>' data type.
@@ -129,6 +192,17 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	 * @generated
 	 */
 	int TRANSACTIONAL_EDITING_DOMAIN = 1;
+
+
+	/**
+	 * The meta object id for the '<em>Collection</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.Collection
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionPackageImpl#getCollection()
+	 * @generated
+	 */
+	int COLLECTION = 2;
 
 
 	/**
@@ -152,6 +226,76 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	EOperation getApogyCommonEmfTransactionFacade__GetDefaultEditingDomain();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#addInTempTransactionalEditingDomain(org.eclipse.emf.ecore.EObject) <em>Add In Temp Transactional Editing Domain</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add In Temp Transactional Editing Domain</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#addInTempTransactionalEditingDomain(org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__AddInTempTransactionalEditingDomain__EObject();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicSet(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object) <em>Basic Set</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Set</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicSet(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicSet(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object, int) <em>Basic Set</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Set</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicSet(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object, int)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object_int();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicAdd(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object) <em>Basic Add</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Add</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicAdd(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Object();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicAdd(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.util.Collection) <em>Basic Add</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Add</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicAdd(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.util.Collection)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Collection();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicRemove(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object) <em>Basic Remove</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Remove</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicRemove(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicDelete(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object) <em>Basic Delete</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Basic Delete</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade#basicDelete(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature, java.lang.Object)
+	 * @generated
+	 */
+	EOperation getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
+
+	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.transaction.TransactionalEditingDomain <em>Transactional Editing Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,6 +305,17 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getTransactionalEditingDomain();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.Collection <em>Collection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Collection</em>'.
+	 * @see java.util.Collection
+	 * @model instanceClass="java.util.Collection<?>"
+	 * @generated
+	 */
+	EDataType getCollection();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -204,6 +359,62 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_DEFAULT_EDITING_DOMAIN = eINSTANCE.getApogyCommonEmfTransactionFacade__GetDefaultEditingDomain();
 
 		/**
+		 * The meta object literal for the '<em><b>Add In Temp Transactional Editing Domain</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___ADD_IN_TEMP_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__AddInTempTransactionalEditingDomain__EObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Set</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Set</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT_INT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Add</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Add</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_COLLECTION = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Collection();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Remove</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object();
+
+		/**
+		 * The meta object literal for the '<em><b>Basic Delete</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT = eINSTANCE.getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object();
+
+		/**
 		 * The meta object literal for the '<em>Transactional Editing Domain</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -212,6 +423,16 @@ public interface ApogyCommonEmfTransactionPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType TRANSACTIONAL_EDITING_DOMAIN = eINSTANCE.getTransactionalEditingDomain();
+
+		/**
+		 * The meta object literal for the '<em>Collection</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.Collection
+		 * @see ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionPackageImpl#getCollection()
+		 * @generated
+		 */
+		EDataType COLLECTION = eINSTANCE.getCollection();
 
 	}
 

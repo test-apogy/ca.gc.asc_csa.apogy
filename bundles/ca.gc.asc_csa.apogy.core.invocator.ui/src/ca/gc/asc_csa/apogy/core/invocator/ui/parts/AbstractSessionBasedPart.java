@@ -67,7 +67,9 @@ abstract public class AbstractSessionBasedPart extends AbstractApogyPart{
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					if(getActualComposite() != null){
+						setEObject(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+					}
 				}
 			};
 		}

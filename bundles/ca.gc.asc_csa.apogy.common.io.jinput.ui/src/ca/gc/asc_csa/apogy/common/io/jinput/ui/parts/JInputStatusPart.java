@@ -58,7 +58,8 @@ public class JInputStatusPart extends AbstractApogyPart {
 					Display.getDefault().asyncExec(new Runnable() {
 						@Override
 						public void run() {
-							if (((JInputStatusComposite) getActualComposite()).getTreeViewer() != null
+							if (getActualComposite() != null
+									&& ((JInputStatusComposite) getActualComposite()).getTreeViewer() != null
 									&& !((JInputStatusComposite) getActualComposite()).getTree().isDisposed())
 								((JInputStatusComposite) getActualComposite()).getTreeViewer().refresh(true);
 						}

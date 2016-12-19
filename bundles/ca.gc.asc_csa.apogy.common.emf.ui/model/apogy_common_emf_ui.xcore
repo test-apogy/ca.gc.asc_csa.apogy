@@ -31,11 +31,13 @@ Contributors:
 package ca.gc.asc_csa.apogy.common.emf.ui
 
 import org.eclipse.emf.ecore.ETypedElement
-
+import java.util.List
+import ca.gc.asc_csa.apogy.common.emf.Named
 import ca.gc.asc_csa.apogy.common.emf.Ranges
 
 type Color wraps org.eclipse.swt.graphics.Color
 type Unit wraps javax.measure.unit.Unit<?>
+type List wraps List<? extends Named>
 
 class ApogyCommonEMFUIFacade
 {		
@@ -51,4 +53,16 @@ class ApogyCommonEMFUIFacade
 	 * @return the display Unit, or the native unit if none found.
 	 */
 	op Unit getDisplayUnits(ETypedElement eTypedElement)
+	
+	/*
+	 * Opens a dialog to delete the {@link Named} object.
+	 * @param named Reference to the {@link Named}
+	 */
+	op void openDeleteNamedDialog(Named named)
+	
+	/*
+	 * Opens a dialog to delete a {@link List} of {@link Named} objects.
+	 * @param namedList Reference to the {@link List}
+	 */
+	op void openDeleteNamedDialog(List namedList)
 }

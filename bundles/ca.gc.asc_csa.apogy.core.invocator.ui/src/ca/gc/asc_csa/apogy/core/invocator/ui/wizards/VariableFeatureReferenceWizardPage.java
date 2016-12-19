@@ -17,6 +17,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -77,11 +78,20 @@ public class VariableFeatureReferenceWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		variableFeatureReferenceComposite = new VariableFeatureReferenceComposite(parent, SWT.None);
+		variableFeatureReferenceComposite = new VariableFeatureReferenceComposite(parent, SWT.None){
+			@Override
+			protected void newSelection(ISelection selection) {
+				resetOperationCall();
+			}
+		};
 		variableFeatureReferenceComposite.set(variablesList, this.variableFeatureReference);
 		setControl(variableFeatureReferenceComposite);
 		
 		validate();
+	}
+	
+
+	protected void resetOperationCall(){
 	}
 	
 	/** 

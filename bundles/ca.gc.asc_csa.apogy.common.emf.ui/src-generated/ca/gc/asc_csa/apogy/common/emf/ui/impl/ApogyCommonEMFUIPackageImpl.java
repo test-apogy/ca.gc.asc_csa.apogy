@@ -26,6 +26,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFactory;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIPackage;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,6 +58,13 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
   private EDataType unitEDataType = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType listEDataType = null;
+
+		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -151,6 +159,24 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__Named() {
+		return apogyCommonEMFUIFacadeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__List() {
+		return apogyCommonEMFUIFacadeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -170,6 +196,15 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getList() {
+		return listEDataType;
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -201,10 +236,13 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		apogyCommonEMFUIFacadeEClass = createEClass(APOGY_COMMON_EMFUI_FACADE);
 		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
 		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
+		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__NAMED);
+		createEOperation(apogyCommonEMFUIFacadeEClass, APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__LIST);
 
 		// Create data types
 		colorEDataType = createEDataType(COLOR);
 		unitEDataType = createEDataType(UNIT);
+		listEDataType = createEDataType(LIST);
 	}
 
   /**
@@ -250,9 +288,16 @@ public class ApogyCommonEMFUIPackageImpl extends EPackageImpl implements ApogyCo
 		op = initEOperation(getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getETypedElement(), "eTypedElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__Named(), null, "openDeleteNamedDialog", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theApogyCommonEMFPackage.getNamed(), "named", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__List(), null, "openDeleteNamedDialog", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getList(), "namedList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(colorEDataType, Color.class, "Color", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(unitEDataType, Unit.class, "Unit", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "javax.measure.unit.Unit<?>");
+		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<? extends ca.gc.asc_csa.apogy.common.emf.Named>");
 
 		// Create resource
 		createResource(eNS_URI);

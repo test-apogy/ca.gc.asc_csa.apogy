@@ -27,6 +27,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EParameter;
@@ -44,6 +46,7 @@ import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
 import ca.gc.asc_csa.apogy.common.emf.AbstractRootNode;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractResultValue;
@@ -53,11 +56,14 @@ import ca.gc.asc_csa.apogy.core.invocator.Activator;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.Argument;
 import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.AttributeValue;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
 import ca.gc.asc_csa.apogy.core.invocator.DataProductsList;
+import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
 import ca.gc.asc_csa.apogy.core.invocator.Environment;
 import ca.gc.asc_csa.apogy.core.invocator.IVariableListener;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
@@ -70,6 +76,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramsGroup;
 import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.ReferenceResultValue;
 import ca.gc.asc_csa.apogy.core.invocator.ScriptBasedProgram;
+import ca.gc.asc_csa.apogy.core.invocator.StringEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.invocator.Type;
 import ca.gc.asc_csa.apogy.core.invocator.TypeApiAdapter;
 import ca.gc.asc_csa.apogy.core.invocator.TypeMember;
@@ -1629,6 +1636,74 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall) {
+		/** Create Arguments for each operation parameters. */
+		List<Argument> arguments = new ArrayList<Argument>();
+		for (EParameter parameter : eOperation.getEParameters()) {
+			Argument argument = null;
+
+			if (parameter.getEType() instanceof EEnum) {
+				argument = ApogyCoreInvocatorFactory.eINSTANCE.createEEnumArgument();
+				EEnum eEnum = (EEnum) parameter.getEType();
+				((EEnumArgument) argument).setEEnum(eEnum);
+				
+
+				Enum<?> defaultValue = (Enum<?>) parameter.getEType().getDefaultValue();
+				((EEnumArgument) argument).setEEnumLiteral(eEnum
+						.getEEnumLiteral(defaultValue.name()));
+			} else if (parameter.getEType() instanceof EDataType) {
+				
+				Class<?> clazz = parameter.getEType().getInstanceClass();
+				
+				if (clazz.isAssignableFrom(boolean.class) || clazz.isAssignableFrom(Boolean.class)) {
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createBooleanEDataTypeArgument();
+				} else if (clazz.isAssignableFrom(Number.class) ||
+						   clazz.isAssignableFrom(byte.class) || 
+						   clazz.isAssignableFrom(short.class) ||
+						   clazz.isAssignableFrom(int.class) ||
+						   clazz.isAssignableFrom(long.class) ||
+						   clazz.isAssignableFrom(float.class) ||
+						   clazz.isAssignableFrom(double.class)){						
+					argument = ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument();
+				} else {
+ 					argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();	
+					((StringEDataTypeArgument)argument).setValue("HELLO");
+				}
+				
+				Object defaultValue = parameter.getEType()
+						.getDefaultValue();
+
+				if (defaultValue != null) {
+					((EDataTypeArgument) argument).setValue(String
+							.valueOf(defaultValue));
+				}
+			} else {
+				argument = ApogyCoreInvocatorFactory.eINSTANCE
+						.createEClassArgument();
+			}
+			arguments.add(argument);
+		}
+
+		/** Add arguments if there are parameters only. */
+		if (!arguments.isEmpty()) {
+			ArgumentsList argumentsList = ApogyCoreInvocatorFactory.eINSTANCE
+					.createArgumentsList();
+			argumentsList.getArguments().addAll(arguments);
+
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, argumentsList);
+		} else {
+			// Clear the list
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall,
+					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, null);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1804,6 +1879,9 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 				return getAbstractTypeImplementationInterfaceName((AbstractTypeImplementation)arguments.get(0), (Boolean)arguments.get(1));
 			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_IMPLEMENTATION_NAME__ABSTRACTTYPEIMPLEMENTATION_BOOLEAN:
 				return getAbstractTypeImplementationImplementationName((AbstractTypeImplementation)arguments.get(0), (Boolean)arguments.get(1));
+			case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE___SET_EOPERATION_INIT_ARGUMENTS__EOPERATION_OPERATIONCALL:
+				setEOperationInitArguments((EOperation)arguments.get(0), (OperationCall)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

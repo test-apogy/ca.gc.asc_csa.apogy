@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.common.emf.ui.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import java.util.List;
 import javax.measure.unit.Unit;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -92,6 +94,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 				return createColorFromString(eDataType, initialValue);
 			case ApogyCommonEMFUIPackage.UNIT:
 				return createUnitFromString(eDataType, initialValue);
+			case ApogyCommonEMFUIPackage.LIST:
+				return createListFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,6 +114,8 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 				return convertColorToString(eDataType, instanceValue);
 			case ApogyCommonEMFUIPackage.UNIT:
 				return convertUnitToString(eDataType, instanceValue);
+			case ApogyCommonEMFUIPackage.LIST:
+				return convertListToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +172,25 @@ public class ApogyCommonEMFUIFactoryImpl extends EFactoryImpl implements ApogyCo
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<? extends Named> createListFromString(EDataType eDataType, String initialValue) {
+		return (List<? extends Named>)super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -3,9 +3,14 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: ca.gc.asc_csa.apogy.common.emf.ui.emfforms;singleton:=true
 Bundle-Version: 0.5.0.qualifier
-Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Activator
+Bundle-ClassPath: .
+Bundle-Activator: ca.gc.asc_csa.apogy.common.emf.ui.emfforms.provider.ApogyCommonEMFUiEMFFormsEditPlugin$Implementation
 Bundle-Vendor: %providerName
+Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.swt;bundle-version="3.105.0",
  org.eclipse.e4.ui.model.workbench;bundle-version="1.2.0",
  org.eclipse.jface;bundle-version="3.12.0",
@@ -19,9 +24,13 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecp.edit;bundle-version="1.10.0",
  ca.gc.asc_csa.apogy.common.converters;bundle-version="0.5.0",
  ca.gc.asc_csa.apogy.common.log;bundle-version="0.5.0",
- org.eclipse.emf.edit,
+ org.eclipse.emf.edit;visibility:=reexport,
  org.eclipse.emfforms.editor,
  ca.gc.asc_csa.apogy.common.emf.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts
+Export-Package: ca.gc.asc_csa.apogy.common.emf.ui.emfforms.parts,
+ ca.gc.asc_csa.apogy.common.emf.ui.emfforms,
+ ca.gc.asc_csa.apogy.common.emf.ui.emfforms.impl,
+ ca.gc.asc_csa.apogy.common.emf.ui.emfforms.provider,
+ ca.gc.asc_csa.apogy.common.emf.ui.emfforms.util

@@ -1,4 +1,56 @@
 package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.list.DecoratingObservableList;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.databinding.edit.EMFEditProperties;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Table;
+import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.SWTResourceManager;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
+import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.FixedValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
+
 /*
  * Copyright (c) 2016 Canadian Space Agency (CSA) / Agence spatiale canadienne (ASC).
  * All rights reserved. This program and the accompanying materials
@@ -13,62 +65,23 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.AdapterFactory;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.jface.viewers.CellEditor;
-import org.eclipse.jface.viewers.ColumnViewer;
-import org.eclipse.jface.viewers.DialogCellEditor;
-import org.eclipse.jface.viewers.EditingSupport;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.SelectionChangedEvent;
-import org.eclipse.jface.viewers.TreeViewer;
-import org.eclipse.jface.viewers.TreeViewerColumn;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Tree;
-import org.eclipse.swt.widgets.TreeColumn;
+public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
-import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
-import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-import ca.gc.asc_csa.apogy.core.invocator.Argument;
-import ca.gc.asc_csa.apogy.core.invocator.ArgumentsList;
-import ca.gc.asc_csa.apogy.core.invocator.EClassArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.invocator.EEnumArgument;
-import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
-import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
-import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
-public class BindedEDataTypeArgumentsComposite extends Composite {
+	private TableViewer tableViewerArguments;
+	private Composite composite;
 
-	private TreeViewer treeViewer;
-	private Tree treeInstance;
-	private TreeViewerColumn treeViewerParameterColumn;
+	private Composite compositeValueSource;
 
-	private Composite compositeArguments;
+	private Section sectionConditioning;
+	private Composite compositeConditioning;
 
-	boolean readOnly;
-
-	private OperationCall operationCall;
+	private OperationCallControllerBinding operationCallControllerBinding;
 
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
-	private Adapter argumentsListAdapter;
+	private Adapter adapter;;
 
 	private DataBindingContext m_bindingContext;
 
@@ -81,94 +94,232 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	 *            Composite style.
 	 */
 	public BindedEDataTypeArgumentsComposite(Composite parent, int style) {
-		super(parent, style);
-		setLayout(new FillLayout());
+		super(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+		setExpandHorizontal(true);
+		setExpandVertical(true);
 
-		this.readOnly = true;
+		composite = new Composite(this, SWT.None);
+		composite.setLayout(new GridLayout(2, true));
+		/**
+		 * Arguments list
+		 */
+		Section sectionArgumentsList = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
+		sectionArgumentsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
+		sectionArgumentsList.setLayout(new FillLayout());
+		sectionArgumentsList.setText("Arguments");
 
-		compositeArguments = new Composite(this, SWT.None);
-		compositeArguments.setLayout(new GridLayout(2, false));
+		Composite compositeArguments = new Composite(sectionArgumentsList, SWT.None);
+		GridLayout gridLayout_arguments = new GridLayout(1, false);
+		gridLayout_arguments.marginWidth = 0;
+		gridLayout_arguments.marginHeight = 0;
+		gridLayout_arguments.marginBottom = 5;
+		compositeArguments.setLayout(gridLayout_arguments);
 
-		treeViewer = new TreeViewer(compositeArguments,
+		tableViewerArguments = new TableViewer(compositeArguments,
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
-		treeInstance = treeViewer.getTree();
-		treeInstance.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 2));
-		treeInstance.setLinesVisible(true);
-		treeInstance.setHeaderVisible(true);
-		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+		Table tableArguments = tableViewerArguments.getTable();
+		tableArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 2));
+		tableArguments.setLinesVisible(true);
+		tableArguments.setHeaderVisible(true);
+		tableViewerArguments.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
+				updateDetailsComposites();
 				newSelection(event.getSelection());
 			}
 		});
 
-		TreeViewerColumn treeViewerActionColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
-		TreeColumn treeclmnAction = treeViewerActionColumn.getColumn();
-		treeclmnAction.setWidth(100);
-		treeclmnAction.setText("Parameter");
+		TableViewerColumn tableViewerActionColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
+		TableColumn tableclmnAction = tableViewerActionColumn.getColumn();
+		tableclmnAction.setWidth(100);
+		tableclmnAction.setText("Parameter");
 
-		treeViewerParameterColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
-		TreeColumn treeclmnParameter = treeViewerParameterColumn.getColumn();
-		treeclmnParameter.setWidth(100);
-		treeclmnParameter.setText("Value");
-		treeViewerParameterColumn.setEditingSupport(new ArgumentsEditor(treeViewer));
+		TableViewerColumn tableViewerValueSourceColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
+		TableColumn tableclmnValueSource = tableViewerValueSourceColumn.getColumn();
+		tableclmnValueSource.setWidth(175);
+		tableclmnValueSource.setText("Value source");
 
-		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
+		TableViewerColumn tableViewerValueColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
+		TableColumn tableclmnValue = tableViewerValueColumn.getColumn();
+		tableclmnValue.setWidth(100);
+		tableclmnValue.setText("Value");
+
+		TableViewerColumn tableViewerConditioningColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
+		TableColumn tableclmnConditioning = tableViewerConditioningColumn.getColumn();
+		tableclmnConditioning.setWidth(100);
+		tableclmnConditioning.setText("Conditioning");
+		sectionArgumentsList.setClient(compositeArguments);
+
+		/**
+		 * Value source
+		 */
+		compositeValueSource = new Composite(composite, SWT.None);
+		compositeValueSource.setLayout(new FillLayout());
+		compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		compositeValueSource.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		compositeValueSource.setBackgroundMode(SWT.INHERIT_FORCE);
+		
+		/**
+		 * Conditioning
+		 */
+		sectionConditioning = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
+		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		sectionConditioning.setLayout(new FillLayout());
+		sectionConditioning.setText("Conditioning");
+		compositeConditioning = getNoContentComposite(sectionConditioning);
+
+		updateDetailsComposites();
+
+		setContent(composite);
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+
 		m_bindingContext = initDataBindingsCustom();
 	}
 
 	/**
-	 * EditingSupport for the Arguments table. Depending on the type of
-	 * argument, the editingSupport is different.
+	 * Updates the value source composite depending on the selected argument
 	 */
-	private class ArgumentsEditor extends EditingSupport {
-
-		public ArgumentsEditor(ColumnViewer viewer) {
-			super(viewer);
-		}
-
-		@Override
-		protected void setValue(Object element, Object value) {
-			if (element instanceof BindedEDataTypeArgument) {
-				// TODO
+	private void updateCompositeValueSource() {
+		if (compositeValueSource != null) {
+			for (Control control : compositeValueSource.getChildren()) {
+				control.dispose();
 			}
 		}
+		
+		if (getSelectedArgument() != null) {
+			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None);
+//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+			contentComposite.setBindedEDataTypeArgument(getSelectedArgument());
+		} else {
+			getNoContentComposite(compositeValueSource);
+//			compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		}
+		compositeValueSource.layout();
+		this.layout();
+	}
 
-		@Override
-		protected Object getValue(Object element) {
-			if (element instanceof BindedEDataTypeArgument) {
-				// TODO
-			}
-			return null;
+//	/**
+//	 * Updates the value composite depending on the selected argument.
+//	 */
+//	private void updateCompositeValue() {
+//		if (compositeValue != null) {
+//			compositeValue.dispose();
+//		}
+//
+//		if (getSelectedArgument() != null) {
+//			compositeValue = new Composite(sectionValue, SWT.None);
+//			compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+//			GridLayout gridLayout_value = new GridLayout(2, false);
+//			gridLayout_value.marginWidth = 0;
+//			gridLayout_value.marginHeight = 0;
+//			gridLayout_value.marginBottom = 5;
+//			compositeValue.setLayout(gridLayout_value);
+//
+//			/**
+//			 * Set the value composite depending on the value source.
+//			 */
+//			if (getSelectedArgument().getValueSource() instanceof FixedValueSource) {
+//				// TODO replace by Apogy custom EMF with units.
+//				ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(compositeValue,
+//						getSelectedArgument().getValueSource());
+//			} else if (getSelectedArgument().getValueSource() instanceof ToggleValueSource) {
+//				compositeValue = getNoContentComposite(sectionValue);
+//			} else if (getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
+//				compositeValue = new ControllerSelectionComposite(sectionValue, SWT.None);
+//				((ControllerSelectionComposite) compositeValue).setEComponentQualifier(
+//						((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier());
+//				compositeValue.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+//			}
+//		} else {
+//			compositeValue = getNoContentComposite(sectionValue);
+//		}
+//		sectionValue.setClient(compositeValue);
+//		sectionValue.layout();
+//		layout();
+//	}
+
+	/**
+	 * Updates the conditioning composite depending on the selected argument.
+	 */
+	private void updateCompositeConditioning() {
+		if (compositeConditioning != null) {
+			compositeConditioning.dispose();
 		}
 
-		@Override
-		protected CellEditor getCellEditor(Object element) {
-			if (element instanceof BindedEDataTypeArgument) {
-				return new DialogCellEditor() {
-					@Override
-					protected Object openDialogBox(Control cellEditorWindow) {
-						// TODO Auto-generated method stub
-						return null;
-					}
-				};
-			}
-			return null;
-
+		if (getSelectedArgument() != null && getSelectedArgument().getValueSource() instanceof ControllerValueSource) {
+			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.NO_SCROLL){
+				@Override
+				protected void newSelection(ISelection selection) {
+					BindedEDataTypeArgumentsComposite.this.newSelection(selection);
+				}
+			};
+			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(
+					((ControllerValueSource) getSelectedArgument().getValueSource()).getConditioning());
+			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		} else {
+			compositeConditioning = getNoContentComposite(sectionConditioning);
 		}
 
-		@Override
-		protected boolean canEdit(Object element) {
-			if (element instanceof BindedEDataTypeArgument) {
-				return true;
+		sectionConditioning.setClient(compositeConditioning);
+		sectionConditioning.layout();
+		layout();
+	}
+
+	/**
+	 * Updates the details composites depending on the selected argument.
+	 */
+	private void updateDetailsComposites() {
+		updateCompositeValueSource();
+//		updateCompositeValue();
+		updateCompositeConditioning();
+	}
+
+	/**
+	 * Returns a {@link NoContentComposite} if a detail section is not
+	 * applicable.
+	 * 
+	 * @param section
+	 *            The parent {@link Section}.
+	 * @return Reference to the {@link NoContentComposite}.
+	 */
+	private Composite getNoContentComposite(Composite parent) {
+		NoContentComposite composite = new NoContentComposite(parent, SWT.None) {
+			@Override
+			protected String getMessage() {
+				return "No compatible selection";
 			}
-			return false;
+		};
+		composite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		composite.setBackgroundMode(SWT.INHERIT_FORCE);
+		return composite;
+	}
+
+	/**
+	 * Refreshed the viewer and adjusts the columns.
+	 */
+	protected void refreshViewer() {
+		if (!tableViewerArguments.getTable().isDisposed() && !tableViewerArguments.isBusy()) {
+			tableViewerArguments.refresh();
+			for (TableColumn column : tableViewerArguments.getTable().getColumns()) {
+				column.pack();
+			}
 		}
 	}
 
 	/**
-	 * This method is called when a new selection is made in the
-	 * parentComposite.
+	 * Gets the {@link BindedEDataTypeArgument} selected in the viewer
+	 * 
+	 * @return
+	 */
+	private BindedEDataTypeArgument getSelectedArgument() {
+		if (!tableViewerArguments.getStructuredSelection().isEmpty()) {
+			return (BindedEDataTypeArgument) tableViewerArguments.getStructuredSelection().getFirstElement();
+		}
+		return null;
+	}
+
+	/**
+	 * This method is called when a new selection is made .
 	 * 
 	 * @param selection
 	 *            Reference to the selection.
@@ -176,73 +327,45 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 	protected void newSelection(ISelection selection) {
 	}
 
-	public boolean isReadOnly() {
-		return readOnly;
-	}
-
-	public EObject getSelectedEObject() {
-		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
-	}
-
 	/**
-	 * Returns the reference to the {@link ArgumentsList}.
-	 * 
-	 * @return Reference to the {@link ArgumentsList}.
-	 */
-	public ArgumentsList getArgumentsList() {
-		return (ArgumentsList) treeViewer.getInput();
-	}
-
-	/**
-	 * Gets the {@link EList} of {@link Argument} in the {@link ArgumentsList}.
-	 * 
-	 * @return List of {@link Argument}.
-	 */
-	public EList<Argument> getArguments() {
-		return operationCall.getArgumentsList().getArguments();
-	}
-
-	/**
-	 * Binds the {@link OperationCall} with the UI components.
+	 * Binds the {@link OperationCallControllerBinding} with the UI components.
 	 * 
 	 * @param operationCall
-	 *            Reference to the {@link OperationCall}.
+	 *            Reference to the {@link OperationCallControllerBinding}.
 	 */
-	public void setOperationCall(OperationCall operationCall) {
-		if (this.operationCall != null) {
-			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+	@SuppressWarnings("unchecked")
+	public void setOperationCallControllerBinding(OperationCallControllerBinding operationCallControllerBinding) {
+		if (this.operationCallControllerBinding != null) {
+			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
-		this.operationCall = operationCall;
+		this.operationCallControllerBinding = operationCallControllerBinding;
 
-		if (this.operationCall.getArgumentsList() != null) {
-			EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
-			eObjectReference.setEObject(operationCall);
-			
-			treeViewer.setInput(eObjectReference);
-			treeViewer.expandAll();
-			// Adjust columns
-			for (TreeColumn column : treeViewer.getTree().getColumns()) {
-				column.pack();
-			}
+		TransactionalEditingDomain domain = (TransactionalEditingDomain) AdapterFactoryEditingDomain
+				.getEditingDomainFor(operationCallControllerBinding);
+
+		if (operationCallControllerBinding != null && operationCallControllerBinding.getArgumentsList() != null) {
+			tableViewerArguments.setInput(
+					EMFEditProperties.list(domain, ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS)
+							.observe(operationCallControllerBinding.getArgumentsList()));
 		} else {
-			treeViewer.setInput(null);
+			tableViewerArguments.setInput(null);
 		}
 
-		this.operationCall.eAdapters().add(getArgumentsListAdapter());
+		refreshViewer();
+		this.operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 
 	protected DataBindingContext initDataBindingsCustom() {
 		m_bindingContext = new DataBindingContext();
 
-		treeViewer.setContentProvider(new ArgumentsContentProvier(adapterFactory));
-		treeViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
+		tableViewerArguments.setContentProvider(new ArgumentsContentProvier(adapterFactory));
+		tableViewerArguments.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
 
 		return m_bindingContext;
 	}
 
 	/**
 	 * Content provider for the arguments.
-	 * 
 	 */
 	private class ArgumentsContentProvier extends AdapterFactoryContentProvider {
 
@@ -252,42 +375,37 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 
 		@Override
 		public Object[] getElements(Object object) {
-			if (object instanceof EObjectReference) {
-				return ((OperationCallControllerBinding) ((EObjectReference) object).getEObject()).getArgumentsList()
-						.getArguments().toArray();
-			}
-			return super.getElements(object);
-		}
-
-		@Override
-		public Object[] getChildren(Object object) {
-			if (object == operationCall) {
-				// Only returns the arguments as children of the operationCall input.
-				if (((OperationCall) object).getArgumentsList() != null) {
-					return ((OperationCall) object).getArgumentsList().getArguments().toArray();
+			List<Object> objects = new ArrayList<>();
+			for (Object object1 : ((DecoratingObservableList<?>) object)) {
+				if (object1 instanceof BindedEDataTypeArgument) {
+					objects.add(object1);
 				}
-				return new Object[]{};
 			}
-			return super.getChildren(object);
+			return objects.toArray();
 		}
 
 		@Override
 		public boolean hasChildren(Object object) {
-			if (object == operationCall) {
-				return true;
-			}
 			return false;
 		}
+
+		@Override
+		public void notifyChanged(Notification notification) {
+			super.notifyChanged(notification);
+			refreshViewer();
+		}
+
 	}
 
 	/**
 	 * Label provider for the arguments.
-	 * 
 	 */
 	private class ArgumentsLabelProvider extends AdapterFactoryLabelProvider {
 
 		private static final int PARAMETER_COLUMN_ID = 0;
-		private static final int VALUE_ID = 1;
+		private static final int VALUE_SOURCE_ID = 1;
+		private static final int VALUE_ID = 2;
+		private static final int CONDITIONING_ID = 3;
 
 		public ArgumentsLabelProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
@@ -297,32 +415,39 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
 
+			// This is used in the case where refresh is called on an Argument
+			// that is not in the ArgumentsList anymore.
+			if (operationCallControllerBinding.getArgumentsList() == null
+					|| !operationCallControllerBinding.getArgumentsList().getArguments().contains(object)) {
+				return str;
+			}
+
+			ValueSource valueSource = ((BindedEDataTypeArgument) object).getValueSource();
 			switch (columnIndex) {
 			case PARAMETER_COLUMN_ID:
-				if (getArguments().contains(object)) {
-					str = super.getColumnText(object, 0);
-					// Cut the values from the return of the itemProvider labels
-					if (str.contains("(")) {
-						str = str.substring(0, str.indexOf("("));
-					}
-					break;
+				str = super.getColumnText(object, 0);
+				break;
+			case VALUE_SOURCE_ID:
+				if (valueSource != null) {
+					str = valueSource.eClass().getName();
 				}
-				str = object.getClass().getName();
 				break;
 			case VALUE_ID:
-				if (getArguments().contains(object)) {
-					if (object instanceof EDataTypeArgument) {
-						str = ((EDataTypeArgument) object).getValue();
-					} else if (object instanceof EClassArgument) {
-						EClassArgument eClassArgumentObject = (EClassArgument) object;
-						if (eClassArgumentObject.getValue() != null) {
-							str = ((EClassArgument) object).getValue().getClass().getName();
-						}
-					} else if (object instanceof EEnumArgument) {
-						str = ((EEnumArgument) object).getEEnumLiteral().getLiteral();
-					}
+				if (valueSource instanceof FixedValueSource) {
+					str = ((FixedValueSource) valueSource).getValue();
+				} else if (valueSource instanceof ToggleValueSource) {
+					str = "Initial : " + String.valueOf(((ToggleValueSource) valueSource).isInitialValue())
+							+ ", Current : " + String.valueOf(((ToggleValueSource) valueSource).isCurrentValue());
+				} else if (valueSource instanceof ControllerValueSource) {
+					EComponentQualifier qualifier = ((ControllerValueSource) valueSource).getEComponentQualifier();
+					str = qualifier.getEControllerName() + "." + qualifier.getEComponentName();
+				}
+				break;
+			case CONDITIONING_ID:
+				if (valueSource instanceof ControllerValueSource) {
+					str = super.getColumnText(((ControllerValueSource) valueSource).getConditioning(), columnIndex);
 				} else {
-					str = super.getText(object);
+					str = "N/A";
 				}
 				break;
 			default:
@@ -330,36 +455,94 @@ public class BindedEDataTypeArgumentsComposite extends Composite {
 			}
 			return str;
 		}
+
+		@Override
+		public Image getColumnImage(Object object, int columnIndex) {
+			ValueSource valueSource = ((BindedEDataTypeArgument) object).getValueSource();
+			switch (columnIndex) {
+			case CONDITIONING_ID:
+				if (valueSource instanceof ControllerValueSource) {
+					return super.getColumnImage(((ControllerValueSource) valueSource).getConditioning(), columnIndex);
+				}
+			default:
+				return null;
+			}
+		}
+
 	}
 
 	/**
-	 * Adapter that updates the treeViewer input if the {@link ArgumentsList} is changed.
+	 * Adapter that updates the tableViewer input if the
+	 * {@link OperationCallControllerBinding} is changed.
+	 * 
 	 * @return
 	 */
-	public Adapter getArgumentsListAdapter() {
-		if (argumentsListAdapter == null) {
-			argumentsListAdapter = new AdapterImpl() {
+	private Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new EContentAdapter() {
+				List<EStructuralFeature> features;
+
 				@Override
 				public void notifyChanged(Notification notification) {
-					if (notification
-							.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST) {
-						if (notification.getNewValue() != null) {
-							setOperationCall(((ArgumentsList) notification.getNewValue()).getOperationCall());
-						}
-
+					if (notification.getFeature() == ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST
+							&& notification.getNewValue() != null) {
+						setOperationCallControllerBinding(
+								(OperationCallControllerBinding) ((ArgumentsList) notification.getNewValue())
+										.getOperationCall());
 					}
+					if (getEStructuralFeature().contains(notification.getFeature())
+							|| notification.getNotifier() instanceof AbstractInputConditioning) {
+						refreshViewer();
+					}
+					newSelection(null);
+					super.notifyChanged(notification);
+				}
+
+				/**
+				 * Provides a list of the structural features that should
+				 * refresh the tableViewer. This method implements a pattern of
+				 * lazy loading.
+				 */
+				private List<EStructuralFeature> getEStructuralFeature() {
+					if (features == null) {
+						features = new ArrayList<EStructuralFeature>();
+
+						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION);
+						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
+
+						features.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
+						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
+
+						features.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
+
+						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
+						features.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECONTROLLER_NAME);
+					}
+					return features;
+
 				}
 			};
 		}
-		return argumentsListAdapter;
+		return adapter;
 	}
 
 	@Override
 	public void dispose() {
-		if (this.operationCall != null) {
-			this.operationCall.eAdapters().remove(getArgumentsListAdapter());
+		if (this.operationCallControllerBinding != null) {
+			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
-		adapterFactory.dispose();
+		toolkit.dispose();
 		super.dispose();
 	}
 

@@ -33,9 +33,29 @@ Contributors:
  
 package ca.gc.asc_csa.apogy.common.io.jinput
 
+import org.eclipse.emf.common.notify.Adapter
+
 type Job wraps org.eclipse.core.runtime.jobs.Job
 type Component wraps net.java.games.input.Component
 type Controller wraps net.java.games.input.Controller
+type Adapter wraps Adapter
+
+class ApogyCommonIOJInputFacade
+{	
+	boolean selectingComponent = "false"
+	
+	/*
+	 * Starts the component selection. 
+	 * @param eComponentQualifier The {@link EComponentQualifier} to save the selection.
+	 */
+	op void startSelectComponent(EComponentQualifier eComponentQualifier)
+	
+	/*
+	 * Stops the component selection. 
+	 * @param eComponentQualifier The {@link EComponentQualifier} that was being selected.
+	 */
+	op void stopSelectComponent(EComponentQualifier eComponentQualifier)
+}
 
 class EController
 {
