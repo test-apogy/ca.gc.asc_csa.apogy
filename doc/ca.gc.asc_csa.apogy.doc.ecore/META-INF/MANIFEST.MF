@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ca.gc.asc_csa.apogy.doc.ecore
+Bundle-SymbolicName: ca.gc.asc_csa.apogy.doc.ecore; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore
