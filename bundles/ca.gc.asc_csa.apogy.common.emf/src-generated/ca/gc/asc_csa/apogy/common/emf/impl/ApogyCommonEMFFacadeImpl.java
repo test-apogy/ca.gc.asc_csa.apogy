@@ -437,7 +437,6 @@ ApogyCommonEMFFacade {
 			catch(Throwable t)
 			{
 				Logger.INSTANCE.log(Activator.ID, this, "No units found for <" + unitsAsString + "> !", EventSeverity.WARNING, t);
-				t.printStackTrace();
 			}		
 		}
 		return unit;
@@ -472,7 +471,6 @@ ApogyCommonEMFFacade {
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 				return -1.0;
 			}
 		}
