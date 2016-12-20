@@ -2,10 +2,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui.emfforms.services;
 
 import org.eclipse.core.databinding.property.value.IValueProperty;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecp.view.spi.context.ViewModelContext;
 import org.eclipse.emf.ecp.view.spi.model.VControl;
 import org.eclipse.emf.ecp.view.spi.model.VElement;
@@ -49,7 +46,7 @@ public class EMFControlCompositeRendererService implements EMFFormsDIRendererSer
 			return NOT_APPLICABLE;
 		}
 		final VControl control = (VControl) vElement;
-		IValueProperty valueProperty;
+		IValueProperty<?, ?> valueProperty;
 		try {
 			valueProperty = databindingService.getValueProperty(control.getDomainModelReference(),
 				viewModelContext.getDomainModel());
@@ -57,44 +54,17 @@ public class EMFControlCompositeRendererService implements EMFFormsDIRendererSer
 			reportService.report(new DatabindingFailedReport(ex));
 			return NOT_APPLICABLE;
 		}
-		final EStructuralFeature eStructuralFeature = EStructuralFeature.class.cast(valueProperty.getValueType());
-		System.out.println("\t" + eStructuralFeature);
+		EStructuralFeature eStructuralFeature = EStructuralFeature.class.cast(valueProperty.getValueType());
 		
 		if (eStructuralFeature instanceof EAttribute) {
-			System.out.println("\t It is an EAttribute");
-			
-			EAttribute eAttribute = (EAttribute) eStructuralFeature;
-						
-			System.out.println("\tUnits : " + ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eAttribute));
-
-			// Out Of range
-			Number oorMin = ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMinValue(eAttribute);
-			System.out.println("\toorMin = " + oorMin);
-			
-			Number oorMax = ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMaxValue(eAttribute);
-			System.out.println("\toorMax = " + oorMax);
-
-
-			// Alarm range
-			Number alarmMin = ApogyCommonEMFFacade.INSTANCE.getAlarmMinValue(eAttribute);
-			System.out.println("\talarmMin = " + alarmMin);
-			Number alarmMax = ApogyCommonEMFFacade.INSTANCE.getAlarmMaxValue(eAttribute);
-			System.out.println("\talarmMax = " + alarmMax);
-
-			// Warning
-			Number warningMin = ApogyCommonEMFFacade.INSTANCE.getWarningMinValue(eAttribute);
-			System.out.println("\twarningMin = " + warningMin);
-			Number warningMax = ApogyCommonEMFFacade.INSTANCE.getWarningMaxValue(eAttribute);
-			System.out.println("\twarningMax = " + warningMax);			
-			
 			/* Check if units or range properties are defined. */
-			if (ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eAttribute) != null || 
-					ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMinValue(eAttribute) != null || 
-					ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMaxValue(eAttribute) != null ||
-					ApogyCommonEMFFacade.INSTANCE.getAlarmMinValue(eAttribute) != null || 
-					ApogyCommonEMFFacade.INSTANCE.getAlarmMaxValue(eAttribute) != null || 
-					ApogyCommonEMFFacade.INSTANCE.getWarningMinValue(eAttribute) != null ||
-					ApogyCommonEMFFacade.INSTANCE.getWarningMaxValue(eAttribute) != null){
+			if (ApogyCommonEMFFacade.INSTANCE.getEngineeringUnits(eStructuralFeature) != null || 
+					ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMinValue(eStructuralFeature) != null || 
+					ApogyCommonEMFFacade.INSTANCE.getOutOfRangeMaxValue(eStructuralFeature) != null ||
+					ApogyCommonEMFFacade.INSTANCE.getAlarmMinValue(eStructuralFeature) != null || 
+					ApogyCommonEMFFacade.INSTANCE.getAlarmMaxValue(eStructuralFeature) != null || 
+					ApogyCommonEMFFacade.INSTANCE.getWarningMinValue(eStructuralFeature) != null ||
+					ApogyCommonEMFFacade.INSTANCE.getWarningMaxValue(eStructuralFeature) != null){
 				return 10;
 			}
 		}
@@ -103,7 +73,6 @@ public class EMFControlCompositeRendererService implements EMFFormsDIRendererSer
  
 	@Override
 	public Class<? extends AbstractSWTRenderer<VControl>> getRendererClass() {
-		System.out.println("EMFControlCompositeRendererService.getRendererClass()");
 		return EMFControlCompositeRenderer.class;
 	}
 }
