@@ -1,31 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
-<plugin>
-   <extension
-         point="org.eclipse.emf.ecp.view.context.viewServices">
-      <viewService
-            class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.services.ApogyReferenceService">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension point="org.eclipse.emf.ecp.view.context.viewServices">
+      <viewService class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.services.ApogyReferenceService">
       </viewService>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated apogy_common_emf_ui_emfforms -->
-      <package
-            uri="ca.gc.asc_csa.apogy.common.emf.ui.emfforms"
-            class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsPackage"
-            genModel="model/apogy_common_emf_ui_emfforms.xcore"/>
+      <package class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsPackage" genModel="model/apogy_common_emf_ui_emfforms.xcore" uri="ca.gc.asc_csa.apogy.common.emf.ui.emfforms"/>
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated apogy_common_emf_ui_emfforms -->
-      <factory
-            uri="ca.gc.asc_csa.apogy.common.emf.ui.emfforms"
-            class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.provider.ApogyCommonEMFUiEMFFormsItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+      <factory class="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.provider.ApogyCommonEMFUiEMFFormsItemProviderAdapterFactory" supportedTypes="org.eclipse.emf.edit.provider.IEditingDomainItemProvider                org.eclipse.emf.edit.provider.IStructuredItemContentProvider                org.eclipse.emf.edit.provider.ITreeItemContentProvider                org.eclipse.emf.edit.provider.IItemLabelProvider                org.eclipse.emf.edit.provider.IItemPropertySource" uri="ca.gc.asc_csa.apogy.common.emf.ui.emfforms"/>
    </extension>
 </plugin>
