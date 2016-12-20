@@ -41,7 +41,6 @@ public class EMFControlCompositeRendererService implements EMFFormsDIRendererSer
 	
 	@Override
 	public double isApplicable(VElement vElement, ViewModelContext viewModelContext) {
-		System.out.println("EMFControlCompositeRendererService.isApplicable(): \n\tvElement = " + vElement + "\n\tviewModelContext = " + viewModelContext);
 		if (!VControl.class.isInstance(vElement)) {
 			return NOT_APPLICABLE;
 		}
