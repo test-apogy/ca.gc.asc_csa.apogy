@@ -102,7 +102,7 @@ public interface RoboticArm extends EObject
 	 * @see #setTurretAngle(double)
 	 * @see ca.gc.asc_csa.apogy.examples.robotic_arm.ApogyExamplesRoboticArmPackage#getRoboticArm_TurretAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' apogy_units='deg' apogy_warning_min='-50' apogy_warning_max='50' apogy_alarm_min='-75' apogy_alarm_max='75' apogy_outside_min='-100' apogy_outside_max='100'"
 	 * @generated
 	 */
 	double getTurretAngle();

@@ -33,6 +33,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.Ranges;
+import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 
 public class EMFControlCompositeRenderer extends TextControlSWTRenderer{
 
@@ -82,7 +84,7 @@ public class EMFControlCompositeRenderer extends TextControlSWTRenderer{
 		Binding[] original_bindings = super.createBindings(control);	
 		
 //		Label lblRange = null;
-		Composite composite = (Composite) control;
+//		Composite composite = (Composite) control;
 //		final Control lblRange = Composite.class.cast(control).getChildren()[0];
 //		final boolean useOnModifyDatabinding = useOnModifyDatabinding();
 //		final IObservableValue value;
@@ -98,8 +100,13 @@ public class EMFControlCompositeRenderer extends TextControlSWTRenderer{
 		Binding rangeBinding = getDataBindingContext().bindValue(observeColor, getModelValue(), null, new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE).setConverter(new Converter(EObject.class, Color.class){
 			@Override
 			public Object convert(Object fromObject) {
-				System.out.println("EMFControlCompositeRenderer.createBindings(...).new Converter() {...}.convert()2");
-				return SWTResourceManager.getColor(SWT.COLOR_RED);
+				Color color = SWTResourceManager.getColor(SWT.COLOR_TRANSPARENT);				
+				try {
+					Ranges range = ApogyCommonEMFFacade.INSTANCE.getRange((ETypedElement) getModelValue().getValueType(), getModelValue().getValue());
+					color = ApogyCommonEMFUIFacade.INSTANCE.getColorForRange(range);					
+				} catch (DatabindingFailedException e) {
+				}
+				return color;
 			}			
 		}));
 		

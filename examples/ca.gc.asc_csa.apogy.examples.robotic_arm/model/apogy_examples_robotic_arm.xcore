@@ -74,31 +74,6 @@ abstract class RoboticArm
 	// moveTo() expects the angles in radians (rad); this is
 	// indicated by the "apogy_units" field in the below
 	// @GenModel tags.
-	// <p>
-	// While this might seem like a problem, Apogy has
-	// mechanisms to facilitate the automated conversion
-	// between the two. In the general Eclipse settings
-	// (Window > Preferences), there should be a menu
-	// called "Invocator Preferences"; it is here where
-	// one can choose which conversions (e.g. rad -> °,
-	// m/s -> km/h, etc.) they would like to have Apogy
-	// perform.  This makes it simple to work with different
-	// units.   
-	// <p>
-	// Note that for the conversion to be correctly supported
-	// (and show up as expected) in Apogy, the property
-	// descriptor for each of them needs to be changed slightly.
-	// This requires an update to the generated *ItemProvider file
-	// in the .edit project; you only need to change it for the
-	// abstract superclass (e.g in this case, RoboticArmItemProvider.)
-	// There should be a method called add*PropertyDescriptor
-	// for each of the attributes in the superclass; in order to
-	// get the conversion to work, you have to change the property
-	// descriptor used for each.  In particular, you need to change the
-	// line from "createItemPropertyDescriptor" to
-	//           "new AbstractUnitItemPropertyDescriptor".
-	// This will cause the correct descriptor to be used and convert
-	// the value if appropriate.
 	// -------------------------------------------------------
 	
 	/* 
@@ -108,10 +83,16 @@ abstract class RoboticArm
 	@GenModel(children="false",
 			  notify="true",
 			  property="Readonly",
-			  propertyCategory="Joint Angles",
-			  apogy_units="deg")	
+			  propertyCategory="Joint Angles",		  
+			  apogy_units="deg",
+			  apogy_warning_min="-50",
+			  apogy_warning_max="50",
+			  apogy_alarm_min="-75",
+			  apogy_alarm_max="75",
+			  apogy_outside_min="-100",
+			  apogy_outside_max="100")	
 	double turretAngle = "0.0"
-	
+		
 	/* 
 	 * This is the current shoulder angle, in degrees.
 	 * @see #moveTo(double, double, double, double)

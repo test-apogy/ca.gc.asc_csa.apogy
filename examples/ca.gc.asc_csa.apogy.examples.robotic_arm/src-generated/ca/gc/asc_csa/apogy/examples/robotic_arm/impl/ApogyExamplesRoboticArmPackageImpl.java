@@ -509,7 +509,13 @@ public class ApogyExamplesRoboticArmPackageImpl extends EPackageImpl implements 
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "apogy_units", "deg"
+			 "apogy_units", "deg",
+			 "apogy_warning_min", "-50",
+			 "apogy_warning_max", "50",
+			 "apogy_alarm_min", "-75",
+			 "apogy_alarm_max", "75",
+			 "apogy_outside_min", "-100",
+			 "apogy_outside_max", "100"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ShoulderAngle(), 
