@@ -118,7 +118,7 @@ class OperationCallControllerBinding extends OperationCall
  * ------------------------------------------------------------------------- */
 
 abstract class Trigger extends Named, Described
-{	
+{			
  	@GenModel(property="None")
 	refers OperationCallControllerBinding operationCallControllerBinding opposite trigger
 }

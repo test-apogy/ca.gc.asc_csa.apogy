@@ -292,7 +292,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 			@Override
 			public void notifyChanged(Notification notification) 
 			{
-				if(notification.getFeatureID(ControllerTrigger.class) == ApogyCoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)					
+				if(notification.getFeatureID(ControllerTrigger.class) == ApogyCoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)			
 				{
 					if(notification.getNewValue() == null)
 					{

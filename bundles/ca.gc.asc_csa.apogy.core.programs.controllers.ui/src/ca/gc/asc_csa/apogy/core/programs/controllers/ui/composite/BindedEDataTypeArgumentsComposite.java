@@ -372,10 +372,8 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		public String getColumnText(Object object, int columnIndex) {
 			String str = "<undefined>";
 
-			System.out.println(operationCallControllerBinding.getEOperation().toString());
-			System.out.println(operationCallControllerBinding.getArgumentsList().getArguments().size());
-			// This is used in the case where refresh is called on an Argument
-			// that is not in the ArgumentsList anymore.
+			// This is used if refresh is called on an Argument that is not in
+			// the ArgumentsList anymore.
 			if (operationCallControllerBinding.getArgumentsList() == null
 					|| !operationCallControllerBinding.getArgumentsList().getArguments().contains(object)) {
 				return str;

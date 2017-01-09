@@ -35,6 +35,8 @@ import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.common.ui.dialogs.CloseWizardEscapeDialog;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.Activator;
@@ -91,7 +93,7 @@ public class ControllerBindingWizard extends Wizard {
 		addPage(getNamedDescribedWizardPage());
 		addPage(getOperationCallControllerBindingDetailsWizardPage());
 		addPage(getBindedEDataTypeArgumentsWizardPage());
-		
+
 		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(namedDescribedWizardPage, 0.8);
 	}
 
@@ -189,8 +191,20 @@ public class ControllerBindingWizard extends Wizard {
 
 	@Override
 	public boolean performCancel() {
+		// Stops the controller state thread if the state is active.
+		if (getControllerBinding().getTrigger() instanceof ControllerStateTrigger) {
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getControllerBinding().getTrigger(),
+					ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD, new Long(-1));
+		}
+		// Removes the adapter on the EControllerEnvironment for a
+		// ControllerTrigger or stops the TimeTrigger thread
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getControllerBinding(),
+				ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, null);
+
+		// Remove the controllerBinding from it's EditingDomain.
 		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
 		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
+
 		return super.performCancel();
 	}
 

@@ -463,7 +463,10 @@ public class EControllerEnvironmentImpl extends MinimalEObjectImpl.Container imp
 	{
 		EComponent eComponent = null;
 		
-		EController eController = resolveController(eComponentQualifier.getEControllerName());
+		EController eController = null;
+		if(eComponentQualifier != null){
+			eController = resolveController(eComponentQualifier.getEControllerName());	
+		}
 		
 		if(eController != null)
 		{

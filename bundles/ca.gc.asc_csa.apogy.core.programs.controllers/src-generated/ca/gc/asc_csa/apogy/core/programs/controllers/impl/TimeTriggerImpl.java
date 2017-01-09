@@ -13,16 +13,19 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Time Trigger</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Time
+ * Trigger</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -32,82 +35,73 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
  *
  * @generated
  */
-public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
-{
+public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger {
+	private Adapter adapter = null;
+	private boolean run = false;
 	private Thread thread = null;
-  /**
+	/**
 	 * The default value of the '{@link #getRefreshPeriod() <em>Refresh Period</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getRefreshPeriod()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final long REFRESH_PERIOD_EDEFAULT = 100L;
+	protected static final long REFRESH_PERIOD_EDEFAULT = 100L;
 
-  /**
+	/**
 	 * The cached value of the '{@link #getRefreshPeriod() <em>Refresh Period</em>}' attribute.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getRefreshPeriod()
 	 * @generated
 	 * @ordered
 	 */
-  protected long refreshPeriod = REFRESH_PERIOD_EDEFAULT;
+	protected long refreshPeriod = REFRESH_PERIOD_EDEFAULT;
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated_NOT
-   */
-  protected TimeTriggerImpl()
-  {
-    super();
-    start();
-  }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated_NOT
+	 */
+	protected TimeTriggerImpl() {
+		super();
+		start();
+		this.eAdapters().add(getAdapter());
+	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  protected EClass eStaticClass()
-  {
+	@Override
+	protected EClass eStaticClass() {
 		return ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER;
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public long getRefreshPeriod()
-  {
+	public long getRefreshPeriod() {
 		return refreshPeriod;
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setRefreshPeriod(long newRefreshPeriod)
-  {
+	public void setRefreshPeriod(long newRefreshPeriod) {
 		long oldRefreshPeriod = refreshPeriod;
 		refreshPeriod = newRefreshPeriod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD, oldRefreshPeriod, refreshPeriod));
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				return getRefreshPeriod();
@@ -115,14 +109,12 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		return super.eGet(featureID, resolve, coreType);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
+	@Override
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				setRefreshPeriod((Long)newValue);
@@ -131,14 +123,12 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		super.eSet(featureID, newValue);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public void eUnset(int featureID)
-  {
+	@Override
+	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				setRefreshPeriod(REFRESH_PERIOD_EDEFAULT);
@@ -147,14 +137,12 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		super.eUnset(featureID);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
+	@Override
+	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApogyCoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				return refreshPeriod != REFRESH_PERIOD_EDEFAULT;
@@ -162,14 +150,12 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		return super.eIsSet(featureID);
 	}
 
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public String toString()
-  {
+	@Override
+	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
@@ -178,42 +164,54 @@ public class TimeTriggerImpl extends TriggerImpl implements TimeTrigger
 		result.append(')');
 		return result.toString();
 	}
-  
-  protected void start()
-  {
-	  this.thread = new Thread()
-	  {
-		  @Override
-			public void run() 
-		    {						
-				while(true)
-				{							
-					try 
-					{
+
+	protected void start() {
+		this.run = true;
+		this.thread = new Thread() {
+			@Override
+			public void run() {
+				while (run) {
+					try {
 						// Updates
 						update();
-						
+
 						Thread.sleep(getRefreshPeriod());
-					} 
-					catch (Throwable t) 
-					{							
+					} catch (Throwable t) {
 						t.printStackTrace();
 					}
 				}
 			}
-	  };
-	  
-	  this.thread.start();
-  }
+		};
+		this.thread.start();
+	}
 
-  protected void update()
-  {
-	  if(getOperationCallControllerBinding() != null)
-	  {
-		  if(getOperationCallControllerBinding().isActive())
-		  {
-			  getOperationCallControllerBinding().update();
-		  }
-	  }
-  }
-} //TimeTriggerImpl
+	/**
+	 * Gets the adapter that will stop the thread if the
+	 * {@link OperationCallControllerBinding} is set to null. This method
+	 * implements a lazy loading patern.
+	 */
+	private Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification notification) {
+					if (notification.getFeatureID(
+							TimeTrigger.class) == ApogyCoreProgramsControllersPackage.TIME_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING) {
+						if (notification.getNewValue() == null) {
+							run = false;
+						}
+					}
+				}
+			};
+		}
+		return adapter;
+	}
+
+	protected void update() {
+		if (getOperationCallControllerBinding() != null) {
+			if (getOperationCallControllerBinding().isActive()) {
+				getOperationCallControllerBinding().update();
+			}
+		}
+	}
+} // TimeTriggerImpl
