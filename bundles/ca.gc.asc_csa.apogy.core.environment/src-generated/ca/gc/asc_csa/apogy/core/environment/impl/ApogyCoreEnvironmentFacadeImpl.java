@@ -724,20 +724,23 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 	  if(sun != null)
 	  {
 		  // TODO : Get the root of the active session. How to do that ?
-		  Node root = null;
-		  		  
-		  // If a root is found.
-		  if(root != null)
-		  {		  		 			  
-			  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
-			  Vector3d v = new Vector3d();					 
-			  matrix.get(v);
+		  if(getActiveWorksite() instanceof Worksite)
+		  {
+			  Worksite worksite = (Worksite) getActiveWorksite();			  
+			  Node root = worksite.getWorksiteNode();
 			  
-			  // Ensure the vector is normalized.
-			  v.normalize();
-					  
-			  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
-		  }		  		  
+			  if(root != null)
+			  {		  		 			  
+				  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
+				  Vector3d v = new Vector3d();					 
+				  matrix.get(v);
+				  
+				  // Ensure the vector is normalized.
+				  v.normalize();
+						  
+				  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
+			  }		
+		  }		  		    		  
 	  }
 	  return null;
   }
@@ -878,7 +881,15 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 						int featureID = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
 						if(featureID == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
-							updateEnvironment((Environment) msg.getNewValue());
+							if(msg.getNewValue() instanceof InvocatorSession)
+							{
+								InvocatorSession invocatorSession = (InvocatorSession) msg.getNewValue();
+								updateEnvironment(invocatorSession.getEnvironment());
+							}
+							else
+							{
+								updateEnvironment(null);	
+							}							
 						}						
 					}
 				}

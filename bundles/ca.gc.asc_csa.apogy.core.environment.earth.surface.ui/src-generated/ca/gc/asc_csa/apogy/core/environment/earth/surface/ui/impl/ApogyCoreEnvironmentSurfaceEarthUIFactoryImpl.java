@@ -194,19 +194,31 @@ public class ApogyCoreEnvironmentSurfaceEarthUIFactoryImpl extends EFactoryImpl 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public Color3f createColor3fFromString(EDataType eDataType, String initialValue) {
-		return (Color3f)super.createFromString(eDataType, initialValue);
+	public Color3f createColor3fFromString(EDataType eDataType, String initialValue) 
+	{
+		String[] rgb = initialValue.split(",");
+		float r = Float.parseFloat(rgb[0]);
+		float g = Float.parseFloat(rgb[1]);
+		float b = Float.parseFloat(rgb[2]);
+		
+		Color3f color = new Color3f(r, g, b);
+		return color;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public String convertColor3fToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+	public String convertColor3fToString(EDataType eDataType, Object instanceValue) 
+	{
+		Color3f color = (Color3f) instanceValue;
+		String string = color.toString();
+		string = string.replace("(", "");
+		string = string.replace(")", "");
+		return string;
 	}
 
 	/**
