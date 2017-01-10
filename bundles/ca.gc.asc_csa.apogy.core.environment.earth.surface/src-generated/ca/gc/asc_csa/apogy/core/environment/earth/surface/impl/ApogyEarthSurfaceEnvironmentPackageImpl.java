@@ -1171,7 +1171,7 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		  (getAstronomyUtils__GetHorizontalSunPosition__Date_double_double(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Computes the Sun\'s horizontal coordinates for a date and location on\nthe surface of the Earth.\n@param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.\n@param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative."
+			 "documentation", "Computes the Sun\'s horizontal coordinates for a date and location on the surface of the Earth.\n@param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.\n@param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative."
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetHorizontalSunPosition__Date_double_double()).getEParameters().get(1), 

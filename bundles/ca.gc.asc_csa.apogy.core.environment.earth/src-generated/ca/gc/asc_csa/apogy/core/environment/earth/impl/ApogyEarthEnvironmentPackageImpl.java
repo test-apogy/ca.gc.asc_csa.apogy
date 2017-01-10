@@ -508,7 +508,28 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 		  (horizontalCoordinatesEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "The horizontal coordinate system is a celestial coordinate system that uses the\nobserver\'s local horizon as the fundamental plane. This conveniently divides the\nsky into the upper hemisphere that you can see, and the lower hemisphere that you\ncannot (because the Earth is in the way). The pole of the upper hemisphere is called\nthe zenith. The pole of the lower hemisphere is called the nadir.\n\nThe horizontal coordinates are:\n\n- altitude (Alt): sometimes referred to as elevation, that is the angle between the\n                  object and the observer\'s local horizon\n\n- azimuth (Az): the angle of the object around the horizon, usually measured from the\n                north point towards the east. In former times, it was common to refer\n                to azimuth from the south, as it was then zero at the same time the hour\n                angle of a star was zero. This assumes, however, that the star (upper)\n                culminates in the south, which is only true for most stars in the\n                Northern Hemisphere"
+			 "documentation", "The horizontal coordinate system is a celestial coordinate system that uses the\nobserver\'s local horizon as the fundamental plane. This conveniently divides the\nsky into the upper hemisphere that you can see, and the lower hemisphere that you\ncannot (because the Earth is in the way). The pole of the upper hemisphere is called\nthe zenith. The pole of the lower hemisphere is called the nadir."
+		   });	
+		addAnnotation
+		  (getHorizontalCoordinates_Altitude(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Sometimes referred to as elevation, that is the angle between the\nobject and the observer\'s local horizon. Negative altitude means the\nobject is below the local horizon.",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getHorizontalCoordinates_Azimuth(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The angle of the object around the horizon, measured from the\nnorth point towards the east.",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getHorizontalCoordinates_Radius(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe distance from the observer.",
+			 "apogy_units", "m"
 		   });	
 		addAnnotation
 		  (eclipticCoordinatesEClass, 

@@ -72,8 +72,7 @@ public interface AstronomyUtils extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Computes the Sun's horizontal coordinates for a date and location on
-	 * the surface of the Earth.
+	 * Computes the Sun's horizontal coordinates for a date and location on the surface of the Earth.
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * <!-- end-model-doc -->

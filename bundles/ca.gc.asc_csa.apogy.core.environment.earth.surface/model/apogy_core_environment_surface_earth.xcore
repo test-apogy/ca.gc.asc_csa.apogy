@@ -213,7 +213,7 @@ class AtmosphereUtils
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 */
 	@GenModel(apogy_units="W/m²") op double getDirectSunIntensity(@GenModel(apogy_units="rad") double sunAltitudeAngle, 
-																@GenModel(apogy_units="m") double heightAboveSeaLevel)
+																  @GenModel(apogy_units="m") double heightAboveSeaLevel)
 	
 	/*
 	 * Computes the intensity of the diffuse component of sunlight, in Watts/m^2.
@@ -263,8 +263,7 @@ class AstronomyUtils
 	op EquatorialCoordinates getSunEquatorialPosition(double julianDay)
 	
 	/*
-	 * Computes the Sun's horizontal coordinates for a date and location on
-	 * the surface of the Earth.
+	 * Computes the Sun's horizontal coordinates for a date and location on the surface of the Earth.
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 */
