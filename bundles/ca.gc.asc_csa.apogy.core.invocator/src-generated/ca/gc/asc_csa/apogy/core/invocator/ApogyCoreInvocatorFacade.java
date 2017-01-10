@@ -619,7 +619,8 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * TODO
+	 * Gets the implementation name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the name.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" implementationUnique="false"
 	 * @generated
@@ -630,7 +631,9 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * TODO
+	 * Gets the implementation's interface name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the interface name.
+	 * @param fullyQualified true to return the instanceTypeName, false to return the name.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" implementationUnique="false" fullyQualifiedUnique="false"
 	 * @generated
@@ -641,7 +644,9 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * TODO
+	 * Gets the implementation's implementation name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the implementation name.
+	 * @param fullyQualified true to return the instanceType name, false to return the name.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" implementationUnique="false" fullyQualifiedUnique="false"
 	 * @generated
@@ -652,7 +657,9 @@ public interface ApogyCoreInvocatorFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * TODO
+	 * Initializes the arguments of the {@link OperationCall} according to the list of {@link EParameter} of the {@link EOperation}.
+	 * @param eOperation the {@link EOperation} containing the list of {@link EParameter}.
+	 * @param operationCall the {@link OperationCall} to initialize.
 	 * <!-- end-model-doc -->
 	 * @model eOperationUnique="false" operationCallUnique="false"
 	 * @generated

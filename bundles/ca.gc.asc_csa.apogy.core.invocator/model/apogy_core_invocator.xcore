@@ -321,22 +321,29 @@ class ApogyCoreInvocatorFacade
 	op ListRootNode createListRootNode(VariableFeatureReference variableFeatureReference, EStructuralFeatureArray features)
 	
 	/*
-	 * TODO
+	 * Gets the implementation name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the name.
 	 */
 	op String getAbstractTypeImplementationName(AbstractTypeImplementation implementation)
 	
 	/*
-	 * TODO
+	 * Gets the implementation's interface name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the interface name.
+	 * @param fullyQualified true to return the instanceTypeName, false to return the name.
 	 */
 	op String getAbstractTypeImplementationInterfaceName(AbstractTypeImplementation implementation, boolean fullyQualified)
 	
 	/*
-	 * TODO
+	 * Gets the implementation's implementation name .
+	 * @param implementation the {@link AbstractTypeImplementation} to get the implementation name.
+	 * @param fullyQualified true to return the instanceType name, false to return the name.
 	 */
 	op String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified)
 	
 	/*
-	 * TODO
+	 * Initializes the arguments of the {@link OperationCall} according to the list of {@link EParameter} of the {@link EOperation}.
+	 * @param eOperation the {@link EOperation} containing the list of {@link EParameter}.
+	 * @param operationCall the {@link OperationCall} to initialize.
 	 */
 	 op void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall)
 }
