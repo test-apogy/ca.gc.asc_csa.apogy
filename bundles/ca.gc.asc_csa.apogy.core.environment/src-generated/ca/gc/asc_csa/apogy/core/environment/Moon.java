@@ -35,7 +35,10 @@ package ca.gc.asc_csa.apogy.core.environment;
  * @model
  * @generated
  */
-public interface Moon extends CelestialBody {
+public interface Moon extends CelestialBody 
+{
+	public static final String NODE_ID = "MOON";
+	
 	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * The default value is <code>"1737100"</code>.

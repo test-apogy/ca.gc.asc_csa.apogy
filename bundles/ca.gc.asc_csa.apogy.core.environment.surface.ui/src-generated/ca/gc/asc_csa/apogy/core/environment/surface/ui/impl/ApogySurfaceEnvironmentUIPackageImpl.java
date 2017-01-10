@@ -13,20 +13,35 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
+import java.util.List;
+
+import javax.vecmath.Color3f;
+import javax.vecmath.Point2d;
+import javax.vecmath.Point3f;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.annotations.AbstractXYAnnotation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.data.xy.XYDataItem;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.experimental.chart.swt.ChartComposite;
+
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
 import ca.gc.asc_csa.apogy.common.images.ApogyCommonImagesPackage;
-
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathPackage;
-
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
-
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
-
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
-
 import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
-
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractTrajectoryTool;
@@ -51,36 +66,7 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryProvider;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryAnnotation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryProvider;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.VehicleVariableAnnotation;
-
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-
-import java.util.List;
-
-import javax.vecmath.Color3f;
-import javax.vecmath.Point2d;
-import javax.vecmath.Point3f;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.jfree.chart.JFreeChart;
-
-import org.jfree.chart.annotations.AbstractXYAnnotation;
-
-import org.jfree.chart.plot.XYPlot;
-
-import org.jfree.data.xy.XYDataItem;
-import org.jfree.data.xy.XYSeries;
-
-import org.jfree.experimental.chart.swt.ChartComposite;
 
 /**
  * <!-- begin-user-doc -->

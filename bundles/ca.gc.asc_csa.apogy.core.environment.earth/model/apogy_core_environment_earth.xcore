@@ -126,14 +126,41 @@ class HorizontalCoordinates
  */
 class EclipticCoordinates
 {
+	/*
+	 * The ecliptic longitude or celestial longitude (denoted λ), measured eastwards from 0° to 360°.
+	 */
+	@GenModel(apogy_units="rad")
 	double longitude
+	
+	/*
+	 * The ecliptic latitude or celestial latitude (denoted β), measured positive towards the north. 
+	 */
+	@GenModel(apogy_units="rad")
 	double latitude
+	
+	/**
+	 * The distance from the center of the Sun.
+	 */
+	@GenModel(apogy_units="m")
 	double radius 
 }
 
 class ApogyEarthFacade
 {
+	/**
+	 * Return a unit vector pointing toward the Moon. The vector is defined for a specified topology node within a specified ApogySystem.
+	 * @param apogySystem The ApogySystem containing the specified Node.
+	 * @param nodeID The ID of the specified Node.
+	 * @return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found.
+	 */
 	op Tuple3d getMoonVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
+	
+	/**
+	 * Return a unit vector pointing toward the Moon. The vector is defined for a specified topology node.
+	 * @param nodeID The ID of the specified Node.
+	 * @return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found.
+	 */
+	
 	op Tuple3d getMoonVector(Node node, ca.gc.asc_csa.apogy.core.invocator.Environment environment)	
 	
 	/**

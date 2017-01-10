@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
+
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.Activator;
 
 public class ApogyEnvironmentSurfaceUIJME3Initializer extends AbstractPreferenceInitializer {

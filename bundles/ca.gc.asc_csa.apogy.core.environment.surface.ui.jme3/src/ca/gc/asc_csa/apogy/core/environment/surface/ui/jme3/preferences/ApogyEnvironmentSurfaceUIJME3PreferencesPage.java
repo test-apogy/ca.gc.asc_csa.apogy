@@ -27,7 +27,6 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.jme3.Activator;
-import ca.gc.asc_csa.apogy.core.environment.ui.preferences.ApogyEnvironmentUIPreferencesConstants;
 
 
 public class ApogyEnvironmentSurfaceUIJME3PreferencesPage extends PreferencePage implements IWorkbenchPreferencePage

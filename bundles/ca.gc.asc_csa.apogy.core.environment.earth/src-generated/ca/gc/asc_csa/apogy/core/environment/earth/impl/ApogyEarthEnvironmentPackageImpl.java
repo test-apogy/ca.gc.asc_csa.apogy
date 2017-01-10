@@ -538,6 +538,39 @@ public class ApogyEarthEnvironmentPackageImpl extends EPackageImpl implements Ap
 			 "documentation", "The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic\nfor its fundamental plane. The ecliptic is the path that the sun appears to follow across\nthe sky over the course of a year. It is also the projection of the Earth\'s orbital plane\nonto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial\nlatitude (denoted \u03b2), measured positive towards the north. The longitudinal angle is called\nthe ecliptic longitude or celestial longitude (denoted \u03bb), measured eastwards from 0\u00b0 to 360\u00b0.\nLike right ascension in the equatorial coordinate system, 0\u00b0 ecliptic longitude is pointing\ntowards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes\nthe coordinates of the fixed stars subject to shifts due to the precession, so that always a\nreference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous\nequinox of the day (called the epoch of date) is possible too. This coordinate system can be\nparticularly useful for charting solar system objects. Most planets (except Mercury), and many\nsmall solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore\ntheir ecliptic latitude \u03b2 is always small. Because of the planets\' small deviation from the plane\nof the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)"
 		   });	
 		addAnnotation
+		  (getEclipticCoordinates_Longitude(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The ecliptic longitude or celestial longitude (denoted \u03bb), measured eastwards from 0\u00b0 to 360\u00b0.",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getEclipticCoordinates_Latitude(), 
+		   source, 
+		   new String[] {
+			 "documentation", "The ecliptic latitude or celestial latitude (denoted \u03b2), measured positive towards the north.",
+			 "apogy_units", "rad"
+		   });	
+		addAnnotation
+		  (getEclipticCoordinates_Radius(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe distance from the center of the Sun.",
+			 "apogy_units", "m"
+		   });	
+		addAnnotation
+		  (getApogyEarthFacade__GetMoonVector__ApogySystem_String_Environment(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn a unit vector pointing toward the Moon. The vector is defined for a specified topology node within a specified ApogySystem.\n@param apogySystem The ApogySystem containing the specified Node.\n@param nodeID The ID of the specified Node.\n@return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found."
+		   });	
+		addAnnotation
+		  (getApogyEarthFacade__GetMoonVector__Node_Environment(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn a unit vector pointing toward the Moon. The vector is defined for a specified topology node.\n@param nodeID The ID of the specified Node.\n@return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found."
+		   });	
+		addAnnotation
 		  (getApogyEarthFacade__CreateGeographicCoordinates__double_double_double(), 
 		   source, 
 		   new String[] {

@@ -13,22 +13,17 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapTool;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.jfree.chart.JFreeChart;
-
 import org.jfree.experimental.chart.swt.ChartComposite;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapTool;
 
 /**
  * <!-- begin-user-doc -->

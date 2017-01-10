@@ -26,9 +26,14 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -47,6 +52,7 @@ import ca.gc.asc_csa.apogy.core.ApogyCoreFacade;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.ConnectionPoint;
 import ca.gc.asc_csa.apogy.core.ConnectionPointsList;
+import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
 import ca.gc.asc_csa.apogy.core.environment.Activator;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFactory;
@@ -61,6 +67,7 @@ import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.TimeSourcesList;
 import ca.gc.asc_csa.apogy.core.environment.Worksite;
 import ca.gc.asc_csa.apogy.core.environment.WorksitesList;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFactory;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Context;
@@ -75,18 +82,58 @@ import ca.gc.asc_csa.apogy.core.invocator.ToolsList;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Environment Facade</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFacadeImpl#getActiveApogyEnvironment <em>Active Apogy Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFacadeImpl#getActiveWorksite <em>Active Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentFacadeImpl#getActiveSun <em>Active Sun</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container implements ApogyCoreEnvironmentFacade
 {
+	private Adapter activeSessionAdapter = null;
+	private Adapter activeApogyEnvironmentAdapter = null;
+	private Adapter activeWorksiteAdapter = null;
+	
+	/**
+	 * The cached value of the '{@link #getActiveApogyEnvironment() <em>Active Apogy Environment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveApogyEnvironment()
+	 * @generated
+	 * @ordered
+	 */
+	protected ApogyEnvironment activeApogyEnvironment;
+	/**
+	 * The cached value of the '{@link #getActiveWorksite() <em>Active Worksite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveWorksite()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractWorksite activeWorksite;
+
+	/**
+	 * The cached value of the '{@link #getActiveSun() <em>Active Sun</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActiveSun()
+	 * @generated
+	 * @ordered
+	 */
+	protected Sun activeSun;
 	private static ApogyCoreEnvironmentFacade instance = null;
 	
 	public static ApogyCoreEnvironmentFacade getInstance() 
 	{
 		if (instance == null) 
 		{
-			instance = new ApogyCoreEnvironmentFacadeImpl();
+			instance = new ApogyCoreEnvironmentFacadeImpl();			
 		}
 		return instance;
 	}
@@ -94,12 +141,20 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
   /**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
   protected ApogyCoreEnvironmentFacadeImpl()
   {
 		super();
-	}
+		
+		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());		
+		
+		// Initialize the ActiveApogyEnvironment.
+		if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null)
+		{
+			updateEnvironment(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment());
+		}		
+  }
 
   /**
 	 * <!-- begin-user-doc -->
@@ -113,6 +168,142 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 	}
   
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyEnvironment getActiveApogyEnvironment() {
+		if (activeApogyEnvironment != null && activeApogyEnvironment.eIsProxy()) {
+			InternalEObject oldActiveApogyEnvironment = (InternalEObject)activeApogyEnvironment;
+			activeApogyEnvironment = (ApogyEnvironment)eResolveProxy(oldActiveApogyEnvironment);
+			if (activeApogyEnvironment != oldActiveApogyEnvironment) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT, oldActiveApogyEnvironment, activeApogyEnvironment));
+			}
+		}
+		return activeApogyEnvironment;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ApogyEnvironment basicGetActiveApogyEnvironment() {
+		return activeApogyEnvironment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void setActiveApogyEnvironment(ApogyEnvironment newActiveApogyEnvironment) 
+	{
+		// Unregister from the previous activeApogyEnvironment if required.
+		if(getActiveApogyEnvironment() != null)
+		{
+			getActiveApogyEnvironment().eAdapters().remove(getApogyEnvironmentAdapter());
+		}
+		
+		// Register to the new Active Apogy Environment.
+		if(newActiveApogyEnvironment != null)
+		{
+			newActiveApogyEnvironment.eAdapters().add(getApogyEnvironmentAdapter());
+		}
+				
+		setActiveApogyEnvironmentGen(newActiveApogyEnvironment);
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveApogyEnvironmentGen(ApogyEnvironment newActiveApogyEnvironment) {
+		ApogyEnvironment oldActiveApogyEnvironment = activeApogyEnvironment;
+		activeApogyEnvironment = newActiveApogyEnvironment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT, oldActiveApogyEnvironment, activeApogyEnvironment));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractWorksite getActiveWorksite() {
+		if (activeWorksite != null && activeWorksite.eIsProxy()) {
+			InternalEObject oldActiveWorksite = (InternalEObject)activeWorksite;
+			activeWorksite = (AbstractWorksite)eResolveProxy(oldActiveWorksite);
+			if (activeWorksite != oldActiveWorksite) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+			}
+		}
+		return activeWorksite;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractWorksite basicGetActiveWorksite() {
+		return activeWorksite;
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveWorksite(AbstractWorksite newActiveWorksite) {
+		AbstractWorksite oldActiveWorksite = activeWorksite;
+		activeWorksite = newActiveWorksite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sun getActiveSun() {
+		if (activeSun != null && activeSun.eIsProxy()) {
+			InternalEObject oldActiveSun = (InternalEObject)activeSun;
+			activeSun = (Sun)eResolveProxy(oldActiveSun);
+			if (activeSun != oldActiveSun) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN, oldActiveSun, activeSun));
+			}
+		}
+		return activeSun;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sun basicGetActiveSun() {
+		return activeSun;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActiveSun(Sun newActiveSun) {
+		Sun oldActiveSun = activeSun;
+		activeSun = newActiveSun;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN, oldActiveSun, activeSun));
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
@@ -202,7 +393,7 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 		StarField starField = ApogyCoreEnvironmentFactory.eINSTANCE.createStarField();
 		starField.setDescription("Star Field.");
 		starField.setStarFieldFileName("bright_star_catalog_5.txt");
-		starField.setNodeId("STAR FIELD");
+		starField.setNodeId(StarField.NODE_ID);
 		return starField;
   }
 
@@ -257,7 +448,7 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 		// Creates the Sun
 		Sun sun = ApogyCoreEnvironmentFactory.eINSTANCE.createSun();
 		sun.setDescription("The Sun.");
-		sun.setNodeId("SUN");
+		sun.setNodeId(Sun.NODE_ID);
 		
 		// Creates the Sun transform that attaches it to the sky.							
 		Point3d sunPosition = new Point3d();						
@@ -277,7 +468,7 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 			StarField starField = createAndInitializeStars();
 			
 			// Creates the StarField transform that attaches it to the sky.
-			// TODO : Initialise this correctly !
+			// TODO : Initialize this correctly !
 			TransformNode starFieldTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
 			starFieldTransformNode.setDescription("Transform attaching the Star Field to the Sky.");	
 			starFieldTransformNode.setNodeId("STAR_FIELD_TRANSFORM");
@@ -292,65 +483,6 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 			e.printStackTrace();
 		}
 	}
-
-		//		/**
-//   * <!-- begin-user-doc -->
-//   * <!-- end-user-doc -->
-//   * @generated_NOT
-//   */
-//  public void initializeSkyNode(Sky sky, SkyNode skyNode)
-//  {
-//	  	Date now = new Date();
-//		if(sky.getTime() != null)
-//		{
-//			now = sky.getTime();
-//		}
-//	  
-//	  	skyNode.setDescription("Sky");
-//		skyNode.setNodeId("SKY");
-//	  
-//		// Creates the Sun
-//		Sun sun = ApogyCoreEnvironmentFactory.eINSTANCE.createSun();
-//		sun.setDescription("The Sun.");
-//		sun.setNodeId("SUN");
-//		
-//		// Creates the Sun transform that attaches it to the sky.							
-//		Point3d sunPosition = new Point3d();						
-//		TransformNode sunTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(sunPosition.x, sunPosition.y, sunPosition.z, 0, 0, 0);
-//		sunTransformNode.setDescription("Transform attaching the Sun to the Sky.");
-//		sunTransformNode.setNodeId("SUN_TRANSFORM");
-//		
-//		// Attaches the Sun to the sky.
-//		skyNode.getChildren().add(sunTransformNode);				
-//		sunTransformNode.setParent(skyNode); // Should not have to this this explicitly.
-//		
-//		sunTransformNode.getChildren().add(sun);	
-//				
-//		// Creates the stars and attached them to the sky.
-//		try
-//		{
-//			StarField starField = createAndInitializeStars();
-//			
-//			// Creates the StarField transform that attaches it to the sky.
-//			// TODO : Initialise this correctly !
-//			TransformNode starFieldTransformNode = ApogyCommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
-//			starFieldTransformNode.setDescription("Transform attaching the Star Field to the Sky.");	
-//			starFieldTransformNode.setNodeId("STAR_FIELD_TRANSFORM");
-//			
-//			// Attaches the StarField to the sky.
-//			skyNode.getChildren().add(starFieldTransformNode);
-//			starFieldTransformNode.setParent(sky.getSkyNode()); // Should not have to this this explicitly.
-//			
-//			starFieldTransformNode.getChildren().add(starField);
-//		}
-//		catch(Exception e)
-//		{
-//			Logger.INSTANCE.log(Activator.ID, this, "initializeSkyNode(Sky sky, SkyNode skyNode) : Could not initialize the StarField!", EventSeverity.ERROR, e);
-//			e.printStackTrace();
-//		}
-//				
-//		sky.setSkyNode(skyNode);
-//  }
 
   /**
    * <!-- begin-user-doc -->
@@ -458,6 +590,87 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 	  return getVector(sourceApogySystem, nodeID, targetSystem, connectionPointName, environment);
   }
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT:
+				if (resolve) return getActiveApogyEnvironment();
+				return basicGetActiveApogyEnvironment();
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE:
+				if (resolve) return getActiveWorksite();
+				return basicGetActiveWorksite();
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN:
+				if (resolve) return getActiveSun();
+				return basicGetActiveSun();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT:
+				setActiveApogyEnvironment((ApogyEnvironment)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE:
+				setActiveWorksite((AbstractWorksite)newValue);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN:
+				setActiveSun((Sun)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT:
+				setActiveApogyEnvironment((ApogyEnvironment)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE:
+				setActiveWorksite((AbstractWorksite)null);
+				return;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN:
+				setActiveSun((Sun)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT:
+				return activeApogyEnvironment != null;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE:
+				return activeWorksite != null;
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN:
+				return activeSun != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
 	private ConnectionPoint getConnectionPointByName(ConnectionPointsList connectionPointsList, String connectionPointName)
 	{
 	  if(connectionPointsList.getConnectionPoints() != null && !connectionPointsList.getConnectionPoints().isEmpty())
@@ -485,13 +698,13 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, Environment environment)
+  public Tuple3d getSunVector(ApogySystem apogySystem, String nodeID)
   {	  	 
 	  EList<Node> nodes = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(nodeID, apogySystem.getTopologyRoot().getOriginNode());
 	  if(!nodes.isEmpty())
 	  {
 		  Node node = nodes.get(0);
-		  return getSunVector(node, environment);
+		  return getSunVector(node);
 	  }
 	  else
 	  {
@@ -504,26 +717,28 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
    * @generated_NOT
    */
-  public Tuple3d getSunVector(Node node, Environment environment)
-  {	  	    
-	  if(environment instanceof ApogyEnvironment)
+  public Tuple3d getSunVector(Node node)
+  {	  	    	  	  
+	  Sun sun = getActiveSun();
+	  	  	  
+	  if(sun != null)
 	  {
-		  ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
-		  
-		  // Search the active topology.
-		  // TODO
-		  Node sun = null;
-		   
-		  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
-		  Vector3d v = new Vector3d();
-			 
-		  matrix.get(v);
-		  v.normalize();
+		  // TODO : Get the root of the active session. How to do that ?
+		  Node root = null;
+		  		  
+		  // If a root is found.
+		  if(root != null)
+		  {		  		 			  
+			  Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(sun, node);
+			  Vector3d v = new Vector3d();					 
+			  matrix.get(v);
 			  
-		  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
-		  
+			  // Ensure the vector is normalized.
+			  v.normalize();
+					  
+			  return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
+		  }		  		  
 	  }
-	  
 	  return null;
   }
   
@@ -554,10 +769,10 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE:
 				initializeSkyNode((SkyNode)arguments.get(0));
 				return null;
-			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT:
-				return getSunVector((ApogySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
-			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT:
-				return getSunVector((Node)arguments.get(0), (Environment)arguments.get(1));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING:
+				return getSunVector((ApogySystem)arguments.get(0), (String)arguments.get(1));
+			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE:
+				return getSunVector((Node)arguments.get(0));
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
 				return getVector((Node)arguments.get(0), (ApogySystem)arguments.get(1), (ConnectionPoint)arguments.get(2), (Environment)arguments.get(3));
 			case ApogyCoreEnvironmentPackage.APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
@@ -645,4 +860,180 @@ public class ApogyCoreEnvironmentFacadeImpl extends MinimalEObjectImpl.Container
 		
 	}
 
+	/**
+	 * Returns The adapter that listens to the active session and updates the active ApogyEnvironment accordingly.
+	 * @return
+	 */
+	private Adapter getActiveSessionAdapter()
+	{
+		if(activeSessionAdapter == null)
+		{
+			activeSessionAdapter = new AdapterImpl()
+			{
+				@Override
+				public void notifyChanged(Notification msg) 
+				{
+					if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
+					{
+						int featureID = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
+						if(featureID == ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						{
+							updateEnvironment((Environment) msg.getNewValue());
+						}						
+					}
+				}
+			};
+		}
+		
+		return activeSessionAdapter;
+	}
+	
+	private void updateEnvironment(Environment environment)
+	{
+		// Unregister from the previous activeApogyEnvironment if required.
+		if(getActiveApogyEnvironment() != null)
+		{
+			getActiveApogyEnvironment().eAdapters().remove(getApogyEnvironmentAdapter());
+		}
+		
+		// If the new environment is an ApogyEnvironment.
+		if(environment instanceof ApogyEnvironment)
+		{
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
+			
+			// Sets the new Active Apogy Environment.
+			setActiveApogyEnvironment(apogyEnvironment);
+			
+			// Register to the new Apogy Environment.
+			apogyEnvironment.eAdapters().add(getApogyEnvironmentAdapter());						 			
+			
+			// Updates the Worksite
+			updateActiveWorksite(apogyEnvironment.getActiveWorksite());
+		}
+		else
+		{
+			setActiveApogyEnvironment(null);
+		}
+	}
+	
+	private Adapter getApogyEnvironmentAdapter()
+	{
+		if(activeApogyEnvironmentAdapter == null)
+		{
+			activeApogyEnvironmentAdapter = new AdapterImpl()
+			{
+				@Override
+				public void notifyChanged(Notification msg) 
+				{
+					if(msg.getNotifier() instanceof ApogyEnvironment)
+					{
+						int featureID = msg.getFeatureID(ApogyCoreEnvironmentFacade.class);
+						
+						switch (featureID) 
+						{
+							/**
+							 * The Active worksite has changed, we need to update the worksite.
+							 */
+							case ApogyCoreEnvironmentPackage.APOGY_ENVIRONMENT__ACTIVE_WORKSITE:
+							{								
+								AbstractWorksite newActiveWorksite = (AbstractWorksite) msg.getNewValue();
+								updateActiveWorksite(newActiveWorksite);
+							}
+							break;
+
+							default:
+							break;
+						}									
+					}
+				}
+			};
+		}
+		
+		return activeApogyEnvironmentAdapter;
+	}
+	
+	/**
+	 * Updates the active worksite.
+	 * @param abstractWorksite The new value of the active worksite, can be null.
+	 */
+	private void updateActiveWorksite(final AbstractWorksite abstractWorksite)
+	{		
+		// Unregister from the previous abstractWorksite if required.
+		if(getActiveWorksite() != null)
+		{
+			getActiveWorksite().eAdapters().remove(getWorksiteAdapter());
+		}		
+		
+		// Updates the active worksite
+		setActiveWorksite(abstractWorksite);
+		
+		// Register to the new active worksite if required.
+		if(getActiveWorksite() != null)
+		{
+			getActiveWorksite().eAdapters().add(getWorksiteAdapter());
+		}
+		
+		// If the new abstractWorksite is Worksite, update the active Sun.
+		if(abstractWorksite instanceof Worksite)
+		{
+			Worksite worksite = (Worksite) abstractWorksite;
+			
+			Sky sky = worksite.getSky();
+			if(sky != null)
+			{
+				setActiveSun(sky.getSun());
+			}
+			else
+			{
+				setActiveSun(null);
+			}
+		}
+		else
+		{
+			setActiveSun(null);
+		}
+	}
+	
+	/**
+	 * Adapter that listens to a Worksite and updates the active Sun when the Sky attribute changes.
+	 * @return The adapter.
+	 */
+	private Adapter getWorksiteAdapter()
+	{
+		if(activeWorksiteAdapter == null)
+		{
+			activeWorksiteAdapter = new AdapterImpl()
+			{
+				@Override
+				public void notifyChanged(Notification msg) 
+				{
+					if(msg.getNotifier() instanceof Worksite)
+					{
+						int featureID = msg.getFeatureID(Worksite.class);
+						
+						switch (featureID) 
+						{
+							case ApogyCoreEnvironmentPackage.WORKSITE__SKY:
+							{								
+								if(msg.getNewValue() instanceof Sky)
+								{
+									Sky newSky = (Sky) msg.getNewValue();
+									setActiveSun(newSky.getSun());
+								}
+								else
+								{
+									setActiveSun(null);
+								}
+							}
+							break;
+	
+							default:
+							break;
+						}
+					}
+				}
+			};
+		}
+		return activeWorksiteAdapter;
+	}
 } //ApogyCoreEnvironmentFacadeImpl

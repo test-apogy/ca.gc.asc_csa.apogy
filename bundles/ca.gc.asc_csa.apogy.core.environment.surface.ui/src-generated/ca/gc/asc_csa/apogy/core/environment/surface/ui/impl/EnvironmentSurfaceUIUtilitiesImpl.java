@@ -13,18 +13,17 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.Star;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
-
 import java.lang.reflect.InvocationTargetException;
+
 import javax.vecmath.Point3f;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.Star;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
 
 /**
  * <!-- begin-user-doc -->

@@ -13,21 +13,18 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
-
 import java.lang.reflect.InvocationTargetException;
 
 import javax.vecmath.Color3f;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->

@@ -13,23 +13,19 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfigurationList;
-
-import ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.invocator.impl.AbstractToolsListContainerImpl;
 
 /**
  * <!-- begin-user-doc -->

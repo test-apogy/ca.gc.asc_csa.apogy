@@ -14,6 +14,7 @@
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.provider;
 
 
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,6 +23,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -66,8 +68,54 @@ public class ApogyEarthSurfaceEnvironmentFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActiveEarthSurfaceWorksitePropertyDescriptor(object);
+			addActiveMoonPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Active Earth Surface Worksite feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveEarthSurfaceWorksitePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyEarthSurfaceEnvironmentFacade_activeEarthSurfaceWorksite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEarthSurfaceEnvironmentFacade_activeEarthSurfaceWorksite_feature", "_UI_ApogyEarthSurfaceEnvironmentFacade_type"),
+				 ApogyEarthSurfaceEnvironmentPackage.Literals.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_EARTH_SURFACE_WORKSITE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Active Moon feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveMoonPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyEarthSurfaceEnvironmentFacade_activeMoon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyEarthSurfaceEnvironmentFacade_activeMoon_feature", "_UI_ApogyEarthSurfaceEnvironmentFacade_type"),
+				 ApogyEarthSurfaceEnvironmentPackage.Literals.APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_MOON,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

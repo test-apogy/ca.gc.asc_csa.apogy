@@ -14,20 +14,19 @@
 package ca.gc.asc_csa.apogy.core.environment.surface.provider;
 
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
-
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation} object.

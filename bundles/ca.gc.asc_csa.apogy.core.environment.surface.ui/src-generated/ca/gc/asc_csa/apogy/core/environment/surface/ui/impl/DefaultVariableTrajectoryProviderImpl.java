@@ -13,6 +13,15 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
+import javax.vecmath.Point3d;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.jfree.data.xy.XYDataItem;
+
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
@@ -23,16 +32,6 @@ import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUI
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.DefaultVariableTrajectoryProvider;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-
-import javax.vecmath.Point3d;
-
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.jfree.data.xy.XYDataItem;
 
 /**
  * <!-- begin-user-doc -->

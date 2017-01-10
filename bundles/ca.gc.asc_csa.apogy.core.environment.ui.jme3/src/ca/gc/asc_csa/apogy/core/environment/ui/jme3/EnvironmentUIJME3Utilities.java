@@ -16,11 +16,11 @@ package ca.gc.asc_csa.apogy.core.environment.ui.jme3;
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
-
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Mesh;
 import com.jme3.util.BufferUtils;
+
+import ca.gc.asc_csa.apogy.common.topology.ui.jme3.JME3Utilities;
 
 public class EnvironmentUIJME3Utilities 
 {	

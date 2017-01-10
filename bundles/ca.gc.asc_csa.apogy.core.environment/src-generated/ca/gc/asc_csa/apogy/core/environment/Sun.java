@@ -35,7 +35,10 @@ package ca.gc.asc_csa.apogy.core.environment;
  * @model
  * @generated
  */
-public interface Sun extends CelestialBody {
+public interface Sun extends CelestialBody 
+{
+	public static final String NODE_ID = "SUN";
+	
 	/**
 	 * Returns the value of the '<em><b>Radius</b></em>' attribute.
 	 * The default value is <code>"6.955E8"</code>.

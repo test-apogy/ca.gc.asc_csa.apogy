@@ -49,8 +49,8 @@ import ca.gc.asc_csa.apogy.common.topology.Node
 import ca.gc.asc_csa.apogy.core.ApogySystem
 import ca.gc.asc_csa.apogy.core.ConnectionPoint
 import ca.gc.asc_csa.apogy.core.invocator.Environment
-import org.eclipse.core.runtime.IProgressMonitor
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession
+import org.eclipse.core.runtime.IProgressMonitor
 
 // Types
 
@@ -122,6 +122,23 @@ class TimeSourcesList
 /**
  * The abstract base class of all Worksites.
  */
+abstract class AbstractWorksite extends Named, Described, Timed
+{		
+    @GenModel(property="None")
+	container WorksitesList worksitesList opposite worksites
+}
+
+/**
+ * A list of AbstractWorksite.
+ */
+class WorksitesList extends Named, Described
+{
+	contains AbstractWorksite[0..*] worksites opposite worksitesList		
+}
+
+/**
+ * A Worksite.
+ */
 abstract class Worksite extends AbstractWorksite 
 {	
 	/**
@@ -135,17 +152,6 @@ abstract class Worksite extends AbstractWorksite
 	 */
 	@GenModel(children="true", notify="true", property="None")
 	contains Sky[1] sky opposite worksite 	
-}
-
-class WorksitesList extends Named, Described
-{
-	contains AbstractWorksite[0..*] worksites opposite worksitesList		
-}
-
-abstract class AbstractWorksite extends Named, Described, Timed
-{		
-    @GenModel(property="None")
-	container WorksitesList worksitesList opposite worksites
 }
 
 /* -------------------------------------------------------------------------
@@ -302,14 +308,28 @@ class EnvironmentUtilities
 class ApogyCoreEnvironmentFacade
 {	
 	/*
+	 * Refers to the active  ApogyEnvironment. May be null.
+	 */
+	refers transient ApogyEnvironment activeApogyEnvironment
+		
+	/*
+	 * Refers to the active AbstractWorksite. May be null.
+	 */
+	refers transient AbstractWorksite activeWorksite	
+		
+	/*
+	 * Refers to the active Sun. May be null.
+	 */	
+	refers transient Sun activeSun
+		
+	/*
 	 * Create an Apogy session.
 	 * @return Reference to the newly created session.
 	 */
 	op InvocatorSession createApogySession()
 	
 	op InvocatorSession createApogySession(boolean createEnvironment, boolean createPrograms, boolean createDataProducts, boolean createTools)
-	
-	
+		
 	/**
 	 * Creates and initialize a star.
 	 * @param magnitude Star's magnitude.
@@ -345,8 +365,8 @@ class ApogyCoreEnvironmentFacade
 	 */
 	op void initializeSkyNode(SkyNode skyNode)		
 				
-	op Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
-	op Tuple3d getSunVector(Node node, ca.gc.asc_csa.apogy.core.invocator.Environment environment)
+	op Tuple3d getSunVector(ApogySystem apogySystem, String nodeID)
+	op Tuple3d getSunVector(Node node)
 	
 	
 	op Tuple3d getVector(Node node, ApogySystem targetApogySystem, ConnectionPoint connectionPoint,  ca.gc.asc_csa.apogy.core.invocator.Environment environment)

@@ -23,6 +23,11 @@ import ca.gc.asc_csa.apogy.common.emf.Named;
  * A representation of the model object '<em><b>Worksites List</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A list of AbstractWorksite.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

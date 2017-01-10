@@ -13,17 +13,15 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.Named;
-
-import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
-import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
-
 import javax.vecmath.Color3f;
 
 import org.eclipse.emf.common.util.EList;
+
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
 
 /**
  * <!-- begin-user-doc -->

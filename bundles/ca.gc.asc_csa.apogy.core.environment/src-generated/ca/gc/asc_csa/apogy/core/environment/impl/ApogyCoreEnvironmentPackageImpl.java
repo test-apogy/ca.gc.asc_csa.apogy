@@ -755,6 +755,33 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getApogyCoreEnvironmentFacade_ActiveApogyEnvironment() {
+		return (EReference)apogyCoreEnvironmentFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getApogyCoreEnvironmentFacade_ActiveWorksite() {
+		return (EReference)apogyCoreEnvironmentFacadeEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getApogyCoreEnvironmentFacade_ActiveSun() {
+		return (EReference)apogyCoreEnvironmentFacadeEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getApogyCoreEnvironmentFacade__CreateApogySession() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(0);
 	}
@@ -818,16 +845,7 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
-		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(2);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(8);
 	}
 
@@ -836,8 +854,17 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment() {
+	public EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node() {
 		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double() {
+		return apogyCoreEnvironmentFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -1077,15 +1104,15 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__ENVIRONMENT);
 		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__TIME_SOURCES);
 
-		worksiteEClass = createEClass(WORKSITE);
-		createEReference(worksiteEClass, WORKSITE__WORKSITE_NODE);
-		createEReference(worksiteEClass, WORKSITE__SKY);
+		abstractWorksiteEClass = createEClass(ABSTRACT_WORKSITE);
+		createEReference(abstractWorksiteEClass, ABSTRACT_WORKSITE__WORKSITES_LIST);
 
 		worksitesListEClass = createEClass(WORKSITES_LIST);
 		createEReference(worksitesListEClass, WORKSITES_LIST__WORKSITES);
 
-		abstractWorksiteEClass = createEClass(ABSTRACT_WORKSITE);
-		createEReference(abstractWorksiteEClass, ABSTRACT_WORKSITE__WORKSITES_LIST);
+		worksiteEClass = createEClass(WORKSITE);
+		createEReference(worksiteEClass, WORKSITE__WORKSITE_NODE);
+		createEReference(worksiteEClass, WORKSITE__SKY);
 
 		abstractSurfaceLocationEClass = createEClass(ABSTRACT_SURFACE_LOCATION);
 
@@ -1119,6 +1146,9 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		createEOperation(environmentUtilitiesEClass, ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST);
 
 		apogyCoreEnvironmentFacadeEClass = createEClass(APOGY_CORE_ENVIRONMENT_FACADE);
+		createEReference(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT);
+		createEReference(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE);
+		createEReference(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_APOGY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE);
@@ -1127,8 +1157,8 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___CREATE_SKY_NODE);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE);
-		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT);
-		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING);
+		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_CONNECTIONPOINT_ENVIRONMENT);
 		createEOperation(apogyCoreEnvironmentFacadeEClass, APOGY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__APOGYSYSTEM_STRING_APOGYSYSTEM_STRING_ENVIRONMENT);
@@ -1205,12 +1235,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		apogyEnvironmentEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
 		abstractApogyEnvironmentItemEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractApogyEnvironmentItemEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
-		worksiteEClass.getESuperTypes().add(this.getAbstractWorksite());
-		worksitesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
-		worksitesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		abstractWorksiteEClass.getESuperTypes().add(theApogyCommonEMFPackage.getTimed());
+		worksitesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
+		worksitesListEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
+		worksiteEClass.getESuperTypes().add(this.getAbstractWorksite());
 		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getNamed());
 		abstractSurfaceLocationEClass.getESuperTypes().add(theApogyCommonEMFPackage.getDescribed());
 		surfaceLocationsListEClass.getESuperTypes().add(this.getAbstractApogyEnvironmentItem());
@@ -1239,15 +1269,15 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		initEReference(getTimeSourcesList_Environment(), this.getApogyEnvironment(), this.getApogyEnvironment_TimeSourcesList(), "environment", null, 0, 1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTimeSourcesList_TimeSources(), theApogyCommonEMFPackage.getTimeSource(), null, "timeSources", null, 0, -1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(worksiteEClass, Worksite.class, "Worksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 0, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getWorksite_Sky(), this.getSky(), this.getSky_Worksite(), "sky", null, 1, 1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(abstractWorksiteEClass, AbstractWorksite.class, "AbstractWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractWorksite_WorksitesList(), this.getWorksitesList(), this.getWorksitesList_Worksites(), "worksitesList", null, 0, 1, AbstractWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(worksitesListEClass, WorksitesList.class, "WorksitesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorksitesList_Worksites(), this.getAbstractWorksite(), this.getAbstractWorksite_WorksitesList(), "worksites", null, 0, -1, WorksitesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(abstractWorksiteEClass, AbstractWorksite.class, "AbstractWorksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractWorksite_WorksitesList(), this.getWorksitesList(), this.getWorksitesList_Worksites(), "worksitesList", null, 0, 1, AbstractWorksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(worksiteEClass, Worksite.class, "Worksite", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWorksite_WorksiteNode(), this.getWorksiteNode(), null, "worksiteNode", null, 0, 1, Worksite.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getWorksite_Sky(), this.getSky(), this.getSky_Worksite(), "sky", null, 1, 1, Worksite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractSurfaceLocationEClass, AbstractSurfaceLocation.class, "AbstractSurfaceLocation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1300,6 +1330,9 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		initEOperation(op, g1);
 
 		initEClass(apogyCoreEnvironmentFacadeEClass, ApogyCoreEnvironmentFacade.class, "ApogyCoreEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getApogyCoreEnvironmentFacade_ActiveApogyEnvironment(), this.getApogyEnvironment(), null, "activeApogyEnvironment", null, 0, 1, ApogyCoreEnvironmentFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogyCoreEnvironmentFacade_ActiveWorksite(), this.getAbstractWorksite(), null, "activeWorksite", null, 0, 1, ApogyCoreEnvironmentFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogyCoreEnvironmentFacade_ActiveSun(), this.getSun(), null, "activeSun", null, 0, 1, ApogyCoreEnvironmentFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getApogyCoreEnvironmentFacade__CreateApogySession(), theApogyCoreInvocatorPackage.getInvocatorSession(), "createApogySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1333,14 +1366,12 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		op = initEOperation(getApogyCoreEnvironmentFacade__InitializeSkyNode__SkyNode(), null, "initializeSkyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSkyNode(), "skyNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCorePackage.getApogySystem(), "apogySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeID", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCoreEnvironmentFacade__GetSunVector__Node(), theApogyCommonMathPackage.getTuple3d(), "getSunVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theApogyCoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCoreEnvironmentFacade__GetVector__Node_ApogySystem_ConnectionPoint_Environment(), theApogyCommonMathPackage.getTuple3d(), "getVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyCommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1487,10 +1518,28 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "property", "None"
 		   });	
 		addAnnotation
-		  (worksiteEClass, 
+		  (abstractWorksiteEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nWorksites\n\n-------------------------------------------------------------------------"
+		   });	
+		addAnnotation
+		  (getAbstractWorksite_WorksitesList(), 
+		   source, 
+		   new String[] {
+			 "property", "None"
+		   });	
+		addAnnotation
+		  (worksitesListEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA list of AbstractWorksite."
+		   });	
+		addAnnotation
+		  (worksiteEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA Worksite."
 		   });	
 		addAnnotation
 		  (getWorksite_WorksiteNode(), 
@@ -1508,12 +1557,6 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 			 "documentation", "*\nThe Sky associated with the Worksite.",
 			 "children", "true",
 			 "notify", "true",
-			 "property", "None"
-		   });	
-		addAnnotation
-		  (getAbstractWorksite_WorksitesList(), 
-		   source, 
-		   new String[] {
 			 "property", "None"
 		   });	
 		addAnnotation
@@ -1714,6 +1757,24 @@ public class ApogyCoreEnvironmentPackageImpl extends EPackageImpl implements Apo
 		   source, 
 		   new String[] {
 			 "documentation", "*\nInitialize an existing SkyNode."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentFacade_ActiveApogyEnvironment(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the active  ApogyEnvironment. May be null."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentFacade_ActiveWorksite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the active AbstractWorksite. May be null."
+		   });	
+		addAnnotation
+		  (getApogyCoreEnvironmentFacade_ActiveSun(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the active Sun. May be null."
 		   });	
 		addAnnotation
 		  (starEClass, 

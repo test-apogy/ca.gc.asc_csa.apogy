@@ -14,18 +14,17 @@
 package ca.gc.asc_csa.apogy.core.environment.surface.provider;
 
 
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
-import ca.gc.asc_csa.apogy.core.environment.provider.WorksiteNodeItemProvider;
-import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.core.environment.provider.WorksiteNodeItemProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksiteNode} object.

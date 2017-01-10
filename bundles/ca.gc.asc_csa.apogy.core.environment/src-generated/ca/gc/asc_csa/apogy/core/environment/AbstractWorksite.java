@@ -22,6 +22,14 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
  * A representation of the model object '<em><b>Abstract Worksite</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ *  -------------------------------------------------------------------------
+ * 
+ * Worksites
+ * 
+ * -------------------------------------------------------------------------
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

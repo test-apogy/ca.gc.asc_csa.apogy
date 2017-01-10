@@ -14,20 +14,13 @@
 package ca.gc.asc_csa.apogy.core.environment.surface.provider;
 
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
-import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.MapsList;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -37,6 +30,10 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ApogySurfaceEnvironmentPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.MapsList;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.surface.MapsList} object.

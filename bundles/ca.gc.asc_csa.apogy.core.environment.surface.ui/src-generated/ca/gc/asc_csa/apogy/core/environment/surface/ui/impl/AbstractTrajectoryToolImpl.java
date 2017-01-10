@@ -13,29 +13,23 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractTrajectoryTool;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapTool;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.jfree.chart.JFreeChart;
-
 import org.jfree.chart.annotations.AbstractXYAnnotation;
-
 import org.jfree.experimental.chart.swt.ChartComposite;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation;
 
 /**
  * <!-- begin-user-doc -->

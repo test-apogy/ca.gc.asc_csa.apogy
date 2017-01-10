@@ -13,9 +13,9 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
-import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
-
 import org.eclipse.emf.common.util.EList;
+
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->

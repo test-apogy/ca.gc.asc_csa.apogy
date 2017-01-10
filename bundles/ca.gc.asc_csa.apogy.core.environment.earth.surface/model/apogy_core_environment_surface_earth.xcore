@@ -157,6 +157,15 @@ class EarthSkyNode extends SkyNode
  
 class ApogyEarthSurfaceEnvironmentFacade
 {
+	/*
+	 * Refers to the active EarthSurfaceWorksite. May be null.
+	 */	
+	refers transient EarthSurfaceWorksite activeEarthSurfaceWorksite
+	
+	/*
+	 * Refers to the active Moon. May be null.
+	 */	
+	refers transient Moon activeMoon
 	
 	/**
 	 * Creates an EarthSky
@@ -194,7 +203,7 @@ class ApogyEarthSurfaceEnvironmentFacade
  * ------------------------------------------------------------------------- */
 
 class AtmosphereUtils
-{
+{	
 	/*
 	 * Computes the air mass. The Air Mass is the path length which light
 	 * takes through the atmosphere normalized to the shortest possible path

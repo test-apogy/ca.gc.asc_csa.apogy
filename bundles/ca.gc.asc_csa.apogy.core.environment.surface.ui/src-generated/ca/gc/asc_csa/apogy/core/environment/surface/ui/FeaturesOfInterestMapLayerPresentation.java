@@ -13,10 +13,10 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
+import javax.vecmath.Color3f;
+
 import ca.gc.asc_csa.apogy.core.environment.surface.FeaturesOfInterestMapLayer;
 import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
-
-import javax.vecmath.Color3f;
 
 /**
  * <!-- begin-user-doc -->

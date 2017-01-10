@@ -14,7 +14,6 @@
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
 import org.jfree.chart.JFreeChart;
-
 import org.jfree.experimental.chart.swt.ChartComposite;
 
 /**

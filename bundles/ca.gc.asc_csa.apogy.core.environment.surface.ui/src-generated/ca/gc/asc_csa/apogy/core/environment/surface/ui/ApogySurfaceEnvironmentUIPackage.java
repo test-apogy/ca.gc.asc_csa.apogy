@@ -13,18 +13,16 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-
-import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
-
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
+import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->

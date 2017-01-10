@@ -551,13 +551,31 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Active Earth Surface Worksite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_EARTH_SURFACE_WORKSITE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Active Moon</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_MOON = 1;
+
+	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
+	int APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Create Earth Sky</em>' operation.
@@ -1108,6 +1126,28 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 	EClass getApogyEarthSurfaceEnvironmentFacade();
 
 	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#getActiveEarthSurfaceWorksite <em>Active Earth Surface Worksite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Earth Surface Worksite</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#getActiveEarthSurfaceWorksite()
+	 * @see #getApogyEarthSurfaceEnvironmentFacade()
+	 * @generated
+	 */
+	EReference getApogyEarthSurfaceEnvironmentFacade_ActiveEarthSurfaceWorksite();
+
+	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#getActiveMoon <em>Active Moon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Moon</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#getActiveMoon()
+	 * @see #getApogyEarthSurfaceEnvironmentFacade()
+	 * @generated
+	 */
+	EReference getApogyEarthSurfaceEnvironmentFacade_ActiveMoon();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade#createEarthSky(ca.gc.asc_csa.apogy.core.environment.earth.GeographicCoordinates) <em>Create Earth Sky</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1640,6 +1680,22 @@ public interface ApogyEarthSurfaceEnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade();
+
+		/**
+		 * The meta object literal for the '<em><b>Active Earth Surface Worksite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_EARTH_SURFACE_WORKSITE = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade_ActiveEarthSurfaceWorksite();
+
+		/**
+		 * The meta object literal for the '<em><b>Active Moon</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_MOON = eINSTANCE.getApogyEarthSurfaceEnvironmentFacade_ActiveMoon();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Earth Sky</b></em>' operation.

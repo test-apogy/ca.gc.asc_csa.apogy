@@ -35,6 +35,14 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
  * A class providing utilities methods to create fully initialze object.
  * <!-- end-model-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveApogyEnvironment <em>Active Apogy Environment</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveWorksite <em>Active Worksite</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveSun <em>Active Sun</em>}</li>
+ * </ul>
  *
  * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getApogyCoreEnvironmentFacade()
  * @model
@@ -43,6 +51,81 @@ import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 public interface ApogyCoreEnvironmentFacade extends EObject
 {
 	
+	/**
+	 * Returns the value of the '<em><b>Active Apogy Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the active  ApogyEnvironment. May be null.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Active Apogy Environment</em>' reference.
+	 * @see #setActiveApogyEnvironment(ApogyEnvironment)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getApogyCoreEnvironmentFacade_ActiveApogyEnvironment()
+	 * @model transient="true"
+	 * @generated
+	 */
+	ApogyEnvironment getActiveApogyEnvironment();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveApogyEnvironment <em>Active Apogy Environment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Active Apogy Environment</em>' reference.
+	 * @see #getActiveApogyEnvironment()
+	 * @generated
+	 */
+	void setActiveApogyEnvironment(ApogyEnvironment value);
+
+	/**
+	 * Returns the value of the '<em><b>Active Worksite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the active AbstractWorksite. May be null.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Active Worksite</em>' reference.
+	 * @see #setActiveWorksite(AbstractWorksite)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getApogyCoreEnvironmentFacade_ActiveWorksite()
+	 * @model transient="true"
+	 * @generated
+	 */
+	AbstractWorksite getActiveWorksite();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveWorksite <em>Active Worksite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Active Worksite</em>' reference.
+	 * @see #getActiveWorksite()
+	 * @generated
+	 */
+	void setActiveWorksite(AbstractWorksite value);
+
+	/**
+	 * Returns the value of the '<em><b>Active Sun</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the active Sun. May be null.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Active Sun</em>' reference.
+	 * @see #setActiveSun(Sun)
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage#getApogyCoreEnvironmentFacade_ActiveSun()
+	 * @model transient="true"
+	 * @generated
+	 */
+	Sun getActiveSun();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveSun <em>Active Sun</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Active Sun</em>' reference.
+	 * @see #getActiveSun()
+	 * @generated
+	 */
+	void setActiveSun(Sun value);
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,6 +210,22 @@ public interface ApogyCoreEnvironmentFacade extends EObject
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" apogySystemUnique="false" nodeIDUnique="false"
+	 * @generated
+	 */
+	Tuple3d getSunVector(ApogySystem apogySystem, String nodeID);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" nodeUnique="false"
+	 * @generated
+	 */
+	Tuple3d getSunVector(Node node);
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * *
@@ -139,22 +238,6 @@ public interface ApogyCoreEnvironmentFacade extends EObject
 	 * @generated
 	 */
   Star createStar(float magnitude, double rightAscension, double declination);
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @model unique="false" apogySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
-	 * @generated
-	 */
-  Tuple3d getSunVector(ApogySystem apogySystem, String nodeID, Environment environment);
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @model unique="false" nodeUnique="false" environmentUnique="false"
-	 * @generated
-	 */
-  Tuple3d getSunVector(Node node, Environment environment);
 
   /**
 	 * <!-- begin-user-doc -->

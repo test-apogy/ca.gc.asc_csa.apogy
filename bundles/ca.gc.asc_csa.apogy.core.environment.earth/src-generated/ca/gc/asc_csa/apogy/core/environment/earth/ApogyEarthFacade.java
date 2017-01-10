@@ -38,6 +38,13 @@ public interface ApogyEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Return a unit vector pointing toward the Moon. The vector is defined for a specified topology node within a specified ApogySystem.
+	 * @param apogySystem The ApogySystem containing the specified Node.
+	 * @param nodeID The ID of the specified Node.
+	 * @return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" apogySystemUnique="false" nodeIDUnique="false" environmentUnique="false"
 	 * @generated
 	 */
@@ -46,6 +53,12 @@ public interface ApogyEarthFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Return a unit vector pointing toward the Moon. The vector is defined for a specified topology node.
+	 * @param nodeID The ID of the specified Node.
+	 * @return The unit vector pointing toward the Moon, defined in the specified node coordinates, null if none is found.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" nodeUnique="false" environmentUnique="false"
 	 * @generated
 	 */

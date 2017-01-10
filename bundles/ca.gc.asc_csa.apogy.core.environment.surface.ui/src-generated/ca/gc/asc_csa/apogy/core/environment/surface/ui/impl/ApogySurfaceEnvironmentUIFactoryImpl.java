@@ -13,8 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.*;
-
 import java.util.List;
 
 import javax.vecmath.Color3f;
@@ -25,21 +23,32 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.jfree.chart.JFreeChart;
-
 import org.jfree.chart.annotations.AbstractXYAnnotation;
-
 import org.jfree.chart.plot.XYPlot;
-
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
-
 import org.jfree.experimental.chart.swt.ChartComposite;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VehicleVariableAnnotation;
 
 /**
  * <!-- begin-user-doc -->

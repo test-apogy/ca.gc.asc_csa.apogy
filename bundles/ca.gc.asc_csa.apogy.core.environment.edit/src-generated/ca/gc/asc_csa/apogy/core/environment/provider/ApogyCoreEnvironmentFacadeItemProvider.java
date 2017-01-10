@@ -20,6 +20,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,6 +29,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade} object.
@@ -67,11 +70,80 @@ public class ApogyCoreEnvironmentFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addActiveApogyEnvironmentPropertyDescriptor(object);
+			addActiveWorksitePropertyDescriptor(object);
+			addActiveSunPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
+	 * This adds a property descriptor for the Active Apogy Environment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveApogyEnvironmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyCoreEnvironmentFacade_activeApogyEnvironment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreEnvironmentFacade_activeApogyEnvironment_feature", "_UI_ApogyCoreEnvironmentFacade_type"),
+				 ApogyCoreEnvironmentPackage.Literals.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+		/**
+	 * This adds a property descriptor for the Active Worksite feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveWorksitePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyCoreEnvironmentFacade_activeWorksite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreEnvironmentFacade_activeWorksite_feature", "_UI_ApogyCoreEnvironmentFacade_type"),
+				 ApogyCoreEnvironmentPackage.Literals.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+		/**
+	 * This adds a property descriptor for the Active Sun feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiveSunPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ApogyCoreEnvironmentFacade_activeSun_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ApogyCoreEnvironmentFacade_activeSun_feature", "_UI_ApogyCoreEnvironmentFacade_type"),
+				 ApogyCoreEnvironmentPackage.Literals.APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This returns ApogyCoreEnvironmentFacade.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

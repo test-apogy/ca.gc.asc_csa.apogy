@@ -13,23 +13,39 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.util;
 
-import ca.gc.asc_csa.apogy.common.emf.Described;
-import ca.gc.asc_csa.apogy.common.emf.Named;
-
-import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.*;
-
-import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
+
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.emf.Named;
+import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractTrajectoryTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFacade;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.DefaultVariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.EnvironmentSurfaceUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeatureOfInterestNodePresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.FeaturesOfInterestMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapRuler;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfigurationList;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewItemPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.PoseVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryPickingTool;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VehicleVariableAnnotation;
+import ca.gc.asc_csa.apogy.core.invocator.AbstractToolsListContainer;
 
 /**
  * <!-- begin-user-doc -->

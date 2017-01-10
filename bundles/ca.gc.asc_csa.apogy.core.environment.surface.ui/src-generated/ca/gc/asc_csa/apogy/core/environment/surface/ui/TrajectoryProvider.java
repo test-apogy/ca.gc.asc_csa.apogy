@@ -19,7 +19,6 @@ import javax.vecmath.Color3f;
 import javax.vecmath.Point2d;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 

@@ -26,9 +26,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.Activator;
 
 public class ApogyEnvironmentSurfaceWorksitePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	

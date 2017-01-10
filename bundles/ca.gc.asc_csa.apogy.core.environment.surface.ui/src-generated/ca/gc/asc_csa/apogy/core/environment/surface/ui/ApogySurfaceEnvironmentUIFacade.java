@@ -13,20 +13,16 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
-import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
-
-import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
-import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
-
-import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
-
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.jfree.data.xy.XYSeries;
+
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.FeatureOfInterestList;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegionProvider;
+import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
 
 /**
  * <!-- begin-user-doc -->

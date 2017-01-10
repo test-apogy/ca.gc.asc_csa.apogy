@@ -308,6 +308,24 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getApogyEarthSurfaceEnvironmentFacade_ActiveEarthSurfaceWorksite() {
+		return (EReference)apogyEarthSurfaceEnvironmentFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getApogyEarthSurfaceEnvironmentFacade_ActiveMoon() {
+		return (EReference)apogyEarthSurfaceEnvironmentFacadeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates() {
 		return apogyEarthSurfaceEnvironmentFacadeEClass.getEOperations().get(0);
 	}
@@ -692,6 +710,8 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		earthSkyNodeEClass = createEClass(EARTH_SKY_NODE);
 
 		apogyEarthSurfaceEnvironmentFacadeEClass = createEClass(APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE);
+		createEReference(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_EARTH_SURFACE_WORKSITE);
+		createEReference(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE__ACTIVE_MOON);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY__GEOGRAPHICCOORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_EARTH_SKY_NODE__GEOGRAPHICCOORDINATES);
 		createEOperation(apogyEarthSurfaceEnvironmentFacadeEClass, APOGY_EARTH_SURFACE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE);
@@ -803,6 +823,8 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		initEClass(earthSkyNodeEClass, EarthSkyNode.class, "EarthSkyNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(apogyEarthSurfaceEnvironmentFacadeEClass, ApogyEarthSurfaceEnvironmentFacade.class, "ApogyEarthSurfaceEnvironmentFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getApogyEarthSurfaceEnvironmentFacade_ActiveEarthSurfaceWorksite(), this.getEarthSurfaceWorksite(), null, "activeEarthSurfaceWorksite", null, 0, 1, ApogyEarthSurfaceEnvironmentFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getApogyEarthSurfaceEnvironmentFacade_ActiveMoon(), theApogyCoreEnvironmentPackage.getMoon(), null, "activeMoon", null, 0, 1, ApogyEarthSurfaceEnvironmentFacade.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getApogyEarthSurfaceEnvironmentFacade__CreateEarthSky__GeographicCoordinates(), this.getEarthSky(), "createEarthSky", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theApogyEarthEnvironmentPackage.getGeographicCoordinates(), "gsiteGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1086,6 +1108,18 @@ public class ApogyEarthSurfaceEnvironmentPackageImpl extends EPackageImpl implem
 		   source, 
 		   new String[] {
 			 "documentation", "*\nCreates an invocator session containing a fully initialized EarthSurfaceWorksite."
+		   });	
+		addAnnotation
+		  (getApogyEarthSurfaceEnvironmentFacade_ActiveEarthSurfaceWorksite(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the active EarthSurfaceWorksite. May be null."
+		   });	
+		addAnnotation
+		  (getApogyEarthSurfaceEnvironmentFacade_ActiveMoon(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Refers to the active Moon. May be null."
 		   });	
 		addAnnotation
 		  (atmosphereUtilsEClass, 

@@ -38,7 +38,10 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
  * @model
  * @generated
  */
-public interface StarField extends Node {
+public interface StarField extends Node 
+{
+	public static final String NODE_ID = "STAR FIELD";
+	
 	/**
 	 * Returns the value of the '<em><b>Stars</b></em>' reference list.
 	 * The list contents are of type {@link ca.gc.asc_csa.apogy.core.environment.Star}.

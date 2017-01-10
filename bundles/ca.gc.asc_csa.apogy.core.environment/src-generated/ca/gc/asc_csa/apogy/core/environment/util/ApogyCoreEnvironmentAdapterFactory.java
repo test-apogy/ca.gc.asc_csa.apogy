@@ -119,16 +119,16 @@ public class ApogyCoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 				return createTimeSourcesListAdapter();
 			}
 			@Override
-			public Adapter caseWorksite(Worksite object) {
-				return createWorksiteAdapter();
+			public Adapter caseAbstractWorksite(AbstractWorksite object) {
+				return createAbstractWorksiteAdapter();
 			}
 			@Override
 			public Adapter caseWorksitesList(WorksitesList object) {
 				return createWorksitesListAdapter();
 			}
 			@Override
-			public Adapter caseAbstractWorksite(AbstractWorksite object) {
-				return createAbstractWorksiteAdapter();
+			public Adapter caseWorksite(Worksite object) {
+				return createWorksiteAdapter();
 			}
 			@Override
 			public Adapter caseAbstractSurfaceLocation(AbstractSurfaceLocation object) {

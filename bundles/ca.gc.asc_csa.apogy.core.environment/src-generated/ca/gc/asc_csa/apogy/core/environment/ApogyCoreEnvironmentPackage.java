@@ -342,7 +342,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentPackageImpl#getAbstractWorksite()
 	 * @generated
 	 */
-	int ABSTRACT_WORKSITE = 5;
+	int ABSTRACT_WORKSITE = 3;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -406,80 +406,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @see ca.gc.asc_csa.apogy.core.environment.impl.ApogyCoreEnvironmentPackageImpl#getWorksite()
 	 * @generated
 	 */
-  int WORKSITE = 3;
-
-  /**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITE__NAME = ABSTRACT_WORKSITE__NAME;
-
-		/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITE__DESCRIPTION = ABSTRACT_WORKSITE__DESCRIPTION;
-
-		/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITE__TIME = ABSTRACT_WORKSITE__TIME;
-
-		/**
-	 * The feature id for the '<em><b>Worksites List</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WORKSITE__WORKSITES_LIST = ABSTRACT_WORKSITE__WORKSITES_LIST;
-
-  /**
-	 * The feature id for the '<em><b>Worksite Node</b></em>' reference.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WORKSITE__WORKSITE_NODE = ABSTRACT_WORKSITE_FEATURE_COUNT + 0;
-
-  /**
-	 * The feature id for the '<em><b>Sky</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSITE__SKY = ABSTRACT_WORKSITE_FEATURE_COUNT + 1;
-
-		/**
-	 * The number of structural features of the '<em>Worksite</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WORKSITE_FEATURE_COUNT = ABSTRACT_WORKSITE_FEATURE_COUNT + 2;
-
-  /**
-	 * The number of operations of the '<em>Worksite</em>' class.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int WORKSITE_OPERATION_COUNT = ABSTRACT_WORKSITE_OPERATION_COUNT + 0;
-
+  int WORKSITE = 5;
 
   /**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.impl.WorksitesListImpl <em>Worksites List</em>}' class.
@@ -535,6 +462,78 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @ordered
 	 */
 	int WORKSITES_LIST_OPERATION_COUNT = ApogyCommonEMFPackage.NAMED_OPERATION_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSITE__NAME = ABSTRACT_WORKSITE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSITE__DESCRIPTION = ABSTRACT_WORKSITE__DESCRIPTION;
+
+		/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSITE__TIME = ABSTRACT_WORKSITE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Worksites List</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int WORKSITE__WORKSITES_LIST = ABSTRACT_WORKSITE__WORKSITES_LIST;
+
+		/**
+	 * The feature id for the '<em><b>Worksite Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int WORKSITE__WORKSITE_NODE = ABSTRACT_WORKSITE_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Sky</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSITE__SKY = ABSTRACT_WORKSITE_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>Worksite</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int WORKSITE_FEATURE_COUNT = ABSTRACT_WORKSITE_FEATURE_COUNT + 2;
+
+		/**
+	 * The number of operations of the '<em>Worksite</em>' class.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int WORKSITE_OPERATION_COUNT = ABSTRACT_WORKSITE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.core.environment.impl.AbstractSurfaceLocationImpl <em>Abstract Surface Location</em>}' class.
@@ -1216,13 +1215,40 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	int APOGY_CORE_ENVIRONMENT_FACADE = 14;
 
 		/**
+	 * The feature id for the '<em><b>Active Apogy Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT = 0;
+
+		/**
+	 * The feature id for the '<em><b>Active Worksite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE = 1;
+
+		/**
+	 * The feature id for the '<em><b>Active Sun</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN = 2;
+
+		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
+	int APOGY_CORE_ENVIRONMENT_FACADE_FEATURE_COUNT = 3;
 
 		/**
 	 * The operation id for the '<em>Create Apogy Session</em>' operation.
@@ -1303,7 +1329,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = 8;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING = 8;
 
 		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
@@ -1312,7 +1338,7 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 9;
+	int APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE = 9;
 
 		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
@@ -2264,6 +2290,39 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	EClass getApogyCoreEnvironmentFacade();
 
 		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveApogyEnvironment <em>Active Apogy Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Apogy Environment</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveApogyEnvironment()
+	 * @see #getApogyCoreEnvironmentFacade()
+	 * @generated
+	 */
+	EReference getApogyCoreEnvironmentFacade_ActiveApogyEnvironment();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveWorksite <em>Active Worksite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Worksite</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveWorksite()
+	 * @see #getApogyCoreEnvironmentFacade()
+	 * @generated
+	 */
+	EReference getApogyCoreEnvironmentFacade_ActiveWorksite();
+
+		/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveSun <em>Active Sun</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Active Sun</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getActiveSun()
+	 * @see #getApogyCoreEnvironmentFacade()
+	 * @generated
+	 */
+	EReference getApogyCoreEnvironmentFacade_ActiveSun();
+
+		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createApogySession() <em>Create Apogy Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2334,6 +2393,26 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	EOperation getApogyCoreEnvironmentFacade__InitializeSkyNode__SkyNode();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String) <em>Get Sun Vector</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Sun Vector</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node)
+	 * @generated
+	 */
+	EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node();
+
+		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2342,26 +2421,6 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getApogyCoreEnvironmentFacade__CreateStar__float_double_double();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.core.ApogySystem, java.lang.String, ca.gc.asc_csa.apogy.core.invocator.Environment)
-	 * @generated
-	 */
-	EOperation getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment();
-
-		/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getSunVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.invocator.Environment)
-	 * @generated
-	 */
-	EOperation getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment();
 
 		/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade#getVector(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.core.ApogySystem, ca.gc.asc_csa.apogy.core.ConnectionPoint, ca.gc.asc_csa.apogy.core.invocator.Environment) <em>Get Vector</em>}' operation.
@@ -2954,6 +3013,27 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 */
 		EClass APOGY_CORE_ENVIRONMENT_FACADE = eINSTANCE.getApogyCoreEnvironmentFacade();
 				/**
+		 * The meta object literal for the '<em><b>Active Apogy Environment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_APOGY_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade_ActiveApogyEnvironment();
+				/**
+		 * The meta object literal for the '<em><b>Active Worksite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_WORKSITE = eINSTANCE.getApogyCoreEnvironmentFacade_ActiveWorksite();
+				/**
+		 * The meta object literal for the '<em><b>Active Sun</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APOGY_CORE_ENVIRONMENT_FACADE__ACTIVE_SUN = eINSTANCE.getApogyCoreEnvironmentFacade_ActiveSun();
+				/**
 		 * The meta object literal for the '<em><b>Create Apogy Session</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3003,26 +3083,26 @@ public interface ApogyCoreEnvironmentPackage extends EPackage
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKYNODE = eINSTANCE.getApogyCoreEnvironmentFacade__InitializeSkyNode__SkyNode();
 				/**
+		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String();
+				/**
+		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__Node();
+				/**
 		 * The meta object literal for the '<em><b>Create Star</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation APOGY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = eINSTANCE.getApogyCoreEnvironmentFacade__CreateStar__float_double_double();
-				/**
-		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__APOGYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__ApogySystem_String_Environment();
-				/**
-		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getApogyCoreEnvironmentFacade__GetSunVector__Node_Environment();
 				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->

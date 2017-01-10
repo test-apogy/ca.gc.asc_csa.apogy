@@ -13,13 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui;
 
-import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
-
-import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
-
-import ca.gc.asc_csa.apogy.core.invocator.Variable;
-
 import org.eclipse.emf.ecore.EObject;
+
+import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
+import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
+import ca.gc.asc_csa.apogy.core.invocator.Variable;
 
 /**
  * <!-- begin-user-doc -->

@@ -28,6 +28,7 @@ import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.core.ApogySystem;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
+import ca.gc.asc_csa.apogy.core.environment.Moon;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthEnvironmentPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.ApogyEarthFacade;
@@ -41,7 +42,8 @@ import ca.gc.asc_csa.apogy.core.invocator.Environment;
  *
  * @generated
  */
-public class ApogyEarthFacadeImpl extends MinimalEObjectImpl.Container implements ApogyEarthFacade {
+public class ApogyEarthFacadeImpl extends MinimalEObjectImpl.Container implements ApogyEarthFacade 
+{
 	private static ApogyEarthFacade instance = null;
 
 	public static ApogyEarthFacade getInstance() {
@@ -73,23 +75,32 @@ public class ApogyEarthFacadeImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated_NOT
 	 */
-	public Tuple3d getMoonVector(Node node, Environment environment) {
-		if (environment instanceof ApogyEnvironment) {
-			// ApogyEnvironment apogyEnvironment = (ApogyEnvironment)
-			// environment;
+	public Tuple3d getMoonVector(Node node, Environment environment) 
+	{
+		if (environment instanceof ApogyEnvironment) 
+		{
+			ApogyEnvironment apogyEnvironment = (ApogyEnvironment) environment;
 
-			// Search the active topology.
-			// TODO
-			Node moon = null;
-
-			Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
-			Vector3d v = new Vector3d();
-
-			matrix.get(v);
-			v.normalize();
-
-			return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
-
+			// Search the active topology.			
+			Node universeRoot = null;
+			EList<Node> moons = ApogyCommonTopologyFacade.INSTANCE.findNodesByID(Moon.NODE_ID, universeRoot);
+			
+			if(moons.size() > 0)
+			{
+				Node moon = moons.get(0);
+	
+				Matrix4d matrix = ApogyCommonTopologyFacade.INSTANCE.expressInFrame(moon, node);
+				Vector3d v = new Vector3d();
+	
+				matrix.get(v);
+				v.normalize();
+	
+				return ApogyCommonMathFacade.INSTANCE.createTuple3d(v);
+			}
+			else
+			{
+				return null;
+			}
 		}
 
 		return null;
@@ -100,7 +111,8 @@ public class ApogyEarthFacadeImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated_NOT
 	 */
-	public GeographicCoordinates createGeographicCoordinates(double longitude, double latitude, double altitude) {
+	public GeographicCoordinates createGeographicCoordinates(double longitude, double latitude, double altitude) 
+	{
 		GeographicCoordinates coord = ApogyEarthEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 		coord.setLongitude(longitude);
 		coord.setLatitude(latitude);
@@ -158,4 +170,9 @@ public class ApogyEarthFacadeImpl extends MinimalEObjectImpl.Container implement
 		return super.eInvoke(operationID, arguments);
 	}
 
+	private Moon getActiveMoon()
+	{
+		return null;
+	}
+	
 } // ApogyEarthFacadeImpl

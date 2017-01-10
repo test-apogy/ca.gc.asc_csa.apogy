@@ -317,8 +317,7 @@ class SunTrackerJob extends Job
 			{
 				// Get a vector pointing to the sun
 				Tuple3d sunVector = ApogyCoreEnvironmentFacade.INSTANCE.getSunVector(this.apiAdapter.getApogySystem(),
-																	    	"PTU_DISH_ANTENNA_SYM_SYS_ROOT",
-																	    	this.apiAdapter.getEnvironment());
+																	    	"PTU_DISH_ANTENNA_SYM_SYS_ROOT");
 			
 				// If the sun vector was available
 				if (sunVector != null) 

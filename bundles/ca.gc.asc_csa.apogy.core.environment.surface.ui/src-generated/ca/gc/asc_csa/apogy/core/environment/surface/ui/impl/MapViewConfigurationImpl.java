@@ -13,37 +13,30 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
-import ca.gc.asc_csa.apogy.common.emf.Described;
-
-import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
-
-import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
-import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import javax.vecmath.Color3f;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.Described;
+import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ImageMapLayerPresentation;
+import ca.gc.asc_csa.apogy.core.environment.surface.RectangularRegion;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.MapViewConfiguration;
 
 /**
  * <!-- begin-user-doc -->

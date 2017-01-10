@@ -13,14 +13,7 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryProvider;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryAnnotation;
-import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryProvider;
-
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.List;
 
 import javax.vecmath.Color3f;
@@ -28,16 +21,18 @@ import javax.vecmath.Point2d;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
+
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIFactory;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.TrajectoryProvider;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryAnnotation;
+import ca.gc.asc_csa.apogy.core.environment.surface.ui.VariableTrajectoryProvider;
 
 /**
  * <!-- begin-user-doc -->

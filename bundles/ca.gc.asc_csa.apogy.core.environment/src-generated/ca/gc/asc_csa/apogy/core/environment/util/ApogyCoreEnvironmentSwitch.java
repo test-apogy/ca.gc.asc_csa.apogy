@@ -23,7 +23,6 @@ import ca.gc.asc_csa.apogy.common.emf.Timed;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import ca.gc.asc_csa.apogy.core.environment.*;
 import ca.gc.asc_csa.apogy.core.environment.AbstractApogyEnvironmentItem;
 import ca.gc.asc_csa.apogy.core.environment.AbstractSurfaceLocation;
 import ca.gc.asc_csa.apogy.core.environment.AbstractWorksite;
@@ -132,13 +131,12 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreEnvironmentPackage.WORKSITE: {
-				Worksite worksite = (Worksite)theEObject;
-				T result = caseWorksite(worksite);
-				if (result == null) result = caseAbstractWorksite(worksite);
-				if (result == null) result = caseNamed(worksite);
-				if (result == null) result = caseDescribed(worksite);
-				if (result == null) result = caseTimed(worksite);
+			case ApogyCoreEnvironmentPackage.ABSTRACT_WORKSITE: {
+				AbstractWorksite abstractWorksite = (AbstractWorksite)theEObject;
+				T result = caseAbstractWorksite(abstractWorksite);
+				if (result == null) result = caseNamed(abstractWorksite);
+				if (result == null) result = caseDescribed(abstractWorksite);
+				if (result == null) result = caseTimed(abstractWorksite);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,12 +148,13 @@ public class ApogyCoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ApogyCoreEnvironmentPackage.ABSTRACT_WORKSITE: {
-				AbstractWorksite abstractWorksite = (AbstractWorksite)theEObject;
-				T result = caseAbstractWorksite(abstractWorksite);
-				if (result == null) result = caseNamed(abstractWorksite);
-				if (result == null) result = caseDescribed(abstractWorksite);
-				if (result == null) result = caseTimed(abstractWorksite);
+			case ApogyCoreEnvironmentPackage.WORKSITE: {
+				Worksite worksite = (Worksite)theEObject;
+				T result = caseWorksite(worksite);
+				if (result == null) result = caseAbstractWorksite(worksite);
+				if (result == null) result = caseNamed(worksite);
+				if (result == null) result = caseDescribed(worksite);
+				if (result == null) result = caseTimed(worksite);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
