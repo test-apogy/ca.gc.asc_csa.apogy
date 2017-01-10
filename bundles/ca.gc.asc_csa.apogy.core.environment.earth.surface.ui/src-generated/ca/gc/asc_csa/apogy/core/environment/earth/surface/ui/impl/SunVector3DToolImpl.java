@@ -24,6 +24,10 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
@@ -625,14 +629,31 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	
 	@Override
 	public Node getFromNode() 
-	{
-		Node node = super.getFromNode();
-		if(node == null)
+	{		
+		if(super.getFromNode() == null)
 		{
-			node = getSun();
-			setFromNode(node);
+			final Node node = getSun();
+			try
+			{						
+				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+				if(domain instanceof TransactionalEditingDomain)
+				{
+					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
+					{
+						@Override
+						protected void doExecute() 
+						{										
+							setFromNode(node);
+						}
+					});										
+				}							
+			}
+			catch(Throwable t)
+			{				
+				t.printStackTrace();
+			}			
 		}
-		return node;
+		return super.getFromNode();
 	}
 		
 	@Override
@@ -642,6 +663,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 		{
 			detachSunVector3DToolNode();			
 		}
+		
 		setSunVector3DToolNode(null);
 		
 		super.dispose();

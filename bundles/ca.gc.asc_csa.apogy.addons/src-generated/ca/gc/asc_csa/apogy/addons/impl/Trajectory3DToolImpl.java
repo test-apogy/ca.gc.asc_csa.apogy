@@ -30,6 +30,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
@@ -338,17 +342,38 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	public double getTotalDistance() 
 	{		
-		double d = getTotalDistanceGen();
-				
 		// Force update if distance is zero.
 		// TODO Do this in a Transaction friendly way.			
-		if(d == 0)
+		if(totalDistance == 0)
 		{
-			d = computeTotalDistance();
-			setTotalDistance(d);
+			final double newDistance = computeTotalDistance();
+			
+			// If the distance is not zero.
+			if(newDistance != 0)
+			{
+				try
+				{						
+					EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
+					if(domain instanceof TransactionalEditingDomain)
+					{
+						domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
+						{
+							@Override
+							protected void doExecute() 
+							{							
+								setTotalDistance(newDistance);
+							}
+						});										
+					}							
+				}
+				catch(Throwable t)
+				{				
+					t.printStackTrace();
+				}
+			}
 		}
 		
-		return d;
+		return getTotalDistanceGen();
 	}
 	
 	/**
@@ -688,14 +713,13 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	public void initialise() 
 	{	
 		// First, initialize the Trajectory3DToolNode.		
-		// TODO Do this in a Transaction friendly way.				
+		// TODO Do this in a Transaction friendly way.			
+		
 		setTrajectory3DToolNode(ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());	
 		
 		// Then, initialize the rest.
 		super.initialise();
-		
-		System.out.println("====================> Trajectory3DToolImpl.initialise()");
-								
+												
 		try
 		{
 			ApogySystemApiAdapter apogySystemApiAdapter = resolveApogySystemApiAdapter(getVariable());
