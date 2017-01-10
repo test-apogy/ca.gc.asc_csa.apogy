@@ -13,6 +13,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
+import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
 import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 
@@ -117,6 +118,10 @@ public class ConditioningComposite extends Composite {
 		subClassesListComposite.setSelectedEClass(this.abstractInputConditioning.eClass());
 		plotComposite.setAbstractInputConditioning(this.abstractInputConditioning);
 		this.layout();
+	}
+	
+	public void setEComponentQualifier(EComponentQualifier eComponentQualifier){
+		plotComposite.setEComponentQualifier(eComponentQualifier);
 	}
 
 }

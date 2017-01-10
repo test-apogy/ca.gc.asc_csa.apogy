@@ -188,7 +188,12 @@ public class ValueSourceComposite extends Composite {
 
 		if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
 			ControllerSelectionComposite controllerSelectionComposite = new ControllerSelectionComposite(valueComposite,
-					SWT.None);
+					SWT.None){
+				@Override
+				protected void newSelection(ISelection selection) {
+					ValueSourceComposite.this.newSelection(selection);
+				}
+			};
 			controllerSelectionComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 			controllerSelectionComposite.setEComponentQualifier(
 					((ControllerValueSource) bindedEDataTypeArgument.getValueSource()).getEComponentQualifier());

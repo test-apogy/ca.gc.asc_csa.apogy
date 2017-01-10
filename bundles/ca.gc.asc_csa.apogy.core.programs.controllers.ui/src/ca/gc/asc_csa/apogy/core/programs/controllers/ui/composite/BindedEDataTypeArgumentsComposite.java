@@ -187,7 +187,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 
 		if (getSelectedArgument() != null) {
-			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None);
+			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None){
+				@Override
+				protected void newSelection(ISelection selection) {
+					updateCompositeConditioning();
+				}
+			};
 			contentComposite.setBindedEDataTypeArgument(getSelectedArgument());
 		} else {
 			getNoContentComposite(compositeValueSource);
@@ -213,6 +218,11 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			};
 			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(
 					((ControllerValueSource) getSelectedArgument().getValueSource()).getConditioning());
+			
+			if(((ControllerValueSource)getSelectedArgument().getValueSource()).getEComponentQualifier() != null){
+				((ConditioningComposite) compositeConditioning).setEComponentQualifier(((ControllerValueSource)getSelectedArgument().getValueSource()).getEComponentQualifier());
+			}
+			
 			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		} else {
 			compositeConditioning = getNoContentComposite(sectionConditioning);
