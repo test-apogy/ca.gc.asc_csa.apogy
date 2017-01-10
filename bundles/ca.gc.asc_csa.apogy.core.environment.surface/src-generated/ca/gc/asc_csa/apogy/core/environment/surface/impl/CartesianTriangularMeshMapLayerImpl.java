@@ -34,11 +34,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFactory;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.images.AbstractEImage;
@@ -202,24 +199,9 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 			textureImageIsDirty = false;
 			AbstractEImage img = createMeshTextureImage();
 			
-			try
-			{		
-				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-				if(domain instanceof TransactionalEditingDomain)
-				{
-					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
-						@Override
-						protected void doExecute() 
-						{							
-							setTextureImage(img);
-						}
-					});										
-				}							
-			}
-			catch(Throwable t)
-			{				
-				t.printStackTrace();
-			}						
+			
+			// Updates the texture in a Transaction friendly way.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, img);									
 		}				
 		
 		return getTextureImageGen();

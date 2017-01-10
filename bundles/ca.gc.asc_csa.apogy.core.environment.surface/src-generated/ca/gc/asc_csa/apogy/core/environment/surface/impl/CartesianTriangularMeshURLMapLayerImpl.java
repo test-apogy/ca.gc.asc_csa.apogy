@@ -19,12 +19,9 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.converters.ApogyCommonConvertersFacade;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianTriangularMesh;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
@@ -114,20 +111,9 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	public void setUrl(String newUrl) 
 	{				
 		setUrlGen(newUrl);
-		
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-		if(domain instanceof TransactionalEditingDomain)
-		{
-			domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
-				@Override
-				protected void doExecute() 
-				{							
-					setMeshIsDirty(true);
-				}
-			});										
-		}
-	
-		// transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(true));
+				
+		// Sets the dirty flag to true in a Transactions friendly way.
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(true));	
 	}
 	
 	/**
@@ -330,23 +316,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 
 			loadedMesh = null;
 		}
-		
-		// Set mesh dirty to false
-		// TODO : Do this using ApogyCommonEmfTransactionFacade.
-		// transactionSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(false));
-		
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-		if(domain instanceof TransactionalEditingDomain)
-		{
-			domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) {
-				@Override
-				protected void doExecute() 
-				{							
-					setMeshIsDirty(false);
-				}
-			});										
-		}
-						
+				
+		// Sets the dirty flag to false in a Transactions friendly way.
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogySurfaceEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, new Boolean(false));	
+				
 		return loadedMesh;
 	}
 

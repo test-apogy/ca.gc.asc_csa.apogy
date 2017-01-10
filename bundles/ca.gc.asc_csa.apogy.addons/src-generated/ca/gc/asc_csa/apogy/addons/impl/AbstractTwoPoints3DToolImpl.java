@@ -23,17 +23,14 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
-import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.util.NodeRelativePoseListener;
 
 /**
@@ -756,27 +753,8 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			}
 			m.transform(from);
 			
-			final Point3d newFrom = from;
-			
-			try
-			{						
-				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-				if(domain instanceof TransactionalEditingDomain)
-				{
-					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
-					{
-						@Override
-						protected void doExecute() 
-						{							
-							setFromAbsolutePosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(newFrom));
-						}
-					});										
-				}							
-			}
-			catch(Throwable t)
-			{				
-				t.printStackTrace();
-			}			
+			// Updates the FromAbsolutePosition.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_ABSOLUTE_POSITION, ApogyCommonMathFacade.INSTANCE.createTuple3d(from));			
 		}
 	}
 	
@@ -796,26 +774,8 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			}
 			m.transform(to);
 			
-			final Point3d newTo = to;
-			try
-			{						
-				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-				if(domain instanceof TransactionalEditingDomain)
-				{
-					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
-					{
-						@Override
-						protected void doExecute() 
-						{							
-							setToAbsolutePosition(ApogyCommonMathFacade.INSTANCE.createTuple3d(newTo));
-						}
-					});										
-				}							
-			}
-			catch(Throwable t)
-			{				
-				t.printStackTrace();
-			}		
+			// Updates the ToAbsolutePosition.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_ABSOLUTE_POSITION, ApogyCommonMathFacade.INSTANCE.createTuple3d(to));				
 		}
 	}
 	
@@ -829,26 +789,8 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 			distance = to.distance(from);			
 		}		
 		
-		final double newDistance = distance;
-		try
-		{						
-			EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-			if(domain instanceof TransactionalEditingDomain)
-			{
-				domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
-				{
-					@Override
-					protected void doExecute() 
-					{							
-						setDistance(newDistance);
-					}
-				});										
-			}							
-		}
-		catch(Throwable t)
-		{				
-			t.printStackTrace();
-		}
+		// Updates the distance.
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, distance);								
 	}
 	
 	private NodeRelativePoseListener getNodeRelativePoseListener() 

@@ -24,20 +24,20 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
 import ca.gc.asc_csa.apogy.addons.impl.AbstractTwoPoints3DToolImpl;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
+import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.AstronomyUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.AtmosphereUtils;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.EarthSurfaceWorksite;
@@ -45,8 +45,6 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmen
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
-import ca.gc.asc_csa.apogy.core.environment.surface.SurfaceWorksite;
-import ca.gc.asc_csa.apogy.core.invocator.Environment;
 
 /**
  * <!-- begin-user-doc -->
@@ -607,8 +605,11 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			
 			if(!isToNodeLock())
 			{
-				setToNode(node);
-				setToRelativePosition(relativePosition);
+				// Updates TO node
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, node);				
+				
+				// Updates TO relative posiiton.
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, relativePosition);				
 			}	
 			
 			updateSunVector();
@@ -632,26 +633,8 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	{		
 		if(super.getFromNode() == null)
 		{
-			final Node node = getSun();
-			try
-			{						
-				EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-				if(domain instanceof TransactionalEditingDomain)
-				{
-					domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
-					{
-						@Override
-						protected void doExecute() 
-						{										
-							setFromNode(node);
-						}
-					});										
-				}							
-			}
-			catch(Throwable t)
-			{				
-				t.printStackTrace();
-			}			
+			Sun sun = ApogyCoreEnvironmentFacade.INSTANCE.getActiveSun();			
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, sun);										
 		}
 		return super.getFromNode();
 	}
@@ -688,30 +671,31 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	{
 		double sunIntensity = 0.0;		
 		double currentSunIntensityPercentage = 0.0;
+				
+		EarthSurfaceWorksite earthSurfaceWorksite = ApogyEarthSurfaceEnvironmentFacade.INSTANCE.getActiveEarthSurfaceWorksite();
 		
-		ApogyEnvironment env = getApogyEnvironment();
-		
-		if(env != null)
-		{
-			 if(env.getActiveWorksite() instanceof EarthSurfaceWorksite)
-			 {
-				 EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getApogyEnvironment().getActiveWorksite();				 
-				 Date date = earthSurfaceWorksite.getSky().getTime();					
-				 
-				 double observerLongitude = earthSurfaceWorksite.getGeographicalCoordinates().getLongitude();
-				 double observerLatitude = earthSurfaceWorksite.getGeographicalCoordinates().getLatitude();
-				 
-				 HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(date, observerLongitude, observerLatitude);					
-				 sunIntensity = AtmosphereUtils.INSTANCE.getDirectSunIntensity(sunCoordinates.getAltitude(), earthSurfaceWorksite.getGeographicalCoordinates().getElevation());
-				 
-				 updateMaximumSunIntensity(earthSurfaceWorksite, date, observerLongitude, observerLatitude);
-				 
-				 currentSunIntensityPercentage = (sunIntensity / getCurrentDayMaximumSunIntensity()) * 100.0;
-				 if(currentSunIntensityPercentage > 100.0) currentSunIntensityPercentage = 100.0;				 				 			
-			 }
+		if(earthSurfaceWorksite != null)
+		{	
+			// TODO : Should have an active Time Source in a Singleton.
+			Date date = earthSurfaceWorksite.getSky().getTime();					
+			 
+			double observerLongitude = earthSurfaceWorksite.getGeographicalCoordinates().getLongitude();
+			double observerLatitude = earthSurfaceWorksite.getGeographicalCoordinates().getLatitude();
+			 
+			HorizontalCoordinates sunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(date, observerLongitude, observerLatitude);					
+			sunIntensity = AtmosphereUtils.INSTANCE.getDirectSunIntensity(sunCoordinates.getAltitude(), earthSurfaceWorksite.getGeographicalCoordinates().getElevation());
+			 
+			updateMaximumSunIntensity(earthSurfaceWorksite, date, observerLongitude, observerLatitude);
+			 
+			currentSunIntensityPercentage = (sunIntensity / getCurrentDayMaximumSunIntensity()) * 100.0;
+			if(currentSunIntensityPercentage > 100.0) currentSunIntensityPercentage = 100.0;				 				 						 
 		}
-		setSunIntensity(sunIntensity);		
-		setCurrentSunIntensityPercentage(currentSunIntensityPercentage);
+		
+		// Updates Sun intensity in a Transaction Friendly Way		
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.SUN_VECTOR3_DTOOL__SUN_INTENSITY, sunIntensity);
+		
+		// Updates Sun Intensity Percentage in a Transaction Friendly Way
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_SUN_INTENSITY_PERCENTAGE, currentSunIntensityPercentage);
 	}
 	
 	private boolean dayHasChanged(Date currentDate, Date previousDate)
@@ -747,7 +731,9 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			{
 				HorizontalCoordinates highestSunCoordinates = AstronomyUtils.INSTANCE.getHorizontalSunPosition(highestSunTime, observerLongitude, observerLatitude);					
 				double maximumSunIntensity = AtmosphereUtils.INSTANCE.getDirectSunIntensity(highestSunCoordinates.getAltitude(), earthSurfaceWorksite.getGeographicalCoordinates().getElevation());
-				setCurrentDayMaximumSunIntensity(maximumSunIntensity);
+
+				// Update maximum Sun intensity in a Transaction Friendly Way
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.SUN_VECTOR3_DTOOL__CURRENT_DAY_MAXIMUM_SUN_INTENSITY, maximumSunIntensity);				
 			} 			
 		}
 		
@@ -788,35 +774,5 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			GroupNode parent = (GroupNode) getSunVector3DToolNode().getParent();
 			parent.getChildren().remove(getSunVector3DToolNode());			
 		}
-	}
-	
-	protected ApogyEnvironment getApogyEnvironment()
-	{
-		if(apogyEnvironment == null)
-		{
-			try
-			{				
-				Environment env = getToolList().getToolsList().getInvocatorSession().getEnvironment();
-				if(env instanceof ApogyEnvironment)
-				{
-					apogyEnvironment = (ApogyEnvironment) env;					
-				}			
-			}
-			catch(Throwable t)
-			{
-				t.printStackTrace();
-			}
-		}
-		return apogyEnvironment;
-	}
-	
-	protected Sun getSun()
-	{
-		 if(getApogyEnvironment().getActiveWorksite() instanceof SurfaceWorksite)
-		 {
-			 SurfaceWorksite surfaceWorksite = (SurfaceWorksite) getApogyEnvironment().getActiveWorksite();
-			 return surfaceWorksite.getSky().getSun();
-		 }
-		 return null;
 	}
 } //SunVector3DToolImpl

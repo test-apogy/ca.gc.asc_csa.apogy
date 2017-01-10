@@ -30,10 +30,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.transaction.RecordingCommand;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
@@ -41,6 +37,7 @@ import ca.gc.asc_csa.apogy.addons.Trajectory3DTool;
 import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
@@ -287,27 +284,13 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	public Variable basicGetVariable() {
 		return variable;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated_NOT
-	 */
-	public void setVariable(Variable newVariable) 
-	{
-		setVariableGen(newVariable);
-		
-		// Attempts to resolve the ApiAdapter.
-		// TODO Do this in a Transaction friendly way.			
-		setPoseProvider(resolveApogySystemApiAdapter(newVariable));
-	}
 	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariableGen(Variable newVariable) {
+	public void setVariable(Variable newVariable) {
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
@@ -342,34 +325,17 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	public double getTotalDistance() 
 	{		
-		// Force update if distance is zero.
-		// TODO Do this in a Transaction friendly way.			
+		// Force update if distance is zero.		
 		if(totalDistance == 0)
 		{
-			final double newDistance = computeTotalDistance();
-			
+			double newDistance = computeTotalDistance();
+						
 			// If the distance is not zero.
 			if(newDistance != 0)
 			{
-				try
-				{						
-					EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(this);
-					if(domain instanceof TransactionalEditingDomain)
-					{
-						domain.getCommandStack().execute(new RecordingCommand((TransactionalEditingDomain)domain) 
-						{
-							@Override
-							protected void doExecute() 
-							{							
-								setTotalDistance(newDistance);
-							}
-						});										
-					}							
-				}
-				catch(Throwable t)
-				{				
-					t.printStackTrace();
-				}
+				// Updates the TotalDistance in a Transaction friendly way.
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, newDistance) ;				
+
 			}
 		}
 		
@@ -713,17 +679,16 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	public void initialise() 
 	{	
 		// First, initialize the Trajectory3DToolNode.		
-		// TODO Do this in a Transaction friendly way.			
-		
-		setTrajectory3DToolNode(ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());	
-		
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());
+				
 		// Then, initialize the rest.
 		super.initialise();
 												
 		try
 		{
 			ApogySystemApiAdapter apogySystemApiAdapter = resolveApogySystemApiAdapter(getVariable());
-			setPoseProvider(apogySystemApiAdapter);
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, apogySystemApiAdapter);
+			
 			if(apogySystemApiAdapter != null)
 			{												  
 				// Resets pose.						 
@@ -736,8 +701,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 				}				  				
 			}
 			  
-			  // Updates total distance.
-			  setTotalDistance(computeTotalDistance());
+			 // Updates total distance.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, computeTotalDistance());
 		 }
 		 catch(Throwable t)
 		 {			 
@@ -788,6 +753,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	
 	private void updatePose(Matrix4x4 newPose)
 	{				
+		// TODO Transaction friendly !
+		
 		try
 		{						
 			Matrix4d m = newPose.asMatrix4d();							
@@ -872,20 +839,22 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	}
 	
 	protected ApogySystemApiAdapter resolveApogySystemApiAdapter(Variable variable)
-	{
-		if(getVariable() != null)
+	{		
+		if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null)
 		{
-			AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
-			if(abstractTypeImplementation != null)
-			{			
-				if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
-				{
-					ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
-					return apogySystemApiAdapter;			  						  			
+			if(variable != null)
+			{
+				AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+				if(abstractTypeImplementation != null)
+				{			
+					if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
+					{
+						ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+						return apogySystemApiAdapter;			  						  			
+					}
 				}
 			}
 		}
-		
 		return null;
 	}
 	
@@ -906,7 +875,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 						  {
 							  if(msg.getNewValue() instanceof Matrix4x4)
 							  {
-								  Matrix4x4 newPose = (Matrix4x4) msg.getNewValue();							  						 			
+								  Matrix4x4 newPose = (Matrix4x4) msg.getNewValue();	
+								  
 								  updatePose(newPose);						  						 
 							  }
 						  }
@@ -987,7 +957,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 				{
 					case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:					
 					{
-						setPoseProvider(resolveApogySystemApiAdapter(getVariable()));
+						// Updates the Pose Provider in a Transaction friendly way.
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(Trajectory3DToolImpl.this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, resolveApogySystemApiAdapter(getVariable()));
 					}
 					break;
 				}
@@ -1055,7 +1026,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 				currentContext.eAdapters().add(this);
 			}
 				
-			setPoseProvider(resolveApogySystemApiAdapter(getVariable()));
+			// Updates the Pose Provider in a Transaction friendly way.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(Trajectory3DToolImpl.this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, resolveApogySystemApiAdapter(getVariable()));
 		}
 	}
 	
