@@ -75,7 +75,7 @@ public class ApogyCommonUiItemProviderAdapterFactory extends ApogyCommonUiAdapte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyWorkspaceUiEditPlugin.INSTANCE, ApogyCommonUiPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(ApogyCommonUiEditPlugin.INSTANCE, ApogyCommonUiPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.

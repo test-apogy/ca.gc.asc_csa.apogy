@@ -133,7 +133,7 @@ public class NewScriptBasedProgramWizardPage extends WizardPage {
 		});
 		
 		subClassesListComposite = new SubClassesListComposite(container, SWT.None);
-		subClassesListComposite.setProgramSuperClass(programSuperClass);
+		subClassesListComposite.setSuperClass(programSuperClass);
 		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		subClassesListComposite.addSelectionChangedListener(new ISelectionChangedListener() {
 			

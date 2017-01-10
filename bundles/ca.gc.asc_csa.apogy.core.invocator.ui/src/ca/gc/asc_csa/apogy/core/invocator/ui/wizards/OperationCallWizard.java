@@ -13,6 +13,8 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import java.util.Arrays;
+
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -38,7 +40,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ProgramsList;
 import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
-public class NewOperationCallWizard extends Wizard implements INewWizard {
+public class OperationCallWizard extends Wizard implements INewWizard {
 
 	private OperationCallsListWizardPage operationCallsListWizardPage;
 	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
@@ -52,7 +54,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	/**
 	 * Constructor for NewApogySessionWizard.
 	 */	
-	public NewOperationCallWizard(OperationCallsList operationCallsList){
+	public OperationCallWizard(OperationCallsList operationCallsList){
 		super();
 		this.operationCallsList = operationCallsList;
 		initialize(operationCallsList.getProgramsGroup());
@@ -81,8 +83,8 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
 		if (page == operationCallEOperationsWizardPage) {
-			if(!operationCall.getEOperation().getEParameters().isEmpty()){
-				if (argumentsWizardPage == null) {
+			if(operationCall.getEOperation() != null && !operationCall.getEOperation().getEParameters().isEmpty()){
+				if (!Arrays.asList(getPages()).contains(getArgumentsWizardPage())) {
 					addPage(getArgumentsWizardPage());
 				} else {
 					return getArgumentsWizardPage();
@@ -124,7 +126,14 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */	
 	protected VariableFeatureReferenceWizardPage getVariableFeatureReferenceWizardPage(){
 		if (variableFeatureReferenceWizardPage == null){
-			variableFeatureReferenceWizardPage = new VariableFeatureReferenceWizardPage(getVariablesList(), getOperationCall());	
+			variableFeatureReferenceWizardPage = new VariableFeatureReferenceWizardPage(getVariablesList(), getOperationCall()){
+				@Override
+				protected void resetOperationCall() {
+					getOperationCall().setArgumentsList(null);
+					getOperationCall().setEOperation(null);
+					getArgumentsWizardPage().setOperationCall(getOperationCall());
+				}
+			};	
 		}
 		return variableFeatureReferenceWizardPage;
 	}

@@ -28,7 +28,6 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.VariableFeatureReference;
-import ca.gc.asc_csa.apogy.core.invocator.ui.ApogyCoreInvocatorUIFacade;
 
 public class OperationCallEOperationsWizardPage extends WizardPage {
 
@@ -93,14 +92,26 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 		eOperationsComposite = new EOperationsComposite(parent, SWT.None){
 			@Override
 			protected void newSelection(TreeSelection selection) {
-				operationCall.setEOperation(getSelectedEOperation());
-				ApogyCoreInvocatorUIFacade.INSTANCE.setEOperationInitArguments(getSelectedEOperation(), operationCall);
-				validate();
+				OperationCallEOperationsWizardPage.this.newSelection();
 			}
 		};		
 		setControl(eOperationsComposite);
 		
 		validate();
+	}
+	
+	protected void newSelection() {
+		operationCall.setEOperation(getEOperationsComposite().getSelectedEOperation());
+		ApogyCoreInvocatorFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(), getOperationCall());
+		validate();
+	}
+	
+	public EOperationsComposite getEOperationsComposite() {
+		return eOperationsComposite;
+	}
+	
+	public OperationCall getOperationCall() {
+		return operationCall;
 	}
 	
 	@Override

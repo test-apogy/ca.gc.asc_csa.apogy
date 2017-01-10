@@ -23,21 +23,27 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
-import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.ControllerBindingDetailsComposite;
 
 public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
-		new ControllerBindingDetailsComposite(parent, SWT.None);
+		new NoContentComposite(parent, SWT.None) {
+			@Override
+			protected String getMessage() {
+				return "TODO";
+			}
+		};
+//		new ControllerBindingDetailsComposite(parent, SWT.None);
 	}
 
 	@Override
 	protected void setCompositeContents(EObject eObject) {
-		((ControllerBindingDetailsComposite) getActualComposite())
-				.setOperationCallControllerBinding((OperationCallControllerBinding) eObject);
+		// ((ControllerBindingDetailsComposite) getActualComposite())
+		// .setOperationCallControllerBinding((OperationCallControllerBinding)
+		// eObject);
 	}
 
 	@Override

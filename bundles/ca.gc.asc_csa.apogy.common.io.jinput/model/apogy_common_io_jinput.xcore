@@ -42,8 +42,19 @@ type Adapter wraps Adapter
 
 class ApogyCommonIOJInputFacade
 {	
-	op void addSelectComponentAdapter(EComponentQualifier eComponentQualifier)
-	op void forceStopSelectComponent(EComponentQualifier eComponentQualifier)
+	boolean selectingComponent = "false"
+	
+	/*
+	 * Starts the component selection. 
+	 * @param eComponentQualifier The {@link EComponentQualifier} to save the selection.
+	 */
+	op void startSelectComponent(EComponentQualifier eComponentQualifier)
+	
+	/*
+	 * Stops the component selection. 
+	 * @param eComponentQualifier The {@link EComponentQualifier} that was being selected.
+	 */
+	op void stopSelectComponent(EComponentQualifier eComponentQualifier)
 }
 
 class EController

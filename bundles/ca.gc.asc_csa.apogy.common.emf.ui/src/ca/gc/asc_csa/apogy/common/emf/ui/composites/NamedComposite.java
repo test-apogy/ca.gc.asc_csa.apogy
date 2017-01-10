@@ -19,6 +19,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.edit.EMFEditProperties;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -36,6 +37,11 @@ public class NamedComposite extends Composite {
 	private Text nameText;
 	private EditingDomain editingDomain;
 
+	/**
+	 * @deprecated Should use NamedComposite(composite, int) and then
+	 *             setNames(Named). This will get the
+	 *             TransactionalEditingDomain.
+	 */
 	public NamedComposite(Composite parent, int style, EditingDomain editingDomain) {
 		this(parent, style);
 		this.editingDomain = editingDomain;
@@ -105,7 +111,7 @@ public class NamedComposite extends Composite {
 
 	public void setNamed(Named newNamed, boolean update) {
 		named = newNamed;
-
+		editingDomain = TransactionUtil.getEditingDomain(newNamed);
 		if (update) {
 			if (m_bindingContext != null) {
 				m_bindingContext.dispose();

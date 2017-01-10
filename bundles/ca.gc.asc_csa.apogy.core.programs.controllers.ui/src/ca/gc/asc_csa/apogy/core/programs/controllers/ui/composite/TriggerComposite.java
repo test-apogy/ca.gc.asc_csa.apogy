@@ -34,18 +34,21 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EObjectListComposite;
+import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
+import ca.gc.asc_csa.apogy.common.io.jinput.ui.composites.ControllerSelectionComposite;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
-import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerEdgeTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllerStateTrigger;
+import ca.gc.asc_csa.apogy.core.programs.controllers.EdgeType;
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.TimeTrigger;
 import ca.gc.asc_csa.apogy.core.programs.controllers.Trigger;
 
-public class ControllerBindingDefinitionComposite extends ScrolledComposite {
+public class TriggerComposite extends ScrolledComposite {
 
 	private Composite composite;
 	private EObjectListComposite triggersListComposite;
@@ -64,24 +67,36 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 	 * @param style
 	 *            Composite style.
 	 */
-	public ControllerBindingDefinitionComposite(Composite parent, int style) {
+	public TriggerComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new FillLayout());
 		setExpandHorizontal(true);
 		setExpandVertical(true);
 
 		composite = new Composite(this, SWT.None);
-		composite.setLayout(new GridLayout(2, true));
-		
+		GridLayout gridLayout = new GridLayout(1, true);
+		gridLayout.marginWidth = 0;
+		gridLayout.marginHeight = 0;
+		composite.setLayout(gridLayout);
+
 		triggersListComposite = new EObjectListComposite(composite, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
-				EObject eObject = ApogyCoreProgramsControllersFactory.eINSTANCE.create((EClass)getSelectedEObject());
-				operationCallControllerBinding.setTrigger((Trigger) eObject);
+				Trigger trigger = null;
+				if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER) {
+					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createTimeTrigger();
+				} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER) {
+					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger();
+				} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER) {
+					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger();
+				}
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
+						ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+						trigger);
 				setEComponentComposite();
-				ControllerBindingDefinitionComposite.this.newSelection(selection);
+				TriggerComposite.this.newSelection(selection);
 			}
-			
+
 			@Override
 			protected StyledCellLabelProvider getLabelProvider() {
 				return new StyledCellLabelProvider() {
@@ -94,11 +109,11 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 				};
 			}
 		};
-		triggersListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		
-		eComponentComposite = new Composite(composite, SWT.None);
-		eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-		
+		triggersListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
+
+		eComponentComposite = new Composite(composite, SWT.NONE);
+		eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+
 		setContent(composite);
 		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
@@ -106,35 +121,40 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 	public Trigger getTrigger() {
 		return this.operationCallControllerBinding == null ? null : this.operationCallControllerBinding.getTrigger();
 	}
-	
-	public BindedEDataTypeArgument getSelectedArgument(){
-		// TODO
-		return null;
-	}
 
-	private void setEComponentComposite(){
-		
-		if(eComponentComposite != null){
+	private void setEComponentComposite() {
+
+		if (eComponentComposite != null) {
 			eComponentComposite.dispose();
 		}
-		
+		if (m_bindingContext != null) {
+			m_bindingContext.dispose();
+		}
 		Trigger trigger = this.operationCallControllerBinding.getTrigger();
-		
-		if(trigger instanceof TimeTrigger){
-			eComponentComposite = new BindedEDataTypeArgumentsComposite(composite, SWT.None);
-			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-			
-		}else if(trigger instanceof ControllerEdgeTrigger){
+
+		if (trigger instanceof TimeTrigger) {
+			// TODO replace by general apogy entrybox with units.
 			eComponentComposite = new Composite(composite, SWT.None);
-			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-			eComponentComposite.setLayout(new FillLayout(SWT.VERTICAL));
-			
-			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None){
+			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.UP, true, false, 1, 1));
+			eComponentComposite.setLayout(new GridLayout(3, false));
+			ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(eComponentComposite, trigger);
+		} else if (trigger instanceof ControllerEdgeTrigger) {
+			eComponentComposite = new Composite(composite, SWT.None);
+			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+			GridLayout gridLayout = new GridLayout(1, true);
+			gridLayout.marginWidth = 0;
+			gridLayout.marginHeight = 0;
+			eComponentComposite.setLayout(gridLayout);
+
+			EObjectListComposite edgeTypesComposite = new EObjectListComposite(eComponentComposite, SWT.None) {
 				@Override
 				protected void newSelection(TreeSelection selection) {
-					// TODO
-					super.newSelection(selection);
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(trigger,
+							ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE,
+							EdgeType.get(((EEnumLiteral) selection.getFirstElement()).getLiteral()));
+					TriggerComposite.this.newSelection(selection);
 				}
+
 				@Override
 				protected StyledCellLabelProvider getLabelProvider() {
 					return new StyledCellLabelProvider() {
@@ -147,16 +167,30 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 					};
 				}
 			};
+			edgeTypesComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			edgeTypesComposite.setEObjectsList(ApogyCoreProgramsControllersPackage.Literals.EDGE_TYPE.getELiterals());
-			
+
 			ControllerSelectionComposite controllerSelectionComposite = new ControllerSelectionComposite(
-					eComponentComposite, SWT.None);
+					eComponentComposite, SWT.NONE) {
+				@Override
+				protected void newSelection(ISelection selection) {
+					TriggerComposite.this.newSelection(selection);
+				}
+			};
+			controllerSelectionComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			controllerSelectionComposite
 					.setEComponentQualifier(((ControllerEdgeTrigger) trigger).getComponentQualifier());
-	} else if (trigger instanceof ControllerStateTrigger) {
-			eComponentComposite = new ControllerSelectionComposite(composite, SWT.None);
+		} else if (trigger instanceof ControllerStateTrigger) {
+			eComponentComposite = new ControllerSelectionComposite(composite, SWT.None) {
+				@Override
+				protected void newSelection(ISelection selection) {
+					TriggerComposite.this.newSelection(selection);
+				}
+			};
+			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			((ControllerSelectionComposite) eComponentComposite)
 					.setEComponentQualifier(((ControllerStateTrigger) trigger).getComponentQualifier());
+
 		}
 		composite.layout();
 	}
@@ -172,7 +206,7 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
 		this.operationCallControllerBinding = operationCallControllerBinding;
-		
+
 		/**
 		 * Set the triggers to select
 		 */
@@ -181,24 +215,21 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 				ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER
 						.getEReferenceType()));
 		triggersListComposite.setEObjectsList(eObjectsEClassList);
-		
+
 		setEComponentComposite();
 
 		this.operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
 
-	protected DataBindingContext initDataBindingsCustom() {
-		m_bindingContext = new DataBindingContext();
+	protected void newSelection(ISelection selection) {
 
-		return m_bindingContext;
 	}
 
-	
-	protected void newSelection(ISelection selection){
-		
+	public EObject getSelectedTrigger() {
+		return triggersListComposite.getSelectedEObject();
 	}
+
 	/**
-	 * TODO
 	 * @return
 	 */
 	public Adapter getAdapter() {
@@ -206,7 +237,14 @@ public class ControllerBindingDefinitionComposite extends ScrolledComposite {
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					setOperationCallControllerBinding(operationCallControllerBinding);
+					if (msg.getFeature() != null) {
+						if (msg.getFeature() != ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER) {
+							triggersListComposite.refreshTreeViewer();
+						} else {
+							setEComponentComposite();
+						}
+
+					}
 				}
 			};
 		}

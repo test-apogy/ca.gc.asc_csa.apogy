@@ -221,7 +221,16 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier() {
+	public EAttribute getApogyCommonIOJInputFacade_SelectingComponent() {
+		return (EAttribute)apogyCommonIOJInputFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier() {
 		return apogyCommonIOJInputFacadeEClass.getEOperations().get(0);
 	}
 
@@ -230,7 +239,7 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier() {
+	public EOperation getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier() {
 		return apogyCommonIOJInputFacadeEClass.getEOperations().get(1);
 	}
 
@@ -721,8 +730,9 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 
 		// Create classes and their features
 		apogyCommonIOJInputFacadeEClass = createEClass(APOGY_COMMON_IOJ_INPUT_FACADE);
-		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___ADD_SELECT_COMPONENT_ADAPTER__ECOMPONENTQUALIFIER);
-		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___FORCE_STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER);
+		createEAttribute(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE__SELECTING_COMPONENT);
+		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___START_SELECT_COMPONENT__ECOMPONENTQUALIFIER);
+		createEOperation(apogyCommonIOJInputFacadeEClass, APOGY_COMMON_IOJ_INPUT_FACADE___STOP_SELECT_COMPONENT__ECOMPONENTQUALIFIER);
 
 		eControllerEClass = createEClass(ECONTROLLER);
 		createEAttribute(eControllerEClass, ECONTROLLER__LAST_POLL_RESULT);
@@ -822,11 +832,12 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apogyCommonIOJInputFacadeEClass, ApogyCommonIOJInputFacade.class, "ApogyCommonIOJInputFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getApogyCommonIOJInputFacade_SelectingComponent(), theEcorePackage.getEBoolean(), "selectingComponent", "false", 0, 1, ApogyCommonIOJInputFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getApogyCommonIOJInputFacade__AddSelectComponentAdapter__EComponentQualifier(), null, "addSelectComponentAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier(), null, "startSelectComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCommonIOJInputFacade__ForceStopSelectComponent__EComponentQualifier(), null, "forceStopSelectComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier(), null, "stopSelectComponent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEComponentQualifier(), "eComponentQualifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(eControllerEClass, EController.class, "EController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -930,6 +941,18 @@ public class ApogyCommonIOJInputPackageImpl extends EPackageImpl implements Apog
 			 "modelDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput/src-generated",
 			 "editDirectory", "/ca.gc.asc_csa.apogy.common.io.jinput.edit/src-generated",
 			 "basePackage", "ca.gc.asc_csa.apogy.common.io"
+		   });	
+		addAnnotation
+		  (getApogyCommonIOJInputFacade__StartSelectComponent__EComponentQualifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Starts the component selection.\n@param eComponentQualifier The {@link EComponentQualifier} to save the selection."
+		   });	
+		addAnnotation
+		  (getApogyCommonIOJInputFacade__StopSelectComponent__EComponentQualifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Stops the component selection.\n@param eComponentQualifier The {@link EComponentQualifier} that was being selected."
 		   });
 	}
 

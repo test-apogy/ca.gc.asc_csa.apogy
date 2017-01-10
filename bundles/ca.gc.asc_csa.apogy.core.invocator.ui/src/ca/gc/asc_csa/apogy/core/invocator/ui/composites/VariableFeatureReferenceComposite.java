@@ -45,8 +45,11 @@ import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
 import org.eclipse.jface.viewers.IContentProvider;
 import org.eclipse.jface.viewers.ILazyTreeContentProvider;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.ITreeSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -67,6 +70,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
@@ -113,13 +117,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 	 */
 	public VariableFeatureReferenceComposite(Composite parent, int style) {
 		super(parent, style);
-
+		setLayout(new GridLayout(3, true));
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				toolkit.dispose();
 			}
 		});
-		setLayout(new GridLayout(3, true));
 
 		/**
 		 * 
@@ -136,6 +139,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 		table.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		table.setLinesVisible(true);
 		sctnVariable.setClient(table);
+		variablesViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		/**
 		 * 
@@ -146,14 +155,25 @@ public class VariableFeatureReferenceComposite extends Composite {
 		sctnSubType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		sctnSubType.setText("Sub-Type");
 
-		Composite compositeSubType = new Composite(sctnSubType, SWT.None);// .createCompositeSeparator(sctnSubType);
-		compositeSubType.setLayout(new GridLayout(1, false));
+		Composite compositeSubType = new Composite(sctnSubType, SWT.None);
+		compositeSubType.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		GridLayout gridLayout_subTypes = new GridLayout(1, false);
+		gridLayout_subTypes.marginHeight = 0;
+		gridLayout_subTypes.marginWidth = 0;
+		gridLayout_subTypes.marginBottom = 5;
+		compositeSubType.setLayout(gridLayout_subTypes);
 
 		typeMemberViewer = new TreeViewer(compositeSubType, SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
 		typeMemberViewer.setUseHashlookup(true);
 		Tree tree = typeMemberViewer.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		tree.setLinesVisible(true);
+		typeMemberViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		Button clearTypeButton = new Button(compositeSubType, SWT.NONE);
 		clearTypeButton.addSelectionListener(new SelectionAdapter() {
@@ -185,13 +205,24 @@ public class VariableFeatureReferenceComposite extends Composite {
 		sctnFeature.setText("Feature");
 
 		Composite compositeFeature = new Composite(sctnFeature, SWT.NONE);
-		compositeFeature.setLayout(new GridLayout(1, false));
+		compositeFeature.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		GridLayout gridLayout_feature = new GridLayout(1, false);
+		gridLayout_feature.marginHeight = 0;
+		gridLayout_feature .marginWidth = 0;
+		gridLayout_feature.marginBottom = 5;
+		compositeFeature.setLayout(gridLayout_feature);
 
 		featuresViewer = new TreeViewer(compositeFeature,
 				SWT.VIRTUAL | SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL | SWT.SINGLE);
 		featuresViewer.setUseHashlookup(true);
 		featuresViewer.setContentProvider(getFeaturesContentProvider());
 		featuresViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
+		featuresViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection(event.getSelection());
+			}
+		});
 
 		Tree featuresTree = featuresViewer.getTree();
 		featuresTree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -215,6 +246,10 @@ public class VariableFeatureReferenceComposite extends Composite {
 		clearFeatureSelection.setText("Clear");
 
 		sctnFeature.setClient(compositeFeature);
+	}
+
+	protected void newSelection(ISelection selection) {
+
 	}
 
 	/**

@@ -335,7 +335,10 @@ class ApogyCoreInvocatorFacade
 	 */
 	op String getAbstractTypeImplementationImplementationName(AbstractTypeImplementation implementation, boolean fullyQualified)
 	
-	
+	/*
+	 * TODO
+	 */
+	 op void setEOperationInitArguments(EOperation eOperation, OperationCall operationCall)
 }
 
 //interface ProgramFilter{

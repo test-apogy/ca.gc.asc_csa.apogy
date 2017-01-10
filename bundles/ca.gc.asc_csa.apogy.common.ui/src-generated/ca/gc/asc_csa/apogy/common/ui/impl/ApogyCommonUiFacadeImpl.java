@@ -27,9 +27,15 @@ import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Monitor;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
+
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.ui.Activator;
@@ -138,6 +144,22 @@ public class ApogyCommonUiFacadeImpl extends MinimalEObjectImpl.Container implem
 				}
 			}
 
+		});
+		// Adjusts the columns when the tree is expanded
+		treeViewer.getTree().addListener(SWT.Expand, new Listener() {
+			public void handleEvent(Event e) {
+			TreeItem treeItem = (TreeItem)e.item;
+		      TreeColumn[] treeColumns = treeItem.getParent().getColumns();
+		      Display.getCurrent().asyncExec(new Runnable() {
+
+		         @Override
+		         public void run() {
+		            for (TreeColumn treeColumn : treeColumns)
+		                 treeColumn.pack();
+		         }
+		      });
+				
+			}
 		});
 	}
 

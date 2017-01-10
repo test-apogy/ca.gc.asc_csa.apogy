@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.emf.ui;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.Named;
 import javax.measure.unit.Unit;
 
 import org.eclipse.emf.ecore.EObject;
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.swt.graphics.Color;
 import ca.gc.asc_csa.apogy.common.emf.Ranges;
 import ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIFacadeImpl;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,5 +61,29 @@ public interface ApogyCommonEMFUIFacade extends EObject
 	 * @generated
 	 */
   Unit<?> getDisplayUnits(ETypedElement eTypedElement);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Opens a dialog to delete the {@link Named} object.
+	 * @param named Reference to the {@link Named}
+	 * <!-- end-model-doc -->
+	 * @model namedUnique="false"
+	 * @generated
+	 */
+	void openDeleteNamedDialog(Named named);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Opens a dialog to delete a {@link List} of {@link Named} objects.
+	 * @param namedList Reference to the {@link List}
+	 * <!-- end-model-doc -->
+	 * @model namedListDataType="ca.gc.asc_csa.apogy.common.emf.ui.List" namedListUnique="false"
+	 * @generated
+	 */
+	void openDeleteNamedDialog(List<? extends Named> namedList);
 
 } // ApogyCommonEMFUIFacade

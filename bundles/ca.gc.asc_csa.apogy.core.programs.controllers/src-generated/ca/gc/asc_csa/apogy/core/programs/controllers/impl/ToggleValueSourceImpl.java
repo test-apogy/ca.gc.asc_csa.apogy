@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.impl;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -246,7 +247,7 @@ public class ToggleValueSourceImpl extends ValueSourceImpl implements ToggleValu
 	  	Boolean value = new Boolean(isCurrentValue());
 	  	
 	  	// Toggle current value
-	  	setCurrentValue(!isCurrentValue());
+	  	ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE, !isCurrentValue());
 	  	
 		return value;
 	}

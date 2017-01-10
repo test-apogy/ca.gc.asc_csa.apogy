@@ -57,7 +57,7 @@ import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCallsList;
-import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard;
+import ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallWizard;
 
 public class OperationCallsListComposite extends ScrolledComposite {
 	private DataBindingContext m_currentDataBindings;
@@ -123,7 +123,7 @@ public class OperationCallsListComposite extends ScrolledComposite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 
-				NewOperationCallWizard newOperationCallWizard = new NewOperationCallWizard(operationCallsListBinder.getValue()) {
+				OperationCallWizard newOperationCallWizard = new OperationCallWizard(operationCallsListBinder.getValue()) {
 					@Override
 					public boolean performFinish() {
 						// FIXME Move to core + UI facade

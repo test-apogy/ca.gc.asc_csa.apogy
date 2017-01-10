@@ -18,11 +18,13 @@ import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacad
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFactory;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -47,6 +49,13 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EDataType transactionalEditingDomainEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType collectionEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -94,6 +103,9 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theApogyCommonEmfTransactionPackage.createPackageContents();
 
@@ -132,8 +144,80 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonEmfTransactionFacade__AddInTempTransactionalEditingDomain__EObject() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object_int() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Object() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Collection() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object() {
+		return apogyCommonEmfTransactionFacadeEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getTransactionalEditingDomain() {
 		return transactionalEditingDomainEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getCollection() {
+		return collectionEDataType;
 	}
 
 	/**
@@ -166,9 +250,17 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		// Create classes and their features
 		apogyCommonEmfTransactionFacadeEClass = createEClass(APOGY_COMMON_EMF_TRANSACTION_FACADE);
 		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___GET_DEFAULT_EDITING_DOMAIN);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___ADD_IN_TEMP_TRANSACTIONAL_EDITING_DOMAIN__EOBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_SET__EOBJECT_ESTRUCTURALFEATURE_OBJECT_INT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_ADD__EOBJECT_ESTRUCTURALFEATURE_COLLECTION);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_REMOVE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
+		createEOperation(apogyCommonEmfTransactionFacadeEClass, APOGY_COMMON_EMF_TRANSACTION_FACADE___BASIC_DELETE__EOBJECT_ESTRUCTURALFEATURE_OBJECT);
 
 		// Create data types
 		transactionalEditingDomainEDataType = createEDataType(TRANSACTIONAL_EDITING_DOMAIN);
+		collectionEDataType = createEDataType(COLLECTION);
 	}
 
 	/**
@@ -194,6 +286,9 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -205,8 +300,43 @@ public class ApogyCommonEmfTransactionPackageImpl extends EPackageImpl implement
 
 		initEOperation(getApogyCommonEmfTransactionFacade__GetDefaultEditingDomain(), this.getTransactionalEditingDomain(), "getDefaultEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		EOperation op = initEOperation(getApogyCommonEmfTransactionFacade__AddInTempTransactionalEditingDomain__EObject(), null, "addInTempTransactionalEditingDomain", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object(), null, "basicSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicSet__EObject_EStructuralFeature_Object_int(), null, "basicSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "index", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Object(), null, "basicAdd", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicAdd__EObject_EStructuralFeature_Collection(), null, "basicAdd", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCollection(), "collection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicRemove__EObject_EStructuralFeature_Object(), null, "basicRemove", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEmfTransactionFacade__BasicDelete__EObject_EStructuralFeature_Object(), null, "basicDelete", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "owner", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEStructuralFeature(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize data types
 		initEDataType(transactionalEditingDomainEDataType, TransactionalEditingDomain.class, "TransactionalEditingDomain", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(collectionEDataType, Collection.class, "Collection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.Collection<?>");
 
 		// Create resource
 		createResource(eNS_URI);

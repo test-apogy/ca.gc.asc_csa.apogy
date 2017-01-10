@@ -16,9 +16,11 @@ package ca.gc.asc_csa.apogy.common.emf.transaction;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 
 import ca.gc.asc_csa.apogy.common.emf.transaction.impl.ApogyCommonEmfTransactionFacadeImpl;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,5 +56,67 @@ public interface ApogyCommonEmfTransactionFacade extends EObject {
 	 * @generated
 	 */
 	TransactionalEditingDomain getDefaultEditingDomain();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Puts the specified {@link EObject} inside a {@link ResourceSet} that uses a {@link TransactionalEditingDomain}.
+	 * It is important to remove the {@link EObject} when the temporary {@link TransactionalEditingDomain}
+	 * is no longer needed to be able to save the modification made to the {@link EObject}.
+	 * @param eObject The reference to the {@link EObject}.
+	 * <!-- end-model-doc -->
+	 * @model eObjectUnique="false"
+	 * @generated
+	 */
+	void addInTempTransactionalEditingDomain(EObject eObject);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicSet(EObject owner, EStructuralFeature feature, Object value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false" indexUnique="false"
+	 * @generated
+	 */
+	void basicSet(EObject owner, EStructuralFeature feature, Object value, int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicAdd(EObject owner, EStructuralFeature feature, Object value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" collectionDataType="ca.gc.asc_csa.apogy.common.emf.transaction.Collection" collectionUnique="false"
+	 * @generated
+	 */
+	void basicAdd(EObject owner, EStructuralFeature feature, Collection<?> collection);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicRemove(EObject owner, EStructuralFeature feature, Object value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ownerUnique="false" featureUnique="false" valueUnique="false"
+	 * @generated
+	 */
+	void basicDelete(EObject owner, EStructuralFeature feature, Object value);
 
 } // ApogyCommonEmfTransactionFacade

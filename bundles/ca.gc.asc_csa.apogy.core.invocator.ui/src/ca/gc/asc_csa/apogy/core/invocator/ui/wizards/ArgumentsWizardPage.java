@@ -50,6 +50,10 @@ public class ArgumentsWizardPage extends WizardPage {
 	public ArgumentsWizardPage(
 			OperationCall operationCall){
 		this();
+		setOperationCall(operationCall);
+	}
+	
+	public void setOperationCall(OperationCall operationCall){
 		if (this.operationCall != null){
 			this.operationCall.eAdapters().remove(getAdapter());
 		}
@@ -57,6 +61,10 @@ public class ArgumentsWizardPage extends WizardPage {
 		this.operationCall = operationCall;
 		
 		operationCall.eAdapters().add(getAdapter());
+		
+		if(argumentsComposite != null){
+			argumentsComposite.setOperationCall(operationCall);
+		}
 	}
 
 	private Adapter getAdapter() {

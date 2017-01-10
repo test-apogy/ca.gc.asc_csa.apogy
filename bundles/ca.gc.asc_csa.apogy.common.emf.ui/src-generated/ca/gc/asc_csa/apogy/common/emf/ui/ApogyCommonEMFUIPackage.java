@@ -120,13 +120,31 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 	int APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
 
 		/**
+	 * The operation id for the '<em>Open Delete Named Dialog</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__NAMED = 2;
+
+		/**
+	 * The operation id for the '<em>Open Delete Named Dialog</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__LIST = 3;
+
+		/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 2;
+	int APOGY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 4;
 
 		/**
 	 * The meta object id for the '<em>Color</em>' data type.
@@ -151,6 +169,17 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 
 
   /**
+	 * The meta object id for the '<em>List</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getList()
+	 * @generated
+	 */
+	int LIST = 3;
+
+
+		/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +210,26 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 	EOperation getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#openDeleteNamedDialog(ca.gc.asc_csa.apogy.common.emf.Named) <em>Open Delete Named Dialog</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Open Delete Named Dialog</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#openDeleteNamedDialog(ca.gc.asc_csa.apogy.common.emf.Named)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__Named();
+
+		/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#openDeleteNamedDialog(java.util.List) <em>Open Delete Named Dialog</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Open Delete Named Dialog</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade#openDeleteNamedDialog(java.util.List)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__List();
+
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.graphics.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,6 +252,17 @@ public interface ApogyCommonEMFUIPackage extends EPackage
   EDataType getUnit();
 
   /**
+	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List<? extends ca.gc.asc_csa.apogy.common.emf.Named>"
+	 * @generated
+	 */
+	EDataType getList();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +313,22 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 		EOperation APOGY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getApogyCommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
 				/**
+		 * The meta object literal for the '<em><b>Open Delete Named Dialog</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__NAMED = eINSTANCE.getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__Named();
+
+			/**
+		 * The meta object literal for the '<em><b>Open Delete Named Dialog</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMFUI_FACADE___OPEN_DELETE_NAMED_DIALOG__LIST = eINSTANCE.getApogyCommonEMFUIFacade__OpenDeleteNamedDialog__List();
+
+				/**
 		 * The meta object literal for the '<em>Color</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -271,6 +347,16 @@ public interface ApogyCommonEMFUIPackage extends EPackage
 		 * @generated
 		 */
     EDataType UNIT = eINSTANCE.getUnit();
+
+				/**
+		 * The meta object literal for the '<em>List</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.common.emf.ui.impl.ApogyCommonEMFUIPackageImpl#getList()
+		 * @generated
+		 */
+		EDataType LIST = eINSTANCE.getList();
 
   }
 

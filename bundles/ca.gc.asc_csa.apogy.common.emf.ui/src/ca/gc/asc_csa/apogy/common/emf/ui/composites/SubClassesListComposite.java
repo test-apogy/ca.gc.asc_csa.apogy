@@ -25,6 +25,8 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.ISelectionProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -32,12 +34,11 @@ import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 
@@ -54,30 +55,40 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	public SubClassesListComposite(Composite parent, int style) {
 		super(parent, style);
-		GridLayout gridLayout = new GridLayout(1, false);
-		gridLayout.marginHeight = 0;
-		setLayout(gridLayout);
-
-		Label lblProgramType = new Label(this, SWT.NONE);
-		lblProgramType.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
-		lblProgramType.setText("Program Type");
+		setLayout(new FillLayout());
 
 		treeViewerSubClasses = new TreeViewer(this, SWT.BORDER);
 		Tree treeTypes = treeViewerSubClasses.getTree();
 		treeTypes.setLinesVisible(true);
-		treeTypes.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		ColumnViewerToolTipSupport.enableFor(treeViewerSubClasses);
 
 		TreeViewerColumn treeViewerColumn = new TreeViewerColumn(treeViewerSubClasses, SWT.NONE);
 		TreeColumn treeColumn = treeViewerColumn.getColumn();
-		treeColumn.setWidth(200);
-		treeColumn.setText("Name");
+		treeColumn.setWidth(100);
 
-		treeViewerSubClasses.setContentProvider(new ProgramsTypeContentProvider(adapterFactory));
-		treeViewerSubClasses.setLabelProvider(new TypesLabelProvider());
+		treeViewerSubClasses.addSelectionChangedListener(new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				newSelection((TreeSelection)event.getSelection());
+			}
+		});
+		treeViewerSubClasses.setContentProvider(getContentProvider());
+		treeViewerSubClasses.setLabelProvider(getLabelProvider());
 	}
 
+	/**
+	 * Method that can be overwritten to specify a label provider
+	 */
+	protected StyledCellLabelProvider getLabelProvider(){
+		return new TypesLabelProvider();
+	}
 	
+	/**
+	 * Method that can be overwritten to specify a content provider
+	 */
+	protected AdapterFactoryContentProvider getContentProvider() {
+		return new typeContentProvider(adapterFactory);
+	}
 	/**
 	 * Label provider for the treeViewer
 	 */
@@ -117,9 +128,9 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	/**
 	 * Content provider for the treeViewer
 	 */
-	private class ProgramsTypeContentProvider extends AdapterFactoryContentProvider {
+	private class typeContentProvider extends AdapterFactoryContentProvider {
 
-		public ProgramsTypeContentProvider(AdapterFactory adapterFactory) {
+		public typeContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
 
@@ -149,7 +160,7 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	 * Sets the superClass to displays it's subClasses
 	 * @param superClass reference to the {@link EClass}
 	 */
-	public void setProgramSuperClass(EClass superClass) {
+	public void setSuperClass(EClass superClass) {
 		this.eClass = superClass;
 
 		if (superClass != null) {
@@ -160,8 +171,20 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		}
 	}
 
-	public EClass getEClass() {
+	public void setSelectedEClass(EClass eClass){
+		for (TreeItem item : treeViewerSubClasses.getTree().getItems()) {
+			if (item == eClass) {
+				treeViewerSubClasses.setSelection(new StructuredSelection(eClass));
+			}
+		}
+	}
+
+	public EClass getSuperClass() {
 		return this.eClass;
+	}
+	
+	public EClass getSelectedSubClass(){
+		return (EClass) treeViewerSubClasses.getStructuredSelection().getFirstElement();
 	}
 
 	/**
@@ -183,12 +206,8 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 		if (eClass != null) {
 			if (!treeViewerSubClasses.getTree().isDisposed()) {
 				treeViewerSubClasses.setInput(eClass);
-				/*if (treeViewerSubClasses.getTree().getItemCount() > 0) {
-					treeViewerSubClasses.setSelection((ISelection) treeViewerSubClasses.getTree().getItems()[0]);
-				}*/
 			}
 		}
-
 		return bindingContext;
 	}
 
@@ -203,7 +222,7 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 
 	@Override
 	public ISelection getSelection() {
-		return (ISelection) eClass;
+		return treeViewerSubClasses.getSelection();
 	}
 
 	@Override
@@ -214,5 +233,9 @@ public class SubClassesListComposite extends Composite implements ISelectionProv
 	@Override
 	public void setSelection(ISelection selection) {
 		eClass = (EClass) selection;
+	}
+	
+	public void refresh(){
+		treeViewerSubClasses.refresh();
 	}
 }

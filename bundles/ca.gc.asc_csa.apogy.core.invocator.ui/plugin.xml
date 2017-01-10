@@ -453,7 +453,7 @@
       </category>
       <wizard
             category="ca.gc.asc_csa.apogy.core.ui"
-            class="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard"
+            class="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.OperationCallWizard"
             icon="platform:/plugin/ca.gc.asc_csa.apogy.core.invocator.edit/icons/full/obj16/OperationCall.gif"
             id="ca.gc.asc_csa.apogy.core.invocator.ui.wizards.NewOperationCallWizard"
             name="New Operation Call"

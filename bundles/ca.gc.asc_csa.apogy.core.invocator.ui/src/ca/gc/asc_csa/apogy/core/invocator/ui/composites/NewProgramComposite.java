@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
@@ -275,9 +274,9 @@ public class NewProgramComposite extends Composite {
 		if (programsList != null) {
 			if (!treeViewerGroups.getTree().isDisposed()) {
 				treeViewerGroups.setInput(programsList);
-				if (group != null) {
-					ISelection selection = new StructuredSelection(group);
-					treeViewerGroups.setSelection(selection);
+				if (programsList != null) {
+					group = (ProgramsGroup) treeViewerGroups.getTree().getItem(0).getData();
+					treeViewerGroups.setSelection(new StructuredSelection(group));
 				}
 			}
 		}
