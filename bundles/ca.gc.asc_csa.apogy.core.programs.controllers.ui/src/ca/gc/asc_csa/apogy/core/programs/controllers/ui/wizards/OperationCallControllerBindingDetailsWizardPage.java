@@ -22,8 +22,11 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.OperationCallControllerBindingsDetailsComposite;
@@ -35,11 +38,12 @@ public class OperationCallControllerBindingDetailsWizardPage extends WizardPage 
 
 	protected OperationCallControllerBinding operationCallControllerBinding;
 	protected AdapterImpl adapter;
-	
+
 	/**
 	 * Constructor for the WizardPage.
 	 * 
 	 * @param pageName
+	 * @wbp.parser.constructor
 	 */
 	public OperationCallControllerBindingDetailsWizardPage() {
 		super(WIZARD_PAGE_ID);
@@ -47,18 +51,19 @@ public class OperationCallControllerBindingDetailsWizardPage extends WizardPage 
 		setDescription("Select the Variable/Type/Feature, Operation and Trigger");
 	}
 
-	public OperationCallControllerBindingDetailsWizardPage(OperationCallControllerBinding operationCallControllerBinding) {
+	public OperationCallControllerBindingDetailsWizardPage(
+			OperationCallControllerBinding operationCallControllerBinding) {
 		this();
 
-		if (this.operationCallControllerBinding != null){
+		if (this.operationCallControllerBinding != null) {
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
-		
+
 		this.operationCallControllerBinding = operationCallControllerBinding;
-				
+
 		operationCallControllerBinding.eAdapters().add(getAdapter());
 	}
-	
+
 	protected Adapter getAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
@@ -75,55 +80,63 @@ public class OperationCallControllerBindingDetailsWizardPage extends WizardPage 
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		Composite container = new Composite(parent, SWT.None);
+		ScrolledComposite container = new ScrolledComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL);
 		container.setLayout(new FillLayout());
+		container.setExpandHorizontal(true);
+		container.setExpandVertical(true);
 
-		composite = new OperationCallControllerBindingsDetailsComposite(container, SWT.H_SCROLL | SWT.V_SCROLL){
+		composite = new OperationCallControllerBindingsDetailsComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
 			}
 		};
 		composite.setOperationCallControllerBinding(operationCallControllerBinding);
-		
+
+		container.setContent(composite);
+		container.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		container.addListener(SWT.Resize, new Listener() {
+
+			@Override
+			public void handleEvent(Event event) {
+				container.setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+			}
+		});
 		setControl(container);
-		
+
 		validate();
 	}
-	
 
-	
-	/** 
-	 * This method is invoked to validate the content. 
+	/**
+	 * This method is invoked to validate the content.
 	 */
 	protected void validate() {
 		String errorVariable = "";
 		String errorEOperation = "";
 		String errorTrigger = "";
-		
-		if(this.operationCallControllerBinding.getVariable() == null){
+
+		if (this.operationCallControllerBinding.getVariable() == null) {
 			errorVariable = " <variable>";
 		}
-		if(this.operationCallControllerBinding.getEOperation() == null){
+		if (this.operationCallControllerBinding.getEOperation() == null) {
 			errorEOperation = " <operation>";
 		}
-		
-		if(operationCallControllerBinding.getTrigger() != null){
+
+		if (operationCallControllerBinding.getTrigger() != null) {
 			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCallControllerBinding.getTrigger());
 			if (diagnosticContext.getSeverity() != Diagnostic.OK) {
 				errorTrigger = " <trigger>";
 			}
-		}else{
+		} else {
 			errorTrigger = " <trigger>";
 		}
-		
-		
-		if(errorVariable != "" || errorEOperation != "" || errorTrigger != ""){
+
+		if (errorVariable != "" || errorEOperation != "" || errorTrigger != "") {
 			setErrorMessage(errorVariable + errorEOperation + errorTrigger + " must be provided");
-		}else{
+		} else {
 			setErrorMessage(null);
 		}
-		
+
 		setPageComplete(getErrorMessage() == null);
 	}
 }

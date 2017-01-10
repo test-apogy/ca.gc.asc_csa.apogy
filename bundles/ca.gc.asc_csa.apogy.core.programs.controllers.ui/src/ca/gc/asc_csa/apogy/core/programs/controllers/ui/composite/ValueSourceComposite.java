@@ -12,6 +12,7 @@ import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -50,9 +51,10 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ToggleValueSource;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-public class ValueSourceComposite extends Composite {
+public class ValueSourceComposite extends ScrolledComposite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
+	private Composite composite;
 
 	private Section typesSection;
 	private SubClassesListComposite valueSourcesTypesComposite;
@@ -74,16 +76,21 @@ public class ValueSourceComposite extends Composite {
 	 */
 	public ValueSourceComposite(Composite parent, int style) {
 		super(parent, style);
+		setExpandHorizontal(true);
+		setExpandVertical(true);
+
+		composite = new Composite(this, SWT.None);
 		GridLayout gridLayout = new GridLayout();
 		gridLayout.marginWidth = 0;
 		gridLayout.marginHeight = 0;
 		gridLayout.marginBottom = 5;
 		this.setLayout(gridLayout);
+		composite.setLayout(gridLayout);
 
 		/**
 		 * Value source
 		 */
-		typesSection = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
+		typesSection = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
 		typesSection.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		typesSection.setLayout(new FillLayout());
 		typesSection.setText("Source");
@@ -153,7 +160,7 @@ public class ValueSourceComposite extends Composite {
 		/**
 		 * Value source value
 		 */
-		valueSection = toolkit.createSection(this, Section.EXPANDED | Section.TITLE_BAR);
+		valueSection = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
 		valueSection.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		valueSection.setLayout(new FillLayout());
 		valueSection.setText("Value");
@@ -165,6 +172,9 @@ public class ValueSourceComposite extends Composite {
 		valueComposite.setLayout(gridLayoutValue);
 
 		valueSection.setClient(valueComposite);
+
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		setContent(composite);
 	}
 
 	/**
@@ -188,7 +198,7 @@ public class ValueSourceComposite extends Composite {
 
 		if (bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource) {
 			ControllerSelectionComposite controllerSelectionComposite = new ControllerSelectionComposite(valueComposite,
-					SWT.None){
+					SWT.None) {
 				@Override
 				protected void newSelection(ISelection selection) {
 					ValueSourceComposite.this.newSelection(selection);
@@ -211,7 +221,7 @@ public class ValueSourceComposite extends Composite {
 			noContentComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 			noContentComposite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		}
-		this.layout();
+		composite.layout();
 	}
 
 	/**

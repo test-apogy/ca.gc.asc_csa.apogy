@@ -5,6 +5,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -31,14 +32,15 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsController
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-public class ConditioningComposite extends Composite {
+public class ConditioningComposite extends ScrolledComposite {
 
+	private Composite composite;
 	private Composite conditioningEMFForms;
 	private SubClassesListComposite subClassesListComposite;
 	private AbstractInputConditioningResponsePlotComposite plotComposite;
 
 	private AbstractInputConditioning abstractInputConditioning;
-	
+
 	/**
 	 * Create the parentComposite.
 	 * 
@@ -49,20 +51,23 @@ public class ConditioningComposite extends Composite {
 	 */
 	public ConditioningComposite(Composite parent, int style) {
 		super(parent, style);
-		this.setLayout(new GridLayout(2, true));
+		setExpandHorizontal(true);
+		setExpandVertical(true);
+
+		composite = new Composite(this, SWT.None);
+		composite.setLayout(new GridLayout(2, true));
 
 		/**
 		 * PlotComposite
 		 */
-		plotComposite = new AbstractInputConditioningResponsePlotComposite(
-				this, SWT.None);
+		plotComposite = new AbstractInputConditioningResponsePlotComposite(composite, SWT.None);
 		plotComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
 
 		/**
 		 * EMFForms
 		 */
-		conditioningEMFForms = new Composite(this, SWT.None);
-		GridLayout gridLayout_EMFFormsvalue = new GridLayout(2, true);
+		conditioningEMFForms = new Composite(composite, SWT.None);
+		GridLayout gridLayout_EMFFormsvalue = new GridLayout(1, true);
 		gridLayout_EMFFormsvalue.marginWidth = 0;
 		gridLayout_EMFFormsvalue.marginHeight = 0;
 		conditioningEMFForms.setLayout(gridLayout_EMFFormsvalue);
@@ -72,7 +77,7 @@ public class ConditioningComposite extends Composite {
 		/**
 		 * Conditioning sub classes list.
 		 */
-		subClassesListComposite = new SubClassesListComposite(this, SWT.None) {
+		subClassesListComposite = new SubClassesListComposite(composite, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
 				if (!selection.isEmpty()) {
@@ -81,7 +86,7 @@ public class ConditioningComposite extends Composite {
 					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(abstractInputConditioning.eContainer(),
 							ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
 							tempAbstractInputConditioning);
-					
+
 					abstractInputConditioning = tempAbstractInputConditioning;
 
 					plotComposite.setAbstractInputConditioning(abstractInputConditioning);
@@ -94,6 +99,9 @@ public class ConditioningComposite extends Composite {
 		subClassesListComposite.setSuperClass(ApogyCoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING);
 		subClassesListComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 		subClassesListComposite.moveAbove(plotComposite);
+
+		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		setContent(composite);
 	}
 
 	/**
@@ -113,14 +121,14 @@ public class ConditioningComposite extends Composite {
 	 */
 	public void setAbstractInputConditioning(AbstractInputConditioning abstractInputConditioning) {
 		this.abstractInputConditioning = abstractInputConditioning;
-		
+
 		ApogyCommonEMFUiEMFFormsFacade.INSTANCE.createEMFForms(conditioningEMFForms, this.abstractInputConditioning);
 		subClassesListComposite.setSelectedEClass(this.abstractInputConditioning.eClass());
 		plotComposite.setAbstractInputConditioning(this.abstractInputConditioning);
-		this.layout();
+		composite.layout();
 	}
-	
-	public void setEComponentQualifier(EComponentQualifier eComponentQualifier){
+
+	public void setEComponentQualifier(EComponentQualifier eComponentQualifier) {
 		plotComposite.setEComponentQualifier(eComponentQualifier);
 	}
 

@@ -22,8 +22,11 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTypeArgumentsComposite;
@@ -31,11 +34,11 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTyp
 public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.BindedEDataTypeArgumentsWizardPage";
-	
+
 	private OperationCallControllerBinding operationCallControllerBinding;
 	private BindedEDataTypeArgumentsComposite bindedEDataTypeArgumentsComposite;
-	
-	private Adapter adapter; 
+
+	private Adapter adapter;
 
 	/**
 	 * Constructor for the WizardPage.
@@ -47,22 +50,22 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		setTitle("Arguments");
 		setDescription("Choose the argument(s) source(s) and value(s)");
 	}
-	
-	public BindedEDataTypeArgumentsWizardPage(OperationCallControllerBinding operationCallControllerBinding){
+
+	public BindedEDataTypeArgumentsWizardPage(OperationCallControllerBinding operationCallControllerBinding) {
 		this();
-		if (this.operationCallControllerBinding != null){
+		if (this.operationCallControllerBinding != null) {
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
 		this.operationCallControllerBinding = operationCallControllerBinding;
-		
+
 		operationCallControllerBinding.eAdapters().add(getAdapter());
-		
+
 		validate();
 	}
-	
-	public Adapter getAdapter(){
-		if(adapter ==  null){
-			adapter = new AdapterImpl(){
+
+	public Adapter getAdapter() {
+		if (adapter == null) {
+			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					validate();
@@ -76,19 +79,30 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		Composite container = new Composite(parent, SWT.None);
+		ScrolledComposite container = new ScrolledComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL);
 		container.setLayout(new FillLayout());
+		container.setExpandHorizontal(true);
+		container.setExpandVertical(true);
 
-		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None){
+		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
 			}
 		};
 		bindedEDataTypeArgumentsComposite.setOperationCallControllerBinding(operationCallControllerBinding);
-	
+
+		container.setContent(bindedEDataTypeArgumentsComposite);
+		container.setMinSize(bindedEDataTypeArgumentsComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+		container.addListener(SWT.Resize, new Listener() {
+
+			@Override
+			public void handleEvent(Event event) {
+				container.setMinSize(bindedEDataTypeArgumentsComposite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+			}
+		});
 		setControl(container);
-		
+
 		validate();
 	}
 
@@ -107,11 +121,10 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		setErrorMessage(errorStr);
 		setPageComplete(getErrorMessage() == null);
 	}
-	
-	
+
 	@Override
 	public void dispose() {
-		if(this.operationCallControllerBinding != null){
+		if (this.operationCallControllerBinding != null) {
 			this.operationCallControllerBinding.eAdapters().remove(getAdapter());
 		}
 		super.dispose();

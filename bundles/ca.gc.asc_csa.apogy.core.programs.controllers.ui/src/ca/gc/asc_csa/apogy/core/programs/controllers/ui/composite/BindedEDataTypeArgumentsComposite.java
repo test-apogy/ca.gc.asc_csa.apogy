@@ -94,22 +94,23 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 *            Composite style.
 	 */
 	public BindedEDataTypeArgumentsComposite(Composite parent, int style) {
-		super(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+		super(parent, style);
+		this.computeSize(1, 1);
 		setExpandHorizontal(true);
 		setExpandVertical(true);
 
 		composite = new Composite(this, SWT.None);
-		composite.setLayout(new GridLayout(2, true));
+		composite.setLayout(new GridLayout(4, true));
 		/**
 		 * Arguments list
 		 */
 		Section sectionArgumentsList = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
-		sectionArgumentsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
+		sectionArgumentsList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 4, 1));
 		sectionArgumentsList.setLayout(new FillLayout());
 		sectionArgumentsList.setText("Arguments");
 
 		Composite compositeArguments = new Composite(sectionArgumentsList, SWT.None);
-		GridLayout gridLayout_arguments = new GridLayout(1, false);
+		GridLayout gridLayout_arguments = new GridLayout(4, true);
 		gridLayout_arguments.marginWidth = 0;
 		gridLayout_arguments.marginHeight = 0;
 		gridLayout_arguments.marginBottom = 5;
@@ -118,7 +119,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		tableViewerArguments = new TableViewer(compositeArguments,
 				SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.FULL_SELECTION | SWT.SINGLE);
 		Table tableArguments = tableViewerArguments.getTable();
-		tableArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 2));
+		tableArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 4, 1));
 		tableArguments.setLinesVisible(true);
 		tableArguments.setHeaderVisible(true);
 		tableViewerArguments.addSelectionChangedListener(new ISelectionChangedListener() {
@@ -136,7 +137,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 
 		TableViewerColumn tableViewerValueSourceColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
 		TableColumn tableclmnValueSource = tableViewerValueSourceColumn.getColumn();
-		tableclmnValueSource.setWidth(175);
+		tableclmnValueSource.setWidth(100);
 		tableclmnValueSource.setText("Value source");
 
 		TableViewerColumn tableViewerValueColumn = new TableViewerColumn(tableViewerArguments, SWT.NONE);
@@ -155,7 +156,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		 */
 		compositeValueSource = new Composite(composite, SWT.None);
 		compositeValueSource.setLayout(new FillLayout());
-		compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		compositeValueSource.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
 		compositeValueSource.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		compositeValueSource.setBackgroundMode(SWT.INHERIT_FORCE);
 
@@ -163,7 +164,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		 * Conditioning
 		 */
 		sectionConditioning = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);
-		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+		sectionConditioning.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
 		sectionConditioning.setLayout(new FillLayout());
 		sectionConditioning.setText("Conditioning");
 		compositeConditioning = getNoContentComposite(sectionConditioning);
@@ -187,7 +188,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 		}
 
 		if (getSelectedArgument() != null) {
-			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None){
+			ValueSourceComposite contentComposite = new ValueSourceComposite(compositeValueSource, SWT.None) {
 				@Override
 				protected void newSelection(ISelection selection) {
 					updateCompositeConditioning();
@@ -218,11 +219,12 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			};
 			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(
 					((ControllerValueSource) getSelectedArgument().getValueSource()).getConditioning());
-			
-			if(((ControllerValueSource)getSelectedArgument().getValueSource()).getEComponentQualifier() != null){
-				((ConditioningComposite) compositeConditioning).setEComponentQualifier(((ControllerValueSource)getSelectedArgument().getValueSource()).getEComponentQualifier());
+
+			if (((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier() != null) {
+				((ConditioningComposite) compositeConditioning).setEComponentQualifier(
+						((ControllerValueSource) getSelectedArgument().getValueSource()).getEComponentQualifier());
 			}
-			
+
 			compositeConditioning.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		} else {
 			compositeConditioning = getNoContentComposite(sectionConditioning);

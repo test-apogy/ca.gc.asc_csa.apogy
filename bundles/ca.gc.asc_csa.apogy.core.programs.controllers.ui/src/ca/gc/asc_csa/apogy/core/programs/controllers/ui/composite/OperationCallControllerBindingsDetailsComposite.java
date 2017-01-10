@@ -57,7 +57,8 @@ public class OperationCallControllerBindingsDetailsComposite extends ScrolledCom
 	 * @param style
 	 */
 	public OperationCallControllerBindingsDetailsComposite(Composite parent, int style) {
-		super(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+		super(parent, style);
+
 		setExpandHorizontal(true);
 		setExpandVertical(true);
 
