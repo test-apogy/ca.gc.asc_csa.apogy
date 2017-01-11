@@ -29,7 +29,6 @@ import ca.gc.asc_csa.apogy.common.emf.ui.composites.SubClassesListComposite;
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ui.composites.ControllerSelectionComposite;
 import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
-import ca.gc.asc_csa.apogy.core.programs.controllers.AbstractInputConditioning;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersFacade;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ApogyCoreProgramsControllersPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
@@ -225,14 +224,17 @@ public class ValueSourceComposite extends ScrolledComposite {
 	}
 
 	/**
-	 * Binds the {@link AbstractInputConditioning} with the UI components.
+	 * Binds the {@link BindedEDataTypeArgument} with the UI components.
 	 * 
-	 * @param abstractInputConditioning
-	 *            Reference to the {@link AbstractInputConditioning}.
+	 * @param bindedEDataTypeArgument
+	 *            Reference to the {@link BindedEDataTypeArgument}.
 	 */
 	public void setBindedEDataTypeArgument(BindedEDataTypeArgument bindedEDataTypeArgument) {
 		this.bindedEDataTypeArgument = bindedEDataTypeArgument;
 
+		if(bindedEDataTypeArgument.getValueSource() != null){
+			valueSourcesTypesComposite.setSelectedEClass(bindedEDataTypeArgument.getValueSource().eClass());
+		}
 		valueSourcesTypesComposite.refresh();
 		setValueComposite();
 	}

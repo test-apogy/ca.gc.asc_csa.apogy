@@ -241,6 +241,8 @@ public class AbstractInputConditioningResponsePlotComposite extends Composite {
 				@Override
 				public void notifyChanged(Notification msg) {
 					if (!isDisposed()) {
+						controllerInput = 0.0f;
+						controllerOutput = 0.0f;
 						setAbstractInputConditioning(abstractInputConditioning);
 					}
 				}
