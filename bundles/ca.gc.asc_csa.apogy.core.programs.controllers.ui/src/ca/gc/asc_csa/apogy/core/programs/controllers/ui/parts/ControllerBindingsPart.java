@@ -25,7 +25,6 @@ import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ControllersConfiguration;
-import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIFactory;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerConfigsPartSelection;
@@ -40,13 +39,11 @@ public class ControllerBindingsPart extends AbstractEObjectSelectionPart {
 				if (selection.isEmpty()) {
 					setNullSelection();
 				} else {
-					// TODO .get(0)
-					OperationCallControllerBinding operationCallControllerBinding = ((ControllerBindingsComposite) getActualComposite())
-							.getSelectedBindings().get(0);
-					if (operationCallControllerBinding != null) {
+					EObject eObject = ((ControllerBindingsComposite) getActualComposite()).getSelectedEObject();
+					if (eObject != null) {
 						ControllerBindingsPartSelection selectionSent = ApogyCoreProgramsControllersUIFactory.eINSTANCE
 								.createControllerBindingsPartSelection();
-						selectionSent.setOperationCallControllerBinding(operationCallControllerBinding);
+						selectionSent.setEObject(eObject);
 
 						selectionService.setSelection(selectionSent);
 					}

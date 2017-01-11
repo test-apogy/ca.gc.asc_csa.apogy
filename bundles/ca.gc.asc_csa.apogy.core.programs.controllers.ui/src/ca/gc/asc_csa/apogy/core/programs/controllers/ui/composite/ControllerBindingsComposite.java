@@ -18,18 +18,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.transaction.util.TransactionUtil;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.ViewerProperties;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
-import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -73,10 +78,11 @@ public class ControllerBindingsComposite extends Composite {
 	private ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private Adapter adapter;
-	
+
 	private ControllersConfiguration controllersConfiguration;
-	
+
 	private TreeViewer treeViewer;
+	private Button btnDelete;
 
 	/**
 	 * Creates the parentComposite.
@@ -87,7 +93,7 @@ public class ControllerBindingsComposite extends Composite {
 	public ControllerBindingsComposite(Composite parent, int style) {
 		super(parent, style);
 		setLayout(new GridLayout(2, false));
-		
+
 		treeViewer = new TreeViewer(this, SWT.BORDER | SWT.FULL_SELECTION | SWT.MULTI);
 		Tree tree = treeViewer.getTree();
 		tree.setHeaderVisible(true);
@@ -95,12 +101,12 @@ public class ControllerBindingsComposite extends Composite {
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
 
 		ApogyCommonUiFacade.INSTANCE.addExpandOnDoubleClick(treeViewer);
-		
+
 		TreeViewerColumn treeViewerActionColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
 		TreeColumn treeclmnAction = treeViewerActionColumn.getColumn();
 		treeclmnAction.setWidth(100);
 		treeclmnAction.setText("Name");
-		
+
 		TreeViewerColumn treeViewerParameterColumn = new TreeViewerColumn(treeViewer, SWT.NONE);
 		TreeColumn treeclmnParameter = treeViewerParameterColumn.getColumn();
 		treeclmnParameter.setWidth(100);
@@ -110,7 +116,7 @@ public class ControllerBindingsComposite extends Composite {
 		TreeColumn treeclmnController = treeViewerControllerColumn.getColumn();
 		treeclmnController.setWidth(100);
 		treeclmnController.setText("Conditionning");
-		
+
 		Button btnNew = new Button(this, SWT.NONE);
 		GridData gd_btnNew = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
 		gd_btnNew.widthHint = 90;
@@ -119,7 +125,8 @@ public class ControllerBindingsComposite extends Composite {
 		btnNew.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				ControllerBindingWizard newControllerBindingWizard = new ControllerBindingWizard(controllersConfiguration){
+				ControllerBindingWizard newControllerBindingWizard = new ControllerBindingWizard(
+						controllersConfiguration) {
 					@Override
 					public boolean performFinish() {
 						getControllerBinding().eResource().getResourceSet().getResources()
@@ -135,17 +142,22 @@ public class ControllerBindingsComposite extends Composite {
 				};
 				WizardDialog dialog = new WizardDialog(getShell(), newControllerBindingWizard);
 				dialog.open();
-		}});
-		
-		Button btnDelete = new Button(this, SWT.NONE);
+			}
+		});
+
+		btnDelete = new Button(this, SWT.NONE);
 		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnDelete.setText("Delete");
 		btnDelete.addListener(SWT.Selection, new Listener() {
 			@Override
 			public void handleEvent(Event event) {
-				ApogyCommonEMFUIFacade.INSTANCE.openDeleteNamedDialog(getSelectedBindings());
-			}});
-		
+				EObject eObject = getSelectedEObject();
+				if (eObject instanceof OperationCallControllerBinding) {
+					ApogyCommonEMFUIFacade.INSTANCE.openDeleteNamedDialog((OperationCallControllerBinding) eObject);
+				}
+			}
+		});
+
 		Button btnEdit = new Button(this, SWT.NONE);
 		btnEdit.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		btnEdit.setText("Edit");
@@ -155,8 +167,9 @@ public class ControllerBindingsComposite extends Composite {
 				MessageBox dialog = new MessageBox(getShell());
 				dialog.setText("TODO");
 				dialog.open();
-			}});
-		
+			}
+		});
+
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
 
 			@Override
@@ -164,19 +177,23 @@ public class ControllerBindingsComposite extends Composite {
 				newSelection(event.getSelection());
 			}
 		});
-		
+
 		m_bindingContext = initDataBindings();
 	}
 
-	/** 
-	 * This method is called when a new selection is made in the parentComposite. 
-	 * @param selection Reference to the selection.
+	/**
+	 * This method is called when a new selection is made in the
+	 * parentComposite.
+	 * 
+	 * @param selection
+	 *            Reference to the selection.
 	 */
 	protected void newSelection(ISelection selection) {
 	}
-	
+
 	/**
 	 * Sets the controllers configuration to display in the {@link Composite}.
+	 * 
 	 * @param controllersConfiguration
 	 */
 	public void setControllersConfiguration(ControllersConfiguration controllersConfiguration) {
@@ -184,11 +201,11 @@ public class ControllerBindingsComposite extends Composite {
 			this.controllersConfiguration.eAdapters().remove(getAdapter());
 		}
 		this.controllersConfiguration = controllersConfiguration;
-		
+
 		if (this.controllersConfiguration.getOperationCalls() != null) {
 			EObjectReference eObjectReference = ApogyCommonEMFFactory.eINSTANCE.createEObjectReference();
 			eObjectReference.setEObject(controllersConfiguration);
-			
+
 			treeViewer.setInput(eObjectReference);
 			// Adjust columns
 			for (TreeColumn column : treeViewer.getTree().getColumns()) {
@@ -200,28 +217,40 @@ public class ControllerBindingsComposite extends Composite {
 
 		this.controllersConfiguration.eAdapters().add(getAdapter());
 	}
-	
-	@SuppressWarnings("unchecked")
-	public List<OperationCallControllerBinding> getSelectedBindings(){
-		return ((IStructuredSelection) treeViewer.getSelection()).toList();
+
+	public EObject getSelectedEObject() {
+		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
 	}
-	
+
 	protected DataBindingContext initDataBindings() {
 		m_bindingContext = new DataBindingContext();
 
 		treeViewer.setContentProvider(new ControllerBindingsContentProvider(adapterFactory));
 		treeViewer.setLabelProvider(new ControllerBindingsLabelProvider(adapterFactory));
 
+		IObservableValue<?> observeSingleSelection = ViewerProperties.singleSelection().observe(treeViewer);
+		IObservableValue<?> observeEnableDeleteButton = WidgetProperties.enabled().observe(btnDelete);
+
+		m_bindingContext.bindValue(observeEnableDeleteButton, observeSingleSelection, null,
+				new UpdateValueStrategy().setConverter(new Converter(EObject.class, boolean.class) {
+					@Override
+					public Object convert(Object fromObject) {
+						return fromObject instanceof OperationCallControllerBinding ? true : false;
+					}
+				}));
+
 		return m_bindingContext;
 	}
-	
+
 	/**
-	 * Adapter that updates the treeViewer input if the {@link OperationCallControllerBinding} is changed.
+	 * Adapter that updates the treeViewer input if the
+	 * {@link OperationCallControllerBinding} is changed.
+	 * 
 	 * @return
 	 */
 	public Adapter getAdapter() {
-		if(adapter == null){
-			adapter = new EContentAdapter(){
+		if (adapter == null) {
+			adapter = new EContentAdapter() {
 				List<EStructuralFeature> features;
 
 				@Override
@@ -234,32 +263,38 @@ public class ControllerBindingsComposite extends Composite {
 						setControllersConfiguration(ControllerBindingsComposite.this.controllersConfiguration);
 					}
 				}
-				
+
 				/**
-				 * Provides a list of the structural features that should refresh the treeViewer.
-				 * This method implements a pattern of lazy loading.
+				 * Provides a list of the structural features that should
+				 * refresh the treeViewer. This method implements a pattern of
+				 * lazy loading.
 				 */
 				private List<EStructuralFeature> getEStructuralFeature() {
 					if (features == null) {
 						features = new ArrayList<EStructuralFeature>();
-						
+
 						features.add(ApogyCommonEMFPackage.Literals.NAMED__NAME);
-						
+
 						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION);
 						features.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
-						
+
 						features.add(ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE);
 						features.add(ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
-						features.add(ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
-						
-						features.add(ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
-						
-						features.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
-						
+						features.add(
+								ApogyCoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
+
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
+
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+
 						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__COMPONENT);
-						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
-						features.add(ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+						features.add(
+								ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
 						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE);
 						features.add(ApogyCoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE);
 						features.add(ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE);
@@ -272,7 +307,7 @@ public class ControllerBindingsComposite extends Composite {
 		}
 		return adapter;
 	}
-	
+
 	/**
 	 * Label provider for the TreeViewer
 	 */
@@ -307,11 +342,11 @@ public class ControllerBindingsComposite extends Composite {
 
 					if (bindedEDataTypeArgument.getValueSource() instanceof FixedValueSource) {
 						str = ((FixedValueSource) bindedEDataTypeArgument.getValueSource()).getValue();
-						
+
 					} else if (bindedEDataTypeArgument.getValueSource() instanceof ToggleValueSource) {
 						str = ApogyCoreProgramsControllersFacade.INSTANCE.getToggleValueSourceString(
 								(ToggleValueSource) bindedEDataTypeArgument.getValueSource());
-						
+
 					} else if ((bindedEDataTypeArgument.getValueSource() instanceof ControllerValueSource)) {
 						str = ((ControllerValueSource) bindedEDataTypeArgument.getValueSource())
 								.getEComponentQualifier().getEControllerName() + "."
@@ -363,25 +398,25 @@ public class ControllerBindingsComposite extends Composite {
 			return image;
 		}
 	}
-	
+
 	/**
 	 * Content provider for the TreeViewer
 	 */
-	private class ControllerBindingsContentProvider extends
-			AdapterFactoryContentProvider {
+	private class ControllerBindingsContentProvider extends AdapterFactoryContentProvider {
 
 		public ControllerBindingsContentProvider(AdapterFactory adapterFactory) {
 			super(adapterFactory);
 		}
-		
+
 		@Override
 		public Object[] getElements(Object object) {
-			if(object instanceof EObjectReference){
-				return ((ControllersConfiguration)((EObjectReference)object).getEObject()).getOperationCalls().toArray();
+			if (object instanceof EObjectReference) {
+				return ((ControllersConfiguration) ((EObjectReference) object).getEObject()).getOperationCalls()
+						.toArray();
 			}
 			return null;
 		}
-		
+
 		@Override
 		public Object[] getChildren(Object object) {
 			OperationCallControllerBinding operationCallControllerBinding = (OperationCallControllerBinding) object;
@@ -393,16 +428,16 @@ public class ControllerBindingsComposite extends Composite {
 
 		@Override
 		public boolean hasChildren(Object object) {
-			if(object instanceof OperationCallControllerBinding){
+			if (object instanceof OperationCallControllerBinding) {
 				return ((OperationCallControllerBinding) object).getArgumentsList() != null;
 			}
 			return false;
-			}
+		}
 	}
 
 	@Override
 	public void dispose() {
-		if(this.controllersConfiguration != null){
+		if (this.controllersConfiguration != null) {
 			controllersConfiguration.eAdapters().remove(getAdapter());
 		}
 		super.dispose();

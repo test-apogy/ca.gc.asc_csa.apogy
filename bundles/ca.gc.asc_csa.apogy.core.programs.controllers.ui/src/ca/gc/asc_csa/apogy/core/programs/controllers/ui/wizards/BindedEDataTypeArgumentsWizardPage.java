@@ -29,14 +29,14 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTypeArgumentsComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTypeArgumentsListComposite;
 
 public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 
 	private final static String WIZARD_PAGE_ID = "ca.gc.asc_csa.apogy.core.invocator.ui.wizards.BindedEDataTypeArgumentsWizardPage";
 
 	private OperationCallControllerBinding operationCallControllerBinding;
-	private BindedEDataTypeArgumentsComposite bindedEDataTypeArgumentsComposite;
+	private BindedEDataTypeArgumentsListComposite bindedEDataTypeArgumentsComposite;
 
 	private Adapter adapter;
 
@@ -84,7 +84,7 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		container.setExpandHorizontal(true);
 		container.setExpandVertical(true);
 
-		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsComposite(container, SWT.None) {
+		bindedEDataTypeArgumentsComposite = new BindedEDataTypeArgumentsListComposite(container, SWT.None) {
 			@Override
 			protected void newSelection(ISelection selection) {
 				validate();
@@ -115,7 +115,7 @@ public class BindedEDataTypeArgumentsWizardPage extends WizardPage {
 		if (operationCallControllerBinding.getArgumentsList() != null) {
 			Diagnostic diagnosticContext = Diagnostician.INSTANCE.validate(operationCallControllerBinding);
 			if (diagnosticContext.getSeverity() != Diagnostic.OK) {
-				errorStr = "Please complete the  for each argument";
+				errorStr = "Please complete each argument";
 			}
 		}
 		setErrorMessage(errorStr);

@@ -205,7 +205,7 @@ public class ControllerSelectionComposite extends Composite {
 			controllerText.setText(eComponentQualifier.getEControllerName());
 		}
 		if (eComponentQualifier.getEComponentName() != null) {
-			controllerText.setText(eComponentQualifier.getEComponentName());
+			componentText.setText(eComponentQualifier.getEComponentName());
 		}
 		controllerText.setBackground(getTextsBackgroundColor());
 		componentText.setBackground(getTextsBackgroundColor());

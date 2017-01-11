@@ -23,27 +23,41 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 import ca.gc.asc_csa.apogy.common.emf.ui.parts.AbstractEObjectSelectionPart;
-import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.BindedEDataTypeArgument;
+import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.BindedEDataTypeArgumentComposite;
+import ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite.OperationCallControllerBindingsDetailsComposite;
 
 public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 
+	Composite parent;
+
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
-		new NoContentComposite(parent, SWT.None) {
-			@Override
-			protected String getMessage() {
-				return "TODO";
-			}
-		};
-//		new ControllerBindingDetailsComposite(parent, SWT.None);
+		this.parent = parent;
+		new OperationCallControllerBindingsDetailsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL);
 	}
 
 	@Override
 	protected void setCompositeContents(EObject eObject) {
-		// ((ControllerBindingDetailsComposite) getActualComposite())
-		// .setOperationCallControllerBinding((OperationCallControllerBinding)
-		// eObject);
+		if (eObject instanceof OperationCallControllerBinding) {
+			if (!(getActualComposite() instanceof OperationCallControllerBindingsDetailsComposite)) {
+				getActualComposite().dispose();
+				new OperationCallControllerBindingsDetailsComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+				parent.layout();
+			}
+			((OperationCallControllerBindingsDetailsComposite) getActualComposite())
+					.setOperationCallControllerBinding((OperationCallControllerBinding) eObject);
+		} else {
+			if (!(getActualComposite() instanceof BindedEDataTypeArgumentComposite)) {
+				getActualComposite().dispose();
+				new BindedEDataTypeArgumentComposite(parent, SWT.H_SCROLL | SWT.V_SCROLL);
+				parent.layout();
+			}
+			((BindedEDataTypeArgumentComposite) getActualComposite())
+					.setBindedEDataTypeArgument((BindedEDataTypeArgument) eObject);
+		}
 	}
 
 	@Override
@@ -63,7 +77,7 @@ public class ControllerBindingDetailsPart extends AbstractEObjectSelectionPart {
 			@Override
 			public void selectionChanged(MPart part, Object selection) {
 				if (selection instanceof ControllerBindingsPartSelection) {
-					setEObject(((ControllerBindingsPartSelection) selection).getOperationCallControllerBinding());
+					setEObject(((ControllerBindingsPartSelection) selection).getEObject());
 				}
 			}
 		});

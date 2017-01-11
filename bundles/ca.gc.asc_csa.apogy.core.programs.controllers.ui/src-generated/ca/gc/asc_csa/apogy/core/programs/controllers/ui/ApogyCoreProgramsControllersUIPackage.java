@@ -130,13 +130,13 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 	int CONTROLLER_BINDINGS_PART_SELECTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Operation Call Controller Binding</b></em>' reference.
+	 * The feature id for the '<em><b>EObject</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = 0;
+	int CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Controller Bindings Part Selection</em>' class.
@@ -188,15 +188,15 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 	EClass getControllerBindingsPartSelection();
 
 	/**
-	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}'.
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getEObject <em>EObject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Operation Call Controller Binding</em>'.
-	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getOperationCallControllerBinding()
+	 * @return the meta object for the reference '<em>EObject</em>'.
+	 * @see ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection#getEObject()
 	 * @see #getControllerBindingsPartSelection()
 	 * @generated
 	 */
-	EReference getControllerBindingsPartSelection_OperationCallControllerBinding();
+	EReference getControllerBindingsPartSelection_EObject();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -250,12 +250,12 @@ public interface ApogyCoreProgramsControllersUIPackage extends EPackage {
 		EClass CONTROLLER_BINDINGS_PART_SELECTION = eINSTANCE.getControllerBindingsPartSelection();
 
 		/**
-		 * The meta object literal for the '<em><b>Operation Call Controller Binding</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>EObject</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING = eINSTANCE.getControllerBindingsPartSelection_OperationCallControllerBinding();
+		EReference CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT = eINSTANCE.getControllerBindingsPartSelection_EObject();
 
 	}
 

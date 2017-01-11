@@ -69,25 +69,25 @@ public class ControllerBindingsPartSelectionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addOperationCallControllerBindingPropertyDescriptor(object);
+			addEObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Operation Call Controller Binding feature.
+	 * This adds a property descriptor for the EObject feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOperationCallControllerBindingPropertyDescriptor(Object object) {
+	protected void addEObjectPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ControllerBindingsPartSelection_operationCallControllerBinding_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerBindingsPartSelection_operationCallControllerBinding_feature", "_UI_ControllerBindingsPartSelection_type"),
-				 ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING,
+				 getString("_UI_ControllerBindingsPartSelection_eObject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerBindingsPartSelection_eObject_feature", "_UI_ControllerBindingsPartSelection_type"),
+				 ApogyCoreProgramsControllersUIPackage.Literals.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT,
 				 true,
 				 false,
 				 true,

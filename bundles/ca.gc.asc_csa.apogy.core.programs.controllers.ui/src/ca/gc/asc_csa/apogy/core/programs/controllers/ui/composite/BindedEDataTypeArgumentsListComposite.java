@@ -65,7 +65,7 @@ import ca.gc.asc_csa.apogy.core.programs.controllers.ValueSource;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
+public class BindedEDataTypeArgumentsListComposite extends ScrolledComposite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
@@ -93,7 +93,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 	 * @param style
 	 *            Composite style.
 	 */
-	public BindedEDataTypeArgumentsComposite(Composite parent, int style) {
+	public BindedEDataTypeArgumentsListComposite(Composite parent, int style) {
 		super(parent, style);
 		this.computeSize(1, 1);
 		setExpandHorizontal(true);
@@ -214,7 +214,7 @@ public class BindedEDataTypeArgumentsComposite extends ScrolledComposite {
 			compositeConditioning = new ConditioningComposite(sectionConditioning, SWT.NO_SCROLL) {
 				@Override
 				protected void newSelection(ISelection selection) {
-					BindedEDataTypeArgumentsComposite.this.newSelection(selection);
+					BindedEDataTypeArgumentsListComposite.this.newSelection(selection);
 				}
 			};
 			((ConditioningComposite) compositeConditioning).setAbstractInputConditioning(

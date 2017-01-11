@@ -20,6 +20,8 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.Activator;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponent;
 import ca.gc.asc_csa.apogy.common.io.jinput.EComponentQualifier;
@@ -90,11 +92,12 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   {
 	  EComponentQualifier eComponentQualifier  = getComponentQualifierGen();
 	  
-	  if(eComponentQualifier == null)
-	  {
-		  eComponentQualifier = ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
-		  setComponentQualifier(eComponentQualifier);
-	  }
+		if (eComponentQualifier == null) {
+			eComponentQualifier = ApogyCommonIOJInputFactory.eINSTANCE.createEComponentQualifier();
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this,
+					ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
+					eComponentQualifier);
+		}
 	  
 	  return eComponentQualifier;
   }

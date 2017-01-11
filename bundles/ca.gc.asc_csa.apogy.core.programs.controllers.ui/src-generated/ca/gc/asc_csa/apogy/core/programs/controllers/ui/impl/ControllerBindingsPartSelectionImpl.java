@@ -14,14 +14,13 @@
  */
 package ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.programs.controllers.OperationCallControllerBinding;
-
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ApogyCoreProgramsControllersUIPackage;
 import ca.gc.asc_csa.apogy.core.programs.controllers.ui.ControllerBindingsPartSelection;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -35,22 +34,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.core.programs.controllers.ui.impl.ControllerBindingsPartSelectionImpl#getEObject <em>EObject</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Container implements ControllerBindingsPartSelection {
 	/**
-	 * The cached value of the '{@link #getOperationCallControllerBinding() <em>Operation Call Controller Binding</em>}' reference.
+	 * The cached value of the '{@link #getEObject() <em>EObject</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOperationCallControllerBinding()
+	 * @see #getEObject()
 	 * @generated
 	 * @ordered
 	 */
-	protected OperationCallControllerBinding operationCallControllerBinding;
-
+	protected EObject eObject;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,16 +73,16 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationCallControllerBinding getOperationCallControllerBinding() {
-		if (operationCallControllerBinding != null && operationCallControllerBinding.eIsProxy()) {
-			InternalEObject oldOperationCallControllerBinding = (InternalEObject)operationCallControllerBinding;
-			operationCallControllerBinding = (OperationCallControllerBinding)eResolveProxy(oldOperationCallControllerBinding);
-			if (operationCallControllerBinding != oldOperationCallControllerBinding) {
+	public EObject getEObject() {
+		if (eObject != null && eObject.eIsProxy()) {
+			InternalEObject oldEObject = (InternalEObject)eObject;
+			eObject = eResolveProxy(oldEObject);
+			if (eObject != oldEObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT, oldEObject, eObject));
 			}
 		}
-		return operationCallControllerBinding;
+		return eObject;
 	}
 
 	/**
@@ -92,8 +90,8 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationCallControllerBinding basicGetOperationCallControllerBinding() {
-		return operationCallControllerBinding;
+	public EObject basicGetEObject() {
+		return eObject;
 	}
 
 	/**
@@ -101,11 +99,11 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperationCallControllerBinding(OperationCallControllerBinding newOperationCallControllerBinding) {
-		OperationCallControllerBinding oldOperationCallControllerBinding = operationCallControllerBinding;
-		operationCallControllerBinding = newOperationCallControllerBinding;
+	public void setEObject(EObject newEObject) {
+		EObject oldEObject = eObject;
+		eObject = newEObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING, oldOperationCallControllerBinding, operationCallControllerBinding));
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT, oldEObject, eObject));
 	}
 
 	/**
@@ -116,9 +114,9 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
-				if (resolve) return getOperationCallControllerBinding();
-				return basicGetOperationCallControllerBinding();
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT:
+				if (resolve) return getEObject();
+				return basicGetEObject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -131,8 +129,8 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
-				setOperationCallControllerBinding((OperationCallControllerBinding)newValue);
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT:
+				setEObject((EObject)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -146,8 +144,8 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
-				setOperationCallControllerBinding((OperationCallControllerBinding)null);
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT:
+				setEObject((EObject)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -161,8 +159,8 @@ public class ControllerBindingsPartSelectionImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING:
-				return operationCallControllerBinding != null;
+			case ApogyCoreProgramsControllersUIPackage.CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT:
+				return eObject != null;
 		}
 		return super.eIsSet(featureID);
 	}

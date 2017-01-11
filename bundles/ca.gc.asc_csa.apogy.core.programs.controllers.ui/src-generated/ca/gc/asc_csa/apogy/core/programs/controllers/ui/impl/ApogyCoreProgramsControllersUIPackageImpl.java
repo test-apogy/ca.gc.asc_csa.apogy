@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -144,7 +145,7 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getControllerBindingsPartSelection_OperationCallControllerBinding() {
+	public EReference getControllerBindingsPartSelection_EObject() {
 		return (EReference)controllerBindingsPartSelectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -180,7 +181,7 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 		createEReference(controllerConfigsPartSelectionEClass, CONTROLLER_CONFIGS_PART_SELECTION__CONTROLLERS_CONFIGURATION);
 
 		controllerBindingsPartSelectionEClass = createEClass(CONTROLLER_BINDINGS_PART_SELECTION);
-		createEReference(controllerBindingsPartSelectionEClass, CONTROLLER_BINDINGS_PART_SELECTION__OPERATION_CALL_CONTROLLER_BINDING);
+		createEReference(controllerBindingsPartSelectionEClass, CONTROLLER_BINDINGS_PART_SELECTION__EOBJECT);
 	}
 
 	/**
@@ -208,6 +209,7 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 
 		// Obtain other dependent packages
 		ApogyCoreProgramsControllersPackage theApogyCoreProgramsControllersPackage = (ApogyCoreProgramsControllersPackage)EPackage.Registry.INSTANCE.getEPackage(ApogyCoreProgramsControllersPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -220,7 +222,7 @@ public class ApogyCoreProgramsControllersUIPackageImpl extends EPackageImpl impl
 		initEReference(getControllerConfigsPartSelection_ControllersConfiguration(), theApogyCoreProgramsControllersPackage.getControllersConfiguration(), null, "controllersConfiguration", null, 0, 1, ControllerConfigsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerBindingsPartSelectionEClass, ControllerBindingsPartSelection.class, "ControllerBindingsPartSelection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getControllerBindingsPartSelection_OperationCallControllerBinding(), theApogyCoreProgramsControllersPackage.getOperationCallControllerBinding(), null, "operationCallControllerBinding", null, 0, 1, ControllerBindingsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getControllerBindingsPartSelection_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, ControllerBindingsPartSelection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

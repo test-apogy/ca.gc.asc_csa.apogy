@@ -221,7 +221,24 @@ public class EObjectListComposite extends Composite {
 			if (m_currentDataBindings != null) {
 				m_currentDataBindings.dispose();
 			}
-			m_currentDataBindings = initDataBindings();
+			m_currentDataBindings = initDataBindings(null);
+		}
+	}
+	
+	/**
+	 * Sets the {@link EList<?>} to displays it's content
+	 * 
+	 * @param eObjectsList
+	 *            reference to the {@link EList<?>}
+	 */
+	public void setEObjectsList(EList<? extends EObject> eObjectsList, EObject defaultSelected) {
+		this.eObjectsList = eObjectsList;
+
+		if (eObjectsList != null) {
+			if (m_currentDataBindings != null) {
+				m_currentDataBindings.dispose();
+			}
+			m_currentDataBindings = initDataBindings(defaultSelected);
 		}
 	}
 
@@ -234,19 +251,22 @@ public class EObjectListComposite extends Composite {
 		return this.eObjectsList;
 	}
 
-	protected DataBindingContext initDataBindings() {
-		return initDataBindingsCustom();
+	protected DataBindingContext initDataBindings(EObject defaultSelected) {
+		return initDataBindingsCustom(defaultSelected);
 	}
 
-	protected DataBindingContext initDataBindingsCustom() {
+	protected DataBindingContext initDataBindingsCustom(Object defaultSelected) {
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		if (eObjectsList != null) {
 			if (!treeViewerEObjectsList.getTree().isDisposed()) {
 				treeViewerEObjectsList.setInput(eObjectsList);
 
-				if (!eObjectsList.isEmpty()) {
+				if (!eObjectsList.isEmpty() && defaultSelected != null) {
+					treeViewerEObjectsList.setSelection(new StructuredSelection(defaultSelected));
+				} else if (!eObjectsList.isEmpty() && defaultSelected == null) {
 					treeViewerEObjectsList.setSelection(new StructuredSelection(eObjectsList.get(0)));
+
 				}
 			}
 		}

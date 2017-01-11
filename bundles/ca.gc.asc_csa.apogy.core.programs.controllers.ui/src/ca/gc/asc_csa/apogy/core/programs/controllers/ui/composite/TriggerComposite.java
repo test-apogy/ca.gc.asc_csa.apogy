@@ -82,19 +82,21 @@ public class TriggerComposite extends ScrolledComposite {
 		triggersListComposite = new EObjectListComposite(composite, SWT.None) {
 			@Override
 			protected void newSelection(TreeSelection selection) {
-				Trigger trigger = null;
-				if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER) {
-					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createTimeTrigger();
-				} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER) {
-					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger();
-				} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER) {
-					trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger();
+				if(operationCallControllerBinding.getTrigger() == null || getSelectedEObject() != operationCallControllerBinding.getTrigger().eClass()){
+					Trigger trigger = null;
+					if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.TIME_TRIGGER) {
+						trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createTimeTrigger();
+					} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER) {
+						trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger();
+					} else if (getSelectedEObject() == ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER) {
+						trigger = ApogyCoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger();
+					}
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
+							ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+							trigger);
+					setEComponentComposite();
+					TriggerComposite.this.newSelection(selection);
 				}
-				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCallControllerBinding,
-						ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-						trigger);
-				setEComponentComposite();
-				TriggerComposite.this.newSelection(selection);
 			}
 
 			@Override
@@ -190,7 +192,6 @@ public class TriggerComposite extends ScrolledComposite {
 			eComponentComposite.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 			((ControllerSelectionComposite) eComponentComposite)
 					.setEComponentQualifier(((ControllerStateTrigger) trigger).getComponentQualifier());
-
 		}
 		composite.layout();
 	}
@@ -214,8 +215,11 @@ public class TriggerComposite extends ScrolledComposite {
 		eObjectsEClassList.addAll(ApogyCommonEMFFacade.INSTANCE.getAllSubEClasses(
 				ApogyCoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER
 						.getEReferenceType()));
-		triggersListComposite.setEObjectsList(eObjectsEClassList);
-
+		if (operationCallControllerBinding.getTrigger() != null) {
+			triggersListComposite.setEObjectsList(eObjectsEClassList, operationCallControllerBinding.getTrigger().eClass());
+		}else{
+			triggersListComposite.setEObjectsList(eObjectsEClassList);
+		}
 		setEComponentComposite();
 
 		this.operationCallControllerBinding.eAdapters().add(getAdapter());
