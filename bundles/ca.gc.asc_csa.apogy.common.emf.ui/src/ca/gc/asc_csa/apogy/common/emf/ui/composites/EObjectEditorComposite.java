@@ -70,7 +70,7 @@ public class EObjectEditorComposite extends Composite {
 				checkEnableNewButton(getSelectedEObject());
 			}
 		};
-		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2));
+		eObjectComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3));
 
 		btnNew = new Button(this, SWT.NONE);
 		btnNew.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
@@ -101,7 +101,7 @@ public class EObjectEditorComposite extends Composite {
 		});
 
 		Button btnDelete = new Button(this, SWT.NONE);
-		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		btnDelete.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
 		btnDelete.setText("Delete");
 		btnDelete.addListener(SWT.Selection, new Listener() {
 			@Override
@@ -135,6 +135,34 @@ public class EObjectEditorComposite extends Composite {
 
 			}
 		});
+
+		Button btnDebug = new Button(this, SWT.NONE);
+		btnDebug.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		btnDebug.setText("Debug");
+		btnDebug.addListener(SWT.Selection, new Listener() {
+			@Override
+			public void handleEvent(Event event) 
+			{
+				EObject selected = getSelectedEObject();
+				
+				System.out.println(selected);
+				
+//				if(selected instanceof SimpleTool)
+//				{
+//					SimpleTool simpleTool = (SimpleTool) selected;
+//					simpleTool.initialise();
+//					simpleTool.setActive(true);
+//				}
+//				
+//				if(selected instanceof Simple3DTool)
+//				{
+//					Simple3DTool simple3DTool = (Simple3DTool) selected;
+//					simple3DTool.setVisible(true);
+//				}
+			}
+
+		});
+
 	}
 
 	protected void newSelection(ISelection selection) {

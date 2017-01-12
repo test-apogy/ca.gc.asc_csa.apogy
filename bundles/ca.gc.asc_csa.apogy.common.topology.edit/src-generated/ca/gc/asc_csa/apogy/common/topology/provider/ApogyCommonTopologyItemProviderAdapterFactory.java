@@ -440,6 +440,98 @@ public class ApogyCommonTopologyItemProviderAdapterFactory extends ApogyCommonTo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeFilterChainItemProvider nodeFilterChainItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeFilterChainAdapter() {
+		if (nodeFilterChainItemProvider == null) {
+			nodeFilterChainItemProvider = new NodeFilterChainItemProvider(this);
+		}
+
+		return nodeFilterChainItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeTypeFilterItemProvider nodeTypeFilterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeTypeFilterAdapter() {
+		if (nodeTypeFilterItemProvider == null) {
+			nodeTypeFilterItemProvider = new NodeTypeFilterItemProvider(this);
+		}
+
+		return nodeTypeFilterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.NodeIdFilter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeIdFilterItemProvider nodeIdFilterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.NodeIdFilter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeIdFilterAdapter() {
+		if (nodeIdFilterItemProvider == null) {
+			nodeIdFilterItemProvider = new NodeIdFilterItemProvider(this);
+		}
+
+		return nodeIdFilterItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NodeDescriptionFilterItemProvider nodeDescriptionFilterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNodeDescriptionFilterAdapter() {
+		if (nodeDescriptionFilterItemProvider == null) {
+			nodeDescriptionFilterItemProvider = new NodeDescriptionFilterItemProvider(this);
+		}
+
+		return nodeDescriptionFilterItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +672,10 @@ public class ApogyCommonTopologyItemProviderAdapterFactory extends ApogyCommonTo
 		if (transformNodeItemProvider != null) transformNodeItemProvider.dispose();
 		if (pickAndPlaceNodeItemProvider != null) pickAndPlaceNodeItemProvider.dispose();
 		if (apogyCommonTopologyFacadeItemProvider != null) apogyCommonTopologyFacadeItemProvider.dispose();
+		if (nodeFilterChainItemProvider != null) nodeFilterChainItemProvider.dispose();
+		if (nodeTypeFilterItemProvider != null) nodeTypeFilterItemProvider.dispose();
+		if (nodeIdFilterItemProvider != null) nodeIdFilterItemProvider.dispose();
+		if (nodeDescriptionFilterItemProvider != null) nodeDescriptionFilterItemProvider.dispose();
 	}
 
 }

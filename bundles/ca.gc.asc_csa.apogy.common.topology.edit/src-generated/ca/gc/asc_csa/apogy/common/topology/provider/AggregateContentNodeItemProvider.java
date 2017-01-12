@@ -234,6 +234,26 @@ public class AggregateContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeFilterChain()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeTypeFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeIdFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeDescriptionFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 				 EcoreFactory.eINSTANCE.createEAttribute()));
 
 		newChildDescriptors.add

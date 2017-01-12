@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.common.topology.*;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,6 +83,10 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 			case ApogyCommonTopologyPackage.TRANSFORM_NODE: return createTransformNode();
 			case ApogyCommonTopologyPackage.PICK_AND_PLACE_NODE: return createPickAndPlaceNode();
 			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE: return createApogyCommonTopologyFacade();
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN: return createNodeFilterChain();
+			case ApogyCommonTopologyPackage.NODE_TYPE_FILTER: return createNodeTypeFilter();
+			case ApogyCommonTopologyPackage.NODE_ID_FILTER: return createNodeIdFilter();
+			case ApogyCommonTopologyPackage.NODE_DESCRIPTION_FILTER: return createNodeDescriptionFilter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +106,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 				return createEClassFromString(eDataType, initialValue);
 			case ApogyCommonTopologyPackage.INODE_VISITOR:
 				return createINodeVisitorFromString(eDataType, initialValue);
+			case ApogyCommonTopologyPackage.COLLECTION:
+				return createCollectionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -120,6 +127,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 				return convertEClassToString(eDataType, instanceValue);
 			case ApogyCommonTopologyPackage.INODE_VISITOR:
 				return convertINodeVisitorToString(eDataType, instanceValue);
+			case ApogyCommonTopologyPackage.COLLECTION:
+				return convertCollectionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -280,6 +289,46 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NodeFilterChain createNodeFilterChain() {
+		NodeFilterChainImpl nodeFilterChain = new NodeFilterChainImpl();
+		return nodeFilterChain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeTypeFilter createNodeTypeFilter() {
+		NodeTypeFilterImpl nodeTypeFilter = new NodeTypeFilterImpl();
+		return nodeTypeFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeIdFilter createNodeIdFilter() {
+		NodeIdFilterImpl nodeIdFilter = new NodeIdFilterImpl();
+		return nodeIdFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeDescriptionFilter createNodeDescriptionFilter() {
+		NodeDescriptionFilterImpl nodeDescriptionFilter = new NodeDescriptionFilterImpl();
+		return nodeDescriptionFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Matrix4d createMatrix4dFromString(EDataType eDataType, String initialValue) {
 		return (Matrix4d)super.createFromString(eDataType, initialValue);
 	}
@@ -327,6 +376,24 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	 */
 	public String convertINodeVisitorToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Collection<?> createCollectionFromString(EDataType eDataType, String initialValue) {
+		return (Collection<?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCollectionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
 	}
 
 	/**

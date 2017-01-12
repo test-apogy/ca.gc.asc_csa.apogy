@@ -1640,6 +1640,273 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int APOGY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 23;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl <em>Node Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeFilter()
+	 * @generated
+	 */
+	int NODE_FILTER = 17;
+
+	/**
+	 * The number of structural features of the '<em>Node Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER___FILTER__COLLECTION = 0;
+
+	/**
+	 * The number of operations of the '<em>Node Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl <em>Node Filter Chain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeFilterChain()
+	 * @generated
+	 */
+	int NODE_FILTER_CHAIN = 18;
+
+	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_CHAIN__FILTERS = NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Node Filter Chain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_CHAIN_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_CHAIN___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+
+	/**
+	 * The number of operations of the '<em>Node Filter Chain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_CHAIN_OPERATION_COUNT = NODE_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeTypeFilterImpl <em>Node Type Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeTypeFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeTypeFilter()
+	 * @generated
+	 */
+	int NODE_TYPE_FILTER = 19;
+
+	/**
+	 * The feature id for the '<em><b>Clazz</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_TYPE_FILTER__CLAZZ = NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Node Type Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_TYPE_FILTER_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_TYPE_FILTER___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+
+	/**
+	 * The number of operations of the '<em>Node Type Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_TYPE_FILTER_OPERATION_COUNT = NODE_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.RegexNodeFilterImpl <em>Regex Node Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.RegexNodeFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getRegexNodeFilter()
+	 * @generated
+	 */
+	int REGEX_NODE_FILTER = 20;
+
+	/**
+	 * The feature id for the '<em><b>Regex</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGEX_NODE_FILTER__REGEX = NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Regex Node Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGEX_NODE_FILTER_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGEX_NODE_FILTER___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+
+	/**
+	 * The number of operations of the '<em>Regex Node Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGEX_NODE_FILTER_OPERATION_COUNT = NODE_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeIdFilterImpl <em>Node Id Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeIdFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeIdFilter()
+	 * @generated
+	 */
+	int NODE_ID_FILTER = 21;
+
+	/**
+	 * The feature id for the '<em><b>Regex</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ID_FILTER__REGEX = REGEX_NODE_FILTER__REGEX;
+
+	/**
+	 * The number of structural features of the '<em>Node Id Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ID_FILTER_FEATURE_COUNT = REGEX_NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ID_FILTER___FILTER__COLLECTION = REGEX_NODE_FILTER___FILTER__COLLECTION;
+
+	/**
+	 * The number of operations of the '<em>Node Id Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_ID_FILTER_OPERATION_COUNT = REGEX_NODE_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeDescriptionFilterImpl <em>Node Description Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeDescriptionFilterImpl
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeDescriptionFilter()
+	 * @generated
+	 */
+	int NODE_DESCRIPTION_FILTER = 22;
+
+	/**
+	 * The feature id for the '<em><b>Regex</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_DESCRIPTION_FILTER__REGEX = REGEX_NODE_FILTER__REGEX;
+
+	/**
+	 * The number of structural features of the '<em>Node Description Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_DESCRIPTION_FILTER_FEATURE_COUNT = REGEX_NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_DESCRIPTION_FILTER___FILTER__COLLECTION = REGEX_NODE_FILTER___FILTER__COLLECTION;
+
+	/**
+	 * The number of operations of the '<em>Node Description Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_DESCRIPTION_FILTER_OPERATION_COUNT = REGEX_NODE_FILTER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1647,7 +1914,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getMatrix4d()
 	 * @generated
 	 */
-	int MATRIX4D = 17;
+	int MATRIX4D = 23;
 
 	/**
 	 * The meta object id for the '<em>EClass</em>' data type.
@@ -1657,7 +1924,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getEClass()
 	 * @generated
 	 */
-	int ECLASS = 18;
+	int ECLASS = 24;
 
 
 	/**
@@ -1668,8 +1935,18 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getINodeVisitor()
 	 * @generated
 	 */
-	int INODE_VISITOR = 19;
+	int INODE_VISITOR = 25;
 
+
+	/**
+	 * The meta object id for the '<em>Collection</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.Collection
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getCollection()
+	 * @generated
+	 */
+	int COLLECTION = 26;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.TopologyProvider <em>Topology Provider</em>}'.
@@ -2289,6 +2566,109 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	EOperation getApogyCommonTopologyFacade__PrintTopology__Node();
 
 	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter <em>Node Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Filter</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilter
+	 * @generated
+	 */
+	EClass getNodeFilter();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter#filter(java.util.Collection) <em>Filter</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Filter</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilter#filter(java.util.Collection)
+	 * @generated
+	 */
+	EOperation getNodeFilter__Filter__Collection();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain <em>Node Filter Chain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Filter Chain</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilterChain
+	 * @generated
+	 */
+	EClass getNodeFilterChain();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain#getFilters <em>Filters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Filters</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilterChain#getFilters()
+	 * @see #getNodeFilterChain()
+	 * @generated
+	 */
+	EReference getNodeFilterChain_Filters();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter <em>Node Type Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Type Filter</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter
+	 * @generated
+	 */
+	EClass getNodeTypeFilter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter#getClazz <em>Clazz</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clazz</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter#getClazz()
+	 * @see #getNodeTypeFilter()
+	 * @generated
+	 */
+	EAttribute getNodeTypeFilter_Clazz();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter <em>Regex Node Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Regex Node Filter</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter
+	 * @generated
+	 */
+	EClass getRegexNodeFilter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter#getRegex <em>Regex</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Regex</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter#getRegex()
+	 * @see #getRegexNodeFilter()
+	 * @generated
+	 */
+	EAttribute getRegexNodeFilter_Regex();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeIdFilter <em>Node Id Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Id Filter</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeIdFilter
+	 * @generated
+	 */
+	EClass getNodeIdFilter();
+
+	/**
+	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter <em>Node Description Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node Description Filter</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter
+	 * @generated
+	 */
+	EClass getNodeDescriptionFilter();
+
+	/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Matrix4d <em>Matrix4d</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2320,6 +2700,17 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getINodeVisitor();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.Collection <em>Collection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Collection</em>'.
+	 * @see java.util.Collection
+	 * @model instanceClass="java.util.Collection" typeParameters="T"
+	 * @generated
+	 */
+	EDataType getCollection();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2859,6 +3250,98 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		EOperation APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = eINSTANCE.getApogyCommonTopologyFacade__PrintTopology__Node();
 
 		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl <em>Node Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeFilter()
+		 * @generated
+		 */
+		EClass NODE_FILTER = eINSTANCE.getNodeFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Filter</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NODE_FILTER___FILTER__COLLECTION = eINSTANCE.getNodeFilter__Filter__Collection();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl <em>Node Filter Chain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeFilterChain()
+		 * @generated
+		 */
+		EClass NODE_FILTER_CHAIN = eINSTANCE.getNodeFilterChain();
+
+		/**
+		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE_FILTER_CHAIN__FILTERS = eINSTANCE.getNodeFilterChain_Filters();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeTypeFilterImpl <em>Node Type Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeTypeFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeTypeFilter()
+		 * @generated
+		 */
+		EClass NODE_TYPE_FILTER = eINSTANCE.getNodeTypeFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Clazz</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_TYPE_FILTER__CLAZZ = eINSTANCE.getNodeTypeFilter_Clazz();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.RegexNodeFilterImpl <em>Regex Node Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.RegexNodeFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getRegexNodeFilter()
+		 * @generated
+		 */
+		EClass REGEX_NODE_FILTER = eINSTANCE.getRegexNodeFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Regex</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGEX_NODE_FILTER__REGEX = eINSTANCE.getRegexNodeFilter_Regex();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeIdFilterImpl <em>Node Id Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeIdFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeIdFilter()
+		 * @generated
+		 */
+		EClass NODE_ID_FILTER = eINSTANCE.getNodeIdFilter();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeDescriptionFilterImpl <em>Node Description Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.NodeDescriptionFilterImpl
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getNodeDescriptionFilter()
+		 * @generated
+		 */
+		EClass NODE_DESCRIPTION_FILTER = eINSTANCE.getNodeDescriptionFilter();
+
+		/**
 		 * The meta object literal for the '<em>Matrix4d</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2887,6 +3370,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType INODE_VISITOR = eINSTANCE.getINodeVisitor();
+
+		/**
+		 * The meta object literal for the '<em>Collection</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.Collection
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getCollection()
+		 * @generated
+		 */
+		EDataType COLLECTION = eINSTANCE.getCollection();
 
 	}
 

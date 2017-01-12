@@ -144,6 +144,30 @@ public class ApogyCommonTopologyAdapterFactory extends AdapterFactoryImpl {
 				return createApogyCommonTopologyFacadeAdapter();
 			}
 			@Override
+			public Adapter caseNodeFilter(NodeFilter object) {
+				return createNodeFilterAdapter();
+			}
+			@Override
+			public Adapter caseNodeFilterChain(NodeFilterChain object) {
+				return createNodeFilterChainAdapter();
+			}
+			@Override
+			public Adapter caseNodeTypeFilter(NodeTypeFilter object) {
+				return createNodeTypeFilterAdapter();
+			}
+			@Override
+			public Adapter caseRegexNodeFilter(RegexNodeFilter object) {
+				return createRegexNodeFilterAdapter();
+			}
+			@Override
+			public Adapter caseNodeIdFilter(NodeIdFilter object) {
+				return createNodeIdFilterAdapter();
+			}
+			@Override
+			public Adapter caseNodeDescriptionFilter(NodeDescriptionFilter object) {
+				return createNodeDescriptionFilterAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -398,6 +422,90 @@ public class ApogyCommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApogyCommonTopologyFacadeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter <em>Node Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilter
+	 * @generated
+	 */
+	public Adapter createNodeFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain <em>Node Filter Chain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilterChain
+	 * @generated
+	 */
+	public Adapter createNodeFilterChainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter <em>Node Type Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter
+	 * @generated
+	 */
+	public Adapter createNodeTypeFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter <em>Regex Node Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.RegexNodeFilter
+	 * @generated
+	 */
+	public Adapter createRegexNodeFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.NodeIdFilter <em>Node Id Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeIdFilter
+	 * @generated
+	 */
+	public Adapter createNodeIdFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter <em>Node Description Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeDescriptionFilter
+	 * @generated
+	 */
+	public Adapter createNodeDescriptionFilterAdapter() {
 		return null;
 	}
 

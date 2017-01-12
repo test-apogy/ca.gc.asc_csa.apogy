@@ -214,6 +214,49 @@ public class ApogyCommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApogyCommonTopologyPackage.NODE_FILTER: {
+				NodeFilter nodeFilter = (NodeFilter)theEObject;
+				T1 result = caseNodeFilter(nodeFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN: {
+				NodeFilterChain nodeFilterChain = (NodeFilterChain)theEObject;
+				T1 result = caseNodeFilterChain(nodeFilterChain);
+				if (result == null) result = caseNodeFilter(nodeFilterChain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyPackage.NODE_TYPE_FILTER: {
+				NodeTypeFilter nodeTypeFilter = (NodeTypeFilter)theEObject;
+				T1 result = caseNodeTypeFilter(nodeTypeFilter);
+				if (result == null) result = caseNodeFilter(nodeTypeFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyPackage.REGEX_NODE_FILTER: {
+				RegexNodeFilter regexNodeFilter = (RegexNodeFilter)theEObject;
+				T1 result = caseRegexNodeFilter(regexNodeFilter);
+				if (result == null) result = caseNodeFilter(regexNodeFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyPackage.NODE_ID_FILTER: {
+				NodeIdFilter nodeIdFilter = (NodeIdFilter)theEObject;
+				T1 result = caseNodeIdFilter(nodeIdFilter);
+				if (result == null) result = caseRegexNodeFilter(nodeIdFilter);
+				if (result == null) result = caseNodeFilter(nodeIdFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonTopologyPackage.NODE_DESCRIPTION_FILTER: {
+				NodeDescriptionFilter nodeDescriptionFilter = (NodeDescriptionFilter)theEObject;
+				T1 result = caseNodeDescriptionFilter(nodeDescriptionFilter);
+				if (result == null) result = caseRegexNodeFilter(nodeDescriptionFilter);
+				if (result == null) result = caseNodeFilter(nodeDescriptionFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -470,6 +513,96 @@ public class ApogyCommonTopologySwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseApogyCommonTopologyFacade(ApogyCommonTopologyFacade object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNodeFilter(NodeFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Filter Chain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Filter Chain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNodeFilterChain(NodeFilterChain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Type Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Type Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNodeTypeFilter(NodeTypeFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Regex Node Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Regex Node Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseRegexNodeFilter(RegexNodeFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Id Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Id Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNodeIdFilter(NodeIdFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node Description Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node Description Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseNodeDescriptionFilter(NodeDescriptionFilter object) {
 		return null;
 	}
 

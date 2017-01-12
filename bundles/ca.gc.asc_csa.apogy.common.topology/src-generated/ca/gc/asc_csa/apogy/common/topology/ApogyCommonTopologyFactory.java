@@ -168,6 +168,42 @@ public interface ApogyCommonTopologyFactory extends EFactory {
 	ApogyCommonTopologyFacade createApogyCommonTopologyFacade();
 
 	/**
+	 * Returns a new object of class '<em>Node Filter Chain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Filter Chain</em>'.
+	 * @generated
+	 */
+	NodeFilterChain createNodeFilterChain();
+
+	/**
+	 * Returns a new object of class '<em>Node Type Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Type Filter</em>'.
+	 * @generated
+	 */
+	NodeTypeFilter createNodeTypeFilter();
+
+	/**
+	 * Returns a new object of class '<em>Node Id Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Id Filter</em>'.
+	 * @generated
+	 */
+	NodeIdFilter createNodeIdFilter();
+
+	/**
+	 * Returns a new object of class '<em>Node Description Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node Description Filter</em>'.
+	 * @generated
+	 */
+	NodeDescriptionFilter createNodeDescriptionFilter();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

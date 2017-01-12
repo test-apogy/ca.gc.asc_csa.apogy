@@ -411,8 +411,6 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 			@Override
 			public void visit(Node node) 
 			{
-				System.out.println(node.getClass() + " ID " + node.getNodeId());
-				
 				if(clazz.isSuperTypeOf(node.eClass()))
 				{
 					matches.add(node);

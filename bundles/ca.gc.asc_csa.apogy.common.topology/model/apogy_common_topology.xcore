@@ -40,6 +40,8 @@ type Matrix4d wraps javax.vecmath.Matrix4d
 type EClass wraps org.eclipse.emf.ecore.EClass
 type INodeVisitor wraps ca.gc.asc_csa.apogy.common.topology.INodeVisitor
 
+type Collection<T> wraps java.util.Collection
+
 interface TopologyProvider
 {
 	refers readonly GroupNode topologyRoot
@@ -290,4 +292,61 @@ class ApogyCommonTopologyFacade
 	op double getGeodesicDistance(Node fromNode, Node toNode)
 	
 	op void printTopology(Node node)
+}
+
+/*
+ * Abstract base class of all Node filters.
+ */
+abstract class NodeFilter
+{
+	/*
+	 * Filters a list of Nodes.
+	 * @param nodes The list of Nodes on which to apply the filter.
+	 * @return The list of Node that passes through the filter.
+	 */
+	op Collection<Node> filter(Collection<Node> nodes)
+}
+
+/**
+ * NodeFilter based on a chain of filter. Each filter is applied to the previous filters output.
+ */
+class NodeFilterChain extends NodeFilter
+{
+	contains NodeFilter[0..*] filters
+}
+
+/**
+ * Node filter that filters Node based on their class type.
+ */
+class NodeTypeFilter extends NodeFilter
+{
+	/**
+	 * The class to match.
+	 */
+	EClass clazz
+}
+
+/*
+ * Base class for NodeFilter that use a regular expression matching as the way to determine if a node passes the filter.
+ */
+abstract class RegexNodeFilter extends NodeFilter
+{
+	/*
+	 * The string representing the regular expression that needs to be matched.
+	 */
+	String regex
+}
+
+/**
+ * A Node filter that filters Node based on their nodeId.
+ */
+class NodeIdFilter extends RegexNodeFilter
+{
+}
+
+/**
+ * A Node filter that filters Node based on their description field.
+ */
+class NodeDescriptionFilter extends RegexNodeFilter
+{
 }

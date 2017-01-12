@@ -92,6 +92,8 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   /* Stores the ClosestNeighbourIteratorProvider associated with each of the CartesianTriangularMesh currently searched.*/
   protected Map<CartesianTriangularMesh, ClosestNeighbourIteratorProvider>  meshToClosestNeighbourIteratorProviderMap = new HashMap<CartesianTriangularMesh, ClosestNeighbourIteratorProvider>();
 
+  protected Matrix4x4 lastCorrectedPose = null;
+  protected boolean busy;
   
   /**
 	 * The default value of the '{@link #isInitializing() <em>Initializing</em>}' attribute.
@@ -212,6 +214,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 	 * @ordered
 	 */
   protected ContactProvider contactProvider;
+
 
   /**
 	 * <!-- begin-user-doc -->
@@ -516,80 +519,98 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 
   @Override
   public Matrix4x4 applyCorrection(Matrix4x4 originalPose) 
-  {	  
+  {	  		  
 	  // If corrector is enabled and not initializing.
 	  if(isEnabled())
-	  {
+	  {		  		  
 		  if(!isInitializing())
-		  {
-			  // If Z Correction or Orientation correction is enabled.
-			  if(getZCorrectionMode() != ZCorrectionMode.NO_ZCORRECTION || 
-				 getOrientationCorrectionMode() != OrientationCorrectionMode.NO_ORIENTATION_CORRECTION)
-			  {				
+		  {			
+			  // If not busy doing previous update.
+			  if(!busy)
+			  {
+				  busy = true;
 				  
-				  // Updates the wheel axis position. This is required for both position and orientation corrections.
-				  if(getContactProvider() != null)
-				  {
-					  getContactProvider().updateContactPoints(originalPose, bodyToContactsMap);
+				  // If Z Correction or Orientation correction is enabled.
+				  if(getZCorrectionMode() != ZCorrectionMode.NO_ZCORRECTION || 
+					 getOrientationCorrectionMode() != OrientationCorrectionMode.NO_ORIENTATION_CORRECTION)
+				  {				
+					  
+					  // Updates the wheel axis position. This is required for both position and orientation corrections.
+					  if(getContactProvider() != null)
+					  {
+						  getContactProvider().updateContactPoints(originalPose, bodyToContactsMap);
+					  }
+					  				  				  
+					  // Initialize the corrections matrix to identity.
+					  Matrix4d correctionMatrix = new Matrix4d();		  
+					  correctionMatrix.setIdentity();
+					  			  
+					  // If z correction is required.
+					  if(getZCorrectionMode() != ZCorrectionMode.NO_ZCORRECTION)
+					  {
+						  try
+						  {
+							  // Computes the Z correction.
+							  double zCorrection = computeZCorrection(bodyToContactsMap, originalPose);
+							  setZCorrection(zCorrection);			
+							  
+							  // Applies the zCorrection to the correction matrix.
+							  correctionMatrix.set(new Vector3d(0, 0, getZCorrection()));	
+						  }
+						  catch(Throwable t)
+						  {
+							  t.printStackTrace();
+						  }
+					  }
+					  
+					  // If Orientation Correction is required.
+					  if(getOrientationCorrectionMode() != OrientationCorrectionMode.NO_ORIENTATION_CORRECTION)
+					  {
+						  try
+						  {
+							  // Initialize the rotation correction to identity.
+							  Matrix3d rotationCorrection = new Matrix3d();
+							  rotationCorrection.setIdentity();
+							  
+							  // Compute orientation correction.
+							  rotationCorrection = computeOrientationCorrection(originalPose);
+							  				  
+							  // Updates rotationCorrection			 
+							  setOrientationCorrection(ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotationCorrection));
+							  
+							  // Applies the rotation correction to the correction matrix.
+							  Matrix4d rot = new Matrix4d();
+							  rot.setIdentity();
+							  rot.set(rotationCorrection);					  
+							  correctionMatrix.mul(rot);
+						  }
+						  catch(Throwable t)
+						  {
+							  t.printStackTrace();
+						  }
+					  }
+					  		  
+					  // Applies the correction matrix to the original pose.
+					  Matrix4d corrected = new Matrix4d(originalPose.asMatrix4d());
+					  corrected.mul(correctionMatrix);
+					  
+					  Matrix4x4 correctedPose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(corrected);
+					  
+					  // Updates last corrcted pose.
+					  lastCorrectedPose = correctedPose;
+					
+					  busy = false;
+					  
+					  return correctedPose;
 				  }
-				  				  				  
-				  // Initialize the corrections matrix to identity.
-				  Matrix4d correctionMatrix = new Matrix4d();		  
-				  correctionMatrix.setIdentity();
-				  			  
-				  // If z correction is required.
-				  if(getZCorrectionMode() != ZCorrectionMode.NO_ZCORRECTION)
-				  {
-					  try
-					  {
-						  // Computes the Z correction.
-						  double zCorrection = computeZCorrection(bodyToContactsMap, originalPose);
-						  setZCorrection(zCorrection);			
-						  
-						  // Applies the zCorrection to the correction matrix.
-						  correctionMatrix.set(new Vector3d(0, 0, getZCorrection()));	
-					  }
-					  catch(Throwable t)
-					  {
-						  t.printStackTrace();
-					  }
-				  }
 				  
-				  // If Orientation Correction is required.
-				  if(getOrientationCorrectionMode() != OrientationCorrectionMode.NO_ORIENTATION_CORRECTION)
-				  {
-					  try
-					  {
-						  // Initialize the rotation correction to identity.
-						  Matrix3d rotationCorrection = new Matrix3d();
-						  rotationCorrection.setIdentity();
-						  
-						  // Compute orientation correction.
-						  rotationCorrection = computeOrientationCorrection(originalPose);
-						  				  
-						  // Updates rotationCorrection			 
-						  setOrientationCorrection(ApogyCommonMathFacade.INSTANCE.createMatrix3x3(rotationCorrection));
-						  
-						  // Applies the rotation correction to the correction matrix.
-						  Matrix4d rot = new Matrix4d();
-						  rot.setIdentity();
-						  rot.set(rotationCorrection);					  
-						  correctionMatrix.mul(rot);
-					  }
-					  catch(Throwable t)
-					  {
-						  t.printStackTrace();
-					  }
-				  }
-				  		  
-				  // Applies the correction matrix to the original pose.
-				  Matrix4d corrected = new Matrix4d(originalPose.asMatrix4d());
-				  corrected.mul(correctionMatrix);
-				  
-				  Matrix4x4 correctedPose = ApogyCommonMathFacade.INSTANCE.createMatrix4x4(corrected);
-				  
-				  return correctedPose;
+				  busy = false;			  
 			  }
+			  else
+			  {
+				  return lastCorrectedPose;
+			  }
+				  
 		  }
 		  else
 		  {

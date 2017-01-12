@@ -235,6 +235,26 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeFilterChain()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeTypeFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeIdFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+				 ApogyCommonTopologyFactory.eINSTANCE.createNodeDescriptionFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApogyCommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 				 EcoreFactory.eINSTANCE.createEAttribute()));
 
 		newChildDescriptors.add
