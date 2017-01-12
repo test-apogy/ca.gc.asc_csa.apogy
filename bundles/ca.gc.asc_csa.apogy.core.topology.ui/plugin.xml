@@ -87,5 +87,14 @@
             class="ca.gc.asc_csa.apogy.core.topology.ui.preferences.ApogyTopologyUIPreferencesInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="ca.gc.asc_csa.apogy.core.topology.ui.tests.TestView"
+            id="ca.gc.asc_csa.apogy.core.topology.ui.view1"
+            name="TEST Node Composite"
+            restorable="true">
+      </view>
+   </extension>
 
 </plugin>
