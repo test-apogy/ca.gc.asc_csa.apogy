@@ -75,7 +75,7 @@ public class NodeSelectionComposite extends Composite
 		{
 			@Override
 			public void typeSelected(EClass eClass) 
-			{
+			{				
 				setTypeFilter(eClass);
 			}
 		};
