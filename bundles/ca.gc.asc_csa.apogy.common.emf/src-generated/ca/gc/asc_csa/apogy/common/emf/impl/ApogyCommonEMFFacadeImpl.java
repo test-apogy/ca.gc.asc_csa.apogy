@@ -30,6 +30,9 @@ import javax.measure.unit.Unit;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -62,6 +65,7 @@ import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.Archivable;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.EMFAnnotationConstants;
+import ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
 import ca.gc.asc_csa.apogy.common.emf.Named;
@@ -207,6 +211,18 @@ ApogyCommonEMFFacade {
 				return getSettableEReferences((EObject)arguments.get(0));
 			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING:
 				return toString((List<? extends Named>)arguments.get(0), (String)arguments.get(1));
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT:
+				addAdaptersOnFeaturePath((FeaturePathAdapter)arguments.get(0), (EObject)arguments.get(1));
+				return null;
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST:
+				addAdaptersOnFeaturePath((FeaturePathAdapter)arguments.get(0), (EObject)arguments.get(1), (List<? extends EStructuralFeature>)arguments.get(2));
+				return null;
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT:
+				removeAdaptersOnFeaturePath((FeaturePathAdapter)arguments.get(0), (EObject)arguments.get(1));
+				return null;
+			case ApogyCommonEMFPackage.APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST:
+				removeAdaptersOnFeaturePath((FeaturePathAdapter)arguments.get(0), (EObject)arguments.get(1), (List<? extends EStructuralFeature>)arguments.get(2));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1382,6 +1398,92 @@ ApogyCommonEMFFacade {
 			}
 		}
 		return message;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root) {
+		addAdaptersOnFeaturePath(featurePathAdapter, root, featurePathAdapter.getFeaturePath()); 
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root, List<? extends EStructuralFeature> featurePath) {
+		System.out.println("ApogyCommonEMFFacadeImpl.addAdaptersOnFeaturePath()");
+		System.out.println("FeaturePathAdapter : " + featurePathAdapter);
+		System.out.println("Root : " + root);
+		System.out.println("List : " + featurePath);
+		
+		Adapter adapter = new AdapterImpl() {
+			@Override
+			public void notifyChanged(Notification msg) {
+				featurePathAdapter.notifyAdapterOnFeatureChanged(msg);
+			}
+		};
+		root.eAdapters().add(adapter);
+		featurePathAdapter.getEObjectAdaptersMap().put(root, adapter);
+		
+		List<EStructuralFeature> nextFeaturePath = new ArrayList<>();
+		nextFeaturePath.addAll(featurePath);
+		nextFeaturePath.remove(0);
+		
+		Object next = root.eGet(featurePath.get(0));
+		if (next instanceof List) {
+			for (Object object : (List<?>) next) {
+				if (object instanceof EObject) {
+					addAdaptersOnFeaturePath(featurePathAdapter, (EObject) object, nextFeaturePath);
+				}
+			}
+		} else if (next instanceof EObject) {
+			addAdaptersOnFeaturePath(featurePathAdapter, (EObject) next, nextFeaturePath);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root) {
+		removeAdaptersOnFeaturePath(featurePathAdapter, root, featurePathAdapter.getFeaturePath());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root,
+			List<? extends EStructuralFeature> featurePath) {
+		System.out.println("ApogyCommonEMFFacadeImpl.removeAdaptersOnFeaturePath()");
+		System.out.println("FeaturePathAdapter : " + featurePathAdapter);
+		System.out.println("Root : " + root);
+		System.out.println("List : " + featurePath.get(0));
+		
+		Adapter adapter = featurePathAdapter.getEObjectAdaptersMap().get(root);
+		root.eAdapters().remove(adapter);
+		System.out.println(featurePathAdapter.getEObjectAdaptersMap().remove(root, adapter));
+		
+		List<EStructuralFeature> nextFeaturePath = new ArrayList<>();
+		nextFeaturePath.addAll(featurePath);
+		nextFeaturePath.remove(0);
+		
+		Object next = root.eGet(nextFeaturePath.get(0));
+		if (next instanceof List) {
+			for (Object object : (List<?>) next) {
+				if (object instanceof EObject) {
+					removeAdaptersOnFeaturePath(featurePathAdapter, (EObject) object, nextFeaturePath);
+				}
+			}
+		} else if (next instanceof EObject) {
+			removeAdaptersOnFeaturePath(featurePathAdapter, (EObject) next, nextFeaturePath);
+		}
 	}
 
 	/**

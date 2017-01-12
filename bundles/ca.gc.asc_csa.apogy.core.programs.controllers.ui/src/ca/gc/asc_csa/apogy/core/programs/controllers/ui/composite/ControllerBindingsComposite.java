@@ -53,9 +53,12 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter;
+import ca.gc.asc_csa.apogy.common.emf.impl.FeaturePathAdapterImpl;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.ApogyCommonEMFUIFacade;
 import ca.gc.asc_csa.apogy.common.io.jinput.ApogyCommonIOJInputPackage;
@@ -153,6 +156,7 @@ public class ControllerBindingsComposite extends Composite {
 			public void handleEvent(Event event) {
 				EObject eObject = getSelectedEObject();
 				if (eObject instanceof OperationCallControllerBinding) {
+					treeViewer.setSelection(null);
 					ApogyCommonEMFUIFacade.INSTANCE.openDeleteNamedDialog((OperationCallControllerBinding) eObject);
 				}
 			}
@@ -215,7 +219,34 @@ public class ControllerBindingsComposite extends Composite {
 			treeViewer.setInput(null);
 		}
 
-		this.controllersConfiguration.eAdapters().add(getAdapter());
+		
+		
+		
+		FeaturePathAdapter test = new FeaturePathAdapterImpl() {
+		@Override
+			public void notifyChanged(Notification msg) {
+				System.out.println(msg.getFeature());
+				System.out.println(getEObjectAdaptersMap().size());
+				treeViewer.refresh();
+			}
+
+		@Override
+			public List<? extends EStructuralFeature> getFeaturePath() {
+				List<EStructuralFeature> featurePath = new ArrayList<EStructuralFeature>();
+				featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+				featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+				featurePath.add(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
+				featurePath.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+				featurePath.add(
+						ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+				featurePath.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
+				return featurePath;
+			}
+		};
+		
+		
+		ApogyCommonEMFFacade.INSTANCE.addAdaptersOnFeaturePath(test, this.controllersConfiguration);
+	
 	}
 
 	public EObject getSelectedEObject() {

@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.emf.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -304,6 +305,12 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 			case ApogyCommonEMFPackage.ABSTRACT_FEATURE_SPECIFIER: {
 				AbstractFeatureSpecifier abstractFeatureSpecifier = (AbstractFeatureSpecifier)theEObject;
 				T result = caseAbstractFeatureSpecifier(abstractFeatureSpecifier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApogyCommonEMFPackage.FEATURE_PATH_ADAPTER: {
+				FeaturePathAdapter featurePathAdapter = (FeaturePathAdapter)theEObject;
+				T result = caseFeaturePathAdapter(featurePathAdapter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -716,6 +723,21 @@ public class ApogyCommonEMFSwitch<T> extends Switch<T>
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Path Adapter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Path Adapter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeaturePathAdapter(FeaturePathAdapter object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

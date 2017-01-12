@@ -13,6 +13,7 @@ package ca.gc.asc_csa.apogy.common.emf.util;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
+import ca.gc.asc_csa.apogy.common.emf.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -208,6 +209,10 @@ public class ApogyCommonEMFAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseAbstractFeatureSpecifier(AbstractFeatureSpecifier object) {
 				return createAbstractFeatureSpecifierAdapter();
+			}
+			@Override
+			public Adapter caseFeaturePathAdapter(FeaturePathAdapter object) {
+				return createFeaturePathAdapterAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -609,6 +614,20 @@ public class ApogyCommonEMFAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter <em>Feature Path Adapter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter
+	 * @generated
+	 */
+	public Adapter createFeaturePathAdapterAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null.

@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
 
 import ca.gc.asc_csa.apogy.common.emf.*;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -22,12 +23,15 @@ import javax.measure.unit.Unit;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -163,6 +167,14 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return createResourceSetFromString(eDataType, initialValue);
 			case ApogyCommonEMFPackage.LIST_NAMED:
 				return createListNamedFromString(eDataType, initialValue);
+			case ApogyCommonEMFPackage.LIST_FEATURE:
+				return createListFeatureFromString(eDataType, initialValue);
+			case ApogyCommonEMFPackage.ADAPTER:
+				return createAdapterFromString(eDataType, initialValue);
+			case ApogyCommonEMFPackage.NOTIFICATION:
+				return createNotificationFromString(eDataType, initialValue);
+			case ApogyCommonEMFPackage.HASH_MAP:
+				return createHashMapFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -209,6 +221,14 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 				return convertResourceSetToString(eDataType, instanceValue);
 			case ApogyCommonEMFPackage.LIST_NAMED:
 				return convertListNamedToString(eDataType, instanceValue);
+			case ApogyCommonEMFPackage.LIST_FEATURE:
+				return convertListFeatureToString(eDataType, instanceValue);
+			case ApogyCommonEMFPackage.ADAPTER:
+				return convertAdapterToString(eDataType, instanceValue);
+			case ApogyCommonEMFPackage.NOTIFICATION:
+				return convertNotificationToString(eDataType, instanceValue);
+			case ApogyCommonEMFPackage.HASH_MAP:
+				return convertHashMapToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -688,6 +708,79 @@ public class ApogyCommonEMFFactoryImpl extends EFactoryImpl implements ApogyComm
 	 * @generated
 	 */
 	public String convertListNamedToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public List<? extends EStructuralFeature> createListFeatureFromString(EDataType eDataType, String initialValue) {
+		return (List<? extends EStructuralFeature>)super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListFeatureToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Adapter createAdapterFromString(EDataType eDataType, String initialValue) {
+		return (Adapter)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAdapterToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Notification createNotificationFromString(EDataType eDataType, String initialValue) {
+		return (Notification)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNotificationToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HashMap<?, ?> createHashMapFromString(EDataType eDataType, String initialValue) {
+		return (HashMap<?, ?>)super.createFromString(initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHashMapToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

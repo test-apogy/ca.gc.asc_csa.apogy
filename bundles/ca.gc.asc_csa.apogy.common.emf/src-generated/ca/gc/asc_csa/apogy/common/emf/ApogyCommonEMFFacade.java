@@ -503,4 +503,60 @@ public interface ApogyCommonEMFFacade extends EObject
 	 */
 	String toString(List<? extends Named> nameds, String separator);
 
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Adds adapters on all the EObjects of the featurePathAdapter's map stating from the root object
+	 * @param featurePathAdapter
+	 * @param root
+	 * @param featurePath
+	 * <!-- end-model-doc -->
+	 * @model featurePathAdapterUnique="false" rootUnique="false"
+	 * @generated
+	 */
+	void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Adds adapters on the EObjects of the featurePath stating from the root object.
+	 * @param featurePathAdapter
+	 * @param root
+	 * @param featurePath
+	 * <!-- end-model-doc -->
+	 * @model featurePathAdapterUnique="false" rootUnique="false" featurePathDataType="ca.gc.asc_csa.apogy.common.emf.ListFeature" featurePathUnique="false"
+	 * @generated
+	 */
+	void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root, List<? extends EStructuralFeature> featurePath);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes all the adapters of the featurePathAdapter's map stating from the root object
+	 * @param featurePathAdapter
+	 * @param root
+	 * @param featurePath
+	 * <!-- end-model-doc -->
+	 * @model featurePathAdapterUnique="false" rootUnique="false"
+	 * @generated
+	 */
+	void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes adapters on the EObjects of the featurePath stating from the root object.
+	 * @param featurePathAdapter
+	 * @param root
+	 * @param featurePath
+	 * <!-- end-model-doc -->
+	 * @model featurePathAdapterUnique="false" rootUnique="false" featurePathDataType="ca.gc.asc_csa.apogy.common.emf.ListFeature" featurePathUnique="false"
+	 * @generated
+	 */
+	void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root, List<? extends EStructuralFeature> featurePath);
+
 } // ApogyCommonEMFFacade

@@ -129,7 +129,9 @@ public class EObjectListComposite extends Composite {
 	}
 	
 	public void refreshTreeViewer(){
-		treeViewerEObjectsList.refresh();
+		if(!this.isDisposed() && !treeViewerEObjectsList.isBusy()){
+			treeViewerEObjectsList.refresh();
+		}
 	}
 
 	/**

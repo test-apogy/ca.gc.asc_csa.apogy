@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.emf.impl;
 import static ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage.RESOURCE;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -23,6 +24,8 @@ import javax.measure.unit.Unit;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -54,6 +57,7 @@ import ca.gc.asc_csa.apogy.common.emf.Duration;
 import ca.gc.asc_csa.apogy.common.emf.EClassFilter;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
 import ca.gc.asc_csa.apogy.common.emf.FeatureNodeAdapter;
+import ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter;
 import ca.gc.asc_csa.apogy.common.emf.FixedTimeSource;
 import ca.gc.asc_csa.apogy.common.emf.ListFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.ListRootNode;
@@ -262,6 +266,13 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass featurePathAdapterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum timeDirectionEEnum = null;
 
 	/**
@@ -368,6 +379,34 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * @generated
 	 */
 	private EDataType listNamedEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType listFeatureEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType adapterEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType notificationEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType hashMapEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -827,6 +866,42 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 */
 	public EOperation getApogyCommonEMFFacade__ToString__List_String() {
 		return apogyCommonEMFFacadeEClass.getEOperations().get(42);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(43);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(44);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(45);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List() {
+		return apogyCommonEMFFacadeEClass.getEOperations().get(46);
 	}
 
 	/**
@@ -1491,6 +1566,51 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFeaturePathAdapter() {
+		return featurePathAdapterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFeaturePathAdapter_EObjectAdaptersMap() {
+		return (EAttribute)featurePathAdapterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFeaturePathAdapter_FeaturePath() {
+		return (EAttribute)featurePathAdapterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__NotifyAdapterOnFeatureChanged__Notification() {
+		return featurePathAdapterEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__NotifyChanged__Notification() {
+		return featurePathAdapterEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTimeDirection() {
 		return timeDirectionEEnum;
 	}
@@ -1635,6 +1755,42 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getListFeature() {
+		return listFeatureEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getAdapter() {
+		return adapterEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getNotification() {
+		return notificationEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getHashMap() {
+		return hashMapEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonEMFFactory getApogyCommonEMFFactory() {
 		return (ApogyCommonEMFFactory)getEFactoryInstance();
 	}
@@ -1702,6 +1858,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT);
+		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1801,6 +1961,12 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEAttribute(abstractFeatureSpecifierEClass, ABSTRACT_FEATURE_SPECIFIER__MULTI_VALUED);
 		createEAttribute(abstractFeatureSpecifierEClass, ABSTRACT_FEATURE_SPECIFIER__INDEX);
 
+		featurePathAdapterEClass = createEClass(FEATURE_PATH_ADAPTER);
+		createEAttribute(featurePathAdapterEClass, FEATURE_PATH_ADAPTER__EOBJECT_ADAPTERS_MAP);
+		createEAttribute(featurePathAdapterEClass, FEATURE_PATH_ADAPTER__FEATURE_PATH);
+		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___NOTIFY_ADAPTER_ON_FEATURE_CHANGED__NOTIFICATION);
+		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___NOTIFY_CHANGED__NOTIFICATION);
+
 		// Create enums
 		timeDirectionEEnum = createEEnum(TIME_DIRECTION);
 		rangesEEnum = createEEnum(RANGES);
@@ -1820,6 +1986,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		jobEDataType = createEDataType(JOB);
 		resourceSetEDataType = createEDataType(RESOURCE_SET);
 		listNamedEDataType = createEDataType(LIST_NAMED);
+		listFeatureEDataType = createEDataType(LIST_FEATURE);
+		adapterEDataType = createEDataType(ADAPTER);
+		notificationEDataType = createEDataType(NOTIFICATION);
+		hashMapEDataType = createEDataType(HASH_MAP);
 	}
 
 	/**
@@ -1853,6 +2023,8 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addETypeParameter(sortedSetEDataType, "T");
 		addETypeParameter(collectionEDataType, "T");
 		addETypeParameter(eListEDataType, "EObject");
+		addETypeParameter(hashMapEDataType, "key");
+		addETypeParameter(hashMapEDataType, "value");
 
 		// Set bounds for type parameters
 
@@ -2097,6 +2269,24 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addEParameter(op, this.getListNamed(), "nameds", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "separator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject(), null, "addAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List(), null, "addAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getListFeature(), "featurePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject(), null, "removeAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List(), null, "removeAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getListFeature(), "featurePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2209,6 +2399,21 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEAttribute(getAbstractFeatureSpecifier_MultiValued(), theEcorePackage.getEBoolean(), "multiValued", "false", 0, 1, AbstractFeatureSpecifier.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractFeatureSpecifier_Index(), theEcorePackage.getEInt(), "index", "0", 0, 1, AbstractFeatureSpecifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(featurePathAdapterEClass, FeaturePathAdapter.class, "FeaturePathAdapter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		g1 = createEGenericType(this.getHashMap());
+		g2 = createEGenericType(theEcorePackage.getEObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(this.getAdapter());
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getFeaturePathAdapter_EObjectAdaptersMap(), g1, "eObjectAdaptersMap", null, 0, 1, FeaturePathAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeaturePathAdapter_FeaturePath(), this.getListFeature(), "featurePath", null, 0, 1, FeaturePathAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getFeaturePathAdapter__NotifyAdapterOnFeatureChanged__Notification(), null, "notifyAdapterOnFeatureChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNotification(), "msg", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getFeaturePathAdapter__NotifyChanged__Notification(), null, "notifyChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNotification(), "msg", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(timeDirectionEEnum, TimeDirection.class, "TimeDirection");
 		addEEnumLiteral(timeDirectionEEnum, TimeDirection.FORWARD);
@@ -2236,6 +2441,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		initEDataType(jobEDataType, Job.class, "Job", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(resourceSetEDataType, ResourceSet.class, "ResourceSet", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(listNamedEDataType, List.class, "ListNamed", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<? extends ca.gc.asc_csa.apogy.common.emf.Named>");
+		initEDataType(listFeatureEDataType, List.class, "ListFeature", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "java.util.List<? extends org.eclipse.emf.ecore.EStructuralFeature>");
+		initEDataType(adapterEDataType, Adapter.class, "Adapter", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(notificationEDataType, Notification.class, "Notification", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(hashMapEDataType, HashMap.class, "HashMap", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
