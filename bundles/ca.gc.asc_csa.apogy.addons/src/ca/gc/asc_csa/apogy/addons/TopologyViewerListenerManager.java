@@ -20,18 +20,18 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.ApogyCommonTopologyUIViewerPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.viewer.TopologyViewerRegistry;
-import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
-import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
-import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.InvocatorSession;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyFacade;
+import ca.gc.asc_csa.apogy.core.topology.ApogyCoreTopologyPackage;
 
 public class TopologyViewerListenerManager
 {			
@@ -48,7 +48,8 @@ public class TopologyViewerListenerManager
 		
 		topologyViewerRegistry.eAdapters().add(getTopologyViewerRegistryAdapter());	
 		
-		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getSessionAdapter());
+		// Register to the Apogy Topology.
+		ApogyCoreTopologyFacade.INSTANCE.eAdapters().add(getApogyTopologyAdapter());
 		
 		// Initialize the root node.
 		setAllSimple3DToolRootNode(resolveRootNode());		
@@ -68,7 +69,8 @@ public class TopologyViewerListenerManager
 		
 		try
 		{
-			tool.setRootNode(currentRootNode);
+			// Set the tool root Node in a Transaction friendly way.			
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(tool, ApogyAddonsPackage.Literals.SIMPLE3_DTOOL__ROOT_NODE, currentRootNode);			
 		}
 		catch(Throwable t)
 		{
@@ -90,7 +92,8 @@ public class TopologyViewerListenerManager
 		{
 			try
 			{
-				tool.setRootNode(currentRootNode);				
+				// Set the tool root Node in a Transaction friendly way.
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(tool, ApogyAddonsPackage.Literals.SIMPLE3_DTOOL__ROOT_NODE, currentRootNode);
 			}
 			catch(Throwable t)
 			{
@@ -102,19 +105,14 @@ public class TopologyViewerListenerManager
 	protected Node resolveRootNode()
 	{
 		Node root = null;
-				
+								
 		InvocatorSession invocatorSession = ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession(); 
 		if(invocatorSession != null)
 		{
-			if(invocatorSession.getEnvironment() instanceof ApogyEnvironment)
+			if(ApogyCoreTopologyFacade.INSTANCE.getApogyTopology() != null)
 			{
-// FIXME TRANSACTION: Volatile, Singleton -> Facade.				
-//				ApogyEnvironment apogyEnvironment = (ApogyEnvironment) invocatorSession.getEnvironment();
-//				if(apogyEnvironment.getApogyTopology() != null)
-//				{
-//					root = apogyEnvironment.getApogyTopology().getRootNode();
-//				}
-			}
+				root = ApogyCoreTopologyFacade.INSTANCE.getApogyTopology().getRootNode();
+			}	
 		}
 				
 		return root;
@@ -173,33 +171,38 @@ public class TopologyViewerListenerManager
 		return topologyViewerRegistryAdapter;
 	}		
 	
-	private Adapter getSessionAdapter()
+	private Adapter getApogyTopologyAdapter()
 	{
 		if(sessionAdapter == null)
 		{
-			sessionAdapter = new SessionAdapter();				
+			sessionAdapter = new ApogyTopologyAdapter();				
 		}
 		
 		return sessionAdapter;
 	}
 	
-	private class SessionAdapter extends AdapterImpl
+	private class ApogyTopologyAdapter extends AdapterImpl
 	{
-		private InvocatorSession currentInvocatorSession = null;
-		private ApogyEnvironment currentApogyEnvironment = null;
-		private ApogyTopology currentApogyTopology = null;
-		
 		@Override
 		public void notifyChanged(Notification msg) 
 		{
-			if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
+			if(msg.getNotifier() instanceof ApogyCoreTopologyFacade)
 			{
-				int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
+				int featureId = msg.getFeatureID(ApogyCoreTopologyFacade.class);
 				switch (featureId) 
 				{
-					case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+					case ApogyCoreTopologyPackage.APOGY_CORE_TOPOLOGY_FACADE__APOGY_TOPOLOGY:
 					{	
-						setInvocatorSession((InvocatorSession) msg.getNewValue());
+						ApogyTopology newApogyTopology = (ApogyTopology) msg.getNewValue();
+						if(newApogyTopology != null)
+						{							
+							setAllSimple3DToolRootNode(newApogyTopology.getRootNode());
+						}
+						else
+						{						
+							setAllSimple3DToolRootNode(null);
+						}
+						
 					}
 					break;
 
@@ -207,101 +210,7 @@ public class TopologyViewerListenerManager
 					break;
 				}
 			}
-			else if(msg.getNotifier() instanceof InvocatorSession)
-			{				
-				int featureId = msg.getFeatureID(InvocatorSession.class);
-				switch (featureId) 
-				{
-					case  ApogyCoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT:
-					{
-						setApogyEnvironment((ApogyEnvironment) msg.getNewValue());
-					}
-					break;
-				}
-			}
-			else if(msg.getNotifier() instanceof ApogyEnvironment)
-			{				
-				int featureId = msg.getFeatureID(ApogyEnvironment.class);
-				switch (featureId) 
-				{
-// FIXME TRANSACTION Volatile, Singleton -> Facade.				
-//					case  ApogyCorePackage.APOGY_ENVIRONMENT__APOGY_TOPOLOGY:
-//					{
-//						setApogyTopology((ApogyTopology) msg.getNewValue());
-//					}
-//					break;
-				}
-			}
-			else if(msg.getNotifier() instanceof ApogyTopology)
-			{
-				int featureId = msg.getFeatureID(ApogyTopology.class);
-				switch (featureId) 
-				{
-					case  ApogyCorePackage.APOGY_TOPOLOGY__ROOT_NODE:
-					{
-						setAllSimple3DToolRootNode((Node) msg.getNewValue());
-					}
-					break;
-				}				
-			}					
-		}
-		
-		private void setInvocatorSession(InvocatorSession newInvocatorSession)
-		{
-			if(currentInvocatorSession != null)
-			{
-				currentInvocatorSession.eAdapters().remove(this);										
-			}
-			setApogyEnvironment(null);
-			setApogyTopology(null);
-			
-			currentInvocatorSession = newInvocatorSession;
-			
-			if(currentInvocatorSession != null)
-			{						
-				currentInvocatorSession.eAdapters().add(this);
-				
-				if(currentInvocatorSession.getEnvironment() instanceof ApogyEnvironment)
-				{
-					setApogyEnvironment((ApogyEnvironment) currentInvocatorSession.getEnvironment());
-				}
-			}
-		}
-		
-		private void setApogyEnvironment(ApogyEnvironment newApogyEnvironment)
-		{
-			if(currentApogyEnvironment != null)
-			{
-				currentApogyEnvironment.eAdapters().remove(this);				
-			}
-			setApogyTopology(null);
-			
-			currentApogyEnvironment = newApogyEnvironment;
-			
-			if(currentApogyEnvironment != null)
-			{
-				currentApogyEnvironment.eAdapters().add(this);
-				
-// FIXME TRANSACTION: VOLATILE, SINGLETON -> Facade.				
-//				setApogyTopology(currentApogyEnvironment.getApogyTopology());
-			}
-		}
-		
-		private void setApogyTopology(ApogyTopology newApogyTopology)
-		{
-			if(currentApogyTopology != null)
-			{
-				currentApogyTopology.eAdapters().remove(this);
-			}
-			
-			currentApogyTopology = newApogyTopology;
-			
-			if(currentApogyTopology != null)
-			{
-				setAllSimple3DToolRootNode(currentApogyTopology.getRootNode());
-				
-				currentApogyTopology.eAdapters().add(this);
-			}
+
 		}
 	}
 }

@@ -38,7 +38,9 @@ import ca.gc.asc_csa.apogy.addons.Trajectory3DToolNode;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.ApogyAddonsGeometryPathsFactory;
 import ca.gc.asc_csa.apogy.addons.geometry.paths.WayPointPath;
 import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data.ApogyCommonGeometryDataPackage;
 import ca.gc.asc_csa.apogy.common.geometry.data3d.ApogyCommonGeometryData3DFacade;
+import ca.gc.asc_csa.apogy.common.geometry.data3d.CartesianPositionCoordinates;
 import ca.gc.asc_csa.apogy.common.math.Matrix4x4;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
@@ -46,7 +48,6 @@ import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 import ca.gc.asc_csa.apogy.core.ApogyCorePackage;
 import ca.gc.asc_csa.apogy.core.ApogySystemApiAdapter;
 import ca.gc.asc_csa.apogy.core.PoseProvider;
-import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.invocator.AbstractTypeImplementation;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -200,7 +201,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	@Override
 	public void setRootNode(Node newRootNode) 
 	{		
-		super.setRootNode(newRootNode);						
+		System.out.println("Trajectory3DToolImpl.setRootNode(" + newRootNode + ")");				
+		super.setRootNode(newRootNode);				
 		Trajectory3DToolNode toolNode = getTrajectory3DToolNode();
 		
 		if(toolNode != null)
@@ -335,7 +337,6 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			{
 				// Updates the TotalDistance in a Transaction friendly way.
 				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, newDistance) ;				
-
 			}
 		}
 		
@@ -408,6 +409,8 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 */
 	public void setPoseProvider(PoseProvider newPoseProvider) 
 	{
+		System.out.println("==> Trajectory3DToolImpl.setPoseProvider(" +  newPoseProvider + ")");
+		
 		if(poseProvider != null)
 		{
 			// Remove Adapter from previous poseProvider.
@@ -416,8 +419,16 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		setPoseProviderGen(newPoseProvider);
 		
+		// If the new Pose Provider is not null.
 		if(newPoseProvider != null)
 		{
+			// Updates the Pose.
+			if(newPoseProvider.getPoseTransform() != null)
+			{					 
+				updatePose(newPoseProvider.getPoseTransform());
+			}
+			
+			// Register to the new Pose provider.
 			newPoseProvider.eAdapters().add(getPoseProviderAdapter());
 		}
 	}
@@ -682,10 +693,11 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());
 				
 		// Then, initialize the rest.
-		super.initialise();
-												
+		super.initialise();										
+		
 		try
 		{
+			// Attempts to initialize the Pose Provider.
 			ApogySystemApiAdapter apogySystemApiAdapter = resolveApogySystemApiAdapter(getVariable());
 			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, apogySystemApiAdapter);
 			
@@ -708,8 +720,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		 {			 
 		 }	
 		
-		// Register to the active session.
+		// Registers to the active session.
 		ApogyCoreInvocatorFacade.INSTANCE.eAdapters().add(getVariableAdapter());	
+		getVariableAdapter().setInvocatorSession(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 	
 	@Override
@@ -792,19 +805,21 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	 * @param newPose The new position.
 	 */
 	private void addPoint(Point3d point)
-	{		
+	{						
 		// Adds the point to the current WayPointPath		
-		getCurrentWayPointPath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
+		CartesianPositionCoordinates coordinates = ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(getCurrentWayPointPath(), ApogyCommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS, coordinates);		
+		// getCurrentWayPointPath().getPoints().add(ApogyCommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
 		
 		// Update last pose.
 		lastPoseAdded = new Point3d(point);
 		
-		// Updates total distance.			
-		setTotalDistance(computeTotalDistance());
+		// Updates total distance.					
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TOTAL_DISTANCE, computeTotalDistance());		
 	}
 	
 	/**
-	 * Returns the current WayPointPath into whic new point should be added.
+	 * Returns the current WayPointPath into which new point should be added.
 	 * @return The WayPointPath.
 	 */
 	private WayPointPath getCurrentWayPointPath()
@@ -814,7 +829,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			if(getPaths().isEmpty())
 			{
 				currentWayPointPath = ApogyAddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
-				getPaths().add(currentWayPointPath);
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__PATHS, currentWayPointPath);
+				
+				//getPaths().add(currentWayPointPath);
 			}
 			else
 			{
@@ -840,22 +857,27 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	
 	protected ApogySystemApiAdapter resolveApogySystemApiAdapter(Variable variable)
 	{		
+		ApogySystemApiAdapter apogySystemApiAdapter = null;
+		
 		if(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() != null)
 		{
 			if(variable != null)
 			{
-				AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+				AbstractTypeImplementation abstractTypeImplementation = ApogyCoreInvocatorFacade.INSTANCE.getTypeImplementation(variable);
 				if(abstractTypeImplementation != null)
 				{			
 					if(abstractTypeImplementation.getAdapterInstance() instanceof ApogySystemApiAdapter)
 					{
-						ApogySystemApiAdapter apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
-						return apogySystemApiAdapter;			  						  			
+						apogySystemApiAdapter = (ApogySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
+									  						  			
 					}
 				}
 			}
 		}
-		return null;
+		
+		System.out.println("resolveApogySystemApiAdapter (" + variable + ") = " + apogySystemApiAdapter);
+		
+		return apogySystemApiAdapter;
 	}
 	
 	protected Adapter getPoseProviderAdapter()
@@ -867,7 +889,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(isActive())
+				  //if(isActive())
 				  {
 					  if(msg.getFeatureID(PoseProvider.class) == ApogyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 					  {		
@@ -898,16 +920,18 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		return variableAdapter;
 	}
-	
+		
 	private class VariableAdapter extends AdapterImpl
 	{
 		private InvocatorSession currentInvocatorSession = null;
 		private Environment currentEnvironment = null;
 		private Context currentContext = null;
-		
+					
 		public void notifyChanged(Notification msg) 
-		{				
+		{		
+			System.out.println("NOTIFICATION : " + msg);
 			
+			// Monitor changes to the active InvocatorSession.
 			if(msg.getNotifier() instanceof ApogyCoreInvocatorFacade)
 			{
 				int featureId = msg.getFeatureID(ApogyCoreInvocatorFacade.class);
@@ -915,7 +939,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 				{
 					case ApogyCoreInvocatorPackage.APOGY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 					{	
-						setInvocatorSession((InvocatorSession) msg.getNewValue());
+						setInvocatorSession((InvocatorSession) msg.getNewValue());						
 					}
 					break;
 
@@ -958,7 +982,9 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 					case ApogyCoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:					
 					{
 						// Updates the Pose Provider in a Transaction friendly way.
-						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(Trajectory3DToolImpl.this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, resolveApogySystemApiAdapter(getVariable()));
+						ApogySystemApiAdapter apogySystemApiAdapter = resolveApogySystemApiAdapter(getVariable());
+						System.out.println("-----------------------------------------> " + apogySystemApiAdapter);
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(Trajectory3DToolImpl.this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__POSE_PROVIDER, apogySystemApiAdapter);
 					}
 					break;
 				}
@@ -966,7 +992,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			}
 		}
 		
-		private void setInvocatorSession(InvocatorSession newInvocatorSession)
+		public void setInvocatorSession(InvocatorSession newInvocatorSession)
 		{
 			System.out.println(getName() + "setInvocatorSession " + newInvocatorSession);
 			
@@ -974,19 +1000,13 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			{
 				currentInvocatorSession.eAdapters().remove(this);										
 			}
-			setEnvironment(null);
-			setContext(null);
 			
 			currentInvocatorSession = newInvocatorSession;
 			
 			if(currentInvocatorSession != null)
 			{						
 				currentInvocatorSession.eAdapters().add(this);
-				
-				if(currentInvocatorSession.getEnvironment() instanceof ApogyEnvironment)
-				{
-					setEnvironment((ApogyEnvironment) currentInvocatorSession.getEnvironment());
-				}
+				setEnvironment(currentInvocatorSession.getEnvironment());				
 			}
 		}
 		
