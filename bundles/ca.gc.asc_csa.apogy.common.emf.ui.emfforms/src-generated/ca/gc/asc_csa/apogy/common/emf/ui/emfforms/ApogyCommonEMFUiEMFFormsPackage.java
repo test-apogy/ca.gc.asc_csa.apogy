@@ -116,7 +116,7 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN = 1;
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Create EMF Forms</em>' operation.
@@ -125,7 +125,25 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW = 2;
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN = 2;
+
+	/**
+	 * The operation id for the '<em>Create EMF Forms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW = 3;
+
+	/**
+	 * The operation id for the '<em>Create EMF Forms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW_STRING = 4;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -134,7 +152,7 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE_OPERATION_COUNT = 3;
+	int APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE_OPERATION_COUNT = 5;
 
 
 	/**
@@ -180,6 +198,16 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, java.lang.String) <em>Create EMF Forms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create EMF Forms</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_String();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, boolean) <em>Create EMF Forms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,6 +226,16 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecp.view.spi.model.VView, java.lang.String) <em>Create EMF Forms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create EMF Forms</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade#createEMFForms(org.eclipse.swt.widgets.Composite, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecp.view.spi.model.VView, java.lang.String)
+	 * @generated
+	 */
+	EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView_String();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.widgets.Composite <em>Composite</em>}'.
@@ -266,6 +304,13 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
+		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_STRING = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_String();
+		/**
+		 * The meta object literal for the '<em><b>Create EMF Forms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
 		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean();
 		/**
 		 * The meta object literal for the '<em><b>Create EMF Forms</b></em>' operation.
@@ -274,6 +319,13 @@ public interface ApogyCommonEMFUiEMFFormsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView();
+		/**
+		 * The meta object literal for the '<em><b>Create EMF Forms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW_STRING = eINSTANCE.getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView_String();
 		/**
 		 * The meta object literal for the '<em>Composite</em>' data type.
 		 * <!-- begin-user-doc -->

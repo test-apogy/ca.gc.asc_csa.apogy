@@ -142,7 +142,7 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean() {
+	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_String() {
 		return apogyCommonEMFUiEMFFormsFacadeEClass.getEOperations().get(1);
 	}
 
@@ -151,8 +151,26 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView() {
+	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean() {
 		return apogyCommonEMFUiEMFFormsFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView() {
+		return apogyCommonEMFUiEMFFormsFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView_String() {
+		return apogyCommonEMFUiEMFFormsFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -203,8 +221,10 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 		// Create classes and their features
 		apogyCommonEMFUiEMFFormsFacadeEClass = createEClass(APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE);
 		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT);
+		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_STRING);
 		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN);
 		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW);
+		createEOperation(apogyCommonEMFUiEMFFormsFacadeEClass, APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW_STRING);
 
 		// Create data types
 		compositeEDataType = createEDataType(COMPOSITE);
@@ -250,6 +270,11 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_String(), null, "createEMFForms", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "message", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		op = initEOperation(getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_boolean(), null, "createEMFForms", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -259,6 +284,12 @@ public class ApogyCommonEMFUiEMFFormsPackageImpl extends EPackageImpl implements
 		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVView(), "viewModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonEMFUiEMFFormsFacade__CreateEMFForms__Composite_EObject_VView_String(), null, "createEMFForms", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getComposite(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVView(), "viewModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "message", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(compositeEDataType, Composite.class, "Composite", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

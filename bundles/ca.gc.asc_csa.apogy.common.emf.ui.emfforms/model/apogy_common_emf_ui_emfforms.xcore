@@ -59,6 +59,15 @@ class ApogyCommonEMFUiEMFFormsFacade{
 	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
 	 * @param parent The parent {@link Composite} containing the EMF forms.
 	 * @param eObject The {@link EObject} to display.
+	 * @param message Message to display if the object is null.
+	 */
+	op void createEMFForms(Composite parent, EObject eObject, String message)
+	
+	/**
+	 * Creates a {@link Composite} containing the EMF forms 
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
 	 * @param readOlny Used to specify if the EMF forms is in read only mode.
 	 */
 	op void createEMFForms(Composite parent, EObject eObject, boolean readOnly)
@@ -68,8 +77,17 @@ class ApogyCommonEMFUiEMFFormsFacade{
 	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
 	 * @param parent The parent {@link Composite} containing the EMF forms.
 	 * @param eObject The {@link EObject} to display.
-	 * @param readOlny Used to specify if the EMF forms is in read only mode.
 	 * @param viewModel View model used to render the EObject. 
 	 */
 	op void createEMFForms(Composite parent, EObject eObject, VView viewModel)
+	
+	/**
+	 * Creates a {@link Composite} containing the EMF forms 
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
+	 * @param viewModel View model used to render the EObject. 
+	 * @param message Message to display if the object is null.
+	 */
+	op void createEMFForms(Composite parent, EObject eObject, VView viewModel, String message)
 }

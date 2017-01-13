@@ -22,6 +22,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
 import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.emf.ecp.view.spi.provider.ViewProviderHelper;
+import org.eclipse.jface.layout.GridLayoutFactory;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
@@ -30,6 +34,7 @@ import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsFacade
 import ca.gc.asc_csa.apogy.common.emf.ui.emfforms.ApogyCommonEMFUiEMFFormsPackage;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
 import ca.gc.asc_csa.apogy.common.log.Logger;
+import ca.gc.asc_csa.apogy.common.ui.composites.NoContentComposite;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,12 +87,26 @@ public class ApogyCommonEMFUiEMFFormsFacadeImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public void createEMFForms(Composite parent, EObject eObject, String message) {
+		createEMFForms(parent, eObject, null, message);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public void createEMFForms(Composite parent, EObject eObject, boolean readOnly) {
-		VView viewModel = ViewProviderHelper.getView(eObject, null);
-		if (readOnly) {
-			viewModel.setAllContentsReadOnly();
+		if(eObject == null){
+			createEMFForms(parent, eObject, null, "Object null");	
+		}else{
+			VView viewModel = ViewProviderHelper.getView(eObject, null);
+			if (readOnly) {
+				viewModel.setAllContentsReadOnly();
+			}
+			createEMFForms(parent, eObject, viewModel);	
 		}
-		createEMFForms(parent, eObject, viewModel);
+		
 	}
 
 	/**
@@ -96,15 +115,42 @@ public class ApogyCommonEMFUiEMFFormsFacadeImpl extends MinimalEObjectImpl.Conta
 	 * @generated_NOT
 	 */
 	public void createEMFForms(Composite parent, EObject eObject, VView viewModel) {
+		createEMFForms(parent, eObject, viewModel, "Object null");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void createEMFForms(Composite parent, EObject eObject, VView viewModel, String message) {
 		for (Control control : parent.getChildren()) {
 			control.dispose();
 		}
-		try {
-			ECPSWTViewRenderer.INSTANCE.render(parent, eObject, viewModel);
-		} catch (Exception e) {
-			String message = this.getClass().getSimpleName() + ".setCompositeContents(): "
-					+ "Error while opening EMF Forms";
-			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
+
+		if (eObject == null) {
+			parent.setLayout(new FillLayout());
+			new NoContentComposite(parent, SWT.None) {
+				@Override
+				protected String getMessage() {
+					return message;
+				}
+			};
+		} else {
+			if (!(parent.getLayout() instanceof GridLayout)) {
+				parent.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
+			}
+
+			if (viewModel == null) {
+				viewModel = ViewProviderHelper.getView(eObject, null);
+			}
+			try {
+				ECPSWTViewRenderer.INSTANCE.render(parent, eObject, viewModel);
+			} catch (Exception e) {
+				String messageInfo = this.getClass().getSimpleName() + ".setCompositeContents(): "
+						+ "Error while opening EMF Forms";
+				Logger.INSTANCE.log(Activator.ID, this, messageInfo, EventSeverity.ERROR);
+			}
 		}
 		parent.layout();
 	}
@@ -120,11 +166,17 @@ public class ApogyCommonEMFUiEMFFormsFacadeImpl extends MinimalEObjectImpl.Conta
 			case ApogyCommonEMFUiEMFFormsPackage.APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT:
 				createEMFForms((Composite)arguments.get(0), (EObject)arguments.get(1));
 				return null;
+			case ApogyCommonEMFUiEMFFormsPackage.APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_STRING:
+				createEMFForms((Composite)arguments.get(0), (EObject)arguments.get(1), (String)arguments.get(2));
+				return null;
 			case ApogyCommonEMFUiEMFFormsPackage.APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_BOOLEAN:
 				createEMFForms((Composite)arguments.get(0), (EObject)arguments.get(1), (Boolean)arguments.get(2));
 				return null;
 			case ApogyCommonEMFUiEMFFormsPackage.APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW:
 				createEMFForms((Composite)arguments.get(0), (EObject)arguments.get(1), (VView)arguments.get(2));
+				return null;
+			case ApogyCommonEMFUiEMFFormsPackage.APOGY_COMMON_EMF_UI_EMF_FORMS_FACADE___CREATE_EMF_FORMS__COMPOSITE_EOBJECT_VVIEW_STRING:
+				createEMFForms((Composite)arguments.get(0), (EObject)arguments.get(1), (VView)arguments.get(2), (String)arguments.get(3));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

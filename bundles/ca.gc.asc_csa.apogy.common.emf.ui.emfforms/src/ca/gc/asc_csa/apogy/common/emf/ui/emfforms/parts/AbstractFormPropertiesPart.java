@@ -6,7 +6,6 @@ import org.eclipse.emf.ecp.view.spi.model.VView;
 import org.eclipse.emf.ecp.view.spi.provider.ViewProviderHelper;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
@@ -22,9 +21,8 @@ public abstract class AbstractFormPropertiesPart extends AbstractEObjectSelectio
 	@Override
 	protected void createContentComposite(Composite parent, int style) {
 		contentComposite = new Composite(parent, SWT.NONE);
-		contentComposite.setLayout(new GridLayout(1, true));
-		contentComposite.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));
-		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());		
+		contentComposite.setLayout(GridLayoutFactory.fillDefaults().margins(10, 10).create());
+		contentComposite.setBackground(parent.getDisplay().getSystemColor(SWT.COLOR_WHITE));		
 	}
 
 	@Override

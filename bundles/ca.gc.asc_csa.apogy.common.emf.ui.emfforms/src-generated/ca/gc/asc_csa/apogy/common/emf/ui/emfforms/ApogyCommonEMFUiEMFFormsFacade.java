@@ -66,6 +66,22 @@ public interface ApogyCommonEMFUiEMFFormsFacade extends EObject {
 	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
 	 * @param parent The parent {@link Composite} containing the EMF forms.
 	 * @param eObject The {@link EObject} to display.
+	 * @param message Message to display if the object is null.
+	 * <!-- end-model-doc -->
+	 * @model parentDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Composite" parentUnique="false" eObjectUnique="false" messageUnique="false"
+	 * @generated
+	 */
+	void createEMFForms(Composite parent, EObject eObject, String message);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a {@link Composite} containing the EMF forms
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
 	 * @param readOlny Used to specify if the EMF forms is in read only mode.
 	 * <!-- end-model-doc -->
 	 * @model parentDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Composite" parentUnique="false" eObjectUnique="false" readOnlyUnique="false"
@@ -82,11 +98,27 @@ public interface ApogyCommonEMFUiEMFFormsFacade extends EObject {
 	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
 	 * @param parent The parent {@link Composite} containing the EMF forms.
 	 * @param eObject The {@link EObject} to display.
-	 * @param readOlny Used to specify if the EMF forms is in read only mode.
 	 * @param viewModel View model used to render the EObject.
 	 * <!-- end-model-doc -->
 	 * @model parentDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Composite" parentUnique="false" eObjectUnique="false" viewModelDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.VView" viewModelUnique="false"
 	 * @generated
 	 */
 	void createEMFForms(Composite parent, EObject eObject, VView viewModel);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a {@link Composite} containing the EMF forms
+	 * corresponding to a specified {@link EObject} in the parent {@link Composite}.
+	 * @param parent The parent {@link Composite} containing the EMF forms.
+	 * @param eObject The {@link EObject} to display.
+	 * @param viewModel View model used to render the EObject.
+	 * @param message Message to display if the object is null.
+	 * <!-- end-model-doc -->
+	 * @model parentDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.Composite" parentUnique="false" eObjectUnique="false" viewModelDataType="ca.gc.asc_csa.apogy.common.emf.ui.emfforms.VView" viewModelUnique="false" messageUnique="false"
+	 * @generated
+	 */
+	void createEMFForms(Composite parent, EObject eObject, VView viewModel, String message);
 } // ApogyCommonEMFUiEMFFormsFacade
