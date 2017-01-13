@@ -11,6 +11,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -48,6 +51,7 @@ public class NodeSelectionComposite extends Composite
 	protected List<Node> filteredNodes = new ArrayList<Node>();
 	
 	protected Node selectedNode = null;
+	protected List<Node> selectedNodes = new ArrayList<Node>();
 	
 	// The filter class
 	protected EClass nodeFilterType = null;
@@ -208,7 +212,45 @@ public class NodeSelectionComposite extends Composite
 		
 		filteredNodesTableViewer.setContentProvider(new ArgumentsContentProvier(adapterFactory));
 		filteredNodesTableViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
-
+		filteredNodesTableViewer.addSelectionChangedListener(new ISelectionChangedListener() 
+		{			
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) 
+			{
+				if(event.getSelection() instanceof IStructuredSelection)
+				{
+					IStructuredSelection iStructuredSelection = (IStructuredSelection) event.getSelection();
+					
+					// Clears the selected Nodes list.					
+					selectedNodes.clear();
+					
+					if(!iStructuredSelection.isEmpty())
+					{					
+						nodeSelectedChanged((Node) iStructuredSelection.getFirstElement());
+						
+						// Process the list of selected nodes.
+						Collection<Node> nodesSelected = new ArrayList<Node>();		
+						
+						@SuppressWarnings("unchecked")
+						List<Object> selectedObjects = iStructuredSelection.toList();
+						for(Object object : selectedObjects)
+						{
+							if(object instanceof Node)	nodesSelected.add((Node) object);						
+						}
+						
+						// Update selected nodes.
+						selectedNodes.addAll(nodesSelected);
+						
+						nodesSelectedChanged(nodesSelected);
+					}
+					else
+					{
+						nodeSelectedChanged(null);
+						nodesSelectedChanged(new ArrayList<Node>());
+					}				
+				}
+			}
+		});
 		
 		new Label(this, SWT.NONE);
 		new Label(this, SWT.NONE);
@@ -221,6 +263,26 @@ public class NodeSelectionComposite extends Composite
 		setTopologyRoot(topologyRoot);
 	}
 	
+	/**
+	 * Method that gets called when a node is selected by the user. This method should be overloaded to get notified of a node selection.
+	 * @param nodeSelected The node selected by the user, can be null.
+	 */
+	public void nodeSelectedChanged(Node nodeSelected)
+	{	
+	}	
+	
+	/**
+	 * Method that gets called when 1 or more nodes are selected by the user. This method should be overloaded to get notified of a node selection.
+	 * @param nodesSelected The list of nodes selected. Can be empty, but never null.
+	 */
+	public void nodesSelectedChanged(Collection<Node> nodesSelected)
+	{	
+	}	
+	
+	/**
+	 * Sets the root of the topology for which to display and filter available Nodes.
+	 * @param root The root of the topology.
+	 */
 	public void setTopologyRoot(Node root)
 	{
 		this.topologyRoot = root;
@@ -232,6 +294,10 @@ public class NodeSelectionComposite extends Composite
 		applyFilters();
 	}
 	
+	/**
+	 * Sets the EClass to be used to filter available Nodes. Use null to disable this filter.
+	 * @param eClass The EClass used to filter, null to disable this filter.
+	 */
 	public void setTypeFilter(EClass eClass)
 	{
 		this.nodeFilterType = eClass;
@@ -245,14 +311,11 @@ public class NodeSelectionComposite extends Composite
 		return selectedNode;
 	}
 	
-	public void getSelectedNodes()
-	{				
+	public Collection<Node> getSelectedNodes()
+	{
+		return selectedNodes;
 	}
-	
-	public void selectionChanged()
-	{	
-	}	
-	
+		
 	public void applyFilters()
 	{		
 		// Creates a NodeFilterChain
