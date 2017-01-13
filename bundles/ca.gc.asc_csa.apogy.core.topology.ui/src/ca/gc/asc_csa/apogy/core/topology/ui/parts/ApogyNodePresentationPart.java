@@ -6,7 +6,7 @@ import org.eclipse.swt.widgets.Composite;
 import ca.gc.asc_csa.apogy.common.topology.ui.composites.NodePresentationSelectionComposite;
 import ca.gc.asc_csa.apogy.core.ApogyTopology;
 
-public class TestPart extends AbstractApogyTopologyBasedPart
+public class ApogyNodePresentationPart extends AbstractApogyTopologyBasedPart
 {
 	private NodePresentationSelectionComposite nodeSelectionComposite = null;
 	
