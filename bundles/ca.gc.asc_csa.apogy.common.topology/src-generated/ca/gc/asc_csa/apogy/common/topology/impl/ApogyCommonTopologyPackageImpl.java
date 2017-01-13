@@ -55,6 +55,7 @@ import ca.gc.asc_csa.apogy.common.topology.TopologyProvider;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 import ca.gc.asc_csa.apogy.common.topology.URLNode;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -258,6 +259,13 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	private EDataType collectionEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType listEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -841,7 +849,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonTopologyFacade__GetEuclideanDistance__Node_Node() {
+	public EOperation getApogyCommonTopologyFacade__DoNodesShareTopologyTree__Node_Node() {
 		return apogyCommonTopologyFacadeEClass.getEOperations().get(20);
 	}
 
@@ -850,7 +858,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonTopologyFacade__GetGeodesicDistance__Node_Node() {
+	public EOperation getApogyCommonTopologyFacade__FindNodePath__Node_Node() {
 		return apogyCommonTopologyFacadeEClass.getEOperations().get(21);
 	}
 
@@ -859,7 +867,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonTopologyFacade__PrintTopology__Node() {
+	public EOperation getApogyCommonTopologyFacade__GetEuclideanDistance__Node_Node() {
 		return apogyCommonTopologyFacadeEClass.getEOperations().get(22);
 	}
 
@@ -868,8 +876,26 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonTopologyFacade__Filter__NodeFilter_Collection() {
+	public EOperation getApogyCommonTopologyFacade__GetGeodesicDistance__Node_Node() {
 		return apogyCommonTopologyFacadeEClass.getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonTopologyFacade__PrintTopology__Node() {
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApogyCommonTopologyFacade__Filter__NodeFilter_Collection() {
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(25);
 	}
 
 	/**
@@ -1021,6 +1047,15 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getList() {
+		return listEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ApogyCommonTopologyFactory getApogyCommonTopologyFactory() {
 		return (ApogyCommonTopologyFactory)getEFactoryInstance();
 	}
@@ -1117,6 +1152,8 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___DO_NODES_SHARE_TOPOLOGY_TREE__NODE_NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODE_PATH__NODE_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
@@ -1147,6 +1184,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		eClassEDataType = createEDataType(ECLASS);
 		iNodeVisitorEDataType = createEDataType(INODE_VISITOR);
 		collectionEDataType = createEDataType(COLLECTION);
+		listEDataType = createEDataType(LIST);
 	}
 
 	/**
@@ -1181,6 +1219,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		ETypeParameter referencedContentNodeEClass_T = addETypeParameter(referencedContentNodeEClass, "T");
 		ETypeParameter aggregateContentNodeEClass_T = addETypeParameter(aggregateContentNodeEClass, "T");
 		addETypeParameter(collectionEDataType, "T");
+		addETypeParameter(listEDataType, "T");
 
 		// Set bounds for type parameters
 
@@ -1367,18 +1406,30 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 
 		op = initEOperation(getApogyCommonTopologyFacade__FindNodesByDescription__String_Node(), this.getNode(), "findNodesByDescription", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonTopologyFacade__FindNodesByID__String_Node(), this.getNode(), "findNodesByID", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeId", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonTopologyFacade__FindNodesByType__EClass_Node(), this.getNode(), "findNodesByType", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEClass(), "clazz", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonTopologyFacade__FindRoot__Node(), this.getNode(), "findRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonTopologyFacade__DoNodesShareTopologyTree__Node_Node(), theEcorePackage.getEBoolean(), "doNodesShareTopologyTree", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "node1", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "node2", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApogyCommonTopologyFacade__FindNodePath__Node_Node(), null, "findNodePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "fromNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "toNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getNode());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
 		op = initEOperation(getApogyCommonTopologyFacade__GetEuclideanDistance__Node_Node(), theEcorePackage.getEDouble(), "getEuclideanDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "fromNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1389,7 +1440,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		addEParameter(op, this.getNode(), "toNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonTopologyFacade__PrintTopology__Node(), null, "printTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getApogyCommonTopologyFacade__Filter__NodeFilter_Collection(), null, "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNodeFilter(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1431,6 +1482,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		initEDataType(eClassEDataType, EClass.class, "EClass", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(iNodeVisitorEDataType, INodeVisitor.class, "INodeVisitor", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(collectionEDataType, Collection.class, "Collection", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1530,6 +1582,36 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "createChild", "false"
 		   });	
 		addAnnotation
+		  (getApogyCommonTopologyFacade__CreateLink__Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a Link node that point to a specified Node.\n@param node The node the Link point to.\n@return The Link node created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__CreateContentNode__Object(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a ContentNode that contains a specified content.\n@param content The content of the node.\n@return The ContentNode created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__CreateReferencedContentNode__Object(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a ReferencedContentNode that refers to a specified content.\n@param content The content the node is to refer to.\n@return The ReferencedContentNode created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__CreateAggregateContentNode__Object(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a AggregateContentNode that contains a specified content.\n@param content The content of the node.\n@return The AggregateContentNode created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__CreatePositionNode__double_double_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a PositionNode with x,y,and z coordinates.\n@param x the position along the x axis.\n@param y the position along the y axis.\n@param z the position along the z axis."
+		   });	
+		addAnnotation
 		  (getApogyCommonTopologyFacade__CreateRotationNodeXYZ__double_double_double(), 
 		   source, 
 		   new String[] {
@@ -1566,10 +1648,88 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "documentation", "Creates a transformation node with the rotation\norder z*y*x\n\n@param tx\n           the x translation.\n@param ty\n           the y translation.\n@param tz\n           the z translation.\n@param rx\n           the rotation around the x axis, in radians.\n@param ry\n           the rotation around the y axis, in radians.\n@param rz\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
+		  (getApogyCommonTopologyFacade__CreateTransformNode__Matrix4d(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a TransformNode using a pose expressed as a Matrix4d (4x4 matrix).\n@param matrix The matrix.\n@result The TransformNode created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nCreates a PickAndPlaceNode using a pose expressed as a Matrix4d (4x4 matrix).\n@param matrix The matrix.\n@result The PickAndPlaceNode created."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__ExpressNodeInRootFrame__Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the 4x4 matrix expressing the pose of a specified Node in its root node.\n@param node The specified Node.\n@return The pose."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__ExpressRootInNodeFrame__Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturn the 4x4 matrix expressing the pose of a Node\'s root in that Node reference.\n@param node The specified Node.\n@return The pose."
+		   });	
+		addAnnotation
 		  (getApogyCommonTopologyFacade__ExpressInFrame__Node_Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Compute the transformation to express sourceFrame\ninto targetFrame.\n<p>\nFor example\n<ul>\n<li>sourceFrame could be laser scanner</li>\n<li>targetFrame could be the sonar sensor</li>\n</ul>\nThis method can be used to express the point cloud coming out of the\nlaser scanner in the frame of the sonar sensor.\n</p>"
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__FindNodesByDescription__String_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns all Node for which the description matches a specified string.\n@param description The description to match.\n@param root The root node of the topology.\n@return The list of matching Nodes."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__FindNodesByID__String_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns all Node for which the Id matches a specified string.\n@param nodeId The Id to match.\n@param root The root node of the topology.\n@return The list of matching Nodes."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__FindNodesByType__EClass_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns all Node that are matches or are sub-classes of a specified EClass.\n@param clazz The EClass to match.\n@param root The root node of the topology.\n@return The list of matching Nodes."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__FindRoot__Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the root node (i.e. moves up the topology tree until the ultimate parent node is found) of a specified Node.\n@param node The specified Node.\n@return The root Node."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__DoNodesShareTopologyTree__Node_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns whether or not two specified Nodes shared the same topology tree.\n@param node1 The first Node.\n@param node2 The second Node.\nreturn True if the nodes share the same root Node."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__FindNodePath__Node_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nFinds the list of Node that connects fromNode to toNode.\n@param fromNode The node from which to start.\n@param toNode The destination node.\n@return The list of nodes connecting fromNode to toNode. Never null."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__GetEuclideanDistance__Node_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the Euclidian (i.e. straight line) distance between two Nodes. The nodes must be part of a common topology tree.\n@param fromNode The first Node.\n@param fromNode The second Node.\nreturn The distance between the specified Nodes, NaN if the specified node do no share the same topology tree."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__GetGeodesicDistance__Node_Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the geodesic (i.e. along the connecting edges) distance between two Nodes. The nodes must be part of a common topology tree.\n@param fromNode The first Node.\n@param fromNode The second Node.\nreturn The distance between the specified Nodes, NaN if the specified node do no share the same topology tree."
+		   });	
+		addAnnotation
+		  (getApogyCommonTopologyFacade__PrintTopology__Node(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nPrints the topology as text to the console.\n@param root The root node of the topology."
 		   });	
 		addAnnotation
 		  (getApogyCommonTopologyFacade__Filter__NodeFilter_Collection(), 
@@ -1594,6 +1754,24 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		   source, 
 		   new String[] {
 			 "documentation", "*\nNodeFilter based on a chain of filter."
+		   });	
+		addAnnotation
+		  (filterChainTypeEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe types of NodeFilterChain."
+		   });	
+		addAnnotation
+		  (filterChainTypeEEnum.getELiterals().get(0), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nAll filter must matches for the Node to pass through."
+		   });	
+		addAnnotation
+		  (filterChainTypeEEnum.getELiterals().get(1), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nAt least one filter must matches for the Node to pass through."
 		   });	
 		addAnnotation
 		  (nodeTypeFilterEClass, 

@@ -29,7 +29,8 @@ Require-Bundle: org.eclipse.ui,
  ca.gc.asc_csa.apogy.common.emf.databinding;visibility:=reexport,
  javax.vecmath;bundle-version="1.5.2",
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
- org.eclipse.emf.ecore.xcore.lib;visibility:=reexport
+ org.eclipse.emf.ecore.xcore.lib;visibility:=reexport,
+ org.eclipse.emf.ecp.view.core.swt
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin

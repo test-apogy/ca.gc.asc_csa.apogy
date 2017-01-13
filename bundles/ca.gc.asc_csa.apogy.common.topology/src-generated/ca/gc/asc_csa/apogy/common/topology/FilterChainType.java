@@ -24,6 +24,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Filter Chain Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * *
+ * The types of NodeFilterChain.
+ * <!-- end-model-doc -->
  * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage#getFilterChainType()
  * @model
  * @generated
@@ -57,6 +61,10 @@ public enum FilterChainType implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * All filter must matches for the Node to pass through.
+	 * <!-- end-model-doc -->
 	 * @see #AND
 	 * @model
 	 * @generated
@@ -72,6 +80,10 @@ public enum FilterChainType implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * At least one filter must matches for the Node to pass through.
+	 * <!-- end-model-doc -->
 	 * @see #OR
 	 * @model
 	 * @generated

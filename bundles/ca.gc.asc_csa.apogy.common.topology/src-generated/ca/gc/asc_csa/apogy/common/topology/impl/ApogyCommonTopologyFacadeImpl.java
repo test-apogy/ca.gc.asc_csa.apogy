@@ -468,6 +468,18 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public boolean doNodesShareTopologyTree(Node node1, Node node2) 
+	{
+		Node root1 = findRoot(node1);
+		Node root2 = findRoot(node2);
+		return root1 == root2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public double getEuclideanDistance(Node fromNode, Node toNode)
 	{
 		if(fromNode == toNode)
@@ -476,10 +488,17 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 		}
 		else
 		{
-			Matrix4d m = expressInFrame(fromNode, toNode);
-			Vector3d v = new Vector3d();		
-			m.get(v);		
-			return v.length();
+			if(doNodesShareTopologyTree(fromNode, toNode))
+			{
+				Matrix4d m = expressInFrame(fromNode, toNode);
+				Vector3d v = new Vector3d();		
+				m.get(v);		
+				return v.length();
+			}
+			else
+			{
+				return Double.NaN;
+			}
 		}
 	}
 
@@ -496,108 +515,122 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 		}
 		else
 		{
-			List<Node> nodePath = findNodePath(fromNode, toNode);
-			
-			double distance = 0.0;
-			
-			Node currentNode = null;
-			Node previousNode = null;
-			for(int i = 0; i < nodePath.size(); i++ )
+			if(doNodesShareTopologyTree(fromNode, toNode))
 			{
-				currentNode = nodePath.get(i);			
-				if(previousNode != null && currentNode != null)
+				List<Node> nodePath = findNodePath(fromNode, toNode);
+				
+				double distance = 0.0;				
+				Node currentNode = null;
+				Node previousNode = null;
+				
+				for(int i = 0; i < nodePath.size(); i++ )
 				{
-					distance += getEuclideanDistance(previousNode, currentNode);
-				}			
-				previousNode = currentNode;
+					currentNode = nodePath.get(i);			
+					if(previousNode != null && currentNode != null)
+					{
+						distance += getEuclideanDistance(previousNode, currentNode);
+					}			
+					previousNode = currentNode;
+				}
+				
+				return distance;
 			}
-			
-			return distance;
+			else
+			{
+				return Double.NaN;
+			}
 		}
 	}
 
-	private List<Node> findNodePath(Node fromNode, Node toNode)
+	public List<Node> findNodePath(Node fromNode, Node toNode)
 	{
-		// Return path with from node if from and to are the same node.
-		if(fromNode == toNode)
-		{
-			List<Node> nodePath = new ArrayList<Node>();
-			nodePath.add(fromNode);
-			return nodePath;
-		}
-				
-		// Traverses the topology from fromNode to root.
-		Node current = fromNode;				
-		List<Node> fromToRootList = new ArrayList<Node>();			
-		while (current != null) 
-		{						
-			fromToRootList.add(current);			
-			
-			// Move up the tree.
-			current = current.getParent();
-		}
-	
-		// Traverses the topology from toNode to root.
-		current = toNode;		
-		List<Node> toToRootList = new ArrayList<Node>();
-		while (current != null) 
-		{									
-			toToRootList.add(current);
-			
-			// Move up the tree.
-			current = current.getParent();
-		}	
-				
-		// Finds the intersection of both path.
-		Node intersectionNode = null;
-		Iterator<Node> iterator = fromToRootList.iterator();
-		while(intersectionNode == null && iterator.hasNext())
-		{
-			Node node = iterator.next();
-			
-			if(toToRootList.contains(node))
+		if(doNodesShareTopologyTree(fromNode, toNode))
+		{		
+			// Return path with from node if from and to are the same node.
+			if(fromNode == toNode)
 			{
-				intersectionNode = node;
+				List<Node> nodePath = new ArrayList<Node>();
+				nodePath.add(fromNode);
+				return nodePath;
 			}
-		}
+					
+			// Traverses the topology from fromNode to root.
+			Node current = fromNode;				
+			List<Node> fromToRootList = new ArrayList<Node>();			
+			while (current != null) 
+			{						
+				fromToRootList.add(current);			
+				
+				// Move up the tree.
+				current = current.getParent();
+			}
 		
-		// If no intersection is found.
-		if(intersectionNode == null)
-		{
-			return new ArrayList<Node>();
+			// Traverses the topology from toNode to root.
+			current = toNode;		
+			List<Node> toToRootList = new ArrayList<Node>();
+			while (current != null) 
+			{									
+				toToRootList.add(current);
+				
+				// Move up the tree.
+				current = current.getParent();
+			}	
+					
+			// Finds the intersection of both path.
+			Node intersectionNode = null;
+			Iterator<Node> iterator = fromToRootList.iterator();
+			while(intersectionNode == null && iterator.hasNext())
+			{
+				Node node = iterator.next();
+				
+				if(toToRootList.contains(node))
+				{
+					intersectionNode = node;
+				}
+			}
+			
+			// If no intersection is found.
+			if(intersectionNode == null)
+			{
+				return new ArrayList<Node>();
+			}
+			else
+			{
+				List<Node> nodePath = new ArrayList<Node>();
+				
+				// Gets the from items up to intersectionNode.
+				int index = 0;
+				boolean stop = false;
+				while(!stop && index < fromToRootList.size())
+				{
+					Node node = fromToRootList.get(index);
+					
+					if(node == intersectionNode)
+					{
+						stop = true;
+					}
+					else
+					{
+						nodePath.add(node);
+					}
+					index++;
+				}
+				
+				// Gets the to items from intersectionNode to to. 
+				index = toToRootList.indexOf(intersectionNode);			
+				while(index >= 0)
+				{
+					Node node = toToRootList.get(index);
+					nodePath.add(node);			
+					index--;
+				}
+				
+				return nodePath;
+			}
 		}
 		else
 		{
-			List<Node> nodePath = new ArrayList<Node>();
-			
-			// Gets the from items up to intersectionNode.
-			int index = 0;
-			boolean stop = false;
-			while(!stop && index < fromToRootList.size())
-			{
-				Node node = fromToRootList.get(index);
-				
-				if(node == intersectionNode)
-				{
-					stop = true;
-				}
-				else
-				{
-					nodePath.add(node);
-				}
-				index++;
-			}
-			
-			// Gets the to items from intersectionNode to to. 
-			index = toToRootList.indexOf(intersectionNode);			
-			while(index >= 0)
-			{
-				Node node = toToRootList.get(index);
-				nodePath.add(node);			
-				index--;
-			}
-			
-			return nodePath;
+			return new ArrayList<Node>();
 		}
 	}
 	
@@ -650,6 +683,10 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 				return findNodesByType((EClass)arguments.get(0), (Node)arguments.get(1));
 			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE:
 				return findRoot((Node)arguments.get(0));
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___DO_NODES_SHARE_TOPOLOGY_TREE__NODE_NODE:
+				return doNodesShareTopologyTree((Node)arguments.get(0), (Node)arguments.get(1));
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODE_PATH__NODE_NODE:
+				return findNodePath((Node)arguments.get(0), (Node)arguments.get(1));
 			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE:
 				return getEuclideanDistance((Node)arguments.get(0), (Node)arguments.get(1));
 			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE:

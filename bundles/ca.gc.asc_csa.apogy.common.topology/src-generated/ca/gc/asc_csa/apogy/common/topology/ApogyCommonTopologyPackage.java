@@ -1605,13 +1605,31 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE = 19;
 
 	/**
+	 * The operation id for the '<em>Do Nodes Share Topology Tree</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_TOPOLOGY_FACADE___DO_NODES_SHARE_TOPOLOGY_TREE__NODE_NODE = 20;
+
+	/**
+	 * The operation id for the '<em>Find Node Path</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODE_PATH__NODE_NODE = 21;
+
+	/**
 	 * The operation id for the '<em>Get Euclidean Distance</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = 20;
+	int APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = 22;
 
 	/**
 	 * The operation id for the '<em>Get Geodesic Distance</em>' operation.
@@ -1620,7 +1638,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = 21;
+	int APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = 23;
 
 	/**
 	 * The operation id for the '<em>Print Topology</em>' operation.
@@ -1629,7 +1647,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = 22;
+	int APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = 24;
 
 	/**
 	 * The operation id for the '<em>Filter</em>' operation.
@@ -1638,7 +1656,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION = 23;
+	int APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION = 25;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -1647,7 +1665,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 24;
+	int APOGY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 26;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl <em>Node Filter</em>}' class.
@@ -1976,6 +1994,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 */
 	int COLLECTION = 27;
+
+	/**
+	 * The meta object id for the '<em>List</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getList()
+	 * @generated
+	 */
+	int LIST = 28;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.TopologyProvider <em>Topology Provider</em>}'.
@@ -2565,6 +2593,26 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	EOperation getApogyCommonTopologyFacade__FindRoot__Node();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#doNodesShareTopologyTree(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node) <em>Do Nodes Share Topology Tree</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Do Nodes Share Topology Tree</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#doNodesShareTopologyTree(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node)
+	 * @generated
+	 */
+	EOperation getApogyCommonTopologyFacade__DoNodesShareTopologyTree__Node_Node();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#findNodePath(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node) <em>Find Node Path</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Node Path</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#findNodePath(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node)
+	 * @generated
+	 */
+	EOperation getApogyCommonTopologyFacade__FindNodePath__Node_Node();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#getEuclideanDistance(ca.gc.asc_csa.apogy.common.topology.Node, ca.gc.asc_csa.apogy.common.topology.Node) <em>Get Euclidean Distance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2771,6 +2819,17 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getCollection();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List</em>'.
+	 * @see java.util.List
+	 * @model instanceClass="java.util.List" typeParameters="T"
+	 * @generated
+	 */
+	EDataType getList();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3286,6 +3345,22 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		EOperation APOGY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE = eINSTANCE.getApogyCommonTopologyFacade__FindRoot__Node();
 
 		/**
+		 * The meta object literal for the '<em><b>Do Nodes Share Topology Tree</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_TOPOLOGY_FACADE___DO_NODES_SHARE_TOPOLOGY_TREE__NODE_NODE = eINSTANCE.getApogyCommonTopologyFacade__DoNodesShareTopologyTree__Node_Node();
+
+		/**
+		 * The meta object literal for the '<em><b>Find Node Path</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_TOPOLOGY_FACADE___FIND_NODE_PATH__NODE_NODE = eINSTANCE.getApogyCommonTopologyFacade__FindNodePath__Node_Node();
+
+		/**
 		 * The meta object literal for the '<em><b>Get Euclidean Distance</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3466,6 +3541,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COLLECTION = eINSTANCE.getCollection();
+
+		/**
+		 * The meta object literal for the '<em>List</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getList()
+		 * @generated
+		 */
+		EDataType LIST = eINSTANCE.getList();
 
 	}
 

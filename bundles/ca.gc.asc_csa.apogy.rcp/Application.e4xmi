@@ -144,9 +144,11 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_zTAR4LMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.perspective.3d" label="3D" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.core.topology.ui/icons/eview16/Apogy3DViewer.gif">
         <children xsi:type="basic:PartSashContainer" xmi:id="_3l31QLMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partsashcontainer.22">
-          <children xsi:type="basic:PartStack" xmi:id="_4TqIULMaEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.partstack.2">
-            <children xsi:type="advanced:Placeholder" xmi:id="_UAaloLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.15" ref="_5CrKcLMaEeaf4uxcZZf16g"/>
-            <children xsi:type="advanced:Placeholder" xmi:id="_ysOZgNjcEeaQhd7Zk-zg1w" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.17" ref="_cpYNYNjcEeaQhd7Zk-zg1w"/>
+          <children xsi:type="basic:PartStack" xmi:id="_zLIkMNm6EeaIbP_ysLlVGA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.2" containerData="60">
+            <children xsi:type="advanced:Placeholder" xmi:id="_UAaloLNPEeaf4uxcZZf16g" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.15" containerData="" ref="_5CrKcLMaEeaf4uxcZZf16g"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_0IUlMNm6EeaIbP_ysLlVGA" elementId="ca.gc.asc_csa.apogy.rcp.partstack.30" containerData="40">
+            <children xsi:type="advanced:Placeholder" xmi:id="_ysOZgNjcEeaQhd7Zk-zg1w" elementId="ca.gc.asc_csa.apogy.rcp.placeholder.17" containerData="" ref="_cpYNYNjcEeaQhd7Zk-zg1w"/>
           </children>
         </children>
       </children>
@@ -316,7 +318,7 @@
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="__hhyULf-EeajoIayvPiU1w" elementId="ca.gc.asc_csa.apogy.rcp.part.worksites" label="Worksites"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_HCb7QMFQEea6FtQWGvDR3g" elementId="ca.gc.asc_csa.apogy.rcp.part.ApogyTopologyEditorPart" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.ApogyTopologyEditorPart" label="Topology"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_cpYNYNjcEeaQhd7Zk-zg1w" elementId="ca.gc.asc_csa.apogy.rcp.part.toplogytests" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.TestPart" label="Toplogy Tests"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_cpYNYNjcEeaQhd7Zk-zg1w" elementId="ca.gc.asc_csa.apogy.rcp.part.toplogytests" contributionURI="bundleclass://ca.gc.asc_csa.apogy.core.topology.ui/ca.gc.asc_csa.apogy.core.topology.ui.parts.TestPart" label="Node Presentation"/>
     <trimBars xmi:id="_WPqOMCKxEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_LKKOgCKzEea6ZMxs3EryPg" elementId="ca.gc.asc_csa.apogy.rcp.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_l6rHgCjxEeaYVMfJA5sKMA" elementId="ca.gc.asc_csa.apogy.rcp.handledtoolitem.save" label="Save" iconURI="platform:/plugin/ca.gc.asc_csa.apogy.rcp/icons/tool16/save.gif" tooltip="" command="_6wlLg8gZEeSyMNYR5xypkQ"/>

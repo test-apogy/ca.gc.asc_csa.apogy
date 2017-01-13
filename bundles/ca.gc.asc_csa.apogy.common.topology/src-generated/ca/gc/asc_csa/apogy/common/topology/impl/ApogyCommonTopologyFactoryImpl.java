@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.common.topology.*;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,6 +111,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 				return createINodeVisitorFromString(eDataType, initialValue);
 			case ApogyCommonTopologyPackage.COLLECTION:
 				return createCollectionFromString(eDataType, initialValue);
+			case ApogyCommonTopologyPackage.LIST:
+				return createListFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,6 +136,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 				return convertINodeVisitorToString(eDataType, instanceValue);
 			case ApogyCommonTopologyPackage.COLLECTION:
 				return convertCollectionToString(eDataType, instanceValue);
+			case ApogyCommonTopologyPackage.LIST:
+				return convertListToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -417,6 +422,24 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	 * @generated
 	 */
 	public String convertCollectionToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<?> createListFromString(EDataType eDataType, String initialValue) {
+		return (List<?>)super.createFromString(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertListToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
 	}
 

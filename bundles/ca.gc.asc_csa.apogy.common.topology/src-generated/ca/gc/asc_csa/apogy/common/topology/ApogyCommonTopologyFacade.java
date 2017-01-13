@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyFacadeImpl;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,6 +39,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a Link node that point to a specified Node.
+	 * @param node The node the Link point to.
+	 * @return The Link node created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" nodeUnique="false"
 	 * @generated
 	 */
@@ -46,6 +53,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a ContentNode that contains a specified content.
+	 * @param content The content of the node.
+	 * @return The ContentNode created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" contentUnique="false"
 	 * @generated
 	 */
@@ -54,6 +67,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a ReferencedContentNode that refers to a specified content.
+	 * @param content The content the node is to refer to.
+	 * @return The ReferencedContentNode created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" contentUnique="false"
 	 * @generated
 	 */
@@ -62,6 +81,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a AggregateContentNode that contains a specified content.
+	 * @param content The content of the node.
+	 * @return The AggregateContentNode created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" contentUnique="false"
 	 * @generated
 	 */
@@ -70,6 +95,13 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a PositionNode with x,y,and z coordinates.
+	 * @param x the position along the x axis.
+	 * @param y the position along the y axis.
+	 * @param z the position along the z axis.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" xUnique="false" yUnique="false" zUnique="false"
 	 * @generated
 	 */
@@ -210,6 +242,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a TransformNode using a pose expressed as a Matrix4d (4x4 matrix).
+	 * @param matrix The matrix.
+	 * @result The TransformNode created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
@@ -218,6 +256,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Creates a PickAndPlaceNode using a pose expressed as a Matrix4d (4x4 matrix).
+	 * @param matrix The matrix.
+	 * @result The PickAndPlaceNode created.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" matrixDataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" matrixUnique="false"
 	 * @generated
 	 */
@@ -226,6 +270,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Return the 4x4 matrix expressing the pose of a specified Node in its root node.
+	 * @param node The specified Node.
+	 * @return The pose.
+	 * <!-- end-model-doc -->
 	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false" nodeUnique="false"
 	 * @generated
 	 */
@@ -234,6 +284,12 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Return the 4x4 matrix expressing the pose of a Node's root in that Node reference.
+	 * @param node The specified Node.
+	 * @return The pose.
+	 * <!-- end-model-doc -->
 	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Matrix4d" unique="false" nodeUnique="false"
 	 * @generated
 	 */
@@ -263,30 +319,57 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" descriptionUnique="false" topologyUnique="false"
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns all Node for which the description matches a specified string.
+	 * @param description The description to match.
+	 * @param root The root node of the topology.
+	 * @return The list of matching Nodes.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" descriptionUnique="false" rootUnique="false"
 	 * @generated
 	 */
-	EList<Node> findNodesByDescription(String description, Node topology);
+	EList<Node> findNodesByDescription(String description, Node root);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" nodeIdUnique="false" topologyUnique="false"
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns all Node for which the Id matches a specified string.
+	 * @param nodeId The Id to match.
+	 * @param root The root node of the topology.
+	 * @return The list of matching Nodes.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" nodeIdUnique="false" rootUnique="false"
 	 * @generated
 	 */
-	EList<Node> findNodesByID(String nodeId, Node topology);
+	EList<Node> findNodesByID(String nodeId, Node root);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" clazzDataType="ca.gc.asc_csa.apogy.common.topology.EClass" clazzUnique="false" topologyUnique="false"
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns all Node that are matches or are sub-classes of a specified EClass.
+	 * @param clazz The EClass to match.
+	 * @param root The root node of the topology.
+	 * @return The list of matching Nodes.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" clazzDataType="ca.gc.asc_csa.apogy.common.topology.EClass" clazzUnique="false" rootUnique="false"
 	 * @generated
 	 */
-	EList<Node> findNodesByType(EClass clazz, Node topology);
+	EList<Node> findNodesByType(EClass clazz, Node root);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the root node (i.e. moves up the topology tree until the ultimate parent node is found) of a specified Node.
+	 * @param node The specified Node.
+	 * @return The root Node.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" nodeUnique="false"
 	 * @generated
 	 */
@@ -295,6 +378,43 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns whether or not two specified Nodes shared the same topology tree.
+	 * @param node1 The first Node.
+	 * @param node2 The second Node.
+	 * return True if the nodes share the same root Node.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" node1Unique="false" node2Unique="false"
+	 * @generated
+	 */
+	boolean doNodesShareTopologyTree(Node node1, Node node2);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Finds the list of Node that connects fromNode to toNode.
+	 * @param fromNode The node from which to start.
+	 * @param toNode The destination node.
+	 * @return The list of nodes connecting fromNode to toNode. Never null.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.List<ca.gc.asc_csa.apogy.common.topology.Node>" unique="false" many="false" fromNodeUnique="false" toNodeUnique="false"
+	 * @generated
+	 */
+	List<Node> findNodePath(Node fromNode, Node toNode);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the Euclidian (i.e. straight line) distance between two Nodes. The nodes must be part of a common topology tree.
+	 * @param fromNode The first Node.
+	 * @param fromNode The second Node.
+	 * return The distance between the specified Nodes, NaN if the specified node do no share the same topology tree.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" fromNodeUnique="false" toNodeUnique="false"
 	 * @generated
 	 */
@@ -303,6 +423,13 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the geodesic (i.e. along the connecting edges) distance between two Nodes. The nodes must be part of a common topology tree.
+	 * @param fromNode The first Node.
+	 * @param fromNode The second Node.
+	 * return The distance between the specified Nodes, NaN if the specified node do no share the same topology tree.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" fromNodeUnique="false" toNodeUnique="false"
 	 * @generated
 	 */
@@ -311,10 +438,15 @@ public interface ApogyCommonTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model nodeUnique="false"
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Prints the topology as text to the console.
+	 * @param root The root node of the topology.
+	 * <!-- end-model-doc -->
+	 * @model rootUnique="false"
 	 * @generated
 	 */
-	void printTopology(Node node);
+	void printTopology(Node root);
 
 	/**
 	 * <!-- begin-user-doc -->
