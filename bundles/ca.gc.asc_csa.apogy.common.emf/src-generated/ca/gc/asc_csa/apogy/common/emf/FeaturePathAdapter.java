@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * <ul>
  *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getEObjectAdaptersMap <em>EObject Adapters Map</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getFeaturePath <em>Feature Path</em>}</li>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getRoot <em>Root</em>}</li>
  * </ul>
  *
  * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeaturePathAdapter()
@@ -54,7 +55,7 @@ public interface FeaturePathAdapter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Map of the adapters, this is used to remove the adapters when no longer needed
+	 * Map of the adapters, this is used to remove the adapters when no longer needed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>EObject Adapters Map</em>' attribute.
 	 * @see #setEObjectAdaptersMap(HashMap)
@@ -83,7 +84,7 @@ public interface FeaturePathAdapter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * List of the features to get notified if changed
+	 * List of the features to get notified if changed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Path</em>' attribute.
 	 * @see #setFeaturePath(List)
@@ -102,6 +103,65 @@ public interface FeaturePathAdapter extends EObject {
 	 * @generated
 	 */
 	void setFeaturePath(List<? extends EStructuralFeature> value);
+
+	/**
+	 * Returns the value of the '<em><b>Root</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * First EObject to add an adapter to.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Root</em>' reference.
+	 * @see #setRoot(EObject)
+	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage#getFeaturePathAdapter_Root()
+	 * @model
+	 * @generated
+	 */
+	EObject getRoot();
+
+	/**
+	 * Sets the value of the '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getRoot <em>Root</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Root</em>' reference.
+	 * @see #getRoot()
+	 * @generated
+	 */
+	void setRoot(EObject value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Needs to be called to initialize the adapters.
+	 * @param root first {@link EObject} to add {@link Adapter} to.
+	 * <!-- end-model-doc -->
+	 * @model rootUnique="false"
+	 * @generated
+	 */
+	void init(EObject root);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes all the adapters.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void dispose();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Is called to initialize the features to listen with the adapters that will be created.
+	 * <!-- end-model-doc -->
+	 * @model kind="operation" dataType="ca.gc.asc_csa.apogy.common.emf.ListFeature" unique="false"
+	 * @generated
+	 */
+	List<? extends EStructuralFeature> getFeatureList();
 
 	/**
 	 * <!-- begin-user-doc -->

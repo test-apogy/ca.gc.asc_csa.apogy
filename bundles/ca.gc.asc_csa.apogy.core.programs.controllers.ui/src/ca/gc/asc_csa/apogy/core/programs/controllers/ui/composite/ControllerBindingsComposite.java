@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.composite;
  */
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -53,7 +54,6 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 
-import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
@@ -86,6 +86,8 @@ public class ControllerBindingsComposite extends Composite {
 
 	private TreeViewer treeViewer;
 	private Button btnDelete;
+	
+	private FeaturePathAdapter featurePathAdapter;
 
 	/**
 	 * Creates the parentComposite.
@@ -218,39 +220,46 @@ public class ControllerBindingsComposite extends Composite {
 		} else {
 			treeViewer.setInput(null);
 		}
-
 		
+		getFeaturePathAdapter().init(controllersConfiguration);
 		
-		
-		FeaturePathAdapter test = new FeaturePathAdapterImpl() {
-		@Override
-			public void notifyChanged(Notification msg) {
-				System.out.println(msg.getFeature());
-				System.out.println(getEObjectAdaptersMap().size());
-				treeViewer.refresh();
-			}
-
-		@Override
-			public List<? extends EStructuralFeature> getFeaturePath() {
-				List<EStructuralFeature> featurePath = new ArrayList<EStructuralFeature>();
-				featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
-				featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
-				featurePath.add(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
-				featurePath.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
-				featurePath.add(
-						ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
-				featurePath.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
-				return featurePath;
-			}
-		};
-		
-		
-		ApogyCommonEMFFacade.INSTANCE.addAdaptersOnFeaturePath(test, this.controllersConfiguration);
-	
+//		this.controllersConfiguration.eAdapters().add(getAdapter());	
 	}
 
 	public EObject getSelectedEObject() {
 		return (EObject) treeViewer.getStructuredSelection().getFirstElement();
+	}
+	
+	private FeaturePathAdapter getFeaturePathAdapter() {
+		if(this.featurePathAdapter == null){
+			featurePathAdapter = new FeaturePathAdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					treeViewer.refresh();	
+					System.out.println(featurePathAdapter.getEObjectAdaptersMap().size());
+//					Object test = null;
+					Iterator<?> ite = featurePathAdapter.getEObjectAdaptersMap().keySet().iterator();
+					while(ite.hasNext()){
+						System.out.println(ite.next());
+					}
+//					System.out.println(test);
+				}
+
+				@Override
+				public List<? extends EStructuralFeature> getFeatureList() {
+					List<EStructuralFeature> featurePath = new ArrayList<EStructuralFeature>();
+					featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+					featurePath.add(ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+					featurePath.add(ApogyCoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
+					featurePath.add(ApogyCoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+					featurePath.add(
+							ApogyCoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+					featurePath.add(ApogyCommonIOJInputPackage.Literals.ECOMPONENT_QUALIFIER__ECOMPONENT_NAME);
+					return featurePath;
+				}
+			};
+		}
+		return featurePathAdapter;
 	}
 
 	protected DataBindingContext initDataBindings() {

@@ -76,6 +76,7 @@ public class FeaturePathAdapterItemProvider
 
 			addEObjectAdaptersMapPropertyDescriptor(object);
 			addFeaturePathPropertyDescriptor(object);
+			addRootPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -120,6 +121,28 @@ public class FeaturePathAdapterItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Root feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRootPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FeaturePathAdapter_root_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FeaturePathAdapter_root_feature", "_UI_FeaturePathAdapter_type"),
+				 ApogyCommonEMFPackage.Literals.FEATURE_PATH_ADAPTER__ROOT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

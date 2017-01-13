@@ -13,8 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.common.emf.impl;
 
-import static ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage.RESOURCE;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -39,6 +37,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureListNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureNode;
 import ca.gc.asc_csa.apogy.common.emf.AbstractFeatureSpecifier;
@@ -873,42 +872,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(43);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(44);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(45);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List() {
-		return apogyCommonEMFFacadeEClass.getEOperations().get(46);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEObjectReference() {
 		return eObjectReferenceEClass;
 	}
@@ -1593,7 +1556,16 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getFeaturePathAdapter__NotifyAdapterOnFeatureChanged__Notification() {
+	public EReference getFeaturePathAdapter_Root() {
+		return (EReference)featurePathAdapterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__Init__EObject() {
 		return featurePathAdapterEClass.getEOperations().get(0);
 	}
 
@@ -1602,8 +1574,35 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getFeaturePathAdapter__NotifyChanged__Notification() {
+	public EOperation getFeaturePathAdapter__Dispose() {
 		return featurePathAdapterEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__GetFeatureList() {
+		return featurePathAdapterEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__NotifyAdapterOnFeatureChanged__Notification() {
+		return featurePathAdapterEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFeaturePathAdapter__NotifyChanged__Notification() {
+		return featurePathAdapterEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1858,10 +1857,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_CHILD_ECLASSES__ECLASS);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___GET_SETTABLE_EREFERENCES__EOBJECT);
 		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT);
-		createEOperation(apogyCommonEMFFacadeEClass, APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST);
 
 		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
 		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
@@ -1964,6 +1959,10 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		featurePathAdapterEClass = createEClass(FEATURE_PATH_ADAPTER);
 		createEAttribute(featurePathAdapterEClass, FEATURE_PATH_ADAPTER__EOBJECT_ADAPTERS_MAP);
 		createEAttribute(featurePathAdapterEClass, FEATURE_PATH_ADAPTER__FEATURE_PATH);
+		createEReference(featurePathAdapterEClass, FEATURE_PATH_ADAPTER__ROOT);
+		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___INIT__EOBJECT);
+		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___DISPOSE);
+		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___GET_FEATURE_LIST);
 		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___NOTIFY_ADAPTER_ON_FEATURE_CHANGED__NOTIFICATION);
 		createEOperation(featurePathAdapterEClass, FEATURE_PATH_ADAPTER___NOTIFY_CHANGED__NOTIFICATION);
 
@@ -2269,24 +2268,6 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		addEParameter(op, this.getListNamed(), "nameds", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "separator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject(), null, "addAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List(), null, "addAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getListFeature(), "featurePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject(), null, "removeAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List(), null, "removeAdaptersOnFeaturePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getFeaturePathAdapter(), "featurePathAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getListFeature(), "featurePath", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2407,6 +2388,14 @@ public class ApogyCommonEMFPackageImpl extends EPackageImpl implements ApogyComm
 		g1.getETypeArguments().add(g2);
 		initEAttribute(getFeaturePathAdapter_EObjectAdaptersMap(), g1, "eObjectAdaptersMap", null, 0, 1, FeaturePathAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeaturePathAdapter_FeaturePath(), this.getListFeature(), "featurePath", null, 0, 1, FeaturePathAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeaturePathAdapter_Root(), theEcorePackage.getEObject(), null, "root", null, 0, 1, FeaturePathAdapter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getFeaturePathAdapter__Init__EObject(), null, "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEObject(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getFeaturePathAdapter__Dispose(), null, "dispose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getFeaturePathAdapter__GetFeatureList(), this.getListFeature(), "getFeatureList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		op = initEOperation(getFeaturePathAdapter__NotifyAdapterOnFeatureChanged__Notification(), null, "notifyAdapterOnFeatureChanged", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNotification(), "msg", 0, 1, !IS_UNIQUE, IS_ORDERED);

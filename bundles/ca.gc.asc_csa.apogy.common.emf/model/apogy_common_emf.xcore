@@ -265,38 +265,6 @@ class ApogyCommonEMFFacade
 	  * @return Reference to the string representation.
 	  */
 	 op String toString(ListNamed nameds, String separator)
-	 
-	 /*
-	  * Adds adapters on all the EObjects of the featurePathAdapter's map stating from the root object
-	  * @param featurePathAdapter
-	  * @param root
-	  * @param featurePath
-	  */
-	 op void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root)
-	 
-	 /*
-	  * Adds adapters on the EObjects of the featurePath stating from the root object.
-	  * @param featurePathAdapter
-	  * @param root
-	  * @param featurePath
-	  */
-	 op void addAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root, ListFeature featurePath)
-	 
-	 /*
-	  * Removes all the adapters of the featurePathAdapter's map stating from the root object
-	  * @param featurePathAdapter
-	  * @param root
-	  * @param featurePath
-	  */
-	 op void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root)
-	 
-	  /*
-	  * Removes adapters on the EObjects of the featurePath stating from the root object.
-	  * @param featurePathAdapter
-	  * @param root
-	  * @param featurePath
-	  */
-	 op void removeAdaptersOnFeaturePath(FeaturePathAdapter featurePathAdapter, EObject root, ListFeature featurePath)
 }
 
 /**
@@ -722,16 +690,37 @@ abstract class AbstractFeatureSpecifier
  abstract class FeaturePathAdapter
  {
  	/*
- 	 * Map of the adapters, this is used to remove the adapters when no longer needed
+ 	 * Map of the adapters, this is used to remove the adapters when no longer needed.
  	 */
  	HashMap<EObject, Adapter> eObjectAdaptersMap
  	/*
- 	 * List of the features to get notified if changed
+ 	 * List of the features to get notified if changed.
  	 */
  	ListFeature featurePath
  	
- 	op void notifyAdapterOnFeatureChanged(Notification msg)
+ 	/*
+ 	 * First EObject to add an adapter to.
+ 	 */
+ 	refers EObject root
  	
+ 	/*
+ 	 * Needs to be called to initialize the adapters.
+ 	 * @param root first {@link EObject} to add {@link Adapter} to.
+ 	 */
+ 	op void init(EObject root)
+ 	
+ 	/*
+ 	 * Removes all the adapters. 
+ 	 */
+ 	op void dispose()
+ 	
+ 	/*
+ 	 * Is called to initialize the features to listen with the adapters that will be created.
+ 	 */
+ 	op ListFeature getFeatureList()
+ 	
+ 	op void notifyAdapterOnFeatureChanged(Notification msg)
+ 		
  	/*
  	 * Is called when an object in the featurePath has a notifyChanged called on a feature in the featurePath.
  	 */

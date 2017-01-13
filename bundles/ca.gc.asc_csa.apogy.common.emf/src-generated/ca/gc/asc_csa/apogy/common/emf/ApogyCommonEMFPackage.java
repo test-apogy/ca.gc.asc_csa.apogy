@@ -493,49 +493,13 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING = 42;
 
 	/**
-	 * The operation id for the '<em>Add Adapters On Feature Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT = 43;
-
-	/**
-	 * The operation id for the '<em>Add Adapters On Feature Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST = 44;
-
-	/**
-	 * The operation id for the '<em>Remove Adapters On Feature Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT = 45;
-
-	/**
-	 * The operation id for the '<em>Remove Adapters On Feature Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST = 46;
-
-	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 47;
+	int APOGY_COMMON_EMF_FACADE_OPERATION_COUNT = 43;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -2184,13 +2148,49 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	int FEATURE_PATH_ADAPTER__FEATURE_PATH = 1;
 
 	/**
+	 * The feature id for the '<em><b>Root</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ADAPTER__ROOT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Feature Path Adapter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ADAPTER_FEATURE_COUNT = 2;
+	int FEATURE_PATH_ADAPTER_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ADAPTER___INIT__EOBJECT = 0;
+
+	/**
+	 * The operation id for the '<em>Dispose</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ADAPTER___DISPOSE = 1;
+
+	/**
+	 * The operation id for the '<em>Get Feature List</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_PATH_ADAPTER___GET_FEATURE_LIST = 2;
 
 	/**
 	 * The operation id for the '<em>Notify Adapter On Feature Changed</em>' operation.
@@ -2199,7 +2199,7 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ADAPTER___NOTIFY_ADAPTER_ON_FEATURE_CHANGED__NOTIFICATION = 0;
+	int FEATURE_PATH_ADAPTER___NOTIFY_ADAPTER_ON_FEATURE_CHANGED__NOTIFICATION = 3;
 
 	/**
 	 * The operation id for the '<em>Notify Changed</em>' operation.
@@ -2208,7 +2208,7 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ADAPTER___NOTIFY_CHANGED__NOTIFICATION = 1;
+	int FEATURE_PATH_ADAPTER___NOTIFY_CHANGED__NOTIFICATION = 4;
 
 	/**
 	 * The number of operations of the '<em>Feature Path Adapter</em>' class.
@@ -2217,7 +2217,7 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_PATH_ADAPTER_OPERATION_COUNT = 2;
+	int FEATURE_PATH_ADAPTER_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.emf.TimeDirection <em>Time Direction</em>}' enum.
@@ -2862,46 +2862,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getApogyCommonEMFFacade__ToString__List_String();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#addAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject) <em>Add Adapters On Feature Path</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Adapters On Feature Path</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#addAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#addAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject, java.util.List) <em>Add Adapters On Feature Path</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Adapters On Feature Path</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#addAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject, java.util.List)
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#removeAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject) <em>Remove Adapters On Feature Path</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Adapters On Feature Path</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#removeAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#removeAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject, java.util.List) <em>Remove Adapters On Feature Path</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Adapters On Feature Path</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade#removeAdaptersOnFeaturePath(ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter, org.eclipse.emf.ecore.EObject, java.util.List)
-	 * @generated
-	 */
-	EOperation getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.emf.EObjectReference <em>EObject Reference</em>}'.
@@ -3703,6 +3663,47 @@ public interface ApogyCommonEMFPackage extends EPackage {
 	EAttribute getFeaturePathAdapter_FeaturePath();
 
 	/**
+	 * Returns the meta object for the reference '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getRoot <em>Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Root</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getRoot()
+	 * @see #getFeaturePathAdapter()
+	 * @generated
+	 */
+	EReference getFeaturePathAdapter_Root();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#init(org.eclipse.emf.ecore.EObject) <em>Init</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#init(org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getFeaturePathAdapter__Init__EObject();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#dispose() <em>Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dispose</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#dispose()
+	 * @generated
+	 */
+	EOperation getFeaturePathAdapter__Dispose();
+
+	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getFeatureList() <em>Get Feature List</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Feature List</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#getFeatureList()
+	 * @generated
+	 */
+	EOperation getFeaturePathAdapter__GetFeatureList();
+
+	/**
 	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.emf.FeaturePathAdapter#notifyAdapterOnFeatureChanged(org.eclipse.emf.common.notify.Notification) <em>Notify Adapter On Feature Changed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4316,38 +4317,6 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation APOGY_COMMON_EMF_FACADE___TO_STRING__LIST_STRING = eINSTANCE.getApogyCommonEMFFacade__ToString__List_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Adapters On Feature Path</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT = eINSTANCE.getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Adapters On Feature Path</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___ADD_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST = eINSTANCE.getApogyCommonEMFFacade__AddAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Adapters On Feature Path</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT = eINSTANCE.getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Adapters On Feature Path</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation APOGY_COMMON_EMF_FACADE___REMOVE_ADAPTERS_ON_FEATURE_PATH__FEATUREPATHADAPTER_EOBJECT_LIST = eINSTANCE.getApogyCommonEMFFacade__RemoveAdaptersOnFeaturePath__FeaturePathAdapter_EObject_List();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
@@ -5008,6 +4977,38 @@ public interface ApogyCommonEMFPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEATURE_PATH_ADAPTER__FEATURE_PATH = eINSTANCE.getFeaturePathAdapter_FeaturePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Root</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE_PATH_ADAPTER__ROOT = eINSTANCE.getFeaturePathAdapter_Root();
+
+		/**
+		 * The meta object literal for the '<em><b>Init</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FEATURE_PATH_ADAPTER___INIT__EOBJECT = eINSTANCE.getFeaturePathAdapter__Init__EObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Dispose</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FEATURE_PATH_ADAPTER___DISPOSE = eINSTANCE.getFeaturePathAdapter__Dispose();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Feature List</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FEATURE_PATH_ADAPTER___GET_FEATURE_LIST = eINSTANCE.getFeaturePathAdapter__GetFeatureList();
 
 		/**
 		 * The meta object literal for the '<em><b>Notify Adapter On Feature Changed</b></em>' operation.
