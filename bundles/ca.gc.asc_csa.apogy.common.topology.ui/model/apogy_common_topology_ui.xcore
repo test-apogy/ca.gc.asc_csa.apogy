@@ -180,6 +180,7 @@ class NodePresentation
 	/*
 	 * The list of TopologyPresentationSet referring to this NodePresentation.
 	 */
+	@GenModel(notify="false", property="None", child="false")
 	refers TopologyPresentationSet[0..*] topologyPresentationSet opposite nodePresentationList
 	
 	@GenModel(notify="true", property="None", propertyCategory="PRESENTATION_INTERNAL_INFORMATION")

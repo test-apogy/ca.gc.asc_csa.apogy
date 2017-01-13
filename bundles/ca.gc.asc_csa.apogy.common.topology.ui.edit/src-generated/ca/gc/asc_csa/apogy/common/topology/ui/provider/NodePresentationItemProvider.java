@@ -70,7 +70,6 @@ public class NodePresentationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTopologyPresentationSetPropertyDescriptor(object);
 			addColorPropertyDescriptor(object);
 			addVisiblePropertyDescriptor(object);
 			addShadowModePropertyDescriptor(object);
@@ -84,28 +83,6 @@ public class NodePresentationItemProvider
 			addSceneObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Topology Presentation Set feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTopologyPresentationSetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_NodePresentation_topologyPresentationSet_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_NodePresentation_topologyPresentationSet_feature", "_UI_NodePresentation_type"),
-				 ApogyCommonTopologyUIPackage.Literals.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

@@ -61,6 +61,7 @@ public interface NodePresentation extends EObject {
 	 * @see ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage#getNodePresentation_TopologyPresentationSet()
 	 * @see ca.gc.asc_csa.apogy.common.topology.ui.TopologyPresentationSet#getNodePresentationList
 	 * @model opposite="nodePresentationList"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='false' property='None' child='false'"
 	 * @generated
 	 */
 	EList<TopologyPresentationSet> getTopologyPresentationSet();
