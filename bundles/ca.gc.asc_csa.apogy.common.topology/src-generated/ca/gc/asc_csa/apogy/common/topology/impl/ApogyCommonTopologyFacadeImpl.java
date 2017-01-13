@@ -15,6 +15,7 @@ package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
@@ -27,25 +28,27 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
+
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFactory;
+import ca.gc.asc_csa.apogy.common.math.GeometricUtils;
 import ca.gc.asc_csa.apogy.common.math.Matrix3x3;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.common.topology.AbstractNodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Link;
 import ca.gc.asc_csa.apogy.common.topology.Node;
+import ca.gc.asc_csa.apogy.common.topology.NodeFilter;
 import ca.gc.asc_csa.apogy.common.topology.PickAndPlaceNode;
 import ca.gc.asc_csa.apogy.common.topology.PositionNode;
 import ca.gc.asc_csa.apogy.common.topology.ReferencedContentNode;
 import ca.gc.asc_csa.apogy.common.topology.RotationNode;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.TransformNode;
 
 /**
@@ -298,6 +301,26 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 		printTopology(node, null);
 
 		System.out.println("}");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Collection<Node> filter(NodeFilter filter, Collection<Node> nodes) 
+	{
+		List<Node> matches = new ArrayList<Node>();
+		
+		for(Node node : nodes)
+		{
+			if(filter.matches(node))
+			{
+				matches.add(node);
+			}
+		}
+		
+		return matches;
 	}
 
 	/**
@@ -583,6 +606,7 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
@@ -633,6 +657,8 @@ public class ApogyCommonTopologyFacadeImpl extends MinimalEObjectImpl.Container 
 			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE:
 				printTopology((Node)arguments.get(0));
 				return null;
+			case ApogyCommonTopologyPackage.APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION:
+				return filter((NodeFilter)arguments.get(0), (Collection<Node>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

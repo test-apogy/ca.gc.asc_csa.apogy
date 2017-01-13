@@ -14,16 +14,19 @@
 package ca.gc.asc_csa.apogy.common.topology.impl;
 
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.Iterator;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.FilterChainType;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.NodeFilter;
 import ca.gc.asc_csa.apogy.common.topology.NodeFilterChain;
@@ -36,12 +39,31 @@ import ca.gc.asc_csa.apogy.common.topology.NodeFilterChain;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl#getFilterChainType <em>Filter Chain Type</em>}</li>
  *   <li>{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl#getFilters <em>Filters</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterChain {
+	/**
+	 * The default value of the '{@link #getFilterChainType() <em>Filter Chain Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFilterChainType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final FilterChainType FILTER_CHAIN_TYPE_EDEFAULT = FilterChainType.AND;
+	/**
+	 * The cached value of the '{@link #getFilterChainType() <em>Filter Chain Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFilterChainType()
+	 * @generated
+	 * @ordered
+	 */
+	protected FilterChainType filterChainType = FILTER_CHAIN_TYPE_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getFilters() <em>Filters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -69,6 +91,27 @@ public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterCha
 	@Override
 	protected EClass eStaticClass() {
 		return ApogyCommonTopologyPackage.Literals.NODE_FILTER_CHAIN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FilterChainType getFilterChainType() {
+		return filterChainType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFilterChainType(FilterChainType newFilterChainType) {
+		FilterChainType oldFilterChainType = filterChainType;
+		filterChainType = newFilterChainType == null ? FILTER_CHAIN_TYPE_EDEFAULT : newFilterChainType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE, oldFilterChainType, filterChainType));
 	}
 
 	/**
@@ -105,6 +148,8 @@ public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterCha
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE:
+				return getFilterChainType();
 			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTERS:
 				return getFilters();
 		}
@@ -120,6 +165,9 @@ public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterCha
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE:
+				setFilterChainType((FilterChainType)newValue);
+				return;
 			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTERS:
 				getFilters().clear();
 				getFilters().addAll((Collection<? extends NodeFilter>)newValue);
@@ -136,6 +184,9 @@ public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterCha
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE:
+				setFilterChainType(FILTER_CHAIN_TYPE_EDEFAULT);
+				return;
 			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTERS:
 				getFilters().clear();
 				return;
@@ -151,22 +202,64 @@ public class NodeFilterChainImpl extends NodeFilterImpl implements NodeFilterCha
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE:
+				return filterChainType != FILTER_CHAIN_TYPE_EDEFAULT;
 			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTERS:
 				return filters != null && !filters.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
-	public Collection<Node> filter(Collection<Node> nodes) 
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (filterChainType: ");
+		result.append(filterChainType);
+		result.append(')');
+		return result.toString();
+	}
+
+	@Override
+	public boolean matches(Node node) 
 	{
-		Collection<Node> output = new HashSet<Node>(nodes);
+		boolean matches = false;
+		if(getFilters().size() == 0) return true;
 		
-		for(NodeFilter filter : getFilters())
+		switch (getFilterChainType().getValue()) 
 		{
-			output = filter.filter(output);
+			case FilterChainType.AND_VALUE:
+			{
+				Iterator<NodeFilter> it = getFilters().iterator();
+				matches = true;
+				while(it.hasNext() && matches)
+				{
+					matches = it.next().matches(node);
+				}
+			}
+			break;
+			
+			case FilterChainType.OR_VALUE:
+			{
+				Iterator<NodeFilter> it = getFilters().iterator();
+				matches = false;
+				while(it.hasNext() && !matches)
+				{
+					matches = it.next().matches(node);
+				}
+			}
+			break;
+
+			default:
+			break;
 		}
 		
-		return output;
+		return matches;
 	}
 } //NodeFilterChainImpl

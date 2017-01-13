@@ -26,6 +26,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 
 import ca.gc.asc_csa.apogy.common.topology.AbstractNodeVisitor;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Node;
@@ -61,6 +62,7 @@ public class NodeSelectionComposite extends Composite
 	private Button btnClearDescriptionFilter;
 	private Table filteredNodesTable;
 	private TableViewer filteredNodesTableViewer;
+	private Button btnApply;
 			
 	public NodeSelectionComposite(Composite parent, int style) 
 	{
@@ -163,6 +165,28 @@ public class NodeSelectionComposite extends Composite
 			public void widgetDefaultSelected(SelectionEvent e) {								
 			}
 		});
+		
+		// Apply filters
+		btnApply = new Button(this, SWT.NONE);
+		btnApply.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, false, false, 1, 1));
+		btnApply.setText("Update");
+		btnApply.setToolTipText("Force the topology to be updated and the filters re-applied.");
+		btnApply.addSelectionListener(new SelectionListener() 
+		{
+			
+			@Override
+			public void widgetSelected(SelectionEvent e) 
+			{								
+				applyFilters();
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {								
+			}
+		});
+		
+		
+		new Label(this, SWT.NONE);
 		new Label(this, SWT.NONE);
 		
 		// Filtered table viewer.
@@ -186,6 +210,8 @@ public class NodeSelectionComposite extends Composite
 		filteredNodesTableViewer.setLabelProvider(new ArgumentsLabelProvider(adapterFactory));
 
 		
+		new Label(this, SWT.NONE);
+		new Label(this, SWT.NONE);
 		new Label(this, SWT.NONE);
 	}
 	
@@ -229,8 +255,6 @@ public class NodeSelectionComposite extends Composite
 	
 	public void applyFilters()
 	{		
-		System.out.println("NodeSelectionComposite.applyFilters()");
-		
 		// Creates a NodeFilterChain
 		NodeFilterChain nodeFilterChain = ApogyCommonTopologyFactory.eINSTANCE.createNodeFilterChain();
 		
@@ -256,13 +280,13 @@ public class NodeSelectionComposite extends Composite
 		}
 		
 		// Applies the filters.
-		Collection<Node> matches = nodeFilterChain.filter(getUnfilteredNodes());
+		Collection<Node> matches = ApogyCommonTopologyFacade.INSTANCE.filter(nodeFilterChain, getUnfilteredNodes());				
 				
 		// Updates the selected Nodes		
 		filteredNodes.clear();
 		filteredNodes.addAll(matches);
 								
-		// TODO Updates the displayed nodes.
+		// Updates the displayed nodes.
 		filteredNodesTableViewer.setInput(filteredNodes);
 	}
 	

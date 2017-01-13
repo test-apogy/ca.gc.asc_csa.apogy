@@ -13,9 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.common.topology.impl;
 
-import java.util.Collection;
-import java.util.HashSet;
-
 import org.eclipse.emf.ecore.EClass;
 
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
@@ -51,15 +48,8 @@ public class NodeDescriptionFilterImpl extends RegexNodeFilterImpl implements No
 	}
 
 	@Override
-	public Collection<Node> filter(Collection<Node> nodes) 
+	public boolean matches(Node node) 
 	{
-		Collection<Node> output = new HashSet<Node>();
-		
-		for(Node node : nodes)
-		{
-			if(matches(node.getDescription())) output.add(node);
-		}
-		
-		return output;
-	}
+		return matchesPattern(node.getDescription());
+	}	
 } //NodeDescriptionFilterImpl

@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.topology;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -1631,13 +1632,22 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = 22;
 
 	/**
+	 * The operation id for the '<em>Filter</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION = 23;
+
+	/**
 	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APOGY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 23;
+	int APOGY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 24;
 
 	/**
 	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl <em>Node Filter</em>}' class.
@@ -1659,13 +1669,13 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_FILTER_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FILTER___FILTER__COLLECTION = 0;
+	int NODE_FILTER___MATCHES__NODE = 0;
 
 	/**
 	 * The number of operations of the '<em>Node Filter</em>' class.
@@ -1687,13 +1697,22 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_FILTER_CHAIN = 18;
 
 	/**
+	 * The feature id for the '<em><b>Filter Chain Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE = NODE_FILTER_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FILTER_CHAIN__FILTERS = NODE_FILTER_FEATURE_COUNT + 0;
+	int NODE_FILTER_CHAIN__FILTERS = NODE_FILTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Node Filter Chain</em>' class.
@@ -1702,16 +1721,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FILTER_CHAIN_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
+	int NODE_FILTER_CHAIN_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FILTER_CHAIN___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+	int NODE_FILTER_CHAIN___MATCHES__NODE = NODE_FILTER___MATCHES__NODE;
 
 	/**
 	 * The number of operations of the '<em>Node Filter Chain</em>' class.
@@ -1751,13 +1770,13 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_TYPE_FILTER_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TYPE_FILTER___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+	int NODE_TYPE_FILTER___MATCHES__NODE = NODE_FILTER___MATCHES__NODE;
 
 	/**
 	 * The number of operations of the '<em>Node Type Filter</em>' class.
@@ -1797,13 +1816,13 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int REGEX_NODE_FILTER_FEATURE_COUNT = NODE_FILTER_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGEX_NODE_FILTER___FILTER__COLLECTION = NODE_FILTER___FILTER__COLLECTION;
+	int REGEX_NODE_FILTER___MATCHES__NODE = NODE_FILTER___MATCHES__NODE;
 
 	/**
 	 * The number of operations of the '<em>Regex Node Filter</em>' class.
@@ -1843,13 +1862,13 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_ID_FILTER_FEATURE_COUNT = REGEX_NODE_FILTER_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_ID_FILTER___FILTER__COLLECTION = REGEX_NODE_FILTER___FILTER__COLLECTION;
+	int NODE_ID_FILTER___MATCHES__NODE = REGEX_NODE_FILTER___MATCHES__NODE;
 
 	/**
 	 * The number of operations of the '<em>Node Id Filter</em>' class.
@@ -1889,13 +1908,13 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_DESCRIPTION_FILTER_FEATURE_COUNT = REGEX_NODE_FILTER_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Filter</em>' operation.
+	 * The operation id for the '<em>Matches</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_DESCRIPTION_FILTER___FILTER__COLLECTION = REGEX_NODE_FILTER___FILTER__COLLECTION;
+	int NODE_DESCRIPTION_FILTER___MATCHES__NODE = REGEX_NODE_FILTER___MATCHES__NODE;
 
 	/**
 	 * The number of operations of the '<em>Node Description Filter</em>' class.
@@ -1907,6 +1926,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	int NODE_DESCRIPTION_FILTER_OPERATION_COUNT = REGEX_NODE_FILTER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ca.gc.asc_csa.apogy.common.topology.FilterChainType <em>Filter Chain Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ca.gc.asc_csa.apogy.common.topology.FilterChainType
+	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getFilterChainType()
+	 * @generated
+	 */
+	int FILTER_CHAIN_TYPE = 23;
+
+	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1914,7 +1943,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getMatrix4d()
 	 * @generated
 	 */
-	int MATRIX4D = 23;
+	int MATRIX4D = 24;
 
 	/**
 	 * The meta object id for the '<em>EClass</em>' data type.
@@ -1924,7 +1953,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getEClass()
 	 * @generated
 	 */
-	int ECLASS = 24;
+	int ECLASS = 25;
 
 
 	/**
@@ -1935,7 +1964,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getINodeVisitor()
 	 * @generated
 	 */
-	int INODE_VISITOR = 25;
+	int INODE_VISITOR = 26;
 
 
 	/**
@@ -1946,7 +1975,7 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 26;
+	int COLLECTION = 27;
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.TopologyProvider <em>Topology Provider</em>}'.
@@ -2566,6 +2595,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	EOperation getApogyCommonTopologyFacade__PrintTopology__Node();
 
 	/**
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#filter(ca.gc.asc_csa.apogy.common.topology.NodeFilter, java.util.Collection) <em>Filter</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Filter</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFacade#filter(ca.gc.asc_csa.apogy.common.topology.NodeFilter, java.util.Collection)
+	 * @generated
+	 */
+	EOperation getApogyCommonTopologyFacade__Filter__NodeFilter_Collection();
+
+	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter <em>Node Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2576,14 +2615,14 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	EClass getNodeFilter();
 
 	/**
-	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter#filter(java.util.Collection) <em>Filter</em>}' operation.
+	 * Returns the meta object for the '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilter#matches(ca.gc.asc_csa.apogy.common.topology.Node) <em>Matches</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Filter</em>' operation.
-	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilter#filter(java.util.Collection)
+	 * @return the meta object for the '<em>Matches</em>' operation.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilter#matches(ca.gc.asc_csa.apogy.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getNodeFilter__Filter__Collection();
+	EOperation getNodeFilter__Matches__Node();
 
 	/**
 	 * Returns the meta object for class '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain <em>Node Filter Chain</em>}'.
@@ -2594,6 +2633,17 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNodeFilterChain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain#getFilterChainType <em>Filter Chain Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filter Chain Type</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.NodeFilterChain#getFilterChainType()
+	 * @see #getNodeFilterChain()
+	 * @generated
+	 */
+	EAttribute getNodeFilterChain_FilterChainType();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link ca.gc.asc_csa.apogy.common.topology.NodeFilterChain#getFilters <em>Filters</em>}'.
@@ -2667,6 +2717,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNodeDescriptionFilter();
+
+	/**
+	 * Returns the meta object for enum '{@link ca.gc.asc_csa.apogy.common.topology.FilterChainType <em>Filter Chain Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Filter Chain Type</em>'.
+	 * @see ca.gc.asc_csa.apogy.common.topology.FilterChainType
+	 * @generated
+	 */
+	EEnum getFilterChainType();
 
 	/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Matrix4d <em>Matrix4d</em>}'.
@@ -3250,6 +3310,14 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		EOperation APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = eINSTANCE.getApogyCommonTopologyFacade__PrintTopology__Node();
 
 		/**
+		 * The meta object literal for the '<em><b>Filter</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION = eINSTANCE.getApogyCommonTopologyFacade__Filter__NodeFilter_Collection();
+
+		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterImpl <em>Node Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3260,12 +3328,12 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		EClass NODE_FILTER = eINSTANCE.getNodeFilter();
 
 		/**
-		 * The meta object literal for the '<em><b>Filter</b></em>' operation.
+		 * The meta object literal for the '<em><b>Matches</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation NODE_FILTER___FILTER__COLLECTION = eINSTANCE.getNodeFilter__Filter__Collection();
+		EOperation NODE_FILTER___MATCHES__NODE = eINSTANCE.getNodeFilter__Matches__Node();
 
 		/**
 		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.impl.NodeFilterChainImpl <em>Node Filter Chain</em>}' class.
@@ -3276,6 +3344,14 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NODE_FILTER_CHAIN = eINSTANCE.getNodeFilterChain();
+
+		/**
+		 * The meta object literal for the '<em><b>Filter Chain Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE = eINSTANCE.getNodeFilterChain_FilterChainType();
 
 		/**
 		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
@@ -3340,6 +3416,16 @@ public interface ApogyCommonTopologyPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NODE_DESCRIPTION_FILTER = eINSTANCE.getNodeDescriptionFilter();
+
+		/**
+		 * The meta object literal for the '{@link ca.gc.asc_csa.apogy.common.topology.FilterChainType <em>Filter Chain Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ca.gc.asc_csa.apogy.common.topology.FilterChainType
+		 * @see ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyPackageImpl#getFilterChainType()
+		 * @generated
+		 */
+		EEnum FILTER_CHAIN_TYPE = eINSTANCE.getFilterChainType();
 
 		/**
 		 * The meta object literal for the '<em>Matrix4d</em>' data type.

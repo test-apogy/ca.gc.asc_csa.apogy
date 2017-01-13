@@ -16,6 +16,7 @@ package ca.gc.asc_csa.apogy.common.topology.provider;
 
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyFactory;
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import ca.gc.asc_csa.apogy.common.topology.FilterChainType;
 import ca.gc.asc_csa.apogy.common.topology.NodeFilterChain;
 
 import java.util.Collection;
@@ -26,7 +27,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -57,8 +60,31 @@ public class NodeFilterChainItemProvider extends NodeFilterItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addFilterChainTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Filter Chain Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFilterChainTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_NodeFilterChain_filterChainType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_NodeFilterChain_filterChainType_feature", "_UI_NodeFilterChain_type"),
+				 ApogyCommonTopologyPackage.Literals.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -110,7 +136,11 @@ public class NodeFilterChainItemProvider extends NodeFilterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_NodeFilterChain_type");
+		FilterChainType labelValue = ((NodeFilterChain)object).getFilterChainType();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_NodeFilterChain_type") :
+			getString("_UI_NodeFilterChain_type") + " " + label;
 	}
 	
 
@@ -126,6 +156,9 @@ public class NodeFilterChainItemProvider extends NodeFilterItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NodeFilterChain.class)) {
+			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ApogyCommonTopologyPackage.NODE_FILTER_CHAIN__FILTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

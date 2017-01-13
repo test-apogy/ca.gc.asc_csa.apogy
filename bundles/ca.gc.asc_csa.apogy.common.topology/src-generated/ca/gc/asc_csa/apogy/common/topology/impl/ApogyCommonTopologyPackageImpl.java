@@ -18,6 +18,7 @@ import javax.vecmath.Matrix4d;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -30,6 +31,7 @@ import ca.gc.asc_csa.apogy.common.topology.AggregateContentNode;
 import ca.gc.asc_csa.apogy.common.topology.AggregateGroupNode;
 import ca.gc.asc_csa.apogy.common.topology.CADNode;
 import ca.gc.asc_csa.apogy.common.topology.ContentNode;
+import ca.gc.asc_csa.apogy.common.topology.FilterChainType;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.INodeVisitor;
 import ca.gc.asc_csa.apogy.common.topology.Leaf;
@@ -221,6 +223,13 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * @generated
 	 */
 	private EClass nodeDescriptionFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum filterChainTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -859,6 +868,15 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApogyCommonTopologyFacade__Filter__NodeFilter_Collection() {
+		return apogyCommonTopologyFacadeEClass.getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNodeFilter() {
 		return nodeFilterEClass;
 	}
@@ -868,7 +886,7 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getNodeFilter__Filter__Collection() {
+	public EOperation getNodeFilter__Matches__Node() {
 		return nodeFilterEClass.getEOperations().get(0);
 	}
 
@@ -886,8 +904,17 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getNodeFilterChain_FilterChainType() {
+		return (EAttribute)nodeFilterChainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getNodeFilterChain_Filters() {
-		return (EReference)nodeFilterChainEClass.getEStructuralFeatures().get(0);
+		return (EReference)nodeFilterChainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -942,6 +969,15 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 	 */
 	public EClass getNodeDescriptionFilter() {
 		return nodeDescriptionFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getFilterChainType() {
+		return filterChainTypeEEnum;
 	}
 
 	/**
@@ -1084,11 +1120,13 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
 		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
+		createEOperation(apogyCommonTopologyFacadeEClass, APOGY_COMMON_TOPOLOGY_FACADE___FILTER__NODEFILTER_COLLECTION);
 
 		nodeFilterEClass = createEClass(NODE_FILTER);
-		createEOperation(nodeFilterEClass, NODE_FILTER___FILTER__COLLECTION);
+		createEOperation(nodeFilterEClass, NODE_FILTER___MATCHES__NODE);
 
 		nodeFilterChainEClass = createEClass(NODE_FILTER_CHAIN);
+		createEAttribute(nodeFilterChainEClass, NODE_FILTER_CHAIN__FILTER_CHAIN_TYPE);
 		createEReference(nodeFilterChainEClass, NODE_FILTER_CHAIN__FILTERS);
 
 		nodeTypeFilterEClass = createEClass(NODE_TYPE_FILTER);
@@ -1100,6 +1138,9 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		nodeIdFilterEClass = createEClass(NODE_ID_FILTER);
 
 		nodeDescriptionFilterEClass = createEClass(NODE_DESCRIPTION_FILTER);
+
+		// Create enums
+		filterChainTypeEEnum = createEEnum(FILTER_CHAIN_TYPE);
 
 		// Create data types
 		matrix4dEDataType = createEDataType(MATRIX4D);
@@ -1350,9 +1391,8 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		op = initEOperation(getApogyCommonTopologyFacade__PrintTopology__Node(), null, "printTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(nodeFilterEClass, NodeFilter.class, "NodeFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getNodeFilter__Filter__Collection(), null, "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getApogyCommonTopologyFacade__Filter__NodeFilter_Collection(), null, "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNodeFilter(), "filter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getCollection());
 		g2 = createEGenericType(this.getNode());
 		g1.getETypeArguments().add(g2);
@@ -1362,7 +1402,13 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		initEClass(nodeFilterEClass, NodeFilter.class, "NodeFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getNodeFilter__Matches__Node(), theEcorePackage.getEBoolean(), "matches", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(nodeFilterChainEClass, NodeFilterChain.class, "NodeFilterChain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNodeFilterChain_FilterChainType(), this.getFilterChainType(), "filterChainType", "AND", 0, 1, NodeFilterChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNodeFilterChain_Filters(), this.getNodeFilter(), null, "filters", null, 0, -1, NodeFilterChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeTypeFilterEClass, NodeTypeFilter.class, "NodeTypeFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1374,6 +1420,11 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 		initEClass(nodeIdFilterEClass, NodeIdFilter.class, "NodeIdFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(nodeDescriptionFilterEClass, NodeDescriptionFilter.class, "NodeDescriptionFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(filterChainTypeEEnum, FilterChainType.class, "FilterChainType");
+		addEEnumLiteral(filterChainTypeEEnum, FilterChainType.AND);
+		addEEnumLiteral(filterChainTypeEEnum, FilterChainType.OR);
 
 		// Initialize data types
 		initEDataType(matrix4dEDataType, Matrix4d.class, "Matrix4d", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
@@ -1521,22 +1572,28 @@ public class ApogyCommonTopologyPackageImpl extends EPackageImpl implements Apog
 			 "documentation", "Compute the transformation to express sourceFrame\ninto targetFrame.\n<p>\nFor example\n<ul>\n<li>sourceFrame could be laser scanner</li>\n<li>targetFrame could be the sonar sensor</li>\n</ul>\nThis method can be used to express the point cloud coming out of the\nlaser scanner in the frame of the sonar sensor.\n</p>"
 		   });	
 		addAnnotation
+		  (getApogyCommonTopologyFacade__Filter__NodeFilter_Collection(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Applies a NodfeFilter to a list of Nodes.\n@param filter The filter to apply.\n@param nodes The list of Nodes on which to apply the filter.\n@return The list of Node that passes through the filter."
+		   });	
+		addAnnotation
 		  (nodeFilterEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Abstract base class of all Node filters."
 		   });	
 		addAnnotation
-		  (getNodeFilter__Filter__Collection(), 
+		  (getNodeFilter__Matches__Node(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Filters a list of Nodes.\n@param nodes The list of Nodes on which to apply the filter.\n@return The list of Node that passes through the filter."
+			 "documentation", "Determines whether or not a specified Node should pass through the filter.\n@param nodes The list of Nodes on which to apply the filter.\n@return True if the Node satisfies the filter conditions, false otherwise."
 		   });	
 		addAnnotation
 		  (nodeFilterChainEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nNodeFilter based on a chain of filter. Each filter is applied to the previous filters output."
+			 "documentation", "*\nNodeFilter based on a chain of filter."
 		   });	
 		addAnnotation
 		  (nodeTypeFilterEClass, 

@@ -186,7 +186,7 @@ public abstract class RegexNodeFilterImpl extends NodeFilterImpl implements Rege
 		return pattern;
 	}
 
-	protected boolean matches(String stringToTest)
+	protected boolean matchesPattern(String stringToTest)
 	{
 		if(stringToTest != null)
 		{

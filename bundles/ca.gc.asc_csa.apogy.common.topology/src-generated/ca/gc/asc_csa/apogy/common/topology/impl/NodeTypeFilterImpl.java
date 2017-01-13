@@ -13,18 +13,13 @@
  */
 package ca.gc.asc_csa.apogy.common.topology.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.NodeTypeFilter;
-
-import java.util.Collection;
-import java.util.HashSet;
-
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -173,24 +168,17 @@ public class NodeTypeFilterImpl extends NodeFilterImpl implements NodeTypeFilter
 		result.append(')');
 		return result.toString();
 	}
-
+	
 	@Override
-	public Collection<Node> filter(Collection<Node> nodes) {
-		
-		Collection<Node> output = new HashSet<Node>();
+	public boolean matches(Node node) 
+	{
+		boolean matches = false;
 		
 		if(getClass() != null)
-		{
-			for(Node node : nodes)
-			{
-				if(clazz.isSuperTypeOf(node.eClass()))
-				{
-					output.add(node);
-				}	 
-			}
+		{				
+			matches = clazz.isSuperTypeOf(node.eClass());			
 		}
 		
-		return output;					
+		return matches;
 	}
-
 } //NodeTypeFilterImpl

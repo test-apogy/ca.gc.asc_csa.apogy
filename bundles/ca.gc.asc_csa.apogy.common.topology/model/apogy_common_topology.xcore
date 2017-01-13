@@ -292,6 +292,14 @@ class ApogyCommonTopologyFacade
 	op double getGeodesicDistance(Node fromNode, Node toNode)
 	
 	op void printTopology(Node node)
+	
+	/*
+	 * Applies a NodfeFilter to a list of Nodes.
+	 * @param filter The filter to apply.
+	 * @param nodes The list of Nodes on which to apply the filter.
+	 * @return The list of Node that passes through the filter.
+	 */
+	op Collection<Node> filter(NodeFilter filter, Collection<Node> nodes)
 }
 
 /*
@@ -300,19 +308,26 @@ class ApogyCommonTopologyFacade
 abstract class NodeFilter
 {
 	/*
-	 * Filters a list of Nodes.
+	 * Determines whether or not a specified Node should pass through the filter.
 	 * @param nodes The list of Nodes on which to apply the filter.
-	 * @return The list of Node that passes through the filter.
+	 * @return True if the Node satisfies the filter conditions, false otherwise.
 	 */
-	op Collection<Node> filter(Collection<Node> nodes)
+	op boolean matches(Node node)
 }
 
 /**
- * NodeFilter based on a chain of filter. Each filter is applied to the previous filters output.
+ * NodeFilter based on a chain of filter. 
  */
 class NodeFilterChain extends NodeFilter
 {
+	FilterChainType filterChainType = "AND"
 	contains NodeFilter[0..*] filters
+}
+
+enum FilterChainType
+{
+	AND as "AND" = 0,
+	OR as "OR" = 1
 }
 
 /**

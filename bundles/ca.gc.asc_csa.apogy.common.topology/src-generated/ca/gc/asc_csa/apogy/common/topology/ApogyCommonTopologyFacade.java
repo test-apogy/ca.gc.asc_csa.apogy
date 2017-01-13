@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import ca.gc.asc_csa.apogy.common.topology.impl.ApogyCommonTopologyFacadeImpl;
+import java.util.Collection;
 
 /**
  * <!-- begin-user-doc -->
@@ -314,5 +315,19 @@ public interface ApogyCommonTopologyFacade extends EObject
 	 * @generated
 	 */
 	void printTopology(Node node);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Applies a NodfeFilter to a list of Nodes.
+	 * @param filter The filter to apply.
+	 * @param nodes The list of Nodes on which to apply the filter.
+	 * @return The list of Node that passes through the filter.
+	 * <!-- end-model-doc -->
+	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Collection<ca.gc.asc_csa.apogy.common.topology.Node>" unique="false" filterUnique="false" nodesDataType="ca.gc.asc_csa.apogy.common.topology.Collection<ca.gc.asc_csa.apogy.common.topology.Node>" nodesUnique="false"
+	 * @generated
+	 */
+	Collection<Node> filter(NodeFilter filter, Collection<Node> nodes);
 
 } // ApogyCommonTopologyFacade

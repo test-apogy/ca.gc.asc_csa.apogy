@@ -13,7 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.common.topology;
 
-import java.util.Collection;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -35,13 +34,13 @@ public interface NodeFilter extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Filters a list of Nodes.
+	 * Determines whether or not a specified Node should pass through the filter.
 	 * @param nodes The list of Nodes on which to apply the filter.
-	 * @return The list of Node that passes through the filter.
+	 * @return True if the Node satisfies the filter conditions, false otherwise.
 	 * <!-- end-model-doc -->
-	 * @model dataType="ca.gc.asc_csa.apogy.common.topology.Collection<ca.gc.asc_csa.apogy.common.topology.Node>" unique="false" nodesDataType="ca.gc.asc_csa.apogy.common.topology.Collection<ca.gc.asc_csa.apogy.common.topology.Node>" nodesUnique="false"
+	 * @model unique="false" nodeUnique="false"
 	 * @generated
 	 */
-	Collection<Node> filter(Collection<Node> nodes);
+	boolean matches(Node node);
 
 } // NodeFilter

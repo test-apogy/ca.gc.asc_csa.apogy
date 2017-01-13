@@ -100,6 +100,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case ApogyCommonTopologyPackage.FILTER_CHAIN_TYPE:
+				return createFilterChainTypeFromString(eDataType, initialValue);
 			case ApogyCommonTopologyPackage.MATRIX4D:
 				return createMatrix4dFromString(eDataType, initialValue);
 			case ApogyCommonTopologyPackage.ECLASS:
@@ -121,6 +123,8 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case ApogyCommonTopologyPackage.FILTER_CHAIN_TYPE:
+				return convertFilterChainTypeToString(eDataType, instanceValue);
 			case ApogyCommonTopologyPackage.MATRIX4D:
 				return convertMatrix4dToString(eDataType, instanceValue);
 			case ApogyCommonTopologyPackage.ECLASS:
@@ -322,6 +326,26 @@ public class ApogyCommonTopologyFactoryImpl extends EFactoryImpl implements Apog
 	public NodeDescriptionFilter createNodeDescriptionFilter() {
 		NodeDescriptionFilterImpl nodeDescriptionFilter = new NodeDescriptionFilterImpl();
 		return nodeDescriptionFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FilterChainType createFilterChainTypeFromString(EDataType eDataType, String initialValue) {
+		FilterChainType result = FilterChainType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFilterChainTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

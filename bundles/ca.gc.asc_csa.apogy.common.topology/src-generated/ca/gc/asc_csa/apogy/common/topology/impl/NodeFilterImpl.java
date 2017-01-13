@@ -18,8 +18,6 @@ import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.NodeFilter;
 
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -58,7 +56,7 @@ public abstract class NodeFilterImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Collection<Node> filter(Collection<Node> nodes) {
+	public boolean matches(Node node) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -73,8 +71,8 @@ public abstract class NodeFilterImpl extends MinimalEObjectImpl.Container implem
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ApogyCommonTopologyPackage.NODE_FILTER___FILTER__COLLECTION:
-				return filter((Collection<Node>)arguments.get(0));
+			case ApogyCommonTopologyPackage.NODE_FILTER___MATCHES__NODE:
+				return matches((Node)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
