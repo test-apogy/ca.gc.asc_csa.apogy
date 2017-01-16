@@ -9,6 +9,9 @@
       <Class
             Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.adapters.EarthSurfaceWorksiteNodeJME3Adapter">
       </Class>
+      <Class
+            Class="ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.jme3.adapters.SunVector3DToolNodeJME3Adapter">
+      </Class>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">

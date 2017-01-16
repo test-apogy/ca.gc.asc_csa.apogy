@@ -273,7 +273,9 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	
 	private void updateFromTo()
 	{	
-		if(getTopologyNode().getSunVector3DTool().getToNode() != null)
+		if(getTopologyNode() != null && 
+		   getTopologyNode().getSunVector3DTool() != null &&
+		   getTopologyNode().getSunVector3DTool().getToNode() != null)
 		{				
 			toTransformNode.setLocalTranslation(JME3Utilities.convertToVector3f(getTopologyNode().getSunVector3DTool().getToAbsolutePosition().asTuple3d()));
 		}

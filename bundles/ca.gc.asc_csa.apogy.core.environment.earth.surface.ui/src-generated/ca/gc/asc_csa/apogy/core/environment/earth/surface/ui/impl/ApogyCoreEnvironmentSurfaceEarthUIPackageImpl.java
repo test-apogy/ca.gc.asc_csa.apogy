@@ -13,10 +13,9 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -26,12 +25,14 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;

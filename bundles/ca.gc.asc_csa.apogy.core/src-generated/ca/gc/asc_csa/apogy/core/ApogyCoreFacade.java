@@ -42,6 +42,14 @@ public interface ApogyCoreFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Create the 4 by 4 homogeneous matrix that represent the absolute pose of a pose initially
+	 * defined as a relative pose in an ApogySystem frame.
+	 * @param apogySystem The ApogySytem in which to interpret the relative pose.
+	 * @param relativePose The relative pose in the Apogy System frame.
+	 * @return The absolute pose expressed in 4 by 4 homogeneous matrix.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" apogySystemUnique="false" relativePoseUnique="false"
 	 * @generated
 	 */
@@ -55,6 +63,11 @@ public interface ApogyCoreFacade extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates a Result Node associated with a specified PositionedResult result.
+	 * @param result The specified PositionedResult.
+	 * @return The ResultNode.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" resultUnique="false"
 	 * @generated
 	 */

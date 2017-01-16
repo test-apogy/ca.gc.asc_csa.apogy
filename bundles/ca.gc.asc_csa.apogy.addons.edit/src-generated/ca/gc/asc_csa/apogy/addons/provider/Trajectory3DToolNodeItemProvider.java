@@ -98,14 +98,23 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((Trajectory3DToolNode)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Trajectory3DToolNode_type") :
-			getString("_UI_Trajectory3DToolNode_type") + " " + label;
+	public String getText(Object object) 
+	{
+		Trajectory3DToolNode trajectory3dToolNode = (Trajectory3DToolNode) object;
+		
+		String label = "";
+		if(trajectory3dToolNode.getNodeId() != null && trajectory3dToolNode.getNodeId().length() > 0)
+		{
+			label = trajectory3dToolNode.getNodeId();
+		}
+		else
+		{
+			label = getString("_UI_Trajectory3DToolNode_type");
+		}	
+		return label;
 	}
 	
 

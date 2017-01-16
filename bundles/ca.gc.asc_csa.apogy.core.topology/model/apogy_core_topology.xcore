@@ -57,10 +57,25 @@ type SortedSet<T> wraps java.util.SortedSet
  */ 
 class ApogyCoreTopologyFacade
 {
+	/*
+	 * Returns the topology root associated with a specified Variable.
+	 * @param variable The specified variable.
+	 * @return The topology root associated with the variable, null if none is found.
+	 */
 	op Node getVariableOriginNode(Variable variable) 
 		
+	/*
+	 * Return the topology root associated with a specified AbstractTypeImplementation.
+	 * @param abstractTypeImplementation The specified AbstractTypeImplementation.
+	 * @return The topology root associated with the AbstractTypeImplementation, null if none is found.
+	 */
 	op Node getAbstractTypeImplementationOriginNode(AbstractTypeImplementation abstractTypeImplementation)
 	
+	/*
+	 * Creates the ApogyEnvironmentNode associated with a specified ApogyEnvironment.
+	 * @param apogyEnvironment The specified ApogyEnvironment.
+	 * @return The ApogyEnvironmentNode.
+	 */
 	op ApogyEnvironmentNode createApogyEnvironmentNode(ApogyEnvironment apogyEnvironment)
 	
 	/*

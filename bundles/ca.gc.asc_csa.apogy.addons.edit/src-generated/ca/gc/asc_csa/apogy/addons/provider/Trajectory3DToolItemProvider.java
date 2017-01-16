@@ -284,7 +284,7 @@ public class Trajectory3DToolItemProvider extends Simple3DToolItemProvider
 		String distanceText = decimalFormat.format(trajectory3DTool.getTotalDistance());
 		label += ", " + distanceText;
 		
-		label += ")";
+		label += " m)";
 		
 		
 		return label;

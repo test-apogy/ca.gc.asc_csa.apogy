@@ -13,6 +13,11 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.util;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.ecore.EObject;
+
 import ca.gc.asc_csa.apogy.addons.AbstractTool;
 import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
 import ca.gc.asc_csa.apogy.addons.Simple3DTool;
@@ -20,18 +25,15 @@ import ca.gc.asc_csa.apogy.addons.SimpleTool;
 import ca.gc.asc_csa.apogy.common.emf.Described;
 import ca.gc.asc_csa.apogy.common.emf.Named;
 import ca.gc.asc_csa.apogy.common.topology.Node;
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EObject;
-
 import ca.gc.asc_csa.apogy.common.topology.ui.NodePresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.*;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.AbstractSurfaceWorksiteSkyPresentation;
 

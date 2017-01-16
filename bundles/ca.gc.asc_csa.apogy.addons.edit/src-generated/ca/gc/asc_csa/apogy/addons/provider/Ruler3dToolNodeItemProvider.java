@@ -96,14 +96,24 @@ public class Ruler3dToolNodeItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((Ruler3dToolNode)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Ruler3dToolNode_type") :
-			getString("_UI_Ruler3dToolNode_type") + " " + label;
+	public String getText(Object object) 
+	{
+		Ruler3dToolNode ruler3dToolNode = (Ruler3dToolNode) object;
+		
+		String label = null;
+		if(ruler3dToolNode.getNodeId() != null && ruler3dToolNode.getNodeId().length() > 0)
+		{
+			label = ruler3dToolNode.getNodeId();
+		}
+		else
+		{
+			label = getString("_UI_Ruler3dToolNode_type");
+		}
+		
+		return label;
 	}
 	
 

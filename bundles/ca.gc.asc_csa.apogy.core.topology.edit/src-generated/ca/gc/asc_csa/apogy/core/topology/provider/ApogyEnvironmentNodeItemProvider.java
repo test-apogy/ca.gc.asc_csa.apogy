@@ -180,11 +180,15 @@ public class ApogyEnvironmentNodeItemProvider
   {
 	  ApogyEnvironmentNode apogyEnvironmentNode = (ApogyEnvironmentNode) object;
 	  
-	  String label = getString("_UI_ApogyEnvironmentNode_type");
+	  String label = null;
 	  if(apogyEnvironmentNode.getNodeId() != null && apogyEnvironmentNode.getNodeId().length() > 0)
 	  {
-		  label += " " + apogyEnvironmentNode.getNodeId();
-	  }	 
+		  label = apogyEnvironmentNode.getNodeId();
+	  }
+	  else
+	  {
+		  label = getString("_UI_ApogyEnvironmentNode_type");   
+	  }
 	 
 	  return label;
   }

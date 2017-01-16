@@ -203,7 +203,8 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 	 * 
 	 * @generated_NOT
 	 */
-	public void setWorksiteNode(WorksiteNode newWorksiteNode) {
+	public void setWorksiteNode(WorksiteNode newWorksiteNode) 
+	{
 		// Detach previous worksite node if applicable.
 		if (getWorksiteNode() != null)
 			getChildren().remove(getWorksiteNode());
@@ -274,11 +275,13 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 	 * 
 	 * @generated_NOT
 	 */
-	public ApogySystemAPIsNode getApogySystemAPIsNode() {
-		if (getApogySystemAPIsNodeGen() == null) {
+	public ApogySystemAPIsNode getApogySystemAPIsNode() 
+	{
+		if (getApogySystemAPIsNodeGen() == null) 
+		{
 			apogySystemAPIsNode = ApogyCoreTopologyFactory.eINSTANCE.createApogySystemAPIsNode();
-			apogySystemAPIsNode.setNodeId("SYSTEMS" + getNodeId());
-			apogySystemAPIsNode.setDescription("Systems");
+			apogySystemAPIsNode.setNodeId("APOGY_SYSTEMS");
+			apogySystemAPIsNode.setDescription("Root node of all Apogy Systems topologies.");
 
 			// Attaches the Systems
 			getChildren().add(apogySystemAPIsNode);
@@ -452,6 +455,7 @@ public class ApogyEnvironmentNodeImpl extends ReferencedGroupNodeImpl implements
 			}
 
 			setDescription("Apogy Environment Node");
+			setNodeId("APOGY_ENVIRONMENT");
 
 			// Gets the new Worksite.
 			newWorksite = newApogyEnvironment.getActiveWorksite();

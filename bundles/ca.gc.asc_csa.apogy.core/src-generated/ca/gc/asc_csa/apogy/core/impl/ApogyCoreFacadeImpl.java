@@ -128,7 +128,8 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated_NOT
 	 */
 	@SuppressWarnings("rawtypes")
-	public ResultNode createResultNode(PositionedResult result) {
+	public ResultNode createResultNode(PositionedResult result) 
+	{
 		// Creates the ResultNode.
 		ResultNode resultNode = ApogyCoreFactory.eINSTANCE.createResultNode();
 		resultNode.setResult(result);
@@ -136,19 +137,26 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		// Sets the time as the ID
 		Date time = result.getTime();
 		if(time == null) time = new Date();
-		resultNode.setNodeId(Long.toString(time.getTime()));
+	
+		resultNode.setNodeId(createNodeID(result));
+		resultNode.setDescription(result.getDescription());
 
 		// Attaches the result itself to the ResultNode.
-		if (result.getResultValue() instanceof AttributeResultValue) {
+		if (result.getResultValue() instanceof AttributeResultValue) 
+		{
 			AttributeResultValue attributeResultValue = (AttributeResultValue) result.getResultValue();
 
-			if (attributeResultValue.getValue() != null) {
+			if (attributeResultValue.getValue() != null) 
+			{
 				// TODO : Adds a marker in the topology ?
 			}
-		} else if (result.getResultValue() instanceof ReferenceResultValue) {
+		} else if (result.getResultValue() instanceof ReferenceResultValue) 
+		{
 			ReferenceResultValue referenceResultValue = (ReferenceResultValue) result.getResultValue();
-			if (referenceResultValue.getValue() != null) {
-				if (referenceResultValue.getValue() instanceof Node) {
+			if (referenceResultValue.getValue() != null) 
+			{
+				if (referenceResultValue.getValue() instanceof Node) 
+				{
 					// TODO : Do not copy the Node when bug#1429 in Link and
 					// ReferenceGroupNode is fixed.
 					Node node = EcoreUtil.copy((Node) referenceResultValue.getValue());
@@ -414,5 +422,18 @@ public class ApogyCoreFacadeImpl extends MinimalEObjectImpl.Container implements
 		}
 
 		return fileExtension;
+	}
+		
+	private String createNodeID(PositionedResult positionedResult)
+	{
+		String nodeId = positionedResult.eClass().getName();
+		
+		Date date = positionedResult.getTime();
+		if(date != null)
+		{
+			nodeId += " - " + date.toString();
+		}
+		
+		return nodeId;
 	}
 } // ApogyCoreFacadeImpl

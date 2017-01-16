@@ -27,6 +27,7 @@ import ca.gc.asc_csa.apogy.addons.Ruler3DTool;
 import ca.gc.asc_csa.apogy.addons.Ruler3dToolNode;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsFactory;
 import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.math.ApogyCommonMathFacade;
 import ca.gc.asc_csa.apogy.common.math.Tuple3d;
 import ca.gc.asc_csa.apogy.common.topology.GroupNode;
@@ -662,8 +663,29 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	}
 
 	@Override
+	public void initialise() 
+	{
+		
+		// Creates Ruler3dToolNode.		
+		Ruler3dToolNode toolNode = ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode();
+		if(getName() != null)
+		{
+			toolNode.setDescription("Node associated with the Ruler3DTool named <" + getName() + ">");
+			toolNode.setNodeId("RULER_TOOL_" +  getName().replaceAll(" ", "_"));
+		}
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.RULER3_DTOOL__RULER3D_TOOL_NODE, toolNode);		
+
+		// Then, initialize the rest.
+		super.initialise();
+
+		
+		// DEBUG
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.SIMPLE_TOOL__ACTIVE, true);
+	}
+	
+	@Override
 	public void selectionChanged(NodeSelection nodeSelection) 
-	{					
+	{							
 		if(!isDisposed())
 		{
 			Node node = nodeSelection.getSelectedNode();
@@ -729,34 +751,37 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	
 	protected void updateFromNode(Node node, Tuple3d relativePosition,Tuple3d normal)
 	{
-		setFromNode(node);
+		// Update FromNode
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_NODE, node);
+
 		if(relativePosition != null)
 		{
-			setFromRelativePosition(EcoreUtil.copy(relativePosition));
+			Tuple3d newRelativePosition = EcoreUtil.copy(relativePosition);
+			
+			// Update FromRelativePosition
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__FROM_RELATIVE_POSITION, newRelativePosition);			
 		}			
 		updateRuler();
 	}
 	
 	protected void updateToNode(Node node, Tuple3d relativePosition,Tuple3d normal)
 	{
-		setToNode(node);
+		// Update ToNode.
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_NODE, node);
+		
 		if(relativePosition != null)
 		{
-			setToRelativePosition(EcoreUtil.copy(relativePosition));
+			Tuple3d newRelativePosition = EcoreUtil.copy(relativePosition);
+			
+			// Update ToRelativePosition.
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__TO_RELATIVE_POSITION, newRelativePosition);
 		}
 		updateRuler();	
 	}
 	
 	protected void updateRuler()
-	{
-//		updateFromAbsolutePosition();
-//		updateToAbsolutePosition();
-					
-		// Creates Ruler3dToolNode if no yet initialized.
-		if(getRuler3dToolNode() == null) 
-		{
-			setRuler3dToolNode(ApogyAddonsFactory.eINSTANCE.createRuler3dToolNode());
-		}		
+	{			
+		// Attaches the ruler node.
 		attachRuler3dToolNode();
 		
 		if(getFromNode() != null && getToNode() != null)
@@ -765,16 +790,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			{
 				Point3d from = new Point3d(getFromAbsolutePosition().asTuple3d());
 				Point3d to = new Point3d(getToAbsolutePosition().asTuple3d());
-				setDistance(from.distance(to));
+				
+				// Update distance
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, from.distance(to));
+				
 				return;
 			}
 			else
 			{
-				setDistance(0.0);
+				// Update distance to 0.0
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, 0.0);
+
 				return;
 			}		
 		}
-		setDistance(0.0);
+		
+		// Update distance to 0.0
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.ABSTRACT_TWO_POINTS3_DTOOL__DISTANCE, 0.0);				
 	}
 	
 	protected boolean attachRuler3dToolNode()

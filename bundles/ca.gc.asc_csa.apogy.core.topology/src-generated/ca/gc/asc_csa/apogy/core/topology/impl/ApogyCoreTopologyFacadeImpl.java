@@ -208,7 +208,8 @@ public class ApogyCoreTopologyFacadeImpl extends MinimalEObjectImpl.Container im
 	 * @generated_NOT
 	 */
 	public void initApogyTopology(ApogyEnvironment environment) {
-		if (environment != null){
+		if (environment != null)
+		{
 			// Updates the deployment of the deployment node to get the topology to update.
 			TransformNode root = ApogyCommonTopologyFactory.eINSTANCE.createTransformNode();
 			root.setNodeId("UNIVERSE_ROOT");

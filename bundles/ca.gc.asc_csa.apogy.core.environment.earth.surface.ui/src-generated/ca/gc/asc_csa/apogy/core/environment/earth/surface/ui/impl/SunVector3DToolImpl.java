@@ -34,7 +34,6 @@ import ca.gc.asc_csa.apogy.common.topology.GroupNode;
 import ca.gc.asc_csa.apogy.common.topology.Node;
 import ca.gc.asc_csa.apogy.common.topology.ui.NodeSelection;
 import ca.gc.asc_csa.apogy.core.environment.ApogyCoreEnvironmentFacade;
-import ca.gc.asc_csa.apogy.core.environment.ApogyEnvironment;
 import ca.gc.asc_csa.apogy.core.environment.Sun;
 import ca.gc.asc_csa.apogy.core.environment.earth.HorizontalCoordinates;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ApogyEarthSurfaceEnvironmentFacade;
@@ -67,7 +66,6 @@ import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode
  */
 public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements SunVector3DTool 
 {
-	private ApogyEnvironment apogyEnvironment = null;
 	private Date previousTime = null;
 
 	/**
@@ -591,6 +589,24 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	}
 
 	@Override
+	public void initialise() 
+	{
+		super.initialise();
+		
+		// First, initialize the SunVector3DToolNode.		
+		SunVector3DToolNode toolNode = ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNode();
+		if(getName() != null)
+		{
+			toolNode.setDescription("Node associated with the SunVectorTool named <" + getName() + ">");
+			toolNode.setNodeId("SUN_VECTOR_TOOL_" +  getName().replaceAll(" ", "_"));
+		}
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyCoreEnvironmentSurfaceEarthUIPackage.Literals.SUN_VECTOR3_DTOOL__SUN_VECTOR3_DTOOL_NODE, toolNode);						
+		
+		// DEBUG
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.SIMPLE_TOOL__ACTIVE, true);
+	}
+	
+	@Override
 	public void selectionChanged(NodeSelection nodeSelection) 
 	{
 		if(!isDisposed())
@@ -656,10 +672,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 	{
 		if(!isDisposed())
 		{
-			if(getSunVector3DToolNode() == null)
-			{
-				setSunVector3DToolNode(ApogyCoreEnvironmentSurfaceEarthUIFactory.eINSTANCE.createSunVector3DToolNode());
-			}
+			// Attaches the SunVector3DToolNode to the new to Node.
 			attachSunVector3DToolNode();	
 			
 			// Updates sun intensity

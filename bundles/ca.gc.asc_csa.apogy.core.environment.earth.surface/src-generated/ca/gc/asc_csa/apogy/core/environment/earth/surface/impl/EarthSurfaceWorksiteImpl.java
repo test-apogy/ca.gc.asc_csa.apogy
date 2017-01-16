@@ -256,7 +256,9 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  if(!(super.getWorksiteNode() instanceof EarthSurfaceWorksiteNode))
 	  {
 			worksiteNode = ApogyEarthSurfaceEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode();
-			worksiteNode.setWorksite(this);  			
+			worksiteNode.setWorksite(this); 
+			worksiteNode.setNodeId(this.getName().replaceAll(" ", "_"));
+			worksiteNode.setDescription("Root Node of the Worksite");
 	  }
 		
 	  return worksiteNode;

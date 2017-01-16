@@ -13,9 +13,9 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui;
 
-import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
-
 import javax.vecmath.Color3f;
+
+import ca.gc.asc_csa.apogy.addons.AbstractTwoPoints3DTool;
 
 /**
  * <!-- begin-user-doc -->

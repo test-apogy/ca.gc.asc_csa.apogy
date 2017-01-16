@@ -96,14 +96,23 @@ public class ResultNodeItemProvider extends AggregateGroupNodeItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((ResultNode)object).getDescription();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ResultNode_type") :
-			getString("_UI_ResultNode_type") + " " + label;
+	public String getText(Object object) 
+	{
+		ResultNode resultNode = (ResultNode) object;
+		String label = "";
+		if(resultNode.getNodeId() != null && resultNode.getNodeId().length() > 0)
+		{
+			label = resultNode.getNodeId();
+		}
+		else
+		{
+			label = getString("_UI_ResultNode_type");
+		}
+		
+		return label;
 	}
 
 	/**

@@ -109,6 +109,8 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
 			  // TODO Do this in a Transaction.
 			  mapsListNode = ApogySurfaceEnvironmentFactory.eINSTANCE.createMapsListNode();
 			  mapsListNode.setMapsList(this);
+			  mapsListNode.setNodeId("MAPS_LIST_NODE");
+			  mapsListNode.setDescription("Node containing all maps.");
 		  }
 		  
 		  return getMapsListNodeGen();

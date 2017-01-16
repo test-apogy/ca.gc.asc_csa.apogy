@@ -200,8 +200,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 	@Override
 	public void setRootNode(Node newRootNode) 
-	{		
-		System.out.println("Trajectory3DToolImpl.setRootNode(" + newRootNode + ")");				
+	{							
 		super.setRootNode(newRootNode);				
 		Trajectory3DToolNode toolNode = getTrajectory3DToolNode();
 		
@@ -690,7 +689,13 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	public void initialise() 
 	{	
 		// First, initialize the Trajectory3DToolNode.		
-		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode());
+		Trajectory3DToolNode toolNode = ApogyAddonsFactory.eINSTANCE.createTrajectory3DToolNode();
+		if(getName() != null)
+		{
+			toolNode.setDescription("Node associated with the TrajectoryTool named <" + getName() + ">");
+			toolNode.setNodeId("TRAJECTORY_TOOL_" +  getName().replaceAll(" ", "_"));
+		}
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(this, ApogyAddonsPackage.Literals.TRAJECTORY3_DTOOL__TRAJECTORY3_DTOOL_NODE, toolNode);
 				
 		// Then, initialize the rest.
 		super.initialise();										

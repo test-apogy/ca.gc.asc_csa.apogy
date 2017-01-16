@@ -241,8 +241,9 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			
 			if(positionedResult.getTime() != null)
 			{
-				String description = Long.toString(positionedResult.getTime().getTime());
-				transform.setDescription(description);
+				String id = "RESULT_TRANSFORM_" +positionedResult.getTime().toString();				
+				transform.setNodeId(id);
+				transform.setDescription("Transform positionning result <" + resultNode.getNodeId() + ">");
 			}
 			transform.getChildren().add(resultNode);
 

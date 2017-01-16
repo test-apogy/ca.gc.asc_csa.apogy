@@ -274,7 +274,7 @@ public abstract class DefaultJME3SceneObject<T extends Node> implements JME3Scen
 	@Override
 	public void dispose() 
 	{		
-		Logger.INSTANCE.log(Activator.ID, this, "Being disposed of.", EventSeverity.INFO);				
+		// Logger.INSTANCE.log(Activator.ID, this, "Being disposed of.", EventSeverity.INFO);				
 		if(root != null)
 		{
 			if(root.getParent() != null)

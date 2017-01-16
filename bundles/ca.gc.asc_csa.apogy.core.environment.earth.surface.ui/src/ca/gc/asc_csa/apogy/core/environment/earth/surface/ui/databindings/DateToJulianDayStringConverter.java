@@ -17,6 +17,7 @@ import java.text.NumberFormat;
 import java.util.Date;
 
 import org.eclipse.core.databinding.conversion.Converter;
+
 import ca.gc.asc_csa.apogy.core.environment.EnvironmentUtilities;
 
 public class DateToJulianDayStringConverter extends Converter 

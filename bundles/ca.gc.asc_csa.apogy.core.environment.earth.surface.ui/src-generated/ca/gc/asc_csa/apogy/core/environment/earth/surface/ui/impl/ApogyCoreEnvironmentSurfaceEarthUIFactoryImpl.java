@@ -13,7 +13,6 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.*;
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
 
@@ -27,9 +26,12 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIFactory;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSkyPresentation;
-import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceUIUtilities;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.EarthSurfaceWorksitePresentation;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.MoonPresentation;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
+import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNodePresentation;
 
 /**
  * <!-- begin-user-doc -->

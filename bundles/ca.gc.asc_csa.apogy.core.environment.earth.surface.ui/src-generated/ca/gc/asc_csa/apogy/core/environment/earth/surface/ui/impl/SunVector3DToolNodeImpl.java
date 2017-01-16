@@ -13,19 +13,16 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.impl;
 
-import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import ca.gc.asc_csa.apogy.common.topology.impl.NodeImpl;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.ApogyCoreEnvironmentSurfaceEarthUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DTool;
 import ca.gc.asc_csa.apogy.core.environment.earth.surface.ui.SunVector3DToolNode;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->

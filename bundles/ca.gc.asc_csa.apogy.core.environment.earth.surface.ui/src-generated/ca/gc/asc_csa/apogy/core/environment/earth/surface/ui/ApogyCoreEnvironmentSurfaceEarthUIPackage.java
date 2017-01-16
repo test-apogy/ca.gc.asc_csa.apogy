@@ -13,17 +13,17 @@
  */
 package ca.gc.asc_csa.apogy.core.environment.earth.surface.ui;
 
-import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
-import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
+import ca.gc.asc_csa.apogy.addons.ApogyAddonsPackage;
+import ca.gc.asc_csa.apogy.common.topology.ApogyCommonTopologyPackage;
 import ca.gc.asc_csa.apogy.common.topology.ui.ApogyCommonTopologyUIPackage;
 import ca.gc.asc_csa.apogy.core.environment.surface.ui.ApogySurfaceEnvironmentUIPackage;
-import org.eclipse.emf.ecore.EAttribute;
 
 /**
  * <!-- begin-user-doc -->

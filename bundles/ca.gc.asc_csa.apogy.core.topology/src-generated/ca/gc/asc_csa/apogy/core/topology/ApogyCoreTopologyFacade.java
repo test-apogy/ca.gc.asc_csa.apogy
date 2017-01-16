@@ -76,6 +76,11 @@ public interface ApogyCoreTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Returns the topology root associated with a specified Variable.
+	 * @param variable The specified variable.
+	 * @return The topology root associated with the variable, null if none is found.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" variableUnique="false"
 	 * @generated
 	 */
@@ -84,6 +89,11 @@ public interface ApogyCoreTopologyFacade extends EObject
 	 /**
 	 * <!-- begin-user-doc -->
 	  * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Return the topology root associated with a specified AbstractTypeImplementation.
+	 * @param abstractTypeImplementation The specified AbstractTypeImplementation.
+	 * @return The topology root associated with the AbstractTypeImplementation, null if none is found.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" abstractTypeImplementationUnique="false"
 	 * @generated
 	 */
@@ -92,6 +102,11 @@ public interface ApogyCoreTopologyFacade extends EObject
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Creates the ApogyEnvironmentNode associated with a specified ApogyEnvironment.
+	 * @param apogyEnvironment The specified ApogyEnvironment.
+	 * @return The ApogyEnvironmentNode.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" apogyEnvironmentUnique="false"
 	 * @generated
 	 */

@@ -68,7 +68,20 @@ type Exception wraps java.lang.Exception
  * ------------------------------------------------------------------------- */ 
 class ApogyCoreFacade
 {
+	/**
+	 * Create the 4 by 4 homogeneous matrix that represent the absolute pose of a pose initially 
+	 * defined as a relative pose in an ApogySystem frame.
+	 * @param apogySystem The ApogySytem in which to interpret the relative pose.
+	 * @param relativePose The relative pose in the Apogy System frame.
+	 * @return The absolute pose expressed in 4 by 4 homogeneous matrix.
+	 */
 	op Matrix4x4 computeAbsolutePoseMatrix(ApogySystem apogySystem, Matrix4x4 relativePose)
+	
+	/*
+	 * Creates a Result Node associated with a specified PositionedResult result.
+	 * @param result The specified PositionedResult.
+	 * @return The ResultNode. 
+	 */
 	op ResultNode createResultNode(PositionedResult result)		
 	
 	/*
