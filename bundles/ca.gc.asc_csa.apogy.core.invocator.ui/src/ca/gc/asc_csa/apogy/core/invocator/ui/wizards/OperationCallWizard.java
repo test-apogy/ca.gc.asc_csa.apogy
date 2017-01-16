@@ -13,11 +13,7 @@ package ca.gc.asc_csa.apogy.core.invocator.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import java.util.Arrays;
-
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
@@ -27,6 +23,8 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
+import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NamedDescribedWizardPage;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
@@ -41,11 +39,8 @@ import ca.gc.asc_csa.apogy.core.invocator.VariablesList;
 import ca.gc.asc_csa.apogy.core.invocator.ui.Activator;
 
 public class OperationCallWizard extends Wizard implements INewWizard {
-
-	private OperationCallsListWizardPage operationCallsListWizardPage;
-	private VariableFeatureReferenceWizardPage variableFeatureReferenceWizardPage;
-	private OperationCallEOperationsWizardPage operationCallEOperationsWizardPage;
 	private NamedDescribedWizardPage namedDescribedWizardPage;
+	private OperationCallDetailsWizardPage operationCallDetailsWizardPage;
 	private ArgumentsWizardPage argumentsWizardPage;
 	
 	private OperationCallsList operationCallsList;
@@ -72,40 +67,23 @@ public class OperationCallWizard extends Wizard implements INewWizard {
 	 * Add the page to the wizard.
 	 */
 	public void addPages() {
-		addPage(getOperationCallsListWizardPage());
 		addPage(getNamedDescribedWizardPage());
-		addPage(getVariableFeatureReferenceWizardPage());
-		addPage(getOperationCallEOperationWizardPage());
+		addPage(getOperationCallDetailsWizardPage());
+		addPage(getArgumentsWizardPage());
 
-		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getOperationCallEOperationWizardPage(), 0.8);
+		ApogyCommonUiFacade.INSTANCE.adjustWizardPage(getNamedDescribedWizardPage(), 0.8);
 	}
 	
 	@Override
 	public IWizardPage getNextPage(IWizardPage page) {
-		if (page == operationCallEOperationsWizardPage) {
-			if(operationCall.getEOperation() != null && !operationCall.getEOperation().getEParameters().isEmpty()){
-				if (!Arrays.asList(getPages()).contains(getArgumentsWizardPage())) {
-					addPage(getArgumentsWizardPage());
-				} else {
-					return getArgumentsWizardPage();
-				}
-			}else{
+		if (page == getOperationCallDetailsWizardPage()) {
+			if (getOperationCall().getEOperation() != null && getOperationCall().getArgumentsList() != null) {
+				return getArgumentsWizardPage();
+			} else {
 				return null;
 			}
-			
 		}
 		return super.getNextPage(page);
-	}
-
-	/**
-	 * Returns the {@link OperationCallsListWizardPage}.  If null is returned, the page is not added to the wizard.
-	 * @return Reference to the page.
-	 */
-	protected OperationCallsListWizardPage getOperationCallsListWizardPage(){
-		if (operationCallsListWizardPage == null){
-			operationCallsListWizardPage = new OperationCallsListWizardPage(operationCallsList.getProgramsGroup(), operationCallsList);	
-		}		
-		return operationCallsListWizardPage;
 	}
 
 	/**
@@ -119,35 +97,16 @@ public class OperationCallWizard extends Wizard implements INewWizard {
 		return namedDescribedWizardPage;
 	}
 	
-	
 	/**
-	 * Returns the {@link VariableFeatureReferenceWizardPage}.  If null is returned, the page is not added to the wizard.
+	 * Returns the {@link NamedDescribedWizardPage}.  If null is returned, the page is not added to the wizard.
 	 * @return Reference to the page.
-	 */	
-	protected VariableFeatureReferenceWizardPage getVariableFeatureReferenceWizardPage(){
-		if (variableFeatureReferenceWizardPage == null){
-			variableFeatureReferenceWizardPage = new VariableFeatureReferenceWizardPage(getVariablesList(), getOperationCall()){
-				@Override
-				protected void resetOperationCall() {
-					getOperationCall().setArgumentsList(null);
-					getOperationCall().setEOperation(null);
-					getArgumentsWizardPage().setOperationCall(getOperationCall());
-				}
-			};	
+	 */
+	protected OperationCallDetailsWizardPage getOperationCallDetailsWizardPage(){
+		if (operationCallDetailsWizardPage == null){
+			operationCallDetailsWizardPage = new OperationCallDetailsWizardPage(getOperationCall());	
 		}
-		return variableFeatureReferenceWizardPage;
+		return operationCallDetailsWizardPage;
 	}
-	
-	/**
-	 * Returns the {@link OperationCallEOperationsWizardPage}.  If null is returned, the page is not added to the wizard.
-	 * @return Reference to the page.
-	 */	
-	protected OperationCallEOperationsWizardPage getOperationCallEOperationWizardPage(){
-		if (operationCallEOperationsWizardPage == null){
-			operationCallEOperationsWizardPage = new OperationCallEOperationsWizardPage(getOperationCall()); 
-		}
-		return operationCallEOperationsWizardPage;
-	}	
 
 	/**
 	 * Returns the {@link OperationCallEOperationsWizardPage}.  If null is returned, the page is not added to the wizard.
@@ -161,25 +120,7 @@ public class OperationCallWizard extends Wizard implements INewWizard {
 	}	
 	@Override
 	public boolean performFinish() {
-		OperationCallsList operationCallsList = getOperationCallsListWizardPage().getOperationCallsList();	
-		EditingDomain editingDomain = AdapterFactoryEditingDomain
-				.getEditingDomainFor(operationCallsList);
-		
-		/** Check if there is a domain. */
-		if (editingDomain == null){
-			/** No Domain */
-			operationCallsList.getOperationCalls().add(getOperationCall());	
-		}else{
-			/** Use the command stack. */
-			AddCommand command = new AddCommand(
-					editingDomain,
-					operationCallsList,
-					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-					getOperationCall());
-			editingDomain.getCommandStack().execute(command);			
-		}
-				
-		return true;
+		return false;
 	}
 		
 	/** 
@@ -198,12 +139,14 @@ public class OperationCallWizard extends Wizard implements INewWizard {
 	 * This method uses the lazy loading pattern.
 	 * @return Reference to the {@link OperationCall}. 
 	 */
-	protected OperationCall getOperationCall(){
-		if (operationCall == null){		
+	protected OperationCall getOperationCall() {
+		if (operationCall == null) {
 			operationCall = ApogyCoreInvocatorFactory.eINSTANCE.createOperationCall();
-			operationCall.setName(ApogyCommonEMFFacade.INSTANCE.getDefaultName(
-					getOperationCallsListWizardPage().getOperationCallsList(), operationCall,
-					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS));
+			ApogyCommonEmfTransactionFacade.INSTANCE.addInTempTransactionalEditingDomain(operationCall);
+			ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall, ApogyCommonEMFPackage.Literals.NAMED__NAME,
+					ApogyCommonEMFFacade.INSTANCE.getDefaultName(
+							operationCallsList, operationCall,
+							ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS));
 		}
 		return operationCall;
 	}
@@ -221,6 +164,14 @@ public class OperationCallWizard extends Wizard implements INewWizard {
 		return variablesList;
 	}
 
+	@Override
+	public boolean performCancel() {
+		getOperationCall().eResource().getResourceSet().getResources().remove(getOperationCall().eResource());
+		TransactionUtil.disconnectFromEditingDomain(getOperationCall().eResource());
+
+		return super.performCancel();
+	}
+	
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 	}

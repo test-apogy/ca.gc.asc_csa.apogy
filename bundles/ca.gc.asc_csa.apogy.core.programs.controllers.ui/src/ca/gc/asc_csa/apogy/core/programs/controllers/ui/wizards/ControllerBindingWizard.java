@@ -14,9 +14,6 @@ package ca.gc.asc_csa.apogy.core.programs.controllers.ui.wizards;
  *     Canadian Space Agency (CSA) - Initial API and implementation
  */
 
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
@@ -151,22 +148,7 @@ public class ControllerBindingWizard extends Wizard {
 
 	@Override
 	public boolean performFinish() {
-		getControllerBinding().eResource().getResourceSet().getResources().remove(getControllerBinding().eResource());
-		TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());
-		EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getControllersConfiguration());
-
-		/** Check if there is a domain. */
-		if (editingDomain == null) {
-			/** No Domain */
-			getControllersConfiguration().getOperationCalls().add(getControllerBinding());
-		} else {
-			/** Use the command stack. */
-			AddCommand command = new AddCommand(editingDomain, getControllersConfiguration(),
-					ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-					getControllerBinding());
-			editingDomain.getCommandStack().execute(command);
-		}
-		return true;
+		return false;
 	}
 
 	/**

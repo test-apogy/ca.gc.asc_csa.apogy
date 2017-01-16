@@ -133,7 +133,7 @@ public class ControllerBindingsComposite extends Composite {
 				ControllerBindingWizard newControllerBindingWizard = new ControllerBindingWizard(
 						controllersConfiguration) {
 					@Override
-					public boolean performFinish() {
+					public boolean performFinish() {	
 						getControllerBinding().eResource().getResourceSet().getResources()
 								.remove(getControllerBinding().eResource());
 						TransactionUtil.disconnectFromEditingDomain(getControllerBinding().eResource());

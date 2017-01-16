@@ -20,7 +20,6 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -33,11 +32,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecp.ui.view.ECPRendererException;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.RemoveCommand;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -72,6 +66,7 @@ import org.eclipse.swt.widgets.TreeColumn;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFacade;
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFFactory;
 import ca.gc.asc_csa.apogy.common.emf.EObjectReference;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.ChooseEClassWizard;
 import ca.gc.asc_csa.apogy.common.emf.ui.wizards.NewChildWizard;
 import ca.gc.asc_csa.apogy.common.log.EventSeverity;
@@ -220,7 +215,7 @@ public class ArgumentsComposite extends Composite {
 							public boolean performFinish() {
 								EObject eObject = EcoreUtil
 										.create(getChooseEClassImplementationWizardPage().getSelectedEClass());
-								((EClassArgument) getParent()).setValue(eObject);
+								ApogyCommonEmfTransactionFacade.INSTANCE.basicSet((EClassArgument) getParent(), ApogyCoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, eObject);
 								treeViewer.refresh();
 								treeViewer.setSelection(new StructuredSelection(eObject));
 								return true;
@@ -230,43 +225,20 @@ public class ArgumentsComposite extends Composite {
 						wizard = new NewChildWizard(
 								ApogyCommonEMFFacade.INSTANCE.getSettableEReferences(getSelectedEObject()),
 								getSelectedEObject()) {
-							@SuppressWarnings("unchecked")
 							@Override
 							public boolean performFinish() {
-								// TODO move to facade
-								// Get the editing domain of the parent
-								EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(parent);
 								EObject eObject = EcoreUtil.create(getSelectedEClass());
 
-								if (editingDomain != null) {
-									Command command = null;
-									// If the selected reference is a list
-									if (getSelectedEReference().isMany()) {
-										// Add the new eObject to the list
-										command = new AddCommand(editingDomain, getParent(), getSelectedEReference(),
-												eObject);
-									}
-									// Otherwise, if the reference is not a list
-									else {
-										// Set the corresponding EReference of
-										// the parent to the new
-										// eObject
-										command = new SetCommand(editingDomain, getParent(), getSelectedEReference(),
-												eObject);
-									}
-									editingDomain.getCommandStack().execute(command);
-									treeViewer.refresh();
-									treeViewer.setSelection(new StructuredSelection(eObject));
+								if (getSelectedEReference().isMany()) {
+									ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(getParent(),
+											getSelectedEReference(), eObject);
 								} else {
-									if (getSelectedEReference().isMany()) {
-										((List<EObject>) ((EObject) getParent()).eGet(getSelectedEReference()))
-												.add(eObject);
-									} else {
-										((EObject) getParent()).eSet(getSelectedEReference(), eObject);
-									}
-
+									ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getParent(),
+											getSelectedEReference(), eObject);
 								}
+								treeViewer.refresh();
 								treeViewer.setSelection(new StructuredSelection(eObject));
+
 								return true;
 							}
 						};
@@ -282,29 +254,8 @@ public class ArgumentsComposite extends Composite {
 			btnDelete.addSelectionListener(new SelectionAdapter() {
 				@Override
 				public void widgetSelected(SelectionEvent e) {
-					// TODO move to facade
-					EditingDomain editingDomain = AdapterFactoryEditingDomain
-							.getEditingDomainFor(getSelectedEObject().eContainer());
-					Command command = null;
-					if (getSelectedEObject().eContainmentFeature().isMany()) {
-						if (editingDomain == null) {
-							getSelectedEObject().eContainer().eGet(getSelectedEObject().eContainmentFeature());
-						} else {
-							command = new RemoveCommand(editingDomain, getSelectedEObject().eContainer(),
-									getSelectedEObject().eContainmentFeature(), getSelectedEObject());
-						}
-
-					} else {
-						if (editingDomain == null) {
-							getSelectedEObject().eContainer().eSet(getSelectedEObject().eContainmentFeature(), null);
-						} else {
-							command = new SetCommand(editingDomain, getSelectedEObject().eContainer(),
-									getSelectedEObject().eContainmentFeature(), null);
-						}
-					}
-					if (editingDomain != null) {
-						editingDomain.getCommandStack().execute(command);
-					}
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicDelete(getSelectedEObject().eContainer(),
+							getSelectedEObject().eContainmentFeature(), getSelectedEObject());
 					treeViewer.refresh();
 				}
 			});
@@ -349,11 +300,14 @@ public class ArgumentsComposite extends Composite {
 
 		@Override
 		protected void setValue(Object element, Object value) {
-			if (element instanceof BooleanEDataTypeArgument) {
-				((EDataTypeArgument) element).setValue(booleanLabels[(int) value]);
+			if (element instanceof BooleanEDataTypeArgument && (int)value != -1) {
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet((EObject) element,
+						ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+						Arrays.asList(booleanLabels).get((int) value));
 			}
 			if (element instanceof StringEDataTypeArgument) {
-				((EDataTypeArgument) element).setValue((String) value);
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet((EObject) element,
+						ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE, value);
 			}
 			if (element instanceof NumericEDataTypeArgument) {
 				// To set a numeric value, the editor verifies if it can parse the entered value.
@@ -365,12 +319,12 @@ public class ArgumentsComposite extends Composite {
 							+ "Value entered is not a number";
 					Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.WARNING);
 				}
-				((EDataTypeArgument) element).setValue(Double.toString(doublevalue));
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet((EObject)element, ApogyCoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE, Double.toString(doublevalue));
 			}
 			if (element instanceof EEnumArgument) {
 				EEnum eEnum = ((EEnumArgument) element).getEEnum();
 				if ((int) value != -1) {
-					((EEnumArgument) element).setEEnumLiteral(eEnum.getELiterals().get((int) value));
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet((EObject)element, ApogyCoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM_LITERAL,eEnum.getELiterals().get((int) value));
 					treeViewer.refresh();
 				}
 			}

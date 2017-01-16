@@ -23,6 +23,7 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EOperationsComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -101,8 +102,11 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 	}
 	
 	protected void newSelection() {
-		operationCall.setEOperation(getEOperationsComposite().getSelectedEOperation());
-		ApogyCoreInvocatorFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(), getOperationCall());
+		ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(operationCall,
+				ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+				getEOperationsComposite().getSelectedEOperation());
+		ApogyCoreInvocatorFacade.INSTANCE.setEOperationInitArguments(getEOperationsComposite().getSelectedEOperation(),
+				getOperationCall());
 		validate();
 	}
 	

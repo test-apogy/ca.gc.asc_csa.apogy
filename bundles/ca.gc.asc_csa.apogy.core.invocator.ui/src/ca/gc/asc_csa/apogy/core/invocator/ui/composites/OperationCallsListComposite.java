@@ -26,10 +26,7 @@ import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.RemoveCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
@@ -53,6 +50,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.OperationCall;
@@ -126,17 +124,25 @@ public class OperationCallsListComposite extends ScrolledComposite {
 				OperationCallWizard newOperationCallWizard = new OperationCallWizard(operationCallsListBinder.getValue()) {
 					@Override
 					public boolean performFinish() {
-						// FIXME Move to core + UI facade
-						EditingDomain editingDomain = AdapterFactoryEditingDomain
-								.getEditingDomainFor(operationCallsListBinder.getValue());
+						getOperationCall().eResource().getResourceSet().getResources()
+								.remove(getOperationCall().eResource());
+						TransactionUtil.disconnectFromEditingDomain(getOperationCall().eResource());
 
-						/** Use the command stack. */
-						AddCommand command = new AddCommand(editingDomain, operationCallsListBinder.getValue(),
-								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-								getOperationCall());
-						editingDomain.getCommandStack().execute(command);
+						/**
+						 * Needs to be executed in a asyncExec because of the
+						 * databinding and the ObservableListContentProvider.
+						 */
+						getDisplay().asyncExec(new Runnable() {
+							@Override
+							public void run() {
+								ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(operationCallsListBinder.getValue(),
+										ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+										getOperationCall());
+							}
+						});
 
-						OperationCallsListComposite.this.tableViewer.setSelection(new StructuredSelection(getOperationCall()));
+						OperationCallsListComposite.this.tableViewer
+								.setSelection(new StructuredSelection(getOperationCall()));
 						packColumns();
 						return true;
 					}
@@ -153,14 +159,9 @@ public class OperationCallsListComposite extends ScrolledComposite {
 		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				// FIXME Move to core + UI facade
-				EditingDomain editingDomain = AdapterFactoryEditingDomain
-						.getEditingDomainFor(operationCallsListBinder.getValue());
-
-				RemoveCommand command = new RemoveCommand(editingDomain, operationCallsListBinder.getValue(),
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicRemove(operationCallsListBinder.getValue(),
 						ApogyCoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
 						getSelectedOperationCall());
-				editingDomain.getCommandStack().execute(command);
 			}
 		});
 

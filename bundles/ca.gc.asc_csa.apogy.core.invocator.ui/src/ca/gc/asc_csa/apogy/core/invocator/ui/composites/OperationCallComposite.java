@@ -18,6 +18,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
@@ -32,6 +33,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.emf.ui.composites.EOperationsComposite;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
@@ -48,6 +50,8 @@ public class OperationCallComposite extends ScrolledComposite {
 	private Section sctnArguments;
 	private OperationCallArgumentsComposite argumentsComposite;
 	private OperationCall operationCall;	
+	
+	private boolean displayArguments = true;
 
 	private AdapterImpl operationCallAdapter;
 	AdapterFactory adapterFactory = new ComposedAdapterFactory(
@@ -58,7 +62,7 @@ public class OperationCallComposite extends ScrolledComposite {
 	 * @param parent Reference to the parent parentComposite.
 	 * @param style Composite style.
 	 */
-	public OperationCallComposite(Composite parent, int style) {
+	public OperationCallComposite(Composite parent, int style, boolean displayArguments) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
@@ -68,6 +72,8 @@ public class OperationCallComposite extends ScrolledComposite {
 		setLayout(new GridLayout(1, true));
 		setExpandHorizontal(true);
 		setExpandVertical(true);
+		
+		this.displayArguments = displayArguments;
 		
 		Composite composite = new Composite(this, SWT.NONE);
 		composite.setLayout(new GridLayout(3, true));
@@ -84,32 +90,53 @@ public class OperationCallComposite extends ScrolledComposite {
 		
 		sctnOperation = toolkit.createSection(composite, Section.TITLE_BAR);
 		sctnOperation.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 1, 1));
+		if (!displayArguments) {
+			((GridData)sctnOperation.getLayoutData()).horizontalSpan = 3;
+		}
 		sctnOperation.setText("Operation");
 		
-		eOperationsComposite = new EOperationsComposite(sctnOperation, SWT.NONE);
+		eOperationsComposite = new EOperationsComposite(sctnOperation, SWT.NONE){
+			@Override
+			protected void newSelection(TreeSelection selection) {
+				EOperation eOperation = eOperationsComposite.getSelectedEOperation();
+				ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getOperationCall(),
+						ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, eOperation);
+				if (getOperationCall().getEOperation() != null) {
+					if (!getOperationCall().getEOperation().getEParameters().isEmpty()) {
+						ApogyCoreInvocatorFacade.INSTANCE.setEOperationInitArguments(getOperationCall().getEOperation(), getOperationCall());
+					} else {
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(getOperationCall(),
+								ApogyCoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, null);
+					}
+				}
+				OperationCallComposite.this.newSelection(selection);
+			}
+		};
 		FillLayout fillLayout = (FillLayout) eOperationsComposite.getLayout();
 		fillLayout.marginWidth = 0;
 		fillLayout.marginHeight = 0;
 		sctnOperation.setClient(eOperationsComposite);
-				
-		/** 
-		 * Arguments.
-		 */
-		sctnArguments = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);			
-		sctnArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
-		sctnArguments.setText("Arguments");
-		sctnArguments.setExpanded(true);
 		
-		argumentsComposite = new OperationCallArgumentsComposite(sctnArguments, SWT.NONE){
-			@Override
-			protected void newSelection(TreeSelection selection) {
-				OperationCallComposite.this.newSelection(selection);
-			}
-		};
-		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
-		gridLayout_1.marginWidth = 0;
-		gridLayout_1.marginHeight = 0;
-		sctnArguments.setClient(argumentsComposite);
+		if(displayArguments){
+			/** 
+			 * Arguments.
+			 */
+			sctnArguments = toolkit.createSection(composite, Section.EXPANDED | Section.TITLE_BAR);			
+			sctnArguments.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 1));
+			sctnArguments.setText("Arguments");
+			sctnArguments.setExpanded(true);
+			
+			argumentsComposite = new OperationCallArgumentsComposite(sctnArguments, SWT.NONE){
+				@Override
+				protected void newSelection(TreeSelection selection) {
+					OperationCallComposite.this.newSelection(selection);
+				}
+			};
+			GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
+			gridLayout_1.marginWidth = 0;
+			gridLayout_1.marginHeight = 0;
+			sctnArguments.setClient(argumentsComposite);
+		}
 		
 		setContent(composite);
 		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
@@ -169,10 +196,14 @@ public class OperationCallComposite extends ScrolledComposite {
 		
 		if (getOperationCall().getVariable()!=null){		
 			eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()), getOperationCall().getEOperation());
-			argumentsComposite.setOperationCall(getOperationCall());
+			if(this.displayArguments){
+				argumentsComposite.setOperationCall(getOperationCall());
+			}
 		}else{
 			eOperationsComposite.setEClass(null);
-			argumentsComposite.setOperationCall(null);			
+			if(this.displayArguments){
+				argumentsComposite.setOperationCall(null);			
+			}
 		}
 		
 		variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(), operationCall);

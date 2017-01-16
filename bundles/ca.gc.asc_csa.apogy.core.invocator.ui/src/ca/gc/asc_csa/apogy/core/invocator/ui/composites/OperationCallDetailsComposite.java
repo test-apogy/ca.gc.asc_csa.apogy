@@ -46,7 +46,6 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 	private OperationCall operationCall;
 	private Label label;
 	private Composite composite;
-	// private Text opsCallText;
 
 	private AdapterImpl operationCallAdapter;
 	AdapterFactory adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
@@ -69,7 +68,6 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		setLayout(new GridLayout(1, true));
 		setExpandHorizontal(true);
 		setExpandVertical(true);
-		// getShell().setBackgroundMode(SWT.INHERIT_FORCE);
 
 		composite = new Composite(this, SWT.NONE);
 		composite.setLayout(new GridLayout(1, true));
@@ -78,29 +76,6 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		label.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
 		label.setFont(SWTResourceManager.getFont("Ubuntu", 17, SWT.NORMAL));
 		label.setText("Operation call informations");
-		// label.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false,
-		// 1, 1));
-		// label.setFont(SWTResourceManager.getFont("Ubuntu", 20, SWT.NORMAL));
-
-		// opsCallText = new Text(parentComposite, SWT.NONE);
-		// opsCallText.setFont(SWTResourceManager.getFont("Ubuntu", 20,
-		// SWT.NORMAL));
-		// opsCallText.setEditable(false);
-		// opsCallText.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true,
-		// false, 1, 1));
-
-		// sctnOperation = toolkit.createSection(parentComposite, Section.TITLE_BAR);
-		// sctnOperation.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false,
-		// true, 1, 1));
-		// sctnOperation.setText("Operation");
-		//
-		// eOperationsComposite = new EOperationsComposite(sctnOperation,
-		// SWT.NONE);
-		// FillLayout fillLayout = (FillLayout)
-		// eOperationsComposite.getLayout();
-		// fillLayout.marginWidth = 0;
-		// fillLayout.marginHeight = 0;
-		// sctnOperation.setClient(eOperationsComposite);
 
 		argumentsComposite = new ArgumentsComposite(composite, SWT.NONE) {
 			@Override
@@ -109,9 +84,6 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 			}
 		};
 		argumentsComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-//		GridLayout gridLayout_1 = (GridLayout) argumentsComposite.getLayout();
-//		gridLayout_1.marginWidth = 0;
-//		gridLayout_1.marginHeight = 0;
 
 		setContent(composite);
 		setMinSize(composite.computeSize(SWT.DEFAULT, SWT.DEFAULT));
@@ -178,21 +150,10 @@ public class OperationCallDetailsComposite extends ScrolledComposite {
 		DataBindingContext bindingContext = new DataBindingContext();
 
 		argumentsComposite.setOperationCall(getOperationCall());
-//		if (getOperationCall().getVariable() != null) {
-//			// eOperationsComposite.setEClass(ApogyCoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()),
-//			// getOperationCall().getEOperation());
-//			argumentsComposite.setOperationCall(getOperationCall());
-//		} else {
-//			// eOperationsComposite.setEClass(null);
-//			argumentsComposite.setOperationCall(null);
-//		}
-
-		// variableFeatureReferenceComposite.set(ApogyCoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getEnvironment().getVariablesList(),
-		// operationCall);
 		label.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
+		
 		composite.layout();
-//		((Composite) getContent()).layout();
-		// opsCallText.setText(ApogyCoreInvocatorFacade.INSTANCE.getOperationCallString(getOperationCall()));
+		
 		return bindingContext;
 	}
 

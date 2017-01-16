@@ -1671,7 +1671,7 @@ public class ApogyCoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container i
 					argument = ApogyCoreInvocatorFactory.eINSTANCE.createNumericEDataTypeArgument();
 				} else {
  					argument = ApogyCoreInvocatorFactory.eINSTANCE.createStringEDataTypeArgument();	
-					((StringEDataTypeArgument)argument).setValue("HELLO");
+					((StringEDataTypeArgument)argument).setValue("DEFAULT");
 				}
 				
 				Object defaultValue = parameter.getEType()

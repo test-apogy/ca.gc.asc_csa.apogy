@@ -34,6 +34,6 @@ public class OperationCallSection extends AbstractExtendedPropertySection {
 	
 	@Override
 	protected Composite createComposite(Composite parent) {
-		return new OperationCallComposite(parent, SWT.NONE);		
+		return new OperationCallComposite(parent, SWT.NONE, true);		
 	}
 }

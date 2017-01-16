@@ -17,10 +17,7 @@ import org.eclipse.core.databinding.property.list.DelegatingListProperty;
 import org.eclipse.core.databinding.property.list.IListProperty;
 import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.SetCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -39,6 +36,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Tree;
 
 import ca.gc.asc_csa.apogy.common.emf.ApogyCommonEMFPackage;
+import ca.gc.asc_csa.apogy.common.emf.transaction.ApogyCommonEmfTransactionFacade;
 import ca.gc.asc_csa.apogy.common.ui.ApogyCommonUiFacade;
 import ca.gc.asc_csa.apogy.core.invocator.ApogyCoreInvocatorPackage;
 import ca.gc.asc_csa.apogy.core.invocator.Program;
@@ -87,23 +85,18 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 				/**
 				 * Creates and opens the wizard to create a valid ProgramsGroup
 				 */
-				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard(){
+				NewProgramsGroupWizard newProgramsGroupWizard = new NewProgramsGroupWizard() {
 					@Override
 					public boolean performFinish() {
-						
-						EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getProgramsList());
+						getProgramsGroup().eResource().getResourceSet().getResources()
+								.remove(getProgramsGroup().eResource());
+						TransactionUtil.disconnectFromEditingDomain(getProgramsGroup().eResource());
 
-						/** Check if there is a domain. */
-						if (editingDomain == null) {
-							/** No Domain */
-							getProgramsList().getProgramsGroups().add(getProgramsGroup());
-						} else {
-							/** Use the command stack. */
-							AddCommand command = new AddCommand(editingDomain, getProgramsList(),
-									ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS, getProgramsGroup());
-							editingDomain.getCommandStack().execute(command);
-						}
-						ScriptBasedProgramsListComposite.this.treeViewer.setSelection(new StructuredSelection(getProgramsGroup()));
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(getProgramsList(),
+								ApogyCoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS_GROUPS, getProgramsGroup());
+
+						ScriptBasedProgramsListComposite.this.treeViewer
+								.setSelection(new StructuredSelection(getProgramsGroup()));
 						return true;
 					}
 				};
@@ -128,18 +121,14 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 					@Override
 					public boolean performFinish() {
 						ProgramFactory factory = ProgramFactoriesRegistry.INSTANCE.getFactory(getProgramType());
-						
+
 						Program program = factory.createProgram();
 						program.setName(getProgramSettings().getName());
 						program.setDescription(getProgramSettings().getDescription());
 
-						EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(getCreationProgramsGroup());
-
-						/** Use the command stack. */
-						AddCommand command = new AddCommand(editingDomain, getCreationProgramsGroup(),
+						ApogyCommonEmfTransactionFacade.INSTANCE.basicAdd(getCreationProgramsGroup(),
 								ApogyCoreInvocatorPackage.Literals.PROGRAMS_GROUP__PROGRAMS, program);
-						editingDomain.getCommandStack().execute(command);
-						
+
 						ScriptBasedProgramsListComposite.this.treeViewer.setSelection(new StructuredSelection(program));
 						return true;
 					}
@@ -155,8 +144,6 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 		btnDelete.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				EditingDomain editingDomain = AdapterFactoryEditingDomain
-						.getEditingDomainFor(getSelectedProgramsGroup());
 				EObject owner = null;
 				if (isProgramSelected()) {
 					owner = getSelectedProgram();
@@ -165,9 +152,8 @@ public class ScriptBasedProgramsListComposite extends ScrolledComposite {
 					owner = getSelectedProgramsGroup();
 				}
 				if (owner != null) {
-					SetCommand command = new SetCommand(editingDomain, owner,
+					ApogyCommonEmfTransactionFacade.INSTANCE.basicSet(owner,
 							ApogyCommonEMFPackage.Literals.ARCHIVABLE__ARCHIVED, true);
-					editingDomain.getCommandStack().execute(command);
 				}
 			}
 		});
